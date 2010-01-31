@@ -442,22 +442,22 @@ Introduce Parameter
 IPO1	Failure (not available) S90333
 
 = Introduce Result Variable
-IRV1	Failure (changes indentation and block style) S18717
-IRV2	Failure (changes indentation and block style) S18717
-IRV3	Failure (changes indentation and block style) S18717
-IRV4	Failure (changes indentation and block style) S18717
-IRV5	Failure (changes indentation and block style) S18717
-IRV6	Failure (changes indentation and block style) S18717
-IRV7	Failure (changes indentation and block style) S18717
+IRV1	Pass (changes indentation and block style) S18717
+IRV2	Pass (changes indentation and block style) S18717
+IRV3	Pass (changes indentation and block style) S18717
+IRV4	Pass (changes indentation and block style) S18717
+IRV5	Pass (changes indentation and block style) S18717
+IRV6	Pass (changes indentation and block style) S18717
+IRV7	Pass (changes indentation and block style) S18717
 IRV8	Pass
 IRV9	Pass
 IRV10	Pass
 IRV11	Pass
 IRV12	Pass
-IRV13	Failure (deletes whitespace) S18717
-IRV14	Failure (deletes whitespace) S18717
-IRV15	Failure (deletes whitespace) S18717
-IRV16	Failure (deletes whitespace) S18717
+IRV13	Pass (deletes whitespace) S18717
+IRV14	Pass (deletes whitespace) S18717
+IRV15	Pass (deletes whitespace) S18717
+IRV16	Pass (deletes whitespace) S18717
 
 = Make Method Static
 MMS1	Pass
