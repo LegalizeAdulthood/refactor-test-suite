@@ -227,7 +227,7 @@ namespace ConditionalToCaseNamespace
 		Enum::MetaWords m = Enum::Foo;
 		Enum::MetaWords p = Enum::NegFoo;
 
-		// #TEST#: CTC8 Conditional to case
+		// #TEST#: CTC8 Conditional to case (should not be available)
 		if (m == Enum::Foo)
 		{
 			p = Enum::NegFoo;
