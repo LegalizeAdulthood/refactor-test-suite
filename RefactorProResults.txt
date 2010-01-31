@@ -144,13 +144,13 @@ CMS21	Pass
 CMS22	Pass
 
 = Create Overload
-CO1		Failure (generated managed syntax) B90246
-CO2		Failure (generated managed syntax) B90246
-CO3		Failure (generated managed syntax) B90246
-CO4		Failure (generated managed syntax) B90246
-CO5		Failure (generated managed syntax) B90246
-CO6		Failure (generated managed syntax) B90246
-CO7		Failure (not available) B90247
+CO1		Pass
+CO2		Pass
+CO3		Pass
+CO4		Pass
+CO5		Pass
+CO6		Pass
+CO7		Failure (generates invalid code) B90247
 CO8		Failure (inserts managed syntax) B90248
 CO9		Failure (inserts managed syntax) B90248
 CO10	Failure (inserts managed syntax) B90248
