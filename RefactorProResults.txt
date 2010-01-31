@@ -28,15 +28,15 @@ AP24	Failure B144311
 ABD1	Pass
 ABD2	Pass
 ABD3	Pass
-ABD4	Failure (changes indentation to be misleading) B90201
-ABD5	Failure (changes indentation to be misleading) B90201
+ABD4	Pass
+ABD5	Pass
 ABD6	Pass
-ABD7	Failure (changes indentation to be misleading) B90201
-ABD8	Failure (changes indentation to be misleading) B90201
+ABD7	Pass
+ABD8	Pass
 ABD9	Pass
 ABD10	Pass
-ABD11	Failure (changes indentation to be misleading) B90201
-ABD12	Failure (changes indentation to be misleading) B90201
+ABD11	Pass
+ABD12	Pass
 ABD13	Pass
 
 = Boolean to Enum S18427
