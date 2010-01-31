@@ -210,7 +210,7 @@ CSM3	Pass
 CSM4	Pass
 CSM5	Pass (class passed by value) S18810
 CSM6	Pass
-CSM7	Failure (assignments not selected for replacement) B90254
+CSM7	Pass
 CSM8	Pass
 CSM9	Failure (not available) B90519
 CSM10	Failure (class passed by value, assignments not selected for replacement) S18810, B90254
