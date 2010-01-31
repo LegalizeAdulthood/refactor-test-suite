@@ -1,6 +1,6 @@
 = Add Parameter
 AP1		Pass
-AP2		Failure (not all calls updated) B18807
+AP2		Pass
 AP3		Failure B18804
 AP4		Pass
 AP5		Pass
