@@ -252,9 +252,9 @@ MVD12	Pass
 MVD13	Pass
 MVD14	Pass
 MVD15	Pass
-MVD16	Failure (constructor arguments lost/corrupted) B90422
+MVD16	Pass
 MVD17	Pass
-MVD18	Failure (not available) S18815
+MVD18	Pass
 MVD19	Pass
 MVD20	Failure (not available) S18815
 MVD21	Failure (not available) S18815
@@ -264,7 +264,7 @@ MVD24	Pass
 MVD25	Pass
 MVD26	Pass
 MVD27	Pass
-MVD28	Failure (loses array declarations) B91205
+MVD28	Pass
 MVD29	Pass
 MVD30	Pass
 MVD31	Pass
