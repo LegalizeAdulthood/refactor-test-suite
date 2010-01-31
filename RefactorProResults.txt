@@ -122,7 +122,7 @@ CMC8	Pass
 = Create Method Stub
 CMS1	Pass
 CMS2	Pass
-CMS3	Failure (shouldn't create stub for c'tor that already exists) B130019
+CMS3	Pass
 CMS4	Failure B130020, S18676
 CMS5	Failure S18676
 CMS6	Pass
