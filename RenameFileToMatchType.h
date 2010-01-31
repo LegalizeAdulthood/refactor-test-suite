@@ -1,5 +1,0 @@
-class FooBar
-{
-public:
-	FooBar();
-};
