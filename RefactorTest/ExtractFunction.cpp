@@ -8,7 +8,7 @@ namespace ExtractFunction
 {
 	int TestInteger()
 	{
-		// #TEST#: EXF1 Extract function on rhs expression
+		// #TEST#: EXF1 Extract function on statement
 		int x = 3;
 		// #TEST#: EXF2 Extract function on statement
 		x *= 3;
