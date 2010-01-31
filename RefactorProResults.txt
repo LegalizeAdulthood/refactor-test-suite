@@ -130,10 +130,10 @@ CMS7	Failure (doesn't pass string as const char *) B144313
 CMS8	Pass
 CMS9	Pass
 CMS10	Pass
-CMS11	Failure (passes classes by value instead of by const reference; signature of generated arguments should assume as little as possible) S18810, B130025
+CMS11	Pass (passes classes by value instead of by const reference; signature of generated arguments should assume as little as possible) S18810
 CMS12	Pass
 CMS13	Failure (not available) B130026
-CMS14	Pass
+CMS14	Failure (method declared const) B144314
 CMS15	Pass
 CMS16	Pass
 CMS17	Pass
@@ -141,7 +141,7 @@ CMS18	Pass
 CMS19	Pass
 CMS20	Pass
 CMS21	Pass
-CMS22	Failure (should not be available) B90558
+CMS22	Pass
 
 = Create Overload
 CO1		Failure (generated managed syntax) B90246
