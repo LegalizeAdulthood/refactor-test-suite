@@ -212,29 +212,29 @@ CSM5	Pass (class passed by value) S18810
 CSM6	Pass
 CSM7	Pass
 CSM8	Pass
-CSM9	Failure (not available) B90519
-CSM10	Failure (class passed by value, assignments not selected for replacement) S18810, B90254
-CSM11	Failure (assignments not selected for replacement) B90254
-CSM12	Failure (assignments not selected for replacement) B90254
-CSM13	Failure (class passed by value) S18810
-CSM14	Failure (assignments not selected for replacement) B90254
-CSM15	Failure (assignments not selected for replacement) B90254
-CSM16	Failure (class passed by value, assignments not selected for replacement) S18810, B90254
-CSM17	Failure (assignments not selected for replacement) B90254
-CSM18	Failure (assignments not selected for replacement) B90254
-CSM19	Failure (assignments not selected for replacement) B90254
-CSM20	Failure (assignments not selected for replacement) B90254
-CSM21	Failure (assignments not selected for replacement) B90254
-CSM22	Failure (assignments not selected for replacement) B90254
-CSM23	Failure (assignments not selected for replacement) B90254
-CSM24	Failure (assignments not selected for replacement) B90254
-CSM25	Failure (assignments not selected for replacement) B90254
-CSM26	Failure (assignments not selected for replacement, class passed by value) B90254, S18810
-CSM27	Failure (assignments not selected for replacement) B90254
-CSM28	Failure (assignments not selected for replacement) B90254
-CSM29	Failure (assignments not selected for replacement) B90254
-CSM30	Failure (assignments not selected for replacement) B90254
-CSM31	Failure (assignments not selected for replacement) B90254
+CSM9	Pass
+CSM10	Pass (class passed by value) S18810
+CSM11	Pass
+CSM12	Pass
+CSM13	Pass (class passed by value) S18810
+CSM14	Pass
+CSM15	Pass
+CSM16	Pass (class passed by value) S18810
+CSM17	Pass
+CSM18	Pass
+CSM19	Pass
+CSM20	Pass
+CSM21	Pass
+CSM22	Pass
+CSM23	Pass
+CSM24	Pass
+CSM25	Pass
+CSM26	Pass (class passed by value) S18810
+CSM27	Pass
+CSM28	Pass
+CSM29	Pass
+CSM30	Pass
+CSM31	Pass
 
 = Create/Split Multi Variable Declaration S18736
 MVD1	Pass
