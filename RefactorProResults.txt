@@ -441,7 +441,7 @@ Introduce Parameter
 = Introduce Parameter Object S90333
 IPO1	Failure (not available) S90333
 
-= Introduce Result Variable
+= Introduce Result Variable +
 IRV1	Pass (changes indentation and block style) S18717
 IRV2	Pass (changes indentation and block style) S18717
 IRV3	Pass (changes indentation and block style) S18717
