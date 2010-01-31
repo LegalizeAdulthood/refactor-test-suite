@@ -1,5 +1,20 @@
 Version 9.1.10
 
+= Add/Remove Block Delimiter +
+ABD1	Pass
+ABD2	Pass
+ABD3	Pass
+ABD4	Pass
+ABD5	Pass
+ABD6	Pass
+ABD7	Pass
+ABD8	Pass
+ABD9	Pass
+ABD10	Pass
+ABD11	Pass
+ABD12	Pass
+ABD13	Pass
+
 = Add Parameter
 AP1		Pass
 AP2		Pass
@@ -25,21 +40,6 @@ AP21	Failure B144308
 AP22	Failure B144309
 AP23	Failure B144310
 AP24	Failure B144311
-
-= Add/Remove Block Delimiter +
-ABD1	Pass
-ABD2	Pass
-ABD3	Pass
-ABD4	Pass
-ABD5	Pass
-ABD6	Pass
-ABD7	Pass
-ABD8	Pass
-ABD9	Pass
-ABD10	Pass
-ABD11	Pass
-ABD12	Pass
-ABD13	Pass
 
 = Boolean to Enum S18427
 B2E1	Failure (not available) B130017
@@ -811,5 +811,3 @@ S90381 Configure rfactoring menu color
 B91557 No refactorings reported as "SmartTag! No providers available."
 B91926 Rename of structure member doesn't select all instances
 AB16908 Create Method Stub - The refactoring isn't available for a function declared outside a class
-
-Validation starts at: B18804
