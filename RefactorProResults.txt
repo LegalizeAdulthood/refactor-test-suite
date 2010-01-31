@@ -417,16 +417,17 @@ Introduce Alias
 = Introduce Constant
 IC1		Pass
 IC2		Failure (not available) B144324
-IC3		Pass (but only when options are set to replace chosen values)
-IC4		Pass (but only when options are set to replace chosen values)
-IC5		Pass
-IC6		Pass
+IC3		Pass
+IC4		Failure (not available) B144324
+IC5		Failure (not available) [*]
+IC6		Failure (not available) [*]
 IC7		Pass
 IC8		Pass
 IC9		Failure (not available) [*]
 IC10	Failure (not available) [*]
 IC11	Pass
 IC12	Pass
+IC13	Pass
 
 = Introduce Local
 IL1		Failure (loses indentation) B90305
