@@ -21,7 +21,7 @@ AP19	Failure B18804
 AP20	Failure B144304
 AP21	Failure B144308
 AP22	Failure B144309
-AP23	Pass
+AP23	Failure B144310
 AP24	Pass
 
 = Add/Remove Block Delimiter
