@@ -14,7 +14,7 @@ namespace FlattenConditionNamespace
 {
 	int TestGuardClause(int *x, int y, int z)
 	{
-		// #TEST#: Flatten Conditional
+		// #TEST#: FC1 Flatten Conditional
 		if (x != 0)
 		{
 			if (y > 0)
