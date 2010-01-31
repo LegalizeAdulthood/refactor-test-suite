@@ -385,14 +385,14 @@ IRA1	Pass
 IRA2	Pass
 
 = Inline Macro
-IM1		Failure (introduces whitespace) B91426
-IM2		Failure (introduces whitespace) B91426
+IM1		Failure (not available) B144323
+IM2		Pass
 IM3		Pass
-IM4		Failure (introduces whitespace) B91426
-IM5		Failure (not available) B91427
-IM6		Failure (not available) B91427
+IM4		Pass
+IM5		Pass
+IM6		Pass
 
-= Inline Result
+= Inline Result +
 IR1		Pass
 IR2		Pass
 IR3		Pass
