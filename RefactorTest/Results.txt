@@ -15,7 +15,7 @@ AP13	Failure B144306
 AP14	Failure B144306
 AP15	Failure B144306
 AP16	Failure B144306
-AP17	Failure
+AP17	Failure B144307
 AP18	Failure
 AP19	Failure
 AP20	Pass
