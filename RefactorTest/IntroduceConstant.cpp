@@ -15,6 +15,7 @@ namespace IntroduceConstantNamespace
 			// #TEST#: IC5 Introduce Constant (class)
 			// #TEST#: IC6 Introduce Constant (global)
 			// #TEST#: IC7 Introduce Constant (macro)
+			// #TEST#: IC13 Introduce Constant (local)
 			return 1;
 		}
 		int Const1() const
@@ -35,7 +36,7 @@ namespace IntroduceConstantNamespace
 			// #TEST#: IC9 Introduce Constant (class)
 			// #TEST#: IC10 Introduce Constant (global)
 			// #TEST#: IC11 Introduce Constant (macro)
-			// #TEST#: IC12 Introduce Constant (lobal)
+			// #TEST#: IC12 Introduce Constant (local)
 			return "Foo";
 		}
 	};
