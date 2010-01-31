@@ -430,8 +430,8 @@ IC12	Pass
 IC13	Pass
 
 = Introduce Local
-IL1		Failure (loses indentation) B90305
-IL2		Failure (inserts invalid code) B90303
+IL1		Pass
+IL2		Pass
 IL3		Failure (inserts invalid code) B90304
 IL4		Pass
 IL5		Pass
