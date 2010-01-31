@@ -26,7 +26,7 @@ AP22	Failure B144309
 AP23	Failure B144310
 AP24	Failure B144311
 
-= Add/Remove Block Delimiter
+= Add/Remove Block Delimiter +
 ABD1	Pass
 ABD2	Pass
 ABD3	Pass
@@ -269,26 +269,26 @@ MVD29	Failure (not available) B144317
 MVD30	Pass
 MVD31	Pass
 
-= Decompose Parameter
+= Decompose Parameter +
 DP1		Pass
 DP2		Pass
 DP3		Pass
 DP5		Pass
-DP6		Failure (inserts invalid code) B90268
-DP7		Failure (inserts invalid code) B90268
-DP8		Failure (inserts invalid code) B90268
-DP9		Failure (inserts invalid code) B90268
-DP10	Failure (inserts invalid code) B90268
-DP11	Failure (not available) B90269
-DP12	Failure (not available) B90269
-DP13	Failure (not available) B90269
-DP14	Failure (not available) B90269
-DP15	Failure (not available) B90269
-DP16	Failure (not available) B90269
-DP17	Failure (not available) B90269
-DP18	Failure (not available) B90269
-DP19	Failure (not available) B90269
-DP20	Failure (not available) B90269
+DP6		Pass
+DP7		Pass
+DP8		Pass
+DP9		Pass
+DP10	Pass
+DP11	Pass
+DP12	Pass
+DP13	Pass
+DP14	Pass
+DP15	Pass
+DP16	Pass
+DP17	Pass
+DP18	Pass
+DP19	Pass
+DP20	Pass
 
 = Encapsulate Downcast
 ED1		Failure (not available) B91326
