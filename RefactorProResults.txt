@@ -145,6 +145,39 @@ CMS20	Pass
 CMS21	Pass
 CMS22	Pass
 
+= Create/Split Multi Variable Declaration S18736
+MVD1	Pass
+MVD2	Pass
+MVD3	Pass
+MVD4	Pass
+MVD5	Pass
+MVD6	Pass
+MVD7	Pass
+MVD8	Pass
+MVD9	Pass
+MVD10	Pass
+MVD11	Pass
+MVD12	Pass
+MVD13	Pass
+MVD14	Pass
+MVD15	Pass
+MVD16	Pass
+MVD17	Pass
+MVD18	Pass
+MVD19	Pass
+MVD20	Failure (not available) B144315
+MVD21	Failure (not available) S18815
+MVD22	Failure (not available) S18815
+MVD23	Failure (not available) S18815
+MVD24	Pass
+MVD25	Pass
+MVD26	Pass
+MVD27	Pass
+MVD28	Pass
+MVD29	Failure (not available) B144317
+MVD30	Pass
+MVD31	Pass
+
 = Create Overload
 CO1		Pass
 CO2		Pass
@@ -235,39 +268,6 @@ CSM28	Pass
 CSM29	Pass
 CSM30	Pass
 CSM31	Pass
-
-= Create/Split Multi Variable Declaration S18736
-MVD1	Pass
-MVD2	Pass
-MVD3	Pass
-MVD4	Pass
-MVD5	Pass
-MVD6	Pass
-MVD7	Pass
-MVD8	Pass
-MVD9	Pass
-MVD10	Pass
-MVD11	Pass
-MVD12	Pass
-MVD13	Pass
-MVD14	Pass
-MVD15	Pass
-MVD16	Pass
-MVD17	Pass
-MVD18	Pass
-MVD19	Pass
-MVD20	Failure (not available) B144315
-MVD21	Failure (not available) S18815
-MVD22	Failure (not available) S18815
-MVD23	Failure (not available) S18815
-MVD24	Pass
-MVD25	Pass
-MVD26	Pass
-MVD27	Pass
-MVD28	Pass
-MVD29	Failure (not available) B144317
-MVD30	Pass
-MVD31	Pass
 
 = Decompose Parameter +
 DP1		Pass
