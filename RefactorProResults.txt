@@ -256,7 +256,7 @@ MVD16	Pass
 MVD17	Pass
 MVD18	Pass
 MVD19	Pass
-MVD20	Failure (not available) S18815
+MVD20	Failure (not available) B144315
 MVD21	Failure (not available) S18815
 MVD22	Failure (not available) S18815
 MVD23	Failure (not available) S18815
@@ -265,7 +265,7 @@ MVD25	Pass
 MVD26	Pass
 MVD27	Pass
 MVD28	Pass
-MVD29	Pass
+MVD29	Failure (not available) B144317
 MVD30	Pass
 MVD31	Pass
 
