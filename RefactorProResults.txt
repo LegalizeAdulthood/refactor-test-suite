@@ -377,7 +377,8 @@ EM18	Failure (reference not initialized) B144322
 EM19	Pass
 EM20	Failure (not available) S19099
 
-Flatten Conditional
+= Flatten Conditional +
+FC1		Pass
 
 = Inline Recent Assignment
 IRA1	Pass
