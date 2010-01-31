@@ -179,49 +179,29 @@ CO30	Pass
 CO31	Pass
 CO32	Pass
 CO33	Pass
-CO34	Failure (no argument selector) B90250
-CO35	Failure (no argument selector) B90250
-CO36	Failure (no argument selector) B90250
-CO37	Failure (no argument selector) B90250
-CO38	Failure (no argument selector) B90250
-CO39	Failure (no argument selector) B90250
-CO40	Failure (no argument selector) B90250
-CO41	Failure (no argument selector) B90250
-CO42	Failure (no argument selector) B90250
-CO43	Failure (no argument selector) B90250
-CO44	Failure (no argument selector) B90250
-CO45	Failure (generated managed syntax) B90246
-CO46	Failure (generated managed syntax) B90246
-CO47	Failure (generated managed syntax) B90246
-CO48	Failure (generated managed syntax) B90246
-CO49	Failure (generated managed syntax) B90246
-CO50	Failure (generated managed syntax) B90246
-CO51	Failure (inserts managed syntax) B90248
-CO52	Failure (inserts managed syntax) B90248
-CO53	Failure (inserts managed syntax) B90248
-CO54	Failure (inserts managed syntax) B90248
-CO55	Failure (inserts managed syntax) B90248
-CO56	Failure (inserts managed syntax) B90248
-CO57	Failure (not available) B90247
-CO58	Failure (not available) B90247
-CO59	Failure (inserts managed syntax) B90248
-CO60	Failure (inserts managed syntax) B90248
-CO61	Failure (inserts managed syntax) B90248
-CO62	Failure (inserts managed syntax) B90248
-CO63	Failure (inserts managed syntax) B90248
-CO64	Failure (inserts managed syntax) B90248
-CO65	Failure (inserts managed syntax) B90248
-CO66	Failure (inserts managed syntax) B90248
-CO67	Failure (inserts managed syntax) B90248
-CO68	Failure (inserts managed syntax) B90248
-CO69	Failure (inserts managed syntax) B90248
-CO70	Failure (inserts managed syntax) B90248
-CO71	Pass
-CO72	Pass
-CO73	Failure (inserts managed syntax) B90248
-CO74	Failure (inserts managed syntax) B90248
-CO75	Failure (inserts managed syntax) B90248
-CO76	Failure (no argument selector) B90250
+CO34	Pass
+CO35	Pass
+CO36	Pass
+CO37	Pass
+CO38	Pass
+CO39	Pass
+CO40	Pass
+CO41	Pass
+CO42	Pass
+CO43	Pass
+CO44	Pass
+CO45	Pass
+CO46	Pass
+CO47	Pass
+CO48	Pass
+CO49	Pass
+CO50	Pass
+CO51	Pass
+CO52	Pass
+CO53	Pass
+CO54	Pass
+CO55	Pass
+CO56	Pass
 
 = Create Setter Method
 CSM1	Failure (assignments not selected for replacement) B90254
