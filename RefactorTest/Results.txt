@@ -8,8 +8,8 @@ AP6		Pass
 AP7		Pass
 AP8		Pass
 AP9		Pass
-AP10	Failure AddParameter-4 B18857
-AP11	Failure AddParameter-4 B18857
+AP10	Pass
+AP11	Pass
 AP12	Failure B18857
 AP13	Failure
 AP14	Failure
