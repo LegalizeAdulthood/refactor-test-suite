@@ -67,7 +67,7 @@ namespace CreateOverloadNamespace
 		{
 		}
 
-		// #TEST#: CO74 Create overload for static method
+		// #TEST#: CO54 Create overload for static method
 		static int function1(const char *text)
 		{
 			return text ? static_cast<int>(std::string(text).size()) : 0;
@@ -136,17 +136,17 @@ namespace CreateOverloadNamespace
 		{
 		}
 
-		// #TEST#: CO71 Create overload for method, remove first argument
+		// #TEST#: CO51 Create overload for method, remove first argument
 		void inline5(const char *arg1, int arg2 = -1)
 		{
 		}
 
-		// #TEST#: CO72 Create overload for method, remove first argument
+		// #TEST#: CO52 Create overload for method, remove first argument
 		void inline6(const char *arg1, int arg2 = function1("This is a test"))
 		{
 		}
 
-		// #TEST#: CO73 Create overload for static method
+		// #TEST#: CO53 Create overload for static method
 		static int function1(const char *text)
 		{
 			return text ? static_cast<int>(std::string(text).size()) : 0;
@@ -194,13 +194,13 @@ namespace CreateOverloadNamespace
 		{
 		}
 
-		// #TEST#: CO75 Create overload for static method
+		// #TEST#: CO55 Create overload for static method
 		static int function1(const char *text)
 		{
 			return text ? static_cast<int>(std::string(text).size()) : 0;
 		}
 
-		// #TEST#: CO76 Create overload for static method with volatile argument
+		// #TEST#: CO56 Create overload for static method with volatile argument
 		static void method1(volatile int *arg1, int arg2)
 		{
 			*arg1 = arg2;
