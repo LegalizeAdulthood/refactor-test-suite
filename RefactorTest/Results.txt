@@ -2,7 +2,7 @@
 AP1		Pass
 AP2		Pass
 AP3		Failure B18804
-AP4		Pass
+AP4		Failure B144304
 AP5		Pass
 AP6		Pass
 AP7		Pass
