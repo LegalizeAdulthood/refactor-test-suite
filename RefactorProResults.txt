@@ -150,33 +150,33 @@ CO3		Pass
 CO4		Pass
 CO5		Pass
 CO6		Pass
-CO7		Failure (generates invalid code) B90247
-CO8		Failure (inserts managed syntax) B90248
-CO9		Failure (inserts managed syntax) B90248
-CO10	Failure (inserts managed syntax) B90248
-CO11	Failure (inserts managed syntax) B90248
-CO12	Failure (inserts managed syntax) B90248
-CO13	Failure (inserts managed syntax) B90248
-CO14	Failure (inserts managed syntax) B90248
-CO15	Failure (inserts managed syntax) B90248
-CO16	Failure (inserts managed syntax) B90248
-CO17	Failure (inserts managed syntax) B90248
-CO18	Failure (inserts managed syntax) B90248
-CO19	Failure (inserts managed syntax) B90248
-CO20	Failure (not available) B90247
-CO21	Failure (inserts managed syntax) B90248
-CO22	Failure (inserts managed syntax) B90248
-CO23	Failure (inserts managed syntax) B90248
-CO24	Failure (inserts managed syntax) B90248
-CO25	Failure (inserts managed syntax) B90248
-CO26	Failure (inserts managed syntax) B90248
-CO27	Failure (inserts managed syntax) B90248
-CO28	Failure (inserts managed syntax) B90248
-CO29	Failure (inserts managed syntax) B90248
-CO30	Failure (inserts managed syntax) B90248
-CO31	Failure (inserts managed syntax) B90248
-CO32	Failure (inserts managed syntax) B90248
-CO33	Failure (no argument selector) B90250
+CO7		Failure (chains c'tor) B90247
+CO8		Pass
+CO9		Pass
+CO10	Pass
+CO11	Pass
+CO12	Pass
+CO13	Pass
+CO14	Pass
+CO15	Pass
+CO16	Failure (assigns 0 to std::string) [*]
+CO17	Pass
+CO18	Pass
+CO19	Failure (assigns 0 to std::string) [*]
+CO20	Failure (chains c'tor) B90247
+CO21	Pass
+CO22	Pass
+CO23	Pass
+CO24	Pass
+CO25	Pass
+CO26	Pass
+CO27	Pass
+CO28	Pass
+CO29	Pass
+CO30	Pass
+CO31	Pass
+CO32	Pass
+CO33	Pass
 CO34	Failure (no argument selector) B90250
 CO35	Failure (no argument selector) B90250
 CO36	Failure (no argument selector) B90250
