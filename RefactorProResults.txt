@@ -126,7 +126,7 @@ CMS3	Pass
 CMS4	Failure B130020, S18676
 CMS5	Failure S18676
 CMS6	Pass
-CMS7	Failure (doesn't pass string as const char *) [*]
+CMS7	Failure (doesn't pass string as const char *) B144313
 CMS8	Pass
 CMS9	Pass
 CMS10	Pass
