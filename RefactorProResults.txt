@@ -476,8 +476,8 @@ MID6	Pass
 MID7	Pass
 MID8	Pass
 MID9	Pass
-MID10	Failure (splits declaration, corrupts declaration) [*]
-MID11	Failure (splits declaration, corrupts declaration) [*]
+MID10	Failure (splits declaration, corrupts declaration) B144329
+MID11	Failure (splits declaration, corrupts declaration) B144329
 
 = Move Method
 MM1		Pass
