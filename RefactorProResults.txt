@@ -415,8 +415,8 @@ IT11	Pass
 Introduce Alias
 
 = Introduce Constant
-IC1		Pass (but only when options are set to replace chosen values)
-IC2		Pass (but only when options are set to replace chosen values)
+IC1		Pass
+IC2		Failure (not available) B144324
 IC3		Pass (but only when options are set to replace chosen values)
 IC4		Pass (but only when options are set to replace chosen values)
 IC5		Pass
