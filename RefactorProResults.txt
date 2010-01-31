@@ -361,21 +361,21 @@ EM2		Pass
 EM3		Pass
 EM4		Pass
 EM5		Pass
-EM6		Pass
+EM6		Failure (reference not initialized) B144322
 EM7		Pass
 EM8		Pass
 EM9		Pass
-EM10	Pass
+EM10	Failure (reference not initialized) B144322
 EM11	Pass
-EM12	Pass
-EM13	Failure (called Extract Function) B90551
-EM14	Failure (called Extract Function) B90551
-EM15	Failure (called Extract Function) B90551
-EM16	Failure (called Extract Function) B90551
-EM17	Failure (called Extract Function) B90551
-EM18	Failure (called Extract Function) B90551
+EM12	Failure (reference not initialized) B144322
+EM13	Pass
+EM14	Pass
+EM15	Pass
+EM16	Failure (reference not initialized) B144322
+EM17	Pass
+EM18	Failure (reference not initialized) B144322
 EM19	Pass
-EM20	Failure (not available) B91207
+EM20	Failure (not available) S19099
 
 Flatten Conditional
 
