@@ -22,7 +22,7 @@ AP20	Failure B144304
 AP21	Failure B144308
 AP22	Failure B144309
 AP23	Failure B144310
-AP24	Pass
+AP24	Failure B144311
 
 = Add/Remove Block Delimiter
 ABD1	Pass
