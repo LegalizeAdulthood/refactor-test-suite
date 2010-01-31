@@ -329,7 +329,7 @@ EF30	Failure (not available) S90332
 EF31	Failure (not available) S90332
 EF32	Failure (not available) S90332
 
-= Extract Function
+= Extract Function +
 EXF1	Pass
 EXF2	Pass
 EXF3	Pass
@@ -347,9 +347,9 @@ EXF14	Pass
 EXF15	Pass
 EXF16	Pass
 EXF17	Pass
-EXF18	Failure (generates invalid code) B91206
-EXF19	Failure (generates .NET code) B91430
-EXF20	Failure (changes return type of extracted expression) B91556
+EXF18	Pass
+EXF19	Pass
+EXF20	Pass
 
 = Extract Interface
 EI1		Failure (non-standard code generated) B90270
