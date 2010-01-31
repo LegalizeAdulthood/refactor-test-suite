@@ -468,12 +468,12 @@ Move Declaration Near Reference
 
 = Move Initialization to Declaration
 MID1	Pass
-MID2	Failure (not available) B90431
-MID3	Failure (not available) B90431
+MID2	Failure (not available) S19210
+MID3	Failure (not available) S19210
 MID4	Pass
 MID5	Pass
 MID6	Pass
-MID7	Failure (loses template argument) B90434
+MID7	Pass
 MID8	Pass
 MID9	Pass
 MID10	Failure (splits declaration, corrupts declaration) [*]
