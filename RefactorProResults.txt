@@ -593,7 +593,7 @@ R25		Failure (not available) AS16224
 R26		Pass
 R27		Pass
 R28		Pass
-R29		Failure (renames local name) B90221
+R29		Pass
 R30		Pass
 R31		Pass
 R32		Failure (renames local class in separate file) B90215
