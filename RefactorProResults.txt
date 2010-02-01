@@ -380,7 +380,7 @@ EM20	Failure (not available) S19099
 = Flatten Conditional +
 FC1		Pass
 
-= Inline Recent Assignment
+= Inline Recent Assignment +
 IRA1	Pass
 IRA2	Pass
 
@@ -517,16 +517,16 @@ MM34	Failure (generates invalid code) B90521
 MM35	Pass
 MM36	Pass
 
-= Move Type to File
-MTF1	Failure (doesn't move method) B91212
+= Move Type to File +
+MTF1	Pass
 
 = Move Type to Namespace
-MTN1	Failure (not available) B90575
+MTN1	Failure (generates managed code) 
 
-= Promote to Parameter
+= Promote to Parameter +
 PTP1	Pass
 
-= Reduce Visibility
+= Reduce Visibility +
 RV1		Pass
 RV2		Pass
 RV3		Pass
@@ -552,7 +552,7 @@ RAP6	Failure (inserts invalid code) B90326
 
 Remove Redundant Conditional
 
-= Remove Unused Parameters
+= Remove Unused Parameters +
 RUP1	Pass
 RUP2	Pass
 RUP3	Pass
@@ -688,7 +688,7 @@ RC1		Failure (not available) B91202
 
 Simplify Boolean Expression
 
-= Split Initialization from Declaration
+= Split Initialization from Declaration +
 SID1	Pass
 SID2	Pass
 SID3	Pass
