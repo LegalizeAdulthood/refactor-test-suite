@@ -549,13 +549,13 @@ RAP3	Pass
 RAP4	Pass
 RAP5	Pass
 RAP6	Pass
-RAP7	Failure (changes concatenation to assignment) 
-RAP8
-RAP9
-RAP10
-RAP11
-RAP12
-RAP13
+RAP7	Failure (changes concatenation to assignment) B144339
+RAP8	Failure (not available) B144340
+RAP9	Failure (not available) B144340
+RAP10	Failure (changes concatenation to assignment) B144339
+RAP11	Failure (changes concatenation to assignment) B144339
+RAP12	Failure (changes concatenation to assignment) B144339
+RAP13	Failure (changes concatenation to assignment) B144339
 
 Remove Redundant Conditional
 
