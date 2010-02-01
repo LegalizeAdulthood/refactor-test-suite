@@ -155,12 +155,44 @@ namespace MoveMethodNamespace
 		m.OperationAbstract();
 	}
 
+	static void TestMoveMethodConcreteInline()
+	{
+		MoveMethodConcreteInline m;
+		m.Operation();
+		m.OperationConst();
+		m.OperationVirtual();
+		m.OperationAbstract();
+	}
+
+	static void TestMoveMethodConcrete()
+	{
+		MoveMethodConcrete m;
+		m.Operation();
+		m.OperationConst();
+		m.OperationVirtual();
+		m.OperationAbstract();
+	}
+
+	static void TestMoveMethodExplicit()
+	{
+		MoveMethodExplicit m;
+	}
+
+	static void TestMoveMethodExplicit2()
+	{
+		MoveMethodExplicit2 m;
+	}
+
 	static void Test()
 	{
 		TestMoveMethod1();
 		TestMoveMethod2();
 		TestMoveMethodNamespace();
 		TestMoveMethodAbstractInline();
+		TestMoveMethodConcreteInline();
+		TestMoveMethodConcrete();
+		TestMoveMethodExplicit();
+		TestMoveMethodExplicit2();
 	}
 }
 
