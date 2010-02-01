@@ -95,6 +95,22 @@ namespace RemoveAssignmentsToParametersNamespace
 		Consume(result);
 	}
 
+	static void BinOps(unsigned x)
+	{
+		// #TEST#: RAP8 Remove assignment to parameters
+		x++;
+		x--;
+		x += 1;
+		x -= 1;
+		x *= 2;
+		x /= 2;
+		x %= 10;
+		x <<= 1;
+		x >>= 1;
+		x |= 1;
+		x &= ~1U;
+	}
+
 	static void Test()
 	{
 		std::string text = "Text";
