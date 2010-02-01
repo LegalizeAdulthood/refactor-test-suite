@@ -521,7 +521,7 @@ MM36	Pass
 MTF1	Pass
 
 = Move Type to Namespace
-MTN1	Failure (generates managed code) 
+MTN1	Failure (generates managed code) B144336
 
 = Promote to Parameter +
 PTP1	Pass
