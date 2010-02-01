@@ -546,9 +546,16 @@ RV14	Pass
 RAP1	Pass
 RAP2	Pass
 RAP3	Pass
-RAP4	Failure (loses template argument) B90318
-RAP5	Failure (inserts invalid code) B90326
-RAP6	Failure (inserts invalid code) B90326
+RAP4	Pass
+RAP5	Pass
+RAP6	Pass
+RAP7	Failure (changes concatenation to assignment) 
+RAP8
+RAP9
+RAP10
+RAP11
+RAP12
+RAP13
 
 Remove Redundant Conditional
 
