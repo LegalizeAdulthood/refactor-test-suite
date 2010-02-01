@@ -94,30 +94,77 @@ namespace MoveMethodNamespace
 	MoveMethodExplicit::MoveMethodExplicit()
 	{
 	}
-}
 
-void TestMoveMethodNamespace()
-{
-	using namespace MoveMethodNamespace;
-	MoveMethodConcreteInline c;
-	c.Operation();
-	c.OperationAbstract();
+	static void TestMoveMethod1()
+	{
+		MoveMethod m;
+		std::string const name("John Belushi");
+		m.MethodConst(name);
+		m.MethodConstInline(name);
+		m.MethodDefault("default");
+		m.MethodDefault("text", -1);
+		m.MethodDefaultInline("inline");
+		m.MethodDefaultInline("text", -1);
+		m.MethodInline(name);
+	}
 
-	MoveMethodConcrete c2;
-	c2.Operation();
-	c2.OperationAbstract();
+	static void TestMoveMethod2()
+	{
+		MoveMethod2 m;
+		m.ConstOp1(-1);
+		m.ConstOp2(-2);
+		std::string const name("John Belushi");
+		m.Method(name);
+		m.MethodDefault("default");
+		m.MethodDefault("text", -1);
+		m.MethodDefault2(0);
+		m.MethodDefault2(0, -2);
+		m.MethodDefault3(0);
+		m.MethodDefault3(0, -3);
+		m.MethodDefault4(0);
+		m.MethodDefault4(0, -4);
+		m.Operation1();
+		m.Operation2();
+	}
+
+	static void TestMoveMethodNamespace()
+	{
+		MoveMethodConcreteInline c;
+		c.Operation();
+		c.OperationAbstract();
+
+		MoveMethodConcrete c2;
+		c2.Operation();
+		c2.OperationAbstract();
+	}
+
+	class MoveMethodAbstractInlineTester : public MoveMethodAbstractInline
+	{
+	public:
+		virtual void OperationAbstract()
+		{
+		}
+	};
+
+	static void TestMoveMethodAbstractInline()
+	{
+		MoveMethodAbstractInlineTester m;
+		m.Operation();
+		m.OperationConst();
+		m.OperationVirtual();
+		m.OperationAbstract();
+	}
+
+	static void Test()
+	{
+		TestMoveMethod1();
+		TestMoveMethod2();
+		TestMoveMethodNamespace();
+		TestMoveMethodAbstractInline();
+	}
 }
 
 void TestMoveMethod()
 {
-	MoveMethod test;
-	test.MethodDefault("Text");
-	test.MethodDefault("Text", 10);
-
-	MoveMethod2 test2;
-	test2.MethodDefault("Text");
-	test2.MethodDefault("Text", 10);
-	test2.Method("Text");
-
-	TestMoveMethodNamespace();
+	MoveMethodNamespace::Test();
 }
