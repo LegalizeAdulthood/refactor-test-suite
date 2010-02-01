@@ -652,7 +652,7 @@ R84		Pass
 R85		Pass
 R86		Pass
 R87		Pass
-R88		Failure (not all instances selected)
+R88		Failure (not all instances selected) B144373
 R89		Pass
 R90		Pass
 R91		Pass
