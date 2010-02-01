@@ -480,15 +480,15 @@ MID10	Failure (splits declaration, corrupts declaration) B144329
 MID11	Failure (splits declaration, corrupts declaration) B144329
 
 = Move Method
-MM1		Pass
-MM2		Pass
-MM3		Pass
-MM4		Pass
-MM5		Pass
+MM1		Failure B144335
+MM2		Failure B144335
+MM3		Failure B144335
+MM4		Failure B144335
+MM5		Failure B144335
 MM6		Pass
 MM7		Pass
-MM8		Failure (creates invalid inline d'tor) B90214
-MM9		Pass
+MM8		Pass
+MM9		Failure B144335
 MM10	Pass
 MM11	Pass
 MM12	Pass
