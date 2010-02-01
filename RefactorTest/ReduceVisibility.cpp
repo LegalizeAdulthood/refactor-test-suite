@@ -61,15 +61,31 @@ namespace ReduceVisibilityNamespace
 		float f;
 		double d;
 	};
-}
 
-using namespace ReduceVisibilityNamespace;
+	static void TestBar()
+	{
+		Bar b;
+		b.x = 0;
+	}
+	static void TestFoo()
+	{
+		Foo f;
+		f.Method1();
+	}
+	static void TestFrob()
+	{
+		Frob f;
+		f.i = 1;
+	}
+	static void Test()
+	{
+		TestBar();
+		TestFoo();
+		TestFrob();
+	}
+}
 
 void TestReduceVisibility()
 {
-	Bar b;
-	b.x = 0;
-
-	Foo f;
-	f.Method1();
+	ReduceVisibilityNamespace::Test();
 }
