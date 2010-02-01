@@ -599,7 +599,7 @@ R31		Pass
 R32		Failure (renames local class in separate file) B90215
 R33		Failure (renames local class in separate file) B90215
 R34		Pass
-R35		Failure (not available) [*]
+R35		Failure (not available) B144371
 R36		Failure (renames local class in separate file) B90215
 R37		Pass
 R38		Pass
