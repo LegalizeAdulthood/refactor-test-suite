@@ -95,20 +95,56 @@ namespace RemoveAssignmentsToParametersNamespace
 		Consume(result);
 	}
 
-	static void BinOps(unsigned x)
+	static void PlusPlus(unsigned x)
 	{
 		// #TEST#: RAP8 Remove assignment to parameters
 		x++;
+	}
+
+	static void MinusMinus(unsigned x)
+	{
+		// #TEST#: RAP9 Remove assignment to parameters
 		x--;
+	}
+
+	static void Additive(unsigned x)
+	{
+		// #TEST#: RAP10 Remove assignment to parameters
 		x += 1;
 		x -= 1;
+	}
+
+	static void Multiplicative(unsigned x)
+	{
+		// #TEST#: RAP11 Remove assignment to parameters
 		x *= 2;
 		x /= 2;
 		x %= 10;
+	}
+
+	static void Shift(unsigned x)
+	{
+		// #TEST#: RAP12 Remove assignment to parameters
 		x <<= 1;
 		x >>= 1;
+	}
+
+	static void BitWise(unsigned x)
+	{
+		// #TEST#: RAP13 Remove assignment to parameters
 		x |= 1;
 		x &= ~1U;
+	}
+
+	static void TestOperators()
+	{
+		unsigned u = 15;
+		PlusPlus(u);
+		MinusMinus(u);
+		Additive(u);
+		Multiplicative(u);
+		Shift(u);
+		BitWise(u);
 	}
 
 	static void Test()
@@ -117,6 +153,7 @@ namespace RemoveAssignmentsToParametersNamespace
 		Assign(text);
 		int x = 2;
 		Assign(x);
+		TestOperators();
 	}
 }
 
