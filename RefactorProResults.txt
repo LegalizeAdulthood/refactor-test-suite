@@ -603,56 +603,56 @@ R35		Failure (not available) B144371
 R36		Failure (renames local class in separate file) B90215
 R37		Pass
 R38		Pass
-R39		Failure (not all instances selected) B90285
+R39		Pass
 R40		Pass
 R41		Pass
-R42		Failure (not all instances selected) B90285
+R42		Pass
 R43		Pass
 R44		Pass
 R45		Pass
 R46		Pass
-R47		Failure (not all instances selected) B90285
+R47		Pass
 R48		Pass
 R49		Pass
-R50		Failure (not all instances selected) B90285
+R50		Pass
 R51		Pass
 R52		Pass
-R53		Failure (not all instances selected) B90285
-R54		Failure (not all instances selected) B90285
+R53		Pass
+R54		Pass
 R55		Pass
-R56		Failure (not all instances selected) B90300
+R56		Pass
 R57		Pass
-R58		Failure (not available) B90300
-R59		Failure (not all instances selected) B90285
+R58		Pass
+R59		Pass
 R60		Pass
 R61		Pass
 R62		Pass
 R63		Pass
 R64		Pass
-R65		Failure (not available) B90313
+R65		Pass
 R66		Pass
 R67		Pass
 R68		Pass
-R69		Failure (not available) B90317
+R69		Pass
 R70		Pass
-R71		Failure (doesn't rename virtual base) B90536
-R72		Failure (doesn't rename virtual base) B90536
-R73		Failure (doesn't rename virtual base) B90536
-R74		Failure (doesn't select all instances) B91428
-R75		Failure (not available) B91429
-R76		Failure (doesn't select all instances) B91428
-R77		Failure (not available) B91429
-R78		Failure (doesn't select all instances) B91428
-R79		Failure (not available) B91429
-R80		Failure (doesn't select all instances) B91428
-R81		Failure (not available) B91429
+R71		Pass
+R72		Pass
+R73		Pass
+R74		Pass
+R75		Pass
+R76		Pass
+R77		Pass
+R78		Pass
+R79		Pass
+R80		Pass
+R81		Pass
 R82		Failure (not available) B91435
 R83		Failure (not available) B91435
 R84		Pass
 R85		Pass
 R86		Pass
 R87		Pass
-R88		Pass
+R88		Failure (not all instances selected)
 R89		Pass
 R90		Pass
 R91		Pass

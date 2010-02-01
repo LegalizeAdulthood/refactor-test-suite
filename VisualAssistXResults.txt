@@ -1,0 +1,11 @@
+= Create Declaration From Implementation
+
+= Create Implementation From Declaration
+
+= Create Implementation From Usage
+
+= Extract Method
+
+= Move Method to Header/Source
+
+= Rename
