@@ -8,7 +8,7 @@ namespace MoveTypeToNamespaceNamespace
 	{
 	};
 
-	// #TEST#: MTN1 Move Type to Namespace Nested
+	// #TEST#: MTN1 Move Type to namespace Nested
 	class Foo
 	{
 	public:
