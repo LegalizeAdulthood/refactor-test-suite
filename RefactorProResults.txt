@@ -480,39 +480,39 @@ MID10	Failure (splits declaration, corrupts declaration) B144329
 MID11	Failure (splits declaration, corrupts declaration) B144329
 
 = Move Method
-MM1		Failure B144335
-MM2		Failure B144335
-MM3		Failure B144335
-MM4		Failure B144335
-MM5		Failure B144335
+MM1		Failure (deletes method) B144335
+MM2		Failure (deletes method) B144335
+MM3		Failure (deletes method) B144335
+MM4		Failure (deletes method) B144335
+MM5		Failure (deletes method) B144335
 MM6		Pass
 MM7		Pass
 MM8		Pass
-MM9		Failure B144335
+MM9		Failure (deletes method) B144335
 MM10	Pass
 MM11	Pass
 MM12	Pass
-MM13	Pass
+MM13	Failure (deletes method) B144335
 MM14	Pass
 MM15	Pass
-MM16	Failure (generates invalid code) B90214
+MM16	Pass
 MM17	Pass
 MM18	Pass
 MM19	Pass
 MM20	Pass
-MM21	Failure (generates invalid code) B90214
+MM21	Pass
 MM22	Pass
 MM23	Pass
-MM24	Failure (generates invalid code) B90214
+MM24	Pass
 MM25	Pass
 MM26	Pass
 MM27	Pass
 MM28	Pass
-MM29	Failure (generates invalid code) B90214
+MM29	Pass
 MM30	Pass
 MM31	Pass
 MM32	Pass
-MM33	Failure (generates invalid code) B90521
+MM33	Failure (deletes method) B144335
 MM34	Failure (generates invalid code) B90521
 MM35	Pass
 MM36	Pass
