@@ -42,7 +42,7 @@ namespace ReorderParametersNamespace
 	// #TEST#: RP9 Reorder Parameters move reference parameter to return value
 	void Foo::ConstOperation3(int &x) const
 	{
-		x += 2;
+		x = 2;
 	}
 
 	// #TEST#: RP3 Reorder parameters
