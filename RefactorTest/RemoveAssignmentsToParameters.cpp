@@ -16,11 +16,11 @@ namespace RemoveAssignmentsToParametersNamespace
 		void Const2() const {}
 	};
 
-	void Consume(const std::string &text)
+	static void Consume(const std::string &text)
 	{
 	}
 
-	void AssignValue(std::string result)
+	static void AssignValue(std::string result)
 	{
 		// #TEST#: RAP1 Remove assignment to parameters
 		result = "Foo";
@@ -29,7 +29,7 @@ namespace RemoveAssignmentsToParametersNamespace
 		Consume(result);
 	}
 
-	void Assign(std::string &result)
+	static void Assign(std::string &result)
 	{
 		// #TEST#: RAP2 Attempt remove assignment to parameters (shouldn't apply)
 		result = "Foo";
@@ -38,11 +38,11 @@ namespace RemoveAssignmentsToParametersNamespace
 		Consume(result);
 	}
 
-	void Consume(int x)
+	static void Consume(int x)
 	{
 	}
 
-	void Assign(int x)
+	static void Assign(int x)
 	{
 		// #TEST#: RAP3 Remove assignment to parameters
 		Consume(x);
@@ -50,11 +50,11 @@ namespace RemoveAssignmentsToParametersNamespace
 		Consume(x);
 	}
 
-	void Consume(std::vector<int>::size_type size)
+	static void Consume(std::vector<int>::size_type size)
 	{
 	}
 
-	void Assign2(std::vector<int>::size_type size)
+	static void Assign2(std::vector<int>::size_type size)
 	{
 		Consume(size);
 		// #TEST#: RAP4 Remove assignment to parameters
@@ -62,11 +62,11 @@ namespace RemoveAssignmentsToParametersNamespace
 		Consume(size);
 	}
 
-	void Consume(int (Foo::*member)())
+	static void Consume(int (Foo::*member)())
 	{
 	}
 
-	void Assign3(int (Foo::*member)())
+	static void Assign3(int (Foo::*member)())
 	{
 		Consume(member);
 		// #TEST#: RAP5 Remove assignment to parameters
@@ -74,25 +74,37 @@ namespace RemoveAssignmentsToParametersNamespace
 		Consume(member);
 	}
 
-	void Consume4(void (Foo::*cmember1)() const)
+	static void Consume4(void (Foo::*cmember1)() const)
 	{
 	}
 
-	void Assign4(void (Foo::*cmember1)() const)
+	static void Assign4(void (Foo::*cmember1)() const)
 	{
 		Consume4(cmember1);
 		// #TEST#: RAP6 Remove assignment to parameters
 		cmember1 = &Foo::Const2;
 		Consume4(cmember1);
 	}
-}
 
-using namespace RemoveAssignmentsToParametersNamespace;
+	static void ConcatValue(std::string result)
+	{
+		// #TEST#: RAP7 Remove assignment to parameters
+		result += "Foo";
+		Consume(result);
+		result += "Bar";
+		Consume(result);
+	}
+
+	static void Test()
+	{
+		std::string text = "Text";
+		Assign(text);
+		int x = 2;
+		Assign(x);
+	}
+}
 
 void TestRemoveAssignmentsToParameters()
 {
-	std::string text = "Text";
-	Assign(text);
-	int x = 2;
-	Assign(x);
+	RemoveAssignmentsToParametersNamespace::Test();
 }
