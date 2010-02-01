@@ -670,13 +670,13 @@ Rename Type to Match File
 = Reorder Parameters
 RP1		Pass
 RP2		Pass
-RP3		Failure (not available) B90562
-RP4		Failure (not available) B90562
+RP3		Pass
+RP4		Pass
 RP5		Pass
 RP6		Pass
 RP7		Pass
-RP8		Failure (not available) B91215
-RP9		Failure (not available) B91215
+RP8		Failure (renames method, drops const qualifier on definition) B91215
+RP9		Failure (renames method) B91215
 
 Replace Nested Conditional with Guard Clause
 
