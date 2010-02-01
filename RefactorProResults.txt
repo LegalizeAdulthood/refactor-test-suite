@@ -569,12 +569,12 @@ R1		Failure (renames local class in separate file) B90215
 R2		Failure (renames local class in separate file) B90215
 R3		Failure (renames local class in separate file) B90215
 R4		Pass
-R5		Failure (not available) B90218
+R5		Pass
 R6		Pass
 R7		Pass
 R8		Pass
 R9		Pass
-R10		Failure (not available) B90218
+R10		Pass
 R11		Pass
 R12		Failure (renames local method in separate file) B90215
 R13		Pass
@@ -585,14 +585,14 @@ R17		Pass
 R18		Pass
 R19		Pass
 R20		Pass
-R21		Failure (not available) B90218
+R21		Pass
 R22		Pass
-R23		Failure (not available) B90218
+R23		Pass
 R24		Pass
 R25		Failure (not available) AS16224
 R26		Pass
 R27		Pass
-R28		Failure (not available) B90218
+R28		Pass
 R29		Failure (renames local name) B90221
 R30		Pass
 R31		Pass
@@ -621,7 +621,7 @@ R53		Failure (not all instances selected) B90285
 R54		Failure (not all instances selected) B90285
 R55		Pass
 R56		Failure (not all instances selected) B90300
-R57		Failure (not available) B90218
+R57		Pass
 R58		Failure (not available) B90300
 R59		Failure (not all instances selected) B90285
 R60		Pass
