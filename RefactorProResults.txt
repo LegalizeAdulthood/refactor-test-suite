@@ -704,7 +704,10 @@ SID4	Pass
 SID5	Pass
 SID6	Pass
 SID7	Pass
-SID8	Pass
+SID8	Failure (cursor must be on variable) B144400
+SID9	Pass
+SID10	Pass
+SID11	Failure (not available) B144401
 
 = Split Temporary Variable
 ST1		Failure [*]
