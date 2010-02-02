@@ -689,7 +689,7 @@ Replace with Alias
 Replace with Constant
 
 = Replace with Local
-RWL1	Failure (generates invalid code) B90567
+RWL1	Pass
 
 = Reverse Conditional
 RC1		Failure (not available) B91202
