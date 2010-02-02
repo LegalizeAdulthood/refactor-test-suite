@@ -6,7 +6,7 @@
 // now pass in the field or expression of the local declaration as the
 // argument for the new parameter.
 
-namespace PromoteToParameter
+namespace PromoteToParameterNamespace
 {
 	class PromoteToParameterClass
 	{
@@ -46,4 +46,9 @@ namespace PromoteToParameter
 
 		TestMemberPointer();
 	}
+}
+
+void TestPromoteToParameter()
+{
+	PromoteToParameterNamespace::Test();
 }

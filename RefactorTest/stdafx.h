@@ -48,10 +48,7 @@ extern void TestMoveMethod();
 extern void TestMoveTypeToFile();
 extern void TestMoveTypeToNamespace();
 extern void TestOptimizeNamespaceReferences();
-namespace PromoteToParameter
-{
-	extern void Test();
-}
+extern void TestPromoteToParameter();
 extern void TestReduceVisibility();
 extern void TestRemoveAssignmentsToParameters();
 extern void TestRemoveRedundantConditional();

@@ -40,7 +40,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	TestMoveTypeToFile();
 	TestMoveTypeToNamespace();
 	TestOptimizeNamespaceReferences();
-	PromoteToParameter::Test();
+	TestPromoteToParameter();
 	TestReduceVisibility();
 	TestRemoveAssignmentsToParameters();
 	TestRemoveRedundantConditional();
