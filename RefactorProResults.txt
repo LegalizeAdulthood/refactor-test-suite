@@ -719,17 +719,17 @@ Widen Scope Promote to Constant
 = Widen Scope Promote to Field
 WSPF1	Pass
 WSPF2	Pass
-WSPF3	Pass
+WSPF3	Failure (not available) B144404
 WSPF4	Failure (corrupts type in declaration; generates invalid code) B90475
 WSPF5	Pass
 WSPF6	Pass
 WSPF7	Pass
 WSPF8	Pass
-WSPF9	Pass
-WSPF10	Pass
+WSPF9	Failure (not available) B144405
+WSPF10	Failure (not available) B144405
 WSPF11	Pass
-WSPF12	Failure (corrupts rhs of assignment) B90564
-WSPF13	Failure [*]
+WSPF12	Pass
+WSPF13	Failure (not available) B144405
 
 ---------
 Other defects:
