@@ -61,6 +61,14 @@ namespace IntroduceLocalNamespace
 			std::vector<int> v3 = flag ? v1 : v2;
 		}
 	};
+
+	void Function1()
+	{
+		std::string foo;
+		std::string bar = "Bar!";
+		// #TEST#: IL6 Introduce Local for rhs expression
+		foo = bar + " meta?";
+	}
 };
 
 using namespace IntroduceLocalNamespace;
