@@ -435,6 +435,7 @@ IL2		Pass
 IL3		Failure (inserts invalid code) B90304
 IL4		Pass
 IL5		Pass
+IL6		Failure (inserts invalid code) B144398
 
 Introduce Parameter
 
