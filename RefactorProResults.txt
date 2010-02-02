@@ -818,3 +818,4 @@ S90381 Configure rfactoring menu color
 B91557 No refactorings reported as "SmartTag! No providers available."
 B91926 Rename of structure member doesn't select all instances
 AB16908 Create Method Stub - The refactoring isn't available for a function declared outside a class
+[*1] Breaking linked identifier during Rename unhighlights other instances (R1)
