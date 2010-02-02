@@ -692,7 +692,7 @@ Replace with Constant
 RWL1	Pass
 
 = Reverse Conditional
-RC1		Failure (not available) B91202
+RC1		Failure (not available) S19046
 
 Simplify Boolean Expression
 
