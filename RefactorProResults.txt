@@ -1,6 +1,6 @@
 Version 9.1.10
 
-= Add/Remove Block Delimiter +
+= Add/Remove Block Delimiter
 ABD1	Pass
 ABD2	Pass
 ABD3	Pass
@@ -64,7 +64,7 @@ B2E19	Failure (not available) B130017
 B2E20	Failure (not available) B130017
 B2E21	Failure	(enum placement incorrect; managed syntax use for enum value) B130017
 
-= Break Apart/Line Up Parameters +
+= Break Apart/Line Up Parameters
 BAP1	Pass
 BAP2	Pass
 BAP3	Pass
@@ -76,7 +76,7 @@ CEA2	Failure (not available) S18641
 CEA3	Failure (not available) S18641
 CEA4	Failure (not available) S18641
 
-= Combine Conditionals +
+= Combine Conditionals
 CC1		Pass
 CC2		Pass
 CC3		Pass
@@ -111,7 +111,7 @@ CTC10	Pass
 CTC11	Pass
 CTC12	Failure (not available) S18807
 
-= Create Method Contract +
+= Create Method Contract
 CMC1	Pass
 CMC2	Pass
 CMC3	Pass
@@ -269,7 +269,7 @@ CSM29	Pass
 CSM30	Pass
 CSM31	Pass
 
-= Decompose Parameter +
+= Decompose Parameter
 DP1		Pass
 DP2		Pass
 DP3		Pass
@@ -329,7 +329,7 @@ EF30	Failure (not available) S90332
 EF31	Failure (not available) S90332
 EF32	Failure (not available) S90332
 
-= Extract Function +
+= Extract Function
 EXF1	Pass
 EXF2	Pass
 EXF3	Pass
@@ -377,10 +377,10 @@ EM18	Failure (reference not initialized) B144322
 EM19	Pass
 EM20	Failure (not available) S19099
 
-= Flatten Conditional +
+= Flatten Conditional
 FC1		Pass
 
-= Inline Recent Assignment +
+= Inline Recent Assignment
 IRA1	Pass
 IRA2	Pass
 
@@ -392,7 +392,7 @@ IM4		Pass
 IM5		Pass
 IM6		Pass
 
-= Inline Result +
+= Inline Result
 IR1		Pass
 IR2		Pass
 IR3		Pass
@@ -441,7 +441,7 @@ Introduce Parameter
 = Introduce Parameter Object S90333
 IPO1	Failure (not available) S90333
 
-= Introduce Result Variable +
+= Introduce Result Variable
 IRV1	Pass (changes indentation and block style) S18717
 IRV2	Pass (changes indentation and block style) S18717
 IRV3	Pass (changes indentation and block style) S18717
@@ -517,16 +517,16 @@ MM34	Failure (generates invalid code) B90521
 MM35	Pass
 MM36	Pass
 
-= Move Type to File +
+= Move Type to File
 MTF1	Pass
 
 = Move Type to Namespace
 MTN1	Failure (generates managed code) B144336
 
-= Promote to Parameter +
+= Promote to Parameter
 PTP1	Pass
 
-= Reduce Visibility +
+= Reduce Visibility
 RV1		Pass
 RV2		Pass
 RV3		Pass
@@ -559,7 +559,7 @@ RAP13	Failure (changes concatenation to assignment) B144339
 
 Remove Redundant Conditional
 
-= Remove Unused Parameters +
+= Remove Unused Parameters
 RUP1	Pass
 RUP2	Pass
 RUP3	Pass
@@ -680,7 +680,7 @@ RP9		Failure (renames method) B91215
 
 Replace Nested Conditional with Guard Clause
 
-= Replace Temporary with Query +
+= Replace Temporary with Query
 RTQ1	Pass
 
 Replace with Alias
@@ -695,7 +695,7 @@ RC1		Failure (not available) B91202
 
 Simplify Boolean Expression
 
-= Split Initialization from Declaration +
+= Split Initialization from Declaration
 SID1	Pass
 SID2	Pass
 SID3	Pass

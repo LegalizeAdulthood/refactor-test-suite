@@ -28,7 +28,8 @@ while (!infile.AtEndOfStream)
 			{
 				passedAllTests.push(refactoring);
 			}
-			WScript.Echo(refactoring + ": " + passes + " passed, " + failures + " failed: " + Math.ceil(100*100*passes/(passes + failures))/100 + "%");
+			var pct = String(Math.ceil(100 * 100 * passes / (passes + failures)) / 100) + "%";
+			WScript.Echo(pct + "      ".substr(0, 6 - pct.length) + refactoring + ": " + passes + " passed, " + failures + " failed");
 		}
 		StartTest();
 	}
@@ -40,9 +41,9 @@ while (!infile.AtEndOfStream)
 	{
 		failures++;
 	}
-	else if (line.indexOf("=") == 0)
+	else if (line.indexOf("= ") == 0)
 	{
-		refactoring = line;
+		refactoring = line.substr(line.indexOf("= ") + 1);
 	}
 }
 
