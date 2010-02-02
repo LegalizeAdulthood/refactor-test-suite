@@ -710,7 +710,7 @@ SID10	Pass
 SID11	Failure (not available) B144401
 
 = Split Temporary Variable
-ST1		Failure [*]
+ST1		Failure (inserts invalid code) B144403
 
 Widen Scope
 
