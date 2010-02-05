@@ -11,7 +11,7 @@
 
 // #TEST#: R25 Rename this macro argument
 // #TEST#: R26 Rename this macro
-#define MACRO_ONE_ARG(x_) (2.0f*x)
+#define MACRO_ONE_ARG(x_) (2.0f*x_)
 
 class Operations
 {
