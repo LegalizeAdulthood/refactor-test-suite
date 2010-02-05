@@ -108,6 +108,12 @@ namespace MoveMethodNamespace
 		m.MethodInline(name);
 	}
 
+	static char *SayFoo()
+	{
+		static char Foo[] = "Foo";
+		return &Foo[0];
+	}
+
 	static void TestMoveMethod2()
 	{
 		MoveMethod2 m;
@@ -117,12 +123,12 @@ namespace MoveMethodNamespace
 		m.Method(name);
 		m.MethodDefault("default");
 		m.MethodDefault("text", -1);
-		m.MethodDefault2(0);
-		m.MethodDefault2(0, -2);
-		m.MethodDefault3(0);
-		m.MethodDefault3(0, -3);
-		m.MethodDefault4(0);
-		m.MethodDefault4(0, -4);
+		m.MethodDefault2(SayFoo);
+		m.MethodDefault2(SayFoo, -2);
+		m.MethodDefault3(&MoveMethod2::Operation1);
+		m.MethodDefault3(&MoveMethod2::Operation1, -3);
+		m.MethodDefault4(&MoveMethod2::ConstOp1);
+		m.MethodDefault4(&MoveMethod2::ConstOp1, -4);
 		m.Operation1();
 		m.Operation2();
 	}

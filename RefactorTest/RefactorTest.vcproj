@@ -87,6 +87,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				Description="Running unit tests..."
+				CommandLine="&quot;$(TargetPath)&quot;"
 			/>
 		</Configuration>
 		<Configuration
@@ -161,6 +163,8 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				Description="Running unit tests..."
+				CommandLine="&quot;$(TargetPath)&quot;"
 			/>
 		</Configuration>
 	</Configurations>
