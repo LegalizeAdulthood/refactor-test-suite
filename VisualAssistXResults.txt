@@ -83,9 +83,9 @@ R67		Pass
 R68		Pass
 R69		Pass
 R70		Pass
-R71		Failure (doesn't select all isntances of identifier)
-R72		Failure (doesn't select all isntances of identifier)
-R73		Failure (doesn't select all isntances of identifier)
+R71		Failure (doesn't select all instances of identifier)
+R72		Failure (doesn't select all instances of identifier)
+R73		Failure (doesn't select all instances of identifier)
 R74		Pass
 R75		Pass
 R76		Pass
