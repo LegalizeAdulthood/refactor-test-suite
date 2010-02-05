@@ -292,6 +292,9 @@ void TestRename()
 		y = 4;
 	}
 
+	// #TEST#: R98 Rename the variable y
+	y++;
+
 	using X::Rename1;
 	Rename1 fromX;
 	fromX.Operation();
