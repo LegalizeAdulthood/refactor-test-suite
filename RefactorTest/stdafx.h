@@ -15,6 +15,7 @@ extern void TestAddRemoveBlockDelimiter();
 extern void TestAddParameter();
 extern void TestBooleanToEnum();
 extern void TestBreakApartLineUpParameters();
+extern void TestChangeSignature();
 extern void TestCollapseExpandAccessors();
 extern void TestCombineConditionals();
 extern void TestCompressToExpandFromTernaryExpression();

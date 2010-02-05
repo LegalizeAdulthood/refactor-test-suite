@@ -216,6 +216,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\ChangeSignature.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\CollapseExpandAccessors.cpp"
 					>
 				</File>
@@ -460,6 +464,10 @@
 			</File>
 			<File
 				RelativePath=".\BooleanToEnum.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ChangeSignature.h"
 				>
 			</File>
 			<File

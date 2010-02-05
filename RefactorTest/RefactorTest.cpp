@@ -9,6 +9,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	TestAddRemoveBlockDelimiter();
 	TestBooleanToEnum();
 	TestBreakApartLineUpParameters();
+	TestChangeSignature();
 	TestCollapseExpandAccessors();
 	TestCombineConditionals();
 	TestCompressToExpandFromTernaryExpression();
