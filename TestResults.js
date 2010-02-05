@@ -5,6 +5,14 @@ var infile = fso.OpenTextFile("RefactorProResults.txt");
 var refactoring;
 var passes;
 var failures;
+var totalPasses = 0;
+var totalFailures = 0;
+
+function Percentage(passed, total)
+{
+	var pct = String(Math.ceil(100*100*passed/total)/100) + "%";
+	return pct + "      ".substr(0, 6 - pct.length);
+}
 
 function StartTest()
 {
@@ -28,8 +36,9 @@ while (!infile.AtEndOfStream)
 			{
 				passedAllTests.push(refactoring);
 			}
-			var pct = String(Math.ceil(100 * 100 * passes / (passes + failures)) / 100) + "%";
-			WScript.Echo(pct + "      ".substr(0, 6 - pct.length) + refactoring + ": " + passes + " passed, " + failures + " failed");
+			WScript.Echo(Percentage(passes, passes + failures) + refactoring + ": " + passes + " passed, " + failures + " failed");
+			totalPasses += passes;
+			totalFailures += failures;
 		}
 		StartTest();
 	}
@@ -50,3 +59,6 @@ while (!infile.AtEndOfStream)
 WScript.Echo("");
 WScript.Echo(passedAllTests.length + " Passed all tests:");
 WScript.Echo(passedAllTests.join("\n"));
+WScript.Echo("");
+var numTests = totalPasses + totalFailures;
+WScript.Echo("Total: " + Percentage(totalPasses, numTests) + " (" + totalPasses + " passed + " + totalFailures + " failed = " + numTests + " total)");
