@@ -9,8 +9,7 @@
 #define _WIN32_WINNT 0x0501	// Change this to the appropriate value to target other versions of Windows.
 #endif						
 
-#include <tchar.h>
-
+extern void TestAddOverride();
 extern void TestAddRemoveBlockDelimiter();
 extern void TestAddParameter();
 extern void TestBooleanToEnum();
@@ -57,8 +56,11 @@ extern void TestRename();
 extern void TestRenameFileToMatchType();
 extern void TestRenameTypeToMatchFile();
 extern void TestReorderParameters();
+extern void TestReplaceIterativeForWithRangeFor();
 extern void TestReplaceNestedConditionalWithGuardClause();
+extern void TestReplaceNullZeroWithNullPtr();
 extern void TestReplaceTemporaryWithQuery();
+extern void TestReplaceTypeWithAuto();
 extern void TestReplaceWithAlias();
 extern void TestReplaceWithConstant();
 extern void TestReplaceWithLocal();

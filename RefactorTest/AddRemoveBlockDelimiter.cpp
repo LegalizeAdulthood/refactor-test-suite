@@ -11,7 +11,7 @@ static int AddRemoveBlockDelimiters(bool flag)
 		// #TEST#: ABD1 Add delimiters
 		x = AddRemoveBlockDelimiters(false);
 	else if (flag || (x > 0))
-		// #TEST# ABD2 Add delimiters
+		// #TEST#: ABD2 Add delimiters
 		x = -1;
 	else
 	// #TEST#: ABD3 Remove delimiters

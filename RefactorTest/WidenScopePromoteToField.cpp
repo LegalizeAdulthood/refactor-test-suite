@@ -29,7 +29,7 @@ using namespace WidenScopePromoteToFieldNamespace;
 
 void TestWidenScopePromoteToField()
 {
-	// #TEST# WSPF1 Widen Scope (promote to field)
+	// #TEST#: WSPF1 Widen Scope (promote to field)
 	int y = 0;
 
 	// #TEST#: WSPF2 Widen Scope (promote to field)

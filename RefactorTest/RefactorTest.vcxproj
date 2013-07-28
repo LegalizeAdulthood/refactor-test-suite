@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6C63942-AB41-453E-9C45-7F067DE8FDE6}</ProjectGuid>
+    <RootNamespace>RefactorTest</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Running unit tests...</Message>
+      <Command>"$(TargetPath)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Running unit tests...</Message>
+      <Command>"$(TargetPath)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AddOverride.cpp" />
+    <ClCompile Include="RefactorTest.cpp" />
+    <ClCompile Include="ReplaceAutoPtrWithUniquePtr.cpp" />
+    <ClCompile Include="ReplaceIterativeForWithRangeFor.cpp" />
+    <ClCompile Include="ReplaceNullZeroWithNullPtr.cpp" />
+    <ClCompile Include="ReplaceTypeWithAuto.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AddParameter.cpp" />
+    <ClCompile Include="AddRemoveBlockDelimiter.cpp" />
+    <ClCompile Include="BooleanToEnum.cpp" />
+    <ClCompile Include="BreakApartLineUpParameters.cpp" />
+    <ClCompile Include="ChangeSignature.cpp" />
+    <ClCompile Include="CollapseExpandAccessors.cpp" />
+    <ClCompile Include="CombineConditionals.cpp" />
+    <ClCompile Include="CompressToExpandFromTernaryExpression.cpp" />
+    <ClCompile Include="ConditionalToCase.cpp" />
+    <ClCompile Include="CreateMethodContract.cpp" />
+    <ClCompile Include="CreateMethodStub.cpp" />
+    <ClCompile Include="CreateOverload.cpp" />
+    <ClCompile Include="CreateSetterMethod.cpp" />
+    <ClCompile Include="CreateSplitMultiVariableDeclaration.cpp" />
+    <ClCompile Include="DecomposeParameter.cpp" />
+    <ClCompile Include="EncapsulateDowncast.cpp" />
+    <ClCompile Include="EncapsulateField.cpp" />
+    <ClCompile Include="ExtractFunction.cpp" />
+    <ClCompile Include="ExtractFunction2.cpp" />
+    <ClCompile Include="ExtractInterface.cpp" />
+    <ClCompile Include="ExtractMethod.cpp" />
+    <ClCompile Include="FlattenConditional.cpp" />
+    <ClCompile Include="InlineMacro.cpp" />
+    <ClCompile Include="InlineRecentAssignment.cpp" />
+    <ClCompile Include="InlineResult.cpp" />
+    <ClCompile Include="InlineTemporary.cpp" />
+    <ClCompile Include="IntroduceAlias.cpp" />
+    <ClCompile Include="IntroduceConstant.cpp" />
+    <ClCompile Include="IntroduceLocal.cpp" />
+    <ClCompile Include="IntroduceParameter.cpp" />
+    <ClCompile Include="IntroduceParameterObject.cpp" />
+    <ClCompile Include="IntroduceResultVariable.cpp" />
+    <ClCompile Include="MakeMethodStatic.cpp" />
+    <ClCompile Include="MoveDeclarationNearReference.cpp" />
+    <ClCompile Include="MoveInitializationToDeclaration.cpp" />
+    <ClCompile Include="MoveMethod.cpp" />
+    <ClCompile Include="MoveTypeToFile.cpp" />
+    <ClCompile Include="MoveTypeToNamespace.cpp" />
+    <ClCompile Include="OptimizeNamespaceReferences.cpp" />
+    <ClCompile Include="PromoteToParameter.cpp" />
+    <ClCompile Include="ReduceVisibility.cpp" />
+    <ClCompile Include="RemoveAssignmentsToParameters.cpp" />
+    <ClCompile Include="RemoveRedundantConditional.cpp" />
+    <ClCompile Include="RemoveUnusedParameters.cpp" />
+    <ClCompile Include="Rename.cpp" />
+    <ClCompile Include="RenameFileToMatchType.cpp" />
+    <ClCompile Include="RenameTypeToMatchFile.cpp" />
+    <ClCompile Include="ReorderParameters.cpp" />
+    <ClCompile Include="ReplaceNestedConditionalWithGuardClause.cpp" />
+    <ClCompile Include="ReplaceTemporaryWithQuery.cpp" />
+    <ClCompile Include="ReplaceWithAlias.cpp" />
+    <ClCompile Include="ReplaceWithConstant.cpp" />
+    <ClCompile Include="ReplaceWithLocal.cpp" />
+    <ClCompile Include="ReverseConditional.cpp" />
+    <ClCompile Include="SafeRename.cpp" />
+    <ClCompile Include="SimplifyBooleanExpression.cpp" />
+    <ClCompile Include="SplitInitializationFromDeclaration.cpp" />
+    <ClCompile Include="SplitTemporaryVariable.cpp" />
+    <ClCompile Include="WidenScope.cpp" />
+    <ClCompile Include="WidenScopePromoteToConstant.cpp" />
+    <ClCompile Include="WidenScopePromoteToField.cpp" />
+    <ClCompile Include="Rename2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddParameter.h" />
+    <ClInclude Include="BooleanToEnum.h" />
+    <ClInclude Include="ChangeSignature.h" />
+    <ClInclude Include="CreateOverload.h" />
+    <ClInclude Include="CreateSetterMethod.h" />
+    <ClInclude Include="DecomposeParameter.h" />
+    <ClInclude Include="MoveMethod.h" />
+    <ClInclude Include="RemoveUnusedParameters.h" />
+    <ClInclude Include="Rename.h" />
+    <ClInclude Include="RenameFileToMatchType.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

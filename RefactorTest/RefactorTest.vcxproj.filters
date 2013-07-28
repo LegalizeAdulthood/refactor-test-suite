@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Refactorings">
+      <UniqueIdentifier>{572519a3-5ac6-4f96-81fa-ac55191a4d67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Auxiliary Files">
+      <UniqueIdentifier>{df4e103d-588e-4c37-be23-c7dc6a13f3ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RefactorTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddParameter.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="AddRemoveBlockDelimiter.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="BooleanToEnum.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakApartLineUpParameters.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeSignature.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CollapseExpandAccessors.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CombineConditionals.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CompressToExpandFromTernaryExpression.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionalToCase.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateMethodContract.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateMethodStub.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateOverload.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateSetterMethod.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateSplitMultiVariableDeclaration.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="DecomposeParameter.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="EncapsulateDowncast.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="EncapsulateField.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtractFunction.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtractFunction2.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtractInterface.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtractMethod.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="FlattenConditional.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineMacro.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineRecentAssignment.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineResult.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineTemporary.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroduceAlias.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroduceConstant.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroduceLocal.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroduceParameter.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroduceParameterObject.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroduceResultVariable.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="MakeMethodStatic.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveDeclarationNearReference.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveInitializationToDeclaration.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveMethod.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveTypeToFile.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveTypeToNamespace.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="OptimizeNamespaceReferences.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="PromoteToParameter.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReduceVisibility.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveAssignmentsToParameters.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveRedundantConditional.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveUnusedParameters.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="Rename.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="RenameFileToMatchType.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="RenameTypeToMatchFile.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReorderParameters.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceNestedConditionalWithGuardClause.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceTemporaryWithQuery.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceWithAlias.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceWithConstant.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceWithLocal.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseConditional.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeRename.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="SimplifyBooleanExpression.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitInitializationFromDeclaration.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitTemporaryVariable.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="WidenScope.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="WidenScopePromoteToConstant.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="WidenScopePromoteToField.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="Rename2.cpp">
+      <Filter>Source Files\Auxiliary Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceNullZeroWithNullPtr.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceIterativeForWithRangeFor.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceTypeWithAuto.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="AddOverride.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceAutoPtrWithUniquePtr.cpp">
+      <Filter>Source Files\Refactorings</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddParameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BooleanToEnum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeSignature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateOverload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateSetterMethod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DecomposeParameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveMethod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveUnusedParameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rename.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RenameFileToMatchType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

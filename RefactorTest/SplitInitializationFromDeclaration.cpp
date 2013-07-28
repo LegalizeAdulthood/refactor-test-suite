@@ -21,7 +21,7 @@ namespace SplitInitializationFromDeclarationNamespace
 
 	void Test()
 	{
-		// #TEST# SID1 Split initialization from declaration
+		// #TEST#: SID1 Split initialization from declaration
 		int y = 0;
 
 		// #TEST#: SID2 Split initialization from declaration (should not be available)

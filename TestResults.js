@@ -61,7 +61,8 @@ function main(resultsFile)
 	WScript.Echo(passedAllTests.join("\n"));
 	WScript.Echo("");
 	var numTests = totalPasses + totalFailures;
-	WScript.Echo("Total: " + Percentage(totalPasses, numTests) + " (" + totalPasses + " passed + " + totalFailures + " failed = " + numTests + " total)");}
+	WScript.Echo("Total: " + Percentage(totalPasses, numTests) + " (" + totalPasses + " passed + " + totalFailures + " failed = " + numTests + " total)");
+}
 
 var resultsFile = "RefactorProResults.txt";
 if (WScript.Arguments.Length > 0)

@@ -360,9 +360,9 @@ restart:
 		// #TEST#: R90 Rename variable internal
 		int internal = interface + 1;
 		// #TEST#: R92 Rename variable nullptr
-		int nullptr = internal + 1;
+		//int nullptr = internal + 1;
 		// #TEST#: R93 Rename variable override
-		int override = nullptr + 1;
+		int override = internal + 1;
 		// #TEST#: R94 Rename variable pin_ptr
 		int pin_ptr = override + 1;
 		// #TEST#: R95 Rename variable property

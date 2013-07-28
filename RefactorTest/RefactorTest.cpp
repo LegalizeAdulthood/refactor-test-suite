@@ -3,9 +3,10 @@
 
 #include "stdafx.h"
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
-	TestAddParameter();
+    TestAddOverride();
+    TestAddParameter();
 	TestAddRemoveBlockDelimiter();
 	TestBooleanToEnum();
 	TestBreakApartLineUpParameters();
@@ -49,8 +50,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	TestRenameFileToMatchType();
 	TestRenameTypeToMatchFile();
 	TestReorderParameters();
+    TestReplaceIterativeForWithRangeFor();
 	TestReplaceNestedConditionalWithGuardClause();
+    TestReplaceNullZeroWithNullPtr();
 	TestReplaceTemporaryWithQuery();
+    TestReplaceTypeWithAuto();
 	TestReplaceWithAlias();
 	TestReplaceWithConstant();
 	TestReplaceWithLocal();

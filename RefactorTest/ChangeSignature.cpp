@@ -2,6 +2,9 @@
 #include "ChangeSignature.h"
 #include <cassert>
 
+// Changes the signature of a function or method in both a header and source file;
+// call sites are not updated in Visual Assist X.
+
 namespace ChangeSignatureNamespace
 {
 	int Function2(int a, int b)
