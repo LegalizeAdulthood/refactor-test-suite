@@ -37,6 +37,11 @@ CS11    Pass
 
 = Push Members Down
 
+= Remove Unused Parameters
+RUP1    Pass
+RUP2    Pass
+RUP3    Pass
+
 = Rename
 R1
 R2
@@ -136,3 +141,7 @@ R95
 R96
 R97
 R98
+
+= Reorder Parameters
+
+= Simplify Boolean Expression
