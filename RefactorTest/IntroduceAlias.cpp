@@ -6,13 +6,13 @@
 class IntroduceAlias
 {
 public:
-	void Test()
-	{
-	}
+    void Test()
+    {
+    }
 };
 
 void TestIntroduceAlias()
 {
-	IntroduceAlias a;
-	a.Test();
+    IntroduceAlias a;
+    a.Test();
 }

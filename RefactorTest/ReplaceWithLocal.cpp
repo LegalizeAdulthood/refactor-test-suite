@@ -6,24 +6,24 @@
 
 namespace ReplaceWithLocalNamespace
 {
-	void Test1()
-	{
-		std::string temp = "This is a temp string.";
+    void Test1()
+    {
+        std::string temp = "This is a temp string.";
 
-		std::string foo = temp;
-		foo += "  This is more text.";
-		std::string bar = temp + "  Yet even more!";
-		// #TEST#: RWL1 Replace With Local on rhs expression
-		foo += temp + "  Yet even more!";
-	}
+        std::string foo = temp;
+        foo += "  This is more text.";
+        std::string bar = temp + "  Yet even more!";
+        // #TEST#: RWL1 Replace With Local on rhs expression
+        foo += temp + "  Yet even more!";
+    }
 
-	void Test()
-	{
-		Test1();
-	}
+    void Test()
+    {
+        Test1();
+    }
 }
 
 void TestReplaceWithLocal()
 {
-	ReplaceWithLocalNamespace::Test();
+    ReplaceWithLocalNamespace::Test();
 }

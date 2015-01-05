@@ -8,47 +8,47 @@
 
 namespace PromoteToParameterNamespace
 {
-	class PromoteToParameterClass
-	{
-	public:
-		PromoteToParameterClass() {}
-		void Blah();
-	};
+    class PromoteToParameterClass
+    {
+    public:
+        PromoteToParameterClass() {}
+        void Blah();
+    };
 
-	void PromoteToParameterClass::Blah()
-	{
-		int g = 5;
-		std::cout << g << "\n";
-	}
+    void PromoteToParameterClass::Blah()
+    {
+        int g = 5;
+        std::cout << g << "\n";
+    }
 
 
-	class Foo
-	{
-	public:
-		int Operation1() { return 1; }
-		int Operation2() { return 2; }
-	};
+    class Foo
+    {
+    public:
+        int Operation1() { return 1; }
+        int Operation2() { return 2; }
+    };
 
-	void TestMemberPointer()
-	{
-		// #TEST#: PTP1 Promote to Parameter ptr
-		int (Foo::*ptr)() = &Foo::Operation1;
-		Foo f;
-		int j = (f.*ptr)();
-		ptr = &Foo::Operation2;
-		j += (f.*ptr)();
-	}
+    void TestMemberPointer()
+    {
+        // #TEST#: PTP1 Promote to Parameter ptr
+        int (Foo::*ptr)() = &Foo::Operation1;
+        Foo f;
+        int j = (f.*ptr)();
+        ptr = &Foo::Operation2;
+        j += (f.*ptr)();
+    }
 
-	void Test()
-	{
-		PromoteToParameterClass test;
-		test.Blah();
+    void Test()
+    {
+        PromoteToParameterClass test;
+        test.Blah();
 
-		TestMemberPointer();
-	}
+        TestMemberPointer();
+    }
 }
 
 void TestPromoteToParameter()
 {
-	PromoteToParameterNamespace::Test();
+    PromoteToParameterNamespace::Test();
 }

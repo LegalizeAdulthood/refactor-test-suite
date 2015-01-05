@@ -8,35 +8,35 @@
 
 namespace MoveTypeToFileNamespace
 {
-	class MoveTypeToFile1
-	{
-	};
+    class MoveTypeToFile1
+    {
+    };
 
-	class MoveTypeToFile2
-	{
-	};
+    class MoveTypeToFile2
+    {
+    };
 
-	struct MoveTypeToFile3
-	{
-	};
+    struct MoveTypeToFile3
+    {
+    };
 
-	union MoveTypeToFile4
-	{
-	};
+    union MoveTypeToFile4
+    {
+    };
 
-	// #TEST#: MTF1 Move Type To File
-	template <typename T>
-	struct MoveTypeToFile5
-	{
-		T _t;
-		static T Zero();
-	};
+    // #TEST#: MTF1 Move Type To File
+    template <typename T>
+    struct MoveTypeToFile5
+    {
+        T _t;
+        static T Zero();
+    };
 
-	template <typename T>
-	T MoveTypeToFile5<T>::Zero()
-	{
-		return T(0);
-	}
+    template <typename T>
+    T MoveTypeToFile5<T>::Zero()
+    {
+        return T(0);
+    }
 }
 
 using namespace MoveTypeToFileNamespace;

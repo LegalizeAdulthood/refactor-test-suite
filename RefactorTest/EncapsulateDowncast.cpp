@@ -9,55 +9,55 @@
 
 namespace EncapsulateDowncastNamespace
 {
-	class Base
-	{
-	public:
-		virtual ~Base() {}
-		virtual Base *Operation() = 0;
-	};
+    class Base
+    {
+    public:
+        virtual ~Base() {}
+        virtual Base *Operation() = 0;
+    };
 
-	class Derived1 : public virtual Base
-	{
-	public:
-		virtual ~Derived1() {}
-		// #TEST#: ED3 Encapsulate Downcast
-		virtual Base *Operation()
-		{
-			return this;
-		}
-		// #TEST#: ED1 Encapsulate Downcast
-		virtual Base *Operation2()
-		{
-			return this;
-		}
-		void Operation3()
-		{
-		}
-	};
+    class Derived1 : public virtual Base
+    {
+    public:
+        virtual ~Derived1() {}
+        // #TEST#: ED3 Encapsulate Downcast
+        virtual Base *Operation()
+        {
+            return this;
+        }
+        // #TEST#: ED1 Encapsulate Downcast
+        virtual Base *Operation2()
+        {
+            return this;
+        }
+        void Operation3()
+        {
+        }
+    };
 
-	class Derived2 : public virtual Derived1
-	{
-	public:
-		virtual ~Derived2() {}
-		virtual Base *Operation()
-		{
-			return this;
-		}
-		// #TEST#: ED2 Encapsulate Downcast
-		virtual Base *Operation2()
-		{
-			return this;
-		}
-	};
+    class Derived2 : public virtual Derived1
+    {
+    public:
+        virtual ~Derived2() {}
+        virtual Base *Operation()
+        {
+            return this;
+        }
+        // #TEST#: ED2 Encapsulate Downcast
+        virtual Base *Operation2()
+        {
+            return this;
+        }
+    };
 }
 
 using namespace EncapsulateDowncastNamespace;
 
 void TestEncapsulateDowncast()
 {
-	Derived1 d1;
-	Derived2 d2;
+    Derived1 d1;
+    Derived2 d2;
 
-	dynamic_cast<Derived1 *>(d1.Operation2())->Operation3();
-	dynamic_cast<Derived1 *>(d2.Operation2())->Operation3();
+    dynamic_cast<Derived1 *>(d1.Operation2())->Operation3();
+    dynamic_cast<Derived1 *>(d2.Operation2())->Operation3();
 }

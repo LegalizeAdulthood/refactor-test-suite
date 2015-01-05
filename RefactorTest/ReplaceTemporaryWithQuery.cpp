@@ -5,17 +5,17 @@
 
 namespace ReplaceTemporaryWithQueryNamespace
 {
-	int Function1() { return 1; }
-	int Function2() { return 2; }
+    int Function1() { return 1; }
+    int Function2() { return 2; }
 
-	void TestFunction()
-	{
-		int (*fn)() = Function1;
-		// #TEST#: RTQ1 Replace Temporary With Query on j
-		int j = (*fn)();
-		fn = Function2;
-		j += (*fn)();
-	}
+    void TestFunction()
+    {
+        int (*fn)() = Function1;
+        // #TEST#: RTQ1 Replace Temporary With Query on j
+        int j = (*fn)();
+        fn = Function2;
+        j += (*fn)();
+    }
 }
 
 using namespace ReplaceTemporaryWithQueryNamespace;

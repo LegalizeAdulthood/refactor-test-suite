@@ -1,5 +1,5 @@
 class FooBar
 {
 public:
-	FooBar();
+    FooBar();
 };
