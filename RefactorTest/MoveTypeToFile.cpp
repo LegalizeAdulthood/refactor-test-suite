@@ -33,7 +33,7 @@ namespace MoveTypeToFileNamespace
 	};
 
 	template <typename T>
-	static T MoveTypeToFile5<T>::Zero()
+	T MoveTypeToFile5<T>::Zero()
 	{
 		return T(0);
 	}
