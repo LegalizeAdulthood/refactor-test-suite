@@ -48,7 +48,7 @@ public:
 	~MoveMethod2();
 
 	// #TEST#: MM9 Move method to cpp
-	void MethodDefault(char *text, int arg1 = 0)
+	void MethodDefault(char const *text, int arg1 = 0)
 	{
 		SetProtectedString(text);
 		SetProtectedInt(arg1);
