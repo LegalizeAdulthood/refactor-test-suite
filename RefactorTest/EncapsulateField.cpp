@@ -63,8 +63,6 @@ namespace EncapsulateFieldNamespace
 		std::string *s;
 		// #TEST#: EF21 Encapsulate field
 		std::vector<int> *v;
-		// #TEST#: EF22 Encapsulate field
-		std::vector<int> &r;
 		// #TEST#: EF23 Encapsulate field
 		std::vector<int>::size_type st;
 	};
@@ -87,8 +85,6 @@ namespace EncapsulateFieldNamespace
 			std::string *s;
 			// #TEST#: EF30 Encapsulate field
 			std::vector<int> *v;
-			// #TEST#: EF31 Encapsulate field
-			std::vector<int> &r;
 			// #TEST#: EF32 Encapsulate field
 			std::vector<int>::size_type st;
 		};
