@@ -3,16 +3,26 @@ project(refactor_test_suite)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES
+set(headers
+    RefactorTest/AddParameter.h
+    RefactorTest/BooleanToEnum.h
+    RefactorTest/ChangeSignature.h
+    RefactorTest/CreateOverload.h
+    RefactorTest/CreateSetterMethod.h
+    RefactorTest/DecomposeParameter.h
+    RefactorTest/MoveMethod.h
+    RefactorTest/RemoveUnusedParameters.h
+    RefactorTest/Rename.h
+    RefactorTest/RenameFileToMatchType.h
+    RefactorTest/stdafx.h)
+
+set(sources
     RefactorTest/AddOverride.cpp
     RefactorTest/AddParameter.cpp
-    RefactorTest/AddParameter.h
     RefactorTest/AddRemoveBlockDelimiter.cpp
     RefactorTest/BooleanToEnum.cpp
-    RefactorTest/BooleanToEnum.h
     RefactorTest/BreakApartLineUpParameters.cpp
     RefactorTest/ChangeSignature.cpp
-    RefactorTest/ChangeSignature.h
     RefactorTest/CollapseExpandAccessors.cpp
     RefactorTest/CombineConditionals.cpp
     RefactorTest/CompressToExpandFromTernaryExpression.cpp
@@ -20,12 +30,9 @@ set(SOURCE_FILES
     RefactorTest/CreateMethodContract.cpp
     RefactorTest/CreateMethodStub.cpp
     RefactorTest/CreateOverload.cpp
-    RefactorTest/CreateOverload.h
     RefactorTest/CreateSetterMethod.cpp
-    RefactorTest/CreateSetterMethod.h
     RefactorTest/CreateSplitMultiVariableDeclaration.cpp
     RefactorTest/DecomposeParameter.cpp
-    RefactorTest/DecomposeParameter.h
     RefactorTest/EncapsulateDowncast.cpp
     RefactorTest/EncapsulateField.cpp
     RefactorTest/ExtractFunction.cpp
@@ -47,7 +54,6 @@ set(SOURCE_FILES
     RefactorTest/MoveDeclarationNearReference.cpp
     RefactorTest/MoveInitializationToDeclaration.cpp
     RefactorTest/MoveMethod.cpp
-    RefactorTest/MoveMethod.h
     RefactorTest/MoveTypeToFile.cpp
     RefactorTest/MoveTypeToNamespace.cpp
     RefactorTest/OptimizeNamespaceReferences.cpp
@@ -57,12 +63,9 @@ set(SOURCE_FILES
     RefactorTest/RemoveAssignmentsToParameters.cpp
     RefactorTest/RemoveRedundantConditional.cpp
     RefactorTest/RemoveUnusedParameters.cpp
-    RefactorTest/RemoveUnusedParameters.h
     RefactorTest/Rename.cpp
-    RefactorTest/Rename.h
     RefactorTest/Rename2.cpp
     RefactorTest/RenameFileToMatchType.cpp
-    RefactorTest/RenameFileToMatchType.h
     RefactorTest/RenameTypeToMatchFile.cpp
     RefactorTest/ReorderParameters.cpp
     RefactorTest/ReplaceAutoPtrWithUniquePtr.cpp
@@ -80,10 +83,13 @@ set(SOURCE_FILES
     RefactorTest/SplitInitializationFromDeclaration.cpp
     RefactorTest/SplitTemporaryVariable.cpp
     RefactorTest/stdafx.cpp
-    RefactorTest/stdafx.h
     RefactorTest/WidenScope.cpp
     RefactorTest/WidenScopePromoteToConstant.cpp
     RefactorTest/WidenScopePromoteToField.cpp)
+
+set(SOURCE_FILES ${headers} ${sources})
+source_group("Header Files" FILES ${headers})
+source_group("Source Files" FILES ${sources})
 
 add_executable(refactor_test_suite ${SOURCE_FILES})
 add_custom_command(TARGET refactor_test_suite POST_BUILD COMMAND refactor_test_suite)
