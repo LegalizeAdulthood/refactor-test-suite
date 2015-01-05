@@ -10,7 +10,9 @@ struct BooleanToEnumStruct
 
 	// #TEST#: B2E2 Boolean to Enum
 	bool ReturnValueInline()
-	{}
+	{
+		return false;
+	}
 
 	// #TEST#: B2E3 Boolean to Enum
 	bool ReturnValue();
