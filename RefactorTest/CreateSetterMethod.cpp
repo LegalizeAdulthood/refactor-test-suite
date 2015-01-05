@@ -19,19 +19,37 @@ namespace CreateSetterMethodNamespace
 	const char *CreateSetterMethodStruct::_ss = "Text";
 	std::string CreateSetterMethodStruct::_sstr = Foo;
 
+	template <>
 	int CreateSetterMethodTemplate<int>::_st = 0;
+	template <>
 	float CreateSetterMethodTemplate<float>::_st = 1.0f;
+	template <>
 	double CreateSetterMethodTemplate<double>::_st = 2.0;
 
+	template <>
 	int CreateSetterMethodTemplateStruct<int>::_st = 0;
+	template <>
 	int *CreateSetterMethodTemplateStruct<int>::_stp = 0;
+#if 0
+	template <>
 	std::vector<int> CreateSetterMethodTemplateStruct<int>::_stv;
+#endif
+	template <>
 	float CreateSetterMethodTemplateStruct<float>::_st = 0.0f;
+	template <>
 	float *CreateSetterMethodTemplateStruct<float>::_stp = 0;
+#if 0
+	template <>
 	std::vector<float> CreateSetterMethodTemplateStruct<float>::_stv;
+#endif
+	template <>
 	double CreateSetterMethodTemplateStruct<double>::_st = 0.0;
+	template <>
 	double *CreateSetterMethodTemplateStruct<double>::_stp = 0;
+#if 0
+	template <>
 	std::vector<double> CreateSetterMethodTemplateStruct<double>::_stv;
+#endif
 
 	void CreateSetterMethod::Operation()
 	{
@@ -102,7 +120,9 @@ namespace CreateSetterMethodNamespace
 		CreateSetterMethodTemplateStruct<int>::_stp = new int;
 		CreateSetterMethodTemplateStruct<int>::_stp[0] = -3;
 		delete CreateSetterMethodTemplateStruct<int>::_stp;
+#if 0
 		CreateSetterMethodTemplateStruct<int>::_stv = std::vector<int>(4);
+#endif
 
 		CreateSetterMethodTemplateStruct<float> sf;
 		sf._t = -1.0f;
@@ -114,7 +134,9 @@ namespace CreateSetterMethodNamespace
 		CreateSetterMethodTemplateStruct<float>::_stp = new float;
 		CreateSetterMethodTemplateStruct<float>::_stp[0] = -3.0f;
 		delete CreateSetterMethodTemplateStruct<float>::_stp;
+#if 0
 		CreateSetterMethodTemplateStruct<float>::_stv = std::vector<float>(4);
+#endif
 
 		CreateSetterMethodTemplateStruct<double> sd;
 		sd._t = -1.0;
@@ -126,7 +148,9 @@ namespace CreateSetterMethodNamespace
 		CreateSetterMethodTemplateStruct<double>::_stp = new double;
 		CreateSetterMethodTemplateStruct<double>::_stp[0] = -3.0;
 		delete CreateSetterMethodTemplateStruct<double>::_stp;
+#if 0
 		CreateSetterMethodTemplateStruct<double>::_stv = std::vector<double>(4);
+#endif
 	}
 }
 

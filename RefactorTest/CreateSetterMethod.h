@@ -135,8 +135,10 @@ namespace CreateSetterMethodNamespace
 		// #TEST#: CSM28 Create setter method
 		static T *_stp;
 
+#if 0
 		// #TEST#: CSM29 Create setter method
 		static std::vector<T> _stv;
+#endif
 	};
 
 	union CreateSetterMethodUnion
