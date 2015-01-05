@@ -9,7 +9,7 @@ public:
 	{
 	}
 
-	void MethodDefault(char *text, int arg1 = 0);
+	void MethodDefault(char const *text, int arg1 = 0);
 
 	// #TEST#: MM2 Move method to cpp
 	void MethodInline(const std::string &text)

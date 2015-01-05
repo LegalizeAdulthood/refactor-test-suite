@@ -14,7 +14,7 @@ MoveMethod::MoveMethod()
 }
 
 // #TEST#: MM7 Move method to header
-void MoveMethod::MethodDefault(char *text, int arg1)
+void MoveMethod::MethodDefault(char const *text, int arg1)
 {
     _bar = text;
     _int = arg1;
