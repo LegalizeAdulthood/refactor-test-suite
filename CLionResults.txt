@@ -22,9 +22,24 @@ CS11    Pass
 
 = Create Implementation From Usage
 
+= Inline Constant
+
+= Inline Define
+
+= Inline Function
+
+= Inline Method
+
+= Inline Typedef
+
 = Extract Constant
 
+= Extract Declaration
+
 = Extract Define
+
+= Extract Function
+EXF1
 
 = Extract Method
 EM1     Pass
