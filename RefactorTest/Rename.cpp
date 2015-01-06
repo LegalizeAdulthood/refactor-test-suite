@@ -10,7 +10,8 @@
 // #TEST#: R24 Rename this macro
 #define MACRO_NO_ARGS 3.14159f
 
-// #TEST#: R25 Rename this macro argument
+// #TEST#: R25 Rename the macro argument x_ from declaration
+// #TEST#: R99 Rename the macro argument x_ from usage
 // #TEST#: R26 Rename this macro
 #define MACRO_ONE_ARG(x_) (2.0f*x_)
 
