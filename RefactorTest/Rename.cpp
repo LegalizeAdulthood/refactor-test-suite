@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Rename.h"
 #include <string>
+#include <stdexcept>
 
 // Renames a local variable, function, method, field, property, parameter,
 // type, namespace, active CSS style, C++ global variable or C++ macro and
@@ -286,10 +287,19 @@ void TestRename()
         y = -1;
     }
 
+    y = 3;
     {
         int y = 3;
         // #TEST#: R30 Rename y, which shadows outer scope y
         y = 4;
+        if (y != 4)
+        {
+            throw std::runtime_error("R38 may have failed");
+        }
+    }
+    if (y != 3)
+    {
+        throw std::runtime_error("R38 may have failed");
     }
 
     // #TEST#: R98 Rename the variable y
