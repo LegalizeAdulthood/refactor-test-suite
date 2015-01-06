@@ -370,8 +370,6 @@ restart:
         int interface = gcnew + 1;
         // #TEST#: R90 Rename variable internal
         int internal = interface + 1;
-        // #TEST#: R92 Rename variable nullptr
-        //int nullptr = internal + 1;
         // #TEST#: R93 Rename variable override
         int override = internal + 1;
         // #TEST#: R94 Rename variable pin_ptr
