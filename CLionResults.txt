@@ -27,6 +27,27 @@ CS11    Pass
 = Extract Define
 
 = Extract Method
+EM1     Pass
+EM2     Failure
+EM3     Failure
+EM4     Failure
+EM5     Failure
+EM6     Failure
+EM7     Failure
+EM8     Failure
+EM9     Failure
+EM10    Failure
+EM11    Failure
+EM12    Failure
+EM13    Failure
+EM14    Failure
+EM15    Failure
+EM16    Failure
+EM17    Failure
+EM18    Failure
+EM19    Failure
+EM20    Failure
+
 
 = Extract Parameter
 
