@@ -268,7 +268,7 @@ void TestRename()
     // #TEST#: R16 Rename the variable test2
     X::Rename1 test2;
     // #TEST#: R17 rename the variable y
-    // #TEST#: R18 rename the variables test2
+    // #TEST#: R18 rename the variable test2
     // #TEST#: R19 rename the method Operation
     // #TEST#: R20 rename the namespace X
     // #TEST#: R21 rename the variable X::x
