@@ -1,5 +1,8 @@
 Version CL-140-1221.2
 
+Methodology: Default suggestions are selected when refactoring.  Some
+refactorings can be performed successfully if suggestions are excluded.
+
 = Change Signature
 CS1		Pass
 CS2     Pass
@@ -141,7 +144,6 @@ R95     Pass
 R96     Pass
 R97     Pass
 R98     Failure
-
 
 = Reorder Parameters
 
