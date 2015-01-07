@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Require.h"
 
 // Converts an if/else conditional with assignments in each branch into
 // a ternary expression.
@@ -19,6 +20,7 @@ namespace CompressToTernaryExpressionNamespace
         {
             x = 1;
         }
+        require_equal(10, x);
 
         // #TEST#: CTE2 Compress to Ternary Expression
         if (y == 10)
@@ -29,6 +31,7 @@ namespace CompressToTernaryExpressionNamespace
         {
             x = 1;
         }
+        require_equal(10, x);
 
         // #TEST#: CTE3 Compress to Ternary Expression
         if (y == 10)
@@ -43,6 +46,7 @@ namespace CompressToTernaryExpressionNamespace
         {
             x = 0;
         }
+        require_equal(10, x);
 
         // #TEST#: CTE4 Compress to Ternary Expression
         if (y == 10)
@@ -56,9 +60,11 @@ namespace CompressToTernaryExpressionNamespace
                 x = 1;
             }
         }
+        require_equal(10, x);
 
         // #TEST#: CTE5 Expand Ternary Expression
         x = (y == 10) ? y : 1;
+        require_equal(10, x);
     }
 
     void TestFloatDouble()
