@@ -93,6 +93,17 @@ IM6     Pass
 
 = Inline Typedef
 
+= Inline Variable
+IV1     Pass
+IV2     Failure (not available)
+IV3     Pass
+IV4     Failure (not available)
+IV5     Failure
+IV6     Failure (not available)
+IV7     Failure (not available)
+IV8     Failure (not available)
+IV9     Failure (not available)
+
 = Move Method to Header/Source
 
 = Pull Members Up
