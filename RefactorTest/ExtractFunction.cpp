@@ -2,7 +2,7 @@
 
 extern void TestExtractFunctionCFile();
 
-// Moves selected code into a new function within the enclosing namespace. 
+// Moves selected code into a new function within the enclosing namespace.
 
 namespace ExtractFunction
 {
