@@ -71,7 +71,6 @@ EM18    Failure
 EM19    Failure
 EM20    Failure
 
-
 = Extract Parameter
 
 = Extract Typedef
@@ -80,9 +79,15 @@ EM20    Failure
 
 = Inline Constant
 
-= Inline Define
-
 = Inline Function
+
+= Inline Macro
+IM1     Failure
+IM2     Pass
+IM3     Pass
+IM4     Pass
+IM5     Pass
+IM6     Pass
 
 = Inline Method
 
