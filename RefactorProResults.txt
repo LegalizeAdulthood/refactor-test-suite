@@ -377,6 +377,9 @@ EM18	Failure (reference not initialized) B144322
 EM19	Pass
 EM20	Failure (not available) S19099
 
+= Extract Parameter
+EP1	    Pass
+
 = Flatten Conditional
 FC1		Pass
 
@@ -523,9 +526,6 @@ MTF1	Pass
 
 = Move Type to Namespace
 MTN1	Failure (generates managed code) B144336
-
-= Promote to Parameter
-PTP1	Pass
 
 = Reduce Visibility
 RV1		Pass
@@ -815,7 +815,7 @@ S90333 Make Introduce Parameter Object available for native C++
 S90334 Create "Optimize Includes" refactoring
 B91334 Rename not available on function (id)
 S90341 Create refactoring "Reverse Boolean"
-B90249 Repeated application/undo crashes Visual Studio 
+B90249 Repeated application/undo crashes Visual Studio
 B91437 Rename of macro doesn't select all uses
 B91438 Rename doesn't select all instances of member function
 B91439 Documentation - Convert to System Type not documented

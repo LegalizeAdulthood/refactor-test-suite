@@ -6,16 +6,16 @@
 // now pass in the field or expression of the local declaration as the
 // argument for the new parameter.
 
-namespace PromoteToParameterNamespace
+namespace ExtractParameterNamespace
 {
-    class PromoteToParameterClass
+    class ExtractParameterClass
     {
     public:
-        PromoteToParameterClass() {}
+        ExtractParameterClass() {}
         void Blah();
     };
 
-    void PromoteToParameterClass::Blah()
+    void ExtractParameterClass::Blah()
     {
         int g = 5;
         std::cout << g << "\n";
@@ -31,7 +31,7 @@ namespace PromoteToParameterNamespace
 
     void TestMemberPointer()
     {
-        // #TEST#: PTP1 Promote to Parameter ptr
+        // #TEST#: EP1 Extract Parameter ptr
         int (Foo::*ptr)() = &Foo::Operation1;
         Foo f;
         int j = (f.*ptr)();
@@ -41,14 +41,14 @@ namespace PromoteToParameterNamespace
 
     void Test()
     {
-        PromoteToParameterClass test;
+        ExtractParameterClass test;
         test.Blah();
 
         TestMemberPointer();
     }
 }
 
-void TestPromoteToParameter()
+void TestExtractParameter()
 {
-    PromoteToParameterNamespace::Test();
+    ExtractParameterNamespace::Test();
 }

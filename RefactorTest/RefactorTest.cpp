@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
         TestMoveTypeToFile();
         TestMoveTypeToNamespace();
         TestOptimizeNamespaceReferences();
-        TestPromoteToParameter();
+        TestExtractParameter();
         TestReduceVisibility();
         TestRemoveAssignmentsToParameters();
         TestRemoveRedundantConditional();

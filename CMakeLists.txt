@@ -39,6 +39,7 @@ set(sources
     RefactorTest/ExtractFunction2.cpp
     RefactorTest/ExtractInterface.cpp
     RefactorTest/ExtractMethod.cpp
+    RefactorTest/ExtractParameter.cpp
     RefactorTest/FlattenConditional.cpp
     RefactorTest/InlineMacro.cpp
     RefactorTest/InlineRecentAssignment.cpp
@@ -57,7 +58,6 @@ set(sources
     RefactorTest/MoveTypeToFile.cpp
     RefactorTest/MoveTypeToNamespace.cpp
     RefactorTest/OptimizeNamespaceReferences.cpp
-    RefactorTest/PromoteToParameter.cpp
     RefactorTest/ReduceVisibility.cpp
     RefactorTest/RefactorTest.cpp
     RefactorTest/RemoveAssignmentsToParameters.cpp
