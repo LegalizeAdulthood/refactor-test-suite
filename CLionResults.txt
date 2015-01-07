@@ -10,6 +10,8 @@ Code / Surround With... / {}.
 
 Add Parameter is performed with Change Signature.
 
+Create Setter Method is performed with Code / Generate... / Setter.
+
 Flatten Conditional is performed by repeatedly applying the fixup Merge
 Nested Ifs.
 
@@ -89,6 +91,38 @@ CMS19   Pass
 CMS20   Failure
 CMS21   Pass
 CMS22   Pass
+
+= Create Setter Method
+CSM1    Pass
+CSM2    Pass
+CSM3    Pass
+CSM4    Failure
+CSM5    Pass
+CSM6    Pass
+CSM7    Pass
+CSM8    Failure
+CSM9    Pass
+CSM10   Pass
+CSM11   Pass
+CSM12   Pass
+CSM13   Pass
+CSM14   Failure
+CSM15   Failure
+CSM16   Failure
+CSN17   Failure
+CSM18   Failure
+CSM19   Pass
+CSM20   Pass
+CSM21   Pass
+CSM22   Pass
+CSM23   Pass
+CSM24   Pass
+CSM25   Pass
+CSM26   Pass
+CSM27   Failure
+CSM28   Failure
+CSM30   Pass
+CSM31   Failure
 
 = Extract Declaration
 
