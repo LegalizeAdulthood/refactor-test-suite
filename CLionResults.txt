@@ -1,10 +1,14 @@
 Version CL-140-1221.2
 
+Notes:
+
 Methodology: Default suggestions are selected when refactoring.  Some
 refactorings can be performed successfully if suggestions are excluded.
 
 Add Block Delimiter is performed by selecting the code and performing
 Code / Surround With... / {}.
+
+Add Parameter is performed with Change Signature.
 
 Flatten Conditional is performed by repeatedly applying the fixup Merge
 Nested Ifs.
@@ -12,6 +16,8 @@ Nested Ifs.
 Introduce Local is performed with Extract Variable.
 
 Introduce Constant is performed with Extract Constant.
+
+============================================================================
 
 = Add/Remove Block Delimiters
 ABD1    Pass
