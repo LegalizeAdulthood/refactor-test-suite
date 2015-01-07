@@ -43,7 +43,7 @@ set(sources
     RefactorTest/InlineMacro.cpp
     RefactorTest/InlineRecentAssignment.cpp
     RefactorTest/InlineResult.cpp
-    RefactorTest/InlineTemporary.cpp
+    RefactorTest/InlineVariable.cpp
     RefactorTest/IntroduceAlias.cpp
     RefactorTest/IntroduceConstant.cpp
     RefactorTest/IntroduceLocal.cpp

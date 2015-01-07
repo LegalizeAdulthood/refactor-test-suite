@@ -4,14 +4,15 @@
 #include <sstream>
 #include <stdexcept>
 
-// Replaces all references to a local variable with its initial value.
+// Replaces all references to a variable with its value.
 
 namespace InlineTemporaryNamespace
 {
     int Function1() { return 1; }
     int Function2() { return 2; }
 
-void require_equal(int expected, int actual)
+template <typename T>
+void require_equal(T expected, T actual)
 {
     if (expected != actual)
     {
@@ -24,7 +25,7 @@ void require_equal(int expected, int actual)
 
     void TestInteger()
     {
-        // #TEST#: IT1 Inline Temporary i
+        // #TEST#: IV1 Inline Temporary i
         int i = 4;
         int j = i*4 + 6;
         require_equal(22, j);
@@ -33,36 +34,42 @@ void require_equal(int expected, int actual)
         j /= 15;
         require_equal(2, j);
         j &= 7 + i;
-        require_equal(6, j);
+        require_equal(2, j);
     }
 
     void TestFunction()
     {
-        // #TEST#: IT2 Inline Temporary fn
+        // #TEST#: IV2 Inline Temporary fn
         int (*fn)() = Function1;
         int j = (*fn)();
+        require_equal(1, j);
         fn = Function2;
         j += (*fn)();
+        require_equal(3, j);
     }
 
     void TestFunction2()
     {
         int (*fn)() = Function1;
-        // #TEST#: IT10 Inline Temporary fn
+        // #TEST#: IV10 Inline Temporary fn
         int j = (*fn)();
+        require_equal(1, j);
         int (*fn2)() = Function2;
-        // #TEST#: IT11 Inline Temporary fn2
+        // #TEST#: IV11 Inline Temporary fn2
         j += (*fn2)();
+        require_equal(3, j);
     }
 
     void TestString()
     {
         std::string temp = "This is a temp string.";
 
-        // #TEST#: IT3 Inline Temporary temp
+        // #TEST#: IV3 Inline Temporary temp
         std::string foo = temp;
+        require_equal(foo, std::string{"This is a temp string."});
         foo += "  This is more text.";
         foo += temp;
+        require_equal(foo, std::string{"This is a temp string." "  This is more text." "This is a temp string."});
     }
 
     class Foo
@@ -77,7 +84,7 @@ void require_equal(int expected, int actual)
 
     void TestMemberPointer()
     {
-        // #TEST#: IT4 Inline Temporary member
+        // #TEST#: IV4 Inline Temporary member
         int (Foo::*member)() = &Foo::Operation1;
         Foo f;
         int j = (f.*member)();
@@ -87,7 +94,7 @@ void require_equal(int expected, int actual)
 
     void TestConstMemberPointer()
     {
-        // #TEST#: IT5 Inline Temporary member
+        // #TEST#: IV5 Inline Temporary member
         int (Foo::*member)() const = &Foo::Method1;
         Foo f;
         int j = (f.*member)();
@@ -99,10 +106,10 @@ void require_equal(int expected, int actual)
     {
         int (Foo::*member)() = &Foo::Operation1;
         Foo f;
-        // #TEST#: ITS6 Inline Temporary member
+        // #TEST#: IV6 Inline Temporary member
         int j = (f.*member)();
         int (Foo::*member2)() = &Foo::Operation2;
-        // #TEST#: ITS7 Inline Temporary member2
+        // #TEST#: IV7 Inline Temporary member2
         j += (f.*member2)();
     }
 
@@ -110,10 +117,10 @@ void require_equal(int expected, int actual)
     {
         int (Foo::*member)() const = &Foo::Method1;
         Foo f;
-        // #TEST#: IT8 Inline Temporary member
+        // #TEST#: IV8 Inline Temporary member
         int j = (f.*member)();
         int (Foo::*member2)() const = &Foo::Method2;
-        // #TEST#: IT9 Inline Temporary member2
+        // #TEST#: IV9 Inline Temporary member2
         j += (f.*member2)();
     }
 }
@@ -122,4 +129,12 @@ using namespace InlineTemporaryNamespace;
 
 void TestInlineTemporary()
 {
+    TestInteger();
+    TestFunction();
+    TestFunction2();
+    TestString();
+    TestMemberPointer();
+    TestConstMemberPointer();
+    TestMemberPointer2();
+    TestConstMemberPointer2();
 }
