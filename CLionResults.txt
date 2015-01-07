@@ -22,16 +22,6 @@ CS11    Pass
 
 = Create Implementation From Usage
 
-= Inline Constant
-
-= Inline Define
-
-= Inline Function
-
-= Inline Method
-
-= Inline Typedef
-
 = Extract Constant
 
 = Extract Declaration
@@ -39,7 +29,25 @@ CS11    Pass
 = Extract Define
 
 = Extract Function
-EXF1
+EXF1    Pass
+EXF2    Pass
+EXF3    Pass
+EXF4    Pass
+EXF5    Pass
+EXF6    Pass
+EXF7    Pass
+EXF8    Pass
+EXF9    Pass
+EXF10   Pass
+EXF11   Pass
+EXF12   Pass
+EXF13   Pass
+EXF14   Failure
+EXF15   Failure
+EXF16   Failure
+EXF17   Failure
+EXF18   Failure
+EXF19   Pass
 
 = Extract Method
 EM1     Pass
@@ -69,6 +77,16 @@ EM20    Failure
 = Extract Typedef
 
 = Extract Variable
+
+= Inline Constant
+
+= Inline Define
+
+= Inline Function
+
+= Inline Method
+
+= Inline Typedef
 
 = Move Method to Header/Source
 
