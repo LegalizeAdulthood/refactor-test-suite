@@ -6,6 +6,10 @@ refactorings can be performed successfully if suggestions are excluded.
 Add Block Delimiter is performed by selecting the code and performing
 Code / Surround With... / {}.
 
+Introduce Local is performed with Extract Variable.
+
+Introduce Constant is performed with Extract Constant.
+
 = Add/Remove Block Delimiters
 ABD1    Pass
 ABD2    Pass
@@ -61,8 +65,6 @@ CMS19   Pass
 CMS20   Failure
 CMS21   Pass
 CMS22   Pass
-
-= Extract Constant
 
 = Extract Declaration
 
@@ -143,6 +145,29 @@ IV6     Failure (not available)
 IV7     Failure (not available)
 IV8     Failure (not available)
 IV9     Failure (not available)
+
+= Introduce Constant
+IC1     Failure
+IC2     Pass
+IC3     Failure
+IC4     Failure
+IC5     Failure
+IC6     Pass
+IC7     Failure
+IC8     Pass
+IC9     Failure
+IC10    Pass
+IC11    Failure
+IC12    Failure
+IC13    Failure
+
+= Introduce Local
+IL1     Failure
+IL2     Pass
+IL3     Pass
+IL4     Pass
+IL5     Pass
+IL6     Failure
 
 = Move Method
 MM1     Pass
