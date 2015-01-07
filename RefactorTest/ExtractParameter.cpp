@@ -44,6 +44,7 @@ namespace ExtractParameterNamespace
         // @TEST#: EP5 Extract Parameter ptr
         ptr = &Foo::Operation2;
         j += (f.*ptr)();
+        require_equal(3, j);
     }
 
     void Test()
