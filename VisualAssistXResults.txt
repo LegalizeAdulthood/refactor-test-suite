@@ -1,5 +1,9 @@
 Version 10.5.1738.0
 
+Notes:
+Visual AssistX calls performs Create Method Stub with
+Create Implementation From Usage.
+
 = Change Signature
 CS1		Failure (doesn't update usage)
 
@@ -7,7 +11,7 @@ CS1		Failure (doesn't update usage)
 
 = Create Implementation From Declaration
 
-= Create Implementation From Usage
+= Create Method Stub
 
 = Extract Method
 

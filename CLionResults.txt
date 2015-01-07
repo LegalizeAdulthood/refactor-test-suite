@@ -38,7 +38,29 @@ CS11    Pass
 
 = Create Implementation From Declaration
 
-= Create Implementation From Usage
+= Create Method Stub
+CMS1    Pass
+CMS2    Pass
+CMS3    Pass
+CMS4    Failure
+CMS5    Failure
+CMS6    Pass
+CMS7    Pass
+CMS8    Failure
+CMS9    Failure
+CMS10   Failure
+CMS11   Pass
+CMS12   Failure
+CMS13   Pass
+CMS14   Pass
+CMS15   Failure
+CMS16   Failure
+CMS17   Pass
+CMS18   Failure
+CMS19   Pass
+CMS20   Failure
+CMS21   Pass
+CMS22   Pass
 
 = Extract Constant
 
