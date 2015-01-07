@@ -36,7 +36,7 @@ namespace ExtractParameterNamespace
         int (Foo::*ptr)() = &Foo::Operation1;
         // @TEST#: EP2 Extract Parameter f
         Foo f;
-        // @TEST#: EP3 Extract Parameter i
+        // @TEST#: EP3 Extract Parameter j
         // @TEST#: EP3 Extract Parameter f
         // @TEST#: EP4 Extract Parameter ptr
         int j = (f.*ptr)();
