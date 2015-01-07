@@ -148,10 +148,10 @@ namespace CreateMethodStubNamespace
 
 void TestCreateMethodStub()
 {
-    // #TEST#: CMS1 Create function stub for foo()
+    // #TEST#: CMS1 Create function stub for CreateMethodStubReturnsInteger()
     //int x = CreateMethodStubReturnsInteger();
 
-    // #TEST#: CMS2 Create function stub for foo()
+    // #TEST#: CMS2 Create function stub for CreateMethodStubNoReturnValue()
     //CreateMethodStubNoReturnValue();
 
     // #TEST#: CMS12 Create function stub for CreateMethodStubReturnsString()
