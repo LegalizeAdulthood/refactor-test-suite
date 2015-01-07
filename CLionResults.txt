@@ -3,6 +3,24 @@ Version CL-140-1221.2
 Methodology: Default suggestions are selected when refactoring.  Some
 refactorings can be performed successfully if suggestions are excluded.
 
+Add Block Delimiter is performed by selecting the code and performing
+Code / Surround With... / {}.
+
+= Add/Remove Block Delimiters
+ABD1    Pass
+ABD2    Pass
+ABD3    Failure (not available)
+ABD4    Pass
+ABD5    Pass
+ABD6    Pass
+ABD7    Pass
+ABD8    Failure (not available)
+ABD9    Failure (not available)
+ABD10   Failure (not available)
+ABD11   Failure (not available)
+ABD12   Failure (not available)
+ABD13   Failure (not available)
+
 = Change Signature
 CS1		Pass
 CS2     Pass
