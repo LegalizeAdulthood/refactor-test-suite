@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include <string>
 #include <vector>
+#include <sstream>
+#include <stdexcept>
 
 // Replaces all references to a local variable with its initial value.
 
@@ -9,14 +11,29 @@ namespace InlineTemporaryNamespace
     int Function1() { return 1; }
     int Function2() { return 2; }
 
+void require_equal(int expected, int actual)
+{
+    if (expected != actual)
+    {
+        std::ostringstream message;
+        message << "expected " << expected << ", got " << actual;
+        throw std::runtime_error(message.str().c_str());
+    }
+}
+
+
     void TestInteger()
     {
         // #TEST#: IT1 Inline Temporary i
         int i = 4;
         int j = i*4 + 6;
+        require_equal(22, j);
         j += 10;
+        require_equal(32, j);
         j /= 15;
+        require_equal(2, j);
         j &= 7 + i;
+        require_equal(6, j);
     }
 
     void TestFunction()
