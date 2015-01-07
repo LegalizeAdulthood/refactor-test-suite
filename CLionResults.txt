@@ -47,6 +47,21 @@ CS9     Pass
 CS10    Pass
 CS11    Pass
 
+= Compress To/Expand From Ternary Expression
+CTE1    Pass
+CTE2    Failure (not available)
+CTE3    Failure (not available)
+CTE4    Failure (not available)
+CTE5    Pass
+CTE6    Pass
+CTE7    Pass
+CTE8    Pass
+CTE9    Pass
+CTE10   Failure
+CTE11   Pass
+CTE12   Pass
+CTE13   Pass
+
 = Create Declaration From Implementation
 
 = Create Implementation From Declaration
