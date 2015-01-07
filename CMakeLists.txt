@@ -14,6 +14,7 @@ set(headers
     RefactorTest/RemoveUnusedParameters.h
     RefactorTest/Rename.h
     RefactorTest/RenameFileToMatchType.h
+    RefactorTest/Require.h
     RefactorTest/stdafx.h)
 
 set(sources

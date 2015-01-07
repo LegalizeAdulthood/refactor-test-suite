@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Require.h"
 #include <string>
 #include <vector>
 #include <sstream>
@@ -10,18 +11,6 @@ namespace InlineTemporaryNamespace
 {
     int Function1() { return 1; }
     int Function2() { return 2; }
-
-template <typename T>
-void require_equal(T expected, T actual)
-{
-    if (expected != actual)
-    {
-        std::ostringstream message;
-        message << "expected " << expected << ", got " << actual;
-        throw std::runtime_error(message.str().c_str());
-    }
-}
-
 
     void TestInteger()
     {
