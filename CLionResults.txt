@@ -124,6 +124,10 @@ EM20    Failure
 
 = Extract Parameter
 EP1     Failure
+EP2     Pass
+EP3     Failure
+EP4     Pass
+EP5     Failure
 
 = Extract Typedef
 
