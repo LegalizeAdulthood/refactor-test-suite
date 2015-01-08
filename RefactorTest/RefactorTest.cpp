@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
         TestCompressToExpandFromTernaryExpression();
         TestConditionalToCase();
         TestCreateMethodStub();
-        TestCreateSplitMultiVariableDeclaration();
+        TestCreateMultiVariableDeclaration();
         TestCreateOverload();
         TestCreateSetterMethod();
         TestDecomposeParameter();
@@ -65,6 +65,7 @@ int main(int argc, char* argv[])
         TestSafeRename();
         TestSimplifyBooleanExpression();
         TestSplitInitializationFromDeclaration();
+        TestSplitMultiVariableDeclaration();
         TestSplitTemporaryVariable();
         TestWidenScope();
         TestWidenScopePromoteToConstant();

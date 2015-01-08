@@ -32,7 +32,7 @@ set(sources
     RefactorTest/CreateMethodStub.cpp
     RefactorTest/CreateOverload.cpp
     RefactorTest/CreateSetterMethod.cpp
-    RefactorTest/CreateSplitMultiVariableDeclaration.cpp
+    RefactorTest/CreateMultiVariableDeclaration.cpp
     RefactorTest/DecomposeParameter.cpp
     RefactorTest/EncapsulateDowncast.cpp
     RefactorTest/EncapsulateField.cpp
@@ -82,6 +82,7 @@ set(sources
     RefactorTest/SafeRename.cpp
     RefactorTest/SimplifyBooleanExpression.cpp
     RefactorTest/SplitInitializationFromDeclaration.cpp
+    RefactorTest/SplitMultiVariableDeclaration.cpp
     RefactorTest/SplitTemporaryVariable.cpp
     RefactorTest/stdafx.cpp
     RefactorTest/WidenScope.cpp
