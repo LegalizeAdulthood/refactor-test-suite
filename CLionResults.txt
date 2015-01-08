@@ -386,3 +386,24 @@ R98     Failure
 = Reorder Parameters
 
 = Simplify Boolean Expression
+
+= Split Multi-Variable Declaration
+SMVD1   Pass
+SMVD2   Pass
+SMVD3   Pass
+SMVD4   Pass
+SMVD5   Pass
+SMVD6   Pass
+SMVD7   Pass
+SMVD8   Pass
+SMVD9   Pass
+SMVD10  Pass
+SMVD11  Pass
+SMVD12  Pass
+SMVD13  Pass
+SMVD14  Pass
+SMVD15  Pass
+SMVD16  Pass
+SMVD17  Pass
+SMVD18  Pass
+SMVD19  Pass
