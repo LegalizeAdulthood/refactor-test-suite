@@ -2,6 +2,17 @@
 
 #include <cassert>
 
+namespace
+{
+
+int getSomething()
+{
+    static int i = 2;
+    return ++i;
+}
+
+}
+
 // Where possible, simplifies the Boolean expression.
 //      expr == true => expr
 //      expr == false => !expr
@@ -52,11 +63,11 @@ void TestSimplifyBooleanExpression()
     assert(b9);
 
     // #TEST#: SB9 Simplify boolean rhs to b1
-    bool b10 = b1 || b2;
+    bool b10 = b1 || b1;
     assert(b10);
 
     // #TEST#: SB10 Simplify boolean rhs to (i == 3)
-    int const i = 3;
+    int const i = getSomething();
     bool b11 = !(i != 3);
     assert(b11);
 
