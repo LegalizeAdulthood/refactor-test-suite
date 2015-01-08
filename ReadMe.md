@@ -30,8 +30,8 @@ The original release of the test suite is described
 
 ## Unknown Results
 
+- [Code::Blocks](http://www.codeblocks.org/)
+- [Eclipse CDT](https://eclipse.org/cdt/)
+- [ReSharper for C++](https://www.jetbrains.com/resharper/features/cpp.html)
 - [Visual Studio 2015 CTP](http://www.visualstudio.com/en-us/news/vs2015-preview-vs#C++):
 Rename, Extract Function, Move Function, Convert to Raw String Literal
-- [Eclipse CDT](https://eclipse.org/cdt/)
-- [Code::Blocks](http://www.codeblocks.org/)
-- [ReSharper for C++](https://www.jetbrains.com/resharper/features/cpp.html)
