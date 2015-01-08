@@ -397,6 +397,32 @@ R98     Failure
 = Reorder Parameters
 
 = Simplify Boolean Expression
+SB1     Pass
+SB2     Pass
+SB3     Pass
+SB4     Pass
+SB5     Pass
+SB6     Pass
+SB7     Pass
+SB8     Pass
+SB9     Pass
+SB10    Pass
+SB11    Pass
+SB12    Pass
+SB13    Pass
+
+= Split Initialization From Declaration
+SID1    Pass
+SID2    Failure
+SID3    Pass
+SID4    Pass
+SID5    Pass
+SID6    Pass
+SID7    Pass
+SID8    Pass
+SID9    Pass
+SID10   Pass
+SID11   Failure (not available)
 
 = Split Multi-Variable Declaration
 SMVD1   Pass
