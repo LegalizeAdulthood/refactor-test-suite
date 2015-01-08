@@ -203,6 +203,13 @@ IM6     Pass
 IRA1    Failure (not available)
 IRA2    Failure (not available)
 
+= Inline Result
+IR1     Failure
+IR2     Failure
+IR3     Failure
+IR4     Failure
+IR5     Failure
+
 = Inline Typedef
 
 = Inline Variable
