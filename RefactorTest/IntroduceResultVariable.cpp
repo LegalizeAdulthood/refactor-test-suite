@@ -2,14 +2,14 @@
 #include <vector>
 #include <cmath>
 
-// Replaces final assignments to the temporary variable
-// with a statement that immediately returns the value.
+// Replaces statements that return a value with assignments to a temporary
+// variable and a statement that returns the variable.
 
 namespace IntroduceResultVariableNamespace
 {
     struct Foo
     {
-        Foo(int x = 0, float f = 0.0f, double d = 0.0) 
+        Foo(int x = 0, float f = 0.0f, double d = 0.0)
             : _x(x), _f(f), _d(d)
         {
         }
@@ -44,7 +44,7 @@ namespace IntroduceResultVariableNamespace
             // #TEST#: IRV2 Introduce result variable
             return -x;
         }
-        
+
         // #TEST#: IRV3 Introduce result variable
         return 0;
     }
