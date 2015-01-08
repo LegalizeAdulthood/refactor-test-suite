@@ -4,10 +4,15 @@
 
 namespace ReverseConditionalNamespace
 {
+    int GetSomething()
+    {
+        static int i = 0;
+        return ++i;
+    }
 
     void Test1()
     {
-        int i = 10;
+        int i = GetSomething();
         int j;
 
         // #TEST#: RC1 Reverse Conditional
