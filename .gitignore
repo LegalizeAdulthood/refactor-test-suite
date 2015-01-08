@@ -2,3 +2,4 @@ Debug
 Release
 *.suo
 .idea
+node_modules
