@@ -57,6 +57,14 @@ function ProcessLine(context, line)
         }
         context.testResult = StartTest();
     }
+    else if (matches = line.match(/^Version: *([^ ].*)$/i))
+    {
+        context.version = matches[1];
+    }
+    else if (matches = line.match(/^Name: *([^ ].*)$/i))
+    {
+        context.name = matches[1];
+    }
     else if (matches = line.match(/^([A-Z][A-Z]*[0-9][0-9]*)\s\s*Pass(.*)$/))
     {
         testResult(ctx.passes, matches);
@@ -74,7 +82,8 @@ function ProcessLine(context, line)
 function ProcessResultsFile(resultsFile, next)
 {
     var context = {
-        file: resultsFile,
+        name: "",
+        version: "",
         date: (new Date()).toString(),
         tests: [],
         passedAllTests: [],
@@ -90,20 +99,15 @@ function ProcessResultsFile(resultsFile, next)
         });
 }
 
-function ProductName(file)
-{
-    return file;
-}
-
 function ProcessResults(dir, next)
 {
-    var results = {};
+    var results = [];
     fs.readdir(dir, function(err, files) {
-    async.each(files,
+    async.eachSeries(files,
         function(file, nextFile) {
             if (file.match(/^[A-Z].*Results\.txt$/)) {
                 ProcessResultsFile(file, function(err, fileResults) {
-                    results[ProductName(file)] = fileResults;
+                    results.push(fileResults);
                     nextFile(null);
                 });
             } else {

@@ -1,4 +1,5 @@
-Version CL-140-1221.2
+Name: CLion
+Version: CL-140-1221.2
 
 Notes:
 

@@ -1,4 +1,5 @@
-cpp11-migrate 3.4
+Name: cpp11-migrate
+Version: 3.4
 
 = Add override
 AO1
