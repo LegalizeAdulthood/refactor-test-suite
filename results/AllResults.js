@@ -1,5 +1,6 @@
 // Print out test results as JSON
 
+var _ = require('underscore');
 var async = require('async');
 var fs = require('fs');
 var split = require('split');
@@ -120,9 +121,29 @@ function ProcessResults(dir, next)
     });
 }
 
+function testData(tests, id) {
+    var key = (typeof(id) === "string") ? id : id[0];
+
+    if (!tests[key]) {
+        tests[key] = { passes: [], failures: [] };
+    }
+    return tests[key];
+}
+
 function Summarize(err, results)
 {
-    console.log(JSON.stringify(results, null, 4));
+    var tests = {};
+    _.map(results, function(product) {
+        _.map(product.tests, function(test) {
+            _.map(test.passes, function(id) {
+                testData(tests, id).passes.push(product.name);
+            });
+            _.map(test.failures, function(id) {
+                testData(tests, id).failures.push(product.name);
+            });
+        });
+    });
+    console.log(JSON.stringify(tests, null, 4));
 }
 
 function main(argv) {
