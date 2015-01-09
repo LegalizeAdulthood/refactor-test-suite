@@ -2,736 +2,736 @@ Name: Refactor!Pro
 Version: 9.1.10
 
 = Add/Remove Block Delimiter
-ABD1	Pass
-ABD2	Pass
-ABD3	Pass
-ABD4	Pass
-ABD5	Pass
-ABD6	Pass
-ABD7	Pass
-ABD8	Pass
-ABD9	Pass
-ABD10	Pass
-ABD11	Pass
-ABD12	Pass
-ABD13	Pass
+ABD1    Pass
+ABD2    Pass
+ABD3    Pass
+ABD4    Pass
+ABD5    Pass
+ABD6    Pass
+ABD7    Pass
+ABD8    Pass
+ABD9    Pass
+ABD10   Pass
+ABD11   Pass
+ABD12   Pass
+ABD13   Pass
 
 = Add Parameter
-AP1		Pass
-AP2		Pass
-AP3		Failure B18804
-AP4		Failure B144304
-AP5		Pass
-AP6		Pass
-AP7		Pass
-AP8		Pass
-AP9		Pass
-AP10	Pass
-AP11	Pass
-AP12	Failure B144305
-AP13	Failure B144306
-AP14	Failure B144306
-AP15	Failure B144306
-AP16	Failure B144306
-AP17	Failure B144307
-AP18	Pass
-AP19	Failure B18804
-AP20	Failure B144304
-AP21	Failure B144308
-AP22	Failure B144309
-AP23	Failure B144310
-AP24	Failure B144311
+AP1     Pass
+AP2     Pass
+AP3     Failure B18804
+AP4     Failure B144304
+AP5     Pass
+AP6     Pass
+AP7     Pass
+AP8     Pass
+AP9     Pass
+AP10    Pass
+AP11    Pass
+AP12    Failure B144305
+AP13    Failure B144306
+AP14    Failure B144306
+AP15    Failure B144306
+AP16    Failure B144306
+AP17    Failure B144307
+AP18    Pass
+AP19    Failure B18804
+AP20    Failure B144304
+AP21    Failure B144308
+AP22    Failure B144309
+AP23    Failure B144310
+AP24    Failure B144311
 
 = Boolean to Enum S18427
-B2E1	Failure (not available) B130017
-B2E2	Failure (not available) B130017
-B2E3	Failure (not available) B130017
-B2E4	Failure (not available) B130017
-B2E5	Failure (not available) B130017
-B2E6	Failure (doesn't update call from derived class) B130017
-B2E7	Failure (not available) B130017
-B2E8	Failure (not available) B130017
-B2E9	Failure (enum placement incorrect; managed syntax used for enum value; doesn't update call in derived class) B130017
-B2E10	Failure (not available) B130017
-B2E11	Failure (enum placement incorrect; managed syntax used for enum value) B130017
-B2E12	Failure (enum placement incorrect; managed syntax used for enum value) B130017
-B2E13	Failure (enum placement incorrect; managed syntax used for enum value) B130017
-B2E14	Failure (not available) B130017
-B2E15	Failure (not available) B130017
-B2E16	Failure (not available) B130017
-B2E17	Failure (not available) B130017
-B2E18	Failure (not available) B130017
-B2E19	Failure (not available) B130017
-B2E20	Failure (not available) B130017
-B2E21	Failure	(enum placement incorrect; managed syntax use for enum value) B130017
+B2E1    Failure (not available) B130017
+B2E2    Failure (not available) B130017
+B2E3    Failure (not available) B130017
+B2E4    Failure (not available) B130017
+B2E5    Failure (not available) B130017
+B2E6    Failure (doesn't update call from derived class) B130017
+B2E7    Failure (not available) B130017
+B2E8    Failure (not available) B130017
+B2E9    Failure (enum placement incorrect; managed syntax used for enum value; doesn't update call in derived class) B130017
+B2E10   Failure (not available) B130017
+B2E11   Failure (enum placement incorrect; managed syntax used for enum value) B130017
+B2E12   Failure (enum placement incorrect; managed syntax used for enum value) B130017
+B2E13   Failure (enum placement incorrect; managed syntax used for enum value) B130017
+B2E14   Failure (not available) B130017
+B2E15   Failure (not available) B130017
+B2E16   Failure (not available) B130017
+B2E17   Failure (not available) B130017
+B2E18   Failure (not available) B130017
+B2E19   Failure (not available) B130017
+B2E20   Failure (not available) B130017
+B2E21   Failure (enum placement incorrect; managed syntax use for enum value) B130017
 
 = Break Apart/Line Up Parameters
-BAP1	Pass
-BAP2	Pass
-BAP3	Pass
-BAP4	Pass
+BAP1    Pass
+BAP2    Pass
+BAP3    Pass
+BAP4    Pass
 
 = Collapse/Expand Accessors
-CEA1	Failure (not available) S18641
-CEA2	Failure (not available) S18641
-CEA3	Failure (not available) S18641
-CEA4	Failure (not available) S18641
+CEA1    Failure (not available) S18641
+CEA2    Failure (not available) S18641
+CEA3    Failure (not available) S18641
+CEA4    Failure (not available) S18641
 
 = Combine Conditionals
-CC1		Pass
-CC2		Pass
-CC3		Pass
-CC4		Pass
+CC1     Pass
+CC2     Pass
+CC3     Pass
+CC4     Pass
 
 = Compress To/Expand From Ternary Expression
-CTE1	Pass
-CTE2	Failure (not available) S18817
-CTE3	Failure (not available) S18817
-CTE4	Failure (not available) S18817
-CTE5	Pass
-CTE6	Pass
-CTE7	Pass
-CTE8	Pass
-CTE9	Pass
-CTE10	Pass
-CTE11	Pass
-CTE12	Pass
-CTE13	Pass
+CTE1    Pass
+CTE2    Failure (not available) S18817
+CTE3    Failure (not available) S18817
+CTE4    Failure (not available) S18817
+CTE5    Pass
+CTE6    Pass
+CTE7    Pass
+CTE8    Pass
+CTE9    Pass
+CTE10   Pass
+CTE11   Pass
+CTE12   Pass
+CTE13   Pass
 
 = Conditional To Case
-CTC1	Failure (not available) S18807
-CTC2	Failure (not available) S18807
-CTC3	Pass
-CTC4	Pass
-CTC5	Pass
-CTC6	Pass
-CTC7	Pass
-CTC8	Pass
-CTC9	Pass
-CTC10	Pass
-CTC11	Pass
-CTC12	Failure (not available) S18807
+CTC1    Failure (not available) S18807
+CTC2    Failure (not available) S18807
+CTC3    Pass
+CTC4    Pass
+CTC5    Pass
+CTC6    Pass
+CTC7    Pass
+CTC8    Pass
+CTC9    Pass
+CTC10   Pass
+CTC11   Pass
+CTC12   Failure (not available) S18807
 
 = Create Method Contract
-CMC1	Pass
-CMC2	Pass
-CMC3	Pass
-CMC4	Pass
-CMC5	Pass
-CMC6	Pass
-CMC7	Pass
-CMC8	Pass
+CMC1    Pass
+CMC2    Pass
+CMC3    Pass
+CMC4    Pass
+CMC5    Pass
+CMC6    Pass
+CMC7    Pass
+CMC8    Pass
 
 = Create Method Stub
-CMS1	Pass
-CMS2	Pass
-CMS3	Pass
-CMS4	Failure B130020, S18676
-CMS5	Failure S18676
-CMS6	Pass
-CMS7	Failure (doesn't pass string as const char *) B144313
-CMS8	Pass
-CMS9	Pass
-CMS10	Pass
-CMS11	Pass (passes classes by value instead of by const reference; signature of generated arguments should assume as little as possible) S18810
-CMS12	Pass
-CMS13	Failure (not available) B130026
-CMS14	Failure (method declared const) B144314
-CMS15	Pass
-CMS16	Pass
-CMS17	Pass
-CMS18	Pass
-CMS19	Pass
-CMS20	Pass
-CMS21	Pass
-CMS22	Pass
+CMS1    Pass
+CMS2    Pass
+CMS3    Pass
+CMS4    Failure B130020, S18676
+CMS5    Failure S18676
+CMS6    Pass
+CMS7    Failure (doesn't pass string as const char *) B144313
+CMS8    Pass
+CMS9    Pass
+CMS10   Pass
+CMS11   Pass (passes classes by value instead of by const reference; signature of generated arguments should assume as little as possible) S18810
+CMS12   Pass
+CMS13   Failure (not available) B130026
+CMS14   Failure (method declared const) B144314
+CMS15   Pass
+CMS16   Pass
+CMS17   Pass
+CMS18   Pass
+CMS19   Pass
+CMS20   Pass
+CMS21   Pass
+CMS22   Pass
 
 = Create/Split Multi Variable Declaration S18736
-MVD1	Pass
-MVD2	Pass
-MVD3	Pass
-MVD4	Pass
-MVD5	Pass
-MVD6	Pass
-MVD7	Pass
-MVD8	Pass
-MVD9	Pass
-MVD10	Pass
-MVD11	Pass
-MVD12	Pass
-MVD13	Pass
-MVD14	Pass
-MVD15	Pass
-MVD16	Pass
-MVD17	Pass
-MVD18	Pass
-MVD19	Pass
-MVD20	Failure (not available) B144315
-MVD21	Failure (not available) S18815
-MVD22	Failure (not available) S18815
-MVD23	Failure (not available) S18815
-MVD24	Pass
-MVD25	Pass
-MVD26	Pass
-MVD27	Pass
-MVD28	Pass
-MVD29	Failure (not available) B144317
-MVD30	Pass
-MVD31	Pass
+MVD1    Pass
+MVD2    Pass
+MVD3    Pass
+MVD4    Pass
+MVD5    Pass
+MVD6    Pass
+MVD7    Pass
+MVD8    Pass
+MVD9    Pass
+MVD10   Pass
+MVD11   Pass
+MVD12   Pass
+MVD13   Pass
+MVD14   Pass
+MVD15   Pass
+MVD16   Pass
+MVD17   Pass
+MVD18   Pass
+MVD19   Pass
+MVD20   Failure (not available) B144315
+MVD21   Failure (not available) S18815
+MVD22   Failure (not available) S18815
+MVD23   Failure (not available) S18815
+MVD24   Pass
+MVD25   Pass
+MVD26   Pass
+MVD27   Pass
+MVD28   Pass
+MVD29   Failure (not available) B144317
+MVD30   Pass
+MVD31   Pass
 
 = Create Overload
-CO1		Pass
-CO2		Pass
-CO3		Pass
-CO4		Pass
-CO5		Pass
-CO6		Pass
-CO7		Failure (chains c'tor) B90247
-CO8		Pass
-CO9		Pass
-CO10	Pass
-CO11	Pass
-CO12	Pass
-CO13	Pass
-CO14	Pass
-CO15	Pass
-CO16	Failure (assigns 0 to std::string) [*]
-CO17	Pass
-CO18	Pass
-CO19	Failure (assigns 0 to std::string) [*]
-CO20	Failure (chains c'tor) B90247
-CO21	Pass
-CO22	Pass
-CO23	Pass
-CO24	Pass
-CO25	Pass
-CO26	Pass
-CO27	Pass
-CO28	Pass
-CO29	Pass
-CO30	Pass
-CO31	Pass
-CO32	Pass
-CO33	Pass
-CO34	Pass
-CO35	Pass
-CO36	Pass
-CO37	Pass
-CO38	Pass
-CO39	Pass
-CO40	Pass
-CO41	Pass
-CO42	Pass
-CO43	Pass
-CO44	Pass
-CO45	Pass
-CO46	Pass
-CO47	Pass
-CO48	Pass
-CO49	Pass
-CO50	Pass
-CO51	Pass
-CO52	Pass
-CO53	Pass
-CO54	Pass
-CO55	Pass
-CO56	Pass
+CO1     Pass
+CO2     Pass
+CO3     Pass
+CO4     Pass
+CO5     Pass
+CO6     Pass
+CO7     Failure (chains c'tor) B90247
+CO8     Pass
+CO9     Pass
+CO10    Pass
+CO11    Pass
+CO12    Pass
+CO13    Pass
+CO14    Pass
+CO15    Pass
+CO16    Failure (assigns 0 to std::string) [*]
+CO17    Pass
+CO18    Pass
+CO19    Failure (assigns 0 to std::string) [*]
+CO20    Failure (chains c'tor) B90247
+CO21    Pass
+CO22    Pass
+CO23    Pass
+CO24    Pass
+CO25    Pass
+CO26    Pass
+CO27    Pass
+CO28    Pass
+CO29    Pass
+CO30    Pass
+CO31    Pass
+CO32    Pass
+CO33    Pass
+CO34    Pass
+CO35    Pass
+CO36    Pass
+CO37    Pass
+CO38    Pass
+CO39    Pass
+CO40    Pass
+CO41    Pass
+CO42    Pass
+CO43    Pass
+CO44    Pass
+CO45    Pass
+CO46    Pass
+CO47    Pass
+CO48    Pass
+CO49    Pass
+CO50    Pass
+CO51    Pass
+CO52    Pass
+CO53    Pass
+CO54    Pass
+CO55    Pass
+CO56    Pass
 
 = Create Setter Method
-CSM1	Pass
-CSM2	Pass
-CSM3	Pass
-CSM4	Pass
-CSM5	Pass (class passed by value) S18810
-CSM6	Pass
-CSM7	Pass
-CSM8	Pass
-CSM9	Pass
-CSM10	Pass (class passed by value) S18810
-CSM11	Pass
-CSM12	Pass
-CSM13	Pass (class passed by value) S18810
-CSM14	Pass
-CSM15	Pass
-CSM16	Pass (class passed by value) S18810
-CSM17	Pass
-CSM18	Pass
-CSM19	Pass
-CSM20	Pass
-CSM21	Pass
-CSM22	Pass
-CSM23	Pass
-CSM24	Pass
-CSM25	Pass
-CSM26	Pass (class passed by value) S18810
-CSM27	Pass
-CSM28	Pass
-CSM29	Pass
-CSM30	Pass
-CSM31	Pass
+CSM1    Pass
+CSM2    Pass
+CSM3    Pass
+CSM4    Pass
+CSM5    Pass (class passed by value) S18810
+CSM6    Pass
+CSM7    Pass
+CSM8    Pass
+CSM9    Pass
+CSM10   Pass (class passed by value) S18810
+CSM11   Pass
+CSM12   Pass
+CSM13   Pass (class passed by value) S18810
+CSM14   Pass
+CSM15   Pass
+CSM16   Pass (class passed by value) S18810
+CSM17   Pass
+CSM18   Pass
+CSM19   Pass
+CSM20   Pass
+CSM21   Pass
+CSM22   Pass
+CSM23   Pass
+CSM24   Pass
+CSM25   Pass
+CSM26   Pass (class passed by value) S18810
+CSM27   Pass
+CSM28   Pass
+CSM29   Pass
+CSM30   Pass
+CSM31   Pass
 
 = Decompose Parameter
-DP1		Pass
-DP2		Pass
-DP3		Pass
-DP5		Pass
-DP6		Pass
-DP7		Pass
-DP8		Pass
-DP9		Pass
-DP10	Pass
-DP11	Pass
-DP12	Pass
-DP13	Pass
-DP14	Pass
-DP15	Pass
-DP16	Pass
-DP17	Pass
-DP18	Pass
-DP19	Pass
-DP20	Pass
+DP1     Pass
+DP2     Pass
+DP3     Pass
+DP5     Pass
+DP6     Pass
+DP7     Pass
+DP8     Pass
+DP9     Pass
+DP10    Pass
+DP11    Pass
+DP12    Pass
+DP13    Pass
+DP14    Pass
+DP15    Pass
+DP16    Pass
+DP17    Pass
+DP18    Pass
+DP19    Pass
+DP20    Pass
 
 = Encapsulate Downcast
-ED1		Failure (not available) B91326
-ED2		Failure (not available) B91326
-ED3		Failure (not available) B91326
+ED1     Failure (not available) B91326
+ED2     Failure (not available) B91326
+ED3     Failure (not available) B91326
 
 = Encapsulate Field S90332
-EF1		Failure (not available) S90332
-EF2		Failure (not available) S90332
-EF3		Failure (not available) S90332
-EF4		Failure (not available) S90332
-EF5		Failure (not available) S90332
-EF6		Failure (not available) S90332
-EF7		Failure (not available) S90332
-EF8		Failure (not available) S90332
-EF9		Failure (not available) S90332
-EF10	Failure (not available) S90332
-EF11	Failure (not available) S90332
-EF12	Failure (not available) S90332
-EF13	Failure (not available) S90332
-EF14	Failure (not available) S90332
-EF15	Failure (not available) S90332
-EF16	Failure (not available) S90332
-EF17	Failure (not available) S90332
-EF18	Failure (not available) S90332
-EF19	Failure (not available) S90332
-EF20	Failure (not available) S90332
-EF21	Failure (not available) S90332
-EF22	Failure (not available) S90332
-EF23	Failure (not available) S90332
-EF24	Failure (not available) S90332
-EF25	Failure (not available) S90332
-EF26	Failure (not available) S90332
-EF27	Failure (not available) S90332
-EF28	Failure (not available) S90332
-EF29	Failure (not available) S90332
-EF30	Failure (not available) S90332
-EF31	Failure (not available) S90332
-EF32	Failure (not available) S90332
+EF1     Failure (not available) S90332
+EF2     Failure (not available) S90332
+EF3     Failure (not available) S90332
+EF4     Failure (not available) S90332
+EF5     Failure (not available) S90332
+EF6     Failure (not available) S90332
+EF7     Failure (not available) S90332
+EF8     Failure (not available) S90332
+EF9     Failure (not available) S90332
+EF10    Failure (not available) S90332
+EF11    Failure (not available) S90332
+EF12    Failure (not available) S90332
+EF13    Failure (not available) S90332
+EF14    Failure (not available) S90332
+EF15    Failure (not available) S90332
+EF16    Failure (not available) S90332
+EF17    Failure (not available) S90332
+EF18    Failure (not available) S90332
+EF19    Failure (not available) S90332
+EF20    Failure (not available) S90332
+EF21    Failure (not available) S90332
+EF22    Failure (not available) S90332
+EF23    Failure (not available) S90332
+EF24    Failure (not available) S90332
+EF25    Failure (not available) S90332
+EF26    Failure (not available) S90332
+EF27    Failure (not available) S90332
+EF28    Failure (not available) S90332
+EF29    Failure (not available) S90332
+EF30    Failure (not available) S90332
+EF31    Failure (not available) S90332
+EF32    Failure (not available) S90332
 
 = Extract Function
-EXF1	Pass
-EXF2	Pass
-EXF3	Pass
-EXF4	Pass
-EXF5	Pass
-EXF6	Pass
-EXF7	Pass
-EXF8	Pass
-EXF9	Pass
-EXF10	Pass
-EXF11	Pass
-EXF12	Pass
-EXF13	Pass
-EXF14	Pass
-EXF15	Pass
-EXF16	Pass
-EXF17	Pass
-EXF18	Pass
-EXF19	Pass
-EXF20	Pass
+EXF1    Pass
+EXF2    Pass
+EXF3    Pass
+EXF4    Pass
+EXF5    Pass
+EXF6    Pass
+EXF7    Pass
+EXF8    Pass
+EXF9    Pass
+EXF10   Pass
+EXF11   Pass
+EXF12   Pass
+EXF13   Pass
+EXF14   Pass
+EXF15   Pass
+EXF16   Pass
+EXF17   Pass
+EXF18   Pass
+EXF19   Pass
+EXF20   Pass
 
 = Extract Interface
-EI1		Failure (non-standard code generated) B90270
-EI2		Failure (non-standard code generated) B90270
+EI1     Failure (non-standard code generated) B90270
+EI2     Failure (non-standard code generated) B90270
 
 = Extract Method
-EM1		Pass
-EM2		Pass
-EM3		Pass
-EM4		Pass
-EM5		Pass
-EM6		Failure (reference not initialized) B144322
-EM7		Pass
-EM8		Pass
-EM9		Pass
-EM10	Failure (reference not initialized) B144322
-EM11	Pass
-EM12	Failure (reference not initialized) B144322
-EM13	Pass
-EM14	Pass
-EM15	Pass
-EM16	Failure (reference not initialized) B144322
-EM17	Pass
-EM18	Failure (reference not initialized) B144322
-EM19	Pass
-EM20	Failure (not available) S19099
+EM1     Pass
+EM2     Pass
+EM3     Pass
+EM4     Pass
+EM5     Pass
+EM6     Failure (reference not initialized) B144322
+EM7     Pass
+EM8     Pass
+EM9     Pass
+EM10    Failure (reference not initialized) B144322
+EM11    Pass
+EM12    Failure (reference not initialized) B144322
+EM13    Pass
+EM14    Pass
+EM15    Pass
+EM16    Failure (reference not initialized) B144322
+EM17    Pass
+EM18    Failure (reference not initialized) B144322
+EM19    Pass
+EM20    Failure (not available) S19099
 
 = Extract Parameter
-EP1	    Pass
+EP1     Pass
 
 = Flatten Conditional
-FC1		Pass
+FC1     Pass
 
 = Inline Recent Assignment
-IRA1	Pass
-IRA2	Pass
+IRA1    Pass
+IRA2    Pass
 
 = Inline Macro
-IM1		Failure (not available) B144323
-IM2		Pass
-IM3		Pass
-IM4		Pass
-IM5		Pass
-IM6		Pass
+IM1     Failure (not available) B144323
+IM2     Pass
+IM3     Pass
+IM4     Pass
+IM5     Pass
+IM6     Pass
 
 = Inline Result
-IR1		Pass
-IR2		Pass
-IR3		Pass
-IR4		Pass
-IR5		Pass
+IR1     Pass
+IR2     Pass
+IR3     Pass
+IR4     Pass
+IR5     Pass
 
 = Inline Temporary
-IT1		Pass
-IT2		Failure (not available) S19234
-IT3		Pass
-IT4		Failure (not available) S19234
-IT5		Failure (not available) S19234
-IT6		Pass
-IT7		Pass
-IT8		Pass
-IT9		Pass
-IT10	Pass
-IT11	Pass
+IT1     Pass
+IT2     Failure (not available) S19234
+IT3     Pass
+IT4     Failure (not available) S19234
+IT5     Failure (not available) S19234
+IT6     Pass
+IT7     Pass
+IT8     Pass
+IT9     Pass
+IT10    Pass
+IT11    Pass
 
 Introduce Alias
 
 = Introduce Constant
-IC1		Pass
-IC2		Failure (not available) B144324
-IC3		Pass
-IC4		Failure (not available) B144324
-IC5		Failure (not available) B144325
-IC6		Failure (not available) B144326
-IC7		Pass
-IC8		Pass
-IC9		Failure (not available) B144325
-IC10	Failure (not available) B144326
-IC11	Pass
-IC12	Pass
-IC13	Pass
+IC1     Pass
+IC2     Failure (not available) B144324
+IC3     Pass
+IC4     Failure (not available) B144324
+IC5     Failure (not available) B144325
+IC6     Failure (not available) B144326
+IC7     Pass
+IC8     Pass
+IC9     Failure (not available) B144325
+IC10    Failure (not available) B144326
+IC11    Pass
+IC12    Pass
+IC13    Pass
 
 = Introduce Local
-IL1		Pass
-IL2		Pass
-IL3		Failure (inserts invalid code) B90304
-IL4		Pass
-IL5		Pass
-IL6		Failure (inserts invalid code) B144398
+IL1     Pass
+IL2     Pass
+IL3     Failure (inserts invalid code) B90304
+IL4     Pass
+IL5     Pass
+IL6     Failure (inserts invalid code) B144398
 
 Introduce Parameter
 
 = Introduce Parameter Object S90333
-IPO1	Failure (not available) S90333
+IPO1    Failure (not available) S90333
 
 = Introduce Result Variable
-IRV1	Pass (changes indentation and block style) S18717
-IRV2	Pass (changes indentation and block style) S18717
-IRV3	Pass (changes indentation and block style) S18717
-IRV4	Pass (changes indentation and block style) S18717
-IRV5	Pass (changes indentation and block style) S18717
-IRV6	Pass (changes indentation and block style) S18717
-IRV7	Pass (changes indentation and block style) S18717
-IRV8	Pass
-IRV9	Pass
-IRV10	Pass
-IRV11	Pass
-IRV12	Pass
-IRV13	Pass (deletes whitespace) S18717
-IRV14	Pass (deletes whitespace) S18717
-IRV15	Pass (deletes whitespace) S18717
-IRV16	Pass (deletes whitespace) S18717
+IRV1    Pass (changes indentation and block style) S18717
+IRV2    Pass (changes indentation and block style) S18717
+IRV3    Pass (changes indentation and block style) S18717
+IRV4    Pass (changes indentation and block style) S18717
+IRV5    Pass (changes indentation and block style) S18717
+IRV6    Pass (changes indentation and block style) S18717
+IRV7    Pass (changes indentation and block style) S18717
+IRV8    Pass
+IRV9    Pass
+IRV10   Pass
+IRV11   Pass
+IRV12   Pass
+IRV13   Pass (deletes whitespace) S18717
+IRV14   Pass (deletes whitespace) S18717
+IRV15   Pass (deletes whitespace) S18717
+IRV16   Pass (deletes whitespace) S18717
 
 = Make Method Static
-MMS1	Pass
-MMS2	Pass
-MMS3	Failure (not available) S18737
+MMS1    Pass
+MMS2    Pass
+MMS3    Failure (not available) S18737
 
 Move Declaration Near Reference
 
 = Move Initialization to Declaration
-MID1	Pass
-MID2	Failure (not available) S19210
-MID3	Failure (not available) S19210
-MID4	Pass
-MID5	Pass
-MID6	Pass
-MID7	Pass
-MID8	Pass
-MID9	Pass
-MID10	Failure (splits declaration, corrupts declaration) B144329
-MID11	Failure (splits declaration, corrupts declaration) B144329
+MID1    Pass
+MID2    Failure (not available) S19210
+MID3    Failure (not available) S19210
+MID4    Pass
+MID5    Pass
+MID6    Pass
+MID7    Pass
+MID8    Pass
+MID9    Pass
+MID10   Failure (splits declaration, corrupts declaration) B144329
+MID11   Failure (splits declaration, corrupts declaration) B144329
 
 = Move Method
-MM1		Failure (deletes method) B144335
-MM2		Failure (deletes method) B144335
-MM3		Failure (deletes method) B144335
-MM4		Failure (deletes method) B144335
-MM5		Failure (deletes method) B144335
-MM6		Pass
-MM7		Pass
-MM8		Pass
-MM9		Failure (deletes method) B144335
-MM10	Pass
-MM11	Pass
-MM12	Pass
-MM13	Failure (deletes method) B144335
-MM14	Pass
-MM15	Pass
-MM16	Pass
-MM17	Pass
-MM18	Pass
-MM19	Pass
-MM20	Pass
-MM21	Pass
-MM22	Pass
-MM23	Pass
-MM24	Pass
-MM25	Pass
-MM26	Pass
-MM27	Pass
-MM28	Pass
-MM29	Pass
-MM30	Pass
-MM31	Pass
-MM32	Pass
-MM33	Failure (deletes method) B144335
-MM34	Failure (generates invalid code) B90521
-MM35	Pass
-MM36	Pass
+MM1     Failure (deletes method) B144335
+MM2     Failure (deletes method) B144335
+MM3     Failure (deletes method) B144335
+MM4     Failure (deletes method) B144335
+MM5     Failure (deletes method) B144335
+MM6     Pass
+MM7     Pass
+MM8     Pass
+MM9     Failure (deletes method) B144335
+MM10    Pass
+MM11    Pass
+MM12    Pass
+MM13    Failure (deletes method) B144335
+MM14    Pass
+MM15    Pass
+MM16    Pass
+MM17    Pass
+MM18    Pass
+MM19    Pass
+MM20    Pass
+MM21    Pass
+MM22    Pass
+MM23    Pass
+MM24    Pass
+MM25    Pass
+MM26    Pass
+MM27    Pass
+MM28    Pass
+MM29    Pass
+MM30    Pass
+MM31    Pass
+MM32    Pass
+MM33    Failure (deletes method) B144335
+MM34    Failure (generates invalid code) B90521
+MM35    Pass
+MM36    Pass
 
 = Move Type to File
-MTF1	Pass
+MTF1    Pass
 
 = Move Type to Namespace
-MTN1	Failure (generates managed code) B144336
+MTN1    Failure (generates managed code) B144336
 
 = Reduce Visibility
-RV1		Pass
-RV2		Pass
-RV3		Pass
-RV4		Pass
-RV5		Pass
-RV6		Pass
-RV7		Pass
-RV8		Pass
-RV9		Pass
-RV10	Pass
-RV11	Pass
-RV12	Pass
-RV13	Pass
-RV14	Pass
+RV1     Pass
+RV2     Pass
+RV3     Pass
+RV4     Pass
+RV5     Pass
+RV6     Pass
+RV7     Pass
+RV8     Pass
+RV9     Pass
+RV10    Pass
+RV11    Pass
+RV12    Pass
+RV13    Pass
+RV14    Pass
 
 = Remove Assignments to Parameters
-RAP1	Pass
-RAP2	Pass
-RAP3	Pass
-RAP4	Pass
-RAP5	Pass
-RAP6	Pass
-RAP7	Failure (changes concatenation to assignment) B144339
-RAP8	Failure (not available) B144340
-RAP9	Failure (not available) B144340
-RAP10	Failure (changes concatenation to assignment) B144339
-RAP11	Failure (changes concatenation to assignment) B144339
-RAP12	Failure (changes concatenation to assignment) B144339
-RAP13	Failure (changes concatenation to assignment) B144339
+RAP1    Pass
+RAP2    Pass
+RAP3    Pass
+RAP4    Pass
+RAP5    Pass
+RAP6    Pass
+RAP7    Failure (changes concatenation to assignment) B144339
+RAP8    Failure (not available) B144340
+RAP9    Failure (not available) B144340
+RAP10   Failure (changes concatenation to assignment) B144339
+RAP11   Failure (changes concatenation to assignment) B144339
+RAP12   Failure (changes concatenation to assignment) B144339
+RAP13   Failure (changes concatenation to assignment) B144339
 
 Remove Redundant Conditional
 
 = Remove Unused Parameters
-RUP1	Pass
-RUP2	Pass
-RUP3	Pass
+RUP1    Pass
+RUP2    Pass
+RUP3    Pass
 
 = Rename
-R1		Failure (renames local class in separate file) B90215
-R2		Failure (renames local class in separate file) B90215
-R3		Failure (renames local class in separate file) B90215
-R4		Pass
-R5		Pass
-R6		Pass
-R7		Pass
-R8		Pass
-R9		Pass
-R10		Pass
-R11		Pass
-R12		Failure (renames local method in separate file) B90215
-R13		Pass
-R14		Pass
-R15		Pass
-R16		Pass
-R17		Pass ???
-R18		Pass
-R19		Pass
-R20		Pass
-R21		Pass
-R22		Pass
-R23		Pass
-R24		Pass
-R25		Failure (not available) AS16224
-R26		Pass
-R27		Pass
-R28		Pass
-R29		Pass
-R30		Pass
-R31		Pass
-R32		Failure (renames local class in separate file) B90215
-R33		Failure (renames local class in separate file) B90215
-R34		Pass
-R35		Failure (not available) B144371
-R36		Failure (renames local class in separate file) B90215
-R37		Pass
-R38		Pass
-R39		Pass
-R40		Pass
-R41		Pass
-R42		Pass
-R43		Pass
-R44		Pass
-R45		Pass
-R46		Pass
-R47		Pass
-R48		Pass
-R49		Pass
-R50		Pass
-R51		Pass
-R52		Pass
-R53		Pass
-R54		Pass
-R55		Pass
-R56		Pass
-R57		Pass
-R58		Pass
-R59		Pass
-R60		Pass
-R61		Pass
-R62		Pass
-R63		Pass
-R64		Pass
-R65		Pass
-R66		Pass
-R67		Pass
-R68		Pass
-R69		Pass
-R70		Pass
-R71		Pass
-R72		Pass
-R73		Pass
-R74		Pass
-R75		Pass
-R76		Pass
-R77		Pass
-R78		Pass
-R79		Pass
-R80		Pass
-R81		Pass
-R82		Failure (not available) B91435
-R83		Failure (not available) B91435
-R84		Pass
-R85		Pass
-R86		Pass
-R87		Pass
-R88		Failure (not all instances selected) B144373
-R89		Pass
-R90		Pass
-R91		Pass
-R92		Pass
-R93		Pass
-R94		Pass
-R95		Pass
-R96		Pass
-R97		Pass
-R98		???
+R1      Failure (renames local class in separate file) B90215
+R2      Failure (renames local class in separate file) B90215
+R3      Failure (renames local class in separate file) B90215
+R4      Pass
+R5      Pass
+R6      Pass
+R7      Pass
+R8      Pass
+R9      Pass
+R10     Pass
+R11     Pass
+R12     Failure (renames local method in separate file) B90215
+R13     Pass
+R14     Pass
+R15     Pass
+R16     Pass
+R17     Pass ???
+R18     Pass
+R19     Pass
+R20     Pass
+R21     Pass
+R22     Pass
+R23     Pass
+R24     Pass
+R25     Failure (not available) AS16224
+R26     Pass
+R27     Pass
+R28     Pass
+R29     Pass
+R30     Pass
+R31     Pass
+R32     Failure (renames local class in separate file) B90215
+R33     Failure (renames local class in separate file) B90215
+R34     Pass
+R35     Failure (not available) B144371
+R36     Failure (renames local class in separate file) B90215
+R37     Pass
+R38     Pass
+R39     Pass
+R40     Pass
+R41     Pass
+R42     Pass
+R43     Pass
+R44     Pass
+R45     Pass
+R46     Pass
+R47     Pass
+R48     Pass
+R49     Pass
+R50     Pass
+R51     Pass
+R52     Pass
+R53     Pass
+R54     Pass
+R55     Pass
+R56     Pass
+R57     Pass
+R58     Pass
+R59     Pass
+R60     Pass
+R61     Pass
+R62     Pass
+R63     Pass
+R64     Pass
+R65     Pass
+R66     Pass
+R67     Pass
+R68     Pass
+R69     Pass
+R70     Pass
+R71     Pass
+R72     Pass
+R73     Pass
+R74     Pass
+R75     Pass
+R76     Pass
+R77     Pass
+R78     Pass
+R79     Pass
+R80     Pass
+R81     Pass
+R82     Failure (not available) B91435
+R83     Failure (not available) B91435
+R84     Pass
+R85     Pass
+R86     Pass
+R87     Pass
+R88     Failure (not all instances selected) B144373
+R89     Pass
+R90     Pass
+R91     Pass
+R92     Pass
+R93     Pass
+R94     Pass
+R95     Pass
+R96     Pass
+R97     Pass
+R98     ???
 
 Rename File to Match Type
 
 Rename Type to Match File
 
 = Reorder Parameters
-RP1		Pass
-RP2		Pass
-RP3		Pass
-RP4		Pass
-RP5		Pass
-RP6		Pass
-RP7		Pass
-RP8		Failure (renames method, drops const qualifier on definition) B91215
-RP9		Failure (renames method) B91215
+RP1     Pass
+RP2     Pass
+RP3     Pass
+RP4     Pass
+RP5     Pass
+RP6     Pass
+RP7     Pass
+RP8     Failure (renames method, drops const qualifier on definition) B91215
+RP9     Failure (renames method) B91215
 
 Replace Nested Conditional with Guard Clause
 
 = Replace Temporary with Query
-RTQ1	Pass
+RTQ1    Pass
 
 Replace with Alias
 
 Replace with Constant
 
 = Replace with Local
-RWL1	Pass
+RWL1    Pass
 
 = Reverse Conditional
-RC1		Failure (not available) S19046
+RC1     Failure (not available) S19046
 
 Simplify Boolean Expression
 
 = Split Initialization from Declaration
-SID1	Pass
-SID2	Pass
-SID3	Pass
-SID4	Pass
-SID5	Pass
-SID6	Pass
-SID7	Pass
-SID8	Failure (cursor must be on variable) B144400
-SID9	Pass
-SID10	Pass
-SID11	Failure (not available) B144401
+SID1    Pass
+SID2    Pass
+SID3    Pass
+SID4    Pass
+SID5    Pass
+SID6    Pass
+SID7    Pass
+SID8    Failure (cursor must be on variable) B144400
+SID9    Pass
+SID10   Pass
+SID11   Failure (not available) B144401
 
 = Split Temporary Variable
-ST1		Failure (inserts invalid code) B144403
+ST1     Failure (inserts invalid code) B144403
 
 Widen Scope
 
 Widen Scope Promote to Constant
 
 = Widen Scope Promote to Field
-WSPF1	Pass
-WSPF2	Pass
-WSPF3	Failure (not available) B144404
-WSPF4	Failure (corrupts type in declaration; generates invalid code) B90475
-WSPF5	Pass
-WSPF6	Pass
-WSPF7	Pass
-WSPF8	Pass
-WSPF9	Failure (not available) B144405
-WSPF10	Failure (not available) B144405
-WSPF11	Pass
-WSPF12	Pass
-WSPF13	Failure (not available) B144405
+WSPF1   Pass
+WSPF2   Pass
+WSPF3   Failure (not available) B144404
+WSPF4   Failure (corrupts type in declaration; generates invalid code) B90475
+WSPF5   Pass
+WSPF6   Pass
+WSPF7   Pass
+WSPF8   Pass
+WSPF9   Failure (not available) B144405
+WSPF10  Failure (not available) B144405
+WSPF11  Pass
+WSPF12  Pass
+WSPF13  Failure (not available) B144405
 
 ---------
 Other defects:
