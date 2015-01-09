@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "split": "~0.3.2"
+    "split": "~0.3.2",
+    "async": "~0.9.0"
   }
 }
