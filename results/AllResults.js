@@ -120,15 +120,18 @@ function ProcessResults(dir, next)
     });
 }
 
+function Summarize(err, results)
+{
+    console.log(JSON.stringify(results, null, 4));
+}
+
 function main(argv) {
     var resultsFile = "RefactorProResults.txt";
     if (argv.length > 2)
     {
         resultsFile = argv[2];
     }
-    ProcessResults(".", function(err, results) {
-        console.log(JSON.stringify(results, null, 4));
-    });
+    ProcessResults(".", Summarize);
 }
 
 main(process.argv);
