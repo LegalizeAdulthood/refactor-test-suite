@@ -58,23 +58,23 @@ CS11    Pass
 CMS1    Pass
 CMS2    Pass
 CMS3    Pass
-CMS4    [Failure](https://youtrack.jetbrains.com/issue/CPP-1601)
-CMS5    [Failure](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS4    Failure [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS5    Failure [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
 CMS6    Pass
 CMS7    Pass
-CMS8    [Failure (not available)](https://youtrack.jetbrains.com/issue/CPP-1908)
-CMS9    [Failure (not available)](https://youtrack.jetbrains.com/issue/CPP-1908)
-CMS10   [Failure (not available)](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS8    Failure (not available) [CPP-1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS9    Failure (not available) [CPP-1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS10   Failure (not available) [CPP-1908](https://youtrack.jetbrains.com/issue/CPP-1908)
 CMS11   Pass
-CMS12   [Failure](https://youtrack.jetbrains.com/issue/CPP-1909)
+CMS12   Failure [CPP-1909](https://youtrack.jetbrains.com/issue/CPP-1909)
 CMS13   Pass
 CMS14   Pass
-CMS15   [Failure](https://youtrack.jetbrains.com/issue/CPP-1910)
-CMS16   [Failure](https://youtrack.jetbrains.com/issue/CPP-1911)
+CMS15   Failure [CPP-1910](https://youtrack.jetbrains.com/issue/CPP-1910)
+CMS16   Failure [CPP-1911](https://youtrack.jetbrains.com/issue/CPP-1911)
 CMS17   Pass
-CMS18   [Failure](https://youtrack.jetbrains.com/issue/CPP-1911)
+CMS18   Failure [CPP-1911](https://youtrack.jetbrains.com/issue/CPP-1911)
 CMS19   Pass
-CMS20   [Failure](https://youtrack.jetbrains.com/issue/CPP-1911)
+CMS20   Failure [CPP-1911](https://youtrack.jetbrains.com/issue/CPP-1911)
 CMS21   Pass
 CMS22   Pass
 
@@ -82,7 +82,7 @@ CMS22   Pass
 CSM1    Pass
 CSM2    Pass
 CSM3    Pass
-CSM4    Failure
+CSM4    Failure [CPP-1912](https://youtrack.jetbrains.com/issue/CPP-1912)
 CSM5    Pass
 CSM6    Pass
 CSM7    Pass
