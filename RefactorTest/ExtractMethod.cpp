@@ -232,19 +232,19 @@ namespace ExtractMethodNamespace
             i = 3;
         }
 
+        int (*fn)();
         int (*Method2(int x))()
         {
-            int (*result)();
             if (x < 0)
             {
                 // #TEST#: EM14 Extract Method on next line
-                result = Function1;
+                fn = Function1;
             }
             else
             {
-                result = Function2;
+                fn = Function2;
             }
-            return result;
+            return fn;
         }
 
         void Operation1(int x) { }
@@ -252,9 +252,9 @@ namespace ExtractMethodNamespace
         void Const1(int x) const { }
         void Const2(int x) const { }
 
+        void (Frob::*member)(int);
         void (Frob::*Method3(int x))(int)
         {
-            void (Frob::*member)(int);
             if (x < 0)
             {
                 // #TEST#: EM15 Extract Method on next line
@@ -268,50 +268,50 @@ namespace ExtractMethodNamespace
         }
 
         typedef void (Frob::*MethodPtr)(int);
+        MethodPtr member_ptr;
         MethodPtr Method4(int x)
         {
-            MethodPtr member;
             if (x < 0)
             {
                 // #TEST#: EM16 Extract Method on next line
-                member = &Frob::Operation1;
+                member_ptr = &Frob::Operation1;
             }
             else
             {
-                member = &Frob::Operation2;
+                member_ptr = &Frob::Operation2;
             }
-            return member;
+            return member_ptr;
         }
 
+        void (Frob::*cmember)(int) const;
         void (Frob::*Method5(int x))(int) const
         {
-            void (Frob::*member)(int) const;
             if (x < 0)
             {
                 // #TEST#: EM17 Extract Method on next line
-                member = &Frob::Const1;
+                cmember = &Frob::Const1;
             }
             else
             {
-                member = &Frob::Const2;
+                cmember = &Frob::Const2;
             }
-            return member;
+            return cmember;
         }
 
         typedef void (Frob::*ConstMethodPtr)(int) const;
+        ConstMethodPtr cmember_ptr;
         ConstMethodPtr Method6(int x)
         {
-            ConstMethodPtr member;
             if (x < 0)
             {
                 // #TEST#: EM18 Extract Method on next line
-                member = &Frob::Const1;
+                cmember_ptr = &Frob::Const1;
             }
             else
             {
-                member = &Frob::Const2;
+                cmember_ptr = &Frob::Const2;
             }
-            return member;
+            return cmember_ptr;
         }
     };
 
