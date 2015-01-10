@@ -10,7 +10,7 @@
 #endif
 
 extern void TestAddOverride();
-extern void TestAddRemoveBlockDelimiter();
+extern void TestAddBlockDelimiter();
 extern void TestAddParameter();
 extern void TestBooleanToEnum();
 extern void TestBreakApartLineUpParameters();
@@ -51,6 +51,7 @@ extern void TestOptimizeNamespaceReferences();
 extern void TestExtractParameter();
 extern void TestReduceVisibility();
 extern void TestRemoveAssignmentsToParameters();
+extern void TestRemoveBlockDelimiter();
 extern void TestRemoveRedundantConditional();
 extern void TestRename();
 extern void TestRenameFileToMatchType();

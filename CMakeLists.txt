@@ -20,7 +20,7 @@ set(headers
 set(sources
     RefactorTest/AddOverride.cpp
     RefactorTest/AddParameter.cpp
-    RefactorTest/AddRemoveBlockDelimiter.cpp
+    RefactorTest/AddBlockDelimiter.cpp
     RefactorTest/BooleanToEnum.cpp
     RefactorTest/BreakApartLineUpParameters.cpp
     RefactorTest/ChangeSignature.cpp
@@ -62,6 +62,7 @@ set(sources
     RefactorTest/ReduceVisibility.cpp
     RefactorTest/RefactorTest.cpp
     RefactorTest/RemoveAssignmentsToParameters.cpp
+    RefactorTest/RemoveBlockDelimiter.cpp
     RefactorTest/RemoveRedundantConditional.cpp
     RefactorTest/RemoveUnusedParameters.cpp
     RefactorTest/Rename.cpp

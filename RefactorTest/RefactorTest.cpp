@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
     {
         TestAddOverride();
         TestAddParameter();
-        TestAddRemoveBlockDelimiter();
+        TestAddBlockDelimiter();
         TestBooleanToEnum();
         TestBreakApartLineUpParameters();
         TestChangeSignature();
@@ -48,6 +48,7 @@ int main(int argc, char* argv[])
         TestExtractParameter();
         TestReduceVisibility();
         TestRemoveAssignmentsToParameters();
+        TestRemoveBlockDelimiter();
         TestRemoveRedundantConditional();
         TestRename();
         TestRenameFileToMatchType();

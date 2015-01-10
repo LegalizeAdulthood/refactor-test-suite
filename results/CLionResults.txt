@@ -22,20 +22,14 @@ Introduce Constant is performed with Extract Constant.
 
 ============================================================================
 
-= Add/Remove Block Delimiters
+= Add Block Delimiters
 ABD1    Pass
 ABD2    Pass
-ABD3    Failure (not available)
+ABD3    Pass
 ABD4    Pass
 ABD5    Pass
 ABD6    Pass
 ABD7    Pass
-ABD8    Failure (not available)
-ABD9    Failure (not available)
-ABD10   Failure (not available)
-ABD11   Failure (not available)
-ABD12   Failure (not available)
-ABD13   Failure (not available)
 
 = Change Signature
 CS1     Pass
@@ -289,6 +283,16 @@ MM36    Failure
 = Pull Members Up
 
 = Push Members Down
+
+= Remove Block Delimiter
+RBD1    Failure (not available)
+RBD2    Failure (not available)
+RBD3    Failure (not available)
+RBD4    Failure (not available)
+RBD5    Failure (not available)
+RBD6    Failure (not available)
+RBD7    Pass
+RBD8    Pass
 
 = Remove Unused Parameters
 RUP1    Pass

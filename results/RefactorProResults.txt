@@ -1,20 +1,14 @@
 Name: Refactor!Pro
 Version: 9.1.10
 
-= Add/Remove Block Delimiter
+= Add Block Delimiter
 ABD1    Pass
 ABD2    Pass
-ABD3    Pass
+ABD3
 ABD4    Pass
 ABD5    Pass
 ABD6    Pass
 ABD7    Pass
-ABD8    Pass
-ABD9    Pass
-ABD10   Pass
-ABD11   Pass
-ABD12   Pass
-ABD13   Pass
 
 = Add Parameter
 AP1     Pass
@@ -558,6 +552,16 @@ RAP10   Failure (changes concatenation to assignment) B144339
 RAP11   Failure (changes concatenation to assignment) B144339
 RAP12   Failure (changes concatenation to assignment) B144339
 RAP13   Failure (changes concatenation to assignment) B144339
+
+= Remove Block Delimiter
+RBD1    Pass
+RBD2    Pass
+RBD3    Pass
+RBD4    Pass
+RBD5    Pass
+RBD6    Pass
+RBD7
+RBD8
 
 Remove Redundant Conditional
 
