@@ -749,7 +749,7 @@ Other defects:
 
 B90298 Documentation for Introduce Setter Guard Clause doesn't list applicability
 B91251 Documentation - Break Apart Parameters is a stub
-B91252 Documentatino - Compress to Lambda Expression is a stub
+B91252 Documentation - Compress to Lambda Expression is a stub
 B91253 Documentation - Convert Color to HEX is a stub
 B91254 Documentation - Convert Color to Named Color is a stub
 B91255 Documentation - Convert Color to RGB is a stub
