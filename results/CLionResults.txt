@@ -177,7 +177,7 @@ FC1     Pass
 = Inline Function
 
 = Inline Macro
-IM1     Failure
+IM1     Failure [CPP-1922](https://youtrack.jetbrains.com/issue/CPP-1922)
 IM2     Pass
 IM3     Pass
 IM4     Pass
@@ -187,8 +187,8 @@ IM6     Pass
 = Inline Method
 
 = Inline Recent Assignment
-IRA1    Failure (not available)
-IRA2    Failure (not available)
+IRA1    Failure (not available) [CPP-1923](https://youtrack.jetbrains.com/issue/CPP-1923)
+IRA2    Failure (not available) [CPP-1923](https://youtrack.jetbrains.com/issue/CPP-1923)
 
 = Inline Result
 IR1     Failure
