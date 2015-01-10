@@ -77,21 +77,6 @@ CC2     Pass
 CC3     Pass
 CC4     Pass
 
-= Compress To/Expand From Ternary Expression
-CTE1    Pass
-CTE2    Failure (not available) S18817
-CTE3    Failure (not available) S18817
-CTE4    Failure (not available) S18817
-CTE5    Pass
-CTE6    Pass
-CTE7    Pass
-CTE8    Pass
-CTE9    Pass
-CTE10   Pass
-CTE11   Pass
-CTE12   Pass
-CTE13   Pass
-
 = Conditional To Case
 CTC1    Failure (not available) S18807
 CTC2    Failure (not available) S18807
@@ -685,10 +670,32 @@ RP7     Pass
 RP8     Failure (renames method, drops const qualifier on definition) B91215
 RP9     Failure (renames method) B91215
 
+= Replace If With Ternary Expression
+RIT1    Pass
+RIT2    Failure (not available) S18817
+RIT3    Failure (not available) S18817
+RIT4    Failure (not available) S18817
+RIT5    Pass
+RIT6    Pass
+RIT7    Pass
+RIT8    Pass
+RIT9    Pass
+
 Replace Nested Conditional with Guard Clause
 
 = Replace Temporary with Query
 RTQ1    Pass
+
+= Replace Ternary Expression With If
+RTI1    Pass
+RTI2
+RTI3
+RTI4
+RTI5
+RTI6    Pass
+RTI7    Pass
+RTI8
+RTI9    Pass
 
 Replace with Alias
 

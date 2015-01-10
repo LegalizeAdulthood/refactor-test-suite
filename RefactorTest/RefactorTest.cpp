@@ -16,7 +16,6 @@ int main(int argc, char* argv[])
         TestChangeSignature();
         TestCollapseExpandAccessors();
         TestCombineConditionals();
-        TestCompressToExpandFromTernaryExpression();
         TestConditionalToCase();
         TestCreateMethodStub();
         TestCreateMultiVariableDeclaration();
@@ -54,10 +53,12 @@ int main(int argc, char* argv[])
         TestRenameFileToMatchType();
         TestRenameTypeToMatchFile();
         TestReorderParameters();
+        TestReplaceIfWithTernary();
         TestReplaceIterativeForWithRangeFor();
         TestReplaceNestedConditionalWithGuardClause();
         TestReplaceNullZeroWithNullPtr();
         TestReplaceTemporaryWithQuery();
+        TestReplaceTernaryWithIf();
         TestReplaceTypeWithAuto();
         TestReplaceWithAlias();
         TestReplaceWithConstant();

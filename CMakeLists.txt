@@ -26,7 +26,6 @@ set(sources
     RefactorTest/ChangeSignature.cpp
     RefactorTest/CollapseExpandAccessors.cpp
     RefactorTest/CombineConditionals.cpp
-    RefactorTest/CompressToExpandFromTernaryExpression.cpp
     RefactorTest/ConditionalToCase.cpp
     RefactorTest/CreateMethodContract.cpp
     RefactorTest/CreateMethodStub.cpp
@@ -71,10 +70,12 @@ set(sources
     RefactorTest/RenameTypeToMatchFile.cpp
     RefactorTest/ReorderParameters.cpp
     RefactorTest/ReplaceAutoPtrWithUniquePtr.cpp
+    RefactorTest/ReplaceIfWithTernary.cpp
     RefactorTest/ReplaceIterativeForWithRangeFor.cpp
     RefactorTest/ReplaceNestedConditionalWithGuardClause.cpp
     RefactorTest/ReplaceNullZeroWithNullPtr.cpp
     RefactorTest/ReplaceTemporaryWithQuery.cpp
+    RefactorTest/ReplaceTernaryWithIf.cpp
     RefactorTest/ReplaceTypeWithAuto.cpp
     RefactorTest/ReplaceWithAlias.cpp
     RefactorTest/ReplaceWithConstant.cpp

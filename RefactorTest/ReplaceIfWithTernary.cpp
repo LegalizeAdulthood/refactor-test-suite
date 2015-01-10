@@ -3,15 +3,20 @@
 
 // Converts an if/else conditional with assignments in each branch into
 // a ternary expression.
-// Converts a ternary expression into an if/else block.
 
-namespace CompressToTernaryExpressionNamespace
+namespace ReplaceIfWithTernary
 {
+    int GetValue()
+    {
+        static int x = 9;
+        return ++x;
+    }
+
     void TestInteger()
     {
-        int y = 10;
+        int y = GetValue();
         int x;
-        // #TEST#: CTE1 Compress to Ternary Expression
+        // #TEST#: RIT1 Replace If With Ternary Expression
         if (y == 10)
         {
             x = y;
@@ -22,7 +27,7 @@ namespace CompressToTernaryExpressionNamespace
         }
         require_equal(10, x);
 
-        // #TEST#: CTE2 Compress to Ternary Expression
+        // #TEST#: RIT2 Replace If With Ternary Expression
         if (y == 10)
         {
             x = y;
@@ -33,7 +38,7 @@ namespace CompressToTernaryExpressionNamespace
         }
         require_equal(10, x);
 
-        // #TEST#: CTE3 Compress to Ternary Expression
+        // #TEST#: RIT3 Replace If With Ternary Expression
         if (y == 10)
         {
             x = y;
@@ -48,7 +53,7 @@ namespace CompressToTernaryExpressionNamespace
         }
         require_equal(10, x);
 
-        // #TEST#: CTE4 Compress to Ternary Expression
+        // #TEST#: RIT4 Replace If With Ternary Expression
         if (y == 10)
         {
             x = y;
@@ -61,10 +66,6 @@ namespace CompressToTernaryExpressionNamespace
             }
         }
         require_equal(10, x);
-
-        // #TEST#: CTE5 Expand Ternary Expression
-        x = (y == 10) ? y : 1;
-        require_equal(10, x);
     }
 
     void TestFloatDouble()
@@ -72,7 +73,7 @@ namespace CompressToTernaryExpressionNamespace
         float f = 1.0f;
         double x = 1.0;
 
-        // #TEST#: CTE6 Compress to Ternary Expression
+        // #TEST#: RIT5 Replace If With Ternary Expression
         if (f == 10.0f)
         {
             x = -10.0;
@@ -84,7 +85,7 @@ namespace CompressToTernaryExpressionNamespace
 
         float g = 2.0f;
         float &r = f;
-        // #TEST#: CTE7 Compress to Ternary Expression
+        // #TEST#: RIT6 Replace If With Ternary Expression
         if (g == 10.0f)
         {
             r = g;
@@ -95,7 +96,7 @@ namespace CompressToTernaryExpressionNamespace
         }
 
         float *p;
-        // #TEST#: CTE8 Compress to Ternary Expression
+        // #TEST#: RIT7 Replace If With Ternary Expression
         if (g == 10.0f)
         {
             p = &f;
@@ -104,21 +105,17 @@ namespace CompressToTernaryExpressionNamespace
         {
             p = &g;
         }
-
-        // #TEST#: CTE13 Expand Ternary Expression
-        p = (g == 10.0f) ? &f : &g;
     }
 
     int Operation1() { return 1; }
     int Operation2() { return 2; }
-    void Operation3() {}
-    void Operation4() {}
 
     void TestFunctionPointer()
     {
         int (*fn1)() = Operation1;
         int (*fn2)();
-        // #TEST#: CTE9 Compress to Ternary Expression
+
+        // #TEST#: RIT8 Replace If With Ternary Expression
         if (fn1 == Operation1)
         {
             fn2 = Operation2;
@@ -127,9 +124,7 @@ namespace CompressToTernaryExpressionNamespace
         {
             fn2 = Operation1;
         }
-
-        // #TEST#: CTE12 Expand Ternary Expression
-        fn2 = (fn1 == Operation1) ? Operation2 : Operation1;
+        require_equal(2, fn2());
     }
 
     class Foo
@@ -143,7 +138,8 @@ namespace CompressToTernaryExpressionNamespace
     {
         int (Foo::*mem1)() = &Foo::Operation1;
         int (Foo::*mem2)();
-        // #TEST#: CTE10 Compress to Ternary Expression
+
+        // #TEST#: RIT9 Replace If With Ternary Expression
         if (mem1 == &Foo::Operation1)
         {
             mem2 = &Foo::Operation2;
@@ -152,17 +148,17 @@ namespace CompressToTernaryExpressionNamespace
         {
             mem2 = &Foo::Operation1;
         }
-
-        // #TEST#: CTE11 Expand Ternary Expression
-        mem2 = (mem1 == &Foo::Operation1) ? &Foo::Operation2 : &Foo::Operation1;
+        Foo f;
+        require_equal(2, (f.*mem2)());
     }
 }
 
-using namespace CompressToTernaryExpressionNamespace;
+using namespace ReplaceIfWithTernary;
 
-void TestCompressToExpandFromTernaryExpression()
+void TestReplaceIfWithTernary()
 {
     TestInteger();
     TestFloatDouble();
     TestFunctionPointer();
+    TestMemberPointer();
 }
