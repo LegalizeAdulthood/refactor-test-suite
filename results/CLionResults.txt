@@ -158,11 +158,12 @@ EM19    Failure [CPP-352](https://youtrack.jetbrains.com/issue/CPP-352)
 EM20    Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
 
 = Extract Parameter
-EP1     Failure
+EP1     Failure [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
 EP2     Pass
-EP3     Failure
+EP3     Failure (should not be available) [CPP-1921](https://youtrack.jetbrains.com/issue/CPP-1921)
 EP4     Pass
-EP5     Failure
+EP5     Failure [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
+EP6     Pass
 
 = Extract Typedef
 
