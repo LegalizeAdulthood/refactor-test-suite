@@ -191,11 +191,11 @@ IRA1    Failure (not available) [CPP-1923](https://youtrack.jetbrains.com/issue/
 IRA2    Failure (not available) [CPP-1923](https://youtrack.jetbrains.com/issue/CPP-1923)
 
 = Inline Result
-IR1     Failure
-IR2     Failure
-IR3     Failure
-IR4     Failure
-IR5     Failure
+IR1     Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
+IR2     Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
+IR3     Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
+IR4     Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
+IR5     Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
 
 = Inline Typedef
 
