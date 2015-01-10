@@ -128,11 +128,11 @@ EXF10   Pass
 EXF11   Pass
 EXF12   Pass
 EXF13   Pass
-EXF14   Failure
-EXF15   Failure
-EXF16   Failure
-EXF17   Failure
-EXF18   Failure
+EXF14   Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF15   Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF16   Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF17   Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF18   Failure [CPP-1916](https://youtrack.jetbrains.com/issue/CPP-1916)
 EXF19   Pass
 
 = Extract Method
