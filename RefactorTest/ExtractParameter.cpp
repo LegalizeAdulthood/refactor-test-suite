@@ -37,7 +37,7 @@ namespace ExtractParameterNamespace
         // @TEST#: EP2 Extract Parameter f
         Foo f;
         // @TEST#: EP3 Extract Parameter j
-        // @TEST#: EP3 Extract Parameter f
+        // @TEST#: EP6 Extract Parameter f
         // @TEST#: EP4 Extract Parameter ptr
         int j = (f.*ptr)();
         require_equal(1, j);
