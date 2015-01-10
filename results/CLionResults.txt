@@ -137,25 +137,25 @@ EXF19   Pass
 
 = Extract Method
 EM1     Pass
-EM2     Failure
-EM3     Failure
-EM4     Failure
-EM5     Failure
-EM6     Failure
-EM7     Failure
-EM8     Failure
-EM9     Failure
-EM10    Failure
-EM11    Failure
-EM12    Failure
-EM13    Failure
-EM14    Failure
-EM15    Failure
-EM16    Failure
-EM17    Failure
-EM18    Failure
-EM19    Failure
-EM20    Failure
+EM2     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM3     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM4     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM5     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM6     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM7     Pass
+EM8     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM9     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM10    Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM11    Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM12    Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM13    Failure [CPP-1918](https://youtrack.jetbrains.com/issue/CPP-1918)
+EM14    Pass
+EM15    Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM16    Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM17    Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM18    Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM19    Failure [CPP-352](https://youtrack.jetbrains.com/issue/CPP-352)
+EM20    Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
 
 = Extract Parameter
 EP1     Failure
