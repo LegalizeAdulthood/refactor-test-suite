@@ -78,7 +78,7 @@ namespace ExtractMethodNamespace
             }
             return member;
         }
-        
+
         void (Bar::*Method5(int x))(int) const
         {
             void (Bar::*member)(int) const;
@@ -145,9 +145,10 @@ namespace ExtractMethodNamespace
         void Const1(int x) const { }
         void Const2(int x) const { }
 
+        void (Foo::*member)(int);
+
         void (Foo::*Method3(int x))(int)
         {
-            void (Foo::*member)(int);
             if (x < 0)
             {
                 // #TEST#: EM9 Extract Method on next line
@@ -163,7 +164,6 @@ namespace ExtractMethodNamespace
         typedef void (Foo::*MethodPtr)(int);
         MethodPtr Method4(int x)
         {
-            MethodPtr member;
             if (x < 0)
             {
                 // #TEST#: EM10 Extract Method on next line
@@ -175,20 +175,20 @@ namespace ExtractMethodNamespace
             }
             return member;
         }
-        
+
+        void (Foo::*cmember)(int) const;
         void (Foo::*Method5(int x))(int) const
         {
-            void (Foo::*member)(int) const;
             if (x < 0)
             {
                 // #TEST#: EM11 Extract Method on next line
-                member = &Foo::Const1;
+                cmember = &Foo::Const1;
             }
             else
             {
-                member = &Foo::Const2;
+                cmember = &Foo::Const2;
             }
-            return member;
+            return cmember;
         }
 
         typedef void (Foo::*ConstMethodPtr)(int) const;
@@ -282,7 +282,7 @@ namespace ExtractMethodNamespace
             }
             return member;
         }
-        
+
         void (Frob::*Method5(int x))(int) const
         {
             void (Frob::*member)(int) const;
