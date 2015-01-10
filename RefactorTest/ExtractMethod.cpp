@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Require.h"
 
 // Moves the selected code to a new method.
 // Inserts the appropriate calling code into the source method or property.
@@ -6,6 +7,7 @@
 namespace ExtractMethodNamespace
 {
     int Function1() { return 1; }
+    int Function1(int x) { return x; }
     int Function2() { return 2; }
 
     struct Bar
@@ -23,8 +25,10 @@ namespace ExtractMethodNamespace
         void ConstOperation() const
         {
             // #TEST#: EM19 Extract Method on next line
-            int x = Function1() + Function2();
+            int x = Function1(_x) + Function2();
             int y = x*2;
+            require_equal(_x + 2, x);
+            require_equal((_x + 2)*2, y);
         }
 
         int (*Method2(int x))()
@@ -346,6 +350,9 @@ void TestExtractMethod()
 
     Bar b;
     b.Method1();
+    b.ConstOperation();
+    require_equal(1, b.Method2(-1)());
+    (b.*(b.Method3(-1)))(-1);
 
     Frob fr;
     fr.Method1();
