@@ -86,17 +86,17 @@ CSM4    Failure [CPP-1912](https://youtrack.jetbrains.com/issue/CPP-1912)
 CSM5    Pass
 CSM6    Pass
 CSM7    Pass
-CSM8    Failure
+CSM8    Failure [CPP-1912](https://youtrack.jetbrains.com/issue/CPP-1912)
 CSM9    Pass
 CSM10   Pass
 CSM11   Pass
 CSM12   Pass
 CSM13   Pass
-CSM14   Failure
-CSM15   Failure
-CSM16   Failure
-CSN17   Failure
-CSM18   Failure
+CSM14   Failure [CPP-1912](https://youtrack.jetbrains.com/issue/CPP-1912)
+CSM15   Failure [CPP-1912](https://youtrack.jetbrains.com/issue/CPP-1912)
+CSM16   Failure [CPP-1912](https://youtrack.jetbrains.com/issue/CPP-1912)
+CSM17   Failure [CPP-1913](https://youtrack.jetbrains.com/issue/CPP-1913)
+CSM18   Failure [CPP-1913](https://youtrack.jetbrains.com/issue/CPP-1913)
 CSM19   Pass
 CSM20   Pass
 CSM21   Pass
@@ -105,10 +105,10 @@ CSM23   Pass
 CSM24   Pass
 CSM25   Pass
 CSM26   Pass
-CSM27   Failure
-CSM28   Failure
+CSM27   Failure [CPP-1914](https://youtrack.jetbrains.com/issue/CPP-1914)
+CSM28   Failure [CPP-1914](https://youtrack.jetbrains.com/issue/CPP-1914)
 CSM30   Pass
-CSM31   Failure
+CSM31   Failure [CPP-1914](https://youtrack.jetbrains.com/issue/CPP-1914)
 
 = Extract Declaration
 
