@@ -9,14 +9,14 @@
 #include <unordered_set>
 #include <vector>
 
-static void TestReplaceTypeWithAutoDeque() 
+static void TestReplaceTypeWithAutoDeque()
 {
     std::deque<int> c;
     c.push_back(1);
     c.push_back(2);
     int sum = 0;
     // #TEST#: RTWA1 Replace type with auto
-    for (std::deque<int>::const_iterator it = c.begin(), end = c.end();
+    for (std::deque<int>::const_iterator it = c.cbegin(), end = c.cend();
         it != end; ++it)
     {
         sum += *it;
@@ -25,7 +25,7 @@ static void TestReplaceTypeWithAutoDeque()
 
     sum = 0;
     // #TEST#: RTWA2 Replace type with auto
-    for (std::deque<int>::const_reverse_iterator it = c.rbegin(), end = c.rend();
+    for (std::deque<int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
         it != end; ++it)
     {
         sum += *it;
@@ -53,14 +53,14 @@ static void TestReplaceTypeWithAutoDeque()
     assert(2 + 1 == sum);
 }
 
-static void TestReplaceTypeWithAutoList() 
+static void TestReplaceTypeWithAutoList()
 {
     std::list<int> c;
     c.push_back(1);
     c.push_back(2);
     int sum = 0;
     // #TEST#: RTWA5 Replace type with auto
-    for (std::list<int>::const_iterator it = c.begin(), end = c.end();
+    for (std::list<int>::const_iterator it = c.cbegin(), end = c.cend();
         it != end; ++it)
     {
         sum += *it;
@@ -69,7 +69,7 @@ static void TestReplaceTypeWithAutoList()
 
     sum = 0;
     // #TEST#: RTWA6 Replace type with auto
-    for (std::list<int>::const_reverse_iterator it = c.rbegin(), end = c.rend();
+    for (std::list<int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
         it != end; ++it)
     {
         sum += *it;
@@ -97,14 +97,14 @@ static void TestReplaceTypeWithAutoList()
     assert(2 + 1 == sum);
 }
 
-static void TestReplaceTypeWithAutoMap() 
+static void TestReplaceTypeWithAutoMap()
 {
     std::map<int, int> c;
     c[1] = 1;
     c[2] = 2;
     int sum = 0;
     // #TEST#: RTWA9 Replace type with auto
-    for (std::map<int, int>::const_iterator it = c.begin(), end = c.end();
+    for (std::map<int, int>::const_iterator it = c.cbegin(), end = c.cend();
         it != end; ++it)
     {
         sum += it->second;
@@ -113,7 +113,7 @@ static void TestReplaceTypeWithAutoMap()
 
     sum = 0;
     // #TEST#: RTWA10 Replace type with auto
-    for (std::map<int, int>::const_reverse_iterator it = c.rbegin(), end = c.rend();
+    for (std::map<int, int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
         it != end; ++it)
     {
         sum += it->second;
@@ -141,14 +141,14 @@ static void TestReplaceTypeWithAutoMap()
     assert(2 + 1 == sum);
 }
 
-static void TestReplaceTypeWithAutoMultimap() 
+static void TestReplaceTypeWithAutoMultimap()
 {
     std::multimap<int, int> c;
     c.insert(std::make_pair(1, 1));
     c.insert(std::make_pair(2, 2));
     int sum = 0;
     // #TEST#: RTWA13 Replace type with auto
-    for (std::multimap<int, int>::const_iterator it = c.begin(), end = c.end();
+    for (std::multimap<int, int>::const_iterator it = c.cbegin(), end = c.cend();
         it != end; ++it)
     {
         sum += it->second;
@@ -157,7 +157,7 @@ static void TestReplaceTypeWithAutoMultimap()
 
     sum = 0;
     // #TEST#: RTWA14 Replace type with auto
-    for (std::multimap<int, int>::const_reverse_iterator it = c.rbegin(), end = c.rend();
+    for (std::multimap<int, int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
         it != end; ++it)
     {
         sum += it->second;
@@ -185,14 +185,14 @@ static void TestReplaceTypeWithAutoMultimap()
     assert(2 + 1 == sum);
 }
 
-static void TestReplaceTypeWithAutoSet() 
+static void TestReplaceTypeWithAutoSet()
 {
     std::set<int> c;
     c.insert(1);
     c.insert(2);
     int sum = 0;
     // #TEST#: RTWA17 Replace type with auto
-    for (std::set<int>::const_iterator it = c.begin(), end = c.end();
+    for (std::set<int>::const_iterator it = c.cbegin(), end = c.cend();
         it != end; ++it)
     {
         sum += *it;
@@ -201,7 +201,7 @@ static void TestReplaceTypeWithAutoSet()
 
     sum = 0;
     // #TEST#: RTWA18 Replace type with auto
-    for (std::set<int>::const_reverse_iterator it = c.rbegin(), end = c.rend();
+    for (std::set<int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
         it != end; ++it)
     {
         sum += *it;
@@ -227,7 +227,7 @@ static void TestReplaceTypeWithAutoSet()
     assert(2 + 1 == sum);
 }
 
-static void TestReplaceTypeWithAutoUnorderedMap() 
+static void TestReplaceTypeWithAutoUnorderedMap()
 {
     std::unordered_map<int, int> c;
     c[1] = 1;
@@ -252,7 +252,7 @@ static void TestReplaceTypeWithAutoUnorderedMap()
     assert(3 + 2 == sum);
 }
 
-static void TestReplaceTypeWithAutoUnorderedSet() 
+static void TestReplaceTypeWithAutoUnorderedSet()
 {
     std::unordered_set<int> c;
     c.insert(1);
@@ -276,7 +276,7 @@ static void TestReplaceTypeWithAutoUnorderedSet()
     assert(2 + 1 == sum);
 }
 
-static void TestReplaceTypeWithAutoVector() 
+static void TestReplaceTypeWithAutoVector()
 {
     std::vector<int> c;
     c.push_back(1);
@@ -292,7 +292,7 @@ static void TestReplaceTypeWithAutoVector()
 
     sum = 0;
     // #TEST#: RTWA30 Replace type with auto
-    for (std::vector<int>::const_reverse_iterator it = c.rbegin(), end = c.rend();
+    for (std::vector<int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
         it != end; ++it)
     {
         sum += *it;
