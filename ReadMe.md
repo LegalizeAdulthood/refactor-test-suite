@@ -22,7 +22,7 @@ The original release of the test suite is described
 ## Current Products
 
 - [CLion CL-140-1221.2](results/CLionResults.md)
-- [cpp11-migrate 3.4](results/Cpp11MigrateResults.md)
+- [clang-modernize 3.4](results/ClangModernizeResults.md)
 - [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
 
 ## Discontinued Products
