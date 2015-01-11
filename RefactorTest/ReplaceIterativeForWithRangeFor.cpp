@@ -527,7 +527,7 @@ static void TestContainersWithIterators()
 
     int sum = 0;
     // #TEST#: RIRF49 Replace iterative for with range for
-    for (std::vector<int>::const_iterator it = c.begin(), end = c.end();
+    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend();
         it != end; ++it)
     {
         sum += *it;
@@ -536,7 +536,7 @@ static void TestContainersWithIterators()
 
     sum = 0;
     // #TEST#: RIRF50 Replace iterative for with range for
-    for (std::vector<int>::const_iterator it = c.begin(), end = c.end();
+    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend();
         end != it; ++it)
     {
         sum += *it;
@@ -545,7 +545,7 @@ static void TestContainersWithIterators()
 
     sum = 0;
     // #TEST#: RIRF51 Replace iterative for with range for
-    for (std::vector<int>::const_reverse_iterator it = c.rbegin(), end = c.rend();
+    for (std::vector<int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
         end != it; ++it)
     {
         sum += *it;
