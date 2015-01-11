@@ -4,7 +4,7 @@
 
 static int fileDataImplicitSize[] = { 1, 0 };
 
-static void TestFileArrayImplicitSize() 
+static void TestFileArrayImplicitSize()
 {
     // #TEST#: RIRF1 Replace iterative for with range for
     for (int i = 0; i < 2; ++i)
@@ -57,7 +57,7 @@ static void TestFileArrayImplicitSize()
 
 static int const constantFileDataImplicitSize[] = { 'f', 'o', 'o' };
 
-void TestConstantFileArrayImplicitSize() 
+void TestConstantFileArrayImplicitSize()
 {
     int sum = 0;
     // #TEST#: RIRF7 Replace iterative for with range for
@@ -110,7 +110,7 @@ void TestConstantFileArrayImplicitSize()
 
 static int fileDataExplicitSize[10] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
-static void TestFileArrayExplicitSize() 
+static void TestFileArrayExplicitSize()
 {
     // #TEST#: RIRF13 Replace iterative for with range for
     for (int i = 0; i < 10; ++i)
@@ -211,7 +211,7 @@ static void TestFileArrayExplicitSize()
 
 static int const constantFileDataExplicitSize[10] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
-static void TestConstantFileArrayExplicitSize() 
+static void TestConstantFileArrayExplicitSize()
 {
     int sum = 0;
     // #TEST#: RIRF19 Replace iterative for with range for
@@ -328,7 +328,7 @@ static void TestStackArrayImplicitSize()
     assert(stackDataImplicitSize[2] == 'o');
 }
 
-static void TestConstantStackArrayImplicitSize() 
+static void TestConstantStackArrayImplicitSize()
 {
     int const constantStackDataImplicitSize[] = { 'b', 'a', 'r' };
     int sum = 0;
@@ -380,7 +380,7 @@ static void TestConstantStackArrayImplicitSize()
     assert(int('b') + int('a') + int('r') == sum);
 }
 
-static void TestStackArrayExplicitSize() 
+static void TestStackArrayExplicitSize()
 {
     int stackDataExplicitSize[4] = { 'q', 'u', 'x' };
     // #TEST#: RIRF37 Replace iterative for with range for
@@ -444,7 +444,7 @@ static void TestStackArrayExplicitSize()
     assert(stackDataExplicitSize[3] == 0);
 }
 
-static void TestConstantStackArrayExplicitSize() 
+static void TestConstantStackArrayExplicitSize()
 {
     int const constantStackdataExlicitSize[4] = { 's', 'o', 'x' };
     int sum = 0;
@@ -496,7 +496,7 @@ static void TestConstantStackArrayExplicitSize()
     assert(int('s') + int('o') + int('x') == sum);
 }
 
-static void TestStackArray() 
+static void TestStackArray()
 {
     TestStackArrayImplicitSize();
     TestConstantStackArrayImplicitSize();
@@ -510,7 +510,7 @@ static void TestArrays()
     TestFileArray();
 }
 
-static void TestContainersWithIterators() 
+static void TestContainersWithIterators()
 {
     std::vector<int> c;
     c.push_back('f');
@@ -583,7 +583,7 @@ static void TestContainersWithIterators()
     assert('o' == c[2]);
 }
 
-static void TestContainersWithSubscriptUsingSizeType() 
+static void TestContainersWithSubscriptUsingSizeType()
 {
     std::vector<int> c;
     c.push_back('f');
@@ -615,7 +615,7 @@ static void TestContainersWithSubscriptUsingSizeType()
     assert(int('f') + int('o') + int('o') == sum);
 }
 
-static void TestContainersWithSubscriptUsingInt() 
+static void TestContainersWithSubscriptUsingInt()
 {
     std::vector<int> c;
     c.push_back('f');
@@ -647,13 +647,13 @@ static void TestContainersWithSubscriptUsingInt()
     assert(int('f') + int('o') + int('o') == sum);
 }
 
-static void TestContainersWithSubscript() 
+static void TestContainersWithSubscript()
 {
     TestContainersWithSubscriptUsingSizeType();
     TestContainersWithSubscriptUsingInt();
 }
 
-static void TestContainersWithAtUsingSizeType() 
+static void TestContainersWithAtUsingSizeType()
 {
     std::vector<int> c;
     c.push_back('f');
@@ -685,7 +685,7 @@ static void TestContainersWithAtUsingSizeType()
     assert(int('f') + int('o') + int('o') == sum);
 }
 
-static void TestContainersWithAtUsingInt() 
+static void TestContainersWithAtUsingInt()
 {
     std::vector<int> c;
     c.push_back('f');
@@ -717,7 +717,7 @@ static void TestContainersWithAtUsingInt()
     assert(int('f') + int('o') + int('o') == sum);
 }
 
-static void TestContainersWithAt() 
+static void TestContainersWithAt()
 {
     TestContainersWithAtUsingSizeType();
     TestContainersWithAtUsingInt();
