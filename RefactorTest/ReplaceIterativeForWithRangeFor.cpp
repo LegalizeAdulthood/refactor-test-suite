@@ -30,6 +30,14 @@ static void TestFileArrayImplicitSize()
     assert(fileDataImplicitSize[0] == 2);
     assert(fileDataImplicitSize[1] == 1);
 
+    int sum = 0;
+    // #TEST#: RIRF68 Replace iterative for with range for
+    for (int i = 1; i > -1; --i)
+    {
+        sum += fileDataImplicitSize[i];
+    }
+    assert(sum == 3);
+
     // #TEST#: RIRF4 Replace iterative for with range for
     for (int i = 0; i < sizeof(fileDataImplicitSize)/sizeof(fileDataImplicitSize[0]); ++i)
     {
