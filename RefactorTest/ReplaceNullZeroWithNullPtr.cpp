@@ -85,9 +85,9 @@ static void TestDefaultArguments(char *p = NULL,             // #TEST#: RZNP13 R
 static void TestAssignment()
 {
     char *a = NULL;             // #TEST#: RZNP19 Replace NULL with nullptr
-    char *b = 0;                // #TEST#: RNZP20 Replace 0 with nullptr
-    char c = 0;                 // #TEST#: RNZP21 Should not be available
-    char *d = nullptr;          // #TEST#: RNZP22 Should not be available
+    char *b = 0;                // #TEST#: RZNP20 Replace 0 with nullptr
+    char c = 0;                 // #TEST#: RZNP21 Should not be available
+    char *d = nullptr;          // #TEST#: RZNP22 Should not be available
     char const *f = NULL;       // #TEST#: RZNP23 Replace NULL with nullptr
     char const *g = 0;          // #TEST#: RZNP24 Replace 0 with nullptr
     char const *const h = NULL; // #TEST#: RZNP25 Replace NULL with nullptr

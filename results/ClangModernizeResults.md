@@ -1,6 +1,6 @@
 # clang-modernize
 
-Home: [`clang-modernize`](http://clang.llvm.org/extra/clang-modernize.html)
+Home: [clang-modernize](http://clang.llvm.org/extra/clang-modernize.html)
 
 Version: 3.4
 
@@ -107,9 +107,9 @@ RZNP16  | Pass
 RZNP17  | Pass
 RZNP18  | Pass
 RZNP19  | Pass
-RNZP20  | Pass
-RNZP21  | Pass
-RNZP22  | Pass
+RZNP20  | Pass
+RZNP21  | Pass
+RZNP22  | Pass
 RZNP23  | Pass
 RZNP24  | Pass
 RZNP25  | Pass
