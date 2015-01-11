@@ -394,14 +394,14 @@ R98     Failure [CPP-1941](https://youtrack.jetbrains.com/issue/CPP-1941)
 
 = Replace If With Ternary Expression
 RIT1    Pass
-RIT2    Failure (not available)
-RIT3    Failure (not available)
-RIT4    Failure (not available)
+RIT2    Failure (not available) [CPP-1944](https://youtrack.jetbrains.com/issue/CPP-1944)
+RIT3    Failure (not available) [CPP-1944](https://youtrack.jetbrains.com/issue/CPP-1944)
+RIT4    Failure (not available) [CPP-1944](https://youtrack.jetbrains.com/issue/CPP-1944)
 RIT5    Pass
 RIT6    Pass
 RIT7    Pass
 RIT8    Pass
-RIT9    Failure
+RIT9    Failure [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
 
 = Replace Ternary Expression With If
 RTI1    Pass
