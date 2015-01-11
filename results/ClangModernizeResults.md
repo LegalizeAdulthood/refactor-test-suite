@@ -18,21 +18,21 @@ AO5 | Pass
 ## Replace iterative for with range for
 Case | Result
 ---- | ------
-RIRF1 |
-RIRF2 |
-RIRF3 |
-RIRF4 |
-RIRF5 |
-RIRF6 |
-RIRF7 |
-RIRF8 |
-RIRF9 |
-RIRF10 |
-RIRF11 |
-RIRF12 |
-RIRF13 |
-RIRF14 |
-RIRF15 |
+RIRF1 | Pass
+RIRF2 | Failure []()
+RIRF3 | Failure []()
+RIRF4 | Pass
+RIRF5 | Failure []()
+RIRF6 | Failure []()
+RIRF7 | Pass
+RIRF8 | Failure []()
+RIRF9 | Failure []()
+RIRF10 | Pass
+RIRF11 | Failure []()
+RIRF12 | Failure []()
+RIRF13 | Pass
+RIRF14 | Failure []()
+RIRF15 | Failure []()
 RIRF16 |
 RIRF17 |
 RIRF18 |
