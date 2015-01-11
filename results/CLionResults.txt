@@ -201,29 +201,29 @@ IR5     Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
 
 = Inline Variable
 IV1     Pass
-IV2     Failure (not available)
+IV2     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV3     Pass
-IV4     Failure (not available)
+IV4     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV5     Failure
-IV6     Failure (not available)
-IV7     Failure (not available)
-IV8     Failure (not available)
-IV9     Failure (not available)
+IV6     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV7     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV8     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV9     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 
 = Introduce Constant
-IC1     Failure
-IC2     Pass
-IC3     Failure
-IC4     Failure
-IC5     Failure
+IC1     Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
+IC2     Failure [CPP-1927](https://youtrack.jetbrains.com/issue/CPP-1927)
+IC3     Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
+IC4     Failure [CPP-1927](https://youtrack.jetbrains.com/issue/CPP-1927)
+IC5     Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
 IC6     Pass
-IC7     Failure
+IC7     Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
 IC8     Pass
-IC9     Failure
+IC9     Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
 IC10    Pass
-IC11    Failure
-IC12    Failure
-IC13    Failure
+IC11    Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
+IC12    Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
+IC13    Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
 
 = Introduce Local
 IL1     Failure
