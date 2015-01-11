@@ -275,7 +275,7 @@ MM36    Failure [CPP-1934](https://youtrack.jetbrains.com/issue/CPP-1934)
 
 = Push Members Down
 
-= Remove Block Delimiter
+= Remove Block Delimiter (unavailable) [CPP-1937](https://youtrack.jetbrains.com/issue/CPP-1937)
 RBD1    Failure (not available)
 RBD2    Failure (not available)
 RBD3    Failure (not available)
