@@ -20,71 +20,72 @@ Case | Result
 ---- | ------
 RIRF1 | Pass
 RIRF2 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF3 | Failure []()
+RIRF3 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
 RIRF4 | Pass
-RIRF5 | Failure []()
-RIRF6 | Failure []()
+RIRF5 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF6 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
 RIRF7 | Pass
-RIRF8 | Failure []()
-RIRF9 | Failure []()
+RIRF8 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF9 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
 RIRF10 | Pass
-RIRF11 | Failure []()
-RIRF12 | Failure []()
+RIRF11 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF12 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
 RIRF13 | Pass
-RIRF14 | Failure []()
-RIRF15 | Failure []()
-RIRF16 |
-RIRF17 |
-RIRF18 |
-RIRF19 |
-RIRF20 |
-RIRF21 |
-RIRF22 |
-RIRF23 |
-RIRF24 |
-RIRF25 |
-RIRF26 |
-RIRF27 |
-RIRF28 |
-RIRF29 |
-RIRF30 |
-RIRF31 |
-RIRF32 |
-RIRF33 |
-RIRF34 |
-RIRF35 |
-RIRF36 |
-RIRF37 |
-RIRF38 |
-RIRF39 |
-RIRF40 |
-RIRF41 |
-RIRF42 |
-RIRF43 |
-RIRF44 |
-RIRF45 |
-RIRF46 |
-RIRF47 |
-RIRF48 |
-RIRF49 |
-RIRF50 |
-RIRF51 |
-RIRF52 |
-RIRF53 |
-RIRF54 |
-RIRF55 |
-RIRF56 |
-RIRF57 |
-RIRF58 |
-RIRF59 |
-RIRF60 |
-RIRF61 |
-RIRF62 |
-RIRF63 |
-RIRF64 |
-RIRF65 |
-RIRF66 |
-RIRF67 |
+RIRF14 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF15 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF16 | Pass
+RIRF17 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF18 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF19 | Pass
+RIRF20 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF21 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF22 | Pass
+RIRF23 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF24 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF25 | Pass
+RIRF26 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF27 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF28 | Pass
+RIRF29 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF30 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF31 | Pass
+RIRF32 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF33 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF34 | Pass
+RIRF35 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF36 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF37 | Pass
+RIRF38 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF39 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF40 | Pass
+RIRF41 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF42 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF43 | Pass
+RIRF44 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF45 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF46 | Pass
+RIRF47 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF48 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF49 | Failure [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
+RIRF50 | Failure [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
+RIRF51 | Failure [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
+RIRF52 | Failure [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
+RIRF53 | Failure [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
+RIRF54 | Pass
+RIRF55 | Failure [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
+RIRF56 | Pass
+RIRF57 | Pass
+RIRF58 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF59 | Pass
+RIRF60 | Pass
+RIRF61 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF62 | Pass
+RIRF63 | Pass
+RIRF64 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF65 | Pass
+RIRF66 | Pass
+RIRF67 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF68 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
 
 ## Replace NULL/0 with nullptr
 Case | Result
