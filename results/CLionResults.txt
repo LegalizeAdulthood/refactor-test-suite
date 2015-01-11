@@ -239,38 +239,37 @@ MM2     Pass
 MM3     Pass
 MM4     Pass
 MM5     Pass
-MM6     Failure (not available)
-MM6     Failure (not available)
-MM7     Failure (not available)
-MM8     Failure (not available)
+MM6     Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM7     Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM8     Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM9     Pass
-MM10    Failure (not available)
-MM11    Failure (not available)
-MM12    Failure (not available)
+MM10    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM11    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM12    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM13    Pass
-MM14    Failure (not available)
+MM14    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM15    Pass
-MM16    Failure
+MM16    Failure [CPP-1934](https://youtrack.jetbrains.com/issue/CPP-1934)
 MM17    Pass
 MM18    Pass
-MM19    Failure
+MM19    Failure [CPP-1934](https://youtrack.jetbrains.com/issue/CPP-1934)
 MM20    Pass
-MM21    Failure
-MM22    Failure
-MM23    Failure (not available)
-MM24    Failure (not available)
-MM25    Failure (not available)
-MM26    Failure (not available)
-MM27    Failure (not available)
-MM28    Failure (not available)
-MM29    Failure (not available)
-MM30    Failure (not available)
-MM31    Failure
-MM32    Failure
-MM33    Failure
-MM34    Failure
-MM35    Failure (not available)
-MM36    Failure
+MM21    Failure [CPP-1934](https://youtrack.jetbrains.com/issue/CPP-1934)
+MM22    Failure [CPP-1934](https://youtrack.jetbrains.com/issue/CPP-1934)
+MM23    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM24    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM25    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM26    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM27    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM28    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM29    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM30    Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM31    Failure [CPP-1935](https://youtrack.jetbrains.com/issue/CPP-1935)
+MM32    Failure [CPP-1935](https://youtrack.jetbrains.com/issue/CPP-1935)
+MM33    Failure [CPP-1935](https://youtrack.jetbrains.com/issue/CPP-1935)
+MM34    Failure [CPP-1935](https://youtrack.jetbrains.com/issue/CPP-1935)
+MM35    Failure [CPP-1936](https://youtrack.jetbrains.com/issue/CPP-1936)
+MM36    Failure [CPP-1934](https://youtrack.jetbrains.com/issue/CPP-1934)
 
 = Pull Members Up
 
