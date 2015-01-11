@@ -41,13 +41,13 @@ set(sources
     RefactorTest/ExtractInterface.cpp
     RefactorTest/ExtractMethod.cpp
     RefactorTest/ExtractParameter.cpp
+    RefactorTest/ExtractVariable.cpp
     RefactorTest/FlattenConditional.cpp
     RefactorTest/InlineMacro.cpp
     RefactorTest/InlineRecentAssignment.cpp
     RefactorTest/InlineResult.cpp
     RefactorTest/InlineVariable.cpp
     RefactorTest/IntroduceAlias.cpp
-    RefactorTest/IntroduceLocal.cpp
     RefactorTest/IntroduceParameter.cpp
     RefactorTest/IntroduceParameterObject.cpp
     RefactorTest/IntroduceResultVariable.cpp

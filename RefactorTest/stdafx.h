@@ -35,7 +35,7 @@ extern void TestInlineResult();
 extern void TestInlineTemporary();
 extern void TestIntroduceAlias();
 extern void TestExtractConstant();
-extern void TestIntroduceLocal();
+extern void TestExtractVariable();
 extern void TestIntroduceParameter();
 extern void TestIntroduceParameterObject();
 extern void TestIntroduceResultVariable();

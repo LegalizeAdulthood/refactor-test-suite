@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
         TestInlineResult();
         TestInlineTemporary();
         TestIntroduceAlias();
-        TestIntroduceLocal();
+        TestExtractVariable();
         TestIntroduceParameter();
         TestIntroduceParameterObject();
         TestIntroduceResultVariable();

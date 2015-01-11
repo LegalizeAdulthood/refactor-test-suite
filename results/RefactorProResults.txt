@@ -375,6 +375,14 @@ EM20    Failure (not available) S19099
 = Extract Parameter
 EP1     Pass
 
+= Extract Variable
+EXV1     Pass
+EXV2     Pass
+EXV3     Failure (inserts invalid code) B90304
+EXV4     Pass
+EXV5     Pass
+EXV6     Failure (inserts invalid code) B144398
+
 = Flatten Conditional
 FC1     Pass
 
@@ -411,14 +419,6 @@ IT10    Pass
 IT11    Pass
 
 Introduce Alias
-
-= Introduce Local
-IL1     Pass
-IL2     Pass
-IL3     Failure (inserts invalid code) B90304
-IL4     Pass
-IL5     Pass
-IL6     Failure (inserts invalid code) B144398
 
 Introduce Parameter
 

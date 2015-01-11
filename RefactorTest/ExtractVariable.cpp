@@ -4,9 +4,9 @@
 
 // Creates a new local variable initialized with the selected expression.
 // Optionally replaces all occurrences of the expression inside this code
-// block with a reference to the newly declared local variable. 
+// block with a reference to the newly declared local variable.
 
-namespace IntroduceLocalNamespace
+namespace ExtractVariableNamespace
 {
     class Foo
     {
@@ -30,14 +30,14 @@ namespace IntroduceLocalNamespace
             bool flag = true;
             const int &xr = x;
             const int &yr = y;
-            // #TEST#: IL2 Introduce local for rhs expression
+            // #TEST#: EXV2 Extract variable for rhs expression
             const int &z = flag ? xr : yr;
         }
 
         void Operation3()
         {
             bool which = true;
-            // #TEST#: IL1 Introduce local for rhs expression
+            // #TEST#: EXV1 Extract variable for rhs expression
             void (Foo::*member)() = which ? &Foo::Operation1 : &Foo::Operation2;
             void (Foo::*member2)() = (member == &Foo::Operation1) ?
                 (which ? &Foo::Operation1 : &Foo::Operation2) : &Foo::Operation3;
@@ -48,7 +48,7 @@ namespace IntroduceLocalNamespace
             const int x = 3;
             const int y = 4;
             bool which = false;
-            // #TEST#: IL3 Introduce local for rhs expression
+            // #TEST#: EXV3 Extract variable for rhs expression
             const int *z = which ? &x : &y;
         }
 
@@ -57,7 +57,7 @@ namespace IntroduceLocalNamespace
             std::vector<int> v1(3);
             std::vector<int> v2(4);
             bool flag = true;
-            // #TEST#: IL4 Introduce local for rhs expression
+            // #TEST#: EXV4 Extract variable for rhs expression
             std::vector<int> v3 = flag ? v1 : v2;
         }
     };
@@ -66,14 +66,14 @@ namespace IntroduceLocalNamespace
     {
         std::string foo;
         std::string bar = "Bar!";
-        // #TEST#: IL6 Introduce Local for rhs expression
+        // #TEST#: EXV6 Extract variable for rhs expression
         foo = bar + " meta?";
     }
 };
 
-using namespace IntroduceLocalNamespace;
+using namespace ExtractVariableNamespace;
 
-void TestIntroduceLocal()
+void TestExtractVariable()
 {
     Foo f;
     f.Operation1();
@@ -83,6 +83,6 @@ void TestIntroduceLocal()
     f.Operation5();
 
     std::string foo;
-    // #TEST#: IL5 Introduce local for rhs expression
+    // #TEST#: EXV5 Extract variable for rhs expression
     foo = "";
 }

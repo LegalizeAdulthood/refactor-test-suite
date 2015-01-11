@@ -150,6 +150,14 @@ EXF17   Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
 EXF18   Failure [CPP-1916](https://youtrack.jetbrains.com/issue/CPP-1916)
 EXF19   Pass
 
+= Extract Variable
+EXV1     Failure
+EXV2     Pass
+EXV3     Pass
+EXV4     Pass
+EXV5     Pass
+EXV6     Failure
+
 = Extract Method
 EM1     Pass
 EM2     Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
@@ -224,14 +232,6 @@ IV6     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/
 IV7     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV8     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV9     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-
-= Introduce Local
-IL1     Failure
-IL2     Pass
-IL3     Pass
-IL4     Pass
-IL5     Pass
-IL6     Failure
 
 = Move Method
 MM1     Pass
