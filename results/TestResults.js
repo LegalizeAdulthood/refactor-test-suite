@@ -46,7 +46,7 @@ function ProcessLine(line)
     {
         failures++;
     }
-    else if (line.indexOf("= ") == 0)
+    else if (line.indexOf("## ") == 0)
     {
         refactoring = line.substr(2);
     }
@@ -72,7 +72,7 @@ function main(resultsFile)
         .on('end', EmitReport);
 }
 
-var resultsFile = "RefactorProResults.txt";
+var resultsFile = "RefactorProResults.md";
 if (process.argv.length > 2)
 {
     resultsFile = process.argv[2];
