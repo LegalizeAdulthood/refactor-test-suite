@@ -14,6 +14,12 @@ AO4 | Pass
 AO5 | Pass
 
 ## Replace auto_ptr with unique_ptr
+Case | Result
+---- | ------
+RAWU1 | Pass
+RAWU2 | Pass
+RAWU3 | Pass
+RAWU4 | Pass
 
 ## Replace iterative for with range for
 Case | Result
