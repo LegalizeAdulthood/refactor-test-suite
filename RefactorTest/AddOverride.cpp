@@ -53,6 +53,47 @@ private:
     int value_;
 };
 
+class AbstractImplementation : public Interface
+{
+public:
+    AbstractImplementation()
+        : value_(0)
+    {
+    }
+
+    virtual ~AbstractImplementation()
+    {}
+
+    virtual int Getter() const override
+    {
+        return value_;
+    }
+
+    virtual void Setter(int value) override
+    {
+        value_ = value;
+    }
+
+private:
+    int value_;
+};
+
+class DerivedImplementation : public AbstractImplementation
+{
+public:
+    DerivedImplementation()
+        : AbstractImplementation()
+    {}
+
+    virtual ~DerivedImplementation()
+    {}
+
+    // #TEST#: AO5 Add override
+    virtual void Method()
+    {
+    }
+};
+
 void TestAddOverride()
 {
     Implementation i;
@@ -61,4 +102,9 @@ void TestAddOverride()
     assert(!i.Getter());
     i.Setter(3.14159f);
     assert(3 == i.Getter());
+
+    DerivedImplementation d;
+    d.Method();
+    d.Setter(i.Getter());
+    assert(3 == d.Getter());
 }
