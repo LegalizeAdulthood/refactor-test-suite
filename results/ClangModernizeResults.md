@@ -19,7 +19,7 @@ AO5 | Pass
 Case | Result
 ---- | ------
 RIRF1 | Pass
-RIRF2 | Failure []()
+RIRF2 | Failure [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
 RIRF3 | Failure []()
 RIRF4 | Pass
 RIRF5 | Failure []()
