@@ -35,6 +35,7 @@ set(sources
     RefactorTest/DecomposeParameter.cpp
     RefactorTest/EncapsulateDowncast.cpp
     RefactorTest/EncapsulateField.cpp
+    RefactorTest/ExtractConstant.cpp
     RefactorTest/ExtractFunction.cpp
     RefactorTest/ExtractFunction2.cpp
     RefactorTest/ExtractInterface.cpp
@@ -46,7 +47,6 @@ set(sources
     RefactorTest/InlineResult.cpp
     RefactorTest/InlineVariable.cpp
     RefactorTest/IntroduceAlias.cpp
-    RefactorTest/IntroduceConstant.cpp
     RefactorTest/IntroduceLocal.cpp
     RefactorTest/IntroduceParameter.cpp
     RefactorTest/IntroduceParameterObject.cpp

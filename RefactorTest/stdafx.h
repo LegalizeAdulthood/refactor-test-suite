@@ -34,7 +34,7 @@ extern void TestInlineRecentAssignment();
 extern void TestInlineResult();
 extern void TestInlineTemporary();
 extern void TestIntroduceAlias();
-extern void TestIntroduceConstant();
+extern void TestExtractConstant();
 extern void TestIntroduceLocal();
 extern void TestIntroduceParameter();
 extern void TestIntroduceParameterObject();

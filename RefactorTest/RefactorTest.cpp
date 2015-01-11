@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
         TestDecomposeParameter();
         TestEncapsulateDowncast();
         TestEncapsulateField();
+        TestExtractConstant();
         TestExtractFunction();
         TestExtractInterface();
         TestExtractMethod();
@@ -32,7 +33,6 @@ int main(int argc, char* argv[])
         TestInlineResult();
         TestInlineTemporary();
         TestIntroduceAlias();
-        TestIntroduceConstant();
         TestIntroduceLocal();
         TestIntroduceParameter();
         TestIntroduceParameterObject();

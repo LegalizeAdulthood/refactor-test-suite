@@ -4,7 +4,7 @@
 // Declares a new constant initialized to the value
 // of the string or number under the edit cursor, or caret.
 
-namespace IntroduceConstantNamespace
+namespace ExtractConstantNamespace
 {
     void Function1() {}
     class Foo
@@ -12,10 +12,10 @@ namespace IntroduceConstantNamespace
     public:
         int Operation1()
         {
-            // #TEST#: IC5 Introduce Constant (class)
-            // #TEST#: IC6 Introduce Constant (global)
-            // #TEST#: IC7 Introduce Constant (macro)
-            // #TEST#: IC13 Introduce Constant (local)
+            // #TEST#: EC5 Extract Constant (class)
+            // #TEST#: EC6 Extract Constant (global)
+            // #TEST#: EC7 Extract Constant (macro)
+            // #TEST#: EC13 Extract Constant (local)
             return 1;
         }
         int Const1() const
@@ -28,15 +28,15 @@ namespace IntroduceConstantNamespace
         }
         double Operation3()
         {
-            // #TEST#: IC8 Introduce Constant
+            // #TEST#: EC8 Extract Constant
             return 1.0;
         }
         const char *Operation4()
         {
-            // #TEST#: IC9 Introduce Constant (class)
-            // #TEST#: IC10 Introduce Constant (global)
-            // #TEST#: IC11 Introduce Constant (macro)
-            // #TEST#: IC12 Introduce Constant (local)
+            // #TEST#: EC9 Extract Constant (class)
+            // #TEST#: EC10 Extract Constant (global)
+            // #TEST#: EC11 Extract Constant (macro)
+            // #TEST#: EC12 Extract Constant (local)
             return "Foo";
         }
     };
@@ -66,12 +66,12 @@ namespace IntroduceConstantNamespace
     int x;
 }
 
-using namespace IntroduceConstantNamespace;
+using namespace ExtractConstantNamespace;
 
-class IntroduceConstant
+class ExtractConstant
 {
 public:
-    IntroduceConstant()
+    ExtractConstant()
         : _a(0),
         _b(0)
     {
@@ -84,22 +84,22 @@ private:
     int _b;
 };
 
-bool IntroduceConstant::Test(int a, int b) const
+bool ExtractConstant::Test(int a, int b) const
 {
     if (a < b)
     {
-        // #TEST#: IC1 Replace all occurrences of 3 with named constant
+        // #TEST#: EC1 Replace all occurrences of 3 with named constant
         if (a < 3)
         {
-            // #TEST#: IC2 Replace all occurrences of true with named constant
+            // #TEST#: EC2 Replace all occurrences of true with named constant
             return true;
         }
-        // #TEST#: IC3 Replace all occurrences of 4 with named constant
+        // #TEST#: EC3 Replace all occurrences of 4 with named constant
         if (b > 4)
         {
             return true;
         }
-        // #TEST#: IC4 Replace all occurrences of false with named constant
+        // #TEST#: EC4 Replace all occurrences of false with named constant
         return false;
     }
     else if (!(a < b))
@@ -128,14 +128,14 @@ bool IntroduceConstant::Test(int a, int b) const
     }
 }
 
-std::string IntroduceConstant::TestString() const
+std::string ExtractConstant::TestString() const
 {
     return "";
 }
 
-void TestIntroduceConstant()
+void TestExtractConstant()
 {
-    IntroduceConstant test;
+    ExtractConstant test;
     test.Test(1, 2);
     std::string text = test.TestString();
 }

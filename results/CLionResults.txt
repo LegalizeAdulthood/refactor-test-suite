@@ -110,6 +110,21 @@ CSM28   Failure [CPP-1914](https://youtrack.jetbrains.com/issue/CPP-1914)
 CSM30   Pass
 CSM31   Failure [CPP-1914](https://youtrack.jetbrains.com/issue/CPP-1914)
 
+= Extract Constant
+EC1     Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
+EC2     Failure [CPP-1927](https://youtrack.jetbrains.com/issue/CPP-1927)
+EC3     Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
+EC4     Failure [CPP-1927](https://youtrack.jetbrains.com/issue/CPP-1927)
+EC5     Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
+EC6     Pass
+EC7     Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
+EC8     Pass
+EC9     Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
+EC10    Pass
+EC11    Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
+EC12    Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
+EC13    Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
+
 = Extract Declaration
 
 = Extract Define
@@ -209,21 +224,6 @@ IV6     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/
 IV7     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV8     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV9     Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-
-= Introduce Constant
-IC1     Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
-IC2     Failure [CPP-1927](https://youtrack.jetbrains.com/issue/CPP-1927)
-IC3     Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
-IC4     Failure [CPP-1927](https://youtrack.jetbrains.com/issue/CPP-1927)
-IC5     Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
-IC6     Pass
-IC7     Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
-IC8     Pass
-IC9     Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
-IC10    Pass
-IC11    Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
-IC12    Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
-IC13    Failure [CPP-1926](https://youtrack.jetbrains.com/issue/CPP-1926)
 
 = Introduce Local
 IL1     Failure

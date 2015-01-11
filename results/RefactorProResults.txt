@@ -309,6 +309,21 @@ EF30    Failure (not available) S90332
 EF31    Failure (not available) S90332
 EF32    Failure (not available) S90332
 
+= Extract Constant
+EC1     Pass
+EC2     Failure (not available) B144324
+EC3     Pass
+EC4     Failure (not available) B144324
+EC5     Failure (not available) B144325
+EC6     Failure (not available) B144326
+EC7     Pass
+EC8     Pass
+EC9     Failure (not available) B144325
+EC10    Failure (not available) B144326
+EC11    Pass
+EC12    Pass
+EC13    Pass
+
 = Extract Function
 EXF1    Pass
 EXF2    Pass
@@ -396,21 +411,6 @@ IT10    Pass
 IT11    Pass
 
 Introduce Alias
-
-= Introduce Constant
-IC1     Pass
-IC2     Failure (not available) B144324
-IC3     Pass
-IC4     Failure (not available) B144324
-IC5     Failure (not available) B144325
-IC6     Failure (not available) B144326
-IC7     Pass
-IC8     Pass
-IC9     Failure (not available) B144325
-IC10    Failure (not available) B144326
-IC11    Pass
-IC12    Pass
-IC13    Pass
 
 = Introduce Local
 IL1     Pass
