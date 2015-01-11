@@ -21,12 +21,12 @@ The original release of the test suite is described
 
 ## Current Products
 
-- [CLion CL-140-1221.2](results/CLionResults.txt)
-- [cpp11-migrate 3.4](results/Cpp11MigrateResults.txt)
-- [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.txt)
+- [CLion CL-140-1221.2](results/CLionResults.md)
+- [cpp11-migrate 3.4](results/Cpp11MigrateResults.md)
+- [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
 
 ## Discontinued Products
-- [Refactor!Pro 9.1.10](results/RefactorProResults.txt)
+- [Refactor!Pro 9.1.10](results/RefactorProResults.md)
 
 ## Unknown Results
 
