@@ -291,25 +291,25 @@ RUP2    Pass
 RUP3    Pass
 
 = Rename
-R1      Failure
-R2      Failure
-R3      Failure
+R1      Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R2      Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R3      Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
 R4      Pass
 R5      Pass
 R6      Pass
-R7      Failure
-R8      Failure
+R7      Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R8      Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R9      Pass
 R10     Pass
-R11     Failure (not available)
-R12     Failure (not available)
+R11     Failure (not available) [CPP-1940](https://youtrack.jetbrains.com/issue/CPP-1940)
+R12     Failure (not available) [CPP-1940](https://youtrack.jetbrains.com/issue/CPP-1940)
 R13     Pass
 R14     Pass
-R15     Failure
+R15     Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R16     Pass
-R17     Failure
+R17     Failure [CPP-1941](https://youtrack.jetbrains.com/issue/CPP-1941)
 R18     Pass
-R19     Failure
+R19     Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R20     Pass
 R21     Pass
 R22     Pass
@@ -322,28 +322,28 @@ R28     Pass
 R29     Pass
 R30     Pass
 R31     Pass
-R32     Failure
-R33     Failure
+R32     Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R33     Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
 R34     Pass
 R35     Pass
-R36     Failure
+R36     Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R37     Pass
 R38     Pass
 R39     Pass
 R40     Pass
 R41     Pass
 R42     Pass
-R43     Pass (unrelated comments selected by default)
+R43     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R44     Pass
 R45     Pass
-R46     Pass (unrelated comments selected by default)
+R46     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R47     Pass
 R48     Pass
-R49     Pass (unrelated comments selected by default)
+R49     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R50     Pass
-R51     Pass (unrelated comments selected by default)
+R51     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R52     Pass
-R53     Pass (unrelated comments selected by default)
+R53     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R54     Pass
 R55     Pass
 R56     Pass
@@ -352,26 +352,26 @@ R58     Pass
 R59     Pass
 R60     Pass
 R61     Pass
-R62     Pass (unrelated comments selected by default)
+R62     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R63     Pass
 R64     Pass
-R65     Pass (unrelated comments selected by default)
+R65     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R66     Pass
 R67     Pass
 R68     Pass
-R69     Pass (unrelated comments selected by default)
-R70     Pass (unrelated comments selected by default)
-R71     Pass (unrelated comments selected by default)
-R72     Pass (unrelated comments selected by default)
-R73     Pass (unrelated comments selected by default)
-R74     Failure (selects unrelated macro by default)
-R75     Failure (selects unrelated macro by default)
-R76     Failure (selects unrelated macro by default)
-R77     Failure (selects unrelated macro by default)
-R78     Failure (selects unrelated macro by default)
-R79     Failure (selects unrelated macro by default)
-R80     Failure (selects unrelated macro by default)
-R81     Failure (selects unrelated macro by default)
+R69     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R70     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R71     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R72     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R73     Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R74     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R75     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R76     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R77     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R78     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R79     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R80     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R81     Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
 R82     Pass
 R83     Pass
 R84     Pass
@@ -388,7 +388,7 @@ R94     Pass
 R95     Pass
 R96     Pass
 R97     Pass
-R98     Failure
+R98     Failure [CPP-1941](https://youtrack.jetbrains.com/issue/CPP-1941)
 
 = Reorder Parameters
 
