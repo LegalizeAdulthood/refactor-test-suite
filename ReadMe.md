@@ -17,6 +17,8 @@ same diffs from a computer.
 The original release of the test suite is described
 [in this blog post](http://legalizeadulthood.wordpress.com/2010/02/02/c-refactoring-tools-test-suite-available/).
 
+# [How To Contribute](Contributing.md)
+
 # Results
 
 ## Current Products
