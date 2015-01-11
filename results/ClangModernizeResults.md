@@ -7,10 +7,10 @@ Version: 3.4
 ## Add override
 Case | Result
 ---- | ------
-AO1 |
-AO2 |
-AO3 |
-AO4 |
+AO1 | Pass
+AO2 | Pass
+AO3 | Pass
+AO4 | Pass
 
 ## Replace auto_ptr with unique_ptr
 
