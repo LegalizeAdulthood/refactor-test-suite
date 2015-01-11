@@ -2,7 +2,7 @@
 
 Home: [clang-modernize](http://clang.llvm.org/extra/clang-modernize.html)
 
-Version: 3.4
+Version: 3.5.0
 
 ## Add override
 Case | Result
