@@ -19,10 +19,6 @@ Create Setter Method is performed with Code / Generate... / Setter.
 Flatten Conditional is performed by repeatedly applying the fixup Merge
 Nested Ifs.
 
-Introduce Local is performed with Extract Variable.
-
-Introduce Constant is performed with Extract Constant.
-
 Replace If With Ternary Expression is performed by applying the fixup Replace
 'if else' with '?:'.
 
