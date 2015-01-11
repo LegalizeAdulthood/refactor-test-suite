@@ -11,6 +11,7 @@ AO1 | Pass
 AO2 | Pass
 AO3 | Pass
 AO4 | Pass
+AO5 | Pass
 
 ## Replace auto_ptr with unique_ptr
 
