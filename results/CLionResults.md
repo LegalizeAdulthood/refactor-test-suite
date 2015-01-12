@@ -38,6 +38,8 @@ ABD5 |  Pass
 ABD6 |  Pass
 ABD7 |  Pass
 
+## Add Override (not available) [CPP-1953](https://youtrack.jetbrains.com/issue/CPP-1953)
+
 ## Change Signature
 Case | Result
 ---- | ------
@@ -427,6 +429,8 @@ R98   | Failure [CPP-1941](https://youtrack.jetbrains.com/issue/CPP-1941)
 
 ## Reorder Parameters
 
+## Replace auto_ptr With unique_ptr (not available) [CPP-1954](https://youtrack.jetbrains.com/issue/CPP-1954)
+
 ## Replace If With Ternary Expression
 Case | Result
 ---- | ------
@@ -440,6 +444,10 @@ RIT7  | Pass
 RIT8  | Pass
 RIT9  | Failure [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
 
+## Replace Iterative For With Range For (not available) [CPP-1952](https://youtrack.jetbrains.com/issue/CPP-1952)
+
+## Replace NULL/0 With nullptr (not available) [CPP-1955](https://youtrack.jetbrains.com/issue/CPP-1955)
+
 ## Replace Ternary Expression With If
 Case | Result
 ---- | ------
@@ -452,6 +460,8 @@ RTI6  | Pass
 RTI7  | Pass
 RTI8  | Pass
 RTI9  | Pass
+
+## Replace Type With auto (not available) [CPP-1956](https://youtrack.jetbrains.com/issue/CPP-1956)
 
 ## Simplify Boolean Expression
 Case | Result
