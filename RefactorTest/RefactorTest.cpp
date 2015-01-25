@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include <stdexcept>
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
@@ -75,8 +76,9 @@ int main(int argc, char* argv[])
 
         return 0;
     }
-    catch (std::runtime_error const &)
+    catch (std::runtime_error const &e)
     {
+        std::cerr << e.what() << '\n';
         return 1;
     }
     catch (...)

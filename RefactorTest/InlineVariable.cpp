@@ -112,6 +112,25 @@ namespace InlineTemporaryNamespace
         // #TEST#: IV9 Inline Temporary member2
         j += (f.*member2)();
     }
+
+    int boolParam(bool &param)
+    {
+        static int i = 0;
+        param = (++i % 2) != 0;
+        return i;
+    }
+
+    bool globalBool = true;
+
+    void TestReference()
+    {
+        globalBool = true;
+        bool &r = globalBool;
+        // #TEST#: IV12 Inline Variable r
+        int value = boolParam(r);
+        require_equal(1, value);
+        require_equal(true, globalBool);
+    }
 }
 
 using namespace InlineTemporaryNamespace;
@@ -126,4 +145,5 @@ void TestInlineTemporary()
     TestConstMemberPointer();
     TestMemberPointer2();
     TestConstMemberPointer2();
+    TestReference();
 }
