@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
         TestFlattenConditional();
         TestInlineRecentAssignment();
         TestInlineResult();
-        TestInlineTemporary();
+        TestInlineVariable();
         TestIntroduceAlias();
         TestExtractVariable();
         TestIntroduceParameter();

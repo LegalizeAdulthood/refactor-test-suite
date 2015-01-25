@@ -32,7 +32,7 @@ extern void TestExtractMethod();
 extern void TestFlattenConditional();
 extern void TestInlineRecentAssignment();
 extern void TestInlineResult();
-extern void TestInlineTemporary();
+extern void TestInlineVariable();
 extern void TestIntroduceAlias();
 extern void TestExtractConstant();
 extern void TestExtractVariable();

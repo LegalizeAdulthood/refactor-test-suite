@@ -7,14 +7,14 @@
 
 // Replaces all references to a variable with its value.
 
-namespace InlineTemporaryNamespace
+namespace InlineVariableNamespace
 {
     int Function1() { return 1; }
     int Function2() { return 2; }
 
     void TestInteger()
     {
-        // #TEST#: IV1 Inline Temporary i
+        // #TEST#: IV1 Inline Variable i
         int i = 4;
         int j = i*4 + 6;
         require_equal(22, j);
@@ -28,7 +28,7 @@ namespace InlineTemporaryNamespace
 
     void TestFunction()
     {
-        // #TEST#: IV2 Inline Temporary fn
+        // #TEST#: IV2 Inline Variable fn
         int (*fn)() = Function1;
         int j = (*fn)();
         require_equal(1, j);
@@ -40,11 +40,11 @@ namespace InlineTemporaryNamespace
     void TestFunction2()
     {
         int (*fn)() = Function1;
-        // #TEST#: IV10 Inline Temporary fn
+        // #TEST#: IV10 Inline Variable fn
         int j = (*fn)();
         require_equal(1, j);
         int (*fn2)() = Function2;
-        // #TEST#: IV11 Inline Temporary fn2
+        // #TEST#: IV11 Inline Variable fn2
         j += (*fn2)();
         require_equal(3, j);
     }
@@ -53,7 +53,7 @@ namespace InlineTemporaryNamespace
     {
         std::string temp = "This is a temp string.";
 
-        // #TEST#: IV3 Inline Temporary temp
+        // #TEST#: IV3 Inline Variable temp
         std::string foo = temp;
         require_equal(foo, std::string{"This is a temp string."});
         foo += "  This is more text.";
@@ -73,7 +73,7 @@ namespace InlineTemporaryNamespace
 
     void TestMemberPointer()
     {
-        // #TEST#: IV4 Inline Temporary member
+        // #TEST#: IV4 Inline Variable member
         int (Foo::*member)() = &Foo::Operation1;
         Foo f;
         int j = (f.*member)();
@@ -83,7 +83,7 @@ namespace InlineTemporaryNamespace
 
     void TestConstMemberPointer()
     {
-        // #TEST#: IV5 Inline Temporary member
+        // #TEST#: IV5 Inline Variable member
         int (Foo::*member)() const = &Foo::Method1;
         Foo f;
         int j = (f.*member)();
@@ -95,10 +95,10 @@ namespace InlineTemporaryNamespace
     {
         int (Foo::*member)() = &Foo::Operation1;
         Foo f;
-        // #TEST#: IV6 Inline Temporary member
+        // #TEST#: IV6 Inline Variable member
         int j = (f.*member)();
         int (Foo::*member2)() = &Foo::Operation2;
-        // #TEST#: IV7 Inline Temporary member2
+        // #TEST#: IV7 Inline Variable member2
         j += (f.*member2)();
     }
 
@@ -106,10 +106,10 @@ namespace InlineTemporaryNamespace
     {
         int (Foo::*member)() const = &Foo::Method1;
         Foo f;
-        // #TEST#: IV8 Inline Temporary member
+        // #TEST#: IV8 Inline Variable member
         int j = (f.*member)();
         int (Foo::*member2)() const = &Foo::Method2;
-        // #TEST#: IV9 Inline Temporary member2
+        // #TEST#: IV9 Inline Variable member2
         j += (f.*member2)();
     }
 
@@ -133,9 +133,9 @@ namespace InlineTemporaryNamespace
     }
 }
 
-using namespace InlineTemporaryNamespace;
+using namespace InlineVariableNamespace;
 
-void TestInlineTemporary()
+void TestInlineVariable()
 {
     TestInteger();
     TestFunction();
