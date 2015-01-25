@@ -261,6 +261,9 @@ IV6   | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/
 IV7   | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV8   | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV9   | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV10  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV11  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV12  | Failure (not available) [CPP-2252](https://youtrack.jetbrains.com/issue/CPP-2252)
 
 ## Move Method
 Case | Result
