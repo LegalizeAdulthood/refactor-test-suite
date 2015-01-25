@@ -124,7 +124,7 @@ namespace InlineVariableNamespace
 
     void TestReference()
     {
-        globalBool = true;
+        globalBool = false;
         bool &r = globalBool;
         // #TEST#: IV12 Inline Variable r
         int value = boolParam(r);
