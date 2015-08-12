@@ -154,3 +154,15 @@ R95  | Failure (not available)
 R96  | Failure (not available)
 R97  | Failure (not available)
 R98  | Failure (wrong symbol selected by default)
+
+## Replace String Literal with Raw String Literal
+Case | Result
+---- | ------
+RAW1 | Pass
+RAW2 | Pass
+RAW3 | Pass
+RAW4 | Pass
+RAW5 | Pass
+RAW6 | Pass
+RAW7 | Pass
+RAW8 | Pass
