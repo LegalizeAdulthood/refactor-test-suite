@@ -28,6 +28,7 @@ class Rename1
 public:
     // #TEST#: R2 Rename this class via its c'tor
     Rename1()
+        : x()
     {
     }
 
@@ -44,6 +45,8 @@ public:
     void Operation()
     {
     }
+
+    int x;
 };
 
 // #TEST#: R4 Rename this namespace
