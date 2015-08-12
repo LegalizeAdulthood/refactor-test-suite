@@ -298,12 +298,12 @@ void TestRename()
         y = 4;
         if (y != 4)
         {
-            throw std::runtime_error("R38 may have failed");
+            throw std::runtime_error("R30 may have failed");
         }
     }
     if (y != 3)
     {
-        throw std::runtime_error("R38 may have failed");
+        throw std::runtime_error("R30 may have failed");
     }
 
     // #TEST#: R98 Rename the variable y
