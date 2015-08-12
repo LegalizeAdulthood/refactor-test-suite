@@ -9,7 +9,7 @@ C++ Extract Function add-on: 1.0
 Notes:
 
 When applying an operation, the default selections on any prompting dialogs
-were used.  Unfortunately, this means that almost all Rename tests fail.
+were used.  Unfortunately, this means that all Rename tests fail.
 
 Getting the default selection correct for a refactoring is important,
 particularly when changing a name that is used in thousands of places.
@@ -18,6 +18,9 @@ related name makes the developer act like a compiler.  The compiler already
 knows which names refer to the same thing by using the context of the names.
 Any refactoring tool worth using has to employ the same logic as the compiler
 to correctly resolve names.
+
+If the correct instances of a name can't be selected by a refactoring tool,
+then you might as well use Find/Replace across a file set.
 
 <hr/>
 
