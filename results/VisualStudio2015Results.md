@@ -4,6 +4,8 @@ Home: [Visual Studio 2015](http://www.visualstudio.com/)
 
 Version: 14.0.23107.0 D14REL
 
+C++ Extract Function add-on: 1.0
+
 Notes:
 
 When applying an operation, the default selections on any prompting dialogs
@@ -19,39 +21,56 @@ to correctly resolve names.
 
 <hr/>
 
-## Change Signature
-
 ## Create Declaration From Implementation
 
 ## Create Implementation From Declaration
 
-## Create Method Stub
-
 ## Extract Function
+Case | Result
+---- | ------
+EXF1  | Failure (Unknown error)
+EXF2  | Failure (Unknown error)
+EXF3  | Failure (Unknown error)
+EXF4  | Failure (Unknown error)
+EXF5  | Failure (Unknown error)
+EXF6  | Failure (Unknown error)
+EXF7  | Failure (Unknown error)
+EXF8  | Failure (Unknown error)
+EXF9  | Failure (Unknown error)
+EXF10 | Failure (Unknown error)
+EXF11 | Failure (Unknown error)
+EXF12 | Failure (Unknown error)
+EXF13 | Failure (Unknown error)
+EXF14 | Failure (Unknown error)
+EXF15 | Failure (Unknown error)
+EXF16 | Failure (Unknown error)
+EXF17 | Failure (Unknown error)
+EXF18 | Failure (Unknown error)
+EXF19 | Failure (Unknown error)
 
 ## Extract Method
 Case | Result
 ---- | ------
-EM1 | Failure (not available)
-EM2 | Failure (not available)
-EM3 | Failure (not available)
-EM4 | Failure (not available)
-EM5 | Failure (not available)
-EM6 | Failure (not available)
-EM7 | Failure (not available)
-EM8 | Failure (not available)
-EM9 | Failure (not available)
-EM10 | Failure (not available)
-EM11 | Failure (not available)
-EM12 | Failure (not available)
-EM13 | Failure (not available)
-EM14 | Failure (not available)
-EM15 | Failure (not available)
-EM16 | Failure (not available)
-EM17 | Failure (not available)
-EM18 | Failure (not available)
-EM19 | Failure (not available)
-EM20 | Failure (not available)
+EM1 | Failure (Unknown error)
+EM2 | Failure (Unknown error)
+EM3 | Failure (Unknown error)
+EM4 | Failure (Unknown error)
+EM5 | Failure (Unknown error)
+EM6 | Failure (Unknown error)
+EM7 | Failure (Unknown error)
+EM8 | Failure (Unknown error)
+EM9 | Failure (Unknown error)
+EM10 | Failure (Unknown error)
+EM11 | Failure (Unknown error)
+EM12 | Failure (Unknown error)
+EM13 | Failure (Unknown error)
+EM14 | Failure (Unknown error)
+EM15 | Failure (Unknown error)
+EM16 | Failure (Unknown error)
+EM17 | Failure (Unknown error)
+EM18 | Failure (Unknown error)
+EM19 | Failure (Unknown error)
+EM20 | Failure (Unknown error)
 
 ## Move Method to Header/Source
 
