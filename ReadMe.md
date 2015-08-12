@@ -26,6 +26,7 @@ The original release of the test suite is described
 - [CLion CL-140-1221.2](results/CLionResults.md)
 - [clang-modernize 3.5.0](results/ClangModernizeResults.md)
 - [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
+- [Visual Studio 2015](results/VisualStudio2015.md)
 
 ## Discontinued Products
 - [Refactor!Pro 9.1.10](results/RefactorProResults.md)
@@ -35,5 +36,3 @@ The original release of the test suite is described
 - [Code::Blocks](http://www.codeblocks.org/)
 - [Eclipse CDT](https://eclipse.org/cdt/)
 - [ReSharper for C++](https://www.jetbrains.com/resharper/features/cpp.html)
-- [Visual Studio 2015 CTP](http://www.visualstudio.com/en-us/news/vs2015-preview-vs#C++):
-Rename, Extract Function, Move Function, Convert to Raw String Literal
