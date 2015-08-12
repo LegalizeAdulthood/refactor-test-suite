@@ -76,6 +76,7 @@ set(sources
     RefactorTest/ReplaceIterativeForWithRangeFor.cpp
     RefactorTest/ReplaceNestedConditionalWithGuardClause.cpp
     RefactorTest/ReplaceNullZeroWithNullPtr.cpp
+    RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
     RefactorTest/ReplaceTemporaryWithQuery.cpp
     RefactorTest/ReplaceTernaryWithIf.cpp
     RefactorTest/ReplaceTypeWithAuto.cpp

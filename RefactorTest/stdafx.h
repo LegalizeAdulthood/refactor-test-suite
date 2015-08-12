@@ -60,6 +60,7 @@ extern void TestReplaceIfWithTernary();
 extern void TestReplaceIterativeForWithRangeFor();
 extern void TestReplaceNestedConditionalWithGuardClause();
 extern void TestReplaceNullZeroWithNullPtr();
+extern void TestReplaceStringLiteralWithRawStringLiteral();
 extern void TestReplaceTemporaryWithQuery();
 extern void TestReplaceTernaryWithIf();
 extern void TestReplaceTypeWithAuto();

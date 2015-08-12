@@ -58,6 +58,7 @@ int main(int argc, char* argv[])
         TestReplaceIterativeForWithRangeFor();
         TestReplaceNestedConditionalWithGuardClause();
         TestReplaceNullZeroWithNullPtr();
+        TestReplaceStringLiteralWithRawStringLiteral();
         TestReplaceTemporaryWithQuery();
         TestReplaceTernaryWithIf();
         TestReplaceTypeWithAuto();
