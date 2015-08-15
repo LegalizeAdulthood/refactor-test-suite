@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Require.h"
 #include <stdexcept>
 #include <string>
 
@@ -6,47 +7,47 @@ namespace
 {
 
 // #TEST#: RAW1
-char const *const backslash = "goink\\frob";
+std::string const backslash{"goink\\frob"};
 
 // #TEST#: RAW2
-char const *const newline = "goink\nfrob";
+std::string const newline{"goink\nfrob"};
 
 // #TEST#: RAW3
-char const *const tab = "goink\tfrob";
+std::string const tab{"goink\tfrob"};
 
 // #TEST#: RAW4
-char const *const single_quote = "goink\'frob";
+std::string const single_quote{"goink\'frob"};
 
 // #TEST#: RAW5
-char const *const double_quote = "goink\"frob";
+std::string const double_quote{"goink\"frob"};
 
 // #TEST#: RAW6
-char const *const question_mark = "goink\?frob";
+std::string const question_mark{"goink\?frob"};
 
 // #TEST#: RAW7
-char const *const regex = "goink\\(one|two\\)\\\\\\?.*\\nfrob";
+std::string const regex{"goink\\(one|two\\)\\\\\\?.*\\nfrob"};
 
 // #TEST#: RAW8
-char const *const path = "C:\\Program Files\\Vendor\\Application\\Application.exe";
+std::string const path{"C:\\Program Files\\Vendor\\Application\\Application.exe"};
 
-void check(std::string const &lhs, std::string const &rhs)
-{
-    if (lhs != rhs)
-    {
-        throw std::runtime_error("String '" + lhs + "' is not the same as '" + rhs + "'");
-    }
-}
+// #TEST#: RAW9
+std::string const contains_sentinel{"whoops)\""};
+
+std::string const contains_delim{"whoops)\")delim\""};
 
 }
 
 void TestReplaceStringLiteralWithRawStringLiteral()
 {
-    check("goink\\frob", backslash);
-    check("goink\nfrob", newline);
-    check("goink\tfrob", tab);
-    check("goink\'frob", single_quote);
-    check("goink\"frob", double_quote);
-    check("goink\?frob", question_mark);
-    check("goink\\(one|two\\)\\\\\\?.*\\nfrob", regex);
-    check("C:\\Program Files\\Vendor\\Application\\Application.exe", path);
+    using namespace std::literals::string_literals;
+    REQUIRE_EQUAL("goink\\frob"s, backslash);
+    REQUIRE_EQUAL("goink\nfrob"s, newline);
+    REQUIRE_EQUAL("goink\tfrob"s, tab);
+    REQUIRE_EQUAL("goink\'frob"s, single_quote);
+    REQUIRE_EQUAL("goink\"frob"s, double_quote);
+    REQUIRE_EQUAL("goink\?frob"s, question_mark);
+    REQUIRE_EQUAL("goink\\(one|two\\)\\\\\\?.*\\nfrob"s, regex);
+    REQUIRE_EQUAL("C:\\Program Files\\Vendor\\Application\\Application.exe"s, path);
+    REQUIRE_EQUAL("whoops)\""s, contains_sentinel);
+    REQUIRE_EQUAL("whoops)\")delim\""s, contains_delim);
 }
