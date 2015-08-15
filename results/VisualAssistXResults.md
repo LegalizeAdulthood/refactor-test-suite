@@ -70,7 +70,36 @@ EM18 | Pass
 EM19 | Failure [case=2063](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11884)
 EM20 | Failure [case=83005](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11885)
 
-## Move Method to Header/Source
+## Move Implementation to Source File
+
+Case | Result
+---- | ------
+MISF1  |
+MISF2  |
+MISF3  |
+MISF4  |
+MISF5  |
+MISF6  |
+MISF7  |
+MISF8  |
+MISF9  |
+MISF10 |
+MISF11 |
+MISF12 |
+MISF13 |
+MISF14 |
+MISF15 |
+MISF16 |
+MISF17 |
+MISF18 |
+MISF19 |
+MISF20 |
+MISF21 |
+MISF22 |
+MISF23 |
+MISF24 |
+MISF25 |
+MISF26 |
 
 ## Rename
 Case | Result
