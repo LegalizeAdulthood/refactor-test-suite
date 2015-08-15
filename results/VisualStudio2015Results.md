@@ -1,4 +1,4 @@
-# Visual AssistX
+# Visual Studio 2015
 
 Home: [Visual Studio 2015](http://www.visualstudio.com/)
 
