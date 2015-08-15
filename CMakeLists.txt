@@ -12,6 +12,7 @@ set(headers
     RefactorTest/CreateOverload.h
     RefactorTest/CreateSetterMethod.h
     RefactorTest/DecomposeParameter.h
+    RefactorTest/MoveImplementationToSourceFile.h
     RefactorTest/MoveMethod.h
     RefactorTest/RemoveUnusedParameters.h
     RefactorTest/Rename.h
@@ -56,6 +57,7 @@ set(sources
     RefactorTest/MakeMethodStatic.cpp
     RefactorTest/MoveDeclarationNearReference.cpp
     RefactorTest/MoveInitializationToDeclaration.cpp
+    RefactorTest/MoveImplementationToSourceFile.cpp
     RefactorTest/MoveMethod.cpp
     RefactorTest/MoveTypeToFile.cpp
     RefactorTest/MoveTypeToNamespace.cpp

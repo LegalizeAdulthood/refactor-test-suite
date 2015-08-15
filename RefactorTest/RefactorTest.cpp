@@ -41,6 +41,7 @@ int main(int argc, char* argv[])
         TestMakeMethodStatic();
         TestMoveDeclarationNearReference();
         TestMoveInitializationToDeclaration();
+        TestMoveImplementationToSourceFile();
         TestMoveMethod();
         TestMoveTypeToFile();
         TestMoveTypeToNamespace();

@@ -43,6 +43,7 @@ extern void TestIntroduceSetterGuardClause();
 extern void TestMakeMethodStatic();
 extern void TestMoveDeclarationNearReference();
 extern void TestMoveInitializationToDeclaration();
+extern void TestMoveImplementationToSourceFile();
 extern void TestMoveMethod();
 extern void TestMoveTypeToFile();
 extern void TestMoveTypeToNamespace();
