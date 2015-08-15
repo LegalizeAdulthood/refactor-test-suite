@@ -177,6 +177,37 @@ R96  | Failure (not available)
 R97  | Failure (not available)
 R98  | Failure (wrong symbol selected by default)
 
+## Move Implementation to Source File
+
+Case | Result
+---- | ------
+MISF1  | Pass (leaves `inline` in header)
+MISF2  | Failure (not available)
+MISF3  | Pass (adds `inline` to source)
+MISF4  | Pass (adds `inline` to source)
+MISF5  | Pass (adds `inline` to source)
+MISF6  | Pass (adds `inline` to source)
+MISF7  | Pass (adds `inline` to source)
+MISF8  | Pass
+MISF9  | Pass (adds `inline` to source)
+MISF10 | Failure
+MISF11 | Failure
+MISF12 | Pass (adds `inline` to source)
+MISF13 | Pass (adds `inline` to source)
+MISF14 | Pass (adds `inline` to source)
+MISF15 | Pass (adds `inline` to source)
+MISF16 | Failure (adds `inline` to souce, fails to qualify names)
+MISF17 | Pass (adds `inline` to source)
+MISF18 | Failure
+MISF19 | Pass (adds `inline` to source)
+MISF20 | Failure
+MISF21 | Failure
+MISF22 | Pass (adds `inline` to source)
+MISF23 | Pass (adds `inline` to source)
+MISF24 | Pass (adds `inline` to source)
+MISF25 | Pass (adds `inline` to source)
+MISF26 | Failure (adds `inline` to source, fails to qualify names)
+
 ## Replace String Literal with Raw String Literal
 Case | Result
 ---- | ------

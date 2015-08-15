@@ -55,7 +55,7 @@ public:
     // #TEST#: MISF7 Move implementation to source file
     virtual ~VirtualBase() {}
 
-    // #TEST#: MISF8 Move implementation to source file
+    // #TEST#: MISF8 Move implementation to source file (should not be available)
     virtual void f() = 0;
 
     // #TEST#: MISF9 Move implementation to source file
@@ -63,10 +63,10 @@ public:
     {
     }
 
-    // #TEST#: MISF10 Move implementation to source file
+    // #TEST#: MISF10 Move implementation to source file (should not be available)
     virtual int h() const = 0;
 
-    // #TEST#: MISF11 Move implementation to source file
+    // #TEST#: MISF11 Move implementation to source file (should not be available)
     virtual int (VirtualBase::*GetOperation() const)() const = 0;
 };
 
@@ -110,7 +110,7 @@ public:
     // #TEST#: MISF17 Move implementation to source file
     virtual ~VirtualBase() {}
 
-    // #TEST#: MISF18 Move implementation to source file
+    // #TEST#: MISF18 Move implementation to source file (should not be available)
     virtual void f() = 0;
 
     // #TEST#: MISF19 Move implementation to source file
@@ -118,10 +118,10 @@ public:
     {
     }
 
-    // #TEST#: MISF20 Move implementation to source file
+    // #TEST#: MISF20 Move implementation to source file (should not be available)
     virtual int h() const = 0;
 
-    // #TEST#: MISF21 Move implementation to source file
+    // #TEST#: MISF21 Move implementation to source file (should not be available)
     virtual int (VirtualBase::*GetOperation() const)() const = 0;
 };
 
