@@ -2,8 +2,10 @@
 //
 
 #include "stdafx.h"
-#include <stdexcept>
+#include "RefactorTest.h"
+
 #include <iostream>
+#include <stdexcept>
 
 int main(int argc, char* argv[])
 {

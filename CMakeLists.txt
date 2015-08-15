@@ -18,6 +18,7 @@ set(headers
     RefactorTest/Rename.h
     RefactorTest/RenameFileToMatchType.h
     RefactorTest/Require.h
+    RefactorTest/RefactorTest.h
     RefactorTest/stdafx.h)
 
 set(sources
@@ -63,7 +64,6 @@ set(sources
     RefactorTest/MoveTypeToNamespace.cpp
     RefactorTest/OptimizeNamespaceReferences.cpp
     RefactorTest/ReduceVisibility.cpp
-    RefactorTest/RefactorTest.cpp
     RefactorTest/RemoveAssignmentsToParameters.cpp
     RefactorTest/RemoveBlockDelimiter.cpp
     RefactorTest/RemoveRedundantConditional.cpp
@@ -94,7 +94,8 @@ set(sources
     RefactorTest/stdafx.cpp
     RefactorTest/WidenScope.cpp
     RefactorTest/WidenScopePromoteToConstant.cpp
-    RefactorTest/WidenScopePromoteToField.cpp)
+    RefactorTest/WidenScopePromoteToField.cpp
+    RefactorTest/RefactorTest.cpp)
 
 set(SOURCE_FILES ${headers} ${sources})
 source_group("Header Files" FILES ${headers})
