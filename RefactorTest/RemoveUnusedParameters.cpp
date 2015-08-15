@@ -43,10 +43,10 @@ namespace RemoveUnusedParametersNamespace
 
 using namespace RemoveUnusedParametersNamespace;
 
-static void goop(int a, int b);
+extern void goop(int a, int b);
 
 // #TEST#: RUP3 Remove Unused Parameter b
-static void goop(int a, int b)
+extern void goop(int a, int b)
 {
     std::cout << a << "\n";
 }

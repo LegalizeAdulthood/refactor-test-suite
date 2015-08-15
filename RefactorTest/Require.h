@@ -1,5 +1,4 @@
-#if !defined(REQUIRE_H)
-#define REQUIRE_H
+#pragma once
 
 #include <stdexcept>
 #include <sstream>
@@ -28,5 +27,3 @@ void require_equal(char const *file, unsigned line, T expected, T actual)
 
 #define REQUIRE_EQUAL(expected_, actual_) \
     require_equal(__FILE__, __LINE__, expected_, actual_)
-
-#endif

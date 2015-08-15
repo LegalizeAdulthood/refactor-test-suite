@@ -1,5 +1,4 @@
-#if !defined(CHANGE_SIGNATURE_H)
-#define CHANGE_SIGNATURE_H
+#pragma once
 
 #include <sstream>
 #include <string>
@@ -44,5 +43,3 @@ namespace ChangeSignatureNamespace
         int member1;
     };
 }
-
-#endif

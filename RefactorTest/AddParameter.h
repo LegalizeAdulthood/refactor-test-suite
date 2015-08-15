@@ -1,3 +1,5 @@
+#pragma once
+
 extern void AddParameterFn();
 extern void AddParameterFn(int first);
 extern void AddParameterFn(float &first);

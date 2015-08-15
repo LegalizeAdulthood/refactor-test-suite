@@ -1,3 +1,5 @@
+#pragma once
+
 struct BooleanToEnumStruct
 {
     BooleanToEnumStruct() : first(false), second(false), third(false)
