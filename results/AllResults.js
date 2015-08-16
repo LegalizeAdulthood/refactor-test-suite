@@ -75,9 +75,9 @@ function ProcessLine(context, line)
     {
         testResult(ctx.failures, matches);
     }
-    else if (line.indexOf("## ") == 0)
+    else if (matches = line.match(/\#\# ([^([]*).*$/))
     {
-        ctx.refactoring = line.substr(2).trim();
+        ctx.refactoring = matches[1].trim();
     }
 }
 
@@ -89,7 +89,8 @@ function ProcessResultsFile(resultsFile, next)
         date: (new Date()).toString(),
         tests: [],
         passedAllTests: [],
-        testResult: StartTest()
+        testResult: StartTest(),
+        file: resultsFile
     };
 
     fs.createReadStream(resultsFile)
@@ -101,57 +102,47 @@ function ProcessResultsFile(resultsFile, next)
         });
 }
 
-function testData(tests, id) {
-    var key = (typeof(id) === "string") ? id : id[0];
-
-    if (!tests[key]) {
-        tests[key] = { passes: [], failures: [] };
-    }
-    return tests[key];
-}
-
-function CompareIds(id1, id2)
-{
-    var parts1 = id1.match(/^(.*[A-Z])([0-9]+)$/),
-        parts2 = id2.match(/^(.*[A-Z])([0-9]+)$/),
-        label1 = parts1[1],
-        label2 = parts2[1],
-        num1 = Number(parts1[2]),
-        num2 = Number(parts2[2]);
-
-    if (label1 === label2)
-    {
-        return (num1 < num2) ? -1 : ((num1 === num2) ? 0 : 1);
-    }
-    return (label1 < label2) ? -1 : 1;
-}
-
-function ResultsMarkdown(tests)
-{
-    //console.log(JSON.stringify(tests, null, 4));
-    console.log("# Overall Results");
-    console.log("");
-    console.log("Case | Passed | Failed");
-    console.log("---- | ------ | ------");
-    _.each(Object.keys(tests).sort(CompareIds), function(caseId) {
-        console.log(caseId + " | " + tests[caseId].passes.join(", ") + " | " + tests[caseId].failures.join(", "));
-    });
-}
-
 function Summarize(err, results)
 {
-    var tests = {};
+    var summary = {},
+        products = [];
     _.map(results, function(product) {
+        products.push([ product.name, product.file ]);
         _.map(product.tests, function(test) {
-            _.map(test.passes, function(id) {
-                testData(tests, id).passes.push(product.name + " " + product.version);
-            });
-            _.map(test.failures, function(id) {
-                testData(tests, id).failures.push(product.name + " " + product.version);
-            });
+            summary[test.name] = [];
         });
     });
-    ResultsMarkdown(tests);
+    _.map(Object.keys(summary), function(testName) {
+        _.map(results, function(product) {
+            var percent = "n/a";
+            _.map(product.tests, function(test) {
+                if (test.name === testName) {
+                    percent = test.percent;
+                }
+            });
+            summary[testName].push(percent);
+        });
+    });
+    console.log("# Summary Results");
+    console.log("");
+    var line = "Refactoring";
+    _.map(products, function(product) {
+        line += " | [" + product[0] + "](results/" + product[1] + ")";
+        first = false;
+    });
+    console.log(line);
+    var line = "-----";
+    _.map(products, function(product) {
+        line += " | -----";
+    });
+    console.log(line);
+    _.map(Object.keys(summary).sort(), function(testName) {
+        line = testName;
+        _.map(summary[testName], function(pct) {
+            line +=  " | " + pct;
+        });
+        console.log(line);
+    });
 }
 
 function ProcessFiles(files, next)
@@ -183,15 +174,7 @@ function ProcessResults(dir, next)
 }
 
 function main(argv) {
-    var resultsFile = "RefactorProResults.md";
-    if (argv.length > 2)
-    {
-        ProcessFiles(argv.slice(2), Summarize);
-    }
-    else
-    {
-        ProcessResults(".", Summarize);
-    }
+    ProcessResults(".", Summarize);
 }
 
 main(process.argv);
