@@ -2,12 +2,15 @@
 
 Home: [Visual AssistX](http://www.wholetomato.com/)
 
-Version: 10.5.1738.0
+Version: 10.5.1738.0, 10.8.2043.0
 
 Notes:
 
 Visual AssistX performs Create Method Stub with
 Create Implementation From Usage.
+
+Version 10.8.2043.0 was used for Move Implementation to Source File
+testing.
 
 <hr/>
 
@@ -74,32 +77,32 @@ EM20 | Failure [case=83005](http://forums.wholetomato.com/forum/topic.asp?TOPIC_
 
 Case | Result
 ---- | ------
-MISF1  |
-MISF2  |
-MISF3  |
-MISF4  |
-MISF5  |
-MISF6  |
-MISF7  |
-MISF8  |
-MISF9  |
-MISF10 |
-MISF11 |
-MISF12 |
-MISF13 |
-MISF14 |
-MISF15 |
-MISF16 |
-MISF17 |
-MISF18 |
-MISF19 |
-MISF20 |
-MISF21 |
-MISF22 |
-MISF23 |
-MISF24 |
-MISF25 |
-MISF26 |
+MISF1  | Pass
+MISF2  | Failure (invalid syntax)
+MISF3  | Pass
+MISF4  | Pass
+MISF5  | Pass
+MISF6  | Pass
+MISF7  | Pass
+MISF8  | Pass
+MISF9  | Pass
+MISF10 | Pass
+MISF11 | Pass
+MISF12 | Pass
+MISF13 | Pass
+MISF14 | Pass
+MISF15 | Pass
+MISF16 | Failure (not available)
+MISF17 | Pass
+MISF18 | Pass
+MISF19 | Pass
+MISF20 | Pass
+MISF21 | Pass
+MISF22 | Pass
+MISF23 | Pass
+MISF24 | Pass
+MISF25 | Pass
+MISF26 | Failure (not available)
 
 ## Rename
 Case | Result
