@@ -8,6 +8,8 @@ C++ Extract Function add-on: 1.0
 
 Notes:
 
+Extract Function is only available as an additional free add-on.
+
 When applying an operation, the default selections on any prompting dialogs
 were used.  Unfortunately, this means that all Rename tests fail.
 
@@ -209,11 +211,13 @@ R98  | Failure (wrong symbol selected by default)
 ## Replace String Literal with Raw String Literal
 Case | Result
 ---- | ------
-RAW1 | Pass
-RAW2 | Pass
-RAW3 | Pass
-RAW4 | Pass
-RAW5 | Pass
-RAW6 | Pass
-RAW7 | Pass
-RAW8 | Pass
+RAW1  | Pass
+RAW2  | Pass
+RAW3  | Pass
+RAW4  | Pass
+RAW5  | Pass
+RAW6  | Pass
+RAW7  | Pass
+RAW8  | Pass
+RAW9  | Pass
+RAW10 | Pass

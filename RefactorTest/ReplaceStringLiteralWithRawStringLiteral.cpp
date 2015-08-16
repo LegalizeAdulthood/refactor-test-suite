@@ -33,6 +33,7 @@ std::string const path{"C:\\Program Files\\Vendor\\Application\\Application.exe"
 // #TEST#: RAW9
 std::string const contains_sentinel{"whoops)\""};
 
+// #TEST#: RAW10
 std::string const contains_delim{"whoops)\")delim\""};
 
 }
