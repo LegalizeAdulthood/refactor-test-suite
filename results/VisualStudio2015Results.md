@@ -78,7 +78,6 @@ EM19 | Failure (Unknown error)
 EM20 | Failure (Unknown error)
 
 ## Move Implementation to Source File
-
 Case | Result
 ---- | ------
 MISF1  | Pass (leaves `inline` in header)

@@ -4,7 +4,7 @@ Home: [clang-modernize](http://clang.llvm.org/extra/clang-modernize.html)
 
 Version: 3.5.0
 
-## Add override
+## Add Override
 Case | Result
 ---- | ------
 AO1 | Pass
@@ -21,7 +21,7 @@ RAWU2 | Pass
 RAWU3 | Pass
 RAWU4 | Pass
 
-## Replace iterative for with range for
+## Replace Iterative For With Range For
 Case | Result
 ---- | ------
 RIRF1 | Pass

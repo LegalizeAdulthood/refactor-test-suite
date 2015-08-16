@@ -27,7 +27,7 @@ Replace Ternary Expression With If is performed by applying the fixup Replace
 
 <hr/>
 
-## Add Block Delimiters
+## Add Block Delimiter
 Case | Result
 ---- | ------
 ABD1 |  Pass
