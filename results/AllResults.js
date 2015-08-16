@@ -1,4 +1,5 @@
 // Print out test results as JSON
+// execute this script with node.js
 
 var _ = require('underscore');
 var async = require('async');
@@ -76,7 +77,7 @@ function ProcessLine(context, line)
     }
     else if (line.indexOf("## ") == 0)
     {
-        ctx.refactoring = line.substr(2);
+        ctx.refactoring = line.substr(2).trim();
     }
 }
 
