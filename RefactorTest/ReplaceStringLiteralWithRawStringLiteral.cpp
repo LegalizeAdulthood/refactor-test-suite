@@ -39,15 +39,14 @@ std::string const contains_delim{"whoops)\")delim\""};
 
 void TestReplaceStringLiteralWithRawStringLiteral()
 {
-    using namespace std::literals::string_literals;
-    REQUIRE_EQUAL("goink\\frob"s, backslash);
-    REQUIRE_EQUAL("goink\nfrob"s, newline);
-    REQUIRE_EQUAL("goink\tfrob"s, tab);
-    REQUIRE_EQUAL("goink\'frob"s, single_quote);
-    REQUIRE_EQUAL("goink\"frob"s, double_quote);
-    REQUIRE_EQUAL("goink\?frob"s, question_mark);
-    REQUIRE_EQUAL("goink\\(one|two\\)\\\\\\?.*\\nfrob"s, regex);
-    REQUIRE_EQUAL("C:\\Program Files\\Vendor\\Application\\Application.exe"s, path);
-    REQUIRE_EQUAL("whoops)\""s, contains_sentinel);
-    REQUIRE_EQUAL("whoops)\")delim\""s, contains_delim);
+    REQUIRE_EQUAL(std::string("goink\\frob"), backslash);
+    REQUIRE_EQUAL(std::string("goink\nfrob"), newline);
+    REQUIRE_EQUAL(std::string("goink\tfrob"), tab);
+    REQUIRE_EQUAL(std::string("goink\'frob"), single_quote);
+    REQUIRE_EQUAL(std::string("goink\"frob"), double_quote);
+    REQUIRE_EQUAL(std::string("goink\?frob"), question_mark);
+    REQUIRE_EQUAL(std::string("goink\\(one|two\\)\\\\\\?.*\\nfrob"), regex);
+    REQUIRE_EQUAL(std::string("C:\\Program Files\\Vendor\\Application\\Application.exe"), path);
+    REQUIRE_EQUAL(std::string("whoops)\""), contains_sentinel);
+    REQUIRE_EQUAL(std::string("whoops)\")delim\""), contains_delim);
 }
