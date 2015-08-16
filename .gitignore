@@ -1,5 +1,8 @@
 Debug
 Release
 *.suo
-.idea
-node_modules
+results/.idea
+results/node_modules
+results/.ntvs_analysis.dat
+results/bin
+results/obj
