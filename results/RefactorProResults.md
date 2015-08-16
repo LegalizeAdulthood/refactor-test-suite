@@ -146,40 +146,21 @@ CMS20  | Pass
 CMS21  | Pass
 CMS22  | Pass
 
-## Create/Split Multi Variable Declaration [S18736](https://www.devexpress.com/Support/Center/Question/Details/S18736)
+## Create Multi-Variable Declaration [S18736](https://www.devexpress.com/Support/Center/Question/Details/S18736)
 Case | Result
 ---- | ------
-MVD1   | Pass
-MVD2   | Pass
-MVD3   | Pass
-MVD4   | Pass
-MVD5   | Pass
-MVD6   | Pass
-MVD7   | Pass
-MVD8   | Pass
-MVD9   | Pass
-MVD10  | Pass
-MVD11  | Pass
-MVD12  | Pass
-MVD13  | Pass
-MVD14  | Pass
-MVD15  | Pass
-MVD16  | Pass
-MVD17  | Pass
-MVD18  | Pass
-MVD19  | Pass
-MVD20  | Failure (not available) [B144315](https://www.devexpress.com/Support/Center/Question/Details/B144315)
-MVD21  | Failure (not available) [S18815](https://www.devexpress.com/Support/Center/Question/Details/S18815)
-MVD22  | Failure (not available) [S18815](https://www.devexpress.com/Support/Center/Question/Details/S18815)
-MVD23  | Failure (not available) [S18815](https://www.devexpress.com/Support/Center/Question/Details/S18815)
-MVD24  | Pass
-MVD25  | Pass
-MVD26  | Pass
-MVD27  | Pass
-MVD28  | Pass
-MVD29  | Failure (not available) [B144317](https://www.devexpress.com/Support/Center/Question/Details/B144317)
-MVD30  | Pass
-MVD31  | Pass
+CMVD1  | Pass
+CMVD2  | Pass
+CMVD3  | Pass
+CMVD4  | Pass
+CMVD5  | Pass
+CMVD6  | Pass
+CMVD7  | Pass
+CMVD8  | Pass
+CMVD9  | Failure (not available) [B144315](https://www.devexpress.com/Support/Center/Question/Details/B144315)
+CMVD10  | Failure (not available) [S18815](https://www.devexpress.com/Support/Center/Question/Details/S18815)
+CMVD11  | Failure (not available) [S18815](https://www.devexpress.com/Support/Center/Question/Details/S18815)
+CMVD12  | Failure (not available) [S18815](https://www.devexpress.com/Support/Center/Question/Details/S18815)
 
 ## Create Overload
 Case | Result
@@ -814,6 +795,29 @@ SID8   | Failure (cursor must be on variable) [B144400](https://www.devexpress.c
 SID9   | Pass
 SID10  | Pass
 SID11  | Failure (not available) [B144401](https://www.devexpress.com/Support/Center/Question/Details/B144401)
+
+## Split Multi-Variable Declaration [S18736](https://www.devexpress.com/Support/Center/Question/Details/S18736)
+Case | Result
+---- | ------
+SMVD1   | Pass
+SMVD2   | Pass
+SMVD3   | Pass
+SMVD4   | Pass
+SMVD5   | Pass
+SMVD6   | Pass
+SMVD7   | Pass
+SMVD8   | Pass
+SMVD9   | Pass
+SMVD10  | Pass
+SMVD11  | Pass
+SMVD12  | Pass
+SMVD13  | Pass
+SMVD14  | Pass
+SMVD15  | Pass
+SMVD16  | Pass
+SMVD17  | Pass
+SMVD18  | Failure (not available) [B144317](https://www.devexpress.com/Support/Center/Question/Details/B144317)
+SMVD19  | Pass
 
 ## Split Temporary Variable
 Case | Result

@@ -13,9 +13,9 @@ Combine Conditionals | n/a | n/a | 100% | n/a | n/a
 Conditional To Case | n/a | n/a | 75% | n/a | n/a
 Create Method Contract | n/a | n/a | 100% | n/a | n/a
 Create Method Stub | n/a | 54.55% | 77.28% | n/a | n/a
+Create Multi-Variable Declaration | n/a | n/a | 66.67% | n/a | n/a
 Create Overload | n/a | n/a | 92.86% | n/a | n/a
 Create Setter Method | n/a | 66.67% | 100% | n/a | n/a
-Create/Split Multi Variable Declaration | n/a | n/a | 83.88% | n/a | n/a
 Decompose Parameter | n/a | n/a | 100% | n/a | n/a
 Encapsulate Downcast | n/a | n/a | 0% | n/a | n/a
 Encapsulate Field | n/a | n/a | 0% | n/a | n/a
@@ -58,6 +58,6 @@ Reverse Conditional | n/a | n/a | 0% | n/a | n/a
 Simplify Boolean Expression | n/a | 100% | n/a | n/a | n/a
 Split Initialization From Declaration | n/a | 81.82% | n/a | n/a | n/a
 Split Initialization from Declaration | n/a | n/a | 81.82% | n/a | n/a
-Split Multi-Variable Declaration | n/a | 100% | n/a | n/a | n/a
+Split Multi-Variable Declaration | n/a | 100% | 94.74% | n/a | n/a
 Split Temporary Variable | n/a | n/a | 0% | n/a | n/a
 Widen Scope Promote to Field | n/a | n/a | 61.54% | n/a | n/a
