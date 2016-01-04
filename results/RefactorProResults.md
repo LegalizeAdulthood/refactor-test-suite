@@ -706,8 +706,8 @@ R87    | Pass
 R88    | Failure (not all instances selected) [B144373](https://www.devexpress.com/Support/Center/Question/Details/B144373)
 R89    | Pass
 R90    | Pass
-R91    | Pass
-R92    | Pass
+R91    | n/a
+R92    | n/a
 R93    | Pass
 R94    | Pass
 R95    | Pass

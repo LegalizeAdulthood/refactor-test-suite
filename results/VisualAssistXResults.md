@@ -196,8 +196,8 @@ R87     | Pass
 R88     | Pass
 R89     | Pass
 R90     | Pass
-R91     | Pass
-R92     | Pass
+R91     | n/a
+R92     | n/a
 R93     | Pass
 R94     | Pass
 R95     | Pass
