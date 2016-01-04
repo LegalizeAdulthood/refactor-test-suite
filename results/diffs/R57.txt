@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..8d3ac7a 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -164,7 +164,7 @@ static int (Operations::*GetOperation(bool flag))()
+ namespace RenameNamespace
+ {
+     // #TEST#: R57 Rename scoped member Renamed.
+-    int Renamed = 0;
++    int GOINK_Renamed = 0;
+ 
+     class Base
+     {
+@@ -343,7 +343,7 @@ void TestRename()
+     // #TEST#: R69 Rename variable member
+     ((&ops3)->*member)();
+ 
+-    int x1 = Renamed;
++    int x1 = GOINK_Renamed;
+ 
+     TestDerived();
+ 

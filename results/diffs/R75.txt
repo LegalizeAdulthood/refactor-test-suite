@@ -1,0 +1,25 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..a3656fc 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -205,16 +205,16 @@ namespace RenameNamespace
+ }
+ 
+ // #TEST#: R74 Rename macro MACRO1
+-#define MACRO1 -20
++#define GOINK_MACRO1 -20
+ // #TEST#: R75 Rename macro MACRO1
+-#if defined(MACRO1)
++#if defined(GOINK_MACRO1)
+ // #TEST#: R76 Rename macro MACRO1
+-static int s_macro_value = MACRO1;
++static int s_macro_value = GOINK_MACRO1;
+ #else
+ static int s_macro_value = -20;
+ #endif
+ // #TEST#: R77 Rename macro MACRO1
+-#undef MACRO1
++#undef GOINK_MACRO1
+ 
+ // #TEST#: R78 Rename macro MACRO2
+ #define MACRO2(x_) (-20*x_)

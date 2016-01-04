@@ -1,0 +1,208 @@
+# ReSharper for C++
+
+Home: [ReSharper for C++](http://www.jetbrains.com/resharper-cpp/)
+
+Version: 10.0.2
+
+Notes:
+
+## Change Signature
+Case | Result
+---- | ------
+CS1  | Pass
+CS2  | Pass
+CS3  | Pass
+CS4  | Pass
+CS5  | Pass
+CS6  | Pass
+CS7  | Pass
+CS8  | Pass
+CS9  | Pass
+CS10 | Pass
+CS11 | Pass
+
+## Create Declaration From Implementation
+
+## Create Implementation From Declaration
+
+## Create Method Stub
+
+## Extract Function
+Case | Result
+---- | ------
+EXF1 | 
+EXF2 | 
+EXF3 | 
+EXF4 | 
+EXF5 | 
+EXF6 | 
+EXF7 | 
+EXF8 | 
+EXF9 | 
+EXF10 | 
+EXF11 | 
+EXF12 | 
+EXF13 | 
+EXF14 | 
+EXF15 | 
+EXF16 | 
+EXF17 | 
+EXF18 | 
+EXF19 | 
+EXF20 | 
+
+## Extract Method
+Case | Result
+---- | ------
+EM1 | 
+EM2 | 
+EM3 | 
+EM4 | 
+EM5 | 
+EM6 | 
+EM7 | 
+EM8 | 
+EM9 | 
+EM10 | 
+EM11 | 
+EM12 | 
+EM13 | 
+EM14 | 
+EM15 | 
+EM16 | 
+EM17 | 
+EM18 | 
+EM19 | 
+EM20 | 
+
+## Move Implementation to Source File
+Case | Result
+---- | ------
+MISF1  | 
+MISF2  | 
+MISF3  | 
+MISF4  | 
+MISF5  | 
+MISF6  | 
+MISF7  | 
+MISF8  | 
+MISF9  | 
+MISF10 | 
+MISF11 | 
+MISF12 | 
+MISF13 | 
+MISF14 | 
+MISF15 | 
+MISF16 | 
+MISF17 | 
+MISF18 | 
+MISF19 | 
+MISF20 | 
+MISF21 | 
+MISF22 | 
+MISF23 | 
+MISF24 | 
+MISF25 | 
+MISF26 | 
+
+## Rename
+Case | Result
+---- | ------
+R1   | Pass
+R2   | Pass
+R3   | Pass
+R4   | Pass
+R5   | Pass
+R6   | Pass
+R7   | Pass
+R8   | Pass
+R9   | Pass
+R10  | Pass
+R11  | Pass
+R12  | Pass
+R13  | Pass
+R14  | Pass
+R15  | Pass
+R16  | Pass
+R17  | Pass
+R18  | Pass
+R19  | Pass
+R20  | Pass
+R21  | Pass
+R22  | Pass
+R23  | Pass
+R24  | Pass
+R25  | Failure (unavailable)
+R26  | Pass
+R27  | Pass
+R28  | Pass
+R29  | Pass
+R30  | Pass
+R31  | Pass
+R32  | Failure (misses usage in typedef)
+R33  | Pass
+R34  | Pass
+R35  | Pass
+R36  | Pass
+R37  | Pass
+R38  | Pass
+R39  | Pass
+R40  | Pass
+R41  | Pass
+R42  | Pass
+R43  | Pass
+R44  | Pass
+R45  | Pass
+R46  | Pass
+R47  | Pass
+R48  | Pass
+R49  | Pass
+R50  | Pass
+R51  | Pass
+R52  | Pass
+R53  | Pass
+R54  | Pass
+R55  | Pass
+R56  | Pass
+R57  | Pass
+R58  | Pass
+R59  | Pass
+R60  | Pass
+R61  | Pass
+R62  | Pass
+R63  | Pass
+R64  | Pass
+R65  | Pass
+R66  | Pass
+R67  | Pass
+R68  | Pass
+R69  | Pass
+R70  | Pass
+R71  | Pass
+R72  | Pass
+R73  | Pass
+R74  | Pass
+R75  | Pass
+R76  | Pass
+R77  | Pass
+R78  | Pass
+R79  | Pass
+R80  | Pass
+R81  | Pass
+R82  | Failure (unavailable)
+R83  | Failure (unavailable)
+R84  | Pass
+R85  | Pass
+R86  | Pass
+R87  | Pass
+R88  | Pass
+R89  | Pass
+R90  | Pass
+R91  | n/a
+R92  | n/a
+R93  | Pass
+R94  | Pass
+R95  | Pass
+R96  | Pass
+R97  | Pass
+R98  | Pass

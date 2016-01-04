@@ -1,0 +1,40 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..484348d 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -171,7 +171,7 @@ namespace RenameNamespace
+     public:
+         virtual ~Base() {}
+         // #TEST#: R70 Rename virtual method
+-        virtual Base *Operation() = 0;
++        virtual Base *GOINK_Operation() = 0;
+     };
+ 
+     class Derived1 : public virtual Base
+@@ -179,7 +179,7 @@ namespace RenameNamespace
+     public:
+         virtual ~Derived1() {}
+         // #TEST#: R71 Rename virtual method
+-        virtual Base *Operation()
++        virtual Base *GOINK_Operation()
+         {
+             return this;
+         }
+@@ -190,7 +190,7 @@ namespace RenameNamespace
+     public:
+         virtual ~Derived2() {}
+         // #TEST#: R72 Rename virtual method
+-        virtual Base *Operation()
++        virtual Base *GOINK_Operation()
+         {
+             return this;
+         }
+@@ -200,7 +200,7 @@ namespace RenameNamespace
+     {
+         Derived2 d;
+         // #TEST#: R73 Rename virtual method
+-        d.Operation();
++        d.GOINK_Operation();
+     }
+ }
+ 
