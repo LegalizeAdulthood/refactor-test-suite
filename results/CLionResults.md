@@ -314,7 +314,7 @@ Case | Result
 ---- | ------
 RBD1  | Failure (not available)
 RBD2  | Failure (not available)
-RBD3  | Failure (not available)
+RBD3  | Pass
 RBD4  | Failure (not available)
 RBD5  | Failure (not available)
 RBD6  | Failure (not available)

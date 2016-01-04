@@ -18,7 +18,7 @@ int RemoveBlockDelimiters(bool flag)
         // #TEST#: RBD2 Remove delimiters
         {
             while (x < 10)
-            // #TEST#: RBD3 Remove delimiters
+            // #TEST#: RBD3 Remove delimiters (should not be available)
             {
                 if (flag)
                 // #TEST#: RBD4 Remove delimiters
