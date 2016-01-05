@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/ReorderParameters.cpp b/RefactorTest/ReorderParameters.cpp
+index edd6ada..26b0ce1 100644
+--- a/RefactorTest/ReorderParameters.cpp
++++ b/RefactorTest/ReorderParameters.cpp
+@@ -45,7 +45,7 @@ namespace ReorderParametersNamespace
+     }
+ 
+     // #TEST#: RP3 Reorder parameters move parameter i to first parameter
+-    int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
++    int TestMemberPointer(int i, Foo & f, int (Foo::*member)(int))
+     {
+         int j;
+         if (i < 0)
+@@ -122,7 +122,7 @@ void TestReorderParameters()
+     REQUIRE_EQUAL(-4, TestFunction(Function1, -1));
+     REQUIRE_EQUAL(8, TestFunction(Function1, 1));
+     Foo f;
+-    int result = TestMemberPointer(f, &Foo::Operation1, Function2(1));
++    int result = TestMemberPointer(Function2(1), f, &Foo::Operation1);
+     REQUIRE_EQUAL(8, result);
+     REQUIRE_EQUAL(16, TestConstMemberPointer(f, &Foo::Const1, 6));
+     REQUIRE_EQUAL(8, TestMemberPointer2(f, &Foo::Operation1, Function3(1)));

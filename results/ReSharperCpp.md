@@ -343,4 +343,11 @@ R98  | Pass
 Case | Result
 ---- | ------
 RP1 | Failure (functionality not available)
-RP2 | 
+RP2 | Failure
+RP3 | Pass
+RP4 | Failure
+RP5 | Failure
+RP6 | Failure
+RP7 | Failure (functionality not available)
+RP8 | Failure (functionality not available)
+RP9 | Failure (functionality not available)
