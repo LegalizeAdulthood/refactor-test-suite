@@ -82,6 +82,7 @@ namespace ReplaceIfWithTernary
         {
             x = 10.0f;
         }
+        REQUIRE_EQUAL(10.0, x);
 
         float g = 2.0f;
         float &r = f;
@@ -94,6 +95,7 @@ namespace ReplaceIfWithTernary
         {
             r = f;
         }
+        REQUIRE_EQUAL(f, r);
 
         float *p;
         // #TEST#: RIT7 Replace If With Ternary Expression
@@ -105,6 +107,7 @@ namespace ReplaceIfWithTernary
         {
             p = &g;
         }
+        REQUIRE_EQUAL(&g, p);
     }
 
     int Operation1() { return 1; }
