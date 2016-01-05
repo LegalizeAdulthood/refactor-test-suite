@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Require.h"
 
 extern void TestExtractFunctionCFile();
 
@@ -10,24 +11,35 @@ namespace ExtractFunction
     {
         // #TEST#: EXF1 Extract function on statement
         int x = 3;
+        REQUIRE_EQUAL(3, x);
         // #TEST#: EXF2 Extract function on statement
         x *= 3;
+        REQUIRE_EQUAL(9, x);
         // #TEST#: EXF3 Extract function on statement
         x /= 3;
+        REQUIRE_EQUAL(3, x);
         // #TEST#: EXF4 Extract function on statement
         x += 3;
+        REQUIRE_EQUAL(6, x);
         // #TEST#: EXF5 Extract function on statement
         x -= 3;
+        REQUIRE_EQUAL(3, x);
         // #TEST#: EXF6 Extract function on statement
         x %= 3;
+        REQUIRE_EQUAL(0, x);
+        x = 8;
         // #TEST#: EXF7 Extract function on statement
-        x >>= 3;
+        x >>= 3U;
+        REQUIRE_EQUAL(1, x);
         // #TEST#: EXF8 Extract function on statement
-        x <<= 3;
+        x <<= 3U;
+        REQUIRE_EQUAL(8, x);
         // #TEST#: EXF9 Extract function on statement
         x |= 3;
+        REQUIRE_EQUAL(11, x);
         // #TEST#: EXF10 Extract function on statement
         x &= 3;
+        REQUIRE_EQUAL(3, x);
         // #TEST#: EXF11 Extract function on expression
         return x + 3;
     }
@@ -160,6 +172,7 @@ using namespace ExtractFunction;
 void TestExtractFunction()
 {
     int x = TestInteger();
+    REQUIRE_EQUAL(6, x);
     int (*function)(int) = TestFunction(x);
     function = TestFunction2(x);
     int (Foo::*member)(int) = TestMember(x);
