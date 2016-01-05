@@ -22,6 +22,7 @@ namespace RemoveUnusedParametersNamespace
     class Foo
     {
     public:
+        // #TEST#: RUP4 Remove Unused Parameter x
         int Method1(int x) { return 2; }
         int Method2(int x) { return x; }
     };
