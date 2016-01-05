@@ -17,17 +17,17 @@ namespace ReplaceTernaryWithIf
 
         // #TEST#: RTI1 Replace Ternary Expression With If
         int x = (y == 10) ? y : 1;
-        require_equal(10, x);
+        REQUIRE_EQUAL(10, x);
 
         int i = 1;
         // #TEST#: RTI2 Replace Ternary Expression With If
         int &r = (y == 10) ? y : i;
-        require_equal(10, r);
+        REQUIRE_EQUAL(10, r);
 
         int j = 2;
         // #TEST#: RTI3 Replace Ternary Expression With If
         int *p = (y == 10) ? &y : &j;
-        require_equal(p, &y);
+        REQUIRE_EQUAL(p, &y);
     }
 
     void TestFloatDouble()
@@ -36,16 +36,16 @@ namespace ReplaceTernaryWithIf
 
         // #TEST#: RTI4 Replace Ternary Expression With If
         double x = (f == 10.0f) ? -10.0 : 10.0f;
-        require_equal(10.0, x);
+        REQUIRE_EQUAL(10.0, x);
 
         float g = 2.0f;
         // #TEST#: RTI5 Replace Ternary Expression With If
         float &r = (g == 10.0f) ? g : f;
-        require_equal(1.0f, r);
+        REQUIRE_EQUAL(1.0f, r);
 
         // #TEST#: RTI6 Replace Ternary Expression With If
         float *p = (g == 10.0f) ? &f : &g;
-        require_equal(&g, p);
+        REQUIRE_EQUAL(&g, p);
     }
 
     int Operation1() { return 1; }
@@ -57,14 +57,14 @@ namespace ReplaceTernaryWithIf
 
         // #TEST#: RTI7 Replace Ternary Expression With If
         int (*fn2)() = (fn1 == Operation1) ? Operation2 : Operation1;
-        require_equal(fn2, Operation2);
+        REQUIRE_EQUAL(fn2, Operation2);
 
         // #TEST#: RTI8 Replace Ternary Expression With If
         int (**fn3)() = (fn1 == Operation1) ? &fn1 : &fn2;
-        require_equal(fn3, &fn1);
+        REQUIRE_EQUAL(fn3, &fn1);
 
         int (&fn4)() = (fn1 == Operation1) ? Operation2 : Operation1;
-        require_equal(fn4, Operation2);
+        REQUIRE_EQUAL(fn4, Operation2);
     }
 
     class Foo
@@ -81,12 +81,12 @@ namespace ReplaceTernaryWithIf
         // #TEST#: RTI9 Replace Ternary Expression With If
         int (Foo::*mem2)() = (mem1 == &Foo::Operation1) ? &Foo::Operation2 : &Foo::Operation1;
         Foo f;
-        require_equal(2, (f.*mem2)());
+        REQUIRE_EQUAL(2, (f.*mem2)());
 
         // #TEST#: RTI10 Replace Ternary Expression With If
         typedef int (Foo::*mem_ptr)();
         mem_ptr &mem3 = (mem1 == &Foo::Operation1) ? mem1 : mem2;
-        require_equal(1, (f.*mem3)());
+        REQUIRE_EQUAL(1, (f.*mem3)());
     }
 }
 
