@@ -20,7 +20,7 @@ void require_equal(char const *file, unsigned line, T expected, T actual)
     if (expected != actual)
     {
         std::ostringstream message;
-        message << file << '(' << line << "): expected " << expected << ", got " << actual;
+        message << file << '(' << line << "): error: expected " << expected << ", got " << actual;
         throw std::runtime_error(message.str().c_str());
     }
 }

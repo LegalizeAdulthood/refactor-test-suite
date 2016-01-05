@@ -1,6 +1,5 @@
 #include "stdafx.h"
-#include <string>
-#include <vector>
+#include "Require.h"
 
 // Enables you to change the order of parameters including promoting out
 // parameters in the signature to the return value.
@@ -13,7 +12,7 @@ namespace ReorderParametersNamespace
     int Function2(int x) { return x*4; }
 
     // #TEST#: RP2 Reorder parameters
-    void TestFunction(int (*fn)(int), int i)
+    int TestFunction(int (*fn)(int), int i)
     {
         int j;
         if (i < 0)
@@ -24,7 +23,7 @@ namespace ReorderParametersNamespace
         {
             j = (*fn)(i*2);
         }
-        (*fn)(j);
+        return (*fn)(j);
     }
 
     class Foo
@@ -46,7 +45,7 @@ namespace ReorderParametersNamespace
     }
 
     // #TEST#: RP3 Reorder parameters
-    void TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
+    int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
     {
         int j;
         if (i < 0)
@@ -57,11 +56,11 @@ namespace ReorderParametersNamespace
         {
             j = (f.*member)(i*2);
         }
-        j = (f.*member)(j);
+        return (f.*member)(j);
     }
 
     // #TEST#: RP4 Reorder parameters
-    void TestConstMemberPointer(Foo &f, int (Foo::*member)(int) const, int i)
+    int TestConstMemberPointer(Foo &f, int (Foo::*member)(int) const, int i)
     {
         int j;
         if (i < 0)
@@ -72,12 +71,13 @@ namespace ReorderParametersNamespace
         {
             j = (f.*member)(i*2);
         }
-        j = (f.*member)(j);
+        return (f.*member)(j);
     }
 
     typedef int (Foo::*FooMemberPtr)(int);
+
     // #TEST#: RP5 Reorder parameters
-    void TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
+    int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
     {
         int j;
         if (i < 0)
@@ -88,12 +88,13 @@ namespace ReorderParametersNamespace
         {
             j = (f.*member)(i*2);
         }
-        j = (f.*member)(j);
+        return (f.*member)(j);
     }
 
     typedef int (Foo::*FooConstMemberPtr)(int) const;
+
     // #TEST#: RP6 Reorder parameters
-    void TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
+    int TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
     {
         int j;
         if (i < 0)
@@ -104,7 +105,7 @@ namespace ReorderParametersNamespace
         {
             j = (f.*member)(i*2);
         }
-        j = (f.*member)(j);
+        return (f.*member)(j);
     }
 }
 
@@ -118,10 +119,11 @@ using namespace ReorderParametersNamespace;
 
 void TestReorderParameters()
 {
-    TestFunction(Function1, 3);
+    REQUIRE_EQUAL(-4, TestFunction(Function1, -1));
+    REQUIRE_EQUAL(8, TestFunction(Function1, 1));
     Foo f;
-    TestMemberPointer(f, &Foo::Operation1, Function2(1));
-    TestConstMemberPointer(f, &Foo::Const1, 6);
-    TestMemberPointer2(f, &Foo::Operation1, Function3(1));
-    TestConstMemberPointer2(f, &Foo::Const1, 6);
+    REQUIRE_EQUAL(8, TestMemberPointer(f, &Foo::Operation1, Function2(1)));
+    REQUIRE_EQUAL(16, TestConstMemberPointer(f, &Foo::Const1, 6));
+    REQUIRE_EQUAL(8, TestMemberPointer2(f, &Foo::Operation1, Function3(1)));
+    REQUIRE_EQUAL(16, TestConstMemberPointer2(f, &Foo::Const1, 6));
 }
