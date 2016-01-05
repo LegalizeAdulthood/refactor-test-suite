@@ -122,7 +122,8 @@ void TestReorderParameters()
     REQUIRE_EQUAL(-4, TestFunction(Function1, -1));
     REQUIRE_EQUAL(8, TestFunction(Function1, 1));
     Foo f;
-    REQUIRE_EQUAL(8, TestMemberPointer(f, &Foo::Operation1, Function2(1)));
+    int result = TestMemberPointer(f, &Foo::Operation1, Function2(1));
+    REQUIRE_EQUAL(8, result);
     REQUIRE_EQUAL(16, TestConstMemberPointer(f, &Foo::Const1, 6));
     REQUIRE_EQUAL(8, TestMemberPointer2(f, &Foo::Operation1, Function3(1)));
     REQUIRE_EQUAL(16, TestConstMemberPointer2(f, &Foo::Const1, 6));
