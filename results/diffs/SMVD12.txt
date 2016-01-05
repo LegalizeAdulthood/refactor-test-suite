@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..4dfe039 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -114,7 +114,8 @@ void TestSplitMultiVariableDeclaration()
+     j6 = &j4;
+ 
+     // #TEST#: SMVD12 Split multi-variable declaration
+-    int (Foo::*member1)() = &Foo::Operation1, (Foo::*member2)() = &Foo::Operation2;
++    int (Foo::*member1)() = &Foo::Operation1;
++    int (Foo::*member2)() = &Foo::Operation2;
+ 
+     // #TEST#: SMVD13 Split multi-variable declaration
+     int (Foo::*cmember1)() const = &Foo::Const1, (Foo::*cmember2)() const = &Foo::Const2;

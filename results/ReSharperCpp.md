@@ -18,6 +18,7 @@ Notes:
 * **Reorder Parameters** is available through **Change Signature**.
 * **Replace If With Ternary** is available as a quick fix.
 * **Reverse Conditional** is available as a quick fix.
+* **Split Multi-Variable Declaration** is available as a quick fix.
 
 ## Add Block Delimiter
 Case | Result
@@ -446,3 +447,26 @@ RC5 | Pass
 RC6 | Pass
 RC7 | Pass
 RC8 | Pass
+
+## Split Multi-Variable Declaration
+Case | Result
+---- | ------
+SMVD1 | Pass
+SMVD2 | Pass
+SMVD3 | Pass
+SMVD4 | Pass
+SMVD5 | Pass
+SMVD6 | Failure (not available)
+SMVD7 | Pass
+SMVD8 | Failure (not available)
+SMVD9 | Pass
+SMVD10 | Failure (not available)
+SMVD11 | Pass
+SMVD12 | Pass
+SMVD13 | Pass
+SMVD14 | Pass
+SMVD15 | Pass
+SMVD16 | Pass
+SMVD17 | Pass
+SMVD18 | Pass
+SMVD19 | Pass

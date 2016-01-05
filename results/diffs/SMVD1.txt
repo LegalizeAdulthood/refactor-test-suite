@@ -1,0 +1,17 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..040d6d5 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -60,7 +60,11 @@ using namespace SplitMultiVariableDeclarationNamespace;
+ void TestSplitMultiVariableDeclaration()
+ {
+     // #TEST#: SMVD1 Split multi-variable declaration
+-    int i, *j, **p, &r = i, *&rp = j;
++    int i;
++    int *j;
++    int **p;
++    int &r = i;
++    int *&rp = j;
+     i = 0;
+     j = 0;
+     p = 0;

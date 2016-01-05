@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..47d9e6b 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -143,7 +143,8 @@ void TestSplitMultiVariableDeclaration()
+     am2[0] = 0;
+ 
+     // #TEST#: SMVD18 Split multi-variable declaration
+-    volatile int vol1, vol2;
++    volatile int vol1;
++    volatile int vol2;
+     vol1 = 0;
+     vol2 = 0;
+ 

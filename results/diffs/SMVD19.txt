@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..66affc2 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -148,7 +148,8 @@ void TestSplitMultiVariableDeclaration()
+     vol2 = 0;
+ 
+     // #TEST#: SMVD19 Split multi-variable declaration
+-    register int reg1, reg2;
++    register int reg1;
++    register int reg2;
+     reg1 = 0;
+     reg2 = 0;
+ }

@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..0e95e4c 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -68,7 +68,10 @@ void TestSplitMultiVariableDeclaration()
+     REQUIRE_EQUAL(j, rp);
+ 
+     // #TEST#: SMVD2 Split multi-variable declaration
+-    static int si, *sj, **sp, *&srp = sj;
++    static int si;
++    static int *sj;
++    static int **sp;
++    static int *&srp = sj;
+     si = 0;
+     sj = 0;
+     sp = 0;

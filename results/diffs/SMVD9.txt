@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..4c9ae6e 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -99,7 +99,8 @@ void TestSplitMultiVariableDeclaration()
+     struct Bar s1, *s2 = new Bar();
+ 
+     // #TEST#: SMVD9 Split multi-variable declaration
+-    Bar &s3 = s1, **s4;
++    Bar &s3 = s1;
++    Bar **s4;
+     s4 = 0;
+ 
+     // #TEST#: SMVD10 Split multi-variable declaration

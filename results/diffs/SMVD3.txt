@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..ace2914 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -75,7 +75,8 @@ void TestSplitMultiVariableDeclaration()
+     REQUIRE_EQUAL(sj, srp);
+ 
+     // #TEST#: SMVD3 Split multi-variable declaration
+-    std::vector<int>::size_type sti, stj;
++    std::vector<int>::size_type sti;
++    std::vector<int>::size_type stj;
+     sti = std::vector<int>::size_type(0);
+     stj = sti;
+ 

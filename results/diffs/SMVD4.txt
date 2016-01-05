@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..ffcc568 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -80,7 +80,8 @@ void TestSplitMultiVariableDeclaration()
+     stj = sti;
+ 
+     // #TEST#: SMVD4 Split multi-variable declaration
+-    std::vector<int> vi, vj;
++    std::vector<int> vi;
++    std::vector<int> vj;
+     vi.resize(2);
+     vj.resize(2);
+ 

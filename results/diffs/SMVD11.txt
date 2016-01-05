@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitMultiVariableDeclaration.cpp b/RefactorTest/SplitMultiVariableDeclaration.cpp
+index 1151a26..379d9e5 100644
+--- a/RefactorTest/SplitMultiVariableDeclaration.cpp
++++ b/RefactorTest/SplitMultiVariableDeclaration.cpp
+@@ -106,7 +106,8 @@ void TestSplitMultiVariableDeclaration()
+     union Jumble j1, j2, j3, *j4;
+ 
+     // #TEST#: SMVD11 Split multi-variable declaration
+-    Jumble &j5 = j1, **j6;
++    Jumble &j5 = j1;
++    Jumble **j6;
+     j1._i = -1;
+     j2._i = -2;
+     j3._i = -3;
