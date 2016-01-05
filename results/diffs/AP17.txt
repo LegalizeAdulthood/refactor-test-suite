@@ -1,0 +1,35 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index b1fba17..04380b4 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -30,7 +30,7 @@ void TestAddParameter()
+     AddParameterFn(arg);
+     int data = 2;
+     const int &ref = data;
+-    AddParameterFnRef(ref);
++    AddParameterFnRef(ref, 0);
+     AddParameterFnDefault();
+     AddParameterFnDefault(1);
+ 
+@@ -122,7 +122,7 @@ void AddParameterFn(const float &arg)
+ }
+ 
+ // #TEST#: AP17 Add parameter
+-void AddParameterFnRef(const int &first)
++void AddParameterFnRef(const int &first, int Goink)
+ {
+ }
+ 
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index d44dc23..e5e8270 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -4,7 +4,7 @@ extern void AddParameterFn();
+ extern void AddParameterFn(int first);
+ extern void AddParameterFn(float &first);
+ extern void AddParameterFn(const float &first);
+-extern void AddParameterFnRef(const int &first);
++extern void AddParameterFnRef(const int &first, int Goink);
+ extern void AddParameterFnDefault(int first = 0);
+ 
+ class AddParameterTester

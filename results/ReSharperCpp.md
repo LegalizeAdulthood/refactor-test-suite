@@ -6,6 +6,50 @@ Version: 10.0.2
 
 Notes:
 
+* No quick fix is available for **Add Block Delimiter**.
+* **Add Override** is available as a quick fix.
+* **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
+* **Create Multi-Variable Declaration** is available as a quick fix.
+
+* **Remove Block Delimiter** is available as a quick fix.
+
+## Add Override
+Case | Result
+---- | ------
+AO1  | Pass
+AO2  | Pass
+AO3  | Pass
+AO4  | Pass
+AO5  | Pass
+
+## Add Parameter
+Case | Result
+---- | ------
+AP1  | Failure (does nothing)
+AP2  | Pass
+AP3  | Failure (does nothing)
+AP4  | Pass
+AP5  | Pass
+AP6  | Pass
+AP7  | Pass
+AP8  | Pass
+AP9  | Pass
+AP10 | Pass
+AP11 | Pass
+AP12 | Pass
+AP13 | Failure (can't cope with overloads)
+AP14 | Pass
+AP15 | Pass
+AP16 | Pass
+AP17 | Pass
+AP18 | Pass
+AP19 | Failure (does nothing)
+AP20 | Pass
+AP21 | Pass
+AP22 | Pass
+AP23 | Pass
+AP24 | Failure (does nothing)
+
 ## Change Signature
 Case | Result
 ---- | ------
@@ -26,6 +70,22 @@ CS11 | Pass
 ## Create Implementation From Declaration
 
 ## Create Method Stub
+
+## Create Multi-Variable Declaration
+Case | Result
+---- | ------
+CMVD1  | Pass
+CMVD2  | Pass
+CMVD3  | Pass
+CMVD4  | Pass
+CMVD5  | Pass
+CMVD6  | Failure
+CMVD7  | Pass
+CMVD8  | Pass
+CMVD9  | Pass
+CMVD10 | Pass
+CMVD11 | Pass
+CMVD12 | Pass
 
 ## Extract Function
 Case | Result
@@ -104,6 +164,18 @@ MISF23 |
 MISF24 | 
 MISF25 | 
 MISF26 | 
+
+## Remove Block Delimiter
+Case | Result
+---- | ------
+RBD1 | Pass
+RBD2 | Pass
+RBD3 | Pass
+RBD4 | Pass
+RBD5 | Pass
+RBD6 | Pass
+RBD7 | Pass
+RBD8 | Pass
 
 ## Rename
 Case | Result

@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/CreateMultiVariableDeclaration.cpp b/RefactorTest/CreateMultiVariableDeclaration.cpp
+index 91735ca..6960b10 100644
+--- a/RefactorTest/CreateMultiVariableDeclaration.cpp
++++ b/RefactorTest/CreateMultiVariableDeclaration.cpp
+@@ -113,10 +113,7 @@ void TestCreateMultiVariableDeclaration()
+     s4 = &s2;
+ 
+     // #TEST#: CMVD11 Create multi-variable declaration from next four lines
+-    union Jumble j1;
+-    union Jumble j2;
+-    union Jumble j3;
+-    union Jumble *j4;
++    union Jumble j1, j2, j3, *j4;
+     j1._i = -1;
+     j2._i = -2;
+     j3._i = -3;

@@ -1,0 +1,35 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index b1fba17..245f4ad 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -52,7 +52,7 @@ void TestAddParameter()
+     AddParameterTester::StaticTemplate<int>(0);
+     AddParameterTester::StaticTemplateDefault<int>();
+     AddParameterTester::StaticTemplateDefault<int>(1);
+-    AddParameter2<AddParameterTester2>();
++    AddParameter2<AddParameterTester2>(0);
+ 
+     AddParameterStruct s;
+     s.AddParameter();
+@@ -70,7 +70,7 @@ void TestAddParameter()
+     AddParameterStruct::StaticTemplate<int>(0);
+     AddParameterStruct::StaticTemplateDefault<int>();
+     AddParameterStruct::StaticTemplateDefault<int>(1);
+-    AddParameter2<AddParameterStructTester>();
++    AddParameter2<AddParameterStructTester>(0);
+ 
+     AddParameterNamespace::Outer::Inner inner;
+     inner.Operation();
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index d44dc23..4e3e978 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -89,7 +89,7 @@ public:
+ 
+ // #TEST#: AP12 Add parameter
+ template <typename T>
+-void AddParameter2()
++void AddParameter2(int Goink)
+ {
+     T::AddParameter();
+ }

@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/CreateMultiVariableDeclaration.cpp b/RefactorTest/CreateMultiVariableDeclaration.cpp
+index 91735ca..f089597 100644
+--- a/RefactorTest/CreateMultiVariableDeclaration.cpp
++++ b/RefactorTest/CreateMultiVariableDeclaration.cpp
+@@ -87,10 +87,7 @@ void TestCreateMultiVariableDeclaration()
+     fn2 = Function2;
+ 
+     // #TEST#: CMVD6 Create multi-variable declaration from next four lines
+-    class Foo f1;
+-    class Foo f2;
+-    Foo *f3;
+-    Foo &f4 = f1;
++    Foo f1, f2, *f3, &f4 = f1;
+     f3 = new Foo();
+     delete f3;
+     f4 = f2;

@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/CreateMultiVariableDeclaration.cpp b/RefactorTest/CreateMultiVariableDeclaration.cpp
+index 91735ca..83b301d 100644
+--- a/RefactorTest/CreateMultiVariableDeclaration.cpp
++++ b/RefactorTest/CreateMultiVariableDeclaration.cpp
+@@ -104,8 +104,7 @@ void TestCreateMultiVariableDeclaration()
+     int (Foo::*cmember2)() const = &Foo::Const2;
+ 
+     // #TEST#: CMVD9 Create multi-variable declaration from next two lines
+-    struct Bar s1;
+-    struct Bar *s2 = new Bar();
++    struct Bar s1, *s2 = new Bar();
+ 
+     // #TEST#: CMVD10 Create multi-variable declaration from next two lines
+     Bar &s3 = s1;
