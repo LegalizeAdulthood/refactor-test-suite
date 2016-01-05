@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/ExtractVariable.cpp b/RefactorTest/ExtractVariable.cpp
+index ea3d831..ac3e788 100644
+--- a/RefactorTest/ExtractVariable.cpp
++++ b/RefactorTest/ExtractVariable.cpp
+@@ -58,7 +58,8 @@ namespace ExtractVariableNamespace
+             std::vector<int> v2(4);
+             bool flag = true;
+             // #TEST#: EXV4 Extract variable for rhs expression
+-            std::vector<int> v3 = flag ? v1 : v2;
++            std::vector<int> Goink = flag ? v1 : v2;
++            std::vector<int> v3 = Goink;
+         }
+     };
+ 

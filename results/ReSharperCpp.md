@@ -144,6 +144,16 @@ EM18 | Pass
 EM19 | Pass
 EM20 | Pass
 
+## Extract Variable
+Case | Result
+---- | ------
+EXV1 | Pass
+EXV2 | Pass
+EXV3 | Pass
+EXV4 | Pass
+EXV5 | Pass
+EXV6 | Pass
+
 ## Move Implementation to Source File
 Case | Result
 ---- | ------
