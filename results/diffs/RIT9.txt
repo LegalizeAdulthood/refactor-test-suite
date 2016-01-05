@@ -1,0 +1,20 @@
+diff --git a/RefactorTest/ReplaceIfWithTernary.cpp b/RefactorTest/ReplaceIfWithTernary.cpp
+index 55e64e6..ffbfb00 100644
+--- a/RefactorTest/ReplaceIfWithTernary.cpp
++++ b/RefactorTest/ReplaceIfWithTernary.cpp
+@@ -143,14 +143,7 @@ namespace ReplaceIfWithTernary
+         int (Foo::*mem2)();
+ 
+         // #TEST#: RIT9 Replace If With Ternary Expression
+-        if (mem1 == &Foo::Operation1)
+-        {
+-            mem2 = &Foo::Operation2;
+-        }
+-        else
+-        {
+-            mem2 = &Foo::Operation1;
+-        }
++        mem2 = mem1 == &Foo::Operation1 ? &Foo::Operation2 : &Foo::Operation1;
+         Foo f;
+         REQUIRE_EQUAL(2, (f.*mem2)());
+     }

@@ -16,6 +16,7 @@ Notes:
 * **Remove Block Delimiter** is available as a quick fix.
 * **Remove Unused Parameter** is available as a quick fix.
 * **Reorder Parameters** is available through **Change Signature**.
+* **Replace If With Ternary** is available as a quick fix.
 
 ## Add Block Delimiter
 Case | Result
@@ -351,3 +352,16 @@ RP6 | Failure
 RP7 | Failure (functionality not available)
 RP8 | Failure (functionality not available)
 RP9 | Failure (functionality not available)
+
+## Replace If With Ternary Expression
+Case | Result
+---- | ------
+RIT1 | Pass
+RIT2 | Failure (not available)
+RIT3 | Failure (not available)
+RIT4 | Failure (not available)
+RIT5 | Pass
+RIT6 | Pass
+RIT7 | Pass (but generates odd syntax)
+RIT8 | Pass
+RIT9 | Failure (generates invalid syntax)
