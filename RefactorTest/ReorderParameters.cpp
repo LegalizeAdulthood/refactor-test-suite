@@ -44,7 +44,7 @@ namespace ReorderParametersNamespace
         x = 2;
     }
 
-    // #TEST#: RP3 Reorder parameters
+    // #TEST#: RP3 Reorder parameters move parameter i to first parameter
     int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
     {
         int j;
@@ -59,7 +59,7 @@ namespace ReorderParametersNamespace
         return (f.*member)(j);
     }
 
-    // #TEST#: RP4 Reorder parameters
+    // #TEST#: RP4 Reorder parameters move parameter i to first parameter
     int TestConstMemberPointer(Foo &f, int (Foo::*member)(int) const, int i)
     {
         int j;
@@ -76,7 +76,7 @@ namespace ReorderParametersNamespace
 
     typedef int (Foo::*FooMemberPtr)(int);
 
-    // #TEST#: RP5 Reorder parameters
+    // #TEST#: RP5 Reorder parameters move parameter i to first parameter
     int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
     {
         int j;
@@ -93,7 +93,7 @@ namespace ReorderParametersNamespace
 
     typedef int (Foo::*FooConstMemberPtr)(int) const;
 
-    // #TEST#: RP6 Reorder parameters
+    // #TEST#: RP6 Reorder parameters move parameter i to first parameter
     int TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
     {
         int j;
