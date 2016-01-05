@@ -52,6 +52,7 @@ int main(int argc, char* argv[])
         TestReduceVisibility();
         TestRemoveAssignmentsToParameters();
         TestRemoveBlockDelimiter();
+        TestRemoveUnusedParameter();
         TestRemoveRedundantConditional();
         TestRename();
         TestRenameFileToMatchType();

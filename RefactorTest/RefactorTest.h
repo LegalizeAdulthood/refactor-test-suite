@@ -43,6 +43,7 @@ extern void TestExtractParameter();
 extern void TestReduceVisibility();
 extern void TestRemoveAssignmentsToParameters();
 extern void TestRemoveBlockDelimiter();
+extern void TestRemoveUnusedParameter();
 extern void TestRemoveRedundantConditional();
 extern void TestRename();
 extern void TestRenameFileToMatchType();

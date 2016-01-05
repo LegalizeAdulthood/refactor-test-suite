@@ -1,3 +1,3 @@
 #pragma once
 
-extern void goop(int a, int b);
+extern int goop(int a, int b);
