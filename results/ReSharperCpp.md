@@ -6,12 +6,22 @@ Version: 10.0.2
 
 Notes:
 
-* No quick fix is available for **Add Block Delimiter**.
+* **Add Block Delimiter** is available as a quick fix.  The tests pass if only code is selected and not the surrounding comment lines.
 * **Add Override** is available as a quick fix.
 * **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
 * **Create Multi-Variable Declaration** is available as a quick fix.
-
 * **Remove Block Delimiter** is available as a quick fix.
+
+## Add Block Delimiter
+Case | Result
+---- | ------
+ABD1 | Failure (tries to surround lines with parenthesis)
+ABD2 | Failure (tries to surround lines with parenthesis)
+ABD3 | Failure (tries to surround lines with parenthesis)
+ABD4 | Failure (tries to surround lines with parenthesis)
+ABD5 | Failure (tries to surround lines with parenthesis)
+ABD6 | Failure (tries to surround lines with parenthesis)
+ABD7 | Failure (tries to surround lines with parenthesis)
 
 ## Add Override
 Case | Result

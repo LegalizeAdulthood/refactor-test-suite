@@ -1,0 +1,15 @@
+diff --git a/RefactorTest/AddBlockDelimiter.cpp b/RefactorTest/AddBlockDelimiter.cpp
+index 2a8e9a4..b766660 100644
+--- a/RefactorTest/AddBlockDelimiter.cpp
++++ b/RefactorTest/AddBlockDelimiter.cpp
+@@ -27,8 +27,10 @@ int AddBlockDelimiters(bool flag)
+             do
+                 // #TEST#: ABD6 Add delimiters
+                 for (x = 1; x < 10; ++x)
++                {
+                     // #TEST#: ABD7 Add delimiters
+                     ++x;
++                }
+             while (x < 5);
+ 
+     return x;

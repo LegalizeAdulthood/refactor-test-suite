@@ -1,0 +1,15 @@
+diff --git a/RefactorTest/AddBlockDelimiter.cpp b/RefactorTest/AddBlockDelimiter.cpp
+index 2a8e9a4..fa860a0 100644
+--- a/RefactorTest/AddBlockDelimiter.cpp
++++ b/RefactorTest/AddBlockDelimiter.cpp
+@@ -11,8 +11,10 @@ int AddBlockDelimiters(bool flag)
+ {
+     int x = 0;
+     if (flag)
++    {
+         // #TEST#: ABD1 Add delimiters
+         x = AddBlockDelimiters(false);
++    }
+     else if (flag || (x > 0))
+         // #TEST#: ABD2 Add delimiters
+         x = -1;
