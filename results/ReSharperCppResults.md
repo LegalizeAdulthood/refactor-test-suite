@@ -364,7 +364,7 @@ RIT7 | Pass (but generates odd syntax)
 RIT8 | Pass
 RIT9 | Failure (generates invalid syntax)
 
-## Replace NULL/0 with nullptr
+## Replace NULL/0 With nullptr
 Case | Result
 ---- | ------
 RZNP1 | Pass
@@ -396,7 +396,7 @@ RZNP26 | Pass
 RZNP27 | Failure (not available)
 RZNP28 | Failure (not available)
 
-## Replace Type With Auto
+## Replace Type With auto
 Case | Result
 ---- | ------
 RTWA1 | Pass

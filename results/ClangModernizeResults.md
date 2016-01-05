@@ -13,7 +13,7 @@ AO3 | Pass
 AO4 | Pass
 AO5 | Pass
 
-## Replace auto_ptr with unique_ptr
+## Replace auto_ptr With unique_ptr
 Case | Result
 ---- | ------
 RAWU1 | Pass
@@ -93,7 +93,7 @@ RIRF66 | Pass
 RIRF67 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
 RIRF68 | Failure [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
 
-## Replace NULL/0 with nullptr
+## Replace NULL/0 With nullptr
 Case | Result
 ---- | ------
 RZNP1   | Pass
@@ -123,7 +123,7 @@ RZNP24  | Pass
 RZNP25  | Pass
 RZNP26  | Pass
 
-## Replace type with auto
+## Replace Type With auto
 Case | Result
 ---- | ------
 RTWA1 | Pass

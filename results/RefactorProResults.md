@@ -745,9 +745,9 @@ RIT7   | Pass
 RIT8   | Pass
 RIT9   | Pass
 
-## Replace Nested Conditional with Guard Clause
+## Replace Nested Conditional With Guard Clause
 
-## Replace Temporary with Query
+## Replace Temporary With Query
 Case | Result
 ---- | ------
 RTQ1   | Pass
@@ -765,11 +765,11 @@ RTI7   | Pass
 RTI8   |
 RTI9   | Pass
 
-## Replace with Alias
+## Replace With Alias
 
-## Replace with Constant
+## Replace With Constant
 
-## Replace with Local
+## Replace With Local
 Case | Result
 ---- | ------
 RWL1   | Pass
@@ -906,9 +906,9 @@ Other Defects:
 * [B91306](https://www.devexpress.com/Support/Center/Question/Details/B91306) Documentation - Remove Type Qualifier is a stub
 * [B91307](https://www.devexpress.com/Support/Center/Question/Details/B91307) Documentation - Rename File to Match Type is a stub
 * [B91308](https://www.devexpress.com/Support/Center/Question/Details/B91308) Documentation - Rename Type to Match File is a stub
-* [B91309](https://www.devexpress.com/Support/Center/Question/Details/B91309) Documentation - Replace with Alias is a stub
-* [B91310](https://www.devexpress.com/Support/Center/Question/Details/B91310) Documentation - Replace with Constant is a stub
-* [B91311](https://www.devexpress.com/Support/Center/Question/Details/B91311) Documentation - Replace with Local is a stub
+* [B91309](https://www.devexpress.com/Support/Center/Question/Details/B91309) Documentation - Replace With Alias is a stub
+* [B91310](https://www.devexpress.com/Support/Center/Question/Details/B91310) Documentation - Replace With Constant is a stub
+* [B91311](https://www.devexpress.com/Support/Center/Question/Details/B91311) Documentation - Replace With Local is a stub
 * [B91312](https://www.devexpress.com/Support/Center/Question/Details/B91312) Documentation - Split With Statement is a stub
 * [B91313](https://www.devexpress.com/Support/Center/Question/Details/B91313) Documentation - Use IsNullOrEmpty is a stub
 * [B91314](https://www.devexpress.com/Support/Center/Question/Details/B91314) Documentation - Use String.Compare is a stub

@@ -207,7 +207,7 @@ R96  | Failure (not available)
 R97  | Failure (not available)
 R98  | Failure (wrong symbol selected by default)
 
-## Replace String Literal with Raw String Literal
+## Replace String Literal With Raw String Literal
 Case | Result
 ---- | ------
 RAW1  | Pass
