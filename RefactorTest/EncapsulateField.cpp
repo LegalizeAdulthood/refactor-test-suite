@@ -4,9 +4,6 @@
 
 // Encapsulates a field into a read-write property and replaces occurances
 // of this this field throughout the class with the newly declared property.
-//
-// Encapsulates a field into a read-only property and replaces all occurrences
-// of this field throughout the class with the newly declared property.
 
 namespace EncapsulateFieldNamespace
 {
