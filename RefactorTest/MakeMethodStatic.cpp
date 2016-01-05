@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Require.h"
 
 // Makes method static and replaces all references accordingly.
 namespace MakeMethodStaticNamespace
@@ -41,6 +42,9 @@ void TestMakeMethodStatic()
 {
     Foo f;
     int sum = f.Add(1, 2);
+    REQUIRE_EQUAL(3, sum);
     sum = f.Add(2);
+    REQUIRE_EQUAL(2, sum);
     sum = f.AddConst(3);
+    REQUIRE_EQUAL(3, sum);
 }
