@@ -17,6 +17,7 @@ Notes:
 * **Remove Unused Parameter** is available as a quick fix.
 * **Reorder Parameters** is available through **Change Signature**.
 * **Replace If With Ternary** is available as a quick fix.
+* **Reverse Conditional** is available as a quick fix.
 
 ## Add Block Delimiter
 Case | Result
@@ -433,3 +434,15 @@ RTWA29 | Pass
 RTWA30 | Pass
 RTWA31 | Pass
 RTWA32 | Pass
+
+## Reverse Conditional
+Case | Result
+---- | ------
+RC1 | Pass
+RC2 | Pass
+RC3 | Pass
+RC4 | Pass
+RC5 | Pass
+RC6 | Pass
+RC7 | Pass
+RC8 | Pass

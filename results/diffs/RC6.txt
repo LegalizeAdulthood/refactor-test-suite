@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/ReverseConditional.cpp b/RefactorTest/ReverseConditional.cpp
+index 2f9eb3f..63b7f32 100644
+--- a/RefactorTest/ReverseConditional.cpp
++++ b/RefactorTest/ReverseConditional.cpp
+@@ -64,13 +64,13 @@ namespace ReverseConditionalNamespace
+     int Test3(int i)
+     {
+         // #TEST#: RC6 Reverse Conditional
+-        if (i <= 0)
++        if (i > 0)
+         {
+-            return 1;
++            return 0;
+         }
+         else
+         {
+-            return 0;
++            return 1;
+         }
+     }
+ 
