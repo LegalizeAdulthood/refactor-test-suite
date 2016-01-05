@@ -1,0 +1,24 @@
+diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
+index bf17201..893e23e 100644
+--- a/RefactorTest/ExtractMethod.cpp
++++ b/RefactorTest/ExtractMethod.cpp
+@@ -83,13 +83,18 @@ namespace ExtractMethodNamespace
+             return member;
+         }
+ 
++        void Goink(void( Bar::*& member)(int) const)
++        {
++            member = &Bar::Const1;
++        }
++
+         void (Bar::*Method5(int x))(int) const
+         {
+             void (Bar::*member)(int) const;
+             if (x < 0)
+             {
+                 // #TEST#: EM5 Extract Method on next line
+-                member = &Bar::Const1;
++                Goink(member);
+             }
+             else
+             {

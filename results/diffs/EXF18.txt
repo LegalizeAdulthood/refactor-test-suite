@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/ExtractFunction.cpp b/RefactorTest/ExtractFunction.cpp
+index d6416f3..571ffcd 100644
+--- a/RefactorTest/ExtractFunction.cpp
++++ b/RefactorTest/ExtractFunction.cpp
+@@ -158,10 +158,16 @@ namespace ExtractFunction
+         int _x;
+         int _y;
+ 
++        void Goink(int& x) const
++        {
++            x = Function1() + Function2();
++        }
++
+         void ConstOperation() const
+         {
+             // #TEST#: EXF18 Extract Function on next line
+-            int x = Function1() + Function2();
++            int x;
++            Goink(x);
+             int y = x*2;
+         }
+     };

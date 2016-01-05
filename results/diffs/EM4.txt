@@ -1,0 +1,26 @@
+diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
+index bf17201..1aec932 100644
+--- a/RefactorTest/ExtractMethod.cpp
++++ b/RefactorTest/ExtractMethod.cpp
+@@ -67,6 +67,12 @@ namespace ExtractMethodNamespace
+         }
+ 
+         typedef void (Bar::*MethodPtr)(int);
++
++        void Goink(MethodPtr& member)
++        {
++            member = &Bar::Operation1;
++        }
++
+         MethodPtr Method4(int x)
+         {
+             MethodPtr member;
+@@ -74,7 +80,7 @@ namespace ExtractMethodNamespace
+             {
+                 // #TEST#: EM4 Extract Method on next line
+                 // #TEST#: EM20 Extract Method on rhs of assignment
+-                member = &Bar::Operation1;
++                Goink(member);
+             }
+             else
+             {

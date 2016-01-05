@@ -1,0 +1,24 @@
+diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
+index bf17201..423cfe1 100644
+--- a/RefactorTest/ExtractMethod.cpp
++++ b/RefactorTest/ExtractMethod.cpp
+@@ -273,12 +273,18 @@ namespace ExtractMethodNamespace
+ 
+         typedef void (Frob::*MethodPtr)(int);
+         MethodPtr member_ptr;
++
++        void Goink()
++        {
++            member_ptr = &Frob::Operation1;
++        }
++
+         MethodPtr Method4(int x)
+         {
+             if (x < 0)
+             {
+                 // #TEST#: EM16 Extract Method on next line
+-                member_ptr = &Frob::Operation1;
++                Goink();
+             }
+             else
+             {

@@ -1,0 +1,24 @@
+diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
+index bf17201..de6152f 100644
+--- a/RefactorTest/ExtractMethod.cpp
++++ b/RefactorTest/ExtractMethod.cpp
+@@ -304,12 +304,18 @@ namespace ExtractMethodNamespace
+ 
+         typedef void (Frob::*ConstMethodPtr)(int) const;
+         ConstMethodPtr cmember_ptr;
++
++        void Goink()
++        {
++            cmember_ptr = &Frob::Const1;
++        }
++
+         ConstMethodPtr Method6(int x)
+         {
+             if (x < 0)
+             {
+                 // #TEST#: EM18 Extract Method on next line
+-                cmember_ptr = &Frob::Const1;
++                Goink();
+             }
+             else
+             {

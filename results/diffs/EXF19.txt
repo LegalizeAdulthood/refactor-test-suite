@@ -1,0 +1,25 @@
+diff --git a/RefactorTest/ExtractFunction2.cpp b/RefactorTest/ExtractFunction2.cpp
+index a7401c7..5e76ad5 100644
+--- a/RefactorTest/ExtractFunction2.cpp
++++ b/RefactorTest/ExtractFunction2.cpp
+@@ -1,6 +1,11 @@
+ #include "stdafx.h"
+ #include <stdio.h>
+ 
++int Goink(FILE *f)
++{
++    return getc(f);
++}
++
+ void TestExtractFunctionCFile()
+ {
+     FILE *f = fopen("tmp.tmp", "wb");
+@@ -8,7 +13,7 @@ void TestExtractFunctionCFile()
+     for (int i = 0; i < 10; i++)
+     {
+         // #TEST#: EXF19 Extract Function on right hand side of assignment.
+-        y += getc(f);
++        y += Goink(f);
+     }
+     fclose(f);
+ }

@@ -100,50 +100,49 @@ CMVD12 | Pass
 ## Extract Function
 Case | Result
 ---- | ------
-EXF1 | 
-EXF2 | 
-EXF3 | 
-EXF4 | 
-EXF5 | 
-EXF6 | 
-EXF7 | 
-EXF8 | 
-EXF9 | 
-EXF10 | 
-EXF11 | 
-EXF12 | 
-EXF13 | 
-EXF14 | 
-EXF15 | 
-EXF16 | 
-EXF17 | 
-EXF18 | 
-EXF19 | 
-EXF20 | 
+EXF1 | Pass
+EXF2 | Pass
+EXF3 | Pass
+EXF4 | Pass
+EXF5 | Pass
+EXF6 | Pass
+EXF7 | Pass
+EXF8 | Pass
+EXF9 | Pass
+EXF10 | Pass
+EXF11 | Pass
+EXF12 | Pass
+EXF13 | Pass
+EXF14 | Pass
+EXF15 | Pass
+EXF16 | Pass
+EXF17 | Pass
+EXF18 | Pass
+EXF19 | Failure (does nothing)
 
 ## Extract Method
 Case | Result
 ---- | ------
-EM1 | 
-EM2 | 
-EM3 | 
-EM4 | 
-EM5 | 
-EM6 | 
-EM7 | 
-EM8 | 
-EM9 | 
-EM10 | 
-EM11 | 
-EM12 | 
-EM13 | 
-EM14 | 
-EM15 | 
-EM16 | 
-EM17 | 
-EM18 | 
-EM19 | 
-EM20 | 
+EM1 | Pass
+EM2 | Pass
+EM3 | Pass
+EM4 | Pass
+EM5 | Pass
+EM6 | Pass
+EM7 | Pass
+EM8 | Pass
+EM9 | Pass
+EM10 | Pass
+EM11 | Pass
+EM12 | Pass
+EM13 | Pass
+EM14 | Pass
+EM15 | Pass
+EM16 | Pass
+EM17 | Pass
+EM18 | Pass
+EM19 | Pass
+EM20 | Pass
 
 ## Move Implementation to Source File
 Case | Result

@@ -1,0 +1,25 @@
+diff --git a/RefactorTest/ExtractFunction.cpp b/RefactorTest/ExtractFunction.cpp
+index d6416f3..b2e1717 100644
+--- a/RefactorTest/ExtractFunction.cpp
++++ b/RefactorTest/ExtractFunction.cpp
+@@ -7,6 +7,11 @@ extern void TestExtractFunctionCFile();
+ 
+ namespace ExtractFunction
+ {
++    void Goink(int& x)
++    {
++        x <<= 3U;
++    }
++
+     int TestInteger()
+     {
+         // #TEST#: EXF1 Extract function on statement
+@@ -32,7 +37,7 @@ namespace ExtractFunction
+         x >>= 3U;
+         REQUIRE_EQUAL(1, x);
+         // #TEST#: EXF8 Extract function on statement
+-        x <<= 3U;
++        Goink(x);
+         REQUIRE_EQUAL(8, x);
+         // #TEST#: EXF9 Extract function on statement
+         x |= 3;

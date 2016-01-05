@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
+index bf17201..afc1a04 100644
+--- a/RefactorTest/ExtractMethod.cpp
++++ b/RefactorTest/ExtractMethod.cpp
+@@ -22,10 +22,16 @@ namespace ExtractMethodNamespace
+             _y = 4;
+         }
+ 
++        void Goink(int& x) const
++        {
++            x = Function1(_x) + Function2();
++        }
++
+         void ConstOperation() const
+         {
+             // #TEST#: EM19 Extract Method on next line
+-            int x = Function1(_x) + Function2();
++            int x;
++            Goink(x);
+             int y = x*2;
+             require_equal(_x + 2, x);
+             require_equal((_x + 2)*2, y);

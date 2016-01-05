@@ -1,0 +1,25 @@
+diff --git a/RefactorTest/ExtractFunction.cpp b/RefactorTest/ExtractFunction.cpp
+index d6416f3..7b2fba7 100644
+--- a/RefactorTest/ExtractFunction.cpp
++++ b/RefactorTest/ExtractFunction.cpp
+@@ -63,13 +63,19 @@ namespace ExtractFunction
+     }
+ 
+     typedef int Function(int);
++
++    void Goink(Function*& function)
++    {
++        function = Function1;
++    }
++
+     Function *TestFunction2(int x)
+     {
+         Function *function;
+         if (x > 0)
+         {
+             // #TEST#: EXF13 Extract function on statement
+-            function = Function1;
++            Goink(function);
+         }
+         else
+         {

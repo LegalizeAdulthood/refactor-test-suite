@@ -1,0 +1,25 @@
+diff --git a/RefactorTest/ExtractFunction.cpp b/RefactorTest/ExtractFunction.cpp
+index d6416f3..2a5ccd8 100644
+--- a/RefactorTest/ExtractFunction.cpp
++++ b/RefactorTest/ExtractFunction.cpp
+@@ -104,13 +104,19 @@ namespace ExtractFunction
+     }
+ 
+     typedef int (Foo::*PtrMemberT)(int);
++
++    void Goink(PtrMemberT& member)
++    {
++        member = &Foo::Operation1;
++    }
++
+     PtrMemberT TestMember2(int x)
+     {
+         PtrMemberT member;
+         if (x > 0)
+         {
+             // #TEST#: EXF15 Extract function on statement
+-            member = &Foo::Operation1;
++            Goink(member);
+         }
+         else
+         {
