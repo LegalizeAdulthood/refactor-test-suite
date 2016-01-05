@@ -20,6 +20,8 @@ Notes:
 * **Reverse Conditional** is available as a quick fix.
 * **Split Multi-Variable Declaration** is available as a quick fix.
 
+<hr/>
+
 ## Add Block Delimiter
 Case | Result
 ---- | ------
@@ -82,12 +84,6 @@ CS8  | Pass
 CS9  | Pass
 CS10 | Pass
 CS11 | Pass
-
-## Create Declaration From Implementation
-
-## Create Implementation From Declaration
-
-## Create Method Stub
 
 ## Create Multi-Variable Declaration
 Case | Result
