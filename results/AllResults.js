@@ -23,8 +23,8 @@ function StartTest()
 
 function testResult(list, matches)
 {
-    id = matches[1];
-    comment = matches[2].trim();
+    var id = matches[1];
+    var comment = matches[2].trim();
     if (comment.length > 0)
     {
         list.push([ id, comment ]);
