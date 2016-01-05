@@ -35,4 +35,3 @@ The original release of the test suite is described
 
 - [Code::Blocks](http://www.codeblocks.org/)
 - [Eclipse CDT](https://eclipse.org/cdt/)
-- [ReSharper for C++](https://www.jetbrains.com/resharper/features/cpp.html)
