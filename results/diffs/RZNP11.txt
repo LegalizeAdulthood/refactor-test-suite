@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
+index 45aecb9..be6051f 100644
+--- a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
++++ b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
+@@ -19,7 +19,7 @@ public:
+         e(0),    // #TEST#: RZNP8 Replace 0 with nullptr
+         f(NULL), // #TEST#: RZNP9 Replace NULL with nullptr
+         g(0),    // #TEST#: RZNP10 Replace 0 with nullptr
+-        h(NULL), // #TEST#: RZNP11 Replace NULL with nullptr
++        h(nullptr), // #TEST#: RZNP11 Replace NULL with nullptr
+         i(0)     // #TEST#: RZNP12 Replace 0 with nullptr
+     {
+         assert(!p_);

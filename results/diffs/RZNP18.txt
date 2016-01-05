@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
+index 45aecb9..a614942 100644
+--- a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
++++ b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
+@@ -72,7 +72,7 @@ static void TestDefaultArguments(char *p = NULL,             // #TEST#: RZNP13 R
+                                  char const *f = NULL,       // #TEST#: RZNP15 Replace NULL with nullptr
+                                  char const *g = 0,          // #TEST#: RZNP16 Replace 0 with nullptr
+                                  char const *const h = NULL, // #TEST#: RZNP17 Replace NULL with nullptr
+-                                 char const *const i = 0)    // #TEST#: RZNP18 Replace 0 with nullptr
++                                 char const *const i = nullptr) // #TEST#: RZNP18 Replace 0 with nullptr
+ {
+     assert(!p);
+     assert(!q);
