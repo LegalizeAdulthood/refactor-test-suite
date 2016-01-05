@@ -14,6 +14,8 @@ Notes:
 * **Make Method Static** is available as a quick fix.
 * **Move Implementation to Source File** is available as a quick fix.
 * **Remove Block Delimiter** is available as a quick fix.
+* **Remove Unused Parameter** is available as a quick fix.
+* **Reorder Parameters** is available through **Change Signature**.
 
 ## Add Block Delimiter
 Case | Result
@@ -227,6 +229,14 @@ RBD6 | Pass
 RBD7 | Pass
 RBD8 | Pass
 
+# Remove Unused Parameter
+Case | Result
+---- | ------
+RUP1 | Pass
+RUP2 | Pass
+RUP3 | Failure (does not update usages)
+RUP4 | Failure (does not update usages)
+
 ## Rename
 Case | Result
 ---- | ------
@@ -328,3 +338,9 @@ R95  | Pass
 R96  | Pass
 R97  | Pass
 R98  | Pass
+
+## Reorder Parameters
+Case | Result
+---- | ------
+RP1 | Failure (functionality not available)
+RP2 | 
