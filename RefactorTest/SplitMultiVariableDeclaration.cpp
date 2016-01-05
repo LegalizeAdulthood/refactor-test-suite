@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <vector>
+#include "Require.h"
 
 // Splits a single-statement multi-variable declarations into multiple lines,
 // with a separate variable declaration on each line.
@@ -63,12 +64,15 @@ void TestSplitMultiVariableDeclaration()
     i = 0;
     j = 0;
     p = 0;
+    REQUIRE_EQUAL(i, r);
+    REQUIRE_EQUAL(j, rp);
 
     // #TEST#: SMVD2 Split multi-variable declaration
     static int si, *sj, **sp, *&srp = sj;
     si = 0;
     sj = 0;
     sp = 0;
+    REQUIRE_EQUAL(sj, srp);
 
     // #TEST#: SMVD3 Split multi-variable declaration
     std::vector<int>::size_type sti, stj;
