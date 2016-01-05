@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
+index 12b4e33..89d862d 100644
+--- a/RefactorTest/InlineVariable.cpp
++++ b/RefactorTest/InlineVariable.cpp
+@@ -29,11 +29,9 @@ namespace InlineVariableNamespace
+     void TestFunction()
+     {
+         // #TEST#: IV2 Inline Variable fn
+-        int (*fn)() = Function1;
+-        int j = (*fn)();
++        int j = Function1();
+         require_equal(1, j);
+-        fn = Function2;
+-        j += (*fn)();
++        j += Function2();
+         require_equal(3, j);
+     }
+ 

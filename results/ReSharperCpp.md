@@ -10,6 +10,7 @@ Notes:
 * **Add Override** is available as a quick fix.
 * **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
 * **Create Multi-Variable Declaration** is available as a quick fix.
+* **Flatten Conditional** is available as a quick fix.
 * **Remove Block Delimiter** is available as a quick fix.
 
 ## Add Block Delimiter
@@ -153,6 +154,27 @@ EXV3 | Pass
 EXV4 | Pass
 EXV5 | Pass
 EXV6 | Pass
+
+## Flatten Conditional
+Case | Result
+---- | ------
+FC1 | Failure
+
+## Inline Variable
+Case | Result
+---- | ------
+IV1 | Failure (not available)
+IV2 | Failure (not available)
+IV3 | Failure (not available)
+IV4 | Failure (not available)
+IV5 | Failure (not available)
+IV6 | Failure (not available)
+IV7 | Failure (not available)
+IV8 | Failure (not available)
+IV9 | Failure (not available)
+IV10 | Failure (not available)
+IV11 | Failure (not available)
+IV12 | Failure (not available)
 
 ## Move Implementation to Source File
 Case | Result

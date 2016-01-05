@@ -1,0 +1,15 @@
+diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
+index 12b4e33..897fe76 100644
+--- a/RefactorTest/InlineVariable.cpp
++++ b/RefactorTest/InlineVariable.cpp
+@@ -125,9 +125,8 @@ namespace InlineVariableNamespace
+     void TestReference()
+     {
+         globalBool = false;
+-        bool &r = globalBool;
+         // #TEST#: IV12 Inline Variable r
+-        int value = boolParam(r);
++        int value = boolParam(globalBool);
+         require_equal(1, value);
+         require_equal(true, globalBool);
+     }

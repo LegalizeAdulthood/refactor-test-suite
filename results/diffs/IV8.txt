@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
+index 12b4e33..9a23157 100644
+--- a/RefactorTest/InlineVariable.cpp
++++ b/RefactorTest/InlineVariable.cpp
+@@ -104,10 +104,9 @@ namespace InlineVariableNamespace
+ 
+     void TestConstMemberPointer2()
+     {
+-        int (Foo::*member)() const = &Foo::Method1;
+         Foo f;
+         // #TEST#: IV8 Inline Variable member
+-        int j = (f.*member)();
++        int j = f.Method1();
+         int (Foo::*member2)() const = &Foo::Method2;
+         // #TEST#: IV9 Inline Variable member2
+         j += (f.*member2)();
