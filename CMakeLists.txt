@@ -7,7 +7,6 @@ endif()
 
 set(headers
     RefactorTest/AddParameter.h
-    RefactorTest/BooleanToEnum.h
     RefactorTest/ChangeSignature.h
     RefactorTest/CreateOverload.h
     RefactorTest/CreateSetterMethod.h
@@ -25,24 +24,13 @@ set(sources
     RefactorTest/AddOverride.cpp
     RefactorTest/AddParameter.cpp
     RefactorTest/AddBlockDelimiter.cpp
-    RefactorTest/BooleanToEnum.cpp
-    RefactorTest/BreakApartLineUpParameters.cpp
     RefactorTest/ChangeSignature.cpp
-    RefactorTest/CollapseExpandAccessors.cpp
-    RefactorTest/CombineConditionals.cpp
-    RefactorTest/ConditionalToCase.cpp
-    RefactorTest/CreateMethodContract.cpp
     RefactorTest/CreateMethodStub.cpp
-    RefactorTest/CreateOverload.cpp
     RefactorTest/CreateSetterMethod.cpp
     RefactorTest/CreateMultiVariableDeclaration.cpp
-    RefactorTest/DecomposeParameter.cpp
-    RefactorTest/EncapsulateDowncast.cpp
-    RefactorTest/EncapsulateField.cpp
     RefactorTest/ExtractConstant.cpp
     RefactorTest/ExtractFunction.cpp
     RefactorTest/ExtractFunction2.cpp
-    RefactorTest/ExtractInterface.cpp
     RefactorTest/ExtractMethod.cpp
     RefactorTest/ExtractParameter.cpp
     RefactorTest/ExtractVariable.cpp
@@ -51,20 +39,10 @@ set(sources
     RefactorTest/InlineRecentAssignment.cpp
     RefactorTest/InlineResult.cpp
     RefactorTest/InlineVariable.cpp
-    RefactorTest/IntroduceAlias.cpp
-    RefactorTest/IntroduceParameter.cpp
-    RefactorTest/IntroduceParameterObject.cpp
-    RefactorTest/IntroduceResultVariable.cpp
     RefactorTest/MakeMethodStatic.cpp
-    RefactorTest/MoveDeclarationNearReference.cpp
-    RefactorTest/MoveInitializationToDeclaration.cpp
     RefactorTest/MoveImplementationToSourceFile.cpp
     RefactorTest/MoveMethod.cpp
-    RefactorTest/MoveTypeToFile.cpp
-    RefactorTest/MoveTypeToNamespace.cpp
     RefactorTest/OptimizeNamespaceReferences.cpp
-    RefactorTest/ReduceVisibility.cpp
-    RefactorTest/RemoveAssignmentsToParameters.cpp
     RefactorTest/RemoveBlockDelimiter.cpp
     RefactorTest/RemoveRedundantConditional.cpp
     RefactorTest/RemoveUnusedParameters.cpp
@@ -79,22 +57,16 @@ set(sources
     RefactorTest/ReplaceNestedConditionalWithGuardClause.cpp
     RefactorTest/ReplaceNullZeroWithNullPtr.cpp
     RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
-    RefactorTest/ReplaceTemporaryWithQuery.cpp
     RefactorTest/ReplaceTernaryWithIf.cpp
     RefactorTest/ReplaceTypeWithAuto.cpp
     RefactorTest/ReplaceWithAlias.cpp
     RefactorTest/ReplaceWithConstant.cpp
-    RefactorTest/ReplaceWithLocal.cpp
     RefactorTest/ReverseConditional.cpp
     RefactorTest/SafeRename.cpp
     RefactorTest/SimplifyBooleanExpression.cpp
     RefactorTest/SplitInitializationFromDeclaration.cpp
     RefactorTest/SplitMultiVariableDeclaration.cpp
-    RefactorTest/SplitTemporaryVariable.cpp
     RefactorTest/stdafx.cpp
-    RefactorTest/WidenScope.cpp
-    RefactorTest/WidenScopePromoteToConstant.cpp
-    RefactorTest/WidenScopePromoteToField.cpp
     RefactorTest/RefactorTest.cpp)
 
 set(SOURCE_FILES ${headers} ${sources})

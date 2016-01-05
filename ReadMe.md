@@ -31,9 +31,6 @@ The original release of the test suite is described
 - [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
 - [Visual Studio 2015](results/VisualStudio2015Results.md)
 
-## Discontinued Products
-- [Refactor!Pro 9.1.10](results/RefactorProResults.md)
-
 ## Unknown Results
 
 - [Code::Blocks](http://www.codeblocks.org/)
