@@ -1,0 +1,30 @@
+diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
+index 800c819..69257cd 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.cpp
++++ b/RefactorTest/MoveImplementationToSourceFile.cpp
+@@ -1,6 +1,10 @@
+ #include "stdafx.h"
+ #include "MoveImplementationToSourceFile.h"
+ 
++void MoveImplementationToSourceFile::VirtualBase::g()
++{
++}
++
+ void TestMoveImplementationToSourceFile()
+ {
+     using namespace MoveImplementationToSourceFile;
+diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
+index 00b4a56..0c9f793 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.h
++++ b/RefactorTest/MoveImplementationToSourceFile.h
+@@ -59,9 +59,7 @@ public:
+     virtual void f() = 0;
+ 
+     // #TEST#: MISF9 Move implementation to source file
+-    virtual void g()
+-    {
+-    }
++    virtual void g();
+ 
+     // #TEST#: MISF10 Move implementation to source file (should not be available)
+     virtual int h() const = 0;

@@ -1,0 +1,32 @@
+diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
+index 800c819..e304814 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.cpp
++++ b/RefactorTest/MoveImplementationToSourceFile.cpp
+@@ -1,6 +1,11 @@
+ #include "stdafx.h"
+ #include "MoveImplementationToSourceFile.h"
+ 
++int( MoveImplementationToSourceFile::Nested::VirtualBase::* MoveImplementationToSourceFile::Nested::Derived::GetOperation() const)() const
++{
++    return &VirtualBase::h;
++}
++
+ void TestMoveImplementationToSourceFile()
+ {
+     using namespace MoveImplementationToSourceFile;
+diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
+index 00b4a56..6904495 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.h
++++ b/RefactorTest/MoveImplementationToSourceFile.h
+@@ -150,10 +150,7 @@ public:
+     }
+ 
+     // #TEST#: MISF26 Move implementation to source file
+-    int (VirtualBase::*GetOperation() const)() const override
+-    {
+-        return &VirtualBase::h;
+-    }
++    int (VirtualBase::* GetOperation() const)() const override;
+ };
+ 
+ }

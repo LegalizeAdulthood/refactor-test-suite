@@ -1,0 +1,32 @@
+diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
+index 800c819..096bcf8 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.cpp
++++ b/RefactorTest/MoveImplementationToSourceFile.cpp
+@@ -1,6 +1,11 @@
+ #include "stdafx.h"
+ #include "MoveImplementationToSourceFile.h"
+ 
++int MoveImplementationToSourceFile::Variant::getInt() const
++{
++    return i;
++}
++
+ void TestMoveImplementationToSourceFile()
+ {
+     using namespace MoveImplementationToSourceFile;
+diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
+index 00b4a56..9b3ddd8 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.h
++++ b/RefactorTest/MoveImplementationToSourceFile.h
+@@ -43,10 +43,7 @@ union Variant
+     double d;
+ 
+     // #TEST#: MISF6 Move implementation to source file
+-    int getInt() const
+-    {
+-        return i;
+-    }
++    int getInt() const;
+ };
+ 
+ class VirtualBase

@@ -1,0 +1,28 @@
+diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
+index 800c819..1d3abd6 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.cpp
++++ b/RefactorTest/MoveImplementationToSourceFile.cpp
+@@ -1,6 +1,9 @@
+ #include "stdafx.h"
+ #include "MoveImplementationToSourceFile.h"
+ 
++void MoveImplementationToSourceFile::Derived::f()
++{}
++
+ void TestMoveImplementationToSourceFile()
+ {
+     using namespace MoveImplementationToSourceFile;
+diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
+index 00b4a56..8b66109 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.h
++++ b/RefactorTest/MoveImplementationToSourceFile.h
+@@ -82,8 +82,7 @@ public:
+     {}
+ 
+     // #TEST#: MISF14 Move implementation to source file
+-    void f() override
+-    {}
++    void f() override;
+ 
+     void g() override
+     {}

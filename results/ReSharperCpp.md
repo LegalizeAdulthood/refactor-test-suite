@@ -12,6 +12,7 @@ Notes:
 * **Create Multi-Variable Declaration** is available as a quick fix.
 * **Flatten Conditional** is available as a quick fix.
 * **Make Method Static** is available as a quick fix.
+* **Move Implementation to Source File** is available as a quick fix.
 * **Remove Block Delimiter** is available as a quick fix.
 
 ## Add Block Delimiter
@@ -187,32 +188,32 @@ MMS3 | Failure (does not update usages)
 ## Move Implementation to Source File
 Case | Result
 ---- | ------
-MISF1  | 
-MISF2  | 
-MISF3  | 
-MISF4  | 
-MISF5  | 
-MISF6  | 
-MISF7  | 
-MISF8  | 
-MISF9  | 
-MISF10 | 
-MISF11 | 
-MISF12 | 
-MISF13 | 
-MISF14 | 
-MISF15 | 
-MISF16 | 
-MISF17 | 
-MISF18 | 
-MISF19 | 
-MISF20 | 
-MISF21 | 
-MISF22 | 
-MISF23 | 
-MISF24 | 
-MISF25 | 
-MISF26 | 
+MISF1  | Pass
+MISF2  | Pass
+MISF3  | Pass
+MISF4  | Pass
+MISF5  | Pass
+MISF6  | Pass
+MISF7  | Pass
+MISF8  | Pass
+MISF9  | Pass
+MISF10 | Pass
+MISF11 | Pass
+MISF12 | Pass
+MISF13 | Pass
+MISF14 | Pass
+MISF15 | Pass
+MISF16 | Pass
+MISF17 | Pass
+MISF18 | Pass
+MISF19 | Pass
+MISF20 | Pass
+MISF21 | Pass
+MISF22 | Pass
+MISF23 | Pass
+MISF24 | Pass
+MISF25 | Pass
+MISF26 | Pass
 
 ## Remove Block Delimiter
 Case | Result

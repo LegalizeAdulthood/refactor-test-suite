@@ -1,0 +1,28 @@
+diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
+index 800c819..6433bf6 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.cpp
++++ b/RefactorTest/MoveImplementationToSourceFile.cpp
+@@ -1,6 +1,9 @@
+ #include "stdafx.h"
+ #include "MoveImplementationToSourceFile.h"
+ 
++MoveImplementationToSourceFile::Derived::Derived()
++{}
++
+ void TestMoveImplementationToSourceFile()
+ {
+     using namespace MoveImplementationToSourceFile;
+diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
+index 00b4a56..2e2cb5c 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.h
++++ b/RefactorTest/MoveImplementationToSourceFile.h
+@@ -74,8 +74,7 @@ class Derived : public VirtualBase
+ {
+ public:
+     // #TEST#: MISF12 Move implementation to source file
+-    Derived()
+-    {}
++    Derived();
+ 
+     // #TEST#: MISF13 Move implementation to source file
+     virtual ~Derived()

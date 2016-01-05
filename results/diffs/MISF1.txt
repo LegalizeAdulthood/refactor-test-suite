@@ -1,0 +1,32 @@
+diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
+index 800c819..3ace1df 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.cpp
++++ b/RefactorTest/MoveImplementationToSourceFile.cpp
+@@ -1,6 +1,11 @@
+ #include "stdafx.h"
+ #include "MoveImplementationToSourceFile.h"
+ 
++int MoveImplementationToSourceFile::f()
++{
++    return 1;
++}
++
+ void TestMoveImplementationToSourceFile()
+ {
+     using namespace MoveImplementationToSourceFile;
+diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
+index 00b4a56..cd6da2a 100644
+--- a/RefactorTest/MoveImplementationToSourceFile.h
++++ b/RefactorTest/MoveImplementationToSourceFile.h
+@@ -5,10 +5,7 @@ namespace MoveImplementationToSourceFile
+ {
+ 
+ // #TEST#: MISF1 Move implementation to source file
+-inline int f()
+-{
+-    return 1;
+-}
++inline int f();
+ 
+ struct Base
+ {
