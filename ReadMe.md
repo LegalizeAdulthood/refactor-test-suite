@@ -27,6 +27,7 @@ The original release of the test suite is described
 
 - [CLion CL-140-1221.2](results/CLionResults.md)
 - [clang-modernize 3.5.0](results/ClangModernizeResults.md)
+- [ReSharper for C++ 10.0.2](results/ReSharperCppResults.md)
 - [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
 - [Visual Studio 2015](results/VisualStudio2015Results.md)
 
