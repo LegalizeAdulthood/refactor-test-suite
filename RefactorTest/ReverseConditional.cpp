@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Require.h"
 
 // Inverts the logic in a conditional statement and swaps the if and else blocks.
 
@@ -10,10 +11,10 @@ namespace ReverseConditionalNamespace
         return ++i;
     }
 
-    void Test1()
+    int Test1()
     {
         int i = GetSomething();
-        int j;
+        int j = 0;
 
         // #TEST#: RC1 Reverse Conditional
         if (i != 6)
@@ -41,10 +42,17 @@ namespace ReverseConditionalNamespace
                 j = 5;
             }
         }
-
+        return j;
     }
 }
 
 void TestReverseConditional()
 {
+    REQUIRE_EQUAL(2, ReverseConditionalNamespace::Test1());
+    REQUIRE_EQUAL(3, ReverseConditionalNamespace::Test1());
+    REQUIRE_EQUAL(7, ReverseConditionalNamespace::Test1());
+    REQUIRE_EQUAL(5, ReverseConditionalNamespace::Test1());
+    REQUIRE_EQUAL(7, ReverseConditionalNamespace::Test1());
+    REQUIRE_EQUAL(0, ReverseConditionalNamespace::Test1());
+    REQUIRE_EQUAL(7, ReverseConditionalNamespace::Test1());
 }
