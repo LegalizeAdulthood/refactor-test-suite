@@ -5,7 +5,6 @@ Home: [ReSharper for C++](http://www.jetbrains.com/resharper-cpp/)
 Version: 10.0.2
 
 Notes:
-
 * **Add Block Delimiter** is available as a quick fix.  The tests pass if only code is selected and not the surrounding comment lines.
 * **Add Override** is available as a quick fix.
 * **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
@@ -228,7 +227,7 @@ RBD6 | Pass
 RBD7 | Pass
 RBD8 | Pass
 
-# Remove Unused Parameter
+## Remove Unused Parameter
 Case | Result
 ---- | ------
 RUP1 | Pass

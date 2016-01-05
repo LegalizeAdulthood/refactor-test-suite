@@ -606,7 +606,7 @@ RBD8
 
 ## Remove Redundant Conditional
 
-## Remove Unused Parameters
+## Remove Unused Parameter
 Case | Result
 ---- | ------
 RUP1   | Pass

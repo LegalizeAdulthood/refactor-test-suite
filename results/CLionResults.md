@@ -321,7 +321,7 @@ RBD6  | Failure (not available)
 RBD7  | Pass
 RBD8  | Pass
 
-## Remove Unused Parameters
+## Remove Unused Parameter
 Case | Result
 ---- | ------
 RUP1  | Pass
