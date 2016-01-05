@@ -11,6 +11,7 @@ Notes:
 * **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
 * **Create Multi-Variable Declaration** is available as a quick fix.
 * **Flatten Conditional** is available as a quick fix.
+* **Make Method Static** is available as a quick fix.
 * **Remove Block Delimiter** is available as a quick fix.
 
 ## Add Block Delimiter
@@ -175,6 +176,13 @@ IV9 | Failure (not available)
 IV10 | Failure (not available)
 IV11 | Failure (not available)
 IV12 | Failure (not available)
+
+## Make Method Static
+Case | Result
+---- | ------
+MMS1 | Failure (does not update usages)
+MMS2 | Failure (does not update usages)
+MMS3 | Failure (does not update usages)
 
 ## Move Implementation to Source File
 Case | Result
