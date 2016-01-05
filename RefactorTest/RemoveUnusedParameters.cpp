@@ -73,4 +73,5 @@ void TestRemoveUnusedParameter()
     Foo f;
     REQUIRE_EQUAL(2, f.Method1(0));
     REQUIRE_EQUAL(-1, TestMemberPointer2(f, &Foo::Method2, -1));
+    REQUIRE_EQUAL(10, goop(10, 20));
 }
