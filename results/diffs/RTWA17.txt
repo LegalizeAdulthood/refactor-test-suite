@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceTypeWithAuto.cpp b/RefactorTest/ReplaceTypeWithAuto.cpp
+index 46137e4..0527e93 100644
+--- a/RefactorTest/ReplaceTypeWithAuto.cpp
++++ b/RefactorTest/ReplaceTypeWithAuto.cpp
+@@ -192,7 +192,7 @@ static void TestReplaceTypeWithAutoSet()
+     c.insert(2);
+     int sum = 0;
+     // #TEST#: RTWA17 Replace type with auto
+-    for (std::set<int>::const_iterator it = c.cbegin(), end = c.cend();
++    for (auto it = c.cbegin(), end = c.cend();
+         it != end; ++it)
+     {
+         sum += *it;

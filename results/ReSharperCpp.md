@@ -397,3 +397,39 @@ RZNP25 | Pass
 RZNP26 | Pass
 RZNP27 | Failure (not available)
 RZNP28 | Failure (not available)
+
+## Replace Type With Auto
+Case | Result
+---- | ------
+RTWA1 | Pass
+RTWA2 | Pass
+RTWA3 | Pass
+RTWA4 | Pass
+RTWA5 | Pass
+RTWA6 | Pass
+RTWA7 | Pass
+RTWA8 | Pass
+RTWA9 | Pass
+RTWA10 | Pass
+RTWA11 | Pass
+RTWA12 | Pass
+RTWA13 | Pass
+RTWA14 | Pass
+RTWA15 | Pass
+RTWA16 | Pass
+RTWA17 | Pass
+RTWA18 | Pass
+RTWA19 | Pass
+RTWA20 | Pass
+RTWA21 | Pass
+RTWA22 | n/a
+RTWA23 | Pass
+RTWA24 | n/a
+RTWA25 | Pass
+RTWA26 | n/a
+RTWA27 | Pass
+RTWA28 | Pass
+RTWA29 | Pass
+RTWA30 | Pass
+RTWA31 | Pass
+RTWA32 | Pass

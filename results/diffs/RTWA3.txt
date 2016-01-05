@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceTypeWithAuto.cpp b/RefactorTest/ReplaceTypeWithAuto.cpp
+index 46137e4..610ee34 100644
+--- a/RefactorTest/ReplaceTypeWithAuto.cpp
++++ b/RefactorTest/ReplaceTypeWithAuto.cpp
+@@ -34,7 +34,7 @@ static void TestReplaceTypeWithAutoDeque()
+ 
+     sum = 0;
+     // #TEST#: RTWA3 Replace type with auto
+-    for (std::deque<int>::iterator it = c.begin(), end = c.end();
++    for (auto it = c.begin(), end = c.end();
+         it != end; ++it)
+     {
+         ++*it;

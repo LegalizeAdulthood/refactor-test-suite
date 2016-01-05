@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceTypeWithAuto.cpp b/RefactorTest/ReplaceTypeWithAuto.cpp
+index 46137e4..63126cc 100644
+--- a/RefactorTest/ReplaceTypeWithAuto.cpp
++++ b/RefactorTest/ReplaceTypeWithAuto.cpp
+@@ -88,7 +88,7 @@ static void TestReplaceTypeWithAutoList()
+ 
+     sum = 0;
+     // #TEST#: RTWA8 Replace type with auto
+-    for (std::list<int>::reverse_iterator it = c.rbegin(), end = c.rend();
++    for (auto it = c.rbegin(), end = c.rend();
+         it != end; ++it)
+     {
+         --*it;
