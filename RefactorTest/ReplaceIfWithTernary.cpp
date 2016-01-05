@@ -25,7 +25,7 @@ namespace ReplaceIfWithTernary
         {
             x = 1;
         }
-        require_equal(10, x);
+        REQUIRE_EQUAL(10, x);
 
         // #TEST#: RIT2 Replace If With Ternary Expression
         if (y == 10)
@@ -36,7 +36,7 @@ namespace ReplaceIfWithTernary
         {
             x = 1;
         }
-        require_equal(10, x);
+        REQUIRE_EQUAL(10, x);
 
         // #TEST#: RIT3 Replace If With Ternary Expression
         if (y == 10)
@@ -51,7 +51,7 @@ namespace ReplaceIfWithTernary
         {
             x = 0;
         }
-        require_equal(10, x);
+        REQUIRE_EQUAL(10, x);
 
         // #TEST#: RIT4 Replace If With Ternary Expression
         if (y == 10)
@@ -65,7 +65,7 @@ namespace ReplaceIfWithTernary
                 x = 1;
             }
         }
-        require_equal(10, x);
+        REQUIRE_EQUAL(10, x);
     }
 
     void TestFloatDouble()
@@ -124,7 +124,7 @@ namespace ReplaceIfWithTernary
         {
             fn2 = Operation1;
         }
-        require_equal(2, fn2());
+        REQUIRE_EQUAL(2, fn2());
     }
 
     class Foo
@@ -149,7 +149,7 @@ namespace ReplaceIfWithTernary
             mem2 = &Foo::Operation1;
         }
         Foo f;
-        require_equal(2, (f.*mem2)());
+        REQUIRE_EQUAL(2, (f.*mem2)());
     }
 }
 
