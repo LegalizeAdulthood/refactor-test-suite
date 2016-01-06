@@ -24,13 +24,13 @@ Notes:
 ## Add Block Delimiter
 Case | Result
 ---- | ------
-ABD1 | Failure (tries to surround lines with parenthesis)
-ABD2 | Failure (tries to surround lines with parenthesis)
-ABD3 | Failure (tries to surround lines with parenthesis)
-ABD4 | Failure (tries to surround lines with parenthesis)
-ABD5 | Failure (tries to surround lines with parenthesis)
-ABD6 | Failure (tries to surround lines with parenthesis)
-ABD7 | Failure (tries to surround lines with parenthesis)
+ABD1 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD2 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD3 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD4 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD5 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD6 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD7 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
 
 ## Add Override
 Case | Result
@@ -44,9 +44,9 @@ AO5  | Pass
 ## Add Parameter
 Case | Result
 ---- | ------
-AP1  | Failure (does nothing)
+AP1  | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
 AP2  | Pass
-AP3  | Failure (does nothing)
+AP3  | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
 AP4  | Pass
 AP5  | Pass
 AP6  | Pass
@@ -56,18 +56,18 @@ AP9  | Pass
 AP10 | Pass
 AP11 | Pass
 AP12 | Pass
-AP13 | Failure (can't cope with overloads)
+AP13 | Failure (can't cope with overloads) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
 AP14 | Pass
 AP15 | Pass
 AP16 | Pass
 AP17 | Pass
 AP18 | Pass
-AP19 | Failure (does nothing)
+AP19 | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
 AP20 | Pass
 AP21 | Pass
 AP22 | Pass
 AP23 | Pass
-AP24 | Failure (does nothing)
+AP24 | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
 
 ## Change Signature
 Case | Result
@@ -92,7 +92,7 @@ CMVD2  | Pass
 CMVD3  | Pass
 CMVD4  | Pass
 CMVD5  | Pass
-CMVD6  | Failure
+CMVD6  | Failure [RSCPP-15791](https://youtrack.jetbrains.com/issue/RSCPP-15791)
 CMVD7  | Pass
 CMVD8  | Pass
 CMVD9  | Pass
@@ -121,7 +121,7 @@ EXF15 | Pass
 EXF16 | Pass
 EXF17 | Pass
 EXF18 | Pass
-EXF19 | Failure (does nothing)
+EXF19 | Failure (does nothing) [RSCPP-15792](https://youtrack.jetbrains.com/issue/RSCPP-15792)
 
 ## Extract Method
 Case | Result
@@ -165,25 +165,25 @@ FC1 | Failure
 ## Inline Variable
 Case | Result
 ---- | ------
-IV1 | Failure (not available)
-IV2 | Failure (not available)
-IV3 | Failure (not available)
-IV4 | Failure (not available)
-IV5 | Failure (not available)
-IV6 | Failure (not available)
-IV7 | Failure (not available)
-IV8 | Failure (not available)
-IV9 | Failure (not available)
-IV10 | Failure (not available)
-IV11 | Failure (not available)
-IV12 | Failure (not available)
+IV1 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV2 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV3 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV4 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV5 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV6 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV7 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV8 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV9 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV10 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV11 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV12 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
 
 ## Make Method Static
 Case | Result
 ---- | ------
-MMS1 | Failure (does not update usages)
-MMS2 | Failure (does not update usages)
-MMS3 | Failure (does not update usages)
+MMS1 | Failure (does not update usages) [RSCPP-15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
+MMS2 | Failure (does not update usages) [RSCPP-15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
+MMS3 | Failure (does not update usages) [RSCPP-15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
 
 ## Move Implementation to Source File
 Case | Result
@@ -232,8 +232,8 @@ Case | Result
 ---- | ------
 RUP1 | Pass
 RUP2 | Pass
-RUP3 | Failure (does not update usages)
-RUP4 | Failure (does not update usages)
+RUP3 | Failure (does not update usages) [RSCPP-15795](https://youtrack.jetbrains.com/issue/RSCPP-15795)
+RUP4 | Failure (does not update usages) [RSCPP-15795](https://youtrack.jetbrains.com/issue/RSCPP-15795)
 
 ## Rename
 Case | Result
@@ -262,14 +262,14 @@ R21  | Pass
 R22  | Pass
 R23  | Pass
 R24  | Pass
-R25  | Failure (unavailable)
+R25  | Failure (unavailable) [RSCPP-15796](https://youtrack.jetbrains.com/issue/RSCPP-15796)
 R26  | Pass
 R27  | Pass
 R28  | Pass
 R29  | Pass
 R30  | Pass
 R31  | Pass
-R32  | Failure (misses usage in typedef)
+R32  | Failure (misses usage in typedef) [RSCPP-15797](https://youtrack.jetbrains.com/issue/RSCPP-15797)
 R33  | Pass
 R34  | Pass
 R35  | Pass
@@ -319,8 +319,8 @@ R78  | Pass
 R79  | Pass
 R80  | Pass
 R81  | Pass
-R82  | Failure (unavailable)
-R83  | Failure (unavailable)
+R82  | Failure (unavailable) [RSCPP-15798](https://youtrack.jetbrains.com/issue/RSCPP-15798)
+R83  | Failure (unavailable) [RSCPP-15798](https://youtrack.jetbrains.com/issue/RSCPP-15798)
 R84  | Pass
 R85  | Pass
 R86  | Pass
@@ -341,11 +341,11 @@ R98  | Pass
 Case | Result
 ---- | ------
 RP1 | Failure (functionality not available)
-RP2 | Failure
+RP2 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
 RP3 | Pass
-RP4 | Failure
-RP5 | Failure
-RP6 | Failure
+RP4 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
+RP5 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
+RP6 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
 RP7 | Failure (functionality not available)
 RP8 | Failure (functionality not available)
 RP9 | Failure (functionality not available)
@@ -354,14 +354,14 @@ RP9 | Failure (functionality not available)
 Case | Result
 ---- | ------
 RIT1 | Pass
-RIT2 | Failure (not available)
-RIT3 | Failure (not available)
-RIT4 | Failure (not available)
+RIT2 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
+RIT3 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
+RIT4 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
 RIT5 | Pass
 RIT6 | Pass
-RIT7 | Pass (but generates odd syntax)
+RIT7 | Pass (but generates odd syntax) [RSCPP-15801](https://youtrack.jetbrains.com/issue/RSCPP-15801)
 RIT8 | Pass
-RIT9 | Failure (generates invalid syntax)
+RIT9 | Failure (generates invalid syntax) [RSCPP-15802](https://youtrack.jetbrains.com/issue/RSCPP-15802)
 
 ## Replace NULL/0 With nullptr
 Case | Result
@@ -392,8 +392,8 @@ RZNP23 | Pass
 RZNP24 | Pass
 RZNP25 | Pass
 RZNP26 | Pass
-RZNP27 | Failure (not available)
-RZNP28 | Failure (not available)
+RZNP27 | Failure (not available) [RSCPP-15803](https://youtrack.jetbrains.com/issue/RSCPP-15803)
+RZNP28 | Failure (not available) [RSCPP-15803](https://youtrack.jetbrains.com/issue/RSCPP-15803)
 
 ## Replace Type With auto
 Case | Result
@@ -451,11 +451,11 @@ SMVD2 | Pass
 SMVD3 | Pass
 SMVD4 | Pass
 SMVD5 | Pass
-SMVD6 | Failure (not available)
+SMVD6 | Failure (not available) [RSCPP-15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
 SMVD7 | Pass
-SMVD8 | Failure (not available)
+SMVD8 | Failure (not available) [RSCPP-15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
 SMVD9 | Pass
-SMVD10 | Failure (not available)
+SMVD10 | Failure (not available) [RSCPP-15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
 SMVD11 | Pass
 SMVD12 | Pass
 SMVD13 | Pass
