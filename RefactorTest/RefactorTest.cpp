@@ -22,6 +22,7 @@ int main(int argc, char* argv[])
         TestExtractFunction();
         TestExtractMethod();
         TestFlattenConditional();
+        TestInlineMacro();
         TestInlineRecentAssignment();
         TestInlineResult();
         TestInlineVariable();
