@@ -10,6 +10,7 @@ Notes:
 * **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
 * **Create Multi-Variable Declaration** is available as a quick fix.
 * **Flatten Conditional** is available as a quick fix.
+* **Inline Macro** is available as a quick fix.
 * **Make Method Static** is available as a quick fix.
 * **Move Implementation to Source File** is available as a quick fix.
 * **Remove Block Delimiter** is available as a quick fix.
@@ -161,6 +162,16 @@ EXV6 | Pass
 Case | Result
 ---- | ------
 FC1 | Failure
+
+## Inline Macro
+Case | Result
+---- | ------
+IM1 | Failure (not available) [RSCPP-15900](https://youtrack.jetbrains.com/issue/RSCPP-15900)
+IM2 | Pass
+IM3 | Pass
+IM4 | Pass
+IM5 | Pass
+IM6 | Pass
 
 ## Inline Variable
 Case | Result
