@@ -15,7 +15,7 @@ Extract Method | n/a | 15% | 100% | 45% | 0%
 Extract Parameter | n/a | 50% | n/a | n/a | n/a
 Extract Variable | n/a | 66.67% | 100% | n/a | n/a
 Flatten Conditional | n/a | 100% | 0% | n/a | n/a
-Inline Macro | n/a | 83.34% | n/a | n/a | n/a
+Inline Macro | n/a | 83.34% | 83.34% | n/a | n/a
 Inline Recent Assignment | n/a | 0% | n/a | n/a | n/a
 Inline Result | n/a | 0% | n/a | n/a | n/a
 Inline Variable | n/a | 16.67% | 0% | n/a | n/a
