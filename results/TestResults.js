@@ -72,7 +72,7 @@ function main(resultsFile)
         .on('end', EmitReport);
 }
 
-var resultsFile = "RefactorProResults.md";
+var resultsFile = "ClangModernizeResults.md";
 if (process.argv.length > 2)
 {
     resultsFile = process.argv[2];
