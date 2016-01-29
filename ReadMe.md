@@ -36,3 +36,4 @@ The original release of the test suite is described
 - [Cevelop](https://www.cevelop.com/)
 - [Code::Blocks](http://www.codeblocks.org/)
 - [Eclipse CDT](https://eclipse.org/cdt/)
+- [QtCreator](http://www.qt.io/ide/)
