@@ -33,5 +33,6 @@ The original release of the test suite is described
 
 ## Unknown Results
 
+- [Cevelop](https://www.cevelop.com/)
 - [Code::Blocks](http://www.codeblocks.org/)
 - [Eclipse CDT](https://eclipse.org/cdt/)
