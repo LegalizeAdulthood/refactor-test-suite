@@ -9,20 +9,20 @@ Notes:
 Methodology: Default suggestions are selected when refactoring.  Some
 refactorings can be performed successfully if suggestions are excluded.
 
-Add Block Delimiter is performed by selecting the code and performing
+**Add Block Delimiter** is performed by selecting the code and performing
 Code / Surround With... / {}.
 
-Add Parameter is performed with Change Signature.
+**Add Parameter** is performed with **Change Signature**.
 
-Create Setter Method is performed with Code / Generate... / Setter.
+**Create Setter Method** is performed with Code / Generate... / Setter.
 
-Flatten Conditional is performed by repeatedly applying the fixup Merge
+**Flatten Conditional** is performed by repeatedly applying the fixup Merge
 Nested Ifs.
 
-Replace If With Ternary Expression is performed by applying the fixup Replace
+**Replace If With Ternary** is performed by applying the fixup Replace
 'if else' with '?:'.
 
-Replace Ternary Expression With If is performed by applying the fixup Replace
+**Replace Ternary With If** is performed by applying the fixup Replace
 '?;' with 'if else'.
 
 <hr/>
@@ -434,7 +434,7 @@ R98   | Failure [CPP-1941](https://youtrack.jetbrains.com/issue/CPP-1941)
 
 ## Replace auto_ptr With unique_ptr (not available) [CPP-1954](https://youtrack.jetbrains.com/issue/CPP-1954)
 
-## Replace If With Ternary Expression
+## Replace If With Ternary
 Case | Result
 ---- | ------
 RIT1  | Pass
@@ -451,7 +451,7 @@ RIT9  | Failure [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
 
 ## Replace NULL/0 With nullptr (not available) [CPP-1955](https://youtrack.jetbrains.com/issue/CPP-1955)
 
-## Replace Ternary Expression With If
+## Replace Ternary With If
 Case | Result
 ---- | ------
 RTI1  | Pass

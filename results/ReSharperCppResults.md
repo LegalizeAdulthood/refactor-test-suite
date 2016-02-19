@@ -361,7 +361,7 @@ RP7 | Failure (functionality not available)
 RP8 | Failure (functionality not available)
 RP9 | Failure (functionality not available)
 
-## Replace If With Ternary Expression
+## Replace If With Ternary
 Case | Result
 ---- | ------
 RIT1 | Pass
