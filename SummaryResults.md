@@ -26,11 +26,11 @@ Remove Block Delimiter | n/a | 37.5% | 100% | n/a | n/a
 Remove Unused Parameter | n/a | 100% | 50% | n/a | n/a
 Rename | n/a | 77.09% | 95.84% | 75% | 0%
 Reorder Parameters | n/a | n/a | 11.12% | n/a | n/a
-Replace If With Ternary Expression | n/a | 55.56% | 55.56% | n/a | n/a
+Replace If With Ternary | n/a | 55.56% | 55.56% | n/a | n/a
 Replace Iterative For With Range For | 36.77% | n/a | n/a | n/a | n/a
 Replace NULL/0 With nullptr | 100% | n/a | 92.86% | n/a | n/a
 Replace String Literal With Raw String Literal | n/a | n/a | n/a | n/a | 100%
-Replace Ternary Expression With If | n/a | 77.78% | n/a | n/a | n/a
+Replace Ternary With If | n/a | 77.78% | 30% | n/a | n/a
 Replace Type With auto | 100% | n/a | 100% | n/a | n/a
 Replace auto_ptr With unique_ptr | 100% | n/a | n/a | n/a | n/a
 Reverse Conditional | n/a | n/a | 100% | n/a | n/a
