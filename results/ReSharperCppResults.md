@@ -17,6 +17,7 @@ Notes:
 * **Remove Unused Parameter** is available as a quick fix.
 * **Reorder Parameters** is available through **Change Signature**.
 * **Replace If With Ternary** is available as the quick fix *Convert 'if' to '?:'*.
+* **Replace Ternary With If** is available as the quick fix *Convert '?:' to 'if'*.
 * **Reverse Conditional** is available as the quick fix *Invert 'if' statement*.
 * **Split Multi-Variable Declaration** is available as the quick fix *Split declaration with multiple declarators*.
 
@@ -405,6 +406,20 @@ RZNP25 | Pass
 RZNP26 | Pass
 RZNP27 | Failure (not available) [RSCPP-15803](https://youtrack.jetbrains.com/issue/RSCPP-15803)
 RZNP28 | Failure (not available) [RSCPP-15803](https://youtrack.jetbrains.com/issue/RSCPP-15803)
+
+## Replace Ternary With If
+Case | Result
+---- | ------
+RTI1 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI2 | Pass
+RTI3 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI4 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI5 | Pass
+RTI6 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI7 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI8 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI9 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI10 | Pass
 
 ## Replace Type With auto
 Case | Result
