@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Require.h"
 
-// Converts a ternary assginment expression into an if/else block.assignment
+// Converts a ternary expression into an if/else block.
 
 namespace ReplaceTernaryWithIf
 {
