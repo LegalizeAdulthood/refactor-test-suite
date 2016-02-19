@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/ReplaceTernaryWithIf.cpp b/RefactorTest/ReplaceTernaryWithIf.cpp
+index 060480f..fcb7cf6 100644
+--- a/RefactorTest/ReplaceTernaryWithIf.cpp
++++ b/RefactorTest/ReplaceTernaryWithIf.cpp
+@@ -56,7 +56,15 @@ namespace ReplaceTernaryWithIf
+         int (*fn1)() = Operation1;
+ 
+         // #TEST#: RTI7 Replace Ternary Expression With If
+-        int (*fn2)() = (fn1 == Operation1) ? Operation2 : Operation1;
++        int (*fn2)();
++		if (fn1 == Operation1)
++		{
++			fn2 = Operation2;
++		}
++		else
++		{
++			fn2 = Operation1;
++		}
+         REQUIRE_EQUAL(fn2, Operation2);
+ 
+         // #TEST#: RTI8 Replace Ternary Expression With If

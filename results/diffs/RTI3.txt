@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/ReplaceTernaryWithIf.cpp b/RefactorTest/ReplaceTernaryWithIf.cpp
+index 060480f..c5fc9e3 100644
+--- a/RefactorTest/ReplaceTernaryWithIf.cpp
++++ b/RefactorTest/ReplaceTernaryWithIf.cpp
+@@ -26,7 +26,15 @@ namespace ReplaceTernaryWithIf
+ 
+         int j = 2;
+         // #TEST#: RTI3 Replace Ternary Expression With If
+-        int *p = (y == 10) ? &y : &j;
++        int *p;
++		if (y == 10)
++		{
++			p = &y;
++		}
++		else
++		{
++			p = &j;
++		}
+         REQUIRE_EQUAL(p, &y);
+     }
+ 
