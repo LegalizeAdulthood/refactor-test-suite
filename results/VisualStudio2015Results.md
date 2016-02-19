@@ -7,22 +7,18 @@ Version: 14.0.23107.0 D14REL
 C++ Extract Function add-on: 1.0
 
 Notes:
-
-Extract Function is only available as an additional free add-on.
-
-When applying an operation, the default selections on any prompting dialogs
-were used.  Unfortunately, this means that all Rename tests fail.
-
-Getting the default selection correct for a refactoring is important,
-particularly when changing a name that is used in thousands of places.
-Making the developer manually resolve which identical text is actually a
-related name makes the developer act like a compiler.  The compiler already
-knows which names refer to the same thing by using the context of the names.
-Any refactoring tool worth using has to employ the same logic as the compiler
-to correctly resolve names.
-
-If the correct instances of a name can't be selected by a refactoring tool,
-then you might as well use Find/Replace across a file set.
+ * **Extract Function** is only available as an additional free add-on.
+ * When applying an operation, the default selections on any prompting dialogs
+   were used.  Unfortunately, this means that all Rename tests fail.
+ * Getting the default selection correct for a refactoring is important,
+   particularly when changing a name that is used in thousands of places.
+   Making the developer manually resolve which identical text is actually a
+   related name makes the developer act like a compiler.  The compiler already
+   knows which names refer to the same thing by using the context of the names.
+   Any refactoring tool worth using has to employ the same logic as the compiler
+   to correctly resolve names.
+ * If the correct instances of a name can't be selected by a refactoring tool,
+   then you might as well use Find/Replace across a file set.
 
 <hr/>
 
@@ -33,25 +29,25 @@ then you might as well use Find/Replace across a file set.
 ## Extract Function
 Case | Result
 ---- | ------
-EXF1  | Failure (Unknown error)
-EXF2  | Failure (Unknown error)
-EXF3  | Failure (Unknown error)
-EXF4  | Failure (Unknown error)
-EXF5  | Failure (Unknown error)
-EXF6  | Failure (Unknown error)
-EXF7  | Failure (Unknown error)
-EXF8  | Failure (Unknown error)
-EXF9  | Failure (Unknown error)
-EXF10 | Failure (Unknown error)
-EXF11 | Failure (Unknown error)
-EXF12 | Failure (Unknown error)
-EXF13 | Failure (Unknown error)
-EXF14 | Failure (Unknown error)
-EXF15 | Failure (Unknown error)
-EXF16 | Failure (Unknown error)
-EXF17 | Failure (Unknown error)
-EXF18 | Failure (Unknown error)
-EXF19 | Failure (Unknown error)
+EXF1  | Failure (data flow) [2381729](https://connect.microsoft.com/VisualStudio/feedback/details/2381729/extract-function-on-declarations-fails)
+EXF2  | Pass (but can result in poor formatting) [2381666](https://connect.microsoft.com/VisualStudio/feedback/details/2381666/extract-function-when-entire-line-is-selected-results-in-poor-formatting)
+EXF3  | Pass
+EXF4  | Pass
+EXF5  | Pass
+EXF6  | Pass
+EXF7  | Pass
+EXF8  | Pass
+EXF9  | Pass
+EXF10 | Pass
+EXF11 | Pass
+EXF12 | Pass
+EXF13 | Failure (creates invalid code) [2381686](https://connect.microsoft.com/VisualStudio/feedback/details/2381686/extract-function-on-a-statement-using-a-typedef-generates-incorrect-code)
+EXF14 | Failure (creates invalid code) [2381693](https://connect.microsoft.com/VisualStudio/feedback/details/2381693/extract-function-on-a-statement-using-pointer-to-member-generates-incorrect-code)
+EXF15 | Failure (creates invalid code) [2381693](https://connect.microsoft.com/VisualStudio/feedback/details/2381693/extract-function-on-a-statement-using-pointer-to-member-generates-incorrect-code)
+EXF16 | Failure (creates invalid code) [2381693](https://connect.microsoft.com/VisualStudio/feedback/details/2381693/extract-function-on-a-statement-using-pointer-to-member-generates-incorrect-code)
+EXF17 | Failure (creates invalid code) [2381693](https://connect.microsoft.com/VisualStudio/feedback/details/2381693/extract-function-on-a-statement-using-pointer-to-member-generates-incorrect-code)
+EXF18 | Failure (data flow) [2381729](https://connect.microsoft.com/VisualStudio/feedback/details/2381729/extract-function-on-declarations-fails)
+EXF19 | Failure (creates invalid code) [2381743](https://connect.microsoft.com/VisualStudio/feedback/details/2381743/extract-function-on-expression-creates-incorrect-code)
 
 ## Extract Method
 Case | Result
