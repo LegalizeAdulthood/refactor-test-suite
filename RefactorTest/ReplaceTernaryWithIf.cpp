@@ -20,7 +20,7 @@ namespace ReplaceTernaryWithIf
         REQUIRE_EQUAL(10, x);
 
         int i = 1;
-        // #TEST#: RTI2 Replace Ternary Expression With If
+        // #TEST#: RTI2 Replace Ternary Expression With If (should not be available)
         int &r = (y == 10) ? y : i;
         REQUIRE_EQUAL(10, r);
 
@@ -39,7 +39,7 @@ namespace ReplaceTernaryWithIf
         REQUIRE_EQUAL(10.0, x);
 
         float g = 2.0f;
-        // #TEST#: RTI5 Replace Ternary Expression With If
+        // #TEST#: RTI5 Replace Ternary Expression With If (should not be available)
         float &r = (g == 10.0f) ? g : f;
         REQUIRE_EQUAL(1.0f, r);
 
@@ -63,6 +63,7 @@ namespace ReplaceTernaryWithIf
         int (**fn3)() = (fn1 == Operation1) ? &fn1 : &fn2;
         REQUIRE_EQUAL(fn3, &fn1);
 
+        // #TEST#: RTI11 Replace Ternary Expression With If (should not be available)
         int (&fn4)() = (fn1 == Operation1) ? Operation2 : Operation1;
         REQUIRE_EQUAL(fn4, Operation2);
     }
@@ -83,8 +84,8 @@ namespace ReplaceTernaryWithIf
         Foo f;
         REQUIRE_EQUAL(2, (f.*mem2)());
 
-        // #TEST#: RTI10 Replace Ternary Expression With If
         typedef int (Foo::*mem_ptr)();
+        // #TEST#: RTI10 Replace Ternary Expression With If (should not be available)
         mem_ptr &mem3 = (mem1 == &Foo::Operation1) ? mem1 : mem2;
         REQUIRE_EQUAL(1, (f.*mem3)());
     }
