@@ -6,19 +6,19 @@ Version: 10.0.2
 
 Notes:
 * **Add Block Delimiter** is available as a quick fix.  The tests pass if only code is selected and not the surrounding comment lines.
-* **Add Override** is available as a quick fix.
+* **Add Override** is available as the quick fix *Add 'override' specifier to an overriding function*.
 * **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
-* **Create Multi-Variable Declaration** is available as a quick fix.
-* **Flatten Conditional** is available as a quick fix.
-* **Inline Macro** is available as a quick fix.
+* **Create Multi-Variable Declaration** is available as the quick fix *Join declarations*.
+* **Flatten Conditional** is available as the quick fix *Merge nested 'if' statements*.
+* **Inline Macro** is available as the quick fix *Substitute macro call*.
 * **Make Method Static** is available as a quick fix.
-* **Move Implementation to Source File** is available as a quick fix.
-* **Remove Block Delimiter** is available as a quick fix.
+* **Move Implementation to Source File** is available as the quick fix *Move function implementation to source file*.
+* **Remove Block Delimiter** is available as the quick fix *Remove braces*.
 * **Remove Unused Parameter** is available as a quick fix.
 * **Reorder Parameters** is available through **Change Signature**.
-* **Replace If With Ternary** is available as a quick fix.
-* **Reverse Conditional** is available as a quick fix.
-* **Split Multi-Variable Declaration** is available as a quick fix.
+* **Replace If With Ternary** is available as the quick fix *Convert 'if' to '?:'*.
+* **Reverse Conditional** is available as the quick fix *Invert 'if' statement*.
+* **Split Multi-Variable Declaration** is available as the quick fix *Split declaration with multiple declarators*.
 
 <hr/>
 
