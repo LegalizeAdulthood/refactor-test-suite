@@ -358,7 +358,7 @@ restart:
         // #TEST#: R83 Rename label
         goto restart;
     }
-	REQUIRE_EQUAL(5, loop);
+    REQUIRE_EQUAL(5, loop);
 
     {
         // #TEST#: R84 Rename variable abstract
@@ -388,6 +388,6 @@ restart:
         int x = sealed + 1;
         std::string dashes;
         dashes.append(x, '-');
-		REQUIRE_EQUAL(std::string("-------------"), dashes);
+        REQUIRE_EQUAL(std::string("-------------"), dashes);
     }
 }
