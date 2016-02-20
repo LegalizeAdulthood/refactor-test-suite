@@ -6,7 +6,7 @@ Version: Microsoft Visual Studio Community 2015, Version 14.0.24720.00 Update 1
 
 Notes:
  * **Extract Function** and **Extract Method** were available as an
-   additional free add-on, but is included in Update 1 and enabled through
+   additional free add-on, but are included in Update 1 and enabled through
    Tools / Options.
  * **Move Implementation to Source File** is available as *Move Definition
    Location*.
