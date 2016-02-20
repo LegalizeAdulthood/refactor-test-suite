@@ -199,7 +199,7 @@ R90  | Failure (not available) [2382153](https://connect.microsoft.com/VisualStu
 R93  | Failure (not available) [2382157](https://connect.microsoft.com/VisualStudio/feedback/details/2382157/cant-rename-variable-named-override)
 R94  | Pass
 R95  | Pass
-R96  | Failure (not available) [2382162](https://connect.microsoft.com/VisualStudio/feedback/details/2382162/cant-rename-a-variable-named-safe-cast
+R96  | Failure (not available) [2382162](https://connect.microsoft.com/VisualStudio/feedback/details/2382162/cant-rename-a-variable-named-safe-cast)
 R97  | Pass
 R98  | Pass
 
