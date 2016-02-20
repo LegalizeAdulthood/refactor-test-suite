@@ -386,7 +386,8 @@ restart:
         // #TEST#: R97 Rename variable sealed
         int sealed = safe_cast + 1;
         int x = sealed + 1;
-        std::string spaces;
-        spaces.append(' ', x);
+        std::string dashes;
+        dashes.append(x, '-');
+		REQUIRE_EQUAL(std::string("-------------"), dashes);
     }
 }
