@@ -5,13 +5,15 @@ Home: [Visual Studio 2015](http://www.visualstudio.com/)
 Version: Microsoft Visual Studio Community 2015, Version 14.0.24720.00 Update 1
 
 Notes:
+ * Intellisense must be enabled for most refactorings to work properly.
  * **Extract Function** and **Extract Method** were available as an
    additional free add-on, but are included in Update 1 and enabled through
    Tools / Options.
  * **Move Implementation to Source File** is available as *Move Definition
    Location*.
  * When applying an operation, the default selections on any prompting dialogs
-   were used.  Unfortunately, this means that all Rename tests fail.
+   were used.  Unfortunately, this means that all Rename tests fail when
+   Intellisense is disabled.
  * Getting the default selection correct for a refactoring is important,
    particularly when changing a name that is used in thousands of places.
    Making the developer manually resolve which identical text is actually a
