@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Rename.h"
+#include "Require.h"
 #include <string>
 #include <stdexcept>
 
@@ -357,6 +358,7 @@ restart:
         // #TEST#: R83 Rename label
         goto restart;
     }
+	REQUIRE_EQUAL(5, loop);
 
     {
         // #TEST#: R84 Rename variable abstract
