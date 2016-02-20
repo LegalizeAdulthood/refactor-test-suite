@@ -20,7 +20,7 @@ Inline Recent Assignment | n/a | 0% | n/a | n/a | n/a
 Inline Result | n/a | 0% | n/a | n/a | n/a
 Inline Variable | n/a | 16.67% | 0% | n/a | n/a
 Make Method Static | n/a | n/a | 0% | n/a | n/a
-Move Implementation to Source File | n/a | n/a | 100% | 88.47% | 69.24%
+Move Implementation to Source File | n/a | n/a | 100% | 88.47% | 88.47%
 Move Method | n/a | 30.56% | n/a | n/a | n/a
 Remove Block Delimiter | n/a | 37.5% | 100% | n/a | n/a
 Remove Unused Parameter | n/a | 100% | 50% | n/a | n/a

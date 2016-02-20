@@ -74,32 +74,32 @@ EM20 | Failure [2381854](https://connect.microsoft.com/VisualStudio/feedback/det
 ## Move Implementation to Source File
 Case | Result
 ---- | ------
-MISF1  | Pass (leaves `inline` in header)
-MISF2  | Failure (not available)
-MISF3  | Pass (adds `inline` to source)
-MISF4  | Pass (adds `inline` to source)
-MISF5  | Pass (adds `inline` to source)
-MISF6  | Pass (adds `inline` to source)
-MISF7  | Pass (adds `inline` to source)
+MISF1  | Pass (leaves `inline` in header) [2381887](https://connect.microsoft.com/VisualStudio/feedback/details/2381887/move-definition-location-leaves-inline-behind-in-header)
+MISF2  | Failure [2381896](https://connect.microsoft.com/VisualStudio/feedback/details/2381896/move-definition-location-fails-for-constructor)
+MISF3  | Pass (adds `inline` to source, sensitive to cursor placement) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation), [2381899](https://connect.microsoft.com/VisualStudio/feedback/details/2381899/move-definition-location-unavailable-if-cursor-at-on-destructor-declaration)
+MISF4  | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF5  | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF6  | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF7  | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
 MISF8  | Pass
-MISF9  | Pass (adds `inline` to source)
-MISF10 | Failure
-MISF11 | Failure
-MISF12 | Pass (adds `inline` to source)
-MISF13 | Pass (adds `inline` to source)
-MISF14 | Pass (adds `inline` to source)
-MISF15 | Pass (adds `inline` to source)
-MISF16 | Failure (adds `inline` to souce, fails to qualify names)
-MISF17 | Pass (adds `inline` to source)
-MISF18 | Failure
-MISF19 | Pass (adds `inline` to source)
-MISF20 | Failure
-MISF21 | Failure
-MISF22 | Pass (adds `inline` to source)
-MISF23 | Pass (adds `inline` to source)
-MISF24 | Pass (adds `inline` to source)
-MISF25 | Pass (adds `inline` to source)
-MISF26 | Failure (adds `inline` to source, fails to qualify names)
+MISF9  | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF10 | Pass
+MISF11 | Pass
+MISF12 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF13 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF14 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF15 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF16 | Failure (adds `inline` to souce, creates invalid code) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation), [2381916](https://connect.microsoft.com/VisualStudio/feedback/details/2381916/move-definition-location-creates-invalid-code-for-method-returning-pointer-to-const-method)
+MISF17 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF18 | Pass
+MISF19 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF20 | Pass
+MISF21 | Pass
+MISF22 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF23 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF24 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF25 | Pass (adds `inline` to source) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation)
+MISF26 | Failure (adds `inline` to source, creates invalid code) [2381910](https://connect.microsoft.com/VisualStudio/feedback/details/2381910/move-definition-location-adds-inline-to-implementation), [2381916](https://connect.microsoft.com/VisualStudio/feedback/details/2381916/move-definition-location-creates-invalid-code-for-method-returning-pointer-to-const-method)
 
 ## Rename
 Case | Result
