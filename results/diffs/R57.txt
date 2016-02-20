@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..8d3ac7a 100644
+index 2d7e3d4..a847298 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
 @@ -164,7 +164,7 @@ static int (Operations::*GetOperation(bool flag))()
@@ -7,7 +7,7 @@ index 2d7e3d4..8d3ac7a 100644
  {
      // #TEST#: R57 Rename scoped member Renamed.
 -    int Renamed = 0;
-+    int GOINK_Renamed = 0;
++    int Goink = 0;
  
      class Base
      {
@@ -16,7 +16,7 @@ index 2d7e3d4..8d3ac7a 100644
      ((&ops3)->*member)();
  
 -    int x1 = Renamed;
-+    int x1 = GOINK_Renamed;
++    int x1 = Goink;
  
      TestDerived();
  

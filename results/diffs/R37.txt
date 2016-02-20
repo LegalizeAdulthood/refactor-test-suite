@@ -1,0 +1,31 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..0d11e07 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -124,7 +124,7 @@ struct SU
+     int kind;
+     union
+     {
+-        int x;
++        int Goink;
+         float f;
+         double d;
+         const char *s;
+@@ -135,7 +135,7 @@ struct SU
+     }
+     void member(int x_)
+     {
+-        x = x_;
++        Goink = x_;
+     }
+ };
+ 
+@@ -242,7 +242,7 @@ void TestRename()
+     float uf = u.member();
+     SU su;
+     // #TEST#: R37 Rename anonymous union member
+-    su.x = 1;
++    su.Goink = 1;
+     su.f = 1.0f;
+     su.d = 1.0;
+     su.s = "Bar";

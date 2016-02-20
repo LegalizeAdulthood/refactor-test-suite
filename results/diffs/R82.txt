@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..87ea23c 100644
+index 2d7e3d4..dbe3ed3 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
 @@ -350,12 +350,12 @@ void TestRename()
@@ -7,13 +7,13 @@ index 2d7e3d4..87ea23c 100644
  
      // #TEST#: R82 Rename label
 -restart:
-+GOINK_restart:
++Goink:
      loop++;
      if (loop < 5)
      {
          // #TEST#: R83 Rename label
 -        goto restart;
-+        goto GOINK_restart;
++        goto Goink;
      }
  
      {

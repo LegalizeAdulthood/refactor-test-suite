@@ -1,0 +1,36 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..de89d29 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -259,7 +259,7 @@ void TestRename()
+     // #TEST#: R12 Rename this method
+     test.Operation();
+     // #TEST#: R13 Rename this function
+-    TestRename1();
++    Goink();
+ 
+     {
+         using Y::X;
+diff --git a/RefactorTest/Rename.h b/RefactorTest/Rename.h
+index 74c7acb..947e08b 100644
+--- a/RefactorTest/Rename.h
++++ b/RefactorTest/Rename.h
+@@ -1,4 +1,4 @@
+ #pragma once
+ 
+ extern void TestRename();
+-extern void TestRename1();
++extern void Goink();
+diff --git a/RefactorTest/Rename2.cpp b/RefactorTest/Rename2.cpp
+index 4106669..91ed7cf 100644
+--- a/RefactorTest/Rename2.cpp
++++ b/RefactorTest/Rename2.cpp
+@@ -29,7 +29,7 @@ private:
+ 
+ } // namespace
+ 
+-void TestRename1()
++void Goink()
+ {
+     Rename1 test;
+     test.Operation();

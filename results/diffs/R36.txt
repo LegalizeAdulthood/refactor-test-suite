@@ -1,0 +1,46 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..df74e6f 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -23,23 +23,23 @@ public:
+ };
+ 
+ // #TEST#: R1 Rename this class, but class in Rename2.cpp shouldn't be renamed
+-class Rename1
++class Goink
+ {
+ public:
+     // #TEST#: R2 Rename this class via its c'tor
+-    Rename1()
++    Goink()
+         : x()
+     {
+     }
+ 
+     // #TEST#: R32 Rename this class via its d'tor
+-    ~Rename1()
++    ~Goink()
+     {
+     }
+ 
+     // #TEST#: R33 Rename this class via typedef
+     // #TEST#: R34 Rename typedef MyClass
+-    typedef Rename1 MyClass;
++    typedef Goink MyClass;
+ 
+     // #TEST#: R3 Rename this method
+     void Operation()
+@@ -251,11 +251,11 @@ void TestRename()
+ 
+     // #TEST#: R35 Rename MyClass
+     // #TEST#: R36 Rename Rename1 from scope qualifier
+-    Rename1::MyClass myClass;
++    Goink::MyClass myClass;
+     myClass.Operation();
+ 
+     // #TEST#: R11 Rename this variable
+-    Rename1 test;
++    Goink test;
+     // #TEST#: R12 Rename this method
+     test.Operation();
+     // #TEST#: R13 Rename this function

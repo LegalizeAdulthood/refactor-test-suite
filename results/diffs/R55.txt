@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..ee3505c 100644
+index 2d7e3d4..b72b275 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
 @@ -19,7 +19,7 @@ class Operations
@@ -7,7 +7,7 @@ index 2d7e3d4..ee3505c 100644
  public:
      int Operation1() { return 1; }
 -    int Operation2() { return 2; }
-+    int GOINK_Operation2() { return 2; }
++    int Goink() { return 2; }
  };
  
  // #TEST#: R1 Rename this class, but class in Rename2.cpp shouldn't be renamed
@@ -16,7 +16,7 @@ index 2d7e3d4..ee3505c 100644
          // #TEST#: R47 Rename class Operations
          // #TEST#: R48 Rename method Operation2
 -        result = &Operations::Operation2;
-+        result = &Operations::GOINK_Operation2;
++        result = &Operations::Goink;
      }
      // #TEST#: R49 Rename variable result
      return result;
@@ -25,7 +25,7 @@ index 2d7e3d4..ee3505c 100644
      // #TEST#: R54 Rename class Operations
      // #TEST#: R55 Rename method Operation2
 -    member = &Operations::Operation2;
-+    member = &Operations::GOINK_Operation2;
++    member = &Operations::Goink;
  
      // #TEST#: R59 Rename class Operations
      // #TEST#: R60 Rename variable ops

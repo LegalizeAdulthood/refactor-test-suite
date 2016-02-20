@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..b0c1abb 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -86,7 +86,7 @@ namespace X
+ namespace Y
+ {
+     // #TEST#: R10 rename this variable
+-    int x = 0;
++    int Goink = 0;
+ 
+     class X
+     {
+@@ -278,7 +278,7 @@ void TestRename()
+     // #TEST#: R21 rename the variable X::x
+     // #TEST#: R22 rename the variable X::y
+     // #TEST#: R23 rename the variable Y::x
+-    int y = test2.Operation() + X::x + X::y + Y::x;
++    int y = test2.Operation() + X::x + X::y + Y::Goink;
+ 
+     float x = MACRO_NO_ARGS;
+     x = MACRO_ONE_ARG(2.0f);

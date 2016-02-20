@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..c6551fd 100644
+index 9313f85..ba3781f 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -362,9 +362,9 @@ restart:
+@@ -364,9 +364,9 @@ restart:
          // #TEST#: R84 Rename variable abstract
          int abstract = 1;
          // #TEST#: R85 Rename variable array
 -        int array = abstract + 1;
-+        int GOINK_array = abstract + 1;
++        int Goink = abstract + 1;
          // #TEST#: R86 Rename variable delegate
 -        int delegate = array + 1;
-+        int delegate = GOINK_array + 1;
++        int delegate = Goink + 1;
          // #TEST#: R87 Rename variable event
          int event = delegate + 1;
          // #TEST#: R88 Rename variable gcnew

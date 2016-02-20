@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..1277578 100644
+index 2d7e3d4..da46e83 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
 @@ -338,10 +338,10 @@ void TestRename()
@@ -7,11 +7,11 @@ index 2d7e3d4..1277578 100644
  
      // #TEST#: R67 Rename variable ops3
 -    Operations &ops3 = ops;
-+    Operations &GOINK_ops3 = ops;
++    Operations &Goink = ops;
      // #TEST#: R68 Rename variable ops3
      // #TEST#: R69 Rename variable member
 -    ((&ops3)->*member)();
-+    ((&GOINK_ops3)->*member)();
++    ((&Goink)->*member)();
  
      int x1 = Renamed;
  

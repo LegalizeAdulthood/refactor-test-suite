@@ -1,0 +1,42 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..364e309 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -316,24 +316,24 @@ void TestRename()
+     // #TEST#: R50 Rename class Operations
+     // #TEST#: R51 Rename variable member
+     // #TEST#: R52 Rename function GetOperation
+-    int (Operations::*member)() = GetOperation(true);
++    int (Operations::*Goink)() = GetOperation(true);
+     // #TEST#: R53 Rename variable member
+     // #TEST#: R54 Rename class Operations
+     // #TEST#: R55 Rename method Operation2
+-    member = &Operations::Operation2;
++    Goink = &Operations::Operation2;
+ 
+     // #TEST#: R59 Rename class Operations
+     // #TEST#: R60 Rename variable ops
+     Operations ops;
+     // #TEST#: R61 Rename variable ops
+     // #TEST#: R62 Rename variable member
+-    (ops.*member)();
++    (ops.*Goink)();
+ 
+     // #TEST#: R63 Rename variable ops2
+     Operations *ops2 = new Operations();
+     // #TEST#: R64 Rename variable ops2
+     // #TEST#: R65 Rename variable member
+-    (ops2->*member)();
++    (ops2->*Goink)();
+     // #TEST#: R66 Rename variable ops2
+     delete ops2;
+ 
+@@ -341,7 +341,7 @@ void TestRename()
+     Operations &ops3 = ops;
+     // #TEST#: R68 Rename variable ops3
+     // #TEST#: R69 Rename variable member
+-    ((&ops3)->*member)();
++    ((&ops3)->*Goink)();
+ 
+     int x1 = Renamed;
+ 

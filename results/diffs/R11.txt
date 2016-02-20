@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 2d7e3d4..f747df9 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -255,9 +255,9 @@ void TestRename()
+     myClass.Operation();
+ 
+     // #TEST#: R11 Rename this variable
+-    Rename1 test;
++    Rename1 Goink;
+     // #TEST#: R12 Rename this method
+-    test.Operation();
++    Goink.Operation();
+     // #TEST#: R13 Rename this function
+     TestRename1();
+ 
