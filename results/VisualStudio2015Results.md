@@ -104,102 +104,102 @@ MISF26 | Failure (adds `inline` to source, creates invalid code) [2381910](https
 ## Rename
 Case | Result
 ---- | ------
-R1   | Failure (no instances selected by default)
-R2   | Failure (no instances selected by default)
-R3   | Failure (no instances selected by default)
-R4   | Failure (no instances selected by default)
-R5   | Failure (no instances selected by default)
-R6   | Failure (no instances selected by default)
-R7   | Failure (no instances selected by default)
-R8   | Failure (no instances selected by default)
-R9   | Failure (no instances selected by default)
-R10  | Failure (no instances selected by default)
-R11  | Failure (not available)
-R12  | Failure (no instances selected by default)
-R13  | Failure (no instances selected by default)
-R14  | Failure (no instances selected by default)
-R15  | Failure (no instances selected by default)
-R16  | Failure (not available)
-R17  | Failure (no instances selected by default)
-R18  | Failure (not available)
-R19  | Failure (no instances selected by default)
-R20  | Failure (no instances selected by default)
-R21  | Failure (no instances selected by default)
-R22  | Failure (no instances selected by default)
-R23  | Failure (no instances selected by default)
-R24  | Failure (no instances selected by default)
-R25  | Failure (not available)
-R26  | Failure (no instances selected by default)
-R27  | Failure (no instances selected by default)
-R28  | Failure (no instances selected by default)
-R29  | Failure (no instances selected by default)
-R30  | Failure (no instances selected by default)
-R31  | Failure (no instances selected by default)
-R32  | Failure (no instances selected by default)
-R33  | Failure (no instances selected by default)
-R34  | Failure (no instances selected by default)
-R35  | Failure (no instances selected by default)
-R36  | Failure (no instances selected by default)
-R37  | Failure (no instances selected by default)
-R38  | Failure (no instances selected by default)
-R39  | Failure (no instances selected by default)
-R40  | Failure (no instances selected by default)
-R41  | Failure (not available)
-R42  | Failure (no instances selected by default)
-R43  | Failure (no instances selected by default)
-R44  | Failure (no instances selected by default)
-R45  | Failure (not available)
-R46  | Failure (no instances selected by default)
-R47  | Failure (no instances selected by default)
-R48  | Failure (no instances selected by default)
-R49  | Failure (no instances selected by default)
-R50  | Failure (no instances selected by default)
-R51  | Failure (no instances selected by default)
-R52  | Failure (no instances selected by default)
-R53  | Failure (no instances selected by default)
-R54  | Failure (no instances selected by default)
-R55  | Failure (no instances selected by default)
-R56  | Failure (no instances selected by default)
-R57  | Failure (no instances selected by default)
-R58  | Failure (no instances selected by default)
-R59  | Failure (no instances selected by default)
-R60  | Failure (not available)
-R61  | Failure (not available)
-R62  | Failure (no instances selected by default)
-R63  | Failure (not available)
-R64  | Failure (not available)
-R65  | Failure (no instances selected by default)
-R66  | Failure (not available)
-R67  | Failure (not available)
-R68  | Failure (not available)
-R69  | Failure (no instances selected by default)
-R70  | Failure (no instances selected by default)
-R71  | Failure (no instances selected by default)
-R72  | Failure (no instances selected by default)
-R73  | Failure (no instances selected by default)
-R74  | Failure (wrong symbol selected by default)
-R75  | Failure (wrong symbol selected by default)
-R76  | Failure (wrong symbol selected by default)
-R77  | Failure (wrong symbol selected by default)
-R78  | Failure (wrong symbol selected by default)
-R79  | Failure (wrong symbol selected by default)
-R80  | Failure (wrong symbol selected by default)
-R81  | Failure (wrong symbol selected by default)
-R82  | Failure (not available)
-R83  | Failure (not available)
-R84  | Failure (not available)
-R85  | Failure (wrong symbol selected by default; correct symbol not an option)
-R86  | Failure (not available)
-R87  | Failure (no instances selected by default)
-R88  | Failure (not available)
-R89  | Failure (not available)
-R90  | Failure (not available)
-R93  | Failure (not available)
-R94  | Failure (not available)
-R95  | Failure (not available)
-R96  | Failure (not available)
-R97  | Failure (not available)
-R98  | Failure (wrong symbol selected by default)
+R1   | Pass
+R2   | Pass
+R3   | Pass
+R4   | Pass
+R5   | Pass
+R6   | Pass
+R7   | Pass
+R8   | Pass
+R9   | Pass
+R10  | Pass
+R11  | Pass
+R12  | Pass
+R13  | Pass
+R14  | Pass
+R15  | Pass
+R16  | Pass
+R17  | Pass
+R18  | Pass
+R19  | Pass
+R20  | Pass
+R21  | Pass
+R22  | Pass
+R23  | Pass
+R24  | Pass
+R25  | Failure (not available) [2382058](https://connect.microsoft.com/VisualStudio/feedback/details/2382058/cant-rename-macro-argument)
+R26  | Pass
+R27  | Pass
+R28  | Pass
+R29  | Pass
+R30  | Pass
+R31  | Pass
+R32  | Pass
+R33  | Pass
+R34  | Pass
+R35  | Pass
+R36  | Pass
+R37  | Pass
+R38  | Pass
+R39  | Pass
+R40  | Pass
+R41  | Pass
+R42  | Pass
+R43  | Pass
+R44  | Pass
+R45  | Pass
+R46  | Pass
+R47  | Pass
+R48  | Pass
+R49  | Pass
+R50  | Pass
+R51  | Pass
+R52  | Pass
+R53  | Pass
+R54  | Pass
+R55  | Pass
+R56  | Pass
+R57  | Pass
+R58  | Pass
+R59  | Pass
+R60  | Pass
+R61  | Pass
+R62  | Pass
+R63  | Pass
+R64  | Pass
+R65  | Pass
+R66  | Pass
+R67  | Pass
+R68  | Pass
+R69  | Pass
+R70  | Failure (doesn't select correct instances) [2382083](https://connect.microsoft.com/VisualStudio/feedback/details/2382083/rename-fails-to-identify-virtual-method-in-inheritance-hierarchy)
+R71  | Failure (doesn't select correct instances) [2382083](https://connect.microsoft.com/VisualStudio/feedback/details/2382083/rename-fails-to-identify-virtual-method-in-inheritance-hierarchy)
+R72  | Failure (doesn't select correct instances) [2382083](https://connect.microsoft.com/VisualStudio/feedback/details/2382083/rename-fails-to-identify-virtual-method-in-inheritance-hierarchy)
+R73  | Failure (doesn't select correct instances) [2382083](https://connect.microsoft.com/VisualStudio/feedback/details/2382083/rename-fails-to-identify-virtual-method-in-inheritance-hierarchy)
+R74  | Failure (doesn't select correct instances) [2382107](https://connect.microsoft.com/VisualStudio/feedback/details/2382107/rename-doesnt-select-correct-instances-of-macro)
+R75  | Failure (doesn't select correct instances) [2382107](https://connect.microsoft.com/VisualStudio/feedback/details/2382107/rename-doesnt-select-correct-instances-of-macro)
+R76  | Failure (doesn't select correct instances) [2382107](https://connect.microsoft.com/VisualStudio/feedback/details/2382107/rename-doesnt-select-correct-instances-of-macro)
+R77  | Failure (doesn't select correct instances) [2382118](https://connect.microsoft.com/VisualStudio/feedback/details/2382118/rename-macro-from-undef-selects-wrong-instances)
+R78  | Failure (doesn't select correct instances) [2382107](https://connect.microsoft.com/VisualStudio/feedback/details/2382107/rename-doesnt-select-correct-instances-of-macro)
+R79  | Failure (doesn't select correct instances) [2382107](https://connect.microsoft.com/VisualStudio/feedback/details/2382107/rename-doesnt-select-correct-instances-of-macro)
+R80  | Failure (doesn't select correct instances) [2382107](https://connect.microsoft.com/VisualStudio/feedback/details/2382107/rename-doesnt-select-correct-instances-of-macro)
+R81  | Failure (doesn't select correct instances) [2382118](https://connect.microsoft.com/VisualStudio/feedback/details/2382118/rename-macro-from-undef-selects-wrong-instances)
+R82  | Pass
+R83  | Pass
+R84  | Pass
+R85  | Pass Pass
+R86  | Pass
+R87  | Pass
+R88  | Failure (not available) [2382136](https://connect.microsoft.com/VisualStudio/feedback/details/2382136/cant-rename-variable-named-gcnew)
+R89  | Failure (not available) [2382144](https://connect.microsoft.com/VisualStudio/feedback/details/2382144/cant-rename-variable-named-interface)
+R90  | Failure (not available) [2382153](https://connect.microsoft.com/VisualStudio/feedback/details/2382153/cant-rename-variable-named-internal)
+R93  | Failure (not available) [2382157](https://connect.microsoft.com/VisualStudio/feedback/details/2382157/cant-rename-variable-named-override)
+R94  | Pass
+R95  | Pass
+R96  | Failure (not available) [2382162](https://connect.microsoft.com/VisualStudio/feedback/details/2382162/cant-rename-a-variable-named-safe-cast
+R97  | Pass
+R98  | Pass
 
 ## Replace String Literal With Raw String Literal
 Case | Result

@@ -24,7 +24,7 @@ Move Implementation to Source File | n/a | n/a | 100% | 88.47% | 88.47%
 Move Method | n/a | 30.56% | n/a | n/a | n/a
 Remove Block Delimiter | n/a | 37.5% | 100% | n/a | n/a
 Remove Unused Parameter | n/a | 100% | 50% | n/a | n/a
-Rename | n/a | 77.09% | 95.84% | 75% | 0%
+Rename | n/a | 77.09% | 95.84% | 75% | 81.25%
 Reorder Parameters | n/a | n/a | 11.12% | n/a | n/a
 Replace If With Ternary | n/a | 55.56% | 55.56% | n/a | n/a
 Replace Iterative For With Range For | 36.77% | n/a | n/a | n/a | n/a
