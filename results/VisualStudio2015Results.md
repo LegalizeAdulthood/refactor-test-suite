@@ -52,26 +52,26 @@ EXF19 | Failure (creates invalid code) [2381743](https://connect.microsoft.com/V
 ## Extract Method
 Case | Result
 ---- | ------
-EM1 | Failure (Unknown error)
-EM2 | Failure (Unknown error)
-EM3 | Failure (Unknown error)
-EM4 | Failure (Unknown error)
-EM5 | Failure (Unknown error)
-EM6 | Failure (Unknown error)
-EM7 | Failure (Unknown error)
-EM8 | Failure (Unknown error)
-EM9 | Failure (Unknown error)
-EM10 | Failure (Unknown error)
-EM11 | Failure (Unknown error)
-EM12 | Failure (Unknown error)
-EM13 | Failure (Unknown error)
-EM14 | Failure (Unknown error)
-EM15 | Failure (Unknown error)
-EM16 | Failure (Unknown error)
-EM17 | Failure (Unknown error)
-EM18 | Failure (Unknown error)
-EM19 | Failure (Unknown error)
-EM20 | Failure (Unknown error)
+EM1 | Pass
+EM2 | Pass
+EM3 | Pass (results in unnecessary use of namespace) [2381802](https://connect.microsoft.com/VisualStudio/feedback/details/2381802/extract-method-results-in-unnecessary-namespace-qualifier)
+EM4 | Failure [2381820](https://connect.microsoft.com/VisualStudio/feedback/details/2381820/extract-method-on-statement-using-pointer-to-member-fails)
+EM5 | Pass
+EM6 | Failure [2381820](https://connect.microsoft.com/VisualStudio/feedback/details/2381820/extract-method-on-statement-using-pointer-to-member-fails)
+EM7 | Pass
+EM8 | Pass
+EM9 | Pass
+EM10 | Pass
+EM11 | Failure (creates invalid code) [2381840](https://connect.microsoft.com/VisualStudio/feedback/details/2381840/extract-method-on-function-returning-pointer-to-const-member-function-creates-invalid-code)
+EM12 | Failure [2381820](https://connect.microsoft.com/VisualStudio/feedback/details/2381820/extract-method-on-statement-using-pointer-to-member-fails)
+EM13 | Pass
+EM14 | Pass
+EM15 | Pass
+EM16 | Pass
+EM17 | Failure (creates invalid code) [2381840](https://connect.microsoft.com/VisualStudio/feedback/details/2381840/extract-method-on-function-returning-pointer-to-const-member-function-creates-invalid-code)
+EM18 | Pass
+EM19 | Failure (data flow) [2381729](https://connect.microsoft.com/VisualStudio/feedback/details/2381729/extract-function-on-declarations-fails)
+EM20 | Failure [2381854](https://connect.microsoft.com/VisualStudio/feedback/details/2381854/extract-method-on-expression-returning-pointer-to-member-fails)
 
 ## Move Implementation to Source File
 Case | Result

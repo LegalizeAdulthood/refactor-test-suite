@@ -11,7 +11,7 @@ Create Multi-Variable Declaration | n/a | n/a | 91.67% | n/a | n/a
 Create Setter Method | n/a | 66.67% | n/a | n/a | n/a
 Extract Constant | n/a | 23.08% | n/a | n/a | n/a
 Extract Function | n/a | 73.69% | 94.74% | 0% | 57.9%
-Extract Method | n/a | 15% | 100% | 45% | 0%
+Extract Method | n/a | 15% | 100% | 45% | 65%
 Extract Parameter | n/a | 50% | n/a | n/a | n/a
 Extract Variable | n/a | 66.67% | 100% | n/a | n/a
 Flatten Conditional | n/a | 100% | 0% | n/a | n/a
