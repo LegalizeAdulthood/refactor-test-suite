@@ -2,12 +2,14 @@
 
 Home: [Visual Studio 2015](http://www.visualstudio.com/)
 
-Version: 14.0.23107.0 D14REL
-
-C++ Extract Function add-on: 1.0
+Version: Microsoft Visual Studio Community 2015, Version 14.0.24720.00 Update 1
 
 Notes:
- * **Extract Function** is only available as an additional free add-on.
+ * **Extract Function** and **Extract Method** were available as an
+   additional free add-on, but is included in Update 1 and enabled through
+   Tools / Options.
+ * **Move Implementation to Source File** is available as *Move Definition
+   Location*.
  * When applying an operation, the default selections on any prompting dialogs
    were used.  Unfortunately, this means that all Rename tests fail.
  * Getting the default selection correct for a refactoring is important,
@@ -21,10 +23,6 @@ Notes:
    then you might as well use Find/Replace across a file set.
 
 <hr/>
-
-## Create Declaration From Implementation
-
-## Create Implementation From Declaration
 
 ## Extract Function
 Case | Result
