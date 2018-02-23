@@ -36,6 +36,7 @@ int main(int argc, char* argv[])
         TestRemoveUnusedParameter();
         TestRemoveRedundantConditional();
         TestRename();
+        TestRenameCpp11();
         TestRenameFileToMatchType();
         TestRenameTypeToMatchFile();
         TestReorderParameters();

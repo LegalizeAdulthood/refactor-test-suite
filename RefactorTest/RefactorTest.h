@@ -25,6 +25,7 @@ extern void TestRemoveBlockDelimiter();
 extern void TestRemoveUnusedParameter();
 extern void TestRemoveRedundantConditional();
 extern void TestRename();
+extern void TestRenameCpp11();
 extern void TestRenameFileToMatchType();
 extern void TestRenameTypeToMatchFile();
 extern void TestReorderParameters();
