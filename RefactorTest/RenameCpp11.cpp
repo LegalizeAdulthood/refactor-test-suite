@@ -4,9 +4,13 @@
 namespace
 {
 
+// #TEST#: R104 Rename flag used in static_assert
 constexpr bool flag = true;
+// #TEST#: R105 Rename flag used in static_assert
 constexpr bool flag2 = false;
+// #TEST#: R106 Rename flag used in noexcept specification
 constexpr bool flag3 = true;
+// #TEST#: R107 Rename flag used in noexcept specification
 constexpr bool flag4 = false;
 
 // #TEST#: R100 Rename flag in static_assert
