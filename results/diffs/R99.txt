@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 8c5e75d..5210bff 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -14,7 +14,7 @@
+ // #TEST#: R25 Rename the macro argument x_ from declaration
+ // #TEST#: R99 Rename the macro argument x_ from usage
+ // #TEST#: R26 Rename this macro
+-#define MACRO_ONE_ARG(x_) (2.0f*x_)
++#define MACRO_ONE_ARG(Goink_) (2.0f*Goink_)
+ 
+ class Operations
+ {
