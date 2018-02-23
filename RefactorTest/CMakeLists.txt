@@ -12,6 +12,7 @@ set(headers
     MoveMethod.h
     RemoveUnusedParameters.h
     Rename.h
+    RenameCpp11.h
     RenameFileToMatchType.h
     Require.h
     RefactorTest.h
@@ -45,6 +46,7 @@ set(sources
     RemoveUnusedParameters.cpp
     Rename.cpp
     Rename2.cpp
+    RenameCpp11.cpp
     RenameFileToMatchType.cpp
     RenameTypeToMatchFile.cpp
     ReorderParameters.cpp
