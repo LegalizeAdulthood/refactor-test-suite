@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "RenameCpp11.h"
 
+#include <sstream>
+
 namespace
 {
 
@@ -37,6 +39,20 @@ void f3() noexcept(noexcept(T()))
     T x = T();
 }
 
+void f4()
+{
+    // #TEST#: R111 Rename c16
+    char16_t c16 = u'x';
+    // #TEST#: R112 Rename c32
+    char32_t c32 = U'x';
+
+    std::ostringstream s;
+    // #TEST#: R113 Rename c16
+    s << static_cast<int>(c16);
+    // #TEST#: R114 Rename c32
+    s << static_cast<int>(c32);
+}
+
 }
 
 void TestRenameCpp11()
@@ -44,4 +60,5 @@ void TestRenameCpp11()
     f1();
     f2();
     f3<int>();
+    f4();
 }
