@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 235e2b4..ff0959b 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -4,11 +4,11 @@
+ namespace
+ {
+ 
+-constexpr bool flag = true;
++constexpr bool Goink = true;
+ constexpr bool flag2 = false;
+ 
+ // #TEST#: R100 Rename flag in static_assert
+-static_assert(flag, "Flag is false");
++static_assert(Goink, "Flag is false");
+ // #TEST#: R101 Rename flag2 in static_assert
+ static_assert(!flag2, "Flag2 is true");
+ 
