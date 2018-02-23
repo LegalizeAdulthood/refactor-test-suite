@@ -28,10 +28,20 @@ void f2() noexcept(!flag4)
 {
 }
 
+// #TEST#: R108 Rename T used in noexcept expression
+template <typename T>
+// #TEST#: R109 Rename T in noexcept expression
+void f3() noexcept(noexcept(T()))
+{
+    // #TEST#: R110 Rename T used in noexcept expression
+    T x = T();
+}
+
 }
 
 void TestRenameCpp11()
 {
     f1();
     f2();
+    f3<int>();
 }

@@ -1,0 +1,20 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index dd76962..46ffd0c 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -29,12 +29,12 @@ void f2() noexcept(!flag4)
+ }
+ 
+ // #TEST#: R108 Rename T used in noexcept expression
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R109 Rename T in noexcept expression
+-void f3() noexcept(noexcept(T()))
++void f3() noexcept(noexcept(Goink()))
+ {
+     // #TEST#: R110 Rename T used in noexcept expression
+-    T x = T();
++    Goink x = Goink();
+ }
+ 
+ }
