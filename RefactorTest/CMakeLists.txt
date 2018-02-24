@@ -1,7 +1,3 @@
-if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
-    set(CMAKE_CXX_FLAGS "-std=c++11")
-endif()
-
 set(headers
     AddParameter.h
     ChangeSignature.h
@@ -67,10 +63,12 @@ set(sources
     SplitMultiVariableDeclaration.cpp
     stdafx.cpp
     RefactorTest.cpp)
-
-set(SOURCE_FILES ${headers} ${sources})
+set(source_files ${headers} ${sources})
 source_group("Header Files" FILES ${headers})
 source_group("Source Files" FILES ${sources})
 
-add_executable(refactor_test_suite ${SOURCE_FILES})
+add_executable(refactor_test_suite ${source_files})
+if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
+    target_compile_options(refactor_test_suite PUBLIC -std=c++11)
+endif()
 add_custom_command(TARGET refactor_test_suite POST_BUILD COMMAND refactor_test_suite)
