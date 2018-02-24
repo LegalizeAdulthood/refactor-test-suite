@@ -74,5 +74,7 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
         set_property(SOURCE SplitMultiVariableDeclaration.cpp
             APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-register)
     endif()
+elseif(MSVC)
+    target_compile_definitions(refactor_test_suite PUBLIC _CRT_SECURE_NO_WARNINGS)
 endif()
 add_custom_command(TARGET refactor_test_suite POST_BUILD COMMAND refactor_test_suite)
