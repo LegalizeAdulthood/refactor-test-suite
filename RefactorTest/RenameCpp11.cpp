@@ -2,6 +2,7 @@
 #include "RenameCpp11.h"
 #include "Require.h"
 
+#include <string>
 #include <sstream>
 
 namespace
@@ -86,6 +87,54 @@ void f6()
     require_equal(alignof(X), alignof(Y));
 }
 
+void f7()
+{
+    // #TEST#: R121 Rename X
+    struct X
+    {
+        // #TEST#: R122 Rename X via default c'tor
+        X() = default;
+        // #TEST#: R123 Rename X via default copy c'tor
+        // #TEST#: R124 Rename X via default copy c'tor argument
+        X(const X &rhs) = default;
+        // #TEST#: R125 Rename X via default move c'tor
+        // #TEST#: R126 Rename X via default move c'tor argument
+        X(X &&rhs) = default;
+        // #TEST#: R127 Rename X via default d'tor
+        ~X() = default;
+        // #TEST#: R128 Rename X via default copy assignment return type
+        // #TEST#: R129 Rename X via default copy assignment argument
+        X &operator=(const X &rhs) = default;
+        // #TEST#: R130 Rename X via default move assignment return type
+        // #TEST#: R131 Rename X via default move assignment argument
+        X &operator=(X &&rhs) = default;
+
+        int x = 1;
+        int y = 2;
+        std::string s = "foo";
+    };
+    const auto check = [](const X &x)
+    {
+        require_equal(1, x.x);
+        require_equal(2, x.y);
+        require_equal(std::string("foo"), x.s);
+    };
+    const X x1;
+    check(x1);
+    const X x2(x1);
+    check(x2);
+    X x3;
+    x3.x = -1;
+    x3.y = -2;
+    x3 = x1;
+    check(x3);
+    const X x4{X()};
+    check(x4);
+    X x5;
+    x5 = X();
+    check(x5);
+}
+
 }
 
 void TestRenameCpp11()
@@ -96,4 +145,5 @@ void TestRenameCpp11()
     f4();
     f5();
     f6();
+    f7();
 }
