@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Rename.h"
 #include "Require.h"
 #include <string>

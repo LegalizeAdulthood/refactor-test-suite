@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 #include <iostream>
 

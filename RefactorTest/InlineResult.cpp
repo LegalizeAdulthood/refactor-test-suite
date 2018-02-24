@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <vector>
 
 // Replaces final assignments to the temporary variable

@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 // Breaks an initialized declaration for a local variable into a
 // declaration and a separate initialization statement.
 

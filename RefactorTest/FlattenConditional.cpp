@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 // Unindents the if or else statement for a conditional.
 // This will apply one of the following refactorings:
 //  Replace Nested Conditional with Guard Clause,

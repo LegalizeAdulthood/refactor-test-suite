@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ChangeSignature.h"
 #include <cassert>
 

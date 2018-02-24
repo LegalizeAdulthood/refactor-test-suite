@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "RenameCpp11.h"
 #include "Require.h"
 

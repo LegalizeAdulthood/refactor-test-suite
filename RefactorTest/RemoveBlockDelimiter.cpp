@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 // removes optional block delimiters.
 
 // Test adding and removing curly brace block delimiters to chunks of code.

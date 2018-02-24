@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 
 // Inverts the logic in a conditional statement and swaps the if and else blocks.

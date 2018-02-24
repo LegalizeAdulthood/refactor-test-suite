@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "RemoveUnusedParameters.h"
 #include "Require.h"
 

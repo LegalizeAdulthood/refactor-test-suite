@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "AddParameter.h"
 
 // Adds a new parameter to a method declaration and updates all calls accordingly.

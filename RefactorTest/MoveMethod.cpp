@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "MoveMethod.h"
 
 // Inlines a method body into the class declaration (in a header file),

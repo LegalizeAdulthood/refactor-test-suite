@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <string>
 
 // Declares a new constant initialized to the value

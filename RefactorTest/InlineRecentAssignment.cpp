@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 // Replaces the identifier at the caret with its most-recent assignment.
 
 namespace InlineRecentAssignment

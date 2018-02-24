@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 
 // Enables you to change the order of parameters including promoting out

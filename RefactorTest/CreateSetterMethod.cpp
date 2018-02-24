@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "CreateSetterMethod.h"
 
 // Creates a setter method for a private field and optionally replaces

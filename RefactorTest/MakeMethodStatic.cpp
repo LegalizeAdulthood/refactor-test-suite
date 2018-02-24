@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 
 // Makes method static and replaces all references accordingly.

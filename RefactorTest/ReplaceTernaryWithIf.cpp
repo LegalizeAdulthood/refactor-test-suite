@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 
 // Converts a ternary expression into an if/else block.

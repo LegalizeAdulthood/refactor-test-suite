@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 // #TEST#: ONR1 Optimize away these headers
 #include <stdio.h>
 #include <stdarg.h>

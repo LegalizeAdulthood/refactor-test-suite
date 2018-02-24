@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 
 // Moves the selected code to a new method.

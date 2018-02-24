@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "RenameFileToMatchType.h"
 
 // Renames the file (and updates the project) so the file name matches the

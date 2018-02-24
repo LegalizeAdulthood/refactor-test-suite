@@ -11,8 +11,7 @@ set(headers
     RenameCpp11.h
     RenameFileToMatchType.h
     Require.h
-    RefactorTest.h
-    stdafx.h)
+    RefactorTest.h)
 
 set(sources
     AddOverride.cpp
@@ -61,7 +60,6 @@ set(sources
     SimplifyBooleanExpression.cpp
     SplitInitializationFromDeclaration.cpp
     SplitMultiVariableDeclaration.cpp
-    stdafx.cpp
     RefactorTest.cpp)
 set(source_files ${headers} ${sources})
 source_group("Header Files" FILES ${headers})

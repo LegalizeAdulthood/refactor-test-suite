@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <string>
 
 // Generates a method for the selected method call with appropriate parameters.

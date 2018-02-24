@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 
 // Converts an if/else conditional with assignments in each branch into

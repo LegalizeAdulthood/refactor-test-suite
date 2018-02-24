@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 #include <cassert>
 #include <deque>
 #include <list>

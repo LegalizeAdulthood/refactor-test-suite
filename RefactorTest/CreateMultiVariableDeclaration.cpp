@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <vector>
 
 // Converts neighboring variable declarations of the same type into a single declaration.

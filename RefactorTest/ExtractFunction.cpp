@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Require.h"
 
 extern void TestExtractFunctionCFile();

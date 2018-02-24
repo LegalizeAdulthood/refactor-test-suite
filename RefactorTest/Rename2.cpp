@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Rename.h"
 
 namespace
