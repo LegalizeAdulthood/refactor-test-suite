@@ -134,6 +134,36 @@ void f7()
     check(x5);
 }
 
+void f8()
+{
+   // #TEST#: R132 Rename X
+    struct X
+    {
+        // #TEST#: R133 Rename X via deleted c'tor
+        X() = delete;
+        // #TEST#: R134 Rename X via deleted copy c'tor
+        // #TEST#: R135 Rename X via deleted copy c'tor argument
+        X(const X &rhs) = delete;
+        // #TEST#: R136 Rename X via deleted move c'tor
+        // #TEST#: R137 Rename X via deleted move c'tor argument
+        X(X &&rhs) = delete;
+        // #TEST#: R138 Rename X via deleted d'tor
+        ~X() = delete;
+        // #TEST#: R139 Rename X via deleted copy assignment return type
+        // #TEST#: R140 Rename X via deleted copy assignment argument
+        X &operator=(const X &rhs) = delete;
+        // #TEST#: R141 Rename X via deleted move assignment return type
+        // #TEST#: R142 Rename X via deleted move assignment argument
+        X &operator=(X &&rhs) = delete;
+
+        int x = 1;
+        int y = 2;
+        std::string s = "foo";
+    };
+    // #TEST#: R143 Rename X
+    X *x = nullptr;
+ }
+
 }
 
 void TestRenameCpp11()
@@ -145,4 +175,5 @@ void TestRenameCpp11()
     f5();
     f6();
     f7();
+    f8();
 }
