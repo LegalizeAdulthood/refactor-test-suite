@@ -66,6 +66,26 @@ void f5()
     require_equal(4U, alignof(X));
 }
 
+void f6()
+{
+    // #TEST#: R117 Rename X used in alignas specifier
+    struct alignas(int) X
+    {
+        float y;
+        char b;
+    };
+    // #TEST#: R118 Rename X in alignas specifier
+    struct alignas(X) Y
+    {
+        float y;
+        char b;
+    };
+    // #TEST#: R119 Rename X used in alignas specifier
+    require_equal(alignof(int), alignof(X));
+    // #TEST#: R120 Rename X used in alignas specifier
+    require_equal(alignof(X), alignof(Y));
+}
+
 }
 
 void TestRenameCpp11()
@@ -75,4 +95,5 @@ void TestRenameCpp11()
     f3<int>();
     f4();
     f5();
+    f6();
 }

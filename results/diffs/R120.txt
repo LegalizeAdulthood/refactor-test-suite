@@ -1,0 +1,30 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 4ca5395..10c1187 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -69,21 +69,21 @@ void f5()
+ void f6()
+ {
+     // #TEST#: R117 Rename X used in alignas specifier
+-    struct alignas(int) X
++    struct alignas(int) Goink
+     {
+         float y;
+         char b;
+     };
+     // #TEST#: R118 Rename X in alignas specifier
+-    struct alignas(X) Y
++    struct alignas(Goink) Y
+     {
+         float y;
+         char b;
+     };
+     // #TEST#: R119 Rename X used in alignas specifier
+-    require_equal(alignof(int), alignof(X));
++    require_equal(alignof(int), alignof(Goink));
+     // #TEST#: R120 Rename X used in alignas specifier
+-    require_equal(alignof(X), alignof(Y));
++    require_equal(alignof(Goink), alignof(Y));
+ }
+ 
+ }
