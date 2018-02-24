@@ -164,6 +164,14 @@ void f8()
     X *x = nullptr;
  }
 
+void f9()
+{
+    // #TEST#: R144 Rename x
+    thread_local int x = 0;
+    // #TEST#: R145 Rename use of x
+    require_equal(0, x);
+}
+
 }
 
 void TestRenameCpp11()
@@ -176,4 +184,5 @@ void TestRenameCpp11()
     f6();
     f7();
     f8();
+    f9();
 }
