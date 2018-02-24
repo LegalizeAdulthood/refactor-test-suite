@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "RenameCpp11.h"
+#include "Require.h"
 
 #include <sstream>
 
@@ -53,6 +54,18 @@ void f4()
     s << static_cast<int>(c32);
 }
 
+void f5()
+{
+    // #TEST#: R115 Rename X used in alignof operator expression
+    struct alignas(4) X
+    {
+        int x;
+        char b;
+    };
+    // #TEST#: R116 Rename X
+    require_equal(4U, alignof(X));
+}
+
 }
 
 void TestRenameCpp11()
@@ -61,4 +74,5 @@ void TestRenameCpp11()
     f2();
     f3<int>();
     f4();
+    f5();
 }
