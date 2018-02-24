@@ -72,5 +72,9 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     target_compile_options(refactor_test_suite PUBLIC -std=c++11)
     set_property(SOURCE ReplaceAutoPtrWithUniquePtr.cpp
         APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-declarations)
+    if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+        set_property(SOURCE SplitMultiVariableDeclaration.cpp
+            APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-register)
+    endif()
 endif()
 add_custom_command(TARGET refactor_test_suite POST_BUILD COMMAND refactor_test_suite)
