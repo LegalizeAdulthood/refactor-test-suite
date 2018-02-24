@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/LegalizeAdulthood/refactor-test-suite.svg?branch=master)](https://travis-ci.org/LegalizeAdulthood/refactor-test-suite)
+
 This is a test suite for C++ refactoring tools.  It consists of
 a set of source files with comments marking different locations
 in the code where a refactoring could be tested.
