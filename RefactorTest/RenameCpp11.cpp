@@ -64,7 +64,7 @@ void f5()
         char b;
     };
     // #TEST#: R116 Rename X
-    require_equal(4U, alignof(X));
+    require_equal(std::size_t{4}, alignof(X));
 }
 
 void f6()
