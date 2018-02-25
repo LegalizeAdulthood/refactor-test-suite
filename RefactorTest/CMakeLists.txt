@@ -76,5 +76,7 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     endif()
 elseif(MSVC)
     target_compile_definitions(refactor_test_suite PUBLIC _CRT_SECURE_NO_WARNINGS)
+    set_property(SOURCE RenameCpp11.cpp
+        APPEND PROPERTY COMPILE_FLAGS /wd4290)
 endif()
 add_custom_command(TARGET refactor_test_suite POST_BUILD COMMAND refactor_test_suite)

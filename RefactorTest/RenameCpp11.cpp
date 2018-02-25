@@ -644,6 +644,18 @@ void f21()
     require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, result.str());
 }
 
+// #TEST#: R272 Renema Exceptions
+template <typename... Exceptions>
+// #TEST#: R273 Rename Exceptions
+void f22_aux() throw (Exceptions...)
+{
+}
+
+void f22()
+{
+    f22_aux<std::runtime_error, std::invalid_argument>();
+}
+
 }
 
 void TestRenameCpp11()
@@ -669,4 +681,5 @@ void TestRenameCpp11()
     f19();
     f20();
     f21();
+    f22();
 }
