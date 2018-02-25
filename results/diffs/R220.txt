@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index c93a75f..d5ca399 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -442,11 +442,11 @@ std::ostream &operator<<(std::ostream &stream, const std::basic_string<char32_t>
+ // #TEST#: R217 Rename xs4
+ // #TEST#: R218 Rename text
+ // #TEST#: R219 Rename len
+-std::basic_string<char32_t> operator""_xs4(const char32_t *text, std::size_t len)
++std::basic_string<char32_t> operator""_xs4(const char32_t *Goink, std::size_t len)
+ {
+     // #TEST#: R220 Rename text
+     // #TEST#: R221 Rename len
+-    return {text, len};
++    return {Goink, len};
+ }
+ 
+ void f13()

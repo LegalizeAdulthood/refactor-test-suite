@@ -434,6 +434,21 @@ std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len
     return {text, len};
 }
 
+std::ostream &operator<<(std::ostream &stream, const std::basic_string<char32_t> &value)
+{
+    return stream << narrow(value);
+}
+
+// #TEST#: R217 Rename xs4
+// #TEST#: R218 Rename text
+// #TEST#: R219 Rename len
+std::basic_string<char32_t> operator""_xs4(const char32_t *text, std::size_t len)
+{
+    // #TEST#: R220 Rename text
+    // #TEST#: R221 Rename len
+    return {text, len};
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -460,6 +475,8 @@ void f13()
     require_equal(std::wstring{L"foo"}, L"foo"_xs2);
     // #TEST#: R216 Rename xs3
     require_equal(std::basic_string<char16_t>{u"foo"}, u"foo"_xs3);
+    // #TEST#: R222 Rename xs4
+    require_equal(std::basic_string<char32_t>{U"foo"}, U"foo"_xs4);
 }
 
 }
