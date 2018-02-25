@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index f7c946b..0e6c637 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -572,7 +572,7 @@ struct f19_aux
+     {
+         // #TEST#: R254 Rename Args
+         // #TEST#: R255 Rename args
+-        apply(Args... args) : t(args...) {}
++        apply(Args... Goink) : t(Goink...) {}
+ 
+         // #TEST#: R256 Rename Args
+         std::tuple<Args...> t;

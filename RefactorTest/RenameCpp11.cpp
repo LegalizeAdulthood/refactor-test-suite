@@ -562,6 +562,31 @@ void f18()
     require_equal(std::string{"10 20.5 hello, world! "}, result.str());
 }
 
+// #TEST#: R252 Rename Args
+template <typename... Args>
+struct f19_aux
+{
+    // #TEST#: R253 Rename Args
+    template <Args...>
+    struct apply
+    {
+        // #TEST#: R254 Rename Args
+        // #TEST#: R255 Rename args
+        apply(Args... args) : t(args...) {}
+
+        // #TEST#: R256 Rename Args
+        std::tuple<Args...> t;
+    };
+};
+
+void f19()
+{
+    f19_aux<int, int, int>::apply<10, 20, 30> x(10, 20, 30);
+    require_equal(10, std::get<0>(x.t));
+    require_equal(20, std::get<1>(x.t));
+    require_equal(30, std::get<2>(x.t));
+}
+
 }
 
 void TestRenameCpp11()
@@ -584,4 +609,5 @@ void TestRenameCpp11()
     f16();
     f17();
     f18();
+    f19();
 }
