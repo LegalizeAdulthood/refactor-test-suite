@@ -399,14 +399,9 @@ std::string narrow(const std::basic_string<T> &wide)
 {
     std::string value;
     value.resize(wide.length());
-    std::transform(value.begin(), value.end(), value.begin(),
+    std::transform(wide.begin(), wide.end(), value.begin(),
         [](T c) { return static_cast<char>(c); });
     return value;
-}
-
-std::ostream &operator<<(std::ostream &stream, const std::wstring &value)
-{
-    return stream << narrow(value);
 }
 
 // #TEST#: R205 Rename xs2
@@ -419,11 +414,6 @@ std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
     return std::wstring(text, len);
 }
 
-std::ostream &operator<<(std::ostream &stream, const std::basic_string<char16_t> &value)
-{
-    return stream << narrow(value);
-}
-
 // #TEST#: R211 Rename xs3
 // #TEST#: R212 Rename text
 // #TEST#: R213 Rename len
@@ -432,11 +422,6 @@ std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len
     // #TEST#: R214 Rename text
     // #TEST#: R215 Rename len
     return {text, len};
-}
-
-std::ostream &operator<<(std::ostream &stream, const std::basic_string<char32_t> &value)
-{
-    return stream << narrow(value);
 }
 
 // #TEST#: R217 Rename xs4
@@ -472,11 +457,11 @@ void f13()
     // #TEST#: R204 Rename xs
     require_equal(std::string{"foo"}, "foo"_xs);
     // #TEST#: R210 Rename xs2
-    require_equal(std::wstring{L"foo"}, L"foo"_xs2);
+    require_equal(std::string{"foo"}, narrow(L"foo"_xs2));
     // #TEST#: R216 Rename xs3
-    require_equal(std::basic_string<char16_t>{u"foo"}, u"foo"_xs3);
+    require_equal(std::string{"foo"}, narrow(u"foo"_xs3));
     // #TEST#: R222 Rename xs4
-    require_equal(std::basic_string<char32_t>{U"foo"}, U"foo"_xs4);
+    require_equal(std::string{"foo"}, narrow(U"foo"_xs4));
 }
 
 }
