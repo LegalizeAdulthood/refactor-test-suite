@@ -1,9 +1,9 @@
 #include "RenameCpp11.h"
 #include "Require.h"
 
-#include <iostream>
 #include <string>
 #include <sstream>
+#include <tuple>
 
 namespace
 {
@@ -239,6 +239,19 @@ void f11()
     require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, x.str());
 }
 
+// #TEST#: R163 Rename Types
+template <typename... Types>
+// #TEST#: R164 Rename Types
+using Tuple = std::tuple<Types...>;
+
+void f12()
+{
+    Tuple<int, double, std::string> t{10, 20.0, "hello world!"};
+    require_equal(10, std::get<0>(t));
+    require_equal(20.0, std::get<1>(t));
+    require_equal(std::string{"hello world!"}, std::get<2>(t));
+}
+
 }
 
 void TestRenameCpp11()
@@ -254,4 +267,5 @@ void TestRenameCpp11()
     f9();
     f10();
     f11();
+    f12();
 }
