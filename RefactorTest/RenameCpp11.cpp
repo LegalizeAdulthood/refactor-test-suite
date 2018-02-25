@@ -359,6 +359,14 @@ char operator""_xc(char value)
     return value;
 }
 
+// #TEST#: R187 Rename xc2
+// #TEST#: R188 Rename value
+wchar_t operator""_xc2(wchar_t value)
+{
+    // #TEST#: R189 Rename value
+    return value;
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -373,6 +381,8 @@ void f13()
     require_equal(2.0, 2.0_xd2);
     // #TEST#: R186 Renamve xc
     require_equal('c', 'c'_xc);
+    // #TEST#: R190 Rename xc2
+    require_equal(L'c', L'c'_xc2);
 }
 
 }
