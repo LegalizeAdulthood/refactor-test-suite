@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index b7ded66..ad0e131 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -427,7 +427,7 @@ std::ostream &operator<<(std::ostream &stream, const std::basic_string<char16_t>
+ // #TEST#: R211 Rename xs3
+ // #TEST#: R212 Rename text
+ // #TEST#: R213 Rename len
+-std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len)
++std::basic_string<char16_t> operator""_Goink(const char16_t *text, std::size_t len)
+ {
+     // #TEST#: R214 Rename text
+     // #TEST#: R215 Rename len
+@@ -459,7 +459,7 @@ void f13()
+     // #TEST#: R210 Rename xs2
+     require_equal(std::wstring{L"foo"}, L"foo"_xs2);
+     // #TEST#: R216 Rename xs3
+-    require_equal(std::basic_string<char16_t>{u"foo"}, u"foo"_xs3);
++    require_equal(std::basic_string<char16_t>{u"foo"}, u"foo"_Goink);
+ }
+ 
+ }

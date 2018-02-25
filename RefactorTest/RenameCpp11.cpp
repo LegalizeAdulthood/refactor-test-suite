@@ -419,6 +419,21 @@ std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
     return std::wstring(text, len);
 }
 
+std::ostream &operator<<(std::ostream &stream, const std::basic_string<char16_t> &value)
+{
+    return stream << narrow(value);
+}
+
+// #TEST#: R211 Rename xs3
+// #TEST#: R212 Rename text
+// #TEST#: R213 Rename len
+std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len)
+{
+    // #TEST#: R214 Rename text
+    // #TEST#: R215 Rename len
+    return {text, len};
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -443,6 +458,8 @@ void f13()
     require_equal(std::string{"foo"}, "foo"_xs);
     // #TEST#: R210 Rename xs2
     require_equal(std::wstring{L"foo"}, L"foo"_xs2);
+    // #TEST#: R216 Rename xs3
+    require_equal(std::basic_string<char16_t>{u"foo"}, u"foo"_xs3);
 }
 
 }
