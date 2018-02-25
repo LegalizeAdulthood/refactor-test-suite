@@ -1,0 +1,17 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index ba88840..e26ce6a 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -939,10 +939,10 @@ constexpr int ii = 15;
+ void f33()
+ {
+     // #TEST#: R388 Rename i
+-    constexpr int i = 6;
++    constexpr int Goink = 6;
+     // #TEST#: R389 Rename x
+     // #TEST#: R390 Rename i
+-    int constexpr x = 2*i;
++    int constexpr x = 2*Goink;
+     // #TEST#: R391 Rename x
+     require_equal(12, x);
+     // #TEST#: R392 Rename ii

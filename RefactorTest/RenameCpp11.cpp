@@ -933,6 +933,22 @@ void f32()
     require_equal(10, y);
 }
 
+// #TEST#: R387 Rename ii
+constexpr int ii = 15;
+
+void f33()
+{
+    // #TEST#: R388 Rename i
+    constexpr int i = 6;
+    // #TEST#: R389 Rename x
+    // #TEST#: R390 Rename i
+    int constexpr x = 2*i;
+    // #TEST#: R391 Rename x
+    require_equal(12, x);
+    // #TEST#: R392 Rename ii
+    require_equal(15, ii);
+}
+
 }
 
 namespace RenameCpp11
@@ -979,4 +995,5 @@ void TestRenameCpp11()
     f30();
     f31();
     f32();
+    f33();
 }
