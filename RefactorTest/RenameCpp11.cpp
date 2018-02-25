@@ -544,6 +544,24 @@ void f17()
     require_equal(30.0, std::get<2>(i.t));
 }
 
+// #TEST#: R247 Rename Args
+template <typename... Args>
+// #TEST#: R248 Rename Args
+// #TEST#: R249 Rename args
+void f18_aux(std::ostream &stream, Args... args)
+{
+    // #TEST#: R250 Rename Args
+    // #TEST#: R251 Rename args
+    int ignored[sizeof...(Args)] = { (stream << args << ' ', 0)... };
+}
+
+void f18()
+{
+    std::ostringstream result;
+    f18_aux(result, 10, 20.5, "hello, world!");
+    require_equal(std::string{"10 20.5 hello, world! "}, result.str());
+}
+
 }
 
 void TestRenameCpp11()
@@ -565,4 +583,5 @@ void TestRenameCpp11()
     f15();
     f16();
     f17();
+    f18();
 }
