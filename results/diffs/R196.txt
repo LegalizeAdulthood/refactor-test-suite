@@ -1,0 +1,17 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index a6de72f..50737c9 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -377,10 +377,10 @@ char16_t operator""_xc3(char16_t value)
+ 
+ // #TEST#: R195 Rename xc4
+ // #TEST#: R196 Rename value
+-char32_t operator""_xc4(char32_t value)
++char32_t operator""_xc4(char32_t Goink)
+ {
+     // #TEST#: R197 Rename value
+-    return value;
++    return Goink;
+ }
+ 
+ void f13()

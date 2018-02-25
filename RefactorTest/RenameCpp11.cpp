@@ -375,6 +375,14 @@ char16_t operator""_xc3(char16_t value)
     return value;
 }
 
+// #TEST#: R195 Rename xc4
+// #TEST#: R196 Rename value
+char32_t operator""_xc4(char32_t value)
+{
+    // #TEST#: R197 Rename value
+    return value;
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -393,6 +401,8 @@ void f13()
     require_equal(L'c', L'c'_xc2);
     // #TEST#: R194 Rename xc3
     require_equal(u'c', u'c'_xc3);
+    // #TEST#: R198 Rename xc4
+    require_equal(U'c', U'c'_xc4);
 }
 
 }
