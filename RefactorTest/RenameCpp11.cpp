@@ -656,6 +656,27 @@ void f22()
     f22_aux<std::runtime_error, std::invalid_argument>();
 }
 
+// #TEST#: R274 Rename Types
+template <typename... Types>
+// #TEST#: R275 Rename Types
+struct alignas(Types...) Aligned
+{
+    // #TEST#: R276 Rename Types
+    // #TEST#: R277 Rename args in constructor parameter list
+    // #TEST#: R278 Rename args in initializer list
+    Aligned(Types... args) : t(args...) {}
+    // #TEST#: R279 Rename Types
+    std::tuple<Types...> t;
+};
+
+void f23()
+{
+    Aligned<int, double, std::string> x(10, 20.5, "hello world!");
+    require_equal(10, std::get<0>(x.t));
+    require_equal(20.5, std::get<1>(x.t));
+    require_equal(std::string{"hello world!"}, std::get<2>(x.t));
+}
+
 }
 
 void TestRenameCpp11()
@@ -682,4 +703,5 @@ void TestRenameCpp11()
     f20();
     f21();
     f22();
+    f23();
 }

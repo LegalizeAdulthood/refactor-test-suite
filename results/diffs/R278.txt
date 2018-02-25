@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 7f78c77..8d114a2 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -664,7 +664,7 @@ struct alignas(Types...) Aligned
+     // #TEST#: R276 Rename Types
+     // #TEST#: R277 Rename args in constructor parameter list
+     // #TEST#: R278 Rename args in initializer list
+-    Aligned(Types... args) : t(args...) {}
++    Aligned(Types... Goink) : t(Goink...) {}
+     // #TEST#: R279 Rename Types
+     std::tuple<Types...> t;
+ };
