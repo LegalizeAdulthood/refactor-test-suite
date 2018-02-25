@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 30652ae..2a06e4c 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1034,9 +1034,9 @@ void f37()
+     require_equal(std::string{"foo"}, narrow(std::basic_string<char32_t>{s3}));
+ 
+     // #TEST#: R414 Rename s4
+-    const char *s4{R"(I say, "Hello, World!")"};
++    const char *Goink{R"(I say, "Hello, World!")"};
+     // #TEST#: R415 Rename s4
+-    require_equal(std::string{R"(I say, "Hello, World!")"}, std::string{s4});
++    require_equal(std::string{R"(I say, "Hello, World!")"}, std::string{Goink});
+ }
+ 
+ }

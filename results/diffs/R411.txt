@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 30652ae..50eb436 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1024,9 +1024,9 @@ void f37()
+     require_equal(std::string{"foo"}, std::string{s1});
+ 
+     // #TEST#: R410 Rename s2
+-    const char16_t *s2{u"foo"};
++    const char16_t *Goink{u"foo"};
+     // #TEST#: R411 Rename s2
+-    require_equal(std::string{"foo"}, narrow(std::basic_string<char16_t>{s2}));
++    require_equal(std::string{"foo"}, narrow(std::basic_string<char16_t>{Goink}));
+ 
+     // #TEST#: R412 Rename s3
+     const char32_t *s3{U"foo"};

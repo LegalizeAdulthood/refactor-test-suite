@@ -1016,6 +1016,29 @@ void f36()
     require_equal(std::string{"hello world!"}, s36());
 }
 
+void f37()
+{
+    // #TEST#: R408 Rename s1
+    const char *s1{u8"foo"};
+    // #TEST#: R409 Rename s1
+    require_equal(std::string{"foo"}, std::string{s1});
+
+    // #TEST#: R410 Rename s2
+    const char16_t *s2{u"foo"};
+    // #TEST#: R411 Rename s2
+    require_equal(std::string{"foo"}, narrow(std::basic_string<char16_t>{s2}));
+
+    // #TEST#: R412 Rename s3
+    const char32_t *s3{U"foo"};
+    // #TEST#: R413 Rename s3
+    require_equal(std::string{"foo"}, narrow(std::basic_string<char32_t>{s3}));
+
+    // #TEST#: R414 Rename s4
+    const char *s4{R"(I say, "Hello, World!")"};
+    // #TEST#: R415 Rename s4
+    require_equal(std::string{R"(I say, "Hello, World!")"}, std::string{s4});
+}
+
 }
 
 namespace RenameCpp11
@@ -1066,4 +1089,5 @@ void TestRenameCpp11()
     f34();
     f35();
     f36();
+    f37();
 }
