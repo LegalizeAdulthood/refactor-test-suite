@@ -1114,6 +1114,21 @@ void f42()
     require_equal(std::string{"10\n"}, result.str());
 }
 
+template <typename T>
+// #TEST#: R449 Rename f43_aux
+void f43_aux(std::ostream &stream, T value)
+{
+    stream << value << '\n';
+}
+
+void f43()
+{
+    std::ostringstream result;
+    // #TEST#: R450 Rename f43_aux
+    [&result](int value) { f43_aux(result, value); }(10);
+    require_equal(std::string{"10\n"}, result.str());
+}
+
 }
 
 namespace RenameCpp11
@@ -1170,4 +1185,5 @@ void TestRenameCpp11()
     f40();
     f41();
     f42();
+    f43();
 }

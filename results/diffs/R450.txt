@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 0df7f9c..bcd70c0 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1116,7 +1116,7 @@ void f42()
+ 
+ template <typename T>
+ // #TEST#: R449 Rename f43_aux
+-void f43_aux(std::ostream &stream, T value)
++void Goink(std::ostream &stream, T value)
+ {
+     stream << value << '\n';
+ }
+@@ -1125,7 +1125,7 @@ void f43()
+ {
+     std::ostringstream result;
+     // #TEST#: R450 Rename f43_aux
+-    [&result](int value) { f43_aux(result, value); }(10);
++    [&result](int value) { Goink(result, value); }(10);
+     require_equal(std::string{"10\n"}, result.str());
+ }
+ 
