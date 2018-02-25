@@ -524,6 +524,26 @@ void f16()
     require_equal(j, v.y);
 }
 
+// #TEST#: R242 Rename Args
+template <typename... Args>
+struct Initializer
+{
+    // #TEST#: R243 Rename Args
+    // #TEST#: R244 Rename args constructor argument
+    // #TEST#: R245 Rename args initializer
+    Initializer(Args... args) : t(args...) {}
+    // #TEST#: R246 Rename Args
+    std::tuple<Args...> t;
+};
+
+void f17()
+{
+    Initializer<int, float, double> i(10, 20.0f, 30.0);
+    require_equal(10, std::get<0>(i.t));
+    require_equal(20.0f, std::get<1>(i.t));
+    require_equal(30.0, std::get<2>(i.t));
+}
+
 }
 
 void TestRenameCpp11()
@@ -544,4 +564,5 @@ void TestRenameCpp11()
     f14();
     f15();
     f16();
+    f17();
 }
