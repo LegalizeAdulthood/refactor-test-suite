@@ -1070,6 +1070,24 @@ void f39()
 // #TEST#: R437 Rename F39_AUX
 #undef F39_AUX
 
+// #TEST#: R438 Rename X40
+struct X40
+{
+    // #TEST#: R439 Rename x
+    static int x;
+};
+
+// #TEST#: R440 Rename X40
+// #TEST#: R441 Rename x
+int X40::x = 0;
+
+void f40()
+{
+    // #TEST#: R442 Rename X40
+    // #TEST#: R443 Rename x
+    require_equal(1, []{ return X40::x + 1; }());
+}
+
 }
 
 namespace RenameCpp11
@@ -1123,4 +1141,5 @@ void TestRenameCpp11()
     f37();
     f38();
     f39();
+    f40();
 }
