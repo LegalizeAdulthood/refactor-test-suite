@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 115e6ab..a317ef4 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -345,7 +345,7 @@ int operator""_xull3(unsigned long long int value)
+ 
+ // #TEST#: R179 Rename xd2
+ // #TEST#: R180 Rename value
+-double operator""_xd2(long double value)
++double operator""_Goink(long double value)
+ {
+     // #TEST#: R181 Rename value
+     return static_cast<double>(value);
+@@ -362,7 +362,7 @@ void f13()
+     // #TEST#: R178 Rename xull3
+     require_equal(-555, -555_xull3);
+     // #TEST#: R182 Rename xd2
+-    require_equal(2.0, 2.0_xd2);
++    require_equal(2.0, 2.0_Goink);
+ }
+ 
+ }

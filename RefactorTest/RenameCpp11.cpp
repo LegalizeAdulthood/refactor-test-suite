@@ -343,6 +343,14 @@ int operator""_xull3(unsigned long long int value)
     return static_cast<int>(value);
 }
 
+// #TEST#: R179 Rename xd2
+// #TEST#: R180 Rename value
+double operator""_xd2(long double value)
+{
+    // #TEST#: R181 Rename value
+    return static_cast<double>(value);
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -353,6 +361,8 @@ void f13()
     require_equal(2.0, 2.0_xd);
     // #TEST#: R178 Rename xull3
     require_equal(-555, -555_xull3);
+    // #TEST#: R182 Rename xd2
+    require_equal(2.0, 2.0_xd2);
 }
 
 }
