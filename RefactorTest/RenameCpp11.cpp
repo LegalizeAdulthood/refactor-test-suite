@@ -505,6 +505,25 @@ void f15()
     require_equal(static_cast<int>(x), static_cast<int>(y));
 }
 
+void f16()
+{
+    // #TEST#: R236 Rename j
+    constexpr int j = 6;
+    struct X
+    {
+        // #TEST#: R237 Rename x
+        int x = 3;
+        // #TEST#: R238 Rename y
+        // #TEST#: R239 Rename j
+        int y = j;
+    };
+    X v;
+    // #TEST#: R240 Rename x
+    require_equal(3, v.x);
+    // #TEST#: R241 Rename y
+    require_equal(j, v.y);
+}
+
 }
 
 void TestRenameCpp11()
@@ -524,4 +543,5 @@ void TestRenameCpp11()
     f13();
     f14();
     f15();
+    f16();
 }
