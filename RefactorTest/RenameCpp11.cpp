@@ -844,6 +844,26 @@ void f27()
     require_equal(std::string{"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"}, result.str());
 }
 
+void f28()
+{
+    // #TEST#: R343 Rename x
+    auto x = 3;
+    // #TEST#: R344 Rename x
+    require_equal(3, x);
+    // #TEST#: R345 Rename y
+    // #TEST#: R346 Rename x
+    auto y = 3*x;
+    // #TEST#: R347 Rename y
+    require_equal(9, y);
+    // #TEST#: R348 Rename x
+    x *= 3;
+    // #TEST#: R349 Rename z
+    // #TEST#: R350 Rename x
+    const auto z = x;
+    // #TEST#: R351 Rename z
+    require_equal(9, z);
+}
+
 }
 
 void TestRenameCpp11()
@@ -875,4 +895,5 @@ void TestRenameCpp11()
     f25();
     f26();
     f27();
+    f28();
 }
