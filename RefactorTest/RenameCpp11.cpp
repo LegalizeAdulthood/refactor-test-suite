@@ -478,6 +478,33 @@ void f14()
     require_equal(String<char>{"foo"}, s);
 }
 
+void f15()
+{
+    // #TEST#: R228 Rename X
+    enum class X : char
+    {
+        // #TEST#: R229 Rename One
+        One,
+        Two,
+        Three
+    };
+    enum class Y : int
+    {
+        // #TEST#: R230 Rename One
+        One,
+        Two,
+        Three
+    };
+    // #TEST#: R231 Rename X on lhs
+    // #TEST#: R232 Rename x
+    // #TEST#: R233 Rename X on rhs
+    // #TEST#: R234 Rename One
+    X x = X::One;
+    // #TEST#: R235 Rename One
+    Y y = Y::One;
+    require_equal(static_cast<int>(x), static_cast<int>(y));
+}
+
 }
 
 void TestRenameCpp11()
@@ -496,4 +523,5 @@ void TestRenameCpp11()
     f12();
     f13();
     f14();
+    f15();
 }

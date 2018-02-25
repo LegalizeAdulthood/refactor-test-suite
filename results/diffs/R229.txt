@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index a27e0a8..1101572 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -484,7 +484,7 @@ void f15()
+     enum class X : char
+     {
+         // #TEST#: R229 Rename One
+-        One,
++        Goink,
+         Two,
+         Three
+     };
+@@ -499,7 +499,7 @@ void f15()
+     // #TEST#: R232 Rename x
+     // #TEST#: R233 Rename X on rhs
+     // #TEST#: R234 Rename One
+-    X x = X::One;
++    X x = X::Goink;
+     // #TEST#: R235 Rename One
+     Y y = Y::One;
+     require_equal(static_cast<int>(x), static_cast<int>(y));
