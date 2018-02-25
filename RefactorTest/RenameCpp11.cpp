@@ -587,6 +587,38 @@ void f19()
     require_equal(30, std::get<2>(x.t));
 }
 
+// #TEST#: R257 Rename Bases
+template <typename... Bases>
+// #TEST#: R258 Rename Bases
+struct Mixin : Bases...
+{
+    // #TEST#: R259 Rename Bases in constructor argument list
+    // #TEST#: R260 Rename bases in constructor argument list
+    // #TEST#: R261 Rename Bases in initializer list pack expansion
+    // #TEST#: R262 Rename bases in initializer list pack expansion
+    Mixin(const Bases &...bases) : Bases(bases)...
+    {
+    }
+};
+
+void f20()
+{
+    struct Int
+    {
+        Int(int i) : m(i) {}
+        int m;
+    };
+    struct Float
+    {
+        Float(float f) : m(f) {}
+        float m;
+    };
+    Mixin<Int, std::string, Float> m(10, std::string{"foo"}, 20.f);
+    require_equal(10, static_cast<Int &>(m).m);
+    require_equal(std::string{"foo"}, static_cast<std::string &>(m));
+    require_equal(20.f, static_cast<Float &>(m).m);
+}
+
 }
 
 void TestRenameCpp11()
@@ -610,4 +642,5 @@ void TestRenameCpp11()
     f17();
     f18();
     f19();
+    f20();
 }
