@@ -6,6 +6,7 @@
 #include <string>
 #include <sstream>
 #include <tuple>
+#include <vector>
 
 namespace
 {
@@ -786,6 +787,63 @@ void f26()
     require_equal(static_cast<int>(E::two), static_cast<int>([]() -> E { return E::two; }()));
 }
 
+void f27()
+{
+    // #TEST#: R327 Rename v
+    std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    std::ostringstream result;
+    // #TEST#: R328 Rename i
+    // #TEST#: R329 Rename v
+    for (int i : v)
+    {
+        // #TEST#: R330 Rename i
+        result << i << '\n';
+    }
+    require_equal(std::string{"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"}, result.str());
+
+    // #TEST#: R331 Rename i
+    // #TEST#: R332 Rename v
+    for (int &i : v)
+    {
+        // #TEST#: R333 Rename i
+        i *= 10;
+    }
+    result.str("");
+    std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });
+    require_equal(std::string{"10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n"}, result.str());
+
+    result.str("");
+    // #TEST#: R334 Rename i
+    // #TEST#: R335 Rename v
+    for (auto i : v)
+    {
+        // #TEST#: R336 Rename i
+        result << i << '\n';
+    }
+    require_equal(std::string{"10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n"}, result.str());
+
+    // #TEST#: R337 Rename i
+    // #TEST#: R338 Rename v
+    for (auto &i : v)
+    {
+        // #TEST#: R339 Rename i
+        i /= 10;
+    }
+    result.str("");
+    std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });
+    require_equal(std::string{"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"}, result.str());
+
+    result.str("");
+    // #TEST#: R340 Rename i
+    // #TEST#: R341 Rename v
+    for (const auto i : v)
+    {
+        // #TEST#: R342 Rename i
+        result << i << '\n';
+    }
+    require_equal(std::string{"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"}, result.str());
+}
+
 }
 
 void TestRenameCpp11()
@@ -816,4 +874,5 @@ void TestRenameCpp11()
     f24();
     f25();
     f26();
+    f27();
 }
