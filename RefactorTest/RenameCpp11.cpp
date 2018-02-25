@@ -906,6 +906,28 @@ void f30()
     require_equal(std::string{"1\n10\n20\n30\n4\n"}, result.str());
 }
 
+void f31()
+{
+    // #TEST#: R371 Rename Extern
+    using RenameCpp11::Extern;
+    // #TEST#: R372 Rename Extern
+    Extern<int> x(10);
+    require_equal(10, x.t);
+    // #TEST#: R373 Rename Extern
+    Extern<std::string> y("hello world!");
+    require_equal(std::string{"hello world!"}, y.t);
+}
+
+}
+
+namespace RenameCpp11
+{
+
+// #TEST#: R374 Rename Extern
+template struct Extern<int>;
+// #TEST#: R375 Rename Extern
+template struct Extern<std::string>;
+
 }
 
 void TestRenameCpp11()
@@ -940,4 +962,5 @@ void TestRenameCpp11()
     f28();
     f29();
     f30();
+    f31();
 }
