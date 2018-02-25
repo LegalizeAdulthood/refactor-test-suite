@@ -335,6 +335,14 @@ double operator""_xd(const char *text)
     return value;
 }
 
+// #TEST#: R175 Rename xull3
+// #TEST#: R176 Rename value
+int operator""_xull3(unsigned long long int value)
+{
+    // #TEST#: R177 Rename value
+    return static_cast<int>(value);
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -343,6 +351,8 @@ void f13()
     require_equal(666ULL, 666_xull2);
     // #TEST#: R174 Rename xd
     require_equal(2.0, 2.0_xd);
+    // #TEST#: R178 Rename xull3
+    require_equal(-555, -555_xull3);
 }
 
 }
