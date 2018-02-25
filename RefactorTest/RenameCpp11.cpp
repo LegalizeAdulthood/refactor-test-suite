@@ -1056,6 +1056,20 @@ void f38()
 // #TEST#: R434 Rename F38_AUX
 #undef F38_AUX
 
+// #TEST#: R435 Rename F39_AUX
+#define F39_AUX(...) f10_aux(__VA_ARGS__)
+
+void f39()
+{
+    std::ostringstream result;
+    // #TEST#: R436 Rename F39_AUX
+    F39_AUX(result, 10, 20.5, "hello, world!");
+    require_equal(std::string{"10\n20.5\nhello, world!\n"}, result.str());
+}
+
+// #TEST#: R437 Rename F39_AUX
+#undef F39_AUX
+
 }
 
 namespace RenameCpp11
@@ -1108,4 +1122,5 @@ void TestRenameCpp11()
     f36();
     f37();
     f38();
+    f39();
 }

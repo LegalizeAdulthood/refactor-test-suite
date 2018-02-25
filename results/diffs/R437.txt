@@ -1,0 +1,26 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 56dc334..bc3b45b 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1057,18 +1057,18 @@ void f38()
+ #undef F38_AUX
+ 
+ // #TEST#: R435 Rename F39_AUX
+-#define F39_AUX(...) f10_aux(__VA_ARGS__)
++#define GOINK(...) f10_aux(__VA_ARGS__)
+ 
+ void f39()
+ {
+     std::ostringstream result;
+     // #TEST#: R436 Rename F39_AUX
+-    F39_AUX(result, 10, 20.5, "hello, world!");
++    GOINK(result, 10, 20.5, "hello, world!");
+     require_equal(std::string{"10\n20.5\nhello, world!\n"}, result.str());
+ }
+ 
+ // #TEST#: R437 Rename F39_AUX
+-#undef F39_AUX
++#undef GOINK
+ 
+ }
+ 
