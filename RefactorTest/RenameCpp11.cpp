@@ -619,6 +619,31 @@ void f20()
     require_equal(20.f, static_cast<Float &>(m).m);
 }
 
+// #TEST#: R263 Rename Args
+template <typename... Args>
+// #TEST#: R264 Renem stream
+// #TEST#: R265 Rename Args
+// #TEST#: R266 Rename args
+void f21_aux(std::ostream &stream, Args... args)
+{
+    // #TEST#: R267 Rename args
+    // #TEST#: R268 Rename s
+    [&, args...](std::ostream &s)
+    {
+        // #TEST#: R269 Rename s
+        // #TEST#: R270 Rename args
+        f10_aux(s, args...);
+    // #TEST#: R271 Rename stream
+    }(stream);
+}
+
+void f21()
+{
+    std::ostringstream result;
+    f21_aux(result, 10, 20.5, "hello world!");
+    require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, result.str());
+}
+
 }
 
 void TestRenameCpp11()
@@ -643,4 +668,5 @@ void TestRenameCpp11()
     f18();
     f19();
     f20();
+    f21();
 }
