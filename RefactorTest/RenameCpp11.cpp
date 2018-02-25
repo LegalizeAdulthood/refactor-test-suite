@@ -1,6 +1,7 @@
 #include "RenameCpp11.h"
 #include "Require.h"
 
+#include <cmath>
 #include <string>
 #include <sstream>
 #include <tuple>
@@ -282,12 +283,66 @@ unsigned long long operator""_xull2(const char *text)
     return value;
 }
 
+// #TEST#: R172 Rename xd
+// #TEST#: R173 Rename text
+double operator""_xd(const char *text)
+{
+    const auto is_e = [](char c) { return c == 'e' || c == 'E'; };
+    double value = 0.0;
+    bool positive = true;
+    if (*text == '-' || *text == '+')
+    {
+        positive = *text == '+';
+        ++text;
+    }
+    while (*text)
+    {
+        if (*text == '.' || is_e(*text))
+        {
+            break;
+        }
+        value *= 10.0;
+        value += *text - '0';
+        ++text;
+    }
+    if (*text == '.')
+    {
+        ++text;
+        double fraction = 1.0;
+        while (*text)
+        {
+            if (is_e(*text))
+            {
+                break;
+            }
+            fraction /= 10.0;
+            value += (*text - '0')*fraction;
+            ++text;
+        }
+    }
+    if (is_e(*text))
+    {
+        ++text;
+        unsigned int exponent = 0;
+        while (*text)
+        {
+            exponent *= 10U;
+            exponent += *text - '0';
+            ++text;
+        }
+        value *= std::pow(10.0, exponent);
+    }
+    return value;
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
     require_equal(555ULL, 555_xull);
     // #TEST#: R171 Rename xull2
     require_equal(666ULL, 666_xull2);
+    // #TEST#: R174 Rename xd
+    require_equal(2.0, 2.0_xd);
 }
 
 }
