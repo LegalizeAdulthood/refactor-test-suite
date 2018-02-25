@@ -918,6 +918,21 @@ void f31()
     require_equal(std::string{"hello world!"}, y.t);
 }
 
+void f32()
+{
+    // #TEST#: R382 Rename Integer
+    using Integer = int;
+    // #TEST#: R383 Rename Integer
+    Integer x = 10;
+    require_equal(10, x);
+    // #TEST#: R384 Rename Integral
+    // #TEST#: R385 Rename Integer
+    using Integral = Integer;
+    // #TEST#: R386 Rename Integral
+    Integral y = 10;
+    require_equal(10, y);
+}
+
 }
 
 namespace RenameCpp11
@@ -963,4 +978,5 @@ void TestRenameCpp11()
     f29();
     f30();
     f31();
+    f32();
 }
