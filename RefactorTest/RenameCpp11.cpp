@@ -1,6 +1,7 @@
 #include "RenameCpp11.h"
 #include "Require.h"
 
+#include <iostream>
 #include <string>
 #include <sstream>
 
@@ -172,6 +173,39 @@ void f9()
     require_equal(0, x);
 }
 
+template <typename T>
+void f10_aux(std::ostream &stream, T head)
+{
+    stream << head << '\n';
+}
+
+// #TEST#: R146 Rename T
+// #TEST#: R147 Rename Args
+template <typename T, typename... Args>
+// #TEST#: R148 Rename T
+// #TEST#: R149 Rename head
+// #TEST#: R150 Rename Args
+// #TEST#: R151 Rename tail
+void f10_aux(std::ostream &stream, T head, Args... tail)
+{
+    // #TEST#: R152 Rename head
+    stream << head << '\n';
+    // #TEST#: R153 Rename tail
+    // #TEST#: R154 Rename Args
+    if (sizeof...(tail) > 0 || sizeof...(Args) > 0)
+    {
+        // #TEST#: R155 Rename tail
+        f10_aux(stream, tail...);
+    }
+}
+
+void f10()
+{
+    std::ostringstream result;
+    f10_aux(result, 10, 20.5, "hello world!");
+    require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, result.str());
+}
+
 }
 
 void TestRenameCpp11()
@@ -185,4 +219,5 @@ void TestRenameCpp11()
     f7();
     f8();
     f9();
+    f10();
 }
