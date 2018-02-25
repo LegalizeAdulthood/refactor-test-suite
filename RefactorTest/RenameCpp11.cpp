@@ -1100,6 +1100,20 @@ void f41()
 // #TEST#: R446 Rename F41_AUX
 #undef F41_AUX
 
+// #TEST#: R447 Rename f42_aux
+void f42_aux(std::ostream &stream, int x)
+{
+    f10_aux(stream, x);
+}
+
+void f42()
+{
+    std::ostringstream result;
+    // #TEST#: R448 Rename f42_aux
+    [](std::ostream &s, int x) { f42_aux(s, x); }(result, 10);
+    require_equal(std::string{"10\n"}, result.str());
+}
+
 }
 
 namespace RenameCpp11
@@ -1155,4 +1169,5 @@ void TestRenameCpp11()
     f39();
     f40();
     f41();
+    f42();
 }
