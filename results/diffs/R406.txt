@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 3d0fb85..facab54 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -997,7 +997,7 @@ inline namespace Inline36
+ // #TEST#: R402 Rename x36
+ int x36 = 10;
+ // #TEST#: R403 Rename d36
+-double d36 = 20.5;
++double Goink = 20.5;
+ // #TEST#: R404 Rename s36
+ std::string s36()
+ {
+@@ -1011,7 +1011,7 @@ void f36()
+     // #TEST#: R405 Renaem x36
+     require_equal(10, x36);
+     // #TEST#: R406 Rename d36
+-    require_equal(20.5, d36);
++    require_equal(20.5, Goink);
+     // #TEST#: R407 Rename s36
+     require_equal(std::string{"hello world!"}, s36());
+ }

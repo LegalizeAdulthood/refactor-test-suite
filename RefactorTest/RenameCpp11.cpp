@@ -991,6 +991,31 @@ void f35()
     require_equal(4, s);
 }
 
+inline namespace Inline36
+{
+
+// #TEST#: R402 Rename x36
+int x36 = 10;
+// #TEST#: R403 Rename d36
+double d36 = 20.5;
+// #TEST#: R404 Rename s36
+std::string s36()
+{
+    return "hello world!";
+}
+
+}
+
+void f36()
+{
+    // #TEST#: R405 Renaem x36
+    require_equal(10, x36);
+    // #TEST#: R406 Rename d36
+    require_equal(20.5, d36);
+    // #TEST#: R407 Rename s36
+    require_equal(std::string{"hello world!"}, s36());
+}
+
 }
 
 namespace RenameCpp11
@@ -1040,4 +1065,5 @@ void TestRenameCpp11()
     f33();
     f34();
     f35();
+    f36();
 }

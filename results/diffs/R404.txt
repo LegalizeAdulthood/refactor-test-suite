@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 3d0fb85..fa006f6 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -999,7 +999,7 @@ int x36 = 10;
+ // #TEST#: R403 Rename d36
+ double d36 = 20.5;
+ // #TEST#: R404 Rename s36
+-std::string s36()
++std::string Goink()
+ {
+     return "hello world!";
+ }
+@@ -1013,7 +1013,7 @@ void f36()
+     // #TEST#: R406 Rename d36
+     require_equal(20.5, d36);
+     // #TEST#: R407 Rename s36
+-    require_equal(std::string{"hello world!"}, s36());
++    require_equal(std::string{"hello world!"}, Goink());
+ }
+ 
+ }
