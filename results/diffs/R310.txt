@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 67b647e..4d87886 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -754,9 +754,9 @@ void f26()
+ 
+     // #TEST#: R310 Rename l
+     // #TEST#: R311 Rename f in lambda body
+-    const auto l = [&]{ return f /= 10.0; };
++    const auto Goink = [&]{ return f /= 10.0; };
+     // #TEST#: R312 Rename l
+-    require_equal(20.5, l());
++    require_equal(20.5, Goink());
+     require_equal(20.5, f);
+ 
+     // #TEST#: R313 Rename s

@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 67b647e..5cb68c5 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -773,7 +773,7 @@ void f26()
+     {
+         one,
+         // #TEST#: R320 Rename two
+-        two,
++        Goink,
+         three
+     };
+     // #TEST#: R321 Rename E in declaration
+@@ -783,7 +783,7 @@ void f26()
+     // #TEST#: R324 Rename E in lambda return type
+     // #TEST#: R325 Rename E in lambda body
+     // #TEST#: R326 Rename two in lambda body
+-    require_equal(static_cast<int>(E::two), static_cast<int>([]() -> E { return E::two; }()));
++    require_equal(static_cast<int>(E::Goink), static_cast<int>([]() -> E { return E::Goink; }()));
+ }
+ 
+ }

@@ -719,6 +719,73 @@ void f25()
     require_equal(std::string{"hello world!"}, f25_aux<std::string>("hello world!"));
 }
 
+void f26()
+{
+    // #TEST#: R293 Rename x
+    int x = 10;
+    // #TEST#: R294 Rename x in lambda parameter list
+    // #TEST#: R295 Rename x in lambda body
+    // #TEST#: R296 Rename x in lambda argument list
+    require_equal(100, [](int x){ return x*10; }(x));
+
+    // #TEST#: R297 Rename f
+    double f = 20.5;
+    // #TEST#: R298 Rename f in lambda capture list
+    // #TEST#: R299 Rename x in lambda parameter list
+    // #TEST#: R300 Rename x in lambda body
+    // #TEST#: R301 Rename f in lambda body
+    // #TEST#: R302 Rename x in lambda argument list
+    require_equal(205.0, [f](int x){ return x*f; }(x));
+
+    // #TEST#: R303 Rename x in lambda parameter list
+    // #TEST#: R304 Rename x in lambda body
+    // #TEST#: R305 Rename f in lambda body
+    // #TEST#: R306 Rename x in lambda argument list
+    require_equal(205.0, [=](int x){ return x*f; }(x));
+
+    // #TEST#: R307 Rename x in lambda capture list
+    // #TEST#: R308 Rename x in lambda body
+    require_equal(1, [&x]{ return x /= 10; }());
+    require_equal(1, x);
+
+    // #TEST#: R309 Rename f in lambda body
+    require_equal(205.0, [&]{ return f *= 10.0; }());
+    require_equal(205.0, f);
+
+    // #TEST#: R310 Rename l
+    // #TEST#: R311 Rename f in lambda body
+    const auto l = [&]{ return f /= 10.0; };
+    // #TEST#: R312 Rename l
+    require_equal(20.5, l());
+    require_equal(20.5, f);
+
+    // #TEST#: R313 Rename s
+    const std::string s{"hello world!"};
+    // #TEST#: R314 Rename s in lambda parameter list
+    // #TEST#: R315 Rename nl declaration in lambda body
+    // #TEST#: R316 Rename s in lambda body
+    // #TEST#: R317 Rename nl in expression in lambda body
+    // #TEST#: R318 Rename s in lambda argument list
+    require_equal(std::string{"hello world!\n"}, [](const std::string &s){ std::string nl{"\n"}; return s + nl; }(s));
+
+    // #TEST#: R319 Rename E
+    enum class E
+    {
+        one,
+        // #TEST#: R320 Rename two
+        two,
+        three
+    };
+    // #TEST#: R321 Rename E in declaration
+    // #TEST#: R322 Rename E in initialization expression
+    E e = E::one;
+    // #TEST#: R323 Rename E in first argument to require_equal
+    // #TEST#: R324 Rename E in lambda return type
+    // #TEST#: R325 Rename E in lambda body
+    // #TEST#: R326 Rename two in lambda body
+    require_equal(static_cast<int>(E::two), static_cast<int>([]() -> E { return E::two; }()));
+}
+
 }
 
 void TestRenameCpp11()
@@ -748,4 +815,5 @@ void TestRenameCpp11()
     f23();
     f24();
     f25();
+    f26();
 }

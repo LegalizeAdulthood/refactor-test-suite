@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 67b647e..e3fa126 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -741,7 +741,7 @@ void f26()
+     // #TEST#: R304 Rename x in lambda body
+     // #TEST#: R305 Rename f in lambda body
+     // #TEST#: R306 Rename x in lambda argument list
+-    require_equal(205.0, [=](int x){ return x*f; }(x));
++    require_equal(205.0, [=](int Goink){ return Goink*f; }(x));
+ 
+     // #TEST#: R307 Rename x in lambda capture list
+     // #TEST#: R308 Rename x in lambda body

@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 67b647e..08b8c38 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -766,7 +766,7 @@ void f26()
+     // #TEST#: R316 Rename s in lambda body
+     // #TEST#: R317 Rename nl in expression in lambda body
+     // #TEST#: R318 Rename s in lambda argument list
+-    require_equal(std::string{"hello world!\n"}, [](const std::string &s){ std::string nl{"\n"}; return s + nl; }(s));
++    require_equal(std::string{"hello world!\n"}, [](const std::string &Goink){ std::string nl{"\n"}; return Goink + nl; }(s));
+ 
+     // #TEST#: R319 Rename E
+     enum class E
