@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index bce9bbb..07c23f7 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -255,7 +255,7 @@ void f12()
+ // #TEST#: R165 Rename text
+ template <char... text>
+ // #TEST#: R166 Rename xull
+-unsigned long long operator""_xull()
++unsigned long long operator""_Goink()
+ {
+     unsigned long long value = 0;
+     // #TEST#: R167 Rename text
+@@ -271,7 +271,7 @@ unsigned long long operator""_xull()
+ void f13()
+ {
+     // #TEST#: R168 Rename xull
+-    require_equal(555ULL, 555_xull);
++    require_equal(555ULL, 555_Goink);
+ }
+ 
+ }

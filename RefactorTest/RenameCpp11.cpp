@@ -252,6 +252,28 @@ void f12()
     require_equal(std::string{"hello world!"}, std::get<2>(t));
 }
 
+// #TEST#: R165 Rename text
+template <char... text>
+// #TEST#: R166 Rename xull
+unsigned long long operator""_xull()
+{
+    unsigned long long value = 0;
+    // #TEST#: R167 Rename text
+    std::initializer_list<char> chars{text...};
+    for (char c : chars)
+    {
+        value *= 10ULL;
+        value += c - '0';
+    }
+    return value;
+}
+
+void f13()
+{
+    // #TEST#: R168 Rename xull
+    require_equal(555ULL, 555_xull);
+}
+
 }
 
 void TestRenameCpp11()
@@ -268,4 +290,5 @@ void TestRenameCpp11()
     f10();
     f11();
     f12();
+    f13();
 }
