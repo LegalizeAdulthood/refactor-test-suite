@@ -887,6 +887,25 @@ void f29()
     require_equal(10, z);
 }
 
+void f30()
+{
+    // #TEST#: R365 Rename x
+    int x = 10;
+    // #TEST#: R366 Rename y
+    int y = 20;
+    // #TEST#: R367 REname z
+    int z = 30;
+    std::ostringstream result;
+    // #TEST#: R368 Rename x
+    // #TEST#: R369 Rename y
+    // #TEST#: R370 Rename z
+    for (int i : { 1, x, y, z, 4 })
+    {
+        result << i << '\n';
+    }
+    require_equal(std::string{"1\n10\n20\n30\n4\n"}, result.str());
+}
+
 }
 
 void TestRenameCpp11()
@@ -920,4 +939,5 @@ void TestRenameCpp11()
     f27();
     f28();
     f29();
+    f30();
 }
