@@ -864,6 +864,29 @@ void f28()
     require_equal(9, z);
 }
 
+void f29()
+{
+    // #TEST#: R352 Rename x
+    int x = 3;
+    // #TEST#: R353 Rename x in decltype argument
+    // #TEST#: R354 Rename y
+    // #TEST#: R355 Rename x in initializing expression
+    decltype(x) y = x;
+    // #TEST#: R356 Rename y
+    require_equal(3, y);
+    // #TEST#: R357 Rename y
+    // #TEST#: R358 Rename x
+    require_equal(true, std::is_same<decltype(y), decltype(x)>::value);
+    // #TEST#: R359 Rename first x in expression
+    // #TEST#: R360 Rename first y in expression
+    // #TEST#: R361 Rename second x in expression
+    // #TEST#: R362 Rename second y in expression
+    // #TEST#: R363 Rename z
+    decltype(x + y - x - y) z = 10;
+    // #TEST#: R364 Rename z
+    require_equal(10, z);
+}
+
 }
 
 void TestRenameCpp11()
@@ -896,4 +919,5 @@ void TestRenameCpp11()
     f26();
     f27();
     f28();
+    f29();
 }
