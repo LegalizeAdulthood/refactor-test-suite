@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 24fa2cd..00705fd 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -977,7 +977,7 @@ struct X35
+     constexpr std::size_t size() const { return sizeof(X35); }
+ 
+     // #TEST#: R399 Rename sz
+-    static constexpr int sz = 4;
++    static constexpr int Goink = 4;
+ };
+ 
+ void f35()
+@@ -987,7 +987,7 @@ void f35()
+     constexpr std::size_t size = x.size();
+     require_equal(std::size_t{1}, size);
+     // #TEST#: R401 Rename sz static member
+-    constexpr int s = X35::sz;
++    constexpr int s = X35::Goink;
+     require_equal(4, s);
+ }
+ 

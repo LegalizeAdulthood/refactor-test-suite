@@ -971,6 +971,26 @@ void f34()
     require_equal(30, j);
 }
 
+struct X35
+{
+    // #TEST#: R398 Rename size
+    constexpr std::size_t size() const { return sizeof(X35); }
+
+    // #TEST#: R399 Rename sz
+    static constexpr int sz = 4;
+};
+
+void f35()
+{
+    X35 x;
+    // #TEST#: R400 Rename size member function
+    constexpr std::size_t size = x.size();
+    require_equal(std::size_t{1}, size);
+    // #TEST#: R401 Rename sz static member
+    constexpr int s = X35::sz;
+    require_equal(4, s);
+}
+
 }
 
 namespace RenameCpp11
@@ -1019,4 +1039,5 @@ void TestRenameCpp11()
     f32();
     f33();
     f34();
+    f35();
 }
