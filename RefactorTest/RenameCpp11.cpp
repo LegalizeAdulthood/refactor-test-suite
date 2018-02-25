@@ -700,6 +700,25 @@ void f24()
     require_equal(std::string{"hello world!"}, x.s);
 }
 
+// #TEST#: R287 Rename T
+template <typename T, typename U>
+// #TEST#: R288 Rename arg in parameter list
+// #TEST#: R289 Rename T
+// #TEST#: R290 REname arg in decltype expression
+auto f25_aux(U arg) -> decltype(T(arg))
+{
+    // #TEST#: R291 Rename T
+    // #TEST#: R292 Rename arg
+    return T(arg);
+}
+
+void f25()
+{
+    require_equal(10, f25_aux<int>(10));
+    require_equal(20.5, f25_aux<double>(20.5f));
+    require_equal(std::string{"hello world!"}, f25_aux<std::string>("hello world!"));
+}
+
 }
 
 void TestRenameCpp11()
@@ -728,4 +747,5 @@ void TestRenameCpp11()
     f22();
     f23();
     f24();
+    f25();
 }
