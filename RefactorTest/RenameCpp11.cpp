@@ -1039,6 +1039,23 @@ void f37()
     require_equal(std::string{R"(I say, "Hello, World!")"}, std::string{s4});
 }
 
+// #TEST#: R429 Rename F38_AUX
+// #TEST#: R430 Rename stream_ in macro argument list
+// #TEST#: R431 Rename stream_ in macro expansion text
+// #TEST#: R432 Rename not available for __VA_ARGS__ in macro expansion text
+#define F38_AUX(stream_, ...) f10_aux(stream_, __VA_ARGS__)
+
+void f38()
+{
+    std::ostringstream result;
+    // #TEST#: R433 Rename F38_AUX
+    F38_AUX(result, 10, 20.5, "hello, world!");
+    require_equal(std::string{"10\n20.5\nhello, world!\n"}, result.str());
+}
+
+// #TEST#: R434 Rename F38_AUX
+#undef F38_AUX
+
 }
 
 namespace RenameCpp11
@@ -1090,4 +1107,5 @@ void TestRenameCpp11()
     f35();
     f36();
     f37();
+    f38();
 }
