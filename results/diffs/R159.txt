@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index eb454af..0ad8e38 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -207,7 +207,7 @@ void f10()
+ }
+ 
+ // #TEST#: R156 Rename Args
+-template <typename... Args>
++template <typename... Goink>
+ // #TEST#: R157 Rename X
+ class X
+ {
+@@ -215,7 +215,7 @@ public:
+     // #TEST#: R158 Rename X
+     // #TEST#: R159 Rename Args
+     // #TEST#: R160 Rename args
+-    X(Args... args)
++    X(Goink... args)
+     {
+         std::ostringstream result;
+         // #TEST#: R161 Rename args

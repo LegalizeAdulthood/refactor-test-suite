@@ -206,6 +206,39 @@ void f10()
     require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, result.str());
 }
 
+// #TEST#: R156 Rename Args
+template <typename... Args>
+// #TEST#: R157 Rename X
+class X
+{
+public:
+    // #TEST#: R158 Rename X
+    // #TEST#: R159 Rename Args
+    // #TEST#: R160 Rename args
+    X(Args... args)
+    {
+        std::ostringstream result;
+        // #TEST#: R161 Rename args
+        f10_aux(result, args...);
+        m_str = result.str();
+    }
+
+    const std::string &str() const
+    {
+        return m_str;
+    }
+
+private:
+    std::string m_str;
+};
+
+void f11()
+{
+    // #TEST#: R162 Rename X
+    X<int, double, std::string> x{10, 20.5, "hello world!"};
+    require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, x.str());
+}
+
 }
 
 void TestRenameCpp11()
@@ -220,4 +253,5 @@ void TestRenameCpp11()
     f8();
     f9();
     f10();
+    f11();
 }
