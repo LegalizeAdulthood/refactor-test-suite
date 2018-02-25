@@ -231,6 +231,38 @@ static int s_macro_value2 = -40;
 // #TEST#: R58 Rename namespace RenameNamespace
 using namespace RenameNamespace;
 
+namespace
+{
+
+// #TEST#: R416 Rename T
+template <typename T>
+// #TEST#: R417 Rename T return type
+// #TEST#: R418 Rename f1_aux
+// #TEST#: R419 Rename T first parameter type
+// #TEST#: R420 Rename value
+// #TEST#: R421 Rename T second parameter type
+// #TEST#: R422 Rename x
+T f1_aux(T value, T x = 1)
+{
+    // #TEST#: R423 Rename value
+    // #TEST#: R424 Rename x
+    return value + x;
+}
+
+void f1()
+{
+    // #TEST#: R425 Rename f1_aux
+    require_equal(1, f1_aux(0));
+    // #TEST#: R426 Rename f1_aux
+    require_equal(std::string{"hello world!"}, f1_aux(std::string{"hello "}, std::string{"world!"}));
+    // #TEST#: R427 Rename f1_aux
+    require_equal(2.0, f1_aux(1.0));
+    // #TEST#: R428 Rename f1_aux
+    require_equal(7.0f, f1_aux<float>(6));
+}
+
+}
+
 void TestRename()
 {
     U u;
@@ -389,4 +421,5 @@ restart:
         dashes.append(x, '-');
         REQUIRE_EQUAL(std::string("-------------"), dashes);
     }
+    f1();
 }

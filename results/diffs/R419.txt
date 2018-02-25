@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 6744aba..bf01fa3 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -235,14 +235,14 @@ namespace
+ {
+ 
+ // #TEST#: R416 Rename T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R417 Rename T return type
+ // #TEST#: R418 Rename f1_aux
+ // #TEST#: R419 Rename T first parameter type
+ // #TEST#: R420 Rename value
+ // #TEST#: R421 Rename T second parameter type
+ // #TEST#: R422 Rename x
+-T f1_aux(T value, T x = 1)
++Goink f1_aux(Goink value, Goink x = 1)
+ {
+     // #TEST#: R423 Rename value
+     // #TEST#: R424 Rename x
