@@ -949,6 +949,28 @@ void f33()
     require_equal(15, ii);
 }
 
+// #TEST#: R393 Rename f34_aux
+// #TEST#: R394 Rename j
+constexpr int f34_aux(int j)
+{
+    return ii + j;
+}
+
+// #TEST#: R395 Rename f34_aux
+static_assert(f34_aux(3) == 18, "f34_aux(3) == 18");
+
+void f34()
+{
+    // #TEST#: R396 Rename f34_aux
+    constexpr int x = f34_aux(3);
+    require_equal(18, x);
+    int j = 15;
+    // #TEST#: R397 Rename f34_aux
+    require_equal(30, f34_aux(j));
+    j += 15;
+    require_equal(30, j);
+}
+
 }
 
 namespace RenameCpp11
@@ -996,4 +1018,5 @@ void TestRenameCpp11()
     f31();
     f32();
     f33();
+    f34();
 }

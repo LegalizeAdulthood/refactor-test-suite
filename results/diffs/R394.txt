@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index afc30d6..4324d59 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -951,9 +951,9 @@ void f33()
+ 
+ // #TEST#: R393 Rename f34_aux
+ // #TEST#: R394 Rename j
+-constexpr int f34_aux(int j)
++constexpr int f34_aux(int Goink)
+ {
+-    return ii + j;
++    return ii + Goink;
+ }
+ 
+ // #TEST#: R395 Rename f34_aux
