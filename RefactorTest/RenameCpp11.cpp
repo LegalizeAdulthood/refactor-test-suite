@@ -1088,6 +1088,18 @@ void f40()
     require_equal(1, []{ return X40::x + 1; }());
 }
 
+// #TEST#: R444 Rename F41_AUX
+#define F41_AUX 15
+
+void f41()
+{
+    // #TEST#: R445 Rename F41_AUX
+    require_equal(15, []{ return F41_AUX; }());
+}
+
+// #TEST#: R446 Rename F41_AUX
+#undef F41_AUX
+
 }
 
 namespace RenameCpp11
@@ -1142,4 +1154,5 @@ void TestRenameCpp11()
     f38();
     f39();
     f40();
+    f41();
 }

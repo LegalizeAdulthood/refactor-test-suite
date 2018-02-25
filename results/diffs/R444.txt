@@ -1,0 +1,24 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 948755d..09ad78a 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1089,16 +1089,16 @@ void f40()
+ }
+ 
+ // #TEST#: R444 Rename F41_AUX
+-#define F41_AUX 15
++#define GOINK 15
+ 
+ void f41()
+ {
+     // #TEST#: R445 Rename F41_AUX
+-    require_equal(15, []{ return F41_AUX; }());
++    require_equal(15, []{ return GOINK; }());
+ }
+ 
+ // #TEST#: R446 Rename F41_AUX
+-#undef F41_AUX
++#undef GOINK
+ 
+ }
+ 
