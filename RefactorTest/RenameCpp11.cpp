@@ -268,10 +268,26 @@ unsigned long long operator""_xull()
     return value;
 }
 
+// #TEST#: R169 Rename xull2
+// #TEST#: R170 Rename text
+unsigned long long operator""_xull2(const char *text)
+{
+    unsigned long long value = 0;
+    while (*text)
+    {
+        value *= 10ULL;
+        value += *text - '0';
+        ++text;
+    }
+    return value;
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
     require_equal(555ULL, 555_xull);
+    // #TEST#: R171 Rename xull2
+    require_equal(666ULL, 666_xull2);
 }
 
 }
