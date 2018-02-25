@@ -1,0 +1,17 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index cb7c79f..87d5473 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -465,10 +465,10 @@ void f13()
+ }
+ 
+ // #TEST#: R223 Rename Char
+-template <typename Char>
++template <typename Goink>
+ // #TEST#: R224 Rename String
+ // #TEST#: R225 Rename Char
+-using String = std::basic_string<Char>;
++using String = std::basic_string<Goink>;
+ 
+ void f14()
+ {

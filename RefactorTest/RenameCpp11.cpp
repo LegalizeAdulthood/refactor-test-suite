@@ -464,6 +464,20 @@ void f13()
     require_equal(std::string{"foo"}, narrow(U"foo"_xs4));
 }
 
+// #TEST#: R223 Rename Char
+template <typename Char>
+// #TEST#: R224 Rename String
+// #TEST#: R225 Rename Char
+using String = std::basic_string<Char>;
+
+void f14()
+{
+    // #TEST#: R226 Rename String
+    String<char> s{"foo"};
+    // #TEST#: R227 Rename String
+    require_equal(String<char>{"foo"}, s);
+}
+
 }
 
 void TestRenameCpp11()
@@ -481,4 +495,5 @@ void TestRenameCpp11()
     f11();
     f12();
     f13();
+    f14();
 }
