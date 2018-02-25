@@ -383,6 +383,16 @@ char32_t operator""_xc4(char32_t value)
     return value;
 }
 
+// #TEST#: R199 Rename xs
+// #TEST#: R200 Rename text
+// #TEST#: R201 Rename len
+std::string operator""_xs(const char *text, std::size_t len)
+{
+    // #TEST#: R202 Rename text
+    // #TEST#: R203 Rename len
+    return std::string(text, len);
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -403,6 +413,8 @@ void f13()
     require_equal(u'c', u'c'_xc3);
     // #TEST#: R198 Rename xc4
     require_equal(U'c', U'c'_xc4);
+    // #TEST#: R204 Rename xs
+    require_equal(std::string{"foo"}, "foo"_xs);
 }
 
 }
