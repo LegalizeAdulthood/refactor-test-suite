@@ -677,6 +677,29 @@ void f23()
     require_equal(std::string{"hello world!"}, std::get<2>(x.t));
 }
 
+void f24()
+{
+    // #TEST#: R280 Rename X
+    struct X
+    {
+        // #TEST#: R281 Rename constructor X
+        // #TEST#: R282 Rename delegated constructor X
+        X() : X(10) {}
+        // #TEST#: R283 Rename constructor X
+        // #TEST#: R284 Rename delegated constructor X
+        X(int x) : X(x, "hello world!") {}
+        // #TEST#: R285 Rename constructor X
+        X(int num, const char *text) : x(num), s(text) {}
+
+        int x;
+        std::string s;
+    };
+    // #TEST#: R286 Rename X
+    X x;
+    require_equal(10, x.x);
+    require_equal(std::string{"hello world!"}, x.s);
+}
+
 }
 
 void TestRenameCpp11()
@@ -704,4 +727,5 @@ void TestRenameCpp11()
     f21();
     f22();
     f23();
+    f24();
 }

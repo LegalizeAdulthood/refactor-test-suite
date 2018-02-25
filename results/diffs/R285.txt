@@ -1,0 +1,34 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index c21c886..a969766 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -680,23 +680,22 @@ void f23()
+ void f24()
+ {
+     // #TEST#: R280 Rename X
+-    struct X
++    struct Goink
+     {
+         // #TEST#: R281 Rename constructor X
+         // #TEST#: R282 Rename delegated constructor X
+-        X() : X(10) {}
++        Goink() : Goink(10) {}
+         // #TEST#: R283 Rename constructor X
+         // #TEST#: R284 Rename delegated constructor X
+-        X(int x) : X(x, "hello world!") {}
++        Goink(int x) : Goink(x, "hello world!") {}
+         // #TEST#: R285 Rename constructor X
+-        // #TEST#: R286 Rename delegated constructor X
+-        X(int num, const char *text) : x(num), s(text) {}
++        Goink(int num, const char *text) : x(num), s(text) {}
+ 
+         int x;
+         std::string s;
+     };
+-    // #TEST#: R287 Rename X
+-    X x;
++    // #TEST#: R286 Rename X
++    Goink x;
+     require_equal(10, x.x);
+     require_equal(std::string{"hello world!"}, x.s);
+ }
