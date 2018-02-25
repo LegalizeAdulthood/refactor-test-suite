@@ -1,6 +1,7 @@
 #include "RenameCpp11.h"
 #include "Require.h"
 
+#include <algorithm>
 #include <cmath>
 #include <string>
 #include <sstream>
@@ -393,6 +394,31 @@ std::string operator""_xs(const char *text, std::size_t len)
     return std::string(text, len);
 }
 
+template <typename T>
+std::string narrow(const std::basic_string<T> &wide)
+{
+    std::string value;
+    value.resize(wide.length());
+    std::transform(value.begin(), value.end(), value.begin(),
+        [](T c) { return static_cast<char>(c); });
+    return value;
+}
+
+std::ostream &operator<<(std::ostream &stream, const std::wstring &value)
+{
+    return stream << narrow(value);
+}
+
+// #TEST#: R205 Rename xs2
+// #TEST#: R206 Rename text
+// #TEST#: R207 Rename len
+std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
+{
+    // #TEST#: R208 Rename text
+    // #TEST#: R209 Rename len
+    return std::wstring(text, len);
+}
+
 void f13()
 {
     // #TEST#: R168 Rename xull
@@ -415,6 +441,8 @@ void f13()
     require_equal(U'c', U'c'_xc4);
     // #TEST#: R204 Rename xs
     require_equal(std::string{"foo"}, "foo"_xs);
+    // #TEST#: R210 Rename xs2
+    require_equal(std::wstring{L"foo"}, L"foo"_xs2);
 }
 
 }

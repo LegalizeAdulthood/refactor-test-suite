@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 65dbd64..6b21743 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -412,11 +412,11 @@ std::ostream &operator<<(std::ostream &stream, const std::wstring &value)
+ // #TEST#: R205 Rename xs2
+ // #TEST#: R206 Rename text
+ // #TEST#: R207 Rename len
+-std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
++std::wstring operator""_xs2(const wchar_t *text, std::size_t Goink)
+ {
+     // #TEST#: R208 Rename text
+     // #TEST#: R209 Rename len
+-    return std::wstring(text, len);
++    return std::wstring(text, Goink);
+ }
+ 
+ void f13()
