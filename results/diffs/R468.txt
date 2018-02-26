@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index fffbcca..deec541 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1188,7 +1188,7 @@ void f44()
+ template <typename T>
+ // #TEST#: R468 Rename function g45_aux
+ // #TEST#: R469 Rename parameter x
+-T g45_aux(T &&x)
++T Goink(T &&x)
+ {
+     // #TEST#: R470 Rename parameter x
+     T y(x);
+@@ -1202,7 +1202,7 @@ T f45_aux(T &&x)
+ {
+     // #TEST#: R473 Rename function g45_aux
+     // #TEST#: R474 Rename parameter x
+-    return g45_aux(std::forward<T>(x));
++    return Goink(std::forward<T>(x));
+ }
+ 
+ void f45()

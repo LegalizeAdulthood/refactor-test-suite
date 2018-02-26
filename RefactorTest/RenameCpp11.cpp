@@ -1185,6 +1185,48 @@ void f44()
     require_equal(std::string{"hello world!  goodbye!"}, x2);
 }
 
+template <typename T>
+// #TEST#: R468 Rename function g45_aux
+// #TEST#: R469 Rename parameter x
+T g45_aux(T &&x)
+{
+    // #TEST#: R470 Rename parameter x
+    T y(x);
+    return y;
+}
+
+template <typename T>
+// #TEST#: R471 Rename function f45_aux
+// #TEST#: R472 Rename parameter x
+T f45_aux(T &&x)
+{
+    // #TEST#: R473 Rename function g45_aux
+    // #TEST#: R474 Rename parameter x
+    return g45_aux(std::forward<T>(x));
+}
+
+void f45()
+{
+    struct X
+    {
+        X() {}
+        X(const std::string &s) : s(s) {}
+        X(std::string &&s) noexcept : s(std::move(s)), c(false) {}
+        X(const X &rhs) : s(rhs.s) {}
+        X(X &&rhs) noexcept : s(std::move(rhs.s)), c(false) {}
+
+        std::string s;
+        bool c = true;
+    };
+    X x1;
+    x1.s = "foo";
+    require_equal(std::string{"foo"}, x1.s);
+    require_equal(true, x1.c);
+    X x2(f45_aux(X("meh")));
+    require_equal(std::string{"meh"}, x2.s);
+    require_equal(false, x2.c);
+}
+
 }
 
 namespace RenameCpp11
@@ -1243,4 +1285,5 @@ void TestRenameCpp11()
     f42();
     f43();
     f44();
+    f45();
 }

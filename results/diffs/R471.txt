@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index fffbcca..d0ce18b 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1198,7 +1198,7 @@ T g45_aux(T &&x)
+ template <typename T>
+ // #TEST#: R471 Rename function f45_aux
+ // #TEST#: R472 Rename parameter x
+-T f45_aux(T &&x)
++T Goink(T &&x)
+ {
+     // #TEST#: R473 Rename function g45_aux
+     // #TEST#: R474 Rename parameter x
+@@ -1222,7 +1222,7 @@ void f45()
+     x1.s = "foo";
+     require_equal(std::string{"foo"}, x1.s);
+     require_equal(true, x1.c);
+-    X x2(f45_aux(X("meh")));
++    X x2(Goink(X("meh")));
+     require_equal(std::string{"meh"}, x2.s);
+     require_equal(false, x2.c);
+ }
