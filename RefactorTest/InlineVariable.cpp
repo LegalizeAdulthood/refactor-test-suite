@@ -1,7 +1,6 @@
 #include "Require.h"
+
 #include <string>
-#include <vector>
-#include <sstream>
 #include <stdexcept>
 
 // Replaces all references to a variable with its value.
