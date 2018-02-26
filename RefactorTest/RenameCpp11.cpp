@@ -1129,6 +1129,62 @@ void f43()
     require_equal(std::string{"10\n"}, result.str());
 }
 
+void f44()
+{
+    // #TEST#: R451 Rename X
+    class X
+    {
+    public:
+        X(const std::string &s) : m_s(s + " lvalue") {}
+        // #TEST#: R452 Rename parameter s
+        // #TEST#: R453 Rename parameter s in initializer list
+        X(std::string &&s) : m_s(s + " rvalue") {}
+
+        // #TEST#: R454 Rename method s
+        const std::string &s() const & { return m_s; }
+        // #TEST#: R455 Rename method s
+        std::string s() const && { return m_s + " rvalue"; }
+
+        // #TEST#: R456 Rename method set
+        void set(const std::string &s) { m_s = s + " lvalue"; }
+        // #TEST#: R457 Rename method set
+        // #TEST#: R458 Rename parameter s
+        // #TEST#: R459 Rename parameter s in method body
+        void set(std::string &&s) { m_s = s + " rvalue"; }
+
+    private:
+        std::string m_s;
+    };
+    X x(std::string{"foo"});
+    // #TEST#: R460 Rename method s
+    require_equal(std::string{"foo rvalue"}, x.s());
+
+    const std::string ss{"meh"};
+    X xx(ss);
+    require_equal(std::string{"meh lvalue"}, xx.s());
+
+    // #TEST#: R461 Rename method set
+    x.set(std::string{"bar"});
+    require_equal(std::string{"bar rvalue"}, x.s());
+
+    std::string s2{"meh"};
+    // #TEST#: R462 Rename method set
+    x.set(s2);
+    require_equal(std::string{"meh lvalue"}, x.s());
+
+    // #TEST#: R463 Rename method s
+    require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.s());
+
+    // #TEST#: R464 Rename variable x2
+    std::string &&x2 = std::string{"hello"} + ' ' + std::string{"world!"};
+    // #TEST#: R465 Rename variable x2
+    require_equal(std::string{"hello world!"}, x2);
+    // #TEST#: R466 Rename variable x2
+    x2 += "  goodbye!";
+    // #TEST#: R467 Rename variable x2
+    require_equal(std::string{"hello world!  goodbye!"}, x2);
+}
+
 }
 
 namespace RenameCpp11
@@ -1186,4 +1242,5 @@ void TestRenameCpp11()
     f41();
     f42();
     f43();
+    f44();
 }

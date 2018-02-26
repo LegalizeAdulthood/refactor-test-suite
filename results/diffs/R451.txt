@@ -1,0 +1,45 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 2c23b34..88f1422 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1132,13 +1132,13 @@ void f43()
+ void f44()
+ {
+     // #TEST#: R451 Rename X
+-    class X
++    class Goink
+     {
+     public:
+-        X(const std::string &s) : m_s(s + " lvalue") {}
++        Goink(const std::string &s) : m_s(s + " lvalue") {}
+         // #TEST#: R452 Rename parameter s
+         // #TEST#: R453 Rename parameter s in initializer list
+-        X(std::string &&s) : m_s(s + " rvalue") {}
++        Goink(std::string &&s) : m_s(s + " rvalue") {}
+ 
+         // #TEST#: R454 Rename method s
+         const std::string &s() const & { return m_s; }
+@@ -1155,12 +1155,12 @@ void f44()
+     private:
+         std::string m_s;
+     };
+-    X x(std::string{"foo"});
++    Goink x(std::string{"foo"});
+     // #TEST#: R460 Rename method s
+     require_equal(std::string{"foo rvalue"}, x.s());
+ 
+     const std::string ss{"meh"};
+-    X xx(ss);
++    Goink xx(ss);
+     require_equal(std::string{"meh lvalue"}, xx.s());
+ 
+     // #TEST#: R461 Rename method set
+@@ -1173,7 +1173,7 @@ void f44()
+     require_equal(std::string{"meh lvalue"}, x.s());
+ 
+     // #TEST#: R463 Rename method s
+-    require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.s());
++    require_equal(std::string{"meh rvalue rvalue"}, Goink{std::string{"meh"}}.s());
+ 
+     // #TEST#: R464 Rename variable x2
+     std::string &&x2 = std::string{"hello"} + ' ' + std::string{"world!"};

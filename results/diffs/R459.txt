@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index 2c23b34..352bc24 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1150,7 +1150,7 @@ void f44()
+         // #TEST#: R457 Rename method set
+         // #TEST#: R458 Rename parameter s
+         // #TEST#: R459 Rename parameter s in method body
+-        void set(std::string &&s) { m_s = s + " rvalue"; }
++        void set(std::string &&Goink) { m_s = Goink + " rvalue"; }
+ 
+     private:
+         std::string m_s;
