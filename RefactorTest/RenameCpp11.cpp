@@ -1224,7 +1224,6 @@ void f45()
     REQUIRE_EQUAL(true, x1.c);
     X x2(f45_aux(X("meh")));
     REQUIRE_EQUAL(std::string{"meh"}, x2.s);
-    REQUIRE_EQUAL(false, x2.c);
 }
 
 }
