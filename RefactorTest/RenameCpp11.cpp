@@ -622,7 +622,7 @@ void f20()
 
 // #TEST#: R263 Rename Args
 template <typename... Args>
-// #TEST#: R264 Renem stream
+// #TEST#: R264 Rename stream
 // #TEST#: R265 Rename Args
 // #TEST#: R266 Rename args
 void f21_aux(std::ostream &stream, Args... args)
@@ -645,7 +645,7 @@ void f21()
     require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, result.str());
 }
 
-// #TEST#: R272 Renema Exceptions
+// #TEST#: R272 Rename Exceptions
 template <typename... Exceptions>
 // #TEST#: R273 Rename Exceptions
 void f22_aux() throw (Exceptions...)
@@ -1008,7 +1008,7 @@ std::string s36()
 
 void f36()
 {
-    // #TEST#: R405 Renaem x36
+    // #TEST#: R405 Rename x36
     require_equal(10, x36);
     // #TEST#: R406 Rename d36
     require_equal(20.5, d36);
