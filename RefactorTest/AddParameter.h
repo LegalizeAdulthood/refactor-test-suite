@@ -91,6 +91,7 @@ public:
 template <typename T>
 void AddParameter2()
 {
+    // #TEST#: AP25 Add parameter
     T::AddParameter();
 }
 
