@@ -1220,11 +1220,11 @@ void f45()
     };
     X x1;
     x1.s = "foo";
-    require_equal(std::string{"foo"}, x1.s);
-    require_equal(true, x1.c);
+    REQUIRE_EQUAL(std::string{"foo"}, x1.s);
+    REQUIRE_EQUAL(true, x1.c);
     X x2(f45_aux(X("meh")));
-    require_equal(std::string{"meh"}, x2.s);
-    require_equal(false, x2.c);
+    REQUIRE_EQUAL(std::string{"meh"}, x2.s);
+    REQUIRE_EQUAL(false, x2.c);
 }
 
 }
