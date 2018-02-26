@@ -4,3 +4,4 @@ results/.ntvs_analysis.dat
 results/bin
 results/obj
 build
+.vs
