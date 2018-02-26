@@ -1,2 +1,4 @@
 # Default text is LF
 * text eol=lf
+*.sln text eol=crlf
+*.njsproj text eol=crlf
