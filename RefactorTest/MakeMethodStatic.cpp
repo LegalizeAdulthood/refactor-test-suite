@@ -3,36 +3,38 @@
 // Makes method static and replaces all references accordingly.
 namespace MakeMethodStaticNamespace
 {
-    class Foo
+
+class Foo
+{
+public:
+    Foo()
     {
-    public:
-        Foo()
-        {
-        }
+    }
 
-        // #TEST#: MMS1 Make method static
-        int Add(int a, int b)
-        {
-            return a + b;
-        }
+    // #TEST#: MMS1 Make method static
+    int Add(int a, int b)
+    {
+        return a + b;
+    }
 
-        // #TEST#: MMS2 Make method static
-        int Add(int b)
-        {
-            return _a + b;
-        }
+    // #TEST#: MMS2 Make method static
+    int Add(int b)
+    {
+        return _a + b;
+    }
 
-        // #TEST#: MMS3 Make method static
-        int AddConst(int b) const
-        {
-            return _a + b;
-        }
+    // #TEST#: MMS3 Make method static
+    int AddConst(int b) const
+    {
+        return _a + b;
+    }
 
-    private:
-        static int _a;
-    };
+private:
+    static int _a;
+};
 
-    int Foo::_a = 0;
+int Foo::_a = 0;
+
 }
 
 using namespace MakeMethodStaticNamespace;
