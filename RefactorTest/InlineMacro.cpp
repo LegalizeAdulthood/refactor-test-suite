@@ -1,6 +1,8 @@
-#include <cmath>
-#include <string>
 #include "Require.h"
+
+#include <cmath>
+#include <sstream>
+#include <string>
 
 #define MACRO1 -20
 #define MACRO2 "This is a test." \
@@ -20,6 +22,36 @@
             x_ += 4;    \
         }               \
     } while (0)
+
+namespace
+{
+
+template <typename T>
+void f1_aux(std::ostream &stream, T value)
+{
+    stream << value << '\n';
+}
+
+template <typename T, typename... Types>
+void f1_aux(std::ostream &stream, T head, Types... tail)
+{
+    f1_aux(stream, head);
+    f1_aux(stream, tail...);
+}
+
+#define F1_AUX(stream, ...) f1_aux(stream, __VA_ARGS__)
+
+void f1()
+{
+    std::ostringstream result;
+    // #TEST#: IM7 Inline macro F1_AUX
+    F1_AUX(result, 10, 20.5, "hello world!");
+    require_equal(std::string{"10\n20.5\nhello world!\n"}, result.str());
+}
+
+#undef F1_AUX
+
+}
 
 void TestInlineMacro()
 {
@@ -43,4 +75,6 @@ void TestInlineMacro()
     x = 2;
     MACRO5(x);
     REQUIRE_EQUAL(6, x);
+
+    f1();
 }
