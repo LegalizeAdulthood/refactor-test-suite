@@ -76,8 +76,10 @@ void TestMemberPointer()
     int (Foo::*member)() = &Foo::Operation1;
     Foo f;
     int j = (f.*member)();
+    require_equal(1, j);
     member = &Foo::Operation2;
     j += (f.*member)();
+    require_equal(3, j);
 }
 
 void TestConstMemberPointer()
@@ -86,8 +88,10 @@ void TestConstMemberPointer()
     int (Foo::*member)() const = &Foo::Method1;
     Foo f;
     int j = (f.*member)();
+    require_equal(1, j);
     member = &Foo::Method2;
     j += (f.*member)();
+    require_equal(3, j);
 }
 
 void TestMemberPointer2()
@@ -96,9 +100,11 @@ void TestMemberPointer2()
     Foo f;
     // #TEST#: IV6 Inline Variable member
     int j = (f.*member)();
+    require_equal(1, j);
     int (Foo::*member2)() = &Foo::Operation2;
     // #TEST#: IV7 Inline Variable member2
     j += (f.*member2)();
+    require_equal(3, j);
 }
 
 void TestConstMemberPointer2()
@@ -107,9 +113,11 @@ void TestConstMemberPointer2()
     Foo f;
     // #TEST#: IV8 Inline Variable member
     int j = (f.*member)();
+    require_equal(1, j);
     int (Foo::*member2)() const = &Foo::Method2;
     // #TEST#: IV9 Inline Variable member2
     j += (f.*member2)();
+    require_equal(3, j);
 }
 
 int boolParam(bool &param)

@@ -1,15 +1,15 @@
 diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
-index 12b4e33..c276b0c 100644
+index 3be43b7..5ff885d 100644
 --- a/RefactorTest/InlineVariable.cpp
 +++ b/RefactorTest/InlineVariable.cpp
-@@ -97,9 +97,8 @@ namespace InlineVariableNamespace
-         Foo f;
-         // #TEST#: IV6 Inline Variable member
-         int j = (f.*member)();
--        int (Foo::*member2)() = &Foo::Operation2;
-         // #TEST#: IV7 Inline Variable member2
--        j += (f.*member2)();
-+        j += f.Operation2();
-     }
+@@ -97,9 +97,8 @@ void TestMemberPointer2()
+     // #TEST#: IV6 Inline Variable member
+     int j = (f.*member)();
+     require_equal(1, j);
+-    int (Foo::*member2)() = &Foo::Operation2;
+     // #TEST#: IV7 Inline Variable member2
+-    j += (f.*member2)();
++    j += f.Operation2();
+     require_equal(3, j);
+ }
  
-     void TestConstMemberPointer2()
