@@ -1,5 +1,5 @@
 results/.idea
-results/node_modules
+node_modules
 results/.ntvs_analysis.dat
 results/bin
 results/obj

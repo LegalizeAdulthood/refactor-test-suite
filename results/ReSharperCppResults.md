@@ -2,7 +2,7 @@
 
 Home: [ReSharper for C++](http://www.jetbrains.com/resharper-cpp/)
 
-Version: 10.0.2
+Version: 2017.3.2
 
 Notes:
 * **Add Block Delimiter** is available as a quick fix.  The tests pass if only code is selected and not the surrounding comment lines.
@@ -26,13 +26,13 @@ Notes:
 ## Add Block Delimiter
 Case | Result
 ---- | ------
-ABD1 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD2 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD3 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD4 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD5 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD6 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD7 | Failure (tries to surround lines with parenthesis) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD1 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD2 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD3 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD4 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD5 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD6 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD7 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
 
 ## Add Override
 Case | Result
@@ -46,9 +46,9 @@ AO5  | Pass
 ## Add Parameter
 Case | Result
 ---- | ------
-AP1  | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
+AP1  | Pass
 AP2  | Pass
-AP3  | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
+AP3  | Pass
 AP4  | Pass
 AP5  | Pass
 AP6  | Pass
@@ -58,18 +58,18 @@ AP9  | Pass
 AP10 | Pass
 AP11 | Pass
 AP12 | Pass
-AP13 | Failure (can't cope with overloads) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
+AP13 | Pass
 AP14 | Pass
 AP15 | Pass
 AP16 | Pass
 AP17 | Pass
 AP18 | Pass
-AP19 | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
+AP19 | Pass (but suggests irrelevant change points) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202)
 AP20 | Pass
 AP21 | Pass
 AP22 | Pass
 AP23 | Pass
-AP24 | Failure (does nothing) [RSCPP-15790](https://youtrack.jetbrains.com/issue/RSCPP-15790)
+AP24 | Failure (doensn't update other template arguments) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202)
 
 ## Change Signature
 Case | Result
@@ -123,7 +123,7 @@ EXF15 | Pass
 EXF16 | Pass
 EXF17 | Pass
 EXF18 | Pass
-EXF19 | Failure (does nothing) [RSCPP-15792](https://youtrack.jetbrains.com/issue/RSCPP-15792)
+EXF19 | Pass
 
 ## Extract Method
 Case | Result
@@ -177,18 +177,18 @@ IM6 | Pass
 ## Inline Variable
 Case | Result
 ---- | ------
-IV1 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV2 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV3 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV4 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV5 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV6 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV7 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV8 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV9 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV10 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV11 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
-IV12 | Failure (not available) [RSCPP-15793](https://youtrack.jetbrains.com/issue/RSCPP-15793)
+IV1  | Pass (deletes comment) [RSCPP-19617](https://youtrack.jetbrains.com/issue/RSCPP-19617)
+IV2  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV3  | Pass
+IV4  | Pass (leaves behind syntactical noise, doesn't inline all occurrences) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205), [RSCPP-21204](https://youtrack.jetbrains.com/issue/RSCPP-21204)
+IV5  | Pass (leaves behind syntactical noise, doesn't inline all occurrences) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205), [RSCPP-21204](https://youtrack.jetbrains.com/issue/RSCPP-21204)
+IV6  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV7  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV8  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV9  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV10 | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV11 | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV12 | Pass
 
 ## Make Method Static
 Case | Result
@@ -244,8 +244,8 @@ Case | Result
 ---- | ------
 RUP1 | Pass
 RUP2 | Pass
-RUP3 | Failure (does not update usages) [RSCPP-15795](https://youtrack.jetbrains.com/issue/RSCPP-15795)
-RUP4 | Failure (does not update usages) [RSCPP-15795](https://youtrack.jetbrains.com/issue/RSCPP-15795)
+RUP3 | Failure (claims errors in the source) [RSCPP-21207](https://youtrack.jetbrains.com/issue/RSCPP-21207)
+RUP4 | Failure (creates invalid syntax in macro arguments) [RSCPP-21208](https://youtrack.jetbrains.com/issue/RSCPP-21208)
 
 ## Rename
 Case | Result
@@ -281,7 +281,7 @@ R28  | Pass
 R29  | Pass
 R30  | Pass
 R31  | Pass
-R32  | Failure (misses usage in typedef) [RSCPP-15797](https://youtrack.jetbrains.com/issue/RSCPP-15797)
+R32  | Pass
 R33  | Pass
 R34  | Pass
 R35  | Pass
@@ -348,19 +348,395 @@ R95  | Pass
 R96  | Pass
 R97  | Pass
 R98  | Pass
+R99  | Failure (unavailable) [RSCPP-15796](https://youtrack.jetbrains.com/issue/RSCPP-15796)
+R100 | Pass
+R101 | Pass
+R102 | Pass
+R103 | Pass
+R104 | Pass
+R105 | Pass
+R106 | Pass
+R107 | Pass
+R108 | Pass
+R109 | Pass
+R110 | Pass
+R111 | Pass
+R112 | Pass
+R113 | Pass
+R114 | Pass
+R115 | Pass
+R116 | Pass
+R117 | Pass
+R118 | Pass
+R119 | Pass
+R120 | Pass
+R121 | Pass
+R122 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R123 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R124 | Pass
+R125 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R126 | Pass
+R127 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R128 | Pass
+R129 | Pass
+R130 | Pass
+R131 | Pass
+R132 | Pass
+R133 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R134 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R135 | Pass
+R136 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R137 | Pass
+R138 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R139 | Pass
+R140 | Pass
+R141 | Pass
+R142 | Pass
+R143 | Pass
+R144 | Pass
+R145 | Pass
+R146 | Pass
+R147 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R148 | Pass
+R149 | Pass
+R150 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R151 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R152 | Pass
+R153 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R154 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R155 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R156 | Pass
+R157 | Pass
+R158 | Pass
+R159 | Pass
+R160 | Pass
+R161 | Pass
+R162 | Pass
+R163 | Pass
+R164 | Pass
+R165 | Pass
+R166 | Pass
+R167 | Pass
+R168 | Pass
+R169 | Pass
+R170 | Pass
+R171 | Pass
+R172 | Pass
+R173 | Pass
+R174 | Pass
+R175 | Pass
+R176 | Pass
+R177 | Pass
+R178 | Pass
+R179 | Pass
+R180 | Pass
+R181 | Pass
+R182 | Pass
+R183 | Pass
+R184 | Pass
+R185 | Pass
+R186 | Pass
+R187 | Pass
+R188 | Pass
+R189 | Pass
+R190 | Pass
+R191 | Pass
+R192 | Pass
+R193 | Pass
+R194 | Pass
+R195 | Pass
+R196 | Pass
+R197 | Pass
+R198 | Pass
+R199 | Pass
+R200 | Pass
+R201 | Pass
+R202 | Pass
+R203 | Pass
+R204 | Pass
+R205 | Pass
+R206 | Pass
+R207 | Pass
+R208 | Pass
+R209 | Pass
+R210 | Pass
+R211 | Pass
+R212 | Pass
+R213 | Pass
+R214 | Pass
+R215 | Pass
+R216 | Pass
+R217 | Pass
+R218 | Pass
+R219 | Pass
+R220 | Pass
+R221 | Pass
+R222 | Pass
+R223 | Pass
+R224 | Pass
+R225 | Pass
+R226 | Pass
+R227 | Pass
+R228 | Pass
+R229 | Pass
+R230 | Pass
+R231 | Pass
+R232 | Pass
+R233 | Pass
+R234 | Pass
+R235 | Pass
+R236 | Pass
+R237 | Pass
+R238 | Pass
+R239 | Pass
+R240 | Pass
+R241 | Pass
+R242 | Pass
+R243 | Pass
+R244 | Pass
+R245 | Pass
+R246 | Pass
+R247 | Pass
+R248 | Pass
+R249 | Pass
+R250 | Pass
+R251 | Pass
+R252 | Pass
+R253 | Pass
+R254 | Pass
+R255 | Pass
+R256 | Pass
+R257 | Pass
+R258 | Pass
+R259 | Pass
+R260 | Pass
+R261 | Pass
+R262 | Pass
+R263 | Pass
+R264 | Pass
+R265 | Pass
+R266 | Pass
+R267 | Pass
+R268 | Pass
+R269 | Pass
+R270 | Pass
+R271 | Pass
+R272 | Pass
+R273 | Pass
+R274 | Pass
+R275 | Pass
+R276 | Pass
+R277 | Pass
+R278 | Pass
+R279 | Pass
+R280 | Pass
+R281 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R282 | Pass
+R283 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R284 | Pass
+R285 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R286 | Pass
+R287 | Pass
+R288 | Pass
+R289 | Pass
+R290 | Pass
+R291 | Pass
+R292 | Pass
+R293 | Pass
+R294 | Pass
+R295 | Pass
+R296 | Pass
+R297 | Pass
+R298 | Pass
+R299 | Pass
+R300 | Pass
+R301 | Pass
+R302 | Pass
+R303 | Pass
+R304 | Pass
+R305 | Pass
+R306 | Pass
+R307 | Pass
+R308 | Pass
+R309 | Pass
+R310 | Pass
+R311 | Pass
+R312 | Pass
+R313 | Pass
+R314 | Pass
+R315 | Pass
+R316 | Pass
+R317 | Pass
+R318 | Pass
+R319 | Pass
+R320 | Pass
+R321 | Pass
+R322 | Pass
+R323 | Pass
+R324 | Pass
+R325 | Pass
+R326 | Pass
+R327 | Pass
+R328 | Pass
+R329 | Pass
+R330 | Pass
+R331 | Pass
+R332 | Pass
+R333 | Pass
+R334 | Pass
+R335 | Pass
+R336 | Pass
+R337 | Pass
+R338 | Pass
+R339 | Pass
+R340 | Pass
+R341 | Pass
+R342 | Pass
+R343 | Pass
+R344 | Pass
+R345 | Pass
+R346 | Pass
+R347 | Pass
+R348 | Pass
+R349 | Pass
+R350 | Pass
+R351 | Pass
+R352 | Pass
+R353 | Pass
+R354 | Pass
+R355 | Pass
+R356 | Pass
+R357 | Pass
+R358 | Pass
+R359 | Pass
+R360 | Pass
+R361 | Pass
+R362 | Pass
+R363 | Pass
+R364 | Pass
+R365 | Pass
+R366 | Pass
+R367 | Pass
+R368 | Pass
+R369 | Pass
+R370 | Pass
+R371 | Pass
+R372 | Pass
+R373 | Pass
+R374 | Pass
+R375 | Pass
+R376 | Pass
+R377 | Pass
+R378 | Pass
+R379 | Pass
+R380 | Pass
+R381 | Pass
+R382 | Pass
+R383 | Pass
+R384 | Pass
+R385 | Pass
+R386 | Pass
+R387 | Pass
+R388 | Pass
+R389 | Pass
+R390 | Pass
+R391 | Pass
+R392 | Pass
+R393 | Pass
+R394 | Pass
+R395 | Pass
+R396 | Pass
+R397 | Pass
+R398 | Pass
+R399 | Pass
+R400 | Pass
+R401 | Pass
+R402 | Pass
+R403 | Pass
+R404 | Pass
+R405 | Pass
+R406 | Pass
+R407 | Pass
+R408 | Pass
+R409 | Pass
+R410 | Pass
+R411 | Pass
+R412 | Pass
+R413 | Pass
+R414 | Pass
+R415 | Pass
+R416 | Pass
+R417 | Pass
+R418 | Pass
+R419 | Pass
+R420 | Pass
+R421 | Pass
+R422 | Pass
+R423 | Pass
+R424 | Pass
+R425 | Pass
+R426 | Pass
+R427 | Pass
+R428 | Pass
+R429 | Pass
+R430 | Pass
+R431 | Pass
+R432 | Pass
+R433 | Pass
+R434 | Pass
+R435 | Pass
+R436 | Pass
+R437 | Pass
+R438 | Pass
+R439 | Pass
+R440 | Pass
+R441 | Pass
+R442 | Pass
+R443 | Pass
+R444 | Pass
+R445 | Pass
+R446 | Pass
+R447 | Pass
+R448 | Pass
+R449 | Pass
+R450 | Pass
+R451 | Pass
+R452 | Pass
+R453 | Pass
+R454 | Pass
+R455 | Pass
+R456 | Pass
+R457 | Pass
+R458 | Pass
+R459 | Pass
+R460 | Pass
+R461 | Pass
+R462 | Pass
+R463 | Pass
+R464 | Pass
+R465 | Pass
+R466 | Pass
+R467 | Pass
+R468 | Pass
+R469 | Pass
+R470 | Pass
+R471 | Pass
+R472 | Pass
+R473 | Pass
+R474 | Pass
 
 ## Reorder Parameters
 Case | Result
 ---- | ------
-RP1 | Failure (functionality not available)
-RP2 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
+RP1 | Failure (functionality not available) [RSCPP-21236](https://youtrack.jetbrains.com/issue/RSCPP-21236)
+RP2 | Failure (creates invalid code in macro argument) [RSCPP-21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
 RP3 | Pass
-RP4 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
-RP5 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
-RP6 | Failure [RSCPP-15799](https://youtrack.jetbrains.com/issue/RSCPP-15799)
-RP7 | Failure (functionality not available)
-RP8 | Failure (functionality not available)
-RP9 | Failure (functionality not available)
+RP4 | Failure (unable to update usage) [RSCPP-21211](https://youtrack.jetbrains.com/issue/RSCPP-21211)
+RP5 | Failure (creates invalid code in macro argument) [RSCPP-21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
+RP6 | Failure (unable to update usage) [RSCPP-21211](https://youtrack.jetbrains.com/issue/RSCPP-21211)
+RP7 | Failure (functionality not available) [RSCPP-21236](https://youtrack.jetbrains.com/issue/RSCPP-21236)
+RP8 | Failure (functionality not available) [RSCPP-21236](https://youtrack.jetbrains.com/issue/RSCPP-21236)
+RP9 | Failure (functionality not available) [RSCPP-21236](https://youtrack.jetbrains.com/issue/RSCPP-21236)
 
 ## Replace If With Ternary
 Case | Result
@@ -371,9 +747,9 @@ RIT3 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issu
 RIT4 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
 RIT5 | Pass
 RIT6 | Pass
-RIT7 | Pass (but generates odd syntax) [RSCPP-15801](https://youtrack.jetbrains.com/issue/RSCPP-15801)
+RIT7 | Pass
 RIT8 | Pass
-RIT9 | Failure (generates invalid syntax) [RSCPP-15802](https://youtrack.jetbrains.com/issue/RSCPP-15802)
+RIT9 | Pass
 
 ## Replace NULL/0 With nullptr
 Case | Result
@@ -404,8 +780,8 @@ RZNP23 | Pass
 RZNP24 | Pass
 RZNP25 | Pass
 RZNP26 | Pass
-RZNP27 | Failure (not available) [RSCPP-15803](https://youtrack.jetbrains.com/issue/RSCPP-15803)
-RZNP28 | Failure (not available) [RSCPP-15803](https://youtrack.jetbrains.com/issue/RSCPP-15803)
+RZNP27 | Pass
+RZNP28 | Pass
 
 ## Replace Ternary With If
 Case | Result
@@ -420,6 +796,7 @@ RTI7 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issu
 RTI8 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
 RTI9 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
 RTI10 | Pass
+RTI11 | Pass
 
 ## Replace Type With auto
 Case | Result
