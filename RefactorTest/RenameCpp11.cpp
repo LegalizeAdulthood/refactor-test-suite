@@ -705,7 +705,7 @@ void f24()
 template <typename T, typename U>
 // #TEST#: R288 Rename arg in parameter list
 // #TEST#: R289 Rename T
-// #TEST#: R290 REname arg in decltype expression
+// #TEST#: R290 Rename arg in decltype expression
 auto f25_aux(U arg) -> decltype(T(arg))
 {
     // #TEST#: R291 Rename T
