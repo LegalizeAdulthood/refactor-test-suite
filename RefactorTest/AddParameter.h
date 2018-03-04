@@ -30,30 +30,30 @@ public:
 
     // #TEST#: AP3 Add parameter
     void AddParameter(int first);
-    // #TEST#: AP4 Add parameter
+    // #TEST#: AP4 Add parameter after first
     void AddParameterRef(const int &first);
-    // #TEST#: AP5 Add parameter
+    // #TEST#: AP5 Add parameter before first
     void AddParameterDefault(int first = 0);
 
     // #TEST#: AP6 Add parameter
     static void AddParameterStaticInline()
     {
     }
-    // #TEST#: AP7 Add parameter
+    // #TEST#: AP7 Add parameter before first
     static void AddParameterStaticDefaultInline(int first = 0)
     {
     }
     // #TEST#: AP8 Add parameter
     static void Static();
-    // #TEST#: AP9 Add parameter
+    // #TEST#: AP9 Add parameter after x
     static void StaticDefault(int x, int y = 0);
-    // #TEST#: AP10 Add parameter
+    // #TEST#: AP10 Add parameter before x
     template <typename T>
     static void StaticTemplate(int x)
     {
         T val = x;
     }
-    // #TEST#: AP11 Add parameter
+    // #TEST#: AP11 Add parameter before x
     template <typename T>
     static void StaticTemplateDefault(int x = 0)
     {
