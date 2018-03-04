@@ -1,0 +1,34 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index 927deaa..3f8f1c6 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -22,7 +22,7 @@ struct AddParameterStructTester
+ 
+ void TestAddParameter()
+ {
+-    AddParameterFn();
++    AddParameterFn(nullptr);
+     AddParameterFn(1);
+     AddParameterFn(0.0f);
+     const float arg = 1.0f;
+@@ -100,7 +100,7 @@ static AddParameterTester *GetOne()
+ }
+ 
+ // #TEST#: AP13 Add parameter
+-void AddParameterFn()
++void AddParameterFn(int *Goink)
+ {
+ }
+ 
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index 145c0f5..66a9d1c 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -1,6 +1,6 @@
+ #pragma once
+ 
+-extern void AddParameterFn();
++extern void AddParameterFn(int *Goink);
+ extern void AddParameterFn(int first);
+ extern void AddParameterFn(float &first);
+ extern void AddParameterFn(const float &first);
