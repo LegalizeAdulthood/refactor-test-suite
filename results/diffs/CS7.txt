@@ -1,0 +1,63 @@
+diff --git a/RefactorTest/ChangeSignature.cpp b/RefactorTest/ChangeSignature.cpp
+index c2e43bd..468fb68 100644
+--- a/RefactorTest/ChangeSignature.cpp
++++ b/RefactorTest/ChangeSignature.cpp
+@@ -6,9 +6,9 @@
+ 
+ namespace ChangeSignatureNamespace
+ {
+-    int Function2(int a, int b)
++    int Function2(int a, int operand2)
+     {
+-        return a + b;
++        return a + operand2;
+     }
+ 
+     static void Test()
+diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
+index 742dfcb..e417da1 100644
+--- a/RefactorTest/ChangeSignature.h
++++ b/RefactorTest/ChangeSignature.h
+@@ -28,7 +28,7 @@ namespace ChangeSignatureNamespace
+     // #TEST#: CS9 Rename function to Primitive
+     // #TEST#: CS10 Add const qualifier to first parameter
+     // #TEST#: CS11 Add const qualifier to second parameter
+-    int Function2(int a, int b);
++    int Function2(int a, int operand2);
+ 
+     class ChangeSignature
+     {
+diff --git a/results/diffs/CS7.txt b/results/diffs/CS7.txt
+index 829af4c..e69de29 100644
+--- a/results/diffs/CS7.txt
++++ b/results/diffs/CS7.txt
+@@ -1,29 +0,0 @@
+-diff --git a/RefactorTest/ChangeSignature.cpp b/RefactorTest/ChangeSignature.cpp
+-index c2e43bd..96a81bc 100644
+---- a/RefactorTest/ChangeSignature.cpp
+-+++ b/RefactorTest/ChangeSignature.cpp
+-@@ -6,9 +6,9 @@
+- 
+- namespace ChangeSignatureNamespace
+- {
+--    int Function2(int a, int b)
+-+    int Function2(int operand1, int b)
+-     {
+--        return a + b;
+-+        return operand1 + b;
+-     }
+- 
+-     static void Test()
+-diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
+-index 742dfcb..fa3d8c6 100644
+---- a/RefactorTest/ChangeSignature.h
+-+++ b/RefactorTest/ChangeSignature.h
+-@@ -28,7 +28,7 @@ namespace ChangeSignatureNamespace
+-     // #TEST#: CS9 Rename function to Primitive
+-     // #TEST#: CS10 Add const qualifier to first parameter
+-     // #TEST#: CS11 Add const qualifier to second parameter
+--    int Function2(int a, int b);
+-+    int Function2(int operand1, int b);
+- 
+-     class ChangeSignature
+-     {

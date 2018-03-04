@@ -1,0 +1,26 @@
+diff --git a/RefactorTest/ChangeSignature.cpp b/RefactorTest/ChangeSignature.cpp
+index c2e43bd..87d4a5f 100644
+--- a/RefactorTest/ChangeSignature.cpp
++++ b/RefactorTest/ChangeSignature.cpp
+@@ -6,7 +6,7 @@
+ 
+ namespace ChangeSignatureNamespace
+ {
+-    int Function2(int a, int b)
++    int Function2(const int a, int b)
+     {
+         return a + b;
+     }
+diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
+index 742dfcb..153e66b 100644
+--- a/RefactorTest/ChangeSignature.h
++++ b/RefactorTest/ChangeSignature.h
+@@ -28,7 +28,7 @@ namespace ChangeSignatureNamespace
+     // #TEST#: CS9 Rename function to Primitive
+     // #TEST#: CS10 Add const qualifier to first parameter
+     // #TEST#: CS11 Add const qualifier to second parameter
+-    int Function2(int a, int b);
++    int Function2(const int a, int b);
+ 
+     class ChangeSignature
+     {
