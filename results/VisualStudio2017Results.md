@@ -64,6 +64,21 @@ AP23 | Pass
 AP24 | Failure (doesn't select all instances) [206939](https://developercommunity.visualstudio.com/content/problem/206939/change-signature-on-static-method-doesnt-update-us.html)
 AP25 | Failure (not available) [206938](https://developercommunity.visualstudio.com/content/problem/206938/change-signature-doesnt-recognize-static-function.html)
 
+## Change Signature
+Case | Result
+---- | ------
+CS1  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
+CS2  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
+CS3  | Failure (unavailable) [206954](https://developercommunity.visualstudio.com/content/problem/206954/cant-rename-function-from-change-signature.html)
+CS4  | Pass
+CS5  | Pass
+CS6  | Pass
+CS7  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
+CS8  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
+CS9  | Failure (unavailable) [206954](https://developercommunity.visualstudio.com/content/problem/206954/cant-rename-function-from-change-signature.html)
+CS10 | Pass
+CS11 | Pass
+
 ## Extract Function
 Case | Result
 ---- | ------

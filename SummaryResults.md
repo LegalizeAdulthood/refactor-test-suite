@@ -5,7 +5,7 @@ Refactoring | [clang-modernize](results/ClangModernizeResults.md) | [CLion](resu
 Add Block Delimiter | n/a | 100% | 0% | n/a | n/a
 Add Override | 100% | n/a | 100% | n/a | n/a
 Add Parameter | n/a | n/a | 95.84% | n/a | 72%
-Change Signature | n/a | 100% | 100% | 0% | n/a
+Change Signature | n/a | 100% | 100% | 0% | 45.46%
 Create Method Stub | n/a | 54.55% | n/a | n/a | n/a
 Create Multi-Variable Declaration | n/a | n/a | 91.67% | n/a | n/a
 Create Setter Method | n/a | 66.67% | n/a | n/a | n/a
