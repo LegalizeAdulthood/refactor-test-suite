@@ -1,0 +1,37 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index 927deaa..d4ef36f 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -36,8 +36,8 @@ void TestAddParameter()
+     AddParameterTester test;
+     test.AddParameter();
+     test.AddParameter2<int>();
+-    test.AddParameter(1);
+-    test.AddParameter(ref);
++    test.AddParameter(1, nullptr);
++    test.AddParameter(ref, nullptr);
+     test.AddParameterRef(ref);
+     test.AddParameterDefault();
+     test.AddParameterDefault(1);
+@@ -131,7 +131,7 @@ void AddParameterFnDefault(int first)
+ }
+ 
+ // #TEST#: AP19 Add parameter
+-void AddParameterTester::AddParameter(int first)
++void AddParameterTester::AddParameter(int first, int *Goink)
+ {
+ }
+ 
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index 8e5934b..71e4fe8 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -29,7 +29,7 @@ public:
+     }
+ 
+     // #TEST#: AP3 Add parameter
+-    void AddParameter(int first);
++    void AddParameter(int first, int * Goink);
+     // #TEST#: AP4 Add parameter
+     void AddParameterRef(const int &first);
+     // #TEST#: AP5 Add parameter
