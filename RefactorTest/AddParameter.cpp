@@ -125,7 +125,7 @@ void AddParameterFnRef(const int &first)
 {
 }
 
-// #TEST#: AP18 Add parameter
+// #TEST#: AP18 Add parameter before first
 void AddParameterFnDefault(int first)
 {
 }
