@@ -4,51 +4,52 @@
 
 namespace CreateMultiVariableDeclarationNamespace
 {
-    void Function1()
+
+void Function1()
+{
+}
+
+void Function2()
+{
+}
+
+class Foo
+{
+public:
+    Foo()
     {
     }
 
-    void Function2()
+    int Operation1()
     {
+        return 0;
     }
 
-    class Foo
+    int Operation2()
     {
-    public:
-        Foo()
-        {
-        }
+        return 1;
+    }
 
-        int Operation1()
-        {
-            return 0;
-        }
-
-        int Operation2()
-        {
-            return 1;
-        }
-
-        int Const1() const
-        {
-            return 1;
-        }
-
-        int Const2() const
-        {
-            return 2;
-        }
-    };
-
-    struct Bar
+    int Const1() const
     {
-    };
+        return 1;
+    }
 
-    union Jumble
+    int Const2() const
     {
-        int _i;
-        float _f;
-    };
+        return 2;
+    }
+};
+
+struct Bar
+{
+};
+
+union Jumble
+{
+    int _i;
+    float _f;
+};
 
 }
 

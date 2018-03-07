@@ -52,54 +52,58 @@ public:
 // #TEST#: R4 Rename this namespace
 namespace X
 {
-    // #TEST#: R5 rename this variable
-    int x = 0;
-    // #TEST#: R6 rename this variable
-    static int y = 1;
 
-    // #TEST#: R7 rename this class
-    class Rename1
+// #TEST#: R5 rename this variable
+int x = 0;
+// #TEST#: R6 rename this variable
+static int y = 1;
+
+// #TEST#: R7 rename this class
+class Rename1
+{
+public:
+    Rename1() : _y(0)
     {
-    public:
-        Rename1() : _y(0)
-        {
-        }
+    }
 
-        // #TEST#: R8 rename this method
-        int Operation()
-        {
-            return 0;
-        }
+    // #TEST#: R8 rename this method
+    int Operation()
+    {
+        return 0;
+    }
 
-    private:
-        void Method()
-        {
-            int _y = -4;
-            // #TEST#: R31 rename _y, which shadows member _y
-            _y = 6;
-        }
-        int _y;
-    };
+private:
+    void Method()
+    {
+        int _y = -4;
+        // #TEST#: R31 rename _y, which shadows member _y
+        _y = 6;
+    }
+    int _y;
+};
+
 }
 
 // #TEST#: R9 rename this namespace
 namespace Y
 {
-    // #TEST#: R10 rename this variable
-    int x = 0;
 
-    class X
+// #TEST#: R10 rename this variable
+int x = 0;
+
+class X
+{
+public:
+    X()
+    {}
+    ~X()
     {
-    public:
-        X()
-        {}
-        ~X()
-        {
-        }
-        void Operation()
-        {
-        }
-    };
+    }
+    void Operation()
+    {
+    }
+};
+
 }
 
 union U
@@ -163,45 +167,47 @@ static int (Operations::*GetOperation(bool flag))()
 // #TEST#: R56 Rename namespace RenameNamespace
 namespace RenameNamespace
 {
-    // #TEST#: R57 Rename scoped member Renamed.
-    int Renamed = 0;
 
-    class Base
-    {
-    public:
-        virtual ~Base() {}
-        // #TEST#: R70 Rename virtual method
-        virtual Base *Operation() = 0;
-    };
+// #TEST#: R57 Rename scoped member Renamed.
+int Renamed = 0;
 
-    class Derived1 : public virtual Base
-    {
-    public:
-        virtual ~Derived1() {}
-        // #TEST#: R71 Rename virtual method
-        virtual Base *Operation()
-        {
-            return this;
-        }
-    };
+class Base
+{
+public:
+    virtual ~Base() {}
+    // #TEST#: R70 Rename virtual method
+    virtual Base *Operation() = 0;
+};
 
-    class Derived2 : public virtual Derived1
+class Derived1 : public virtual Base
+{
+public:
+    virtual ~Derived1() {}
+    // #TEST#: R71 Rename virtual method
+    virtual Base *Operation()
     {
-    public:
-        virtual ~Derived2() {}
-        // #TEST#: R72 Rename virtual method
-        virtual Base *Operation()
-        {
-            return this;
-        }
-    };
-
-    void TestDerived()
-    {
-        Derived2 d;
-        // #TEST#: R73 Rename virtual method
-        d.Operation();
+        return this;
     }
+};
+
+class Derived2 : public virtual Derived1
+{
+public:
+    virtual ~Derived2() {}
+    // #TEST#: R72 Rename virtual method
+    virtual Base *Operation()
+    {
+        return this;
+    }
+};
+
+void TestDerived()
+{
+    Derived2 d;
+    // #TEST#: R73 Rename virtual method
+    d.Operation();
+}
+
 }
 
 // #TEST#: R74 Rename macro MACRO1

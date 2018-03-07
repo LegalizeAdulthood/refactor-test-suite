@@ -5,64 +5,66 @@
 
 namespace ExtractConstantNamespace
 {
-    void Function1() {}
-    class Foo
+
+void Function1() {}
+class Foo
+{
+public:
+    int Operation1()
     {
-    public:
-        int Operation1()
-        {
-            // #TEST#: EC5 Extract Constant (class)
-            // #TEST#: EC6 Extract Constant (global)
-            // #TEST#: EC7 Extract Constant (macro)
-            // #TEST#: EC13 Extract Constant (local)
-            return 1;
-        }
-        int Const1() const
-        {
-            return 1;
-        }
-        float Operation2()
-        {
-            return 1.0f;
-        }
-        double Operation3()
-        {
-            // #TEST#: EC8 Extract Constant
-            return 1.0;
-        }
-        const char *Operation4()
-        {
-            // #TEST#: EC9 Extract Constant (class)
-            // #TEST#: EC10 Extract Constant (global)
-            // #TEST#: EC11 Extract Constant (macro)
-            // #TEST#: EC12 Extract Constant (local)
-            return "Foo";
-        }
-    };
-
-    struct Bar
+        // #TEST#: EC5 Extract Constant (class)
+        // #TEST#: EC6 Extract Constant (global)
+        // #TEST#: EC7 Extract Constant (macro)
+        // #TEST#: EC13 Extract Constant (local)
+        return 1;
+    }
+    int Const1() const
     {
-        Bar(int x_ = 0) : x(x_)
-        {}
-        int Operation1()
-        {
-            return 1;
-        }
-        int x;
-    };
-
-    union Union
+        return 1;
+    }
+    float Operation2()
     {
-        int x;
-        float f;
+        return 1.0f;
+    }
+    double Operation3()
+    {
+        // #TEST#: EC8 Extract Constant
+        return 1.0;
+    }
+    const char *Operation4()
+    {
+        // #TEST#: EC9 Extract Constant (class)
+        // #TEST#: EC10 Extract Constant (global)
+        // #TEST#: EC11 Extract Constant (macro)
+        // #TEST#: EC12 Extract Constant (local)
+        return "Foo";
+    }
+};
 
-        int Operation1()
-        {
-            return 1;
-        }
-    };
-
+struct Bar
+{
+    Bar(int x_ = 0) : x(x_)
+    {}
+    int Operation1()
+    {
+        return 1;
+    }
     int x;
+};
+
+union Union
+{
+    int x;
+    float f;
+
+    int Operation1()
+    {
+        return 1;
+    }
+};
+
+int x;
+
 }
 
 using namespace ExtractConstantNamespace;

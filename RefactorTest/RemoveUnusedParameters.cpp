@@ -3,46 +3,48 @@
 
 namespace RemoveUnusedParametersNamespace
 {
-    // #TEST#: RUP1 Remove Unused Parameter (should not be available)
-    int TestFunction(int (*fn)(int), int i)
+
+// #TEST#: RUP1 Remove Unused Parameter (should not be available)
+int TestFunction(int (*fn)(int), int i)
+{
+    int j;
+    if (i < 0)
     {
-        int j;
-        if (i < 0)
-        {
-            j = (*fn)(i);
-        }
-        else
-        {
-            j = (*fn)(i*2);
-        }
-        return (*fn)(j);
+        j = (*fn)(i);
     }
-
-    class Foo
+    else
     {
-    public:
-        // #TEST#: RUP4 Remove Unused Parameter x
-        int Method1(int x) { return 2; }
-        int Method2(int x) { return x; }
-    };
-
-    typedef int (Foo::*FooMemberPtr)(int);
-
-    // #TEST#: RUP2 Remove Unused Parameter (should not be available)
-    int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
-    {
-        int j;
-        if (i < 0)
-        {
-            j = (f.*member)(i);
-        }
-        else
-        {
-            j = (f.*member)(i*2);
-        }
-        j = (f.*member)(j);
-        return j;
+        j = (*fn)(i*2);
     }
+    return (*fn)(j);
+}
+
+class Foo
+{
+public:
+    // #TEST#: RUP4 Remove Unused Parameter x
+    int Method1(int x) { return 2; }
+    int Method2(int x) { return x; }
+};
+
+typedef int (Foo::*FooMemberPtr)(int);
+
+// #TEST#: RUP2 Remove Unused Parameter (should not be available)
+int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
+{
+    int j;
+    if (i < 0)
+    {
+        j = (f.*member)(i);
+    }
+    else
+    {
+        j = (f.*member)(i*2);
+    }
+    j = (f.*member)(j);
+    return j;
+}
+
 } // namespace RemoveUnusedParametersNamespace
 
 using namespace RemoveUnusedParametersNamespace;

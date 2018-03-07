@@ -232,30 +232,32 @@ public:
 
 namespace AddParameterNamespace
 {
-    class Outer
+
+class Outer
+{
+public:
+    Outer()
+    {
+    }
+    ~Outer()
+    {
+    }
+
+    void Operation()
+    {
+    }
+
+    class Inner
     {
     public:
-        Outer()
-        {
-        }
-        ~Outer()
+        Inner()
         {
         }
 
         void Operation()
         {
         }
-
-        class Inner
-        {
-        public:
-            Inner()
-            {
-            }
-
-            void Operation()
-            {
-            }
-        };
     };
+};
+
 }

@@ -10,37 +10,39 @@
 
 namespace FlattenConditionNamespace
 {
-    int TestGuardClause(int *x, int y, int z)
+
+int TestGuardClause(int *x, int y, int z)
+{
+    // #TEST#: FC1 Flatten Conditional
+    if (x != 0)
     {
-        // #TEST#: FC1 Flatten Conditional
-        if (x != 0)
+        if (y > 0)
         {
-            if (y > 0)
+            if (z > 0)
             {
-                if (z > 0)
-                {
-                    return (*x + 10)*y*z;
-                }
+                return (*x + 10)*y*z;
             }
         }
-        return -1;
     }
+    return -1;
+}
 
-    void TestGuardClause()
-    {
-        int x = 10;
-        int y = 2;
-        int z = 2;
-        int r = TestGuardClause(&x, y, z);
-    }
+void TestGuardClause()
+{
+    int x = 10;
+    int y = 2;
+    int z = 2;
+    int r = TestGuardClause(&x, y, z);
+}
 
-    void TestRedundantConditional()
-    {
-    }
+void TestRedundantConditional()
+{
+}
 
-    void TestReverseRedundantConditional()
-    {
-    }
+void TestReverseRedundantConditional()
+{
+}
+
 }
 
 using namespace FlattenConditionNamespace;

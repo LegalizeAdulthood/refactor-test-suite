@@ -5,110 +5,111 @@
 
 namespace InlineResultNamespace
 {
-    struct Foo
+struct Foo
+{
+    Foo(int x = 0, float f = 0.0f, double d = 0.0) 
+        : _x(x), _f(f), _d(d)
     {
-        Foo(int x = 0, float f = 0.0f, double d = 0.0) 
-            : _x(x), _f(f), _d(d)
-        {
-        }
-
-        int _x;
-        float _f;
-        double _d;
-    };
-
-    class Bar
-    {
-    public:
-        int Operation1()
-        {
-            return 0;
-        }
-        int Operation2()
-        {
-            return 1;
-        }
-    };
-
-    int Result1(bool flag, int x)
-    {
-        // #TEST#: IR1 Inline result
-        int result = 0;
-
-        if (flag)
-        {
-            result = -10;
-        }
-        else if (x > 10)
-        {
-            result = -x;
-        }
-
-        return result;
     }
 
-    int &Result2(bool flag, int &x, int &y)
+    int _x;
+    float _f;
+    double _d;
+};
+
+class Bar
+{
+public:
+    int Operation1()
     {
-        // #TEST#: IR2 Inline result
-        int &result = x;
+        return 0;
+    }
+    int Operation2()
+    {
+        return 1;
+    }
+};
 
-        if (flag)
-        {
-            result = y;
-        }
+int Result1(bool flag, int x)
+{
+    // #TEST#: IR1 Inline result
+    int result = 0;
 
-        return result;
+    if (flag)
+    {
+        result = -10;
+    }
+    else if (x > 10)
+    {
+        result = -x;
     }
 
-    Foo Result3(bool flag, int x, float f)
+    return result;
+}
+
+int &Result2(bool flag, int &x, int &y)
+{
+    // #TEST#: IR2 Inline result
+    int &result = x;
+
+    if (flag)
     {
-        // #TEST#: IR3 Inline result
-        Foo result = Foo();
-        if (flag)
+        result = y;
+    }
+
+    return result;
+}
+
+Foo Result3(bool flag, int x, float f)
+{
+    // #TEST#: IR3 Inline result
+    Foo result = Foo();
+    if (flag)
+    {
+        result = Foo(x, f, -1.0);
+    }
+    else
+    {
+        result = Foo(-1, f, -2.0);
+    }
+    return result;
+}
+
+std::vector<int>::size_type Result4(bool flag,
+    std::vector<int>::size_type x, std::vector<int> &vec)
+{
+    // #TEST#: IR4 Inline result
+    std::vector<int>::size_type result = 0;
+
+    if (flag)
+    {
+        if (x > vec.size())
         {
-            result = Foo(x, f, -1.0);
+            result = x;
         }
         else
         {
-            result = Foo(-1, f, -2.0);
+            result = vec.size();
         }
-        return result;
     }
-
-    std::vector<int>::size_type Result4(bool flag,
-        std::vector<int>::size_type x, std::vector<int> &vec)
+    else
     {
-        // #TEST#: IR4 Inline result
-        std::vector<int>::size_type result = 0;
-
-        if (flag)
-        {
-            if (x > vec.size())
-            {
-                result = x;
-            }
-            else
-            {
-                result = vec.size();
-            }
-        }
-        else
-        {
-            result = vec.size() + 1;
-        }
-        return result;
+        result = vec.size() + 1;
     }
+    return result;
+}
 
-    int (Bar::*Result5(bool flag))()
+int (Bar::*Result5(bool flag))()
+{
+    // #TEST#: IR5 Inline result
+    int (Bar::*result)() = &Bar::Operation1;
+    if (flag)
     {
-        // #TEST#: IR5 Inline result
-        int (Bar::*result)() = &Bar::Operation1;
-        if (flag)
-        {
-            result = &Bar::Operation2;
-        }
-        return result;
+        result = &Bar::Operation2;
     }
+    return result;
+}
+
 }
 
 using namespace InlineResultNamespace;

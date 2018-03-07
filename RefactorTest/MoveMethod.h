@@ -104,87 +104,89 @@ private:
 
 namespace MoveMethodNamespace
 {
-    class MoveMethodAbstractInline
+
+class MoveMethodAbstractInline
+{
+public:
+    // #TEST#: MM15 Move method to source file
+    MoveMethodAbstractInline()
     {
-    public:
-        // #TEST#: MM15 Move method to source file
-        MoveMethodAbstractInline()
-        {
-        }
+    }
 
-        // #TEST#: MM16 Move method to source file
-        virtual ~MoveMethodAbstractInline()
-        {
-        }
-
-        // #TEST#: MM17 Move method to source file
-        void Operation()
-        {
-        }
-
-        // #TEST#: MM18 Move method to source file
-        void OperationConst() const
-        {
-        }
-
-        // #TEST#: MM19 Move method to source file
-        virtual void OperationVirtual()
-        {
-        }
-
-        virtual void OperationAbstract() = 0;
-    };
-
-    class MoveMethodConcreteInline : public MoveMethodAbstractInline
+    // #TEST#: MM16 Move method to source file
+    virtual ~MoveMethodAbstractInline()
     {
-    public:
-        // #TEST#: MM20 Move method to source file
-        MoveMethodConcreteInline()
-        {
-        }
+    }
 
-        // #TEST#: MM21 Move method to source file
-        virtual ~MoveMethodConcreteInline()
-        {
-        }
-
-        // #TEST#: MM22 Move method to source file
-        virtual void OperationAbstract()
-        {
-        }
-    };
-
-    class MoveMethodAbstract
+    // #TEST#: MM17 Move method to source file
+    void Operation()
     {
-    public:
-        MoveMethodAbstract();
-        virtual ~MoveMethodAbstract();
-        void Operation();
-        void OperationConst() const;
-        virtual void OperationVirtual();
-        virtual void OperationAbstract() = 0;
-    };
+    }
 
-    class MoveMethodConcrete : public MoveMethodAbstract
+    // #TEST#: MM18 Move method to source file
+    void OperationConst() const
     {
-    public:
-        MoveMethodConcrete();
-        virtual ~MoveMethodConcrete();
-        virtual void OperationAbstract();
-    };
+    }
 
-    class MoveMethodExplicit
+    // #TEST#: MM19 Move method to source file
+    virtual void OperationVirtual()
     {
-    public:
-        explicit MoveMethodExplicit();
-    };
+    }
 
-    class MoveMethodExplicit2
+    virtual void OperationAbstract() = 0;
+};
+
+class MoveMethodConcreteInline : public MoveMethodAbstractInline
+{
+public:
+    // #TEST#: MM20 Move method to source file
+    MoveMethodConcreteInline()
     {
-    public:
-        // #TEST#: MM36 Move method to source file
-        explicit MoveMethodExplicit2()
-        {
-        }
-    };
+    }
+
+    // #TEST#: MM21 Move method to source file
+    virtual ~MoveMethodConcreteInline()
+    {
+    }
+
+    // #TEST#: MM22 Move method to source file
+    virtual void OperationAbstract()
+    {
+    }
+};
+
+class MoveMethodAbstract
+{
+public:
+    MoveMethodAbstract();
+    virtual ~MoveMethodAbstract();
+    void Operation();
+    void OperationConst() const;
+    virtual void OperationVirtual();
+    virtual void OperationAbstract() = 0;
+};
+
+class MoveMethodConcrete : public MoveMethodAbstract
+{
+public:
+    MoveMethodConcrete();
+    virtual ~MoveMethodConcrete();
+    virtual void OperationAbstract();
+};
+
+class MoveMethodExplicit
+{
+public:
+    explicit MoveMethodExplicit();
+};
+
+class MoveMethodExplicit2
+{
+public:
+    // #TEST#: MM36 Move method to source file
+    explicit MoveMethodExplicit2()
+    {
+    }
+};
+
 }
