@@ -13,13 +13,13 @@ class ExtractParameterClass
 {
 public:
     ExtractParameterClass() {}
-    void Blah();
+    void Blah(std::ostream &str);
 };
 
-void ExtractParameterClass::Blah()
+void ExtractParameterClass::Blah(std::ostream &str)
 {
     int g = 5;
-    std::cout << g << "\n";
+    str << g << '\n';
 }
 
 
@@ -49,8 +49,10 @@ void TestMemberPointer()
 
 void Test()
 {
+    std::ostringstream str;
     ExtractParameterClass test;
-    test.Blah();
+    test.Blah(str);
+    require_equal(std::string("5\n"), str.str());
 
     TestMemberPointer();
 }
