@@ -3,13 +3,11 @@ set(headers
     ChangeSignature.h
     CreateOverload.h
     CreateSetterMethod.h
-    DecomposeParameter.h
     MoveImplementationToSourceFile.h
     MoveMethod.h
     RemoveUnusedParameters.h
     Rename.h
     RenameCpp11.h
-    RenameFileToMatchType.h
     Require.h
     RefactorTest.h)
 
@@ -37,26 +35,19 @@ set(sources
     MoveMethod.cpp
     OptimizeNamespaceReferences.cpp
     RemoveBlockDelimiter.cpp
-    RemoveRedundantConditional.cpp
     RemoveUnusedParameters.cpp
     Rename.cpp
     Rename2.cpp
     RenameCpp11.cpp
-    RenameFileToMatchType.cpp
-    RenameTypeToMatchFile.cpp
     ReorderParameters.cpp
     ReplaceAutoPtrWithUniquePtr.cpp
     ReplaceIfWithTernary.cpp
     ReplaceIterativeForWithRangeFor.cpp
-    ReplaceNestedConditionalWithGuardClause.cpp
     ReplaceNullZeroWithNullPtr.cpp
     ReplaceStringLiteralWithRawStringLiteral.cpp
     ReplaceTernaryWithIf.cpp
     ReplaceTypeWithAuto.cpp
-    ReplaceWithAlias.cpp
-    ReplaceWithConstant.cpp
     ReverseConditional.cpp
-    SafeRename.cpp
     SimplifyBooleanExpression.cpp
     SplitInitializationFromDeclaration.cpp
     SplitMultiVariableDeclaration.cpp
