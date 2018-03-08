@@ -1,0 +1,67 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 6c3eaea..b4ad675 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -275,7 +275,7 @@ namespace F2Inner
+ {
+ 
+ // #TEST#: R477 Rename function f2_aux
+-int f2_aux()
++int Goink()
+ {
+     return 1;
+ }
+@@ -288,7 +288,7 @@ void f2_aux2()
+     // #TEST#: R478 Rename namespace F2Outer
+     // #TEST#: R479 Rename namespace F2Inner
+     // #TEST#: R480 Rename function f2_aux
+-    require_equal(1, F2Outer::F2Inner::f2_aux());
++    require_equal(1, F2Outer::F2Inner::Goink());
+ }
+ 
+ void f2_aux3()
+@@ -297,7 +297,7 @@ void f2_aux3()
+     using namespace F2Outer;
+     // #TEST#: R482 Rename namespace F2Inner
+     // #TEST#: R483 Rename function f2_aux
+-    require_equal(1, F2Inner::f2_aux());
++    require_equal(1, F2Inner::Goink());
+ }
+ 
+ void f2_aux4()
+@@ -306,7 +306,7 @@ void f2_aux4()
+     // #TEST#: R485 Rename namespace F2Inner
+     using namespace F2Outer::F2Inner;
+     // #TEST#: R486 Rename function f2_aux
+-    require_equal(1, f2_aux());
++    require_equal(1, Goink());
+ }
+ 
+ void f2_aux5()
+@@ -317,7 +317,7 @@ void f2_aux5()
+     // #TEST#: R489 Rename namespace A
+     // #TEST#: R490 Rename namespace F2Inner
+     // #TEST#: R491 Rename function f2_aux
+-    require_equal(1, A::F2Inner::f2_aux());
++    require_equal(1, A::F2Inner::Goink());
+ }
+ 
+ void f2_aux6()
+@@ -328,7 +328,7 @@ void f2_aux6()
+     namespace A = F2Outer::F2Inner;
+     // #TEST#: R495 Rename namespace A
+     // #TEST#: R496 Rename function f2_aux
+-    require_equal(1, A::f2_aux());
++    require_equal(1, A::Goink());
+ }
+ 
+ void f2_aux7()
+@@ -340,7 +340,7 @@ void f2_aux7()
+     // #TEST#: R500 Rename namespace A
+     using namespace A;
+     // #TEST#: R501 Rename function f2_aux
+-    require_equal(1, f2_aux());
++    require_equal(1, Goink());
+ }
+ 
+ void f2()

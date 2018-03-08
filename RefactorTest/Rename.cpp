@@ -267,6 +267,92 @@ void f1()
     require_equal(7.0f, f1_aux<float>(6));
 }
 
+// #TEST#: R475 Rename namespace F2Outer
+namespace F2Outer
+{
+// #TEST#: R476 Rename namespace F2Inner
+namespace F2Inner
+{
+
+// #TEST#: R477 Rename function f2_aux
+int f2_aux()
+{
+    return 1;
+}
+
+} // namespace F2Inner
+} // namespace F2Outer
+
+void f2_aux2()
+{
+    // #TEST#: R478 Rename namespace F2Outer
+    // #TEST#: R479 Rename namespace F2Inner
+    // #TEST#: R480 Rename function f2_aux
+    require_equal(1, F2Outer::F2Inner::f2_aux());
+}
+
+void f2_aux3()
+{
+    // #TEST#: R481 Rename namespace F2Outer
+    using namespace F2Outer;
+    // #TEST#: R482 Rename namespace F2Inner
+    // #TEST#: R483 Rename function f2_aux
+    require_equal(1, F2Inner::f2_aux());
+}
+
+void f2_aux4()
+{
+    // #TEST#: R484 Rename namespace F2Outer
+    // #TEST#: R485 Rename namespace F2Inner
+    using namespace F2Outer::F2Inner;
+    // #TEST#: R486 Rename function f2_aux
+    require_equal(1, f2_aux());
+}
+
+void f2_aux5()
+{
+    // #TEST#: R487 Rename namespace A
+    // #TEST#: R488 Rename namespace F2Outer
+    namespace A = F2Outer;
+    // #TEST#: R489 Rename namespace A
+    // #TEST#: R490 Rename namespace F2Inner
+    // #TEST#: R491 Rename function f2_aux
+    require_equal(1, A::F2Inner::f2_aux());
+}
+
+void f2_aux6()
+{
+    // #TEST#: R492 Rename namespace A
+    // #TEST#: R493 Rename namespace F2Outer
+    // #TEST#: R494 Rename namespace F2Inner
+    namespace A = F2Outer::F2Inner;
+    // #TEST#: R495 Rename namespace A
+    // #TEST#: R496 Rename function f2_aux
+    require_equal(1, A::f2_aux());
+}
+
+void f2_aux7()
+{
+    // #TEST#: R497 Rename namespace A
+    // #TEST#: R498 Rename namespace F2Outer
+    // #TEST#: R499 Rename namespace F2Inner
+    namespace A = F2Outer::F2Inner;
+    // #TEST#: R500 Rename namespace A
+    using namespace A;
+    // #TEST#: R501 Rename function f2_aux
+    require_equal(1, f2_aux());
+}
+
+void f2()
+{
+    f2_aux2();
+    f2_aux3();
+    f2_aux4();
+    f2_aux5();
+    f2_aux6();
+    f2_aux7();
+}
+
 }
 
 void TestRename()
@@ -428,4 +514,5 @@ restart:
         REQUIRE_EQUAL(std::string("-------------"), dashes);
     }
     f1();
+    f2();
 }
