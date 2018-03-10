@@ -631,6 +631,137 @@ R471 | Pass
 R472 | Pass
 R473 | Pass
 R474 | Pass
+R475 | Pass
+R476 | Pass
+R477 | Pass
+R478 | Pass
+R479 | Pass
+R480 | Pass
+R481 | Pass
+R482 | Pass
+R483 | Pass
+R484 | Pass
+R485 | Pass
+R486 | Pass
+R487 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R488 | Pass
+R489 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R490 | Pass
+R491 | Pass
+R492 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R493 | Pass
+R494 | Pass
+R495 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R496 | Pass
+R497 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R498 | Pass
+R499 | Pass
+R500 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R501 | Pass
+R502 | Pass
+R503 | Pass
+R504 | Failure (fails to select all instances) [212275](https://developercommunity.visualstudio.com/content/problem/212275/renaming-class-member-fails-to-select-all-instance.html)
+R505 | Failure (fails to select all instances) [212275](https://developercommunity.visualstudio.com/content/problem/212275/renaming-class-member-fails-to-select-all-instance.html)
+R506 | Pass
+R507 | Pass
+R508 | Pass
+R509 | Pass
+R510 | Pass
+R511 | Pass
+R512 | Pass
+R513 | Pass
+R514 | Pass
+R515 | Failure (fails to select all instances) [212276](https://developercommunity.visualstudio.com/content/problem/212276/rename-of-member-of-class-template-argument-fails.html)
+R516 | Pass
+R517 | Pass
+R518 | Pass
+R519 | Pass
+R520 | Pass
+R521 | Pass
+R522 | Failure (fails to select all instances) [212276](https://developercommunity.visualstudio.com/content/problem/212276/rename-of-member-of-class-template-argument-fails.html)
+R523 | Pass
+R524 | Pass
+R525 | Pass
+R526 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R527 | Failure (pops up symbol dialog) [212279](https://developercommunity.visualstudio.com/content/problem/212279/rename-of-template-class-declaration-pops-up-symbo.html)
+R528 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R529 | Pass
+R530 | Pass
+R531 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R532 | Pass
+R533 | Pass
+R534 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R535 | Pass
+R536 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R537 | Pass
+R538 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R539 | Pass
+R540 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R541 | Pass
+R542 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R543 | Pass
+R544 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
+R545 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R546 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R547 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
+R548 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R549 | Pass
+R550 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
+R551 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
+R552 | Pass
+R553 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
+R554 | Pass
+R555 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
+R556 | Pass
+R557 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
+R558 | Pass
+R559 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
+R560 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R561 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R562 | n/a
+R563 | Pass
+R564 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R565 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
+R566 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R567 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
+R568 | Failure (selects unrelated instances) [212302](https://developercommunity.visualstudio.com/content/problem/212302/rename-of-identifier-in-decltype-expression-select.html)
+R569 | Failure (selects unrelated instances) [212302](https://developercommunity.visualstudio.com/content/problem/212302/rename-of-identifier-in-decltype-expression-select.html)
+R570 | Pass
+R571 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
+R572 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
+R573 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R574 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R575 | Pass
+R576 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R577 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R578 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R579 | Pass
+R580 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R581 | Pass
+R582 | Pass
+R583 | Pass
+R584 | Pass
+R585 | Pass
+R586 | Pass
+R587 | Pass
+R588 | Pass
+R589 | Pass
+R590 | Pass
+R591 | Pass
+R592 | Pass
+R593 | Pass
+R594 | Pass
+R595 | Pass
+R596 | Pass
+R597 | Pass
+R598 | Pass
+R599 | Pass
+R600 | Pass
+R601 | Pass
+R602 | Pass
+R603 | Pass
+R604 | Pass
+R605 | Pass
 
 ## Reorder Parameters
 Case | Result
