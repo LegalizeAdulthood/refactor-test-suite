@@ -487,6 +487,68 @@ void f5()
     require_equal(true, std::is_same<F5<int>::type, unsigned int>::value);
 }
 
+struct F6
+{
+    // #TEST#: R560 Rename T
+    // #TEST#: R561 Rename U
+    template <typename T, typename U>
+    // #TEST#: R563 Rename f
+    // #TEST#: R564 Rename T parameter x type
+    // #TEST#: R565 Rename x parameter
+    // #TEST#: R566 Rename U parameter y type
+    // #TEST#: R567 Rename y parameter
+    // #TEST#: R568 Rename x in decltype expression
+    // #TEST#: R569 Rename y in decltype expression
+    auto f(T x, U y) -> decltype(x + y)
+    {
+        // #TEST#: R570 Rename count
+        ++count;
+        // #TEST#: R571 Rename x
+        // #TEST#: R572 Rename y
+        return x + y;
+    }
+
+    // #TEST#: R573 Rename T
+    // #TEST#: R574 Rename U
+    template <typename T, typename U>
+    // #TEST#: R575 Rename g
+    // #TEST#: R576 Rename T in decltype expression
+    // #TEST#: R577 Rename U in decltype expression
+    // #TEST#: R578 Rename T parameter x type
+    // #TEST#: R579 Rename x parameter
+    // #TEST#: R580 Rename U parameter y type
+    // #TEST#: R581 Rename y parameter
+    decltype(T() + U()) g(T x, U y)
+    {
+        // #TEST#: R582 Rename count
+        ++count;
+        // #TEST#: R583 Rename x
+        // #TEST#: R584 Rename y
+        return x + y;
+    }
+
+    // #TEST#: R585 Rename count
+    int count = 0;
+};
+
+void f6()
+{
+    F6 x;
+    // #TEST#: R586 Rename method f
+    require_equal(3.0, x.f(1, 2.0));
+    // #TEST#: R587 Rename method f
+    require_equal(std::string{"foobar"}, x.f(std::string{"foo"}, "bar"));
+    // #TEST#: R588 Rename count
+    require_equal(2, x.count);
+
+    // #TEST#: R589 Rename method g
+    require_equal(3.0, x.g(1.0, 2));
+    // #TEST#: R590 Rename method g
+    require_equal(std::string{"foobar"}, x.g("foo", std::string{"bar"}));
+    // #TEST#: R591 Rename count
+    require_equal(4, x.count);
+}
+
 }
 
 void TestRename()
@@ -652,4 +714,5 @@ restart:
     f3();
     f4();
     f5();
+    f6();
 }
