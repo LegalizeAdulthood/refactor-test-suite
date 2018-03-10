@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 8ff936b..fffc6f7 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -466,7 +466,7 @@ class F5<int>
+ {
+ public:
+     // #TEST#: F550 Rename type
+-    using type = unsigned int;
++    using Goink = unsigned int;
+     // #TEST#: F551 Rename x
+     unsigned int x = 4;
+ };
+@@ -484,7 +484,7 @@ void f5()
+     require_equal(4U, F5<int>().x);
+     // #TEST#: R558 Rename F5
+     // #TEST#: R559 Rename type
+-    require_equal(true, std::is_same<F5<int>::type, unsigned int>::value);
++    require_equal(true, std::is_same<F5<int>::Goink, unsigned int>::value);
+ }
+ 
+ }

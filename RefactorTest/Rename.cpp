@@ -445,6 +445,48 @@ void f4()
     require_equal(true, std::is_same<F4<float>::type, double>::value);
 }
 
+// #TEST#: R542 Rename T
+template <typename T>
+// #TEST#: R543 Rename F5
+class F5
+{
+public:
+    // #TEST#: R544 Rename type
+    // #TEST#: R545 Rename T
+    using type = T;
+    // #TEST#: R546 Rename T in declaration
+    // #TEST#: R547 Rename x
+    // #TEST#: R548 Rename T in initializer
+    T x = T(3);
+};
+
+template <>
+// #TEST#: R549 Rename F5
+class F5<int>
+{
+public:
+    // #TEST#: F550 Rename type
+    using type = unsigned int;
+    // #TEST#: F551 Rename x
+    unsigned int x = 4;
+};
+
+void f5()
+{
+    // #TEST#: R552 Rename F5
+    // #TEST#: R553 Rename x
+    require_equal('\3', F5<char>().x);
+    // #TEST#: R554 Rename F5
+    // #TEST#: R555 Rename type
+    require_equal(true, std::is_same<char, F5<char>::type>::value);
+    // #TEST#: R556 Rename F5
+    // #TEST#: R557 Rename x
+    require_equal(4U, F5<int>().x);
+    // #TEST#: R558 Rename F5
+    // #TEST#: R559 Rename type
+    require_equal(true, std::is_same<F5<int>::type, unsigned int>::value);
+}
+
 }
 
 void TestRename()
@@ -609,4 +651,5 @@ restart:
     f2();
     f3();
     f4();
+    f5();
 }

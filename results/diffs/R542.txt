@@ -1,0 +1,26 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 8ff936b..5496c34 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -446,18 +446,18 @@ void f4()
+ }
+ 
+ // #TEST#: R542 Rename T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R543 Rename F5
+ class F5
+ {
+ public:
+     // #TEST#: R544 Rename type
+     // #TEST#: R545 Rename T
+-    using type = T;
++    using type = Goink;
+     // #TEST#: R546 Rename T in declaration
+     // #TEST#: R547 Rename x
+     // #TEST#: R548 Rename T in initializer
+-    T x = T(3);
++    Goink x = Goink(3);
+ };
+ 
+ template <>
