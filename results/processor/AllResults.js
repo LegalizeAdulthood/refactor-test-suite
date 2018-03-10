@@ -9,7 +9,7 @@ var split = require('split');
 function Percentage(passed, total)
 {
     var pct = String(Math.ceil(100*100*passed/total)/100) + "%";
-    return (pct + "      ".substr(0, 6 - pct.length)).trim();
+    return (pct + "      ".substr(0, 6 - pct.length)).trim() + " (" + passed + "/" + total + ")";
 }
 
 function StartTest()
