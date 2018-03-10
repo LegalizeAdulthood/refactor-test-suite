@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 3876218..f271f91 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -403,7 +403,7 @@ void f3()
+ }
+ 
+ // #TEST#: R526 Rename T
+-template <class T>
++template <class Goink>
+ // #TEST#: R527 Rename F4
+ class F4;
+ 

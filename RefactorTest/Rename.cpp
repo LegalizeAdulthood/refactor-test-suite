@@ -402,6 +402,49 @@ void f3()
     require_equal(3, f3_aux<T3, 1>(T3{2}));
 }
 
+// #TEST#: R526 Rename T
+template <class T>
+// #TEST#: R527 Rename F4
+class F4;
+
+template <>
+// #TEST#: R528 Rename F4
+class F4<int>
+{
+public:
+    // #TEST#: F529 Rename type
+    using type = unsigned int;
+    // #TEST#: F530 Rename x
+    unsigned int x = 4;
+};
+
+template <>
+// #TEST#: R531 Rename F4
+class F4<float>
+{
+public:
+    // #TEST#: R532 Rename type
+    using type = double;
+    // #TEST#: R533 Rename x
+    double x = 10.5;
+};
+
+void f4()
+{
+    // #TEST#: R534 Rename F4
+    // #TEST#: R535 Rename x
+    require_equal(4U, F4<int>().x);
+    // #TEST#: R536 Rename F4
+    // #TEST#: R537 Rename type
+    require_equal(true, std::is_same<F4<int>::type, unsigned int>::value);
+    // #TEST#: R538 Rename F4
+    // #TEST#: R539 Rename x
+    require_equal(10.5, F4<float>().x);
+    // #TEST#: R540 Rename F4
+    // #TEST#: R541 Rename type
+    require_equal(true, std::is_same<F4<float>::type, double>::value);
+}
+
 }
 
 void TestRename()
@@ -565,4 +608,5 @@ restart:
     f1();
     f2();
     f3();
+    f4();
 }
