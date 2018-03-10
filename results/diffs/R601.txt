@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 952f46a..d6ccc61 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -575,11 +575,11 @@ void f7()
+     // #TEST#: R601 Rename q
+     // #TEST#: R602 Rename F7Derived
+     // #TEST#: R603 Rename x
+-    int &q = F7Derived::x;
++    int &Goink = F7Derived::x;
+     // #TEST#: R604 Rename p
+     require_equal(7, p);
+     // #TEST#: R605 Rename q
+-    require_equal(7, q);
++    require_equal(7, Goink);
+ }
+ 
+ }

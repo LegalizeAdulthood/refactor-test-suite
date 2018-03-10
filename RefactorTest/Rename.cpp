@@ -549,6 +549,39 @@ void f6()
     require_equal(4, x.count);
 }
 
+// #TEST#: R592 Rename F7Base
+struct F7Base
+{
+    // #TEST#: R593 Rename x
+    static int x;
+};
+
+// #TEST#: R594 Rename F7Base
+// #TEST#: R595 Rename x
+int F7Base::x = 7;
+
+// #TEST#: R596 Rename F7Derived
+// #TEST#: R597 Rename F7Base
+struct F7Derived : F7Base
+{
+};
+
+void f7()
+{
+    // #TEST#: R598 Rename p
+    // #TEST#: R599 Rename F7Base
+    // #TEST#: R600 Rename x
+    int &p = F7Base::x;
+    // #TEST#: R601 Rename q
+    // #TEST#: R602 Rename F7Derived
+    // #TEST#: R603 Rename x
+    int &q = F7Derived::x;
+    // #TEST#: R604 Rename p
+    require_equal(7, p);
+    // #TEST#: R605 Rename q
+    require_equal(7, q);
+}
+
 }
 
 void TestRename()
@@ -715,4 +748,5 @@ restart:
     f4();
     f5();
     f6();
+    f7();
 }
