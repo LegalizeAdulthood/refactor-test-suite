@@ -353,6 +353,55 @@ void f2()
     f2_aux7();
 }
 
+// #TEST#: R502 Rename T3
+class T3
+{
+public:
+    // #TEST#: R503 Rename T3
+    // #TEST#: R504 Rename i3
+    T3(int i) : i3(i) {}
+    // #TEST#: R505 Rename i3
+    int i3;
+};
+
+// #TEST#: R506 Rename i3
+int i3 = 3;
+
+// #TEST#: R507 Rename T3
+// #TEST#: R508 Rename i3
+template <class T3, int i3>
+// #TEST#: R509 Rename f3_aux
+// #TEST#: R510 Rename T3
+// #TEST#: R511 Rename t
+int f3_aux(T3 t)
+{
+    // #TEST#: R512 Rename T3
+    // #TEST#: R513 Rename t1
+    // #TEST#: R514 Rename t
+    T3 t1 = t;
+    // #TEST#: R515 Rename i3
+    require_equal(2, t1.i3);
+    // #TEST#: R516 Rename i3
+    require_equal(1, i3);
+    // #TEST#: R517 Rename T3
+    // #TEST#: R518 Rename t2
+    // #TEST#: R519 Rename i3
+    ::T3 t2 = ::i3;
+    // #TEST#: R520 Rename i3
+    require_equal(3, ::i3);
+    // #TEST#: R521 Rename t2
+    // #TEST#: R522 Rename i3
+    return t2.i3;
+}
+
+void f3()
+{
+    // #TEST#: R523 Rename f3_aux
+    // #TEST#: R524 Rename T3 template argument
+    // #TEST#: R525 Rename T3 function argument expression
+    require_equal(3, f3_aux<T3, 1>(T3{2}));
+}
+
 }
 
 void TestRename()
@@ -515,4 +564,5 @@ restart:
     }
     f1();
     f2();
+    f3();
 }

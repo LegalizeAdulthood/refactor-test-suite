@@ -1,0 +1,37 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 5b1e326..4b17f56 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -354,12 +354,12 @@ void f2()
+ }
+ 
+ // #TEST#: R502 Rename T3
+-class T3
++class Goink
+ {
+ public:
+     // #TEST#: R503 Rename T3
+     // #TEST#: R504 Rename i3
+-    T3(int i) : i3(i) {}
++    Goink(int i) : i3(i) {}
+     // #TEST#: R505 Rename i3
+     int i3;
+ };
+@@ -386,7 +386,7 @@ int f3_aux(T3 t)
+     // #TEST#: R517 Rename T3
+     // #TEST#: R518 Rename t2
+     // #TEST#: R519 Rename i3
+-    ::T3 t2 = ::i3;
++    ::Goink t2 = ::i3;
+     // #TEST#: R520 Rename i3
+     require_equal(3, ::i3);
+     // #TEST#: R521 Rename t2
+@@ -399,7 +399,7 @@ void f3()
+     // #TEST#: R523 Rename f3_aux
+     // #TEST#: R524 Rename T3 template argument
+     // #TEST#: R525 Rename T3 function argument expression
+-    require_equal(3, f3_aux<T3, 1>(T3{2}));
++    require_equal(3, f3_aux<Goink, 1>(Goink{2}));
+ }
+ 
+ }

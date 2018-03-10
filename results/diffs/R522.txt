@@ -1,0 +1,34 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index 5b1e326..ab70cfd 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -359,9 +359,9 @@ class T3
+ public:
+     // #TEST#: R503 Rename T3
+     // #TEST#: R504 Rename i3
+-    T3(int i) : i3(i) {}
++    T3(int i) : Goink(i) {}
+     // #TEST#: R505 Rename i3
+-    int i3;
++    int Goink;
+ };
+ 
+ // #TEST#: R506 Rename i3
+@@ -380,7 +380,7 @@ int f3_aux(T3 t)
+     // #TEST#: R514 Rename t
+     T3 t1 = t;
+     // #TEST#: R515 Rename i3
+-    require_equal(2, t1.i3);
++    require_equal(2, t1.Goink);
+     // #TEST#: R516 Rename i3
+     require_equal(1, i3);
+     // #TEST#: R517 Rename T3
+@@ -391,7 +391,7 @@ int f3_aux(T3 t)
+     require_equal(3, ::i3);
+     // #TEST#: R521 Rename t2
+     // #TEST#: R522 Rename i3
+-    return t2.i3;
++    return t2.Goink;
+ }
+ 
+ void f3()
