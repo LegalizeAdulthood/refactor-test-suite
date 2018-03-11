@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
+index 765ba5c..98f8ecf 100644
+--- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
++++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
+@@ -702,9 +702,9 @@ static void TestContainersWithAtUsingInt()
+ 
+     int sum = 0;
+     // #TEST#: RIRF65 Replace iterative for with range for
+-    for (int i = 0; i < int(c.size()); ++i)
++    for (int i : c)
+     {
+-        sum += c.at(i);
++        sum += i;
+     }
+     require_equal(int('f') + int('o') + int('o'), sum);
+ 

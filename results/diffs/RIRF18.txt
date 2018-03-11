@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
+index 765ba5c..2adc8ea 100644
+--- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
++++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
+@@ -201,9 +201,9 @@ static void TestFileArrayExplicitSize()
+     require_equal(1, fileDataExplicitSize[9]);
+ 
+     // #TEST#: RIRF18 Replace iterative for with range for
+-    for (int i = sizeof(fileDataExplicitSize)/sizeof(fileDataExplicitSize[0])-1; i >= 0; --i)
++    for (int &i : fileDataExplicitSize)
+     {
+-        --fileDataExplicitSize[i];
++        --i;
+     }
+     require_equal(9, fileDataExplicitSize[0]);
+     require_equal(8, fileDataExplicitSize[1]);
