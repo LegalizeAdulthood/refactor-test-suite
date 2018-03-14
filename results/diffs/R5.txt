@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..fa7d749 100644
+index 952f46a..45c20ec 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -53,7 +53,7 @@ public:
- namespace X
+@@ -54,7 +54,7 @@ namespace X
  {
-     // #TEST#: R5 rename this variable
--    int x = 0;
-+    int Goink = 0;
-     // #TEST#: R6 rename this variable
-     static int y = 1;
  
-@@ -278,7 +278,7 @@ void TestRename()
+ // #TEST#: R5 rename this variable
+-int x = 0;
++int Goink = 0;
+ // #TEST#: R6 rename this variable
+ static int y = 1;
+ 
+@@ -631,7 +631,7 @@ void TestRename()
      // #TEST#: R21 rename the variable X::x
      // #TEST#: R22 rename the variable X::y
      // #TEST#: R23 rename the variable Y::x
