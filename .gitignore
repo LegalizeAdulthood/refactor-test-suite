@@ -5,3 +5,6 @@ results/bin
 results/obj
 build
 .vs
+.project
+.cproject
+.settings
