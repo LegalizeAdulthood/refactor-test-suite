@@ -30,6 +30,7 @@ The original release of the test suite is described
 - [CLion CL-140-1221.2](results/CLionResults.md)
 - [clang-tidy 6.0.0](results/ClangTidyResults.md)
 - [Eclipse CDT](results/EclipseCDTResults.md)
+- [QtCreator](results/QtCreatorResults.md)
 - [ReSharper for C++ 2017.3.2](results/ReSharperCppResults.md)
 - [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
 - [Visual Studio 2017](results/VisualStudio2017Results.md)
@@ -38,4 +39,4 @@ The original release of the test suite is described
 
 - [Cevelop](https://www.cevelop.com/)
 - [Code::Blocks](http://www.codeblocks.org/)
-- [QtCreator](http://www.qt.io/ide/)
+
