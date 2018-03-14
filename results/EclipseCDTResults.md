@@ -1,4 +1,4 @@
-# CLion
+# Eclipse CDT
 
 Home: [Eclipse CDT](https://eclipse.org/cdt/)
 
