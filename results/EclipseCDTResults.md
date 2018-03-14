@@ -25,10 +25,10 @@ R1    | Pass
 R2    | Failure (not available) [319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
 R3    | Pass
 R4    | Pass
-R5    | TBD
-R6    | TBD
-R7    | TBD
-R8    | TBD
+R5    | Pass
+R6    | Pass
+R7    | Pass
+R8    | Pass
 R9    | TBD
 R10   | TBD
 R11   | TBD
@@ -51,7 +51,7 @@ R27   | TBD
 R28   | TBD
 R29   | TBD
 R30   | TBD
-R31   | TBD
+R31   | Pass
 R32   | Failure (not available) [319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
 R33   | Pass
 R34   | Pass
