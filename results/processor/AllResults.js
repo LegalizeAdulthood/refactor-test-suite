@@ -56,8 +56,8 @@ function ProcessLine(context, line)
                 passes: ctx.passes,
                 failures: ctx.failures
             });
+            context.testResult = StartTest();
         }
-        context.testResult = StartTest();
     }
     else if (matches = line.match(/^Version: *([^ ].*)$/i))
     {

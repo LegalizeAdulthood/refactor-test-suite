@@ -221,7 +221,7 @@ EXF18 |
 EXF19 |
 EXF20 |
 
-## Extract Local Variable 
+## Extract Variable 
 Case | Result
 ---- | ------
 EXV1  |
