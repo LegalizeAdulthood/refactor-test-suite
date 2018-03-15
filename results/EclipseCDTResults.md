@@ -14,7 +14,7 @@ Notes:
 ** Instead, use **File > New > Makefile Project with Existing Code** in Eclipse CDT.
 ** Or use the new experimental CMake Preview (has to be installed separately from the CDT Repository)
    with File > New > C/C++ Project and "CMake Empty" type.
-   See [532419](https://bugs.eclipse.org/bugs/show_bug.cgi?id=532419) for current status.
+   See [Eclipse:532419](https://bugs.eclipse.org/bugs/show_bug.cgi?id=532419) for current status.
 
 
 
@@ -60,61 +60,61 @@ Not supported by CDT 9.4.2:
 Case | Result
 ---- | ------
 CO1   | Pass
-CO2   | TBD
-CO3   | TBD
-CO4   | TBD
-CO5   | TBD
-CO6   | TBD
-CO7   | TBD
-CO8   | TBD
-CO9   | TBD
-CO10  | TBD
-CO11  | TBD
-CO12  | TBD
-CO13  | TBD
-CO14  | TBD
-CO15  | TBD
-CO16  | TBD
-CO17  | TBD
-CO18  | TBD
-CO19  | TBD
-CO20  | TBD
-CO21  | TBD
-CO22  | TBD
-CO23  | TBD
-CO24  | TBD
-CO25  | TBD
-CO26  | TBD
-CO27  | TBD
-CO28  | TBD
-CO29  | TBD
-CO30  | TBD
-CO31  | TBD
-CO32  | TBD
-CO33  | TBD
-CO34  | TBD
-CO35  | TBD
-CO36  | TBD
-CO37  | TBD
-CO38  | TBD
-CO39  | TBD
-CO40  | TBD
-CO41  | TBD
-CO42  | TBD
-CO43  | TBD
-CO44  | TBD
-CO45  | TBD
-CO46  | TBD
-CO47  | TBD
-CO48  | TBD
-CO49  | TBD
-CO50  | TBD
-CO51  | TBD
-CO52  | TBD
-CO53  | TBD
-CO54  | TBD
-CO55  | TBD
-CO56  | TBD
+CO2   |
+CO3   |
+CO4   |
+CO5   |
+CO6   |
+CO7   |
+CO8   |
+CO9   |
+CO10  |
+CO11  |
+CO12  |
+CO13  |
+CO14  |
+CO15  |
+CO16  |
+CO17  |
+CO18  |
+CO19  |
+CO20  |
+CO21  |
+CO22  |
+CO23  |
+CO24  |
+CO25  |
+CO26  |
+CO27  |
+CO28  |
+CO29  |
+CO30  |
+CO31  |
+CO32  |
+CO33  |
+CO34  |
+CO35  |
+CO36  |
+CO37  |
+CO38  |
+CO39  |
+CO40  |
+CO41  |
+CO42  |
+CO43  |
+CO44  |
+CO45  |
+CO46  |
+CO47  |
+CO48  |
+CO49  |
+CO50  |
+CO51  |
+CO52  |
+CO53  |
+CO54  |
+CO55  |
+CO56  |
 
 ## Create Setter Method
 * CDT: Source > Generate Getters and Setters...
@@ -124,53 +124,53 @@ CO56  | TBD
 Case | Result
 ---- | ------
 CSM1  | Pass
-CSM2  | TBD
-CSM3  | TBD
-CSM4  | TBD
-CSM5  | TBD
-CSM6  | TBD
-CSM7  | TBD
-CSM8  | TBD
-CSM9  | TBD
-CSM10 | TBD
-CSM11 | TBD
-CSM12 | TBD
-CSM13 | TBD
-CSM14 | TBD
-CSM15 | TBD
-CSM16 | TBD
-CSM17 | TBD
-CSM18 | TBD
-CSM19 | TBD
-CSM20 | TBD
-CSM21 | TBD
-CSM22 | TBD
-CSM23 | TBD
-CSM24 | TBD
-CSM25 | TBD
-CSM26 | TBD
-CSM27 | TBD
-CSM28 | TBD
-CSM29 | TBD
-CSM30 | TBD
-CSM31 | TBD
+CSM2  |
+CSM3  |
+CSM4  |
+CSM5  |
+CSM6  |
+CSM7  |
+CSM8  |
+CSM9  |
+CSM10 |
+CSM11 |
+CSM12 |
+CSM13 |
+CSM14 |
+CSM15 |
+CSM16 |
+CSM17 |
+CSM18 |
+CSM19 |
+CSM20 |
+CSM21 |
+CSM22 |
+CSM23 |
+CSM24 |
+CSM25 |
+CSM26 |
+CSM27 |
+CSM28 |
+CSM29 |
+CSM30 |
+CSM31 |
 
 ## Extract Constant
 Case | Result
 ---- | ------
 EC1   | Pass
-EC2   | TBD
-EC3   | TBD
-EC4   | TBD
-EC5   | TBD
-EC6   | TBD
-EC7   | TBD
-EC8   | TBD
-EC9   | TBD
-EC10  | TBD
-EC11  | TBD
-EC12  | TBD
-EC13  | TBD
+EC2   |
+EC3   |
+EC4   |
+EC5   |
+EC6   |
+EC7   |
+EC8   |
+EC9   |
+EC10  |
+EC11  |
+EC12  |
+EC13  |
 
 ## Extract Method
 * CDT: Refactor > Extract Function...
@@ -178,132 +178,134 @@ EC13  | TBD
 Case | Result
 ---- | ------
 EM1   | Pass
-EM2   | TBD
-EM3   | TBD
-EM4   | TBD
-EM5   | TBD
-EM6   | TBD
-EM7   | TBD
-EM8   | TBD
-EM9   | TBD
-EM10  | TBD
-EM11  | TBD
-EM12  | TBD
-EM13  | TBD
-EM14  | TBD
-EM15  | TBD
-EM16  | TBD
-EM17  | TBD
-EM18  | TBD
-EM19  | TBD
+EM2   |
+EM3   |
+EM4   |
+EM5   |
+EM6   |
+EM7   |
+EM8   |
+EM9   |
+EM10  |
+EM11  |
+EM12  |
+EM13  |
+EM14  |
+EM15  |
+EM16  |
+EM17  |
+EM18  |
+EM19  |
 
 ## Extract Function
 Case | Result
 ---- | ------
 EXF1  | Pass
 EXF2  | Pass
-EXF3  | TBD
-EXF4  | TBD
-EXF5  | TBD
-EXF6  | TBD
-EXF7  | TBD
-EXF8  | TBD
-EXF9  | TBD
-EXF10 | TBD
-EXF11 | TBD
-EXF12 | TBD
-EXF13 | TBD
-EXF14 | TBD
-EXF15 | TBD
-EXF16 | TBD
-EXF17 | TBD
-EXF18 | TBD
-EXF19 | TBD
-EXF20 | TBD
+EXF3  |
+EXF4  |
+EXF5  |
+EXF6  |
+EXF7  |
+EXF8  |
+EXF9  |
+EXF10 |
+EXF11 |
+EXF12 |
+EXF13 |
+EXF14 |
+EXF15 |
+EXF16 |
+EXF17 |
+EXF18 |
+EXF19 |
+EXF20 |
 
 ## Extract Local Variable 
 Case | Result
 ---- | ------
-EXV1  | TBD
+EXV1  |
 EXV2  | Pass
-EXV3  | TBD
-EXV4  | TBD
-EXV5  | TBD
-EXV6  | TBD
+EXV3  |
+EXV4  |
+EXV5  |
+EXV6  |
 
 ## Move Implementation to Source File
 * CDT: Refactor > Toggle Function
+
 Case | Result
 ---- | ------
 MISF1  | Pass (Creates local namespace {} declaration in .cpp instead of qualified function name)
-MISF2  | TBD
-MISF3  | TBD
-MISF4  | TBD
-MISF5  | TBD
-MISF6  | TBD
-MISF7  | TBD
-MISF8  | TBD
-MISF9  | TBD
-MISF10 | TBD
-MISF11 | TBD
-MISF12 | TBD
-MISF13 | TBD
-MISF14 | TBD
-MISF15 | TBD
-MISF16 | TBD
-MISF17 | TBD
-MISF18 | TBD
-MISF19 | TBD
-MISF20 | TBD
-MISF21 | TBD
-MISF22 | TBD
-MISF23 | TBD
-MISF24 | TBD
-MISF25 | TBD
-MISF26 | TBD
+MISF2  |
+MISF3  |
+MISF4  |
+MISF5  |
+MISF6  |
+MISF7  |
+MISF8  |
+MISF9  |
+MISF10 |
+MISF11 |
+MISF12 |
+MISF13 |
+MISF14 |
+MISF15 |
+MISF16 |
+MISF17 |
+MISF18 |
+MISF19 |
+MISF20 |
+MISF21 |
+MISF22 |
+MISF23 |
+MISF24 |
+MISF25 |
+MISF26 |
 
 ## Move Method
 Case | Result
 ---- | ------
 MM1   | Pass
-MM2   | TBD
-MM3   | TBD
-MM4   | TBD
-MM5   | TBD
-MM6   | TBD
-MM7   | TBD
-MM8   | TBD
-MM9   | TBD
-MM10  | TBD
-MM11  | TBD
-MM12  | TBD
-MM13  | TBD
-MM14  | TBD
-MM15  | TBD
-MM16  | TBD
-MM17  | TBD
-MM18  | TBD
-MM19  | TBD
-MM20  | TBD
-MM21  | TBD
-MM22  | TBD
-MM23  | TBD
-MM24  | TBD
-MM25  | TBD
-MM26  | TBD
-MM27  | TBD
-MM28  | TBD
-MM29  | TBD
-MM30  | TBD
-MM31  | TBD
-MM32  | TBD
-MM33  | TBD
-MM34  | TBD
-MM35  | TBD
-MM36  | TBD
+MM2   |
+MM3   |
+MM4   |
+MM5   |
+MM6   |
+MM7   |
+MM8   |
+MM9   |
+MM10  |
+MM11  |
+MM12  |
+MM13  |
+MM14  |
+MM15  |
+MM16  |
+MM17  |
+MM18  |
+MM19  |
+MM20  |
+MM21  |
+MM22  |
+MM23  |
+MM24  |
+MM25  |
+MM26  |
+MM27  |
+MM28  |
+MM29  |
+MM30  |
+MM31  |
+MM32  |
+MM33  |
+MM34  |
+MM35  |
+MM36  |
 
 ## Optimize Namespace References
 * CDT: Source > Organize Includes
+
 Case | Result
 ---- | ------
 ONR1  | Pass
@@ -312,101 +314,100 @@ ONR1  | Pass
 Case | Result
 ---- | ------
 R1    | Pass
-R2    | Failure (not available) [319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
+R2    | Failure (not available) [Eclipse:319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
 R3    | Pass
 R4    | Pass
 R5    | Pass
 R6    | Pass
 R7    | Pass
 R8    | Pass
-R9    | TBD
-R10   | TBD
-R11   | TBD
-R12   | TBD
-R13   | TBD
-R14   | TBD
-R15   | TBD
-R16   | TBD
-R17   | TBD
-R18   | TBD
-R19   | TBD
-R20   | TBD
-R21   | TBD
-R22   | TBD
-R23   | TBD
-R24   | TBD
-R25   | TBD
-R26   | TBD
-R27   | TBD
-R28   | TBD
-R29   | TBD
-R30   | TBD
+R9    |
+R10   |
+R11   |
+R12   |
+R13   |
+R14   |
+R15   |
+R16   |
+R17   |
+R18   |
+R19   |
+R20   |
+R21   |
+R22   |
+R23   |
+R24   |
+R25   |
+R26   |
+R27   |
+R28   |
+R29   |
+R30   |
 R31   | Pass
-R32   | Failure (not available) [319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
+R32   | Failure (not available) [Eclipse:319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
 R33   | Pass
 R34   | Pass
-R35   | TBD
-R36   | TBD
-R37   | TBD
-R38   | TBD
-R39   | TBD
-R40   | TBD
-R41   | TBD
-R42   | TBD
-R43   | TBD
-R44   | TBD
-R45   | TBD
-R46   | TBD
-R47   | TBD
-R48   | TBD
-R49   | TBD
-R50   | TBD
-R51   | TBD
-R52   | TBD
-R53   | TBD
-R54   | TBD
-R55   | TBD
-R56   | TBD
-R57   | TBD
-R58   | TBD
-R59   | TBD
-R60   | TBD
-R61   | TBD
-R62   | TBD
-R63   | TBD
-R64   | TBD
-R65   | TBD
-R66   | TBD
-R67   | TBD
-R68   | TBD
-R69   | TBD
-R70   | TBD
-R71   | TBD
-R72   | TBD
-R73   | TBD
-R74   | TBD
-R75   | TBD
-R76   | TBD
-R77   | TBD
-R78   | TBD
-R79   | TBD
-R80   | TBD
-R81   | TBD
-R82   | TBD
-R83   | TBD
-R84   | TBD
-R85   | TBD
-R86   | TBD
-R87   | TBD
-R88   | TBD
-R89   | TBD
-R90   | TBD
-R91   | TBD
-R92   | TBD
-R93   | TBD
-R94   | TBD
-R95   | TBD
-R96   | TBD
-R97   | TBD
-R98   | TBD
-
+R35   |
+R36   |
+R37   |
+R38   |
+R39   |
+R40   |
+R41   |
+R42   |
+R43   |
+R44   |
+R45   |
+R46   |
+R47   |
+R48   |
+R49   |
+R50   |
+R51   |
+R52   |
+R53   |
+R54   |
+R55   |
+R56   |
+R57   |
+R58   |
+R59   |
+R60   |
+R61   |
+R62   |
+R63   |
+R64   |
+R65   |
+R66   |
+R67   |
+R68   |
+R69   |
+R70   |
+R71   |
+R72   |
+R73   |
+R74   |
+R75   |
+R76   |
+R77   |
+R78   |
+R79   |
+R80   |
+R81   |
+R82   |
+R83   |
+R84   |
+R85   |
+R86   |
+R87   |
+R88   |
+R89   |
+R90   |
+R91   |
+R92   |
+R93   |
+R94   |
+R95   |
+R96   |
+R97   |
+R98   |
