@@ -37,10 +37,10 @@ The original release of the test suite is described
 
 - [Apple Xcode](results/AppleXcodeResults.md)
 - [Eclipse CDT](results/EclipseCDTResults.md)
-- [QtCreator](results/QtCreatorResults.md)
+- [Qt Creator](results/QtCreatorResults.md)
 
 ## Unknown Results
 
-- [Cevelop](https://www.cevelop.com/)
+- [Cevelop](https://www.cevelop.com/) - Extensions for Eclipse CDT
 - [Code::Blocks](http://www.codeblocks.org/)
-
+- [KDevelop](https://www.kdevelop.org/) - [Refactoring](https://community.kde.org/KDevelop/RefactoringTools)
