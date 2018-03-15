@@ -58,7 +58,7 @@ public:
     {
     }
 
-    // #TEST#: C017 Create overload for inline const method
+    // #TEST#: CO17 Create overload for inline const method
     void inline3(const std::string &text, int arg1) const
     {
     }

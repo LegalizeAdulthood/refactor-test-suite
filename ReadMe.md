@@ -29,13 +29,18 @@ The original release of the test suite is described
 
 - [CLion CL-140-1221.2](results/CLionResults.md)
 - [clang-tidy 6.0.0](results/ClangTidyResults.md)
-- [Eclipse CDT](results/EclipseCDTResults.md)
 - [ReSharper for C++ 2017.3.2](results/ReSharperCppResults.md)
 - [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
 - [Visual Studio 2017](results/VisualStudio2017Results.md)
 
+## Work in Progress
+
+- [Apple Xcode](results/AppleXcodeResults.md)
+- [Eclipse CDT](results/EclipseCDTResults.md)
+- [Qt Creator](results/QtCreatorResults.md)
+
 ## Unknown Results
 
-- [Cevelop](https://www.cevelop.com/)
+- [Cevelop](https://www.cevelop.com/) - Extensions for Eclipse CDT
 - [Code::Blocks](http://www.codeblocks.org/)
-- [QtCreator](http://www.qt.io/ide/)
+- [KDevelop](https://www.kdevelop.org/) - [Refactoring](https://community.kde.org/KDevelop/RefactoringTools)
