@@ -412,9 +412,9 @@ template <>
 class F4<int>
 {
 public:
-    // #TEST#: F529 Rename type
+    // #TEST#: R529 Rename type
     using type = unsigned int;
-    // #TEST#: F530 Rename x
+    // #TEST#: R530 Rename x
     unsigned int x = 4;
 };
 
@@ -465,9 +465,9 @@ template <>
 class F5<int>
 {
 public:
-    // #TEST#: F550 Rename type
+    // #TEST#: R550 Rename type
     using type = unsigned int;
-    // #TEST#: F551 Rename x
+    // #TEST#: R551 Rename x
     unsigned int x = 4;
 };
 
