@@ -5,9 +5,10 @@ Home: [ReSharper for C++](http://www.jetbrains.com/resharper-cpp/)
 Version: 2017.3.2
 
 Notes:
-* **Add Block Delimiter** is available as a quick fix.  The tests pass if only code is selected and not the surrounding comment lines.
+* **Add Block Delimiter** is available as the quick fix *Surround with block*.  The tests pass if only code is selected and not the surrounding comment lines.
 * **Add Override** is available as the quick fix *Add 'override' specifier to an overriding function*.
 * **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
+* **Create Method Stub** is available as the quick fix *Create member function* (or *Create global function*) followed by the quick fix *Generate inline implementation of function*
 * **Create Multi-Variable Declaration** is available as the quick fix *Join declarations*.
 * **Flatten Conditional** is available as the quick fix *Merge nested 'if' statements*.
 * **Inline Macro** is available as the quick fix *Substitute macro call*.
@@ -85,6 +86,32 @@ CS8  | Pass
 CS9  | Pass
 CS10 | Pass
 CS11 | Pass
+
+## Create Method Stub
+Case | Result
+---- | ------
+CMS1  | Pass
+CMS2  | Pass
+CMS3  | Pass
+CMS4  | Failure (not available) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
+CMS5  | Failure (not available) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
+CMS6  | Pass
+CMS7  | Pass
+CMS8  | Failure (not available) [RSCPP-21495](https://youtrack.jetbrains.com/issue/RSCPP-21495)
+CMS9  | Failure (not available) [RSCPP-21495](https://youtrack.jetbrains.com/issue/RSCPP-21495)
+CMS10 | Failure (not available) [RSCPP-21495](https://youtrack.jetbrains.com/issue/RSCPP-21495)
+CMS11 | Failure (not available) [RSCPP-21495](https://youtrack.jetbrains.com/issue/RSCPP-21495)
+CMS12 | Pass
+CMS13 | Pass
+CMS14 | Pass
+CMS15 | Pass
+CMS16 | Pass
+CMS17 | Pass
+CMS18 | Pass
+CMS19 | Pass
+CMS20 | Pass
+CMS21 | Pass
+CMS22 | Pass
 
 ## Create Multi-Variable Declaration
 Case | Result
