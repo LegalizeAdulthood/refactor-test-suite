@@ -5,6 +5,7 @@
 
 namespace InlineResultNamespace
 {
+
 struct Foo
 {
     Foo(int x = 0, float f = 0.0f, double d = 0.0) 
