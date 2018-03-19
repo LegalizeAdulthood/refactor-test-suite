@@ -1,0 +1,23 @@
+diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
+index 40c87d9..44181a1 100644
+--- a/RefactorTest/CreateMethodStub.cpp
++++ b/RefactorTest/CreateMethodStub.cpp
+@@ -114,6 +114,9 @@ struct Foo5
+         // #TEST#: CMS17 Create stub for method Operation2
+         //Operation2();
+     }
++    void Operation2()
++    {
++    }
+ };
+ 
+ void TestFoo45()
+@@ -141,7 +144,7 @@ void TestFoo45()
+         Foo5 foo5;
+         foo5.Operation();
+         // #TEST#: CMS21 Create stub for method void Foo5::Operation2()
+-        //foo5.Operation2();
++        foo5.Operation2();
+     }
+ }
+ 

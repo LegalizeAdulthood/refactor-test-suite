@@ -1,0 +1,23 @@
+diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
+index 40c87d9..90106ec 100644
+--- a/RefactorTest/CreateMethodStub.cpp
++++ b/RefactorTest/CreateMethodStub.cpp
+@@ -145,6 +145,9 @@ void TestFoo45()
+     }
+ }
+ 
++void TestInsideNamespace()
++{
++}
+ } // namespace CreateMethodStubNamespace
+ 
+ void TestCreateMethodStub()
+@@ -177,7 +180,7 @@ void TestCreateMethodStub()
+     //x.Operation2(0.0f);
+ 
+     // #TEST#: CMS13 Create function stub in namespace
+-    //CreateMethodStubNamespace::TestInsideNamespace();
++    CreateMethodStubNamespace::TestInsideNamespace();
+ 
+     CreateMethodStubNamespace::TestFoo45();
+ }

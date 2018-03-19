@@ -1,0 +1,23 @@
+diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
+index 40c87d9..b43cb0e 100644
+--- a/RefactorTest/CreateMethodStub.cpp
++++ b/RefactorTest/CreateMethodStub.cpp
+@@ -48,6 +48,9 @@ class Foo2
+ {
+ public:
+     Foo2();
++    void Operation()
++    {
++    }
+ 
+ private:
+     void bar(const std::string &arg)
+@@ -86,7 +89,7 @@ public:
+     {
+         Foo2 *f = new Foo2();
+         // #TEST#: CMS14 Create stub for method Operation
+-        //f->Operation();
++        f->Operation();
+         delete f;
+         return 1;
+     }
