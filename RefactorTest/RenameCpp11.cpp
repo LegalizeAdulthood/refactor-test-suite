@@ -10,7 +10,6 @@
 
 namespace
 {
-
 // #TEST#: R104 Rename flag used in static_assert
 constexpr bool flag = true;
 // #TEST#: R105 Rename flag used in static_assert
@@ -140,7 +139,7 @@ void f7()
 
 void f8()
 {
-   // #TEST#: R132 Rename X
+    // #TEST#: R132 Rename X
     struct X
     {
         // #TEST#: R133 Rename X via deleted c'tor
@@ -166,7 +165,7 @@ void f8()
     };
     // #TEST#: R143 Rename X
     X *x = nullptr;
- }
+}
 
 void f9()
 {
@@ -993,7 +992,6 @@ void f35()
 
 inline namespace Inline36
 {
-
 // #TEST#: R402 Rename x36
 int x36 = 10;
 // #TEST#: R403 Rename d36
@@ -1004,7 +1002,7 @@ std::string s36()
     return "hello world!";
 }
 
-}
+}    // namespace Inline36
 
 void f36()
 {
@@ -1226,17 +1224,16 @@ void f45()
     REQUIRE_EQUAL(std::string{"meh"}, x2.s);
 }
 
-}
+}    // namespace
 
 namespace RenameCpp11
 {
-
 // #TEST#: R374 Rename Extern
 template struct Extern<int>;
 // #TEST#: R375 Rename Extern
 template struct Extern<std::string>;
 
-}
+}    // namespace RenameCpp11
 
 void TestRenameCpp11()
 {

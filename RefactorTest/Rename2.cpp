@@ -2,7 +2,6 @@
 
 namespace
 {
-
 // distinct from class Rename1 in Rename.cpp
 class Rename1
 {
@@ -26,7 +25,7 @@ private:
     int _x;
 };
 
-} // namespace
+}    // namespace
 
 void TestRename1()
 {

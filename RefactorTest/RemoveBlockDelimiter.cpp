@@ -4,7 +4,6 @@
 
 namespace
 {
-
 int RemoveBlockDelimiters(bool flag)
 {
     int x = 0;
@@ -52,7 +51,7 @@ int RemoveBlockDelimiters(bool flag)
     return x;
 }
 
-}
+}    // namespace
 
 void TestRemoveBlockDelimiter()
 {

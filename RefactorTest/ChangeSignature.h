@@ -5,7 +5,6 @@
 
 namespace ChangeSignatureNamespace
 {
-
 // #TEST#: CS1 Rename first parameter to operand1
 // #TEST#: CS2 Rename second parameter to operand2
 // #TEST#: CS3 Rename function to Primitive
@@ -44,4 +43,4 @@ private:
     int member1;
 };
 
-}
+}    // namespace ChangeSignatureNamespace

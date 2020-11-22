@@ -7,7 +7,6 @@
 
 namespace ExtractVariableNamespace
 {
-
 class Foo
 {
 public:
@@ -70,7 +69,7 @@ void Function1()
     foo = bar + " meta?";
 }
 
-}
+}    // namespace ExtractVariableNamespace
 
 using namespace ExtractVariableNamespace;
 

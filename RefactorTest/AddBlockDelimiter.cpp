@@ -4,7 +4,6 @@
 
 namespace
 {
-
 int AddBlockDelimiters(bool flag)
 {
     int x = 0;
@@ -32,7 +31,7 @@ int AddBlockDelimiters(bool flag)
     return x;
 }
 
-}
+}    // namespace
 
 void TestAddBlockDelimiter()
 {

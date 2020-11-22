@@ -8,7 +8,6 @@
 
 namespace ExtractParameterNamespace
 {
-
 class ExtractParameterClass
 {
 public:
@@ -57,7 +56,7 @@ void Test()
     TestMemberPointer();
 }
 
-}
+}    // namespace ExtractParameterNamespace
 
 void TestExtractParameter()
 {

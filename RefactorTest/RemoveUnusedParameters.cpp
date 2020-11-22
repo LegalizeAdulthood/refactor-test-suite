@@ -3,7 +3,6 @@
 
 namespace RemoveUnusedParametersNamespace
 {
-
 // #TEST#: RUP1 Remove Unused Parameter (should not be available)
 int TestFunction(int (*fn)(int), int i)
 {
@@ -45,7 +44,7 @@ int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
     return j;
 }
 
-} // namespace RemoveUnusedParametersNamespace
+}    // namespace RemoveUnusedParametersNamespace
 
 using namespace RemoveUnusedParametersNamespace;
 
@@ -59,13 +58,12 @@ extern int goop(int a, int b)
 
 namespace
 {
-
 int plus1(int i)
 {
     return i + 1;
 }
 
-} // namespace
+}    // namespace
 
 void TestRemoveUnusedParameter()
 {

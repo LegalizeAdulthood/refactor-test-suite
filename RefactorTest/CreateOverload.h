@@ -4,7 +4,6 @@
 
 namespace CreateOverloadNamespace
 {
-
 class CreateOverloadAbstract
 {
 public:
@@ -209,4 +208,4 @@ union CreateOverloadUnion
     }
 };
 
-}
+}    // namespace CreateOverloadNamespace

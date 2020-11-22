@@ -49,7 +49,6 @@ void MoveMethod2::SetInt(int arg)
 
 namespace MoveMethodNamespace
 {
-
 // #TEST#: MM23 Move method to header
 MoveMethodAbstract::MoveMethodAbstract()
 {
@@ -201,7 +200,7 @@ static void Test()
     TestMoveMethodExplicit2();
 }
 
-}
+}    // namespace MoveMethodNamespace
 
 void TestMoveMethod()
 {

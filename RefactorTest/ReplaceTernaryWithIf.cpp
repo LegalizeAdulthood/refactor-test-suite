@@ -4,7 +4,6 @@
 
 namespace ReplaceTernaryWithIf
 {
-
 int GetValue()
 {
     static int x = 9;
@@ -90,7 +89,7 @@ void TestMemberPointer()
     REQUIRE_EQUAL(1, (f.*mem3)());
 }
 
-}
+}    // namespace ReplaceTernaryWithIf
 
 using namespace ReplaceTernaryWithIf;
 

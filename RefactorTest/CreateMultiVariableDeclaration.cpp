@@ -4,7 +4,6 @@
 
 namespace CreateMultiVariableDeclarationNamespace
 {
-
 void Function1()
 {
 }
@@ -51,7 +50,7 @@ union Jumble
     float _f;
 };
 
-}
+}    // namespace CreateMultiVariableDeclarationNamespace
 
 using namespace CreateMultiVariableDeclarationNamespace;
 

@@ -232,7 +232,6 @@ public:
 
 namespace AddParameterNamespace
 {
-
 class Outer
 {
 public:
@@ -260,4 +259,4 @@ public:
     };
 };
 
-}
+}    // namespace AddParameterNamespace

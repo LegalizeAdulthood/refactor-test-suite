@@ -52,7 +52,6 @@ public:
 // #TEST#: R4 Rename this namespace
 namespace X
 {
-
 // #TEST#: R5 rename this variable
 int x = 0;
 // #TEST#: R6 rename this variable
@@ -82,12 +81,11 @@ private:
     int _y;
 };
 
-}
+}    // namespace X
 
 // #TEST#: R9 rename this namespace
 namespace Y
 {
-
 // #TEST#: R10 rename this variable
 int x = 0;
 
@@ -104,7 +102,7 @@ public:
     }
 };
 
-}
+}    // namespace Y
 
 union U
 {
@@ -208,7 +206,7 @@ void TestDerived()
     d.Operation();
 }
 
-}
+}    // namespace RenameNamespace
 
 // #TEST#: R74 Rename macro MACRO1
 #define MACRO1 -20
@@ -239,7 +237,6 @@ using namespace RenameNamespace;
 
 namespace
 {
-
 // #TEST#: R416 Rename T
 template <typename T>
 // #TEST#: R417 Rename T return type
@@ -273,15 +270,14 @@ namespace F2Outer
 // #TEST#: R476 Rename namespace F2Inner
 namespace F2Inner
 {
-
 // #TEST#: R477 Rename function f2_aux
 int f2_aux()
 {
     return 1;
 }
 
-} // namespace F2Inner
-} // namespace F2Outer
+}    // namespace F2Inner
+}    // namespace F2Outer
 
 void f2_aux2()
 {
@@ -582,7 +578,7 @@ void f7()
     require_equal(7, q);
 }
 
-}
+}    // namespace
 
 void TestRename()
 {

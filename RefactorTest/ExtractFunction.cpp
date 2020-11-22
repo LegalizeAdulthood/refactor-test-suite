@@ -6,7 +6,6 @@ extern void TestExtractFunctionCFile();
 
 namespace ExtractFunction
 {
-
 int TestInteger()
 {
     // #TEST#: EXF1 Extract function on statement
@@ -166,7 +165,7 @@ struct Bar
     }
 };
 
-}
+}    // namespace ExtractFunction
 
 using namespace ExtractFunction;
 

@@ -4,7 +4,6 @@
 
 namespace
 {
-
 // #TEST#: RAW1
 std::string const backslash{"goink\\frob"};
 
@@ -35,7 +34,7 @@ std::string const contains_sentinel{"whoops)\""};
 // #TEST#: RAW10
 std::string const contains_delim{"whoops)\")delim\""};
 
-}
+}    // namespace
 
 void TestReplaceStringLiteralWithRawStringLiteral()
 {

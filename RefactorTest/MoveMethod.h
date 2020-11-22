@@ -104,7 +104,6 @@ private:
 
 namespace MoveMethodNamespace
 {
-
 class MoveMethodAbstractInline
 {
 public:
@@ -189,4 +188,4 @@ public:
     }
 };
 
-}
+}    // namespace MoveMethodNamespace

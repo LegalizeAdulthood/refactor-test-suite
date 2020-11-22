@@ -5,10 +5,18 @@
 
 namespace ExtractMethodNamespace
 {
-
-int Function1() { return 1; }
-int Function1(int x) { return x; }
-int Function2() { return 2; }
+int Function1()
+{
+    return 1;
+}
+int Function1(int x)
+{
+    return x;
+}
+int Function2()
+{
+    return 2;
+}
 
 struct Bar
 {
@@ -340,7 +348,7 @@ private:
     }
 };
 
-}
+}    // namespace ExtractMethodNamespace
 
 using namespace ExtractMethodNamespace;
 

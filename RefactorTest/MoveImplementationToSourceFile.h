@@ -3,7 +3,6 @@
 
 namespace MoveImplementationToSourceFile
 {
-
 // #TEST#: MISF1 Move implementation to source file
 inline int f()
 {
@@ -156,8 +155,8 @@ public:
     }
 };
 
-}
+}    // namespace Nested
 
-}
+}    // namespace MoveImplementationToSourceFile
 
 extern void TestMoveImplementationToSourceFile();

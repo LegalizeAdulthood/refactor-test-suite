@@ -3,7 +3,6 @@
 // Makes method static and replaces all references accordingly.
 namespace MakeMethodStaticNamespace
 {
-
 class Foo
 {
 public:
@@ -35,7 +34,7 @@ private:
 
 int Foo::_a = 0;
 
-}
+}    // namespace MakeMethodStaticNamespace
 
 using namespace MakeMethodStaticNamespace;
 

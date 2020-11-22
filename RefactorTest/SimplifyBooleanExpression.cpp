@@ -2,14 +2,13 @@
 
 namespace
 {
-
 int getSomething()
 {
     static int i = 2;
     return ++i;
 }
 
-}
+}    // namespace
 
 // Where possible, simplifies the Boolean expression.
 //      expr == true => expr

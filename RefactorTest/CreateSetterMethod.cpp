@@ -5,7 +5,6 @@
 
 namespace CreateSetterMethodNamespace
 {
-
 static std::string Foo = "foo";
 static const std::string Bar("bar");
 
@@ -153,7 +152,7 @@ void TestCreateSetterMethodTemplateStruct()
 #endif
 }
 
-}
+}    // namespace CreateSetterMethodNamespace
 
 using namespace CreateSetterMethodNamespace;
 

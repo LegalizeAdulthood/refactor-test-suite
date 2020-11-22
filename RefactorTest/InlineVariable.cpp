@@ -139,7 +139,7 @@ void TestReference()
     require_equal(true, globalBool);
 }
 
-}
+}    // namespace InlineVariableNamespace
 
 using namespace InlineVariableNamespace;
 

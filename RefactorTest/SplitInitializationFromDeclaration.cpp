@@ -56,7 +56,7 @@ void Test()
     Bar b3 = { 1, 2 };
 }
 
-}
+}    // namespace SplitInitializationFromDeclarationNamespace
 
 void TestSplitInitializationFromDeclaration()
 {

@@ -1,12 +1,11 @@
-#include <vector>
 #include "Require.h"
+#include <vector>
 
 // Splits a single-statement multi-variable declarations into multiple lines,
 // with a separate variable declaration on each line.
 
 namespace SplitMultiVariableDeclarationNamespace
 {
-
 void Function1()
 {
 }
@@ -53,7 +52,7 @@ union Jumble
     float _f;
 };
 
-}
+}    // namespace SplitMultiVariableDeclarationNamespace
 
 using namespace SplitMultiVariableDeclarationNamespace;
 

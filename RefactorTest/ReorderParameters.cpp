@@ -108,7 +108,7 @@ int TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
     return (f.*member)(j);
 }
 
-}
+}    // namespace ReorderParametersNamespace
 
 // #TEST#: RP7 Reorder parameters make return value ref parameter
 static int Function3(int x)

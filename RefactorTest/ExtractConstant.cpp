@@ -5,8 +5,10 @@
 
 namespace ExtractConstantNamespace
 {
+void Function1()
+{
+}
 
-void Function1() {}
 class Foo
 {
 public:
@@ -65,7 +67,7 @@ union Union
 
 int x;
 
-}
+}    // namespace ExtractConstantNamespace
 
 using namespace ExtractConstantNamespace;
 

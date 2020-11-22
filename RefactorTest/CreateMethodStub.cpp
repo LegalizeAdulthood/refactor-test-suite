@@ -143,7 +143,7 @@ void TestFoo45()
         //foo5.Operation2();
     }
 }
-} // namespace CreateMethodStubNamespace
+}    // namespace CreateMethodStubNamespace
 
 void TestCreateMethodStub()
 {

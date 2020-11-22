@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 
+// clang-format off
 #define MACRO1 -20
 #define MACRO2 "This is a test." \
     "  This is more of a test!"
@@ -22,10 +23,10 @@
             x_ += 4;    \
         }               \
     } while (0)
+// clang-format on
 
 namespace
 {
-
 template <typename T>
 void f1_aux(std::ostream &stream, T value)
 {
@@ -51,7 +52,7 @@ void f1()
 
 #undef F1_AUX
 
-}
+}    // namespace
 
 void TestInlineMacro()
 {

@@ -5,7 +5,6 @@
 
 namespace CreateSetterMethodNamespace
 {
-
 template <typename T>
 class CreateSetterMethodTemplate
 {
@@ -171,4 +170,4 @@ struct CreateSetterMethodStructAnonymous
     };
 };
 
-}
+}    // namespace CreateSetterMethodNamespace

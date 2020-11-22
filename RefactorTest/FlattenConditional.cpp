@@ -10,7 +10,6 @@
 
 namespace FlattenConditionNamespace
 {
-
 int TestGuardClause(int *x, int y, int z)
 {
     // #TEST#: FC1 Flatten Conditional
@@ -43,7 +42,7 @@ void TestReverseRedundantConditional()
 {
 }
 
-}
+}    // namespace FlattenConditionNamespace
 
 using namespace FlattenConditionNamespace;
 

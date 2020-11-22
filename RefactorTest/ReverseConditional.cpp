@@ -4,7 +4,6 @@
 
 namespace ReverseConditionalNamespace
 {
-
 int GetSomething()
 {
     static int i = 0;
@@ -100,7 +99,7 @@ int Test5(int i)
     }
 }
 
-}
+}    // namespace ReverseConditionalNamespace
 
 void TestReverseConditional()
 {
