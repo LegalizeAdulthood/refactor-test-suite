@@ -14,7 +14,6 @@
 
 namespace CreateMethodStubNamespace
 {
-
 class Foo
 {
 public:
@@ -144,7 +143,6 @@ void TestFoo45()
         //foo5.Operation2();
     }
 }
-
 } // namespace CreateMethodStubNamespace
 
 void TestCreateMethodStub()
