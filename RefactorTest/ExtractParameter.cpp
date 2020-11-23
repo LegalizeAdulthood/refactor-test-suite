@@ -1,4 +1,5 @@
 #include "Require.h"
+
 #include <iostream>
 
 // Removes all references to the field or a local declaration from the
@@ -20,7 +21,6 @@ void ExtractParameterClass::Blah(std::ostream &str)
     int g = 5;
     str << g << '\n';
 }
-
 
 class Foo
 {
@@ -58,7 +58,4 @@ void Test()
 
 }    // namespace ExtractParameterNamespace
 
-void TestExtractParameter()
-{
-    ExtractParameterNamespace::Test();
-}
+void TestExtractParameter() { ExtractParameterNamespace::Test(); }

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <stdexcept>
 #include <sstream>
+#include <stdexcept>
 
 template <typename T>
 void require_equal(T expected, T actual)
@@ -25,5 +25,4 @@ void require_equal(char const *file, unsigned line, T expected, T actual)
     }
 }
 
-#define REQUIRE_EQUAL(expected_, actual_) \
-    require_equal(__FILE__, __LINE__, expected_, actual_)
+#define REQUIRE_EQUAL(expected_, actual_) require_equal(__FILE__, __LINE__, expected_, actual_)

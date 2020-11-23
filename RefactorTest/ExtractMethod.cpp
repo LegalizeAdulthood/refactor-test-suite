@@ -5,18 +5,9 @@
 
 namespace ExtractMethodNamespace
 {
-int Function1()
-{
-    return 1;
-}
-int Function1(int x)
-{
-    return x;
-}
-int Function2()
-{
-    return 2;
-}
+int Function1() { return 1; }
+int Function1(int x) { return x; }
+int Function2() { return 2; }
 
 struct Bar
 {
@@ -34,9 +25,9 @@ struct Bar
     {
         // #TEST#: EM19 Extract Method on next line
         int x = Function1(_x) + Function2();
-        int y = x*2;
+        int y = x * 2;
         require_equal(_x + 2, x);
-        require_equal((_x + 2)*2, y);
+        require_equal((_x + 2) * 2, y);
     }
 
     int (*Method2(int x))()
@@ -54,10 +45,10 @@ struct Bar
         return result;
     }
 
-    void Operation1(int x) { }
-    void Operation2(int x) { }
-    void Const1(int x) const { }
-    void Const2(int x) const { }
+    void Operation1(int x) {}
+    void Operation2(int x) {}
+    void Const1(int x) const {}
+    void Const2(int x) const {}
 
     void (Bar::*Method3(int x))(int)
     {
@@ -126,9 +117,7 @@ struct Bar
 class Foo
 {
 public:
-    Foo()
-    {
-    }
+    Foo() {}
 
     void Method1()
     {
@@ -152,10 +141,10 @@ public:
         return result;
     }
 
-    void Operation1(int x) { }
-    void Operation2(int x) { }
-    void Const1(int x) const { }
-    void Const2(int x) const { }
+    void Operation1(int x) {}
+    void Operation2(int x) {}
+    void Const1(int x) const {}
+    void Const2(int x) const {}
 
     void (Foo::*member)(int);
 
@@ -259,10 +248,10 @@ union Frob
         return fn;
     }
 
-    void Operation1(int x) { }
-    void Operation2(int x) { }
-    void Const1(int x) const { }
-    void Const2(int x) const { }
+    void Operation1(int x) {}
+    void Operation2(int x) {}
+    void Const1(int x) const {}
+    void Const2(int x) const {}
 
     void (Frob::*member)(int);
     void (Frob::*Method3(int x))(int)
@@ -330,10 +319,7 @@ union Frob
 class Operator
 {
 public:
-    operator int()
-    {
-        return Internal();
-    }
+    operator int() { return Internal(); }
 
     operator float()
     {
@@ -342,10 +328,7 @@ public:
     }
 
 private:
-    int Internal()
-    {
-        return -1;
-    }
+    int Internal() { return -1; }
 };
 
 }    // namespace ExtractMethodNamespace

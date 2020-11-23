@@ -8,10 +8,7 @@ namespace InlineResultNamespace
 
 struct Foo
 {
-    Foo(int x = 0, float f = 0.0f, double d = 0.0) 
-        : _x(x), _f(f), _d(d)
-    {
-    }
+    Foo(int x = 0, float f = 0.0f, double d = 0.0) : _x(x), _f(f), _d(d) {}
 
     int _x;
     float _f;
@@ -21,14 +18,8 @@ struct Foo
 class Bar
 {
 public:
-    int Operation1()
-    {
-        return 0;
-    }
-    int Operation2()
-    {
-        return 1;
-    }
+    int Operation1() { return 0; }
+    int Operation2() { return 1; }
 };
 
 int Result1(bool flag, int x)
@@ -76,8 +67,7 @@ Foo Result3(bool flag, int x, float f)
     return result;
 }
 
-std::vector<int>::size_type Result4(bool flag,
-    std::vector<int>::size_type x, std::vector<int> &vec)
+std::vector<int>::size_type Result4(bool flag, std::vector<int>::size_type x, std::vector<int> &vec)
 {
     // #TEST#: IR4 Inline result
     std::vector<int>::size_type result = 0;
@@ -111,7 +101,7 @@ int (Bar::*Result5(bool flag))()
     return result;
 }
 
-}
+}    // namespace InlineResultNamespace
 
 using namespace InlineResultNamespace;
 

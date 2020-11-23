@@ -4,40 +4,22 @@
 
 namespace CreateMultiVariableDeclarationNamespace
 {
-void Function1()
-{
-}
+void Function1() {}
 
-void Function2()
-{
-}
+void Function2() {}
 
 class Foo
 {
 public:
-    Foo()
-    {
-    }
+    Foo() {}
 
-    int Operation1()
-    {
-        return 0;
-    }
+    int Operation1() { return 0; }
 
-    int Operation2()
-    {
-        return 1;
-    }
+    int Operation2() { return 1; }
 
-    int Const1() const
-    {
-        return 1;
-    }
+    int Const1() const { return 1; }
 
-    int Const2() const
-    {
-        return 2;
-    }
+    int Const2() const { return 2; }
 };
 
 struct Bar

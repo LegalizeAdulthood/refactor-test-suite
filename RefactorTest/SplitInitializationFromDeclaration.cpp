@@ -3,13 +3,12 @@
 
 namespace SplitInitializationFromDeclarationNamespace
 {
-
 void Function1() {}
 class Foo
 {
 public:
-    int Operation1()    { return 1; }
-    int Const1() const  { return 1; }
+    int Operation1() { return 1; }
+    int Const1() const { return 1; }
 };
 
 struct Bar
@@ -50,15 +49,12 @@ void Test()
     int const const1 = 4;
 
     // #TEST#: SID10 Split initialization from declaration (should not be available)
-    int array[] = { 1, 2, 3 };
+    int array[] = {1, 2, 3};
 
     // #TEST#: SID11 Split initialization from declaration
-    Bar b3 = { 1, 2 };
+    Bar b3 = {1, 2};
 }
 
 }    // namespace SplitInitializationFromDeclarationNamespace
 
-void TestSplitInitializationFromDeclaration()
-{
-    SplitInitializationFromDeclarationNamespace::Test();
-}
+void TestSplitInitializationFromDeclaration() { SplitInitializationFromDeclarationNamespace::Test(); }

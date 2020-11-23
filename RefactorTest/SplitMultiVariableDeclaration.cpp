@@ -1,4 +1,5 @@
 #include "Require.h"
+
 #include <vector>
 
 // Splits a single-statement multi-variable declarations into multiple lines,
@@ -6,40 +7,22 @@
 
 namespace SplitMultiVariableDeclarationNamespace
 {
-void Function1()
-{
-}
+void Function1() {}
 
-void Function2()
-{
-}
+void Function2() {}
 
 class Foo
 {
 public:
-    Foo()
-    {
-    }
+    Foo() {}
 
-    int Operation1()
-    {
-        return 0;
-    }
+    int Operation1() { return 0; }
 
-    int Operation2()
-    {
-        return 1;
-    }
+    int Operation2() { return 1; }
 
-    int Const1() const
-    {
-        return 1;
-    }
+    int Const1() const { return 1; }
 
-    int Const2() const
-    {
-        return 2;
-    }
+    int Const2() const { return 2; }
 };
 
 struct Bar
@@ -126,7 +109,7 @@ void TestSplitMultiVariableDeclaration()
     a3[0] = 0;
 
     // #TEST#: SMVD15 Split multi-variable declaration
-    char c1[MAX_CHARS+1], c2[MAX_CHARS+1];
+    char c1[MAX_CHARS + 1], c2[MAX_CHARS + 1];
     c1[0] = 0;
     c2[0] = 0;
 

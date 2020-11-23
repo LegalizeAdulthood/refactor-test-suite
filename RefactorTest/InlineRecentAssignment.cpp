@@ -2,7 +2,6 @@
 
 namespace InlineRecentAssignment
 {
-
 int Function1() { return 1; }
 int Function2() { return 2; }
 
@@ -29,8 +28,6 @@ void TestMemberPointer()
     int j = (f.*ptr)();
 }
 
-}
+}    // namespace InlineRecentAssignment
 
-void TestInlineRecentAssignment()
-{
-}
+void TestInlineRecentAssignment() {}

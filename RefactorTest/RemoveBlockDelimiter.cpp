@@ -28,14 +28,12 @@ int RemoveBlockDelimiters(bool flag)
                         {
                             ++x;
                         }
-                    }
-                    while (x < 5);
+                    } while (x < 5);
                 }
                 x += 10;
             }
         }
-    }
-    while (++x < 20);
+    } while (++x < 20);
 
     try
     // #TEST#: RBD7 Remove delimiters (should not be available)
@@ -53,7 +51,4 @@ int RemoveBlockDelimiters(bool flag)
 
 }    // namespace
 
-void TestRemoveBlockDelimiter()
-{
-    RemoveBlockDelimiters(false);
-}
+void TestRemoveBlockDelimiter() { RemoveBlockDelimiters(false); }

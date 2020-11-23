@@ -101,7 +101,7 @@ static void TestAssignment()
     assert(!i);
 }
 
-static void TestMemberPointers() 
+static void TestMemberPointers()
 {
     class Foo
     {
@@ -109,12 +109,12 @@ static void TestMemberPointers()
         int Method0() { return 0; }
     };
     // #TEST#: RZNP27 Replace NULL with nullptr
-    int (Foo::* member)() = NULL;
+    int (Foo::*member)() = NULL;
     assert(!member);
 
     // #TEST#: RZNP28 Replace 0 with nullptr
     member = 0;
-    assert(!member);    
+    assert(!member);
 }
 
 void TestReplaceNullZeroWithNullPtr()

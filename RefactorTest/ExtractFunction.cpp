@@ -81,7 +81,7 @@ class Foo
 {
 public:
     int Operation1(int x) { return x; }
-    int Operation2(int x) { return x*2; }
+    int Operation2(int x) { return x * 2; }
 
     int Method1() const { return 1; }
     int Method2() const { return 2; }
@@ -161,7 +161,7 @@ struct Bar
     {
         // #TEST#: EXF18 Extract Function on next line
         int x = Function1() + Function2();
-        int y = x*2;
+        int y = x * 2;
     }
 };
 

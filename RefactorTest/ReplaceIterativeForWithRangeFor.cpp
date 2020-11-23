@@ -2,7 +2,7 @@
 
 #include <vector>
 
-static int fileDataImplicitSize[] = { 1, 0 };
+static int fileDataImplicitSize[] = {1, 0};
 
 static void TestFileArrayImplicitSize()
 {
@@ -39,7 +39,7 @@ static void TestFileArrayImplicitSize()
     require_equal(3, sum);
 
     // #TEST#: RIRF4 Replace iterative for with range for
-    for (int i = 0; i < sizeof(fileDataImplicitSize)/sizeof(fileDataImplicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(fileDataImplicitSize) / sizeof(fileDataImplicitSize[0]); ++i)
     {
         --fileDataImplicitSize[i];
     }
@@ -47,7 +47,7 @@ static void TestFileArrayImplicitSize()
     require_equal(0, fileDataImplicitSize[1]);
 
     // #TEST#: RIRF5 Replace iterative for with range for
-    for (int i = 0; i <= sizeof(fileDataImplicitSize)/sizeof(fileDataImplicitSize[0])-1; ++i)
+    for (int i = 0; i <= sizeof(fileDataImplicitSize) / sizeof(fileDataImplicitSize[0]) - 1; ++i)
     {
         ++fileDataImplicitSize[i];
     }
@@ -55,7 +55,7 @@ static void TestFileArrayImplicitSize()
     require_equal(1, fileDataImplicitSize[1]);
 
     // #TEST#: RIRF6 Replace iterative for with range for
-    for (int i = sizeof(fileDataImplicitSize)/sizeof(fileDataImplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(fileDataImplicitSize) / sizeof(fileDataImplicitSize[0]) - 1; i >= 0; --i)
     {
         --fileDataImplicitSize[i];
     }
@@ -63,7 +63,7 @@ static void TestFileArrayImplicitSize()
     require_equal(0, fileDataImplicitSize[1]);
 }
 
-static int const constantFileDataImplicitSize[] = { 'f', 'o', 'o' };
+static int const constantFileDataImplicitSize[] = {'f', 'o', 'o'};
 
 void TestConstantFileArrayImplicitSize()
 {
@@ -93,7 +93,7 @@ void TestConstantFileArrayImplicitSize()
 
     sum = 0;
     // #TEST#: RIRF10 Replace iterative for with range for
-    for (int i = 0; i < sizeof(constantFileDataImplicitSize)/sizeof(constantFileDataImplicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(constantFileDataImplicitSize) / sizeof(constantFileDataImplicitSize[0]); ++i)
     {
         sum += constantFileDataImplicitSize[i];
     }
@@ -101,7 +101,7 @@ void TestConstantFileArrayImplicitSize()
 
     sum = 0;
     // #TEST#: RIRF11 Replace iterative for with range for
-    for (int i = 0; i <= sizeof(constantFileDataImplicitSize)/sizeof(constantFileDataImplicitSize[0])-1; ++i)
+    for (int i = 0; i <= sizeof(constantFileDataImplicitSize) / sizeof(constantFileDataImplicitSize[0]) - 1; ++i)
     {
         sum += constantFileDataImplicitSize[i];
     }
@@ -109,14 +109,14 @@ void TestConstantFileArrayImplicitSize()
 
     sum = 0;
     // #TEST#: RIRF12 Replace iterative for with range for
-    for (int i = sizeof(constantFileDataImplicitSize)/sizeof(constantFileDataImplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(constantFileDataImplicitSize) / sizeof(constantFileDataImplicitSize[0]) - 1; i >= 0; --i)
     {
         sum += constantFileDataImplicitSize[i];
     }
     require_equal(int('f') + int('o') + int('o'), sum);
 }
 
-static int fileDataExplicitSize[10] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+static int fileDataExplicitSize[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 static void TestFileArrayExplicitSize()
 {
@@ -169,7 +169,7 @@ static void TestFileArrayExplicitSize()
     require_equal(1, fileDataExplicitSize[9]);
 
     // #TEST#: RIRF16 Replace iterative for with range for
-    for (int i = 0; i < sizeof(fileDataExplicitSize)/sizeof(fileDataExplicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(fileDataExplicitSize) / sizeof(fileDataExplicitSize[0]); ++i)
     {
         --fileDataExplicitSize[i];
     }
@@ -185,7 +185,7 @@ static void TestFileArrayExplicitSize()
     require_equal(0, fileDataExplicitSize[9]);
 
     // #TEST#: RIRF17 Replace iterative for with range for
-    for (int i = 0; i <= sizeof(fileDataExplicitSize)/sizeof(fileDataExplicitSize[0])-1; ++i)
+    for (int i = 0; i <= sizeof(fileDataExplicitSize) / sizeof(fileDataExplicitSize[0]) - 1; ++i)
     {
         ++fileDataExplicitSize[i];
     }
@@ -201,7 +201,7 @@ static void TestFileArrayExplicitSize()
     require_equal(1, fileDataExplicitSize[9]);
 
     // #TEST#: RIRF18 Replace iterative for with range for
-    for (int i = sizeof(fileDataExplicitSize)/sizeof(fileDataExplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(fileDataExplicitSize) / sizeof(fileDataExplicitSize[0]) - 1; i >= 0; --i)
     {
         --fileDataExplicitSize[i];
     }
@@ -217,7 +217,7 @@ static void TestFileArrayExplicitSize()
     require_equal(0, fileDataExplicitSize[9]);
 }
 
-static int const constantFileDataExplicitSize[10] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+static int const constantFileDataExplicitSize[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 static void TestConstantFileArrayExplicitSize()
 {
@@ -247,7 +247,7 @@ static void TestConstantFileArrayExplicitSize()
 
     sum = 0;
     // #TEST#: RIRF22 Replace iterative for with range for
-    for (int i = 0; i < sizeof(constantFileDataExplicitSize)/sizeof(constantFileDataExplicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(constantFileDataExplicitSize) / sizeof(constantFileDataExplicitSize[0]); ++i)
     {
         sum += constantFileDataExplicitSize[i];
     }
@@ -255,7 +255,7 @@ static void TestConstantFileArrayExplicitSize()
 
     sum = 0;
     // #TEST#: RIRF23 Replace iterative for with range for
-    for (int i = 0; i <= sizeof(constantFileDataExplicitSize)/sizeof(constantFileDataExplicitSize[0])-1; ++i)
+    for (int i = 0; i <= sizeof(constantFileDataExplicitSize) / sizeof(constantFileDataExplicitSize[0]) - 1; ++i)
     {
         sum += constantFileDataExplicitSize[i];
     }
@@ -263,7 +263,7 @@ static void TestConstantFileArrayExplicitSize()
 
     sum = 0;
     // #TEST#: RIRF24 Replace iterative for with range for
-    for (int i = sizeof(constantFileDataExplicitSize)/sizeof(constantFileDataExplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(constantFileDataExplicitSize) / sizeof(constantFileDataExplicitSize[0]) - 1; i >= 0; --i)
     {
         sum += constantFileDataExplicitSize[i];
     }
@@ -280,7 +280,7 @@ static void TestFileArray()
 
 static void TestStackArrayImplicitSize()
 {
-    int stackDataImplicitSize[] = { 'f', 'o', 'o' };
+    int stackDataImplicitSize[] = {'f', 'o', 'o'};
     // #TEST#: RIRF25 Replace iterative for with range for
     for (int i = 0; i < 3; ++i)
     {
@@ -309,7 +309,7 @@ static void TestStackArrayImplicitSize()
     require_equal(int('p'), stackDataImplicitSize[2]);
 
     // #TEST#: RIRF28 Replace iterative for with range for
-    for (int i = 0; i < sizeof(stackDataImplicitSize)/sizeof(stackDataImplicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(stackDataImplicitSize) / sizeof(stackDataImplicitSize[0]); ++i)
     {
         --stackDataImplicitSize[i];
     }
@@ -318,7 +318,7 @@ static void TestStackArrayImplicitSize()
     require_equal(int('o'), stackDataImplicitSize[2]);
 
     // #TEST#: RIRF29 Replace iterative for with range for
-    for (int i = 0; i <= sizeof(stackDataImplicitSize)/sizeof(stackDataImplicitSize[0])-1; ++i)
+    for (int i = 0; i <= sizeof(stackDataImplicitSize) / sizeof(stackDataImplicitSize[0]) - 1; ++i)
     {
         ++stackDataImplicitSize[i];
     }
@@ -327,7 +327,7 @@ static void TestStackArrayImplicitSize()
     require_equal(int('p'), stackDataImplicitSize[2]);
 
     // #TEST#: RIRF30 Replace iterative for with range for
-    for (int i = sizeof(stackDataImplicitSize)/sizeof(stackDataImplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(stackDataImplicitSize) / sizeof(stackDataImplicitSize[0]) - 1; i >= 0; --i)
     {
         --stackDataImplicitSize[i];
     }
@@ -338,7 +338,7 @@ static void TestStackArrayImplicitSize()
 
 static void TestConstantStackArrayImplicitSize()
 {
-    int const constantStackDataImplicitSize[] = { 'b', 'a', 'r' };
+    int const constantStackDataImplicitSize[] = {'b', 'a', 'r'};
     int sum = 0;
     // #TEST#: RIRF31 Replace iterative for with range for
     for (int i = 0; i < 3; ++i)
@@ -365,7 +365,7 @@ static void TestConstantStackArrayImplicitSize()
 
     sum = 0;
     // #TEST#: RIRF34 Replace iterative for with range for
-    for (int i = 0; i < sizeof(constantStackDataImplicitSize)/sizeof(constantStackDataImplicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(constantStackDataImplicitSize) / sizeof(constantStackDataImplicitSize[0]); ++i)
     {
         sum += constantStackDataImplicitSize[i];
     }
@@ -373,7 +373,7 @@ static void TestConstantStackArrayImplicitSize()
 
     sum = 0;
     // #TEST#: RIRF35 Replace iterative for with range for
-    for (int i = 0; i <= sizeof(constantStackDataImplicitSize)/sizeof(constantStackDataImplicitSize[0])-1; ++i)
+    for (int i = 0; i <= sizeof(constantStackDataImplicitSize) / sizeof(constantStackDataImplicitSize[0]) - 1; ++i)
     {
         sum += constantStackDataImplicitSize[i];
     }
@@ -381,7 +381,7 @@ static void TestConstantStackArrayImplicitSize()
 
     sum = 0;
     // #TEST#: RIRF36 Replace iterative for with range for
-    for (int i = sizeof(constantStackDataImplicitSize)/sizeof(constantStackDataImplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(constantStackDataImplicitSize) / sizeof(constantStackDataImplicitSize[0]) - 1; i >= 0; --i)
     {
         sum += constantStackDataImplicitSize[i];
     }
@@ -390,7 +390,7 @@ static void TestConstantStackArrayImplicitSize()
 
 static void TestStackArrayExplicitSize()
 {
-    int stackDataExplicitSize[4] = { 'q', 'u', 'x' };
+    int stackDataExplicitSize[4] = {'q', 'u', 'x'};
     // #TEST#: RIRF37 Replace iterative for with range for
     for (int i = 0; i < 4; ++i)
     {
@@ -422,7 +422,7 @@ static void TestStackArrayExplicitSize()
     require_equal(1, stackDataExplicitSize[3]);
 
     // #TEST#: RIRF40 Replace iterative for with range for
-    for (int i = 0; i < sizeof(stackDataExplicitSize)/sizeof(stackDataExplicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(stackDataExplicitSize) / sizeof(stackDataExplicitSize[0]); ++i)
     {
         --stackDataExplicitSize[i];
     }
@@ -432,7 +432,7 @@ static void TestStackArrayExplicitSize()
     require_equal(0, stackDataExplicitSize[3]);
 
     // #TEST#: RIRF41 Replace iterative for with range for
-    for (int i = sizeof(stackDataExplicitSize)/sizeof(stackDataExplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(stackDataExplicitSize) / sizeof(stackDataExplicitSize[0]) - 1; i >= 0; --i)
     {
         ++stackDataExplicitSize[i];
     }
@@ -442,7 +442,7 @@ static void TestStackArrayExplicitSize()
     require_equal(1, stackDataExplicitSize[3]);
 
     // #TEST#: RIRF42 Replace iterative for with range for
-    for (int i = sizeof(stackDataExplicitSize)/sizeof(stackDataExplicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(stackDataExplicitSize) / sizeof(stackDataExplicitSize[0]) - 1; i >= 0; --i)
     {
         --stackDataExplicitSize[i];
     }
@@ -454,7 +454,7 @@ static void TestStackArrayExplicitSize()
 
 static void TestConstantStackArrayExplicitSize()
 {
-    int const constantStackdataExlicitSize[4] = { 's', 'o', 'x' };
+    int const constantStackdataExlicitSize[4] = {'s', 'o', 'x'};
     int sum = 0;
     // #TEST#: RIRF43 Replace iterative for with range for
     for (int i = 0; i < 4; ++i)
@@ -481,7 +481,7 @@ static void TestConstantStackArrayExplicitSize()
 
     sum = 0;
     // #TEST#: RIRF46 Replace iterative for with range for
-    for (int i = 0; i < sizeof(constantStackdataExlicitSize)/sizeof(constantStackdataExlicitSize[0]); ++i)
+    for (int i = 0; i < sizeof(constantStackdataExlicitSize) / sizeof(constantStackdataExlicitSize[0]); ++i)
     {
         sum += constantStackdataExlicitSize[i];
     }
@@ -489,7 +489,7 @@ static void TestConstantStackArrayExplicitSize()
 
     sum = 0;
     // #TEST#: RIRF47 Replace iterative for with range for
-    for (int i = 0; i <= sizeof(constantStackdataExlicitSize)/sizeof(constantStackdataExlicitSize[0])-1; ++i)
+    for (int i = 0; i <= sizeof(constantStackdataExlicitSize) / sizeof(constantStackdataExlicitSize[0]) - 1; ++i)
     {
         sum += constantStackdataExlicitSize[i];
     }
@@ -497,7 +497,7 @@ static void TestConstantStackArrayExplicitSize()
 
     sum = 0;
     // #TEST#: RIRF48 Replace iterative for with range for
-    for (int i = sizeof(constantStackdataExlicitSize)/sizeof(constantStackdataExlicitSize[0])-1; i >= 0; --i)
+    for (int i = sizeof(constantStackdataExlicitSize) / sizeof(constantStackdataExlicitSize[0]) - 1; i >= 0; --i)
     {
         sum += constantStackdataExlicitSize[i];
     }
@@ -527,8 +527,7 @@ static void TestContainersWithIterators()
 
     int sum = 0;
     // #TEST#: RIRF49 Replace iterative for with range for
-    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend();
-        it != end; ++it)
+    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend(); it != end; ++it)
     {
         sum += *it;
     }
@@ -536,8 +535,7 @@ static void TestContainersWithIterators()
 
     sum = 0;
     // #TEST#: RIRF50 Replace iterative for with range for
-    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend();
-        end != it; ++it)
+    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend(); end != it; ++it)
     {
         sum += *it;
     }
@@ -545,8 +543,7 @@ static void TestContainersWithIterators()
 
     sum = 0;
     // #TEST#: RIRF51 Replace iterative for with range for
-    for (std::vector<int>::const_reverse_iterator it = c.crbegin(), end = c.crend();
-        end != it; ++it)
+    for (std::vector<int>::const_reverse_iterator it = c.crbegin(), end = c.crend(); end != it; ++it)
     {
         sum += *it;
     }
@@ -554,8 +551,7 @@ static void TestContainersWithIterators()
 
     sum = 0;
     // #TEST#: RIRF52 Replace iterative for with range for
-    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend();
-        end != it; ++it)
+    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend(); end != it; ++it)
     {
         sum += *it;
     }
@@ -563,16 +559,14 @@ static void TestContainersWithIterators()
 
     sum = 0;
     // #TEST#: RIRF53 Replace iterative for with range for
-    for (std::vector<int>::reverse_iterator it = c.rbegin(), end = c.rend();
-        it != end; ++it)
+    for (std::vector<int>::reverse_iterator it = c.rbegin(), end = c.rend(); it != end; ++it)
     {
         sum += *it;
     }
     require_equal(int('f') + int('o') + int('o'), sum);
 
     // #TEST#: RIRF54 Replace iterative for with range for
-    for (std::vector<int>::iterator it = c.begin(), end = c.end();
-        it != end; ++it)
+    for (std::vector<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
     {
         ++*it;
     }
@@ -581,8 +575,7 @@ static void TestContainersWithIterators()
     require_equal(int('p'), c[2]);
 
     // #TEST#: RIRF55 Replace iterative for with range for
-    for (std::vector<int>::reverse_iterator it = c.rbegin(), end = c.rend();
-        it != end; ++it)
+    for (std::vector<int>::reverse_iterator it = c.rbegin(), end = c.rend(); it != end; ++it)
     {
         --*it;
     }
@@ -616,7 +609,7 @@ static void TestContainersWithSubscriptUsingSizeType()
 
     sum = 0;
     // #TEST#: RIRF58 Replace iterative for with range for
-    for (std::vector<int>::size_type i = 0, size = c.size()-1; i <= size; ++i)
+    for (std::vector<int>::size_type i = 0, size = c.size() - 1; i <= size; ++i)
     {
         sum += c[i];
     }
@@ -648,7 +641,7 @@ static void TestContainersWithSubscriptUsingInt()
 
     sum = 0;
     // #TEST#: RIRF61 Replace iterative for with range for
-    for (int i = int(c.size())-1; i >= 0; --i)
+    for (int i = int(c.size()) - 1; i >= 0; --i)
     {
         sum += c[i];
     }
@@ -686,7 +679,7 @@ static void TestContainersWithAtUsingSizeType()
 
     sum = 0;
     // #TEST#: RIRF64 Replace iterative for with range for
-    for (std::vector<int>::size_type i = 0, size = c.size()-1; i <= size; ++i)
+    for (std::vector<int>::size_type i = 0, size = c.size() - 1; i <= size; ++i)
     {
         sum += c.at(i);
     }
@@ -718,7 +711,7 @@ static void TestContainersWithAtUsingInt()
 
     sum = 0;
     // #TEST#: RIRF67 Replace iterative for with range for
-    for (int i = int(c.size())-1; i >= 0; --i)
+    for (int i = int(c.size()) - 1; i >= 0; --i)
     {
         sum += c.at(i);
     }

@@ -18,8 +18,8 @@ class Foo
 {
 public:
     Foo();
-    int Operation1(int x) { return 1-x; }
-    int Operation2(int x) { return 2*x; }
+    int Operation1(int x) { return 1 - x; }
+    int Operation2(int x) { return 2 * x; }
 };
 
 Foo::Foo()
@@ -38,7 +38,7 @@ void TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
     }
     else
     {
-        j = (f.*member)(i*2);
+        j = (f.*member)(i * 2);
     }
     j = (f.*member)(j);
 }
@@ -49,9 +49,7 @@ public:
     Foo2();
 
 private:
-    void bar(const std::string &arg)
-    {
-    }
+    void bar(const std::string &arg) {}
     void gronk() const;
     int _i;
 };

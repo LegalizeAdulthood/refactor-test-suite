@@ -1,10 +1,11 @@
 #include "RenameCpp11.h"
+
 #include "Require.h"
 
 #include <algorithm>
 #include <cmath>
-#include <string>
 #include <sstream>
+#include <string>
 #include <tuple>
 #include <vector>
 
@@ -25,14 +26,10 @@ static_assert(flag, "Flag is false");
 static_assert(!flag2, "Flag2 is true");
 
 // #TEST#: R102 Rename flag3 in noexcept specifier
-void f1() noexcept(flag3)
-{
-}
+void f1() noexcept(flag3) {}
 
 // #TEST#: R103 Rename flag4 in noexcept specifier
-void f2() noexcept(!flag4)
-{
-}
+void f2() noexcept(!flag4) {}
 
 // #TEST#: R108 Rename T used in noexcept expression
 template <typename T>
@@ -115,8 +112,7 @@ void f7()
         int y = 2;
         std::string s = "foo";
     };
-    const auto check = [](const X &x)
-    {
+    const auto check = [](const X &x) {
         require_equal(1, x.x);
         require_equal(2, x.y);
         require_equal(std::string("foo"), x.s);
@@ -205,7 +201,10 @@ void f10()
 {
     std::ostringstream result;
     f10_aux(result, 10, 20.5, "hello world!");
-    require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, result.str());
+    require_equal(std::string{"10\n"
+                              "20.5\n"
+                              "hello world!\n"},
+                  result.str());
 }
 
 // #TEST#: R156 Rename Args
@@ -225,10 +224,7 @@ public:
         m_str = result.str();
     }
 
-    const std::string &str() const
-    {
-        return m_str;
-    }
+    const std::string &str() const { return m_str; }
 
 private:
     std::string m_str;
@@ -238,7 +234,10 @@ void f11()
 {
     // #TEST#: R162 Rename X
     X<int, double, std::string> x{10, 20.5, "hello world!"};
-    require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, x.str());
+    require_equal(std::string{"10\n"
+                              "20.5\n"
+                              "hello world!\n"},
+                  x.str());
 }
 
 // #TEST#: R163 Rename Types
@@ -317,7 +316,7 @@ double operator""_xd(const char *text)
                 break;
             }
             fraction /= 10.0;
-            value += (*text - '0')*fraction;
+            value += (*text - '0') * fraction;
             ++text;
         }
     }
@@ -399,8 +398,7 @@ std::string narrow(const std::basic_string<T> &wide)
 {
     std::string value;
     value.resize(wide.length());
-    std::transform(wide.begin(), wide.end(), value.begin(),
-        [](T c) { return static_cast<char>(c); });
+    std::transform(wide.begin(), wide.end(), value.begin(), [](T c) { return static_cast<char>(c); });
     return value;
 }
 
@@ -552,7 +550,7 @@ void f18_aux(std::ostream &stream, Args... args)
 {
     // #TEST#: R250 Rename Args
     // #TEST#: R251 Rename args
-    int ignored[sizeof...(Args)] = { (stream << args << ' ', 0)... };
+    int ignored[sizeof...(Args)] = {(stream << args << ' ', 0)...};
 }
 
 void f18()
@@ -596,9 +594,7 @@ struct Mixin : Bases...
     // #TEST#: R260 Rename bases in constructor argument list
     // #TEST#: R261 Rename Bases in initializer list pack expansion
     // #TEST#: R262 Rename bases in initializer list pack expansion
-    Mixin(const Bases &...bases) : Bases(bases)...
-    {
-    }
+    Mixin(const Bases &...bases) : Bases(bases)... {}
 };
 
 void f20()
@@ -641,20 +637,20 @@ void f21()
 {
     std::ostringstream result;
     f21_aux(result, 10, 20.5, "hello world!");
-    require_equal(std::string{"10\n" "20.5\n" "hello world!\n"}, result.str());
+    require_equal(std::string{"10\n"
+                              "20.5\n"
+                              "hello world!\n"},
+                  result.str());
 }
 
 // #TEST#: R272 Rename Exceptions
 template <typename... Exceptions>
 // #TEST#: R273 Rename Exceptions
-void f22_aux() throw (Exceptions...)
+void f22_aux() throw(Exceptions...)
 {
 }
 
-void f22()
-{
-    f22_aux<std::runtime_error, std::invalid_argument>();
-}
+void f22() { f22_aux<std::runtime_error, std::invalid_argument>(); }
 
 // #TEST#: R274 Rename Types
 template <typename... Types>
@@ -726,7 +722,7 @@ void f26()
     // #TEST#: R294 Rename x in lambda parameter list
     // #TEST#: R295 Rename x in lambda body
     // #TEST#: R296 Rename x in lambda argument list
-    require_equal(100, [](int x){ return x*10; }(x));
+    require_equal(100, [](int x) { return x * 10; }(x));
 
     // #TEST#: R297 Rename f
     double f = 20.5;
@@ -735,26 +731,26 @@ void f26()
     // #TEST#: R300 Rename x in lambda body
     // #TEST#: R301 Rename f in lambda body
     // #TEST#: R302 Rename x in lambda argument list
-    require_equal(205.0, [f](int x){ return x*f; }(x));
+    require_equal(205.0, [f](int x) { return x * f; }(x));
 
     // #TEST#: R303 Rename x in lambda parameter list
     // #TEST#: R304 Rename x in lambda body
     // #TEST#: R305 Rename f in lambda body
     // #TEST#: R306 Rename x in lambda argument list
-    require_equal(205.0, [=](int x){ return x*f; }(x));
+    require_equal(205.0, [=](int x) { return x * f; }(x));
 
     // #TEST#: R307 Rename x in lambda capture list
     // #TEST#: R308 Rename x in lambda body
-    require_equal(1, [&x]{ return x /= 10; }());
+    require_equal(1, [&x] { return x /= 10; }());
     require_equal(1, x);
 
     // #TEST#: R309 Rename f in lambda body
-    require_equal(205.0, [&]{ return f *= 10.0; }());
+    require_equal(205.0, [&] { return f *= 10.0; }());
     require_equal(205.0, f);
 
     // #TEST#: R310 Rename l
     // #TEST#: R311 Rename f in lambda body
-    const auto l = [&]{ return f /= 10.0; };
+    const auto l = [&] { return f /= 10.0; };
     // #TEST#: R312 Rename l
     require_equal(20.5, l());
     require_equal(20.5, f);
@@ -766,7 +762,10 @@ void f26()
     // #TEST#: R316 Rename s in lambda body
     // #TEST#: R317 Rename nl in expression in lambda body
     // #TEST#: R318 Rename s in lambda argument list
-    require_equal(std::string{"hello world!\n"}, [](const std::string &s){ std::string nl{"\n"}; return s + nl; }(s));
+    require_equal(std::string{"hello world!\n"}, [](const std::string &s) {
+        std::string nl{"\n"};
+        return s + nl;
+    }(s));
 
     // #TEST#: R319 Rename E
     enum class E
@@ -851,7 +850,7 @@ void f28()
     require_equal(3, x);
     // #TEST#: R345 Rename y
     // #TEST#: R346 Rename x
-    auto y = 3*x;
+    auto y = 3 * x;
     // #TEST#: R347 Rename y
     require_equal(9, y);
     // #TEST#: R348 Rename x
@@ -898,7 +897,7 @@ void f30()
     // #TEST#: R368 Rename x
     // #TEST#: R369 Rename y
     // #TEST#: R370 Rename z
-    for (int i : { 1, x, y, z, 4 })
+    for (int i : {1, x, y, z, 4})
     {
         result << i << '\n';
     }
@@ -941,7 +940,7 @@ void f33()
     constexpr int i = 6;
     // #TEST#: R389 Rename x
     // #TEST#: R390 Rename i
-    int constexpr x = 2*i;
+    int constexpr x = 2 * i;
     // #TEST#: R391 Rename x
     require_equal(12, x);
     // #TEST#: R392 Rename ii
@@ -950,10 +949,7 @@ void f33()
 
 // #TEST#: R393 Rename f34_aux
 // #TEST#: R394 Rename j
-constexpr int f34_aux(int j)
-{
-    return ii + j;
-}
+constexpr int f34_aux(int j) { return ii + j; }
 
 // #TEST#: R395 Rename f34_aux
 static_assert(f34_aux(3) == 18, "f34_aux(3) == 18");
@@ -997,10 +993,7 @@ int x36 = 10;
 // #TEST#: R403 Rename d36
 double d36 = 20.5;
 // #TEST#: R404 Rename s36
-std::string s36()
-{
-    return "hello world!";
-}
+std::string s36() { return "hello world!"; }
 
 }    // namespace Inline36
 
@@ -1083,7 +1076,7 @@ void f40()
 {
     // #TEST#: R442 Rename X40
     // #TEST#: R443 Rename x
-    require_equal(1, []{ return X40::x + 1; }());
+    require_equal(1, [] { return X40::x + 1; }());
 }
 
 // #TEST#: R444 Rename F41_AUX
@@ -1092,17 +1085,14 @@ void f40()
 void f41()
 {
     // #TEST#: R445 Rename F41_AUX
-    require_equal(15, []{ return F41_AUX; }());
+    require_equal(15, [] { return F41_AUX; }());
 }
 
 // #TEST#: R446 Rename F41_AUX
 #undef F41_AUX
 
 // #TEST#: R447 Rename f42_aux
-void f42_aux(std::ostream &stream, int x)
-{
-    f10_aux(stream, x);
-}
+void f42_aux(std::ostream &stream, int x) { f10_aux(stream, x); }
 
 void f42()
 {

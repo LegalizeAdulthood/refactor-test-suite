@@ -1,7 +1,9 @@
 #include "Rename.h"
+
 #include "Require.h"
-#include <string>
+
 #include <stdexcept>
+#include <string>
 
 // Renames a local variable, function, method, field, property, parameter,
 // type, namespace, active CSS style, C++ global variable or C++ macro and
@@ -13,7 +15,7 @@
 // #TEST#: R25 Rename the macro argument x_ from declaration
 // #TEST#: R99 Rename the macro argument x_ from usage
 // #TEST#: R26 Rename this macro
-#define MACRO_ONE_ARG(x_) (2.0f*x_)
+#define MACRO_ONE_ARG(x_) (2.0f * x_)
 
 class Operations
 {
@@ -27,24 +29,17 @@ class Rename1
 {
 public:
     // #TEST#: R2 Rename this class via its c'tor
-    Rename1()
-        : x()
-    {
-    }
+    Rename1() : x() {}
 
     // #TEST#: R32 Rename this class via its d'tor
-    ~Rename1()
-    {
-    }
+    ~Rename1() {}
 
     // #TEST#: R33 Rename this class via typedef
     // #TEST#: R34 Rename typedef MyClass
     typedef Rename1 MyClass;
 
     // #TEST#: R3 Rename this method
-    void Operation()
-    {
-    }
+    void Operation() {}
 
     int x;
 };
@@ -61,15 +56,10 @@ static int y = 1;
 class Rename1
 {
 public:
-    Rename1() : _y(0)
-    {
-    }
+    Rename1() : _y(0) {}
 
     // #TEST#: R8 rename this method
-    int Operation()
-    {
-        return 0;
-    }
+    int Operation() { return 0; }
 
 private:
     void Method()
@@ -92,14 +82,9 @@ int x = 0;
 class X
 {
 public:
-    X()
-    {}
-    ~X()
-    {
-    }
-    void Operation()
-    {
-    }
+    X() {}
+    ~X() {}
+    void Operation() {}
 };
 
 }    // namespace Y
@@ -110,10 +95,7 @@ union U
     float f;
     double d;
     const char *s;
-    void member(int x_)
-    {
-        x = x_;
-    }
+    void member(int x_) { x = x_; }
     float member() const
     {
         // #TEST#: R38 Rename data member f
@@ -131,14 +113,8 @@ struct SU
         double d;
         const char *s;
     };
-    float member() const
-    {
-        return f;
-    }
-    void member(int x_)
-    {
-        x = x_;
-    }
+    float member() const { return f; }
+    void member(int x_) { x = x_; }
 };
 
 // #TEST#: R39 Rename class Operations
@@ -165,7 +141,6 @@ static int (Operations::*GetOperation(bool flag))()
 // #TEST#: R56 Rename namespace RenameNamespace
 namespace RenameNamespace
 {
-
 // #TEST#: R57 Rename scoped member Renamed.
 int Renamed = 0;
 
@@ -182,10 +157,7 @@ class Derived1 : public virtual Base
 public:
     virtual ~Derived1() {}
     // #TEST#: R71 Rename virtual method
-    virtual Base *Operation()
-    {
-        return this;
-    }
+    virtual Base *Operation() { return this; }
 };
 
 class Derived2 : public virtual Derived1
@@ -193,10 +165,7 @@ class Derived2 : public virtual Derived1
 public:
     virtual ~Derived2() {}
     // #TEST#: R72 Rename virtual method
-    virtual Base *Operation()
-    {
-        return this;
-    }
+    virtual Base *Operation() { return this; }
 };
 
 void TestDerived()
@@ -221,7 +190,7 @@ static int s_macro_value = -20;
 #undef MACRO1
 
 // #TEST#: R78 Rename macro MACRO2
-#define MACRO2(x_) (-20*x_)
+#define MACRO2(x_) (-20 * x_)
 // #TEST#: R79 Rename macro MACRO2
 #ifdef MACRO2
 // #TEST#: R80 Rename macro MACRO2
@@ -271,10 +240,7 @@ namespace F2Outer
 namespace F2Inner
 {
 // #TEST#: R477 Rename function f2_aux
-int f2_aux()
-{
-    return 1;
-}
+int f2_aux() { return 1; }
 
 }    // namespace F2Inner
 }    // namespace F2Outer

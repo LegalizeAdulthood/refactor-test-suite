@@ -6,27 +6,16 @@ namespace MakeMethodStaticNamespace
 class Foo
 {
 public:
-    Foo()
-    {
-    }
+    Foo() {}
 
     // #TEST#: MMS1 Make method static
-    int Add(int a, int b)
-    {
-        return a + b;
-    }
+    int Add(int a, int b) { return a + b; }
 
     // #TEST#: MMS2 Make method static
-    int Add(int b)
-    {
-        return _a + b;
-    }
+    int Add(int b) { return _a + b; }
 
     // #TEST#: MMS3 Make method static
-    int AddConst(int b) const
-    {
-        return _a + b;
-    }
+    int AddConst(int b) const { return _a + b; }
 
 private:
     static int _a;

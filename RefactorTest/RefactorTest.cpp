@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stdexcept>
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     try
     {

@@ -1,4 +1,5 @@
 #include "ChangeSignature.h"
+
 #include <cassert>
 
 // Changes the signature of a function or method in both a header and source file;

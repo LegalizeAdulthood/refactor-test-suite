@@ -1,13 +1,12 @@
 #include "Require.h"
 
-#include <string>
 #include <stdexcept>
+#include <string>
 
 // Replaces all references to a variable with its value.
 
 namespace InlineVariableNamespace
 {
-
 int Function1() { return 1; }
 int Function2() { return 2; }
 
@@ -15,7 +14,7 @@ void TestInteger()
 {
     // #TEST#: IV1 Inline Variable i
     int i = 4;
-    int j = i*4 + 6;
+    int j = i * 4 + 6;
     require_equal(22, j);
     j += 10;
     require_equal(32, j);
@@ -57,7 +56,10 @@ void TestString()
     require_equal(foo, std::string{"This is a temp string."});
     foo += "  This is more text.";
     foo += temp;
-    require_equal(foo, std::string{"This is a temp string." "  This is more text." "This is a temp string."});
+    require_equal(foo,
+                  std::string{"This is a temp string."
+                              "  This is more text."
+                              "This is a temp string."});
 }
 
 class Foo

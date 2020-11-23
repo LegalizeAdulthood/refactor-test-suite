@@ -19,7 +19,7 @@ int TestGuardClause(int *x, int y, int z)
         {
             if (z > 0)
             {
-                return (*x + 10)*y*z;
+                return (*x + 10) * y * z;
             }
         }
     }
@@ -34,13 +34,9 @@ void TestGuardClause()
     int r = TestGuardClause(&x, y, z);
 }
 
-void TestRedundantConditional()
-{
-}
+void TestRedundantConditional() {}
 
-void TestReverseRedundantConditional()
-{
-}
+void TestReverseRedundantConditional() {}
 
 }    // namespace FlattenConditionNamespace
 

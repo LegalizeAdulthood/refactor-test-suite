@@ -1,4 +1,5 @@
 #include "RemoveUnusedParameters.h"
+
 #include "Require.h"
 
 namespace RemoveUnusedParametersNamespace
@@ -13,7 +14,7 @@ int TestFunction(int (*fn)(int), int i)
     }
     else
     {
-        j = (*fn)(i*2);
+        j = (*fn)(i * 2);
     }
     return (*fn)(j);
 }
@@ -38,7 +39,7 @@ int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
     }
     else
     {
-        j = (f.*member)(i*2);
+        j = (f.*member)(i * 2);
     }
     j = (f.*member)(j);
     return j;
@@ -51,17 +52,11 @@ using namespace RemoveUnusedParametersNamespace;
 extern int goop(int a, int b);
 
 // #TEST#: RUP3 Remove Unused Parameter b
-extern int goop(int a, int b)
-{
-    return a;
-}
+extern int goop(int a, int b) { return a; }
 
 namespace
 {
-int plus1(int i)
-{
-    return i + 1;
-}
+int plus1(int i) { return i + 1; }
 
 }    // namespace
 

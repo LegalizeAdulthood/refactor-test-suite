@@ -14,10 +14,7 @@ static void TestStackAutoPtr()
 }
 
 // #TEST#: RAWU3 Replace auto_ptr with unique_ptr
-static void takeOwnership(std::auto_ptr<int> p)
-{
-    assert(*p == 10);
-}
+static void takeOwnership(std::auto_ptr<int> p) { assert(*p == 10); }
 
 static void TestAutoPtrArgument()
 {

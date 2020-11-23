@@ -38,8 +38,8 @@ public:
         bool which = true;
         // #TEST#: EXV1 Extract variable for rhs expression
         void (Foo::*member)() = which ? &Foo::Operation1 : &Foo::Operation2;
-        void (Foo::*member2)() = (member == &Foo::Operation1) ?
-            (which ? &Foo::Operation2 : &Foo::Operation1) : &Foo::Operation3;
+        void (Foo::*member2)() =
+            (member == &Foo::Operation1) ? (which ? &Foo::Operation2 : &Foo::Operation1) : &Foo::Operation3;
     }
 
     void Operation4()
