@@ -52,13 +52,14 @@ set(sources
     SplitInitializationFromDeclaration.cpp
     SplitMultiVariableDeclaration.cpp
     RefactorTest.cpp)
-set(source_files ${headers} ${sources})
+set(all_files ${headers} ${sources})
 source_group("Header Files" FILES ${headers})
 source_group("Source Files" FILES ${sources})
 
-add_executable(refactor_test_suite ${source_files})
+add_executable(refactor_test_suite ${all_files})
+set_property(TARGET refactor_test_suite PROPERTY CXX_STANDARD 11)
+set_property(TARGET refactor_test_suite PROPERTY CXX_STANDARD_REQUIRED ON)
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
-    target_compile_options(refactor_test_suite PUBLIC -std=c++11)
     set_property(SOURCE ReplaceAutoPtrWithUniquePtr.cpp
         APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-declarations)
     if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
