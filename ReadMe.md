@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/LegalizeAdulthood/refactor-test-suite.svg?branch=master)](https://travis-ci.org/LegalizeAdulthood/refactor-test-suite)
+![CMake workflow](https://github.com/LegalizeAdulthood/refactor-test-suite/actions/workflows/cmake.yml/badge.svg)
 
 This is a test suite for C++ refactoring tools.  It consists of
 a set of source files with comments marking different locations
