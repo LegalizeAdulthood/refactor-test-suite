@@ -1,4 +1,4 @@
-![CMake workflow](https://github.com/LegalizeAdulthood/refactor-test-suite/actions/workflows/cmake.yml/badge.svg)
+[![CMake workflow](https://github.com/LegalizeAdulthood/refactor-test-suite/actions/workflows/cmake.yml/badge.svg)](https://github.com/LegalizeAdulthood/refactor-test-suite/actions/workflows/cmake.yml)
 
 This is a test suite for C++ refactoring tools.  It consists of
 a set of source files with comments marking different locations
