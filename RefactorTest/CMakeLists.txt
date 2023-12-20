@@ -1,22 +1,13 @@
-set(headers
-    AddParameter.h
-    ChangeSignature.h
-    CreateOverload.h
-    CreateSetterMethod.h
-    MoveImplementationToSourceFile.h
-    MoveMethod.h
-    RemoveUnusedParameters.h
-    Rename.h
-    RenameCpp11.h
-    Require.h
-    RefactorTest.h)
-
-set(sources
+add_executable(refactor_test_suite
     AddOverride.cpp
+    AddParameter.h
     AddParameter.cpp
     AddBlockDelimiter.cpp
+    ChangeSignature.h
     ChangeSignature.cpp
     CreateMethodStub.cpp
+    CreateOverload.h
+    CreateSetterMethod.h
     CreateSetterMethod.cpp
     CreateMultiVariableDeclaration.cpp
     ExtractConstant.cpp
@@ -31,15 +22,22 @@ set(sources
     InlineResult.cpp
     InlineVariable.cpp
     MakeMethodStatic.cpp
+    MoveImplementationToSourceFile.h
     MoveImplementationToSourceFile.cpp
+    MoveMethod.h
     MoveMethod.cpp
     OptimizeNamespaceReferences.cpp
+    RefactorTest.h
     RemoveBlockDelimiter.cpp
+    RemoveUnusedParameters.h
     RemoveUnusedParameters.cpp
+    Rename.h
     Rename.cpp
     Rename2.cpp
+    RenameCpp11.h
     RenameCpp11.cpp
     ReorderParameters.cpp
+    Require.h
     ReplaceAutoPtrWithUniquePtr.cpp
     ReplaceIfWithTernary.cpp
     ReplaceIterativeForWithRangeFor.cpp
@@ -52,11 +50,8 @@ set(sources
     SplitInitializationFromDeclaration.cpp
     SplitMultiVariableDeclaration.cpp
     RefactorTest.cpp)
-set(all_files ${headers} ${sources})
-source_group("Header Files" FILES ${headers})
-source_group("Source Files" FILES ${sources})
-
-add_executable(refactor_test_suite ${all_files})
+source_group("Header Files" REGULAR_EXPRESSION ".*\\.h")
+source_group("Source Files" REGULAR_EXPRESSION ".*\\.cpp")
 set_property(TARGET refactor_test_suite PROPERTY CXX_STANDARD 11)
 set_property(TARGET refactor_test_suite PROPERTY CXX_STANDARD_REQUIRED ON)
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
