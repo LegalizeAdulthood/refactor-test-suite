@@ -1,7 +1,7 @@
 ---
 # clang-format 11.0.0
 #
-# The settings in this file file aresuggestive, rather than prescriptive.
+# The settings in this file file are suggestive, rather than prescriptive.
 #
 # The nature of refactoring is that it moves source code
 # around.  Sometimes we explicitly want a simple function
