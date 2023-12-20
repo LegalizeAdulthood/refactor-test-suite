@@ -1,0 +1,28 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Default Config",
+      "description": "Configure",
+      "binaryDir": "${sourceDir}/../build"
+    }
+  ],
+  "buildPresets": [
+  ],
+  "testPresets": [
+    {
+      "name": "default",
+      "displayName": "default",
+      "configurePreset": "default",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}
