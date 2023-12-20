@@ -52,8 +52,11 @@ add_executable(refactor_test_suite
     RefactorTest.cpp)
 source_group("Header Files" REGULAR_EXPRESSION ".*\\.h")
 source_group("Source Files" REGULAR_EXPRESSION ".*\\.cpp")
-set_property(TARGET refactor_test_suite PROPERTY CXX_STANDARD 11)
-set_property(TARGET refactor_test_suite PROPERTY CXX_STANDARD_REQUIRED ON)
+set_target_properties(refactor_test_suite PROPERTIES
+    CXX_STANDARD 11
+    CXX_STANDARD_REQUIRED ON
+    FOLDER Tools
+)
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_property(SOURCE ReplaceAutoPtrWithUniquePtr.cpp
         APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-declarations)
