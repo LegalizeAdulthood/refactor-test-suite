@@ -52,8 +52,13 @@ add_executable(refactor_test_suite
     RefactorTest.cpp)
 source_group("Header Files" REGULAR_EXPRESSION ".*\\.h")
 source_group("Source Files" REGULAR_EXPRESSION ".*\\.cpp")
+set(cxx_standard 11)
+if("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
+    set(cxx_standard 14)
+    target_sources(refactor_test_suite PUBLIC RenameCpp14.h RenameCpp14.cpp)
+endif()
 set_target_properties(refactor_test_suite PROPERTIES
-    CXX_STANDARD 11
+    CXX_STANDARD ${cxx_standard}
     CXX_STANDARD_REQUIRED ON
     FOLDER Tools
 )
