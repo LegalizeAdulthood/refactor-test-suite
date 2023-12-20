@@ -14,6 +14,12 @@
     }
   ],
   "buildPresets": [
+    {
+      "name": "default",
+      "displayName": "default",
+      "configurePreset": "default",
+      "configuration": "Debug"
+    }
   ],
   "testPresets": [
     {
