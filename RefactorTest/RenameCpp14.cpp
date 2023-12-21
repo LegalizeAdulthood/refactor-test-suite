@@ -2,7 +2,6 @@
 #include "Require.h"
 
 // New C++ language features:
-// - Variable templates
 // - Generic lambdas (parameters of type `auto`)
 // - Lambda init capture
 // - new/delete elision
@@ -13,6 +12,8 @@
 // - aggregate classes with default non-static member initializers
 
 namespace RenameCpp14
+{
+namespace
 {
 
 // #TEST#: R606 Rename template parameter T
@@ -29,6 +30,7 @@ T circularArea(T r)
     return pi<T> * r * r;
 }
 
+}    // namespace
 }    // namespace RenameCpp14
 
 namespace
@@ -36,9 +38,27 @@ namespace
 
 void f1()
 {
-    using namespace RenameCpp14;
-    // #TEST#: R611 Rename variable template pi
-    REQUIRE_EQUAL(pi<float>, circularArea(1.0f));
+    {
+        using namespace RenameCpp14;
+        // #TEST#: R611 Rename variable template pi
+        REQUIRE_EQUAL(pi<float>, circularArea(1.0f));
+    }
+
+    // #TEST#: R612 Rename variable template pi
+    REQUIRE_EQUAL(RenameCpp14::pi<float>, RenameCpp14::circularArea(1.0f));
+
+    // rename variable template declared in header
+}
+
+void f2()
+{
+    // #TEST#: Rxxx Rename variable fn
+    // #TEST#: Rxxx Rename parameter val in declaration
+    // #TEST#: Rxxx Rename parameter val in first use
+    // #TEST#: Rxxx Rename parameter val in second use
+    auto fn = [](auto val) { return val * decltype(val)(2); };
+    REQUIRE_EQUAL(4.0f, fn(2.0f));
+    REQUIRE_EQUAL(4, fn(2));
 }
 
 }    // namespace
@@ -46,4 +66,5 @@ void f1()
 void TestRenameCpp14()
 {
     f1();
+    f2();
 }
