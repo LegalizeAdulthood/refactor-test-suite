@@ -49,19 +49,26 @@ add_executable(refactor_test_suite
     SimplifyBooleanExpression.cpp
     SplitInitializationFromDeclaration.cpp
     SplitMultiVariableDeclaration.cpp
-    RefactorTest.cpp)
+    RefactorTest.cpp
+    Config.h.in
+    ${CMAKE_CURRENT_BINARY_DIR}/include/Config.h
+)
 source_group("Header Files" REGULAR_EXPRESSION ".*\\.h")
 source_group("Source Files" REGULAR_EXPRESSION ".*\\.cpp")
+source_group("CMake Template Files" REGULAR_EXPRESSION ".*\\.in")
 set(cxx_standard 11)
 if("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
     set(cxx_standard 14)
     target_sources(refactor_test_suite PUBLIC RenameCpp14.h RenameCpp14.cpp)
+    set(HAVE_CPP14 ON)
 endif()
+configure_file(Config.h.in include/Config.h)
 set_target_properties(refactor_test_suite PROPERTIES
     CXX_STANDARD ${cxx_standard}
     CXX_STANDARD_REQUIRED ON
     FOLDER Tools
 )
+target_include_directories(refactor_test_suite PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_property(SOURCE ReplaceAutoPtrWithUniquePtr.cpp
         APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-declarations)

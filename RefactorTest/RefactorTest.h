@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Config.h"
+
 extern void TestAddOverride();
 extern void TestAddBlockDelimiter();
 extern void TestAddParameter();
@@ -26,7 +28,11 @@ extern void TestRemoveUnusedParameter();
 extern void TestRemoveRedundantConditional();
 extern void TestRename();
 extern void TestRenameCpp11();
+#ifdef HAVE_CPP14
 extern void TestRenameCpp14();
+#else
+inline void TestRenameCpp14() {}
+#endif
 extern void TestRenameFileToMatchType();
 extern void TestRenameTypeToMatchFile();
 extern void TestReorderParameters();
