@@ -1,20 +1,31 @@
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <string>
 #include <string_view>
+#include <utility>
 #include <vector>
 
 namespace testNames
 {
 
+std::vector<std::string> g_labels;
+
 void scanLine(const std::string &line)
 {
-    if (line.find("#TEST#") != std::string::npos)
+    if (size_t pos = line.find("#TEST#"); pos != std::string::npos)
     {
-        size_t nonBlank = line.find_first_not_of(" \t");
-        std::cout << "    " << line.substr(nonBlank) << '\n';
+        size_t begin = line.find_first_not_of(" \t", line.find_first_of(' ', pos));
+        size_t end = line.find_first_of(' ', begin);
+        std::string label = line.substr(begin, end - begin);
+        if (std::find(g_labels.begin(), g_labels.end(), label) != g_labels.end())
+        {
+            std::cerr << "    ERROR Duplicate test label " << label << '\n';
+        }
+        std::cout << "    " << label << '\n';
+        g_labels.emplace_back(std::move(label));
     }
 }
 
