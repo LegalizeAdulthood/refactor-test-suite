@@ -20,13 +20,14 @@ namespace
 template <class T>
 // #TEST#: R607 Rename template parameter T
 // #TEST#: R608 Rename variable template pi
+// #TEST#: R609 Rename use of template parameter T
 constexpr T pi = T(3.1415926535897932385L);
 
 template <class T>
 T circularArea(T r)
 {
-    // #TEST#: R609 Rename template parameter T
-    // #TEST#: R610 Rename variable template pi
+    // #TEST#: R610 Rename template parameter T
+    // #TEST#: R611 Rename variable template pi
     return pi<T> * r * r;
 }
 
@@ -40,17 +41,27 @@ void f1()
 {
     {
         using namespace RenameCpp14;
-        // #TEST#: R611 Rename variable template pi
+        // #TEST#: R612 Rename variable template pi
         REQUIRE_EQUAL(pi<float>, circularArea(1.0f));
     }
 
-    // #TEST#: R612 Rename variable template pi
+    // #TEST#: R613 Rename variable template pi
     REQUIRE_EQUAL(RenameCpp14::pi<float>, RenameCpp14::circularArea(1.0f));
-
-    // rename variable template declared in header
 }
 
 void f2()
+{
+    {
+        using namespace RenameCpp14;
+        // #TEST#: R614 Rename variable template pi2
+        REQUIRE_EQUAL(pi2<float>, circularArea2(1.0f));
+    }
+
+    // #TEST#: R615 Rename variable template pi2
+    REQUIRE_EQUAL(RenameCpp14::pi2<float>, RenameCpp14::circularArea2(1.0f));
+}
+
+void f3()
 {
     // #TEST#: Rxxx Rename variable fn
     // #TEST#: Rxxx Rename parameter val in declaration
@@ -67,4 +78,5 @@ void TestRenameCpp14()
 {
     f1();
     f2();
+    f3();
 }
