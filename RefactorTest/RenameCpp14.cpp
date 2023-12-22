@@ -63,10 +63,10 @@ void f2()
 
 void f3()
 {
-    // #TEST#: Rxxx Rename variable fn
-    // #TEST#: Rxxx Rename parameter val in declaration
-    // #TEST#: Rxxx Rename parameter val in first use
-    // #TEST#: Rxxx Rename parameter val in second use
+    // #TEST#: R621 Rename variable fn
+    // #TEST#: R622 Rename parameter val in declaration
+    // #TEST#: R623 Rename parameter val in first use
+    // #TEST#: R624 Rename parameter val in second use
     auto fn = [](auto val) { return val * decltype(val)(2); };
     REQUIRE_EQUAL(4.0f, fn(2.0f));
     REQUIRE_EQUAL(4, fn(2));
