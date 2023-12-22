@@ -19,12 +19,6 @@ Case | Result
 ---- | ------
 CS1     | Failure (doesn't update usage) [case=2164](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11911)
 
-## Create Declaration From Implementation
-
-## Create Implementation From Declaration
-
-## Create Method Stub
-
 ## Extract Function
 Case | Result
 ---- | ------

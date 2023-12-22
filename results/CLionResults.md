@@ -29,6 +29,8 @@ Nested Ifs.
 
 **Reverse Conditional** is performed with Invert Condition
 
+**Create Multi Variable Declaration** is not available.
+
 <hr/>
 
 ## Add Block Delimiter
@@ -95,10 +97,6 @@ CS9  |  Pass
 CS10 |  Pass
 CS11 |  Pass
 
-## Create Declaration From Implementation
-
-## Create Implementation From Declaration
-
 ## Create Method Stub
 Case | Result
 ---- | ------
@@ -124,8 +122,6 @@ CMS19 | Pass
 CMS20 | Pass
 CMS21 | Pass
 CMS22 | Pass
-
-## Create Multi Variable Declaration (not available)
 
 ## Create Setter Method
 Case | Result
@@ -178,10 +174,6 @@ EC10 | Pass
 EC11 | Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
 EC12 | Pass
 EC13 | Pass
-
-## Extract Declaration
-
-## Extract Define
 
 ## Extract Function
 Case | Result
@@ -250,16 +242,10 @@ EXV4 | Pass
 EXV5 | Pass
 EXV6 | Failure [CPP-1932](https://youtrack.jetbrains.com/issue/CPP-1932)
 
-## Extract Typedef
-
 ## Flatten Conditional
 Case | Result
 ---- | ------
 FC1  | Pass
-
-## Inline Constant
-
-## Inline Function
 
 ## Inline Macro
 Case | Result
@@ -270,8 +256,6 @@ IM3  | Pass
 IM4  | Pass
 IM5  | Pass
 IM6  | Pass
-
-## Inline Method
 
 ## Inline Recent Assignment
 Case | Result
@@ -287,8 +271,6 @@ IR2  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
 IR3  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
 IR4  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
 IR5  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
-
-## Inline Typedef
 
 ## Inline Variable
 Case | Result
@@ -387,10 +369,6 @@ MM36  | Pass
 Case | Result
 ---- | -----
 ONR1 | Pass
-
-## Pull Members Up
-
-## Push Members Down
 
 ## Remove Block Delimiter (Not available)
 Case | Result
