@@ -1,4 +1,4 @@
-add_executable(refactor_test_suite
+add_executable(refactor-test-suite
     AddOverride.cpp
     AddParameter.h
     AddParameter.cpp
@@ -59,16 +59,16 @@ source_group("CMake Template Files" REGULAR_EXPRESSION ".*\\.in")
 set(cxx_standard 11)
 if("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
     set(cxx_standard 14)
-    target_sources(refactor_test_suite PUBLIC RenameCpp14.h RenameCpp14.cpp)
+    target_sources(refactor-test-suite PUBLIC RenameCpp14.h RenameCpp14.cpp)
     set(HAVE_CPP14 ON)
 endif()
 configure_file(Config.h.in include/Config.h)
-set_target_properties(refactor_test_suite PROPERTIES
+set_target_properties(refactor-test-suite PROPERTIES
     CXX_STANDARD ${cxx_standard}
     CXX_STANDARD_REQUIRED ON
     FOLDER Tools
 )
-target_include_directories(refactor_test_suite PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
+target_include_directories(refactor-test-suite PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_property(SOURCE ReplaceAutoPtrWithUniquePtr.cpp
         APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-declarations)
@@ -77,8 +77,8 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
             APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-register)
     endif()
 elseif(MSVC)
-    target_compile_definitions(refactor_test_suite PUBLIC _CRT_SECURE_NO_WARNINGS)
+    target_compile_definitions(refactor-test-suite PUBLIC _CRT_SECURE_NO_WARNINGS)
     set_property(SOURCE RenameCpp11.cpp
         APPEND PROPERTY COMPILE_FLAGS /wd4290)
 endif()
-add_custom_command(TARGET refactor_test_suite POST_BUILD COMMAND refactor_test_suite)
+add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND refactor-test-suite)
