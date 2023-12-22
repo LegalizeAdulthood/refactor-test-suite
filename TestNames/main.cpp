@@ -1,15 +1,33 @@
 #include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <string>
 #include <string_view>
 #include <vector>
 
 namespace testNames
 {
 
-void scanFile(std::filesystem::path file)
+void scanLine(const std::string &line)
 {
-    std::cout << "File: " << file.string() << '\n';
+    if (line.find("#TEST#") != std::string::npos)
+    {
+        size_t nonBlank = line.find_first_not_of(" \t");
+        std::cout << "    " << line.substr(nonBlank) << '\n';
+    }
+}
+
+void scanFile(std::filesystem::path path)
+{
+    std::cout << "File: " << path.string() << '\n';
+    std::ifstream file(path.string());
+    while (file)
+    {
+        std::string line;
+        std::getline(file, line);
+        scanLine(line);
+    }
 }
 
 void scanDirectory(std::filesystem::path dir)
