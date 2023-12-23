@@ -2,6 +2,7 @@
 #include "Require.h"
 
 // New C++ language features:
+// - Variable templates
 // - Generic lambdas (parameters of type `auto`)
 // - Lambda init capture
 // - new/delete elision
@@ -72,6 +73,30 @@ void f3()
     REQUIRE_EQUAL(4, fn(2));
 }
 
+void f4()
+{
+    // #TEST#: R625 Rename local variable i
+    int i{2};
+    // #TEST#: R626 Rename local variable fn
+    // #TEST#: R627 Rename local capture variable val
+    // #TEST#: R628 Rename local capture variable j
+    // #TEST#: R629 Rename use of i in capture expression
+    // #TEST#: R630 Rename use of val
+    // #TEST#: R631 Rename use of j
+    auto fn = [val = 1, j = i] { return val + j; };
+    // #TEST#: R625 Rename use of fn
+    REQUIRE_EQUAL(3, fn());
+    // #TEST#: R632 Rename local variable fn2
+    // #TEST#: R633 Rename local capture variable val
+    // #TEST#: R633 Rename local capture variable j
+    // #TEST#: R634 Rename use of i in capture expression
+    // #TEST#: R635 Rename use of val
+    // #TEST#: R636 Rename use of j
+    auto fn2 = [val = 1, j = i](int k) { return val + j + k; };
+    // #TEST#: R637 Rename use of fn2
+    REQUIRE_EQUAL(4, fn2(1));
+}
+
 }    // namespace
 
 void TestRenameCpp14()
@@ -79,4 +104,5 @@ void TestRenameCpp14()
     f1();
     f2();
     f3();
+    f4();
 }
