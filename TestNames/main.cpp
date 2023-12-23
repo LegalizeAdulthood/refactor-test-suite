@@ -12,8 +12,6 @@
 namespace testNames
 {
 
-bool g_verbose{};
-
 struct Test
 {
     const char *name;
@@ -68,14 +66,14 @@ void checkLabel(std::string_view label)
 {
     if (std::find(g_labels.begin(), g_labels.end(), label) != g_labels.end())
     {
-        std::cerr << "    ERROR Duplicate test label " << label << '\n';
+        throw std::runtime_error("Duplicate test label " + std::string{label});
     }
     const std::string_view prefix = label.substr(0, label.find_first_of("0123456789"));
     const auto pos =
         std::find_if(std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.prefix == prefix; });
     if (pos == std::end(g_tests))
     {
-        std::cerr << "    ERROR Unknown test prefix " << prefix << '\n';
+        throw std::runtime_error("Unknown test prefix " + std::string{prefix});
     }
     g_testCases[pos->prefix].emplace_back(label);
     g_labels.emplace_back(label);
@@ -89,19 +87,11 @@ void scanLine(std::string_view line)
         size_t end = line.find_first_of(' ', begin);
         std::string_view label = line.substr(begin, end - begin);
         checkLabel(label);
-        if (g_verbose)
-        {
-            std::cout << "    " << label << '\n';
-        }
     }
 }
 
 void scanFile(std::filesystem::path path)
 {
-    if (g_verbose)
-    {
-        std::cout << "File: " << path.string() << '\n';
-    }
     std::ifstream file(path.string());
     while (file)
     {
@@ -113,10 +103,6 @@ void scanFile(std::filesystem::path path)
 
 void scanDirectory(std::filesystem::path dir)
 {
-    if (g_verbose)
-    {
-        std::cout << "Directory: " << dir.string() << '\n';
-    }
     for (auto &entry : std::filesystem::directory_iterator(dir))
     {
         if (is_directory(entry))
