@@ -2,6 +2,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <map>
 #include <stdexcept>
 #include <string>
 #include <string_view>
@@ -10,6 +11,8 @@
 
 namespace testNames
 {
+
+bool g_verbose{};
 
 struct Test
 {
@@ -44,7 +47,6 @@ constexpr Test g_tests[]{
     {"Remove Unused Parameter", "RUP"},
     {"Rename", "R"},
     {"Reorder Parameters", "RP"},
-    {"Replace auto with Type", "RAWT"},
     {"Replace auto_ptr With unique_ptr", "RAWU"},
     {"Replace If With Ternary", "RIT"},
     {"Replace Iterative For With Range For", "RIRF"},
@@ -57,6 +59,8 @@ constexpr Test g_tests[]{
     {"Split Initialization From Declaration", "SID"},
     {"Split Multi-Variable Declaration", "SMVD"},
 };
+
+std::map<const char *, std::vector<std::string>> g_testCases;
 
 std::vector<std::string> g_labels;
 
@@ -73,7 +77,8 @@ void checkLabel(std::string_view label)
     {
         std::cerr << "    ERROR Unknown test prefix " << prefix << '\n';
     }
-    g_labels.emplace_back(std::move(label));
+    g_testCases[pos->prefix].emplace_back(label);
+    g_labels.emplace_back(label);
 }
 
 void scanLine(std::string_view line)
@@ -84,13 +89,19 @@ void scanLine(std::string_view line)
         size_t end = line.find_first_of(' ', begin);
         std::string_view label = line.substr(begin, end - begin);
         checkLabel(label);
-        std::cout << "    " << label << '\n';
+        if (g_verbose)
+        {
+            std::cout << "    " << label << '\n';
+        }
     }
 }
 
 void scanFile(std::filesystem::path path)
 {
-    std::cout << "File: " << path.string() << '\n';
+    if (g_verbose)
+    {
+        std::cout << "File: " << path.string() << '\n';
+    }
     std::ifstream file(path.string());
     while (file)
     {
@@ -102,7 +113,10 @@ void scanFile(std::filesystem::path path)
 
 void scanDirectory(std::filesystem::path dir)
 {
-    std::cout << "Directory: " << dir.string() << '\n';
+    if (g_verbose)
+    {
+        std::cout << "Directory: " << dir.string() << '\n';
+    }
     for (auto &entry : std::filesystem::directory_iterator(dir))
     {
         if (is_directory(entry))
@@ -112,6 +126,34 @@ void scanDirectory(std::filesystem::path dir)
         else
         {
             scanFile(entry);
+        }
+    }
+}
+
+void sortTestCases()
+{
+    const auto extractCaseNum = [](const std::string &label)
+    { return std::stoi(label.substr(label.find_first_of("0123456789"))); };
+    for (const Test &test : g_tests)
+    {
+        std::vector<std::string> &testCases = g_testCases.find(test.prefix)->second;
+        std::sort(testCases.begin(),
+                  testCases.end(),
+                  [&](const std::string &lhs, const std::string &rhs)
+                  { return extractCaseNum(lhs) < extractCaseNum(rhs); });
+    }
+}
+
+void printMarkDown(std::ostream &out)
+{
+    out << "# Tool\n\n";
+
+    for (const Test &test : g_tests)
+    {
+        out << "\n## " << test.name << "\nCase | Result\n";
+        for (const std::string &testCase : g_testCases[test.prefix])
+        {
+            out << testCase << " | \n";
         }
     }
 }
@@ -126,6 +168,8 @@ int main(const std::vector<std::string_view> &args)
         }
 
         scanDirectory(args[1]);
+        sortTestCases();
+        printMarkDown(std::cout);
         return 0;
     }
     catch (const std::exception &bang)
