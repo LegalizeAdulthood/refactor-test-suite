@@ -9,3 +9,4 @@ set_target_properties(test-names PROPERTIES
     CXX_STANDARD_REQUIRED ON
     FOLDER Tools
 )
+add_custom_command(TARGET test-names POST_BUILD COMMAND test-names ${CMAKE_CURRENT_SOURCE_DIR}/../RefactorTest > ${CMAKE_CURRENT_BINARY_DIR}/Tool.md)

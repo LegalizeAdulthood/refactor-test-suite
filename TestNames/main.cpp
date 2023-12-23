@@ -62,18 +62,20 @@ std::map<const char *, std::vector<std::string>> g_testCases;
 
 std::vector<std::string> g_labels;
 
+std::string g_currentFile;
+
 void checkLabel(std::string_view label)
 {
     if (std::find(g_labels.begin(), g_labels.end(), label) != g_labels.end())
     {
-        throw std::runtime_error("Duplicate test label " + std::string{label});
+        throw std::runtime_error("Duplicate test label " + std::string{label} + " in file " + std::string{g_currentFile});
     }
     const std::string_view prefix = label.substr(0, label.find_first_of("0123456789"));
     const auto pos =
         std::find_if(std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.prefix == prefix; });
     if (pos == std::end(g_tests))
     {
-        throw std::runtime_error("Unknown test prefix " + std::string{prefix});
+        throw std::runtime_error("Unknown test prefix " + std::string{prefix} + " in file " + std::string{g_currentFile});
     }
     g_testCases[pos->prefix].emplace_back(label);
     g_labels.emplace_back(label);
@@ -93,6 +95,7 @@ void scanLine(std::string_view line)
 void scanFile(std::filesystem::path path)
 {
     std::ifstream file(path.string());
+    g_currentFile = path.string();
     while (file)
     {
         std::string line;
