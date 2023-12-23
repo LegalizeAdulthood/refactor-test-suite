@@ -1,3 +1,4 @@
 #pragma once
 
 #cmakedefine HAVE_CPP14
+#cmakedefine HAVE_CPP17

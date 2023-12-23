@@ -56,15 +56,27 @@ add_executable(refactor-test-suite
 source_group("Header Files" REGULAR_EXPRESSION ".*\\.h")
 source_group("Source Files" REGULAR_EXPRESSION ".*\\.cpp")
 source_group("CMake Template Files" REGULAR_EXPRESSION ".*\\.in")
-set(cxx_standard 11)
 if("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
-    set(cxx_standard 14)
-    target_sources(refactor-test-suite PUBLIC RenameCpp14.h RenameCpp14.cpp)
+    add_library(refactor-14 OBJECT RenameCpp14.h RenameCpp14.cpp)
+    set_target_properties(refactor-14 PROPERTIES
+        FOLDER Libs
+        CXX_STANDARD 14
+        CXX_STANDARD_REQUIRED ON)
+    target_link_libraries(refactor-test-suite PUBLIC refactor-14)
     set(HAVE_CPP14 ON)
+endif()
+if("cxx_std_17" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
+    add_library(refactor-17 OBJECT RenameCpp17.h RenameCpp17.cpp)
+    set_target_properties(refactor-17 PROPERTIES
+        FOLDER Libs
+        CXX_STANDARD 17
+        CXX_STANDARD_REQUIRED ON)
+    target_link_libraries(refactor-test-suite PUBLIC refactor-17)
+    set(HAVE_CPP17 ON)
 endif()
 configure_file(Config.h.in include/Config.h)
 set_target_properties(refactor-test-suite PROPERTIES
-    CXX_STANDARD ${cxx_standard}
+    CXX_STANDARD 11
     CXX_STANDARD_REQUIRED ON
     FOLDER Tools
 )

@@ -33,6 +33,11 @@ extern void TestRenameCpp14();
 #else
 inline void TestRenameCpp14() {}
 #endif
+#ifdef HAVE_CPP17
+extern void TestRenameCpp17();
+#else
+inline void TestRenameCpp17() {}
+#endif
 extern void TestRenameFileToMatchType();
 extern void TestRenameTypeToMatchFile();
 extern void TestReorderParameters();

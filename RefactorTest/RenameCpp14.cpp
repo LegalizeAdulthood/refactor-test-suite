@@ -84,16 +84,16 @@ void f4()
     // #TEST#: R630 Rename use of val
     // #TEST#: R631 Rename use of j
     auto fn = [val = 1, j = i] { return val + j; };
-    // #TEST#: R625 Rename use of fn
+    // #TEST#: R632 Rename use of fn
     REQUIRE_EQUAL(3, fn());
-    // #TEST#: R632 Rename local variable fn2
-    // #TEST#: R633 Rename local capture variable val
-    // #TEST#: R633 Rename local capture variable j
-    // #TEST#: R634 Rename use of i in capture expression
-    // #TEST#: R635 Rename use of val
-    // #TEST#: R636 Rename use of j
+    // #TEST#: R633 Rename local variable fn2
+    // #TEST#: R634 Rename local capture variable val
+    // #TEST#: R635 Rename local capture variable j
+    // #TEST#: R636 Rename use of i in capture expression
+    // #TEST#: R637 Rename use of val
+    // #TEST#: R638 Rename use of j
     auto fn2 = [val = 1, j = i](int k) { return val + j + k; };
-    // #TEST#: R637 Rename use of fn2
+    // #TEST#: R639 Rename use of fn2
     REQUIRE_EQUAL(4, fn2(1));
 }
 
