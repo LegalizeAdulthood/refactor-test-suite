@@ -103,6 +103,14 @@ void f3()
     REQUIRE_EQUAL(10, value);
 }
 
+void f4()
+{
+    // #TEST#: R662 Rename use of g_counter
+    ++RenameCpp17::g_counter;
+    // #TEST#: R663 Rename use of g_counter
+    REQUIRE_EQUAL(1, RenameCpp17::g_counter);
+}
+
 }    // namespace
 
 void TestRenameCpp17()
@@ -110,4 +118,5 @@ void TestRenameCpp17()
     f1();
     f2();
     f3();
+    f4();
 }
