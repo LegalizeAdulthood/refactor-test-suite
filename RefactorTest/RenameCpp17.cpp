@@ -238,6 +238,44 @@ void f5()
     }
 }
 
+void f6()
+{
+    int val{6};
+    // #TEST#: R724 Rename local variable i
+    // #TEST#: R725 Rename use of i
+    // #TEST#: R726 Rename use of val
+    if (int i = val % 2; i == 0)
+    {
+        // #TEST#: R727 Rename use of i
+        ++i;
+        // #TEST#: R728 Rename use of i
+        val = i;
+    }
+    REQUIRE_EQUAL(1, val);
+
+    // #TEST#: R729 Rename local variable i
+    // #TEST#: R730 Rename use of i
+    switch (int i = val % 2; i)
+    {
+    case 0:
+        // #TEST#: R731 Rename use of i
+        ++i;
+        // #TEST#: R732 Rename use of i
+        val = 100 + i;
+        break;
+    case 1:
+        // #TEST#: R733 Rename use of i
+        ++i;
+        // #TEST#: R734 Rename use of i
+        val = 200 + i;
+        break;
+    default:
+        val = 0;
+        break;
+    }
+    REQUIRE_EQUAL(202, val);
+}
+
 }    // namespace
 
 void TestRenameCpp17()
@@ -247,4 +285,5 @@ void TestRenameCpp17()
     f3();
     f4();
     f5();
+    f6();
 }
