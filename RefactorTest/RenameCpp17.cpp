@@ -78,10 +78,36 @@ void f2()
     REQUIRE_EQUAL(10, (f<std::uint32_t, 4>()));
 }
 
+void f3()
+{
+    // #TEST#: R654 Rename local variable initial
+    constexpr int initial{10};
+    // #TEST#: R655 Rename local variable fn
+    // #TEST#: R656 Rename initial in capture list
+    // #TEST#: R657 Rename parameter val
+    // #TEST#: R658 Rename use of initial
+    // #TEST#: R659 Rename use of val
+    constexpr auto fn = [initial](int val) constexpr { return initial + val; };
+    int value;
+    // #TEST#: R660 Rename use of fn
+    if constexpr (15 == fn(5))
+    {
+        value = 10;
+    }
+    else
+    {
+        value = 15;
+    }
+    // #TEST#: R661 Rename use of fn
+    REQUIRE_EQUAL(15, fn(5));
+    REQUIRE_EQUAL(10, value);
+}
+
 }    // namespace
 
 void TestRenameCpp17()
 {
     f1();
     f2();
+    f3();
 }
