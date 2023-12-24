@@ -276,6 +276,66 @@ void f6()
     REQUIRE_EQUAL(202, val);
 }
 
+// #TEST#: R735 Rename template parameter Args
+template <typename... Args>
+// #TEST#: R736 Rename function allUnaryRight
+// #TEST#: R737 Rename use of Args
+// #TEST#: R738 Rename parameter args
+bool allUnaryRight(Args... args)
+{
+    // #TEST#: R739 Rename use of args
+    return (args && ...);
+}
+
+// #TEST#: R740 Rename template parameter Args
+template <typename... Args>
+// #TEST#: R741 Rename function allUnaryLeft
+// #TEST#: R742 Rename use of Args
+// #TEST#: R743 Rename parameter args
+bool allUnaryLeft(Args... args)
+{
+    // #TEST#: R744 Rename use of args
+    return (... && args);
+}
+
+// #TEST#: R745 Rename template parameter Args
+template <typename... Args>
+// #TEST#: R746 Rename function allUnaryLeft
+// #TEST#: R747 Rename use of Args
+// #TEST#: R748 Rename parameter init
+// #TEST#: R749 Rename parameter args
+bool allBinaryRight(bool init, Args... args)
+{
+    // #TEST#: R750 Rename use of init
+    // #TEST#: R751 Rename use of args
+    return (args && ... && init);
+}
+
+// #TEST#: R752 Rename template parameter Args
+template <typename... Args>
+// #TEST#: R753 Rename function allUnaryLeft
+// #TEST#: R754 Rename use of Args
+// #TEST#: R755 Rename parameter init
+// #TEST#: R756 Rename parameter args
+bool allBinaryLeft(bool init, Args... args)
+{
+    // #TEST#: R757 Rename use of init
+    // #TEST#: R758 Rename use of args
+    return (init && ... && args);
+}
+
+void f7()
+{
+    const bool all1 = allUnaryLeft(true, true, true, true);
+    REQUIRE_EQUAL(true, all1);
+    const bool all2 = allUnaryRight(true, true, true, true);
+    REQUIRE_EQUAL(true, all2);
+    const bool all3 = allBinaryLeft(true, true, true, true);
+    REQUIRE_EQUAL(true, all3);
+    const bool all4 = allBinaryRight(true, true, true, true);
+    REQUIRE_EQUAL(true, all4);
+}
+
 }    // namespace
 
 void TestRenameCpp17()
@@ -286,4 +346,5 @@ void TestRenameCpp17()
     f4();
     f5();
     f6();
+    f7();
 }
