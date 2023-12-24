@@ -63,19 +63,20 @@ std::map<const char *, std::vector<std::string>> g_testCases;
 std::vector<std::string> g_labels;
 
 std::string g_currentFile;
+int g_currentLine{};
 
 void checkLabel(std::string_view label)
 {
     if (std::find(g_labels.begin(), g_labels.end(), label) != g_labels.end())
     {
-        throw std::runtime_error("Duplicate test label " + std::string{label} + " in file " + std::string{g_currentFile});
+        throw std::runtime_error(g_currentFile + "(" + std::to_string(g_currentLine) + "): Duplicate test label " + std::string{label});
     }
     const std::string_view prefix = label.substr(0, label.find_first_of("0123456789"));
     const auto pos =
         std::find_if(std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.prefix == prefix; });
     if (pos == std::end(g_tests))
     {
-        throw std::runtime_error("Unknown test prefix " + std::string{prefix} + " in file " + std::string{g_currentFile});
+        throw std::runtime_error(g_currentFile + "(" + std::to_string(g_currentLine) + "): Unknown test prefix " + std::string{prefix});
     }
     g_testCases[pos->prefix].emplace_back(label);
     g_labels.emplace_back(label);
@@ -96,10 +97,12 @@ void scanFile(std::filesystem::path path)
 {
     std::ifstream file(path.string());
     g_currentFile = path.string();
+    g_currentLine = 0;
     while (file)
     {
         std::string line;
         std::getline(file, line);
+        ++g_currentLine;
         scanLine(line);
     }
 }
