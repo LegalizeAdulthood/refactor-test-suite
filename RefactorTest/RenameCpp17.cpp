@@ -1,9 +1,13 @@
 #include "RenameCpp17.h"
 #include "Require.h"
 
+#include <algorithm>
 #include <cstdint>
+#include <iterator>
 #include <string>
+#include <string_view>
 #include <tuple>
+#include <vector>
 
 // C++17 language features:
 // - lambda capture of *this
@@ -336,6 +340,120 @@ void f7()
     REQUIRE_EQUAL(true, all4);
 }
 
+template <typename Value, typename String>
+struct ValueName
+{
+    ValueName(Value value, String name) : value(value), name(name) {}
+    Value value;
+    String name;
+};
+
+void f8()
+{
+    float f1{1.0f};
+    int i1{10};
+    // declarations
+    {
+        // #TEST#: R759 Rename local variable p
+        // #TEST#: R760 Rename use of f1
+        // #TEST#: R761 Rename use of i1
+        std::pair p{f1, i1};
+        // #TEST#: R762 Rename use of p
+        REQUIRE_EQUAL(1.0f, p.first);
+        // #TEST#: R763 Rename use of p
+        REQUIRE_EQUAL(10, p.second);
+        // #TEST#: R764 Rename local variable t
+        // #TEST#: R765 Rename use of f1
+        // #TEST#: R766 Rename use of i1
+        std::tuple t{f1, i1};
+        // #TEST#: R767 Rename use of t
+        REQUIRE_EQUAL(1.0f, std::get<0>(t));
+        // #TEST#: R768 Rename use of t
+        REQUIRE_EQUAL(10, std::get<1>(t));
+    }
+    // new expressions
+    {
+        // #TEST#: R769 Rename local variable p1
+        // #TEST#: R770 Rename use of f1
+        // #TEST#: R771 Rename use of i1
+        const auto *p1 = new std::pair{f1, i1};
+        // #TEST#: R772 Rename use of p1
+        REQUIRE_EQUAL(1.0f, p1->first);
+        // #TEST#: R773 Rename use of p1
+        REQUIRE_EQUAL(10, p1->second);
+        // #TEST#: R774 Rename use of p1
+        delete p1;
+        // #TEST#: R775 Rename local variable name
+        const char *name{"one"};
+        // #TEST#: R776 Rename local variable p2
+        // #TEST#: R777 Rename use of f1
+        // #TEST#: R778 Rename use of name
+        const auto *p2 = new ValueName{f1, std::string_view{name}};
+        // #TEST#: R779 Rename use of p2
+        REQUIRE_EQUAL(1.0f, p2->value);
+        // #TEST#: R780 Rename use of name
+        // #TEST#: R781 Rename use of p2
+        REQUIRE_EQUAL(std::string_view{name}, p2->name);
+        // #TEST#: R782 Rename use of p2
+        delete p2;
+    }
+    // function-style cast expressions
+    {
+        int src[]{1, 2, 3};
+        // #TEST#: R783 Rename local variable dest
+        std::vector<int> dest;
+        // #TEST#: R784 Rename use of dest
+        std::copy(std::begin(src), std::end(src), std::back_insert_iterator(dest));
+        REQUIRE_EQUAL(true, std::equal(std::begin(src), std::end(src), dest.begin()));
+    }
+}
+
+// #TEST#: R785 Rename template parameter T
+template <typename T>
+// #TEST#: R786 Rename struct Container
+struct Container
+{
+    // #TEST#: R787 Rename use of Container
+    // #TEST#: R788 Rename use of T
+    Container(T t) : m_how(1) {}
+
+    // #TEST#: R789 Rename template parameter Iter
+    template <typename Iter>
+    // #TEST#: R790 Rename use of Container
+    // #TEST#: R791 Rename use of Iter
+    Container(Iter begin, Iter end) : m_how(2)
+    {
+    }
+
+    int m_how{};
+};
+
+// #TEST#: R792 Rename template parameter Iter
+template <typename Iter>
+// #TEST#: R793 Rename first use of Container
+// #TEST#: R794 Rename first use of Iter
+// #TEST#: R795 Rename second use of Iter
+// #TEST#: R796 Rename second use of Container
+// #TEST#: R797 Rename third use of Iter
+Container(Iter begin, Iter end) -> Container<typename std::iterator_traits<Iter>::value_type>;
+
+void f9()
+{
+    // #TEST#: R798 Rename use of Container
+    // #TEST#: R799 Rename local variable c1
+    const Container c1{7};
+    // #TEST#: R800 Rename use of c1
+    REQUIRE_EQUAL(1, c1.m_how);
+    std::vector vals{1.0f, 2.0f, 3.0f};
+    // #TEST#: R801 Rename use of Container
+    // #TEST#: R802 Rename local variable c2
+    // #TEST#: R803 Rename first use of vals
+    // #TEST#: R804 Rename second use of vals
+    const Container c2{vals.begin(), vals.end()};
+    // #TEST#: R805 Rename use of c2
+    REQUIRE_EQUAL(2, c2.m_how);
+}
+
 }    // namespace
 
 void TestRenameCpp17()
@@ -347,4 +465,6 @@ void TestRenameCpp17()
     f5();
     f6();
     f7();
+    f8();
+    f9();
 }
