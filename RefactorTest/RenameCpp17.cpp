@@ -23,8 +23,14 @@
 // - using-declaration declaring multiple names
 // - attribute namespace don't have to repeat
 
-namespace RenameCpp17
+// #TEST#: R810 Rename A
+// #TEST#: R811 Rename B
+// #TEST#: R812 Rename C
+namespace RenameCpp17::A::B::C
 {
+
+// #TEST#: R813 Rename x
+int x{10};
 
 }    // namespace RenameCpp17
 
@@ -454,6 +460,24 @@ void f9()
     REQUIRE_EQUAL(2, c2.m_how);
 }
 
+void f10()
+{
+    // #TEST#: R814 Rename A
+    // #TEST#: R815 Rename B
+    // #TEST#: R816 Rename C
+    // #TEST#: R817 Rename x
+    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::x);
+
+    {
+        // #TEST#: R818 Rename A
+        // #TEST#: R819 Rename B
+        // #TEST#: R820 Rename C
+        using namespace RenameCpp17::A::B::C;
+        // #TEST#: R821 Rename x
+        REQUIRE_EQUAL(10, x);
+    }
+}
+
 }    // namespace
 
 void TestRenameCpp17()
@@ -467,4 +491,5 @@ void TestRenameCpp17()
     f7();
     f8();
     f9();
+    f10();
 }
