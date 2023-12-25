@@ -85,9 +85,50 @@ void f1()
     }
 }
 
+// designated initializers
+void f2()
+{
+    // #TEST#: R863 Rename use of Point
+    using RenameCpp20::Point;
+    {
+        // #TEST#: R864 Rename use of Point
+        // #TEST#: R865 Rename use of x
+        Point p{.x = 10};
+        // #TEST#: R866 Rename use of x
+        REQUIRE_EQUAL(10, p.x);
+        // #TEST#: R867 Rename use of y
+        REQUIRE_EQUAL(0, p.y);
+        // #TEST#: R868 Rename use of z
+        REQUIRE_EQUAL(0, p.z);
+    }
+    {
+        // #TEST#: R869 Rename use of Point
+        // #TEST#: R870 Rename use of x
+        Point p{.y = 10};
+        // #TEST#: R871 Rename use of x
+        REQUIRE_EQUAL(0, p.x);
+        // #TEST#: R872 Rename use of y
+        REQUIRE_EQUAL(10, p.y);
+        // #TEST#: R873 Rename use of z
+        REQUIRE_EQUAL(0, p.z);
+    }
+    {
+        // #TEST#: R874 Rename use of Point
+        // #TEST#: R875 Rename use of x
+        Point p{.x = 20, .y = 10};
+        // #TEST#: R876 Rename use of x
+        REQUIRE_EQUAL(20, p.x);
+        // #TEST#: R877 Rename use of y
+        REQUIRE_EQUAL(10, p.y);
+        // #TEST#: R878 Rename use of z
+        REQUIRE_EQUAL(0, p.z);
+    }
+}
+
 }    // namespace
 
 void TestRenameCpp20()
 {
     f1();
+    f2();
 }
