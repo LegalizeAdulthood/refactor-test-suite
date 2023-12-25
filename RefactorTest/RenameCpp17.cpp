@@ -32,7 +32,10 @@ namespace RenameCpp17::A::B::C
 // #TEST#: R813 Rename x
 int x{10};
 
-}    // namespace RenameCpp17
+int y{20};
+int z{30};
+
+}    // namespace RenameCpp17::A::B::C
 
 namespace
 {
@@ -441,7 +444,7 @@ template <typename Iter>
 // #TEST#: R795 Rename second use of Iter
 // #TEST#: R796 Rename second use of Container
 // #TEST#: R797 Rename third use of Iter
-Container(Iter begin, Iter end) -> Container<typename std::iterator_traits<Iter>::value_type>;
+Container(Iter begin, Iter end)->Container<typename std::iterator_traits<Iter>::value_type>;
 
 void f9()
 {
@@ -478,6 +481,45 @@ void f10()
     }
 }
 
+void f11()
+{
+    {
+        // #TEST#: R822 Rename A
+        // #TEST#: R823 Rename B
+        // #TEST#: R824 Rename C
+        // #TEST#: R825 Rename y
+        // #TEST#: R826 Rename z
+        using RenameCpp17::A::B::C::y, RenameCpp17::A::B::C::z;
+        // #TEST#: R827 Rename use of y
+        // #TEST#: R828 Rename use of z
+        REQUIRE_EQUAL(50, y + z);
+    }
+    {
+        using namespace RenameCpp17;
+        // #TEST#: R829 Rename A
+        // #TEST#: R830 Rename B
+        // #TEST#: R831 Rename C
+        // #TEST#: R832 Rename y
+        // #TEST#: R833 Rename z
+        using A::B::C::y, A::B::C::z;
+        // #TEST#: R834 Rename use of y
+        // #TEST#: R835 Rename use of z
+        REQUIRE_EQUAL(50, y + z);
+    }
+    {
+        // #TEST#: R836 Rename A
+        using namespace RenameCpp17::A;
+        // #TEST#: R837 Rename B
+        // #TEST#: R838 Rename C
+        // #TEST#: R839 Rename y
+        // #TEST#: R840 Rename z
+        using B::C::y, B::C::z;
+        // #TEST#: R841 Rename use of y
+        // #TEST#: R842 Rename use of z
+        REQUIRE_EQUAL(50, y + z);
+    }
+}
+
 }    // namespace
 
 void TestRenameCpp17()
@@ -492,4 +534,5 @@ void TestRenameCpp17()
     f8();
     f9();
     f10();
+    f11();
 }

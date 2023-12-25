@@ -10,6 +10,9 @@ namespace A::B::C
 {
 // #TEST#: R809 Rename x
 extern int x;
+
+extern int y;
+extern int z;
 }
 
 // #TEST#: R664 Rename variable g_counter
