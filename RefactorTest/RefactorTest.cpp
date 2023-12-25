@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
         TestRenameCpp11();
         TestRenameCpp14();
         TestRenameCpp17();
+        TestRenameCpp20();
         TestReorderParameters();
         TestReplaceIfWithTernary();
         TestReplaceIterativeForWithRangeFor();
