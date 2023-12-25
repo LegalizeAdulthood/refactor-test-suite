@@ -3,6 +3,8 @@
 
 #include <compare>
 #include <iostream>
+#include <sstream>
+#include <vector>
 
 // C++20 language features:
 // - spaceship compare operator
@@ -125,10 +127,52 @@ void f2()
     }
 }
 
+// #TEST#: R879 Rename function gen
+std::vector<int> gen() { return {1, 2, 3, 4, 5}; }
+
+// #TEST#: R880 Rename function sink
+void sink(int sum)
+{
+    std::ostringstream str;
+    str << sum << '\n';
+}
+
+// init statements and initializers in range for
+void f3()
+{
+    std::vector<int> v;
+    v.push_back(10);
+    {
+        int sum{};
+        // #TEST#: R881 Rename function gen
+        // #TEST#: R882 Rename local variable i
+        // #TEST#: R883 Rename use of v
+        for (v = gen(); const int i : v)
+        {
+            // #TEST#: R884 Rename use of i
+            sum += i;
+        }
+        REQUIRE_EQUAL(1 + 2 + 3 + 4 + 5, sum);
+    }
+    {
+        int sum{};
+        // #TEST#: R885 Rename function sink
+        // #TEST#: R886 Rename local variable i
+        // #TEST#: R887 Rename use of v
+        for (sink(sum); const int i : v)
+        {
+            // #TEST#: R888 Rename use of i
+            sum += i;
+        }
+        REQUIRE_EQUAL(1 + 2 + 3 + 4 + 5, sum);
+    }
+}
+
 }    // namespace
 
 void TestRenameCpp20()
 {
     f1();
     f2();
+    f3();
 }
