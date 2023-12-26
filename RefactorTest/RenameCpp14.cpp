@@ -45,11 +45,11 @@ void f1()
 {
     {
         using namespace RenameCpp14;
-        // #TEST#: R612 Rename variable template pi
+        // #TEST#: R612 Rename use of pi
         REQUIRE_EQUAL(pi<float>, circularArea(1.0f));
     }
 
-    // #TEST#: R613 Rename variable template pi
+    // #TEST#: R613 Rename use of pi
     REQUIRE_EQUAL(RenameCpp14::pi<float>, RenameCpp14::circularArea(1.0f));
 }
 
@@ -57,11 +57,11 @@ void f2()
 {
     {
         using namespace RenameCpp14;
-        // #TEST#: R614 Rename variable template pi2
+        // #TEST#: R614 Rename use of pi2
         REQUIRE_EQUAL(pi2<float>, circularArea2(1.0f));
     }
 
-    // #TEST#: R615 Rename variable template pi2
+    // #TEST#: R615 Rename use of pi2
     REQUIRE_EQUAL(RenameCpp14::pi2<float>, RenameCpp14::circularArea2(1.0f));
 }
 
