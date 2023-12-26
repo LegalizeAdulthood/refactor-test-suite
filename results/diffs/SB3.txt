@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/SimplifyBooleanExpression.cpp b/RefactorTest/SimplifyBooleanExpression.cpp
+index 22c075d..d4b3579 100644
+--- a/RefactorTest/SimplifyBooleanExpression.cpp
++++ b/RefactorTest/SimplifyBooleanExpression.cpp
+@@ -36,7 +36,7 @@ void TestSimplifyBooleanExpression()
+     REQUIRE_EQUAL(true, !b3);
+ 
+     // #TEST#: SB3 Simplify boolean rhs to true
+-    bool b4 = true || b1;
++    bool b4 = true;
+     REQUIRE_EQUAL(true, b4);
+ 
+     // #TEST#: SB4 Simplify boolean rhs to b1
