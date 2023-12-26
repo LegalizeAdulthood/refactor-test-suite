@@ -218,6 +218,22 @@ void f5()
     REQUIRE_EQUAL(3, f5Fn(1, 1, 1));
 }
 
+// #TEST#: R907 Rename function sqr
+// #TEST#: R908 Rename parameter n
+consteval int sqr(int n)
+{
+    // #TEST#: R909 Rename first use of n
+    // #TEST#: R910 Rename second use of n
+    return n * n;
+}
+
+// consteval
+void f6()
+{
+    // #TEST#: R911 Rename use of sqr
+    REQUIRE_EQUAL(4, sqr(2));
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -227,4 +243,5 @@ void TestRenameCpp20()
     f3();
     f4();
     f5();
+    f6();
 }
