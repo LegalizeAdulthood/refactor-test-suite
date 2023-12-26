@@ -3,8 +3,8 @@
 #include <sstream>
 #include <stdexcept>
 
-template <typename T>
-void require_equal(T expected, T actual)
+template <typename T, typename U>
+void require_equal(T expected, U actual)
 {
     if (expected != actual)
     {
@@ -14,8 +14,8 @@ void require_equal(T expected, T actual)
     }
 }
 
-template <typename T>
-void require_equal(char const *file, unsigned line, T expected, T actual)
+template <typename T, typename U>
+void require_equal(char const *file, unsigned line, T expected, U actual)
 {
     if (expected != actual)
     {
