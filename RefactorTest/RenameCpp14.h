@@ -17,4 +17,4 @@ T circularArea2(T r)
     return pi2<T> * r * r;
 }
 
-}
+}    // namespace RenameCpp14

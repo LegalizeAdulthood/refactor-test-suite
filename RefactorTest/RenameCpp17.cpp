@@ -102,7 +102,10 @@ void f3()
     // #TEST#: R657 Rename parameter val
     // #TEST#: R658 Rename use of initial
     // #TEST#: R659 Rename use of val
-    constexpr auto fn = [initial](int val) constexpr { return initial + val; };
+    constexpr auto fn = [initial](int val) constexpr
+    {
+        return initial + val;
+    };
     int value;
     // #TEST#: R660 Rename use of fn
     if constexpr (15 == fn(5))
@@ -352,7 +355,9 @@ void f7()
 template <typename Value, typename String>
 struct ValueName
 {
-    ValueName(Value value, String name) : value(value), name(name) {}
+    ValueName(Value value, String name) : value(value), name(name)
+    {
+    }
     Value value;
     String name;
 };
@@ -424,7 +429,9 @@ struct Container
 {
     // #TEST#: R787 Rename use of Container
     // #TEST#: R788 Rename use of T
-    Container(T t) : m_how(1) {}
+    Container(T t) : m_how(1)
+    {
+    }
 
     // #TEST#: R789 Rename template parameter Iter
     template <typename Iter>

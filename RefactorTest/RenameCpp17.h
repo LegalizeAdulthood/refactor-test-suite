@@ -13,7 +13,7 @@ extern int x;
 
 extern int y;
 extern int z;
-}
+}    // namespace A::B::C
 
 // #TEST#: R664 Rename variable g_counter
 inline int g_counter{0};

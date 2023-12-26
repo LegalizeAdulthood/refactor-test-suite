@@ -132,7 +132,10 @@ void f2()
 }
 
 // #TEST#: R879 Rename function gen
-std::vector<int> gen() { return {1, 2, 3, 4, 5}; }
+std::vector<int> gen()
+{
+    return {1, 2, 3, 4, 5};
+}
 
 // #TEST#: R880 Rename function sink
 void sink(int sum)
