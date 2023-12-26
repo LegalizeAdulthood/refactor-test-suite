@@ -63,19 +63,25 @@ std::vector<std::string> g_labels;
 std::vector<std::string> g_deprecatedLabels;
 std::string g_currentFile;
 int g_currentLine{};
+std::vector<std::string> g_errors;
+std::vector<std::string> g_warnings;
 
 void checkLabel(std::string_view label, std::string_view desc)
 {
     if (std::find(g_labels.begin(), g_labels.end(), label) != g_labels.end())
     {
-        throw std::runtime_error(g_currentFile + "(" + std::to_string(g_currentLine) + "): Duplicate test label " + std::string{label});
+        g_errors.emplace_back(g_currentFile + "(" + std::to_string(g_currentLine) + "): Duplicate test label "
+                              + std::string{label});
+        return;
     }
     const std::string_view prefix = label.substr(0, label.find_first_of("0123456789"));
     const auto pos =
         std::find_if(std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.prefix == prefix; });
     if (pos == std::end(g_tests))
     {
-        throw std::runtime_error(g_currentFile + "(" + std::to_string(g_currentLine) + "): Unknown test prefix " + std::string{prefix});
+        g_errors.emplace_back(g_currentFile + "(" + std::to_string(g_currentLine) + "): Unknown test prefix "
+                              + std::string{prefix});
+        return;
     }
     g_testCases[pos->prefix].emplace_back(label);
     g_labels.emplace_back(label);
@@ -92,7 +98,8 @@ void scanLine(std::string_view line)
         const size_t begin = line.find_first_not_of(" \t", line.find_first_of(' ', pos));
         const size_t end = line.find_first_of(' ', begin);
         const std::string_view label = line.substr(begin, end - begin);
-        const std::string_view desc = end != std::string_view::npos ? line.substr(line.find_first_not_of(' ', end)) : "";
+        const std::string_view desc =
+            end != std::string_view::npos ? line.substr(line.find_first_not_of(' ', end)) : "";
         checkLabel(label, desc);
     }
 }
@@ -140,8 +147,45 @@ void sortTestCases()
     }
 }
 
+void checkMissingTestCases()
+{
+    const auto extractCaseNum = [](const std::string &label)
+    { return std::stoi(label.substr(label.find_first_of("0123456789"))); };
+    for (const Test &test : g_tests)
+    {
+        int num{1};
+        for (const std::string &testCase : g_testCases[test.prefix])
+        {
+            int caseNum = extractCaseNum(testCase);
+            do
+            {
+                if (num != caseNum)
+                {
+                    g_warnings.emplace_back(std::string{"Missing test case "} + test.prefix + std::to_string(num));
+                }
+            } while (num++ != caseNum);
+        }
+    }
+}
+
 void printMarkDown(std::ostream &out)
 {
+    if (!g_errors.empty())
+    {
+        for (const std::string &error : g_errors)
+        {
+            std::cerr << error << '\n';
+        }
+        throw std::runtime_error("Test case errors detected");
+    }
+    if (!g_warnings.empty())
+    {
+        for (const std::string &warning : g_warnings)
+        {
+            std::cerr << "WARNING: " << warning << '\n';
+        }
+    }
+
     out << "# Tool\n\n";
 
     for (const Test &test : g_tests)
@@ -171,6 +215,7 @@ int main(const std::vector<std::string_view> &args)
 
         scanDirectory(args[1]);
         sortTestCases();
+        checkMissingTestCases();
         printMarkDown(std::cout);
         return 0;
     }
