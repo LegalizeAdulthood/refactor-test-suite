@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
+index ee4f918..7f10b04 100644
+--- a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
++++ b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
+@@ -110,7 +110,7 @@ static void TestMemberPointers()
+         int Method0() { return 0; }
+     };
+     // #TEST#: RZNP27 Replace NULL with nullptr
+-    int (Foo::*member)() = NULL;
++    int (Foo::*member)() = nullptr;
+     REQUIRE_EQUAL(true, !member);
+ 
+     // #TEST#: RZNP28 Replace 0 with nullptr
