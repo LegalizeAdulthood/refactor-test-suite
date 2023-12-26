@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/FlattenConditional.cpp b/RefactorTest/FlattenConditional.cpp
+index 44fc19c..8dd93ca 100644
+--- a/RefactorTest/FlattenConditional.cpp
++++ b/RefactorTest/FlattenConditional.cpp
+@@ -13,15 +13,9 @@ namespace FlattenConditionNamespace
+ int TestGuardClause(int *x, int y, int z)
+ {
+     // #TEST#: FC1 Flatten Conditional
+-    if (x != 0)
++    if (x != 0 && y > 0 && z > 0)
+     {
+-        if (y > 0)
+-        {
+-            if (z > 0)
+-            {
+-                return (*x + 10) * y * z;
+-            }
+-        }
++        return (*x + 10) * y * z;
+     }
+     return -1;
+ }
