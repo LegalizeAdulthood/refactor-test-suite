@@ -1,0 +1,23 @@
+diff --git a/RefactorTest/ReplaceIfWithTernary.cpp b/RefactorTest/ReplaceIfWithTernary.cpp
+index 1adea1b..bf60154 100644
+--- a/RefactorTest/ReplaceIfWithTernary.cpp
++++ b/RefactorTest/ReplaceIfWithTernary.cpp
+@@ -53,17 +53,7 @@ void TestInteger()
+     REQUIRE_EQUAL(10, x);
+ 
+     // #TEST#: RIT4 Replace If With Ternary Expression
+-    if (y == 10)
+-    {
+-        x = y;
+-    }
+-    else
+-    {
+-        if (y != 10)
+-        {
+-            x = 1;
+-        }
+-    }
++    x = y == 10 ? y : 1;
+     REQUIRE_EQUAL(10, x);
+ }
+ 
