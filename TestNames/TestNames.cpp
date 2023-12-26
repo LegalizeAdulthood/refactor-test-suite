@@ -170,20 +170,20 @@ void checkMissingTestCases()
 
 void printMarkDown(std::ostream &out)
 {
-    if (!g_errors.empty())
-    {
-        for (const std::string &error : g_errors)
-        {
-            std::cerr << error << '\n';
-        }
-        throw std::runtime_error("Test case errors detected");
-    }
     if (!g_warnings.empty())
     {
         for (const std::string &warning : g_warnings)
         {
-            std::cerr << "WARNING: " << warning << '\n';
+            std::cerr << "warning: " << warning << '\n';
         }
+    }
+    if (!g_errors.empty())
+    {
+        for (const std::string &error : g_errors)
+        {
+            std::cerr << "error: " << error << '\n';
+        }
+        throw std::runtime_error("Test case errors detected");
     }
 
     out << "# Tool\n\n";
