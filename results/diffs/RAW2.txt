@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+index 19ce6b0..3cfda37 100644
+--- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
++++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+@@ -12,7 +12,7 @@ std::string const backslash{"goink\\frob"};
+ std::string const newline{"goink\nfrob"};
+ 
+ // #TEST#: RAW3
+-std::string const tab{"goink\tfrob"};
++std::string const tab{R"(goink	frob)"};
+ 
+ // #TEST#: RAW4
+ std::string const single_quote{"goink\'frob"};

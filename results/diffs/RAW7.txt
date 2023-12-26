@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+index 19ce6b0..bc89baf 100644
+--- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
++++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+@@ -24,7 +24,7 @@ std::string const double_quote{"goink\"frob"};
+ std::string const question_mark{"goink\?frob"};
+ 
+ // #TEST#: RAW7
+-std::string const regex{"goink\\(one|two\\)\\\\\\?.*\\nfrob"};
++std::string const regex{R"(goink\(one|two\)\\\?.*\nfrob)"};
+ 
+ // #TEST#: RAW8
+ std::string const path{"C:\\Program Files\\Vendor\\Application\\Application.exe"};

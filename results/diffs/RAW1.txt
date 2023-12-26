@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+index 19ce6b0..f9e90bc 100644
+--- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
++++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+@@ -6,7 +6,7 @@
+ namespace
+ {
+ // #TEST#: RAW1
+-std::string const backslash{"goink\\frob"};
++std::string const backslash{R"(goink\frob)"};
+ 
+ // #TEST#: RAW2
+ std::string const newline{"goink\nfrob"};

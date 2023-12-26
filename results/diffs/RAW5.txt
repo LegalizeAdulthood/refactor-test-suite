@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+index 19ce6b0..98aa7c9 100644
+--- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
++++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+@@ -18,7 +18,7 @@ std::string const tab{"goink\tfrob"};
+ std::string const single_quote{"goink\'frob"};
+ 
+ // #TEST#: RAW5
+-std::string const double_quote{"goink\"frob"};
++std::string const double_quote{R"(goink"frob)"};
+ 
+ // #TEST#: RAW6
+ std::string const question_mark{"goink\?frob"};

@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+index 19ce6b0..f019abf 100644
+--- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
++++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+@@ -27,7 +27,7 @@ std::string const question_mark{"goink\?frob"};
+ std::string const regex{"goink\\(one|two\\)\\\\\\?.*\\nfrob"};
+ 
+ // #TEST#: RAW8
+-std::string const path{"C:\\Program Files\\Vendor\\Application\\Application.exe"};
++std::string const path{R"(C:\Program Files\Vendor\Application\Application.exe)"};
+ 
+ // #TEST#: RAW9
+ std::string const contains_sentinel{"whoops)\""};
