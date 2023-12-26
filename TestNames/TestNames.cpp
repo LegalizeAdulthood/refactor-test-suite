@@ -59,13 +59,12 @@ constexpr Test g_tests[]{
 };
 
 std::map<const char *, std::vector<std::string>> g_testCases;
-
 std::vector<std::string> g_labels;
-
+std::vector<std::string> g_deprecatedLabels;
 std::string g_currentFile;
 int g_currentLine{};
 
-void checkLabel(std::string_view label)
+void checkLabel(std::string_view label, std::string_view desc)
 {
     if (std::find(g_labels.begin(), g_labels.end(), label) != g_labels.end())
     {
@@ -80,16 +79,21 @@ void checkLabel(std::string_view label)
     }
     g_testCases[pos->prefix].emplace_back(label);
     g_labels.emplace_back(label);
+    if (desc == "(deprecated)")
+    {
+        g_deprecatedLabels.emplace_back(label);
+    }
 }
 
 void scanLine(std::string_view line)
 {
     if (size_t pos = line.find("#TEST#"); pos != std::string::npos)
     {
-        size_t begin = line.find_first_not_of(" \t", line.find_first_of(' ', pos));
-        size_t end = line.find_first_of(' ', begin);
-        std::string_view label = line.substr(begin, end - begin);
-        checkLabel(label);
+        const size_t begin = line.find_first_not_of(" \t", line.find_first_of(' ', pos));
+        const size_t end = line.find_first_of(' ', begin);
+        const std::string_view label = line.substr(begin, end - begin);
+        const std::string_view desc = end != std::string_view::npos ? line.substr(line.find_first_not_of(' ', end)) : "";
+        checkLabel(label, desc);
     }
 }
 
@@ -142,9 +146,15 @@ void printMarkDown(std::ostream &out)
 
     for (const Test &test : g_tests)
     {
-        out << "\n## " << test.name << "\nCase | Result\n";
+        out << "\n## " << test.name
+            << "\nCase | Result\n"
+               "---- | ------\n";
         for (const std::string &testCase : g_testCases[test.prefix])
         {
+            if (std::find(g_deprecatedLabels.begin(), g_deprecatedLabels.end(), testCase) != g_deprecatedLabels.end())
+            {
+                continue;
+            }
             out << testCase << " | \n";
         }
     }
