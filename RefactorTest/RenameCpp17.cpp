@@ -104,6 +104,8 @@ void f3()
 {
     // #TEST#: R654 Rename local variable initial
     constexpr int initial{10};
+    // #TEST#: R968 Rename use of initial
+    static_assert(10 == initial);
     // #TEST#: R655 Rename local variable fn
     // #TEST#: R656 Rename initial in capture list
     // #TEST#: R657 Rename parameter val
@@ -113,6 +115,8 @@ void f3()
     {
         return initial + val;
     };
+    // #TEST#: R969 Rename use of fn
+    static_assert(10 == fn(0));
     int value;
     // #TEST#: R660 Rename use of fn
     if constexpr (15 == fn(5))
@@ -186,7 +190,9 @@ void f5()
         // #TEST#: R687 Rename binding name
         // #TEST#: R688 Rename use of p
         const auto [val, name] = p;
+        // #TEST#: R970 Rename use of val
         REQUIRE_EQUAL(1, val);
+        // #TEST#: R971 Rename use of name
         REQUIRE_EQUAL(std::string{"one"}, name);
         // #TEST#: R689 Rename binding val2
         // #TEST#: R690 Rename binding name2
