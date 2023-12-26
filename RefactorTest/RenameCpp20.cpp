@@ -234,6 +234,27 @@ void f6()
     REQUIRE_EQUAL(4, sqr(2));
 }
 
+const char *f7DynamicInit()
+{
+    return "dynamic initializer";
+}
+
+constexpr const char *f7Init(bool param)
+{
+    return param ? "constant initializer" : f7DynamicInit();
+}
+
+// #TEST#: R912 Rename variable f7Val
+// #TEST#: R913 Rename function f7Init
+constinit const char *f7Val = f7Init(true);
+
+// constinit
+void f7()
+{
+    // #TEST#: R914 Rename use of f7Val
+    REQUIRE_EQUAL(std::string{"constant initializer"}, f7Val);
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -244,4 +265,5 @@ void TestRenameCpp20()
     f4();
     f5();
     f6();
+    f7();
 }
