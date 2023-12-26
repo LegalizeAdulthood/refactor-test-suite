@@ -16,8 +16,11 @@ struct Test
 {
     const char *name;
     const char *prefix;
+    bool required{true};    // true if diffs are required for this test case.
 };
 
+// Refactorings not requiring diffs are those that are not widely supported across tools and
+// therefore specific to only one or two tools.
 constexpr Test g_tests[]{
     {"Add Block Delimiter", "ABD"},
     {"Add Override", "AO"},
@@ -25,9 +28,9 @@ constexpr Test g_tests[]{
     {"Change Signature", "CS"},
     {"Create Method Stub", "CMS"},
     {"Create Multi-Variable Declaration", "CMVD"},
-    {"Create Overload", "CO"},
-    {"Create Setter Method", "CSM"},
-    {"Extract Constant", "EC"},
+    {"Create Overload", "CO", false},
+    {"Create Setter Method", "CSM", false},
+    {"Extract Constant", "EC", false},
     {"Extract Function", "EXF"},
     {"Extract Method", "EM"},
     {"Extract Parameter", "EP"},
@@ -156,6 +159,11 @@ void checkDiffs(std::ostream &out)
 {
     for (const Test &test : g_tests)
     {
+        if (!test.required)
+        {
+            continue;
+        }
+
         for (const std::string &testCase : g_testCases[test.prefix])
         {
             if (std::find(g_diffs.begin(), g_diffs.end(), testCase + ".txt") == g_diffs.end())
