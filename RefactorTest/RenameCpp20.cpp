@@ -10,18 +10,19 @@
 #include <vector>
 
 // C++20 language features:
-// - spaceship compare operator
-// - designated initializers
-// - init statements and initializers in range for
-// - explicit template parameters in lambdas
-// - pack expansions in lambda init captures
-// - consteval
-// - constinit
-// - aggregate initialization using parentheses
-// - coroutines
-// - modules
-// - constraints and concepts
-// - abbreviated function template
+// [X] spaceship compare operator
+// [X] designated initializers
+// [X] init statements and initializers in range for
+// [X] explicit template parameters in lambdas
+// [X] pack expansions in lambda init captures
+// [X] consteval
+// [X] constinit
+// [X] aggregate initialization using parentheses
+// [X] coroutines: co_yield
+// [ ] coroutines: co_await
+// [ ] modules
+// [ ] constraints and concepts
+// [X] abbreviated function template
 
 std::ostream &operator<<(std::ostream &str, const std::strong_ordering &val)
 {
@@ -255,7 +256,7 @@ void f7()
     REQUIRE_EQUAL(std::string{"constant initializer"}, f7Val);
 }
 
-// - aggregate initialization using parentheses
+// aggregate initialization using parentheses
 void f8()
 {
     int one = 1;
@@ -337,7 +338,7 @@ RenameCpp20::Generator<int> fibonacci(int n)
     }
 }
 
-// - coroutines: co_yield
+// coroutines: co_yield
 void f9()
 {
     // #TEST#: R934 Rename local variable gen
@@ -363,6 +364,78 @@ void f9()
     REQUIRE_EQUAL(34, v[9]);
 }
 
+// #TEST#: R938 Rename function autoSqr
+// #TEST#: R939 Rename parameter t
+auto autoSqr(auto t)
+{
+    // #TEST#: R940 Rename first use of t
+    // #TEST#: R941 Rename second use of t
+    return t * t;
+}
+
+// #TEST#: R942 Rename function autoSqrInPlace
+// #TEST#: R943 Rename parameter t
+void autoSqrInPlace(auto &t)
+{
+    t *= t;
+}
+
+// #TEST#: R944 Rename function autoSqrPtr
+// #TEST#: R945 Rename parameter t
+void autoSqrPtr(auto *t)
+{
+    *t *= *t;
+}
+
+// #TEST#: R946 Rename function product
+// #TEST#: R947 Rename parameter first
+// #TEST#: R948 Rename parameter args
+auto product(auto first, auto... args)
+{
+    // #TEST#: R949 Rename use of first
+    // #TEST#: R950 Rename use of args
+    return (first * ... * args);
+}
+
+// abbreviated function template
+void f10()
+{
+    // #TEST#: R951 Rename use of autoSqr
+    REQUIRE_EQUAL(4, autoSqr(2));
+    // #TEST#: R952 Rename use of autoSqr
+    REQUIRE_EQUAL(4.0f, autoSqr(2.0f));
+    {
+        int t{2};
+        // #TEST#: R953 Rename use of autoSqrInPlace
+        autoSqrInPlace(t);
+        REQUIRE_EQUAL(4, t);
+    }
+    {
+        float t{2.0f};
+        // #TEST#: R954 Rename use of autoSqrInPlace
+        autoSqrInPlace(t);
+        REQUIRE_EQUAL(4.0f, t);
+    }
+    {
+        int t{2};
+        // #TEST#: R955 Rename use of autoSqrPtr
+        autoSqrPtr(&t);
+        REQUIRE_EQUAL(4, t);
+    }
+    {
+        float t{2.0f};
+        // #TEST#: R956 Rename use of autoSqrPtr
+        autoSqrPtr(&t);
+        REQUIRE_EQUAL(4.0f, t);
+    }
+    {
+        // #TEST#: R957 Rename use of product
+        REQUIRE_EQUAL(6, product(1, 2, 3));
+        // #TEST#: R958 Rename use of product
+        REQUIRE_EQUAL(6.0f, product(1.0f, 2.0f, 3.0f));
+    }
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -376,4 +449,5 @@ void TestRenameCpp20()
     f7();
     f8();
     f9();
+    f10();
 }
