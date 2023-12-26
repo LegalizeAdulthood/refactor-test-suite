@@ -1,4 +1,5 @@
-#include <cassert>
+#include "Require.h"
+
 #include <cstddef>
 
 // Replace uses of NULL or 0 with nullptr
@@ -21,32 +22,32 @@ public:
         h(NULL), // #TEST#: RZNP11 Replace NULL with nullptr
         i(0)     // #TEST#: RZNP12 Replace 0 with nullptr
     {
-        assert(!p_);
-        assert(!q_);
-        assert(!f_);
-        assert(!g_);
-        assert(!h_);
-        assert(!i_);
-        assert(!p);
-        assert(!q);
-        assert(!d);
-        assert(!e);
-        assert(!f);
-        assert(!g);
-        assert(!h);
-        assert(!i);
+        REQUIRE_EQUAL(true, !p_);
+        REQUIRE_EQUAL(true, !q_);
+        REQUIRE_EQUAL(true, !f_);
+        REQUIRE_EQUAL(true, !g_);
+        REQUIRE_EQUAL(true, !h_);
+        REQUIRE_EQUAL(true, !i_);
+        REQUIRE_EQUAL(true, !p);
+        REQUIRE_EQUAL(true, !q);
+        REQUIRE_EQUAL(true, !d);
+        REQUIRE_EQUAL(true, !e);
+        REQUIRE_EQUAL(true, !f);
+        REQUIRE_EQUAL(true, !g);
+        REQUIRE_EQUAL(true, !h);
+        REQUIRE_EQUAL(true, !i);
     }
 
     void check()
     {
-        assert(!p);
-        assert(!q);
-        assert(!d);
-        assert(!e);
-        assert(!f);
-        assert(!g);
-        assert(!h);
-        assert(!i);
+        REQUIRE_EQUAL(true, !p);
+        REQUIRE_EQUAL(true, !q);
+        REQUIRE_EQUAL(true, !d);
+        REQUIRE_EQUAL(true, !e);
+        REQUIRE_EQUAL(true, !f);
+        REQUIRE_EQUAL(true, !g);
+        REQUIRE_EQUAL(true, !h);
+        REQUIRE_EQUAL(true, !i);
     }
 
 private:
@@ -73,12 +74,12 @@ static void TestDefaultArguments(char *p = NULL,             // #TEST#: RZNP13 R
                                  char const *const h = NULL, // #TEST#: RZNP17 Replace NULL with nullptr
                                  char const *const i = 0)    // #TEST#: RZNP18 Replace 0 with nullptr
 {
-    assert(!p);
-    assert(!q);
-    assert(!f);
-    assert(!g);
-    assert(!h);
-    assert(!i);
+    REQUIRE_EQUAL(true, !p);
+    REQUIRE_EQUAL(true, !q);
+    REQUIRE_EQUAL(true, !f);
+    REQUIRE_EQUAL(true, !g);
+    REQUIRE_EQUAL(true, !h);
+    REQUIRE_EQUAL(true, !i);
 }
 
 static void TestAssignment()
@@ -92,13 +93,13 @@ static void TestAssignment()
     char const *const h = NULL; // #TEST#: RZNP25 Replace NULL with nullptr
     char const *const i = 0;    // #TEST#: RZNP26 Replace 0 with nullptr
 
-    assert(!a);
-    assert(!b);
-    assert(!d);
-    assert(!f);
-    assert(!g);
-    assert(!h);
-    assert(!i);
+    REQUIRE_EQUAL(true, !a);
+    REQUIRE_EQUAL(true, !b);
+    REQUIRE_EQUAL(true, !d);
+    REQUIRE_EQUAL(true, !f);
+    REQUIRE_EQUAL(true, !g);
+    REQUIRE_EQUAL(true, !h);
+    REQUIRE_EQUAL(true, !i);
 }
 
 static void TestMemberPointers()
@@ -110,11 +111,11 @@ static void TestMemberPointers()
     };
     // #TEST#: RZNP27 Replace NULL with nullptr
     int (Foo::*member)() = NULL;
-    assert(!member);
+    REQUIRE_EQUAL(true, !member);
 
     // #TEST#: RZNP28 Replace 0 with nullptr
     member = 0;
-    assert(!member);
+    REQUIRE_EQUAL(true, !member);
 }
 
 void TestReplaceNullZeroWithNullPtr()
