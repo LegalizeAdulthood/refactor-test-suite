@@ -1,8 +1,11 @@
 #include "RenameCpp20.h"
 #include "Require.h"
 
+#include <array>
 #include <compare>
 #include <iostream>
+#include <iterator>
+#include <numeric>
 #include <sstream>
 #include <vector>
 
@@ -10,6 +13,7 @@
 // - spaceship compare operator
 // - designated initializers
 // - init statements and initializers in range for
+// - explicit template parameters in lambdas
 // - pack expansions in lambda init captures
 // - consteval
 // - constinit
@@ -168,6 +172,24 @@ void f3()
     }
 }
 
+// explicit template parameters in lambdas
+void f4()
+{
+    // #TEST#: R889 Rename local variable fn
+    // #TEST#: R890 Rename template parameter N
+    // #TEST#: R891 Rename template parameter T
+    // #TEST#: R892 Rename use of T
+    // #TEST#: R893 Rename use of N
+    auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
+    // #TEST#: R894 Rename use of fn
+    auto vals = fn.operator()<3, int>();
+    std::iota(std::begin(vals), std::end(vals), 10);
+    REQUIRE_EQUAL(3, vals.size());
+    REQUIRE_EQUAL(10, vals[0]);
+    REQUIRE_EQUAL(11, vals[1]);
+    REQUIRE_EQUAL(12, vals[2]);
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -175,4 +197,5 @@ void TestRenameCpp20()
     f1();
     f2();
     f3();
+    f4();
 }
