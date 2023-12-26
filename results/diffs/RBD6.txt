@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RemoveBlockDelimiter.cpp b/RefactorTest/RemoveBlockDelimiter.cpp
+index d36336c..a1b5470 100644
+--- a/RefactorTest/RemoveBlockDelimiter.cpp
++++ b/RefactorTest/RemoveBlockDelimiter.cpp
+@@ -24,10 +24,8 @@ int RemoveBlockDelimiters(bool flag)
+                     // #TEST#: RBD5 Remove delimiters
+                     {
+                         for (int i = 1; i < 10; ++i)
+-                        // #TEST#: RBD6 Remove delimiters
+-                        {
++                            // #TEST#: RBD6 Remove delimiters
+                             ++x;
+-                        }
+                     } while (x < 5);
+                 }
+                 x += 10;
