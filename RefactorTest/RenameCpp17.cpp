@@ -330,21 +330,21 @@ bool allUnaryLeft(Args... args)
 // #TEST#: R745 Rename template parameter Args
 template <typename... Args>
 // #TEST#: R746 Rename function allBinaryRight
-// #TEST#: R747 Rename use of Args
 // #TEST#: R748 Rename parameter init
+// #TEST#: R747 Rename use of Args
 // #TEST#: R749 Rename parameter args
 bool allBinaryRight(bool init, Args... args)
 {
-    // #TEST#: R750 Rename use of init
     // #TEST#: R751 Rename use of args
+    // #TEST#: R750 Rename use of init
     return (args && ... && init);
 }
 
 // #TEST#: R752 Rename template parameter Args
 template <typename... Args>
 // #TEST#: R753 Rename function allBinaryLeft
-// #TEST#: R754 Rename use of Args
 // #TEST#: R755 Rename parameter init
+// #TEST#: R754 Rename use of Args
 // #TEST#: R756 Rename parameter args
 bool allBinaryLeft(bool init, Args... args)
 {
