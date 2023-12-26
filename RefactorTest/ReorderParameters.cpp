@@ -7,7 +7,7 @@ namespace ReorderParametersNamespace
 {
 int Function1(int x) { return x * 2; }
 
-// #TEST#: RP1 Reorder parameters make return value ref parameter
+// #TEST#: RP1 (deprecated)
 int Function2(int x) { return x * 4; }
 
 // #TEST#: RP2 Reorder parameters
