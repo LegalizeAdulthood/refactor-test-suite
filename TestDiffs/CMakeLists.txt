@@ -3,7 +3,7 @@ if(NOT ("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES))
     return()
 endif()
 
-add_executable(test-diffs main.cpp)
+add_executable(test-diffs TestDiffs.cpp)
 set_target_properties(test-diffs PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
