@@ -24,11 +24,14 @@ template <class T>
 // #TEST#: R609 Rename use of template parameter T
 constexpr T pi = T(3.1415926535897932385L);
 
+// #TEST#: R959 Rename template parameter T
 template <class T>
+// #TEST#: R960 Rename first use of T
+// #TEST#: R961 Rename second use of T
 T circularArea(T r)
 {
-    // #TEST#: R610 Rename template parameter T
-    // #TEST#: R611 Rename variable template pi
+    // #TEST#: R610 Rename use of pi
+    // #TEST#: R611 Rename use of T
     return pi<T> * r * r;
 }
 
