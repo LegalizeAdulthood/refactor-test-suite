@@ -304,6 +304,65 @@ void f8()
     }
 }
 
+// #TEST#: R928 Rename function fibonacci
+// #TEST#: R929 Rename parameter n
+RenameCpp20::Generator<int> fibonacci(int n)
+{
+    if (n == 0)
+        co_return;
+
+    int b{};
+    // #TEST#: R930 Rename use of b
+    co_yield b;
+
+    if (n == 1)
+        co_return;
+
+    b = 1;
+    // #TEST#: R931 Rename use of b
+    co_yield b;
+
+    if (n == 2)
+        co_return;
+
+    int a = 0;
+    for (int i = 2; i < n; ++i)
+    {
+        // #TEST#: R932 Rename use of a
+        // #TEST#: R933 Rename use of b
+        co_yield a + b;
+        const int s = a + b;
+        a = b;
+        b = s;
+    }
+}
+
+// - coroutines: co_yield
+void f9()
+{
+    // #TEST#: R934 Rename local variable gen
+    // #TEST#: R935 Rename use of fibonacci
+    auto gen = fibonacci(10);
+    std::vector<int> v;
+    // #TEST#: R936 Rename use of gen
+    for (int i = 0; gen; ++i)
+    {
+        // #TEST#: R937 Rename use of gen
+        v.push_back(gen());
+    }
+    REQUIRE_EQUAL(10, v.size());
+    REQUIRE_EQUAL(0, v[0]);
+    REQUIRE_EQUAL(1, v[1]);
+    REQUIRE_EQUAL(1, v[2]);
+    REQUIRE_EQUAL(2, v[3]);
+    REQUIRE_EQUAL(3, v[4]);
+    REQUIRE_EQUAL(5, v[5]);
+    REQUIRE_EQUAL(8, v[6]);
+    REQUIRE_EQUAL(13, v[7]);
+    REQUIRE_EQUAL(21, v[8]);
+    REQUIRE_EQUAL(34, v[9]);
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -316,4 +375,5 @@ void TestRenameCpp20()
     f6();
     f7();
     f8();
+    f9();
 }
