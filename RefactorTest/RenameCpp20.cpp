@@ -255,6 +255,55 @@ void f7()
     REQUIRE_EQUAL(std::string{"constant initializer"}, f7Val);
 }
 
+// - aggregate initialization using parentheses
+void f8()
+{
+    int one = 1;
+    int two = 2;
+    int three = 3;
+    {
+        // #TEST#: R915 Rename local variable vals
+        // #TEST#: R916 Rename use of one
+        const int vals[3](one, 2, 3);
+        // #TEST#: R917 Rename use of vals
+        REQUIRE_EQUAL(1, vals[0]);
+        REQUIRE_EQUAL(2, vals[1]);
+        REQUIRE_EQUAL(3, vals[2]);
+    }
+    {
+        // #TEST#: R918 Rename struct Point
+        struct Point
+        {
+            int x;
+            int y;
+            int z;
+        };
+        // #TEST#: R919 Rename use of Point
+        // #TEST#: R920 Rename use of one
+        // #TEST#: R921 Rename use of two
+        const Point p(one, two);
+        // #TEST#: R922 Rename use of p
+        REQUIRE_EQUAL(1, p.x);
+        REQUIRE_EQUAL(2, p.y);
+        REQUIRE_EQUAL(0, p.z);
+    }
+    {
+        // #TEST#: R923 Rename union Multiple
+        union Multiple
+        {
+            int x;
+            float y;
+            double z;
+        };
+        // #TEST#: R924 Rename use of Multiple
+        // #TEST#: R925 Rename local variable vals
+        // #TEST#: R926 Rename use of one
+        const Multiple vals(one);
+        // #TEST#: R927 Rename use of vals
+        REQUIRE_EQUAL(1, vals.x);
+    }
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -266,4 +315,5 @@ void TestRenameCpp20()
     f5();
     f6();
     f7();
+    f8();
 }
