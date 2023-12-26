@@ -59,7 +59,13 @@ public:
         return m_i;
     }
 
+    int i() const
+    {
+        return m_i;
+    }
+
 private:
+    // #TEST#: R967 Rename member m_i
     int m_i{10};
 };
 
@@ -84,6 +90,7 @@ int f()
 void f1()
 {
     Foo f;
+    REQUIRE_EQUAL(10, f.i());
     REQUIRE_EQUAL(13, f.f());
 }
 
