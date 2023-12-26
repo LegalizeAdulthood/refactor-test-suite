@@ -190,6 +190,31 @@ void f4()
     REQUIRE_EQUAL(12, vals[2]);
 }
 
+// #TEST#: R895 Template parameter T
+// #TEST#: R896 Template parameter Args
+template <typename T, typename... Args>
+// #TEST#: R897 Rename first use of T
+// #TEST#: R898 Rename second use of T
+// #TEST#: R899 Rename use of Args
+// #TEST#: R900 Rename parameter args
+T f5Fn(T first, Args... args)
+{
+    // #TEST#: R901 Rename local variable fn
+    // #TEST#: R902 Rename first use of first
+    // #TEST#: R903 Rename first use of args
+    // #TEST#: R904 Rename second use of first
+    // #TEST#: R905 Rename second use of args
+    auto fn = [first, args...] { return (first + ... + args); };
+    // #TEST#: R906 Rename use of fn
+    return fn();
+}
+
+// pack expansions in lambda init captures
+void f5()
+{
+    REQUIRE_EQUAL(3, f5Fn(1, 1, 1));
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -198,4 +223,5 @@ void TestRenameCpp20()
     f2();
     f3();
     f4();
+    f5();
 }
