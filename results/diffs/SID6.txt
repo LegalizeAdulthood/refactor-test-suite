@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitInitializationFromDeclaration.cpp b/RefactorTest/SplitInitializationFromDeclaration.cpp
+index a87633a..0ca64cf 100644
+--- a/RefactorTest/SplitInitializationFromDeclaration.cpp
++++ b/RefactorTest/SplitInitializationFromDeclaration.cpp
+@@ -42,7 +42,8 @@ void Test()
+     REQUIRE_EQUAL(&Foo::Const1, cmember);
+ 
+     // #TEST#: SID6 Split initialization from declaration
+-    Foo *p = new Foo();
++    Foo *p;
++    p = new Foo();
+     REQUIRE_EQUAL(true, nullptr != p);
+     delete p;
+ 

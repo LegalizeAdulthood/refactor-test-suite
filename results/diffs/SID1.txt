@@ -1,0 +1,14 @@
+diff --git a/RefactorTest/SplitInitializationFromDeclaration.cpp b/RefactorTest/SplitInitializationFromDeclaration.cpp
+index a87633a..d53543f 100644
+--- a/RefactorTest/SplitInitializationFromDeclaration.cpp
++++ b/RefactorTest/SplitInitializationFromDeclaration.cpp
+@@ -22,7 +22,8 @@ struct Bar
+ void Test()
+ {
+     // #TEST#: SID1 Split initialization from declaration
+-    int y = 0;
++    int y;
++    y = 0;
+     REQUIRE_EQUAL(0, y);
+ 
+     // #TEST#: SID2 Split initialization from declaration (should not be available)
