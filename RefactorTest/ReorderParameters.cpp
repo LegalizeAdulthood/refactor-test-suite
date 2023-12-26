@@ -33,11 +33,11 @@ public:
     int Const1(int x) const { return x + 2; }
     int Const2(int x) const { return x + 4; }
 
-    // #TEST#: RP8 Reorder Parameters move reference parameter to return value
+    // #TEST#: RP8 (deprecated)
     void ConstOperation3(int &x) const;
 };
 
-// #TEST#: RP9 Reorder Parameters move reference parameter to return value
+// #TEST#: RP9 (deprecated)
 void Foo::ConstOperation3(int &x) const { x = 2; }
 
 // #TEST#: RP3 Reorder parameters move parameter i to first parameter
@@ -106,7 +106,7 @@ int TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
 
 }    // namespace ReorderParametersNamespace
 
-// #TEST#: RP7 Reorder parameters make return value ref parameter
+// #TEST#: RP7 (deprecated)
 static int Function3(int x) { return x * 4; }
 
 using namespace ReorderParametersNamespace;
