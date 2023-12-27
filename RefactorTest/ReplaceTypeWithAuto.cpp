@@ -1,4 +1,5 @@
-#include <cassert>
+#include "Require.h"
+
 #include <deque>
 #include <list>
 #include <map>
@@ -18,7 +19,7 @@ static void TestReplaceTypeWithAutoDeque()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA2 Replace type with auto
@@ -26,7 +27,7 @@ static void TestReplaceTypeWithAutoDeque()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA3 Replace type with auto
@@ -35,7 +36,7 @@ static void TestReplaceTypeWithAutoDeque()
         ++*it;
         sum += *it;
     }
-    assert(3 + 2 == sum);
+    REQUIRE_EQUAL(3 + 2, sum);
 
     sum = 0;
     // #TEST#: RTWA4 Replace type with auto
@@ -44,7 +45,7 @@ static void TestReplaceTypeWithAutoDeque()
         --*it;
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 }
 
 static void TestReplaceTypeWithAutoList()
@@ -58,7 +59,7 @@ static void TestReplaceTypeWithAutoList()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA6 Replace type with auto
@@ -66,7 +67,7 @@ static void TestReplaceTypeWithAutoList()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA7 Replace type with auto
@@ -75,7 +76,7 @@ static void TestReplaceTypeWithAutoList()
         ++*it;
         sum += *it;
     }
-    assert(3 + 2 == sum);
+    REQUIRE_EQUAL(3 + 2, sum);
 
     sum = 0;
     // #TEST#: RTWA8 Replace type with auto
@@ -84,7 +85,7 @@ static void TestReplaceTypeWithAutoList()
         --*it;
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 }
 
 static void TestReplaceTypeWithAutoMap()
@@ -98,7 +99,7 @@ static void TestReplaceTypeWithAutoMap()
     {
         sum += it->second;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA10 Replace type with auto
@@ -106,7 +107,7 @@ static void TestReplaceTypeWithAutoMap()
     {
         sum += it->second;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA11 Replace type with auto
@@ -115,7 +116,7 @@ static void TestReplaceTypeWithAutoMap()
         ++it->second;
         sum += it->second;
     }
-    assert(3 + 2 == sum);
+    REQUIRE_EQUAL(3 + 2, sum);
 
     sum = 0;
     // #TEST#: RTWA12 Replace type with auto
@@ -124,7 +125,7 @@ static void TestReplaceTypeWithAutoMap()
         --it->second;
         sum += it->second;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 }
 
 static void TestReplaceTypeWithAutoMultimap()
@@ -138,7 +139,7 @@ static void TestReplaceTypeWithAutoMultimap()
     {
         sum += it->second;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA14 Replace type with auto
@@ -146,7 +147,7 @@ static void TestReplaceTypeWithAutoMultimap()
     {
         sum += it->second;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA15 Replace type with auto
@@ -155,7 +156,7 @@ static void TestReplaceTypeWithAutoMultimap()
         ++it->second;
         sum += it->second;
     }
-    assert(3 + 2 == sum);
+    REQUIRE_EQUAL(3 + 2, sum);
 
     sum = 0;
     // #TEST#: RTWA16 Replace type with auto
@@ -164,7 +165,7 @@ static void TestReplaceTypeWithAutoMultimap()
         --it->second;
         sum += it->second;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 }
 
 static void TestReplaceTypeWithAutoSet()
@@ -178,7 +179,7 @@ static void TestReplaceTypeWithAutoSet()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA18 Replace type with auto
@@ -186,7 +187,7 @@ static void TestReplaceTypeWithAutoSet()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA19 Replace type with auto
@@ -194,7 +195,7 @@ static void TestReplaceTypeWithAutoSet()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA20 Replace type with auto
@@ -202,7 +203,7 @@ static void TestReplaceTypeWithAutoSet()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 }
 
 static void TestReplaceTypeWithAutoUnorderedMap()
@@ -216,7 +217,7 @@ static void TestReplaceTypeWithAutoUnorderedMap()
     {
         sum += it->second;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     // #TEST#: RTWA22 (deprecated)
 
@@ -227,7 +228,7 @@ static void TestReplaceTypeWithAutoUnorderedMap()
         ++it->second;
         sum += it->second;
     }
-    assert(3 + 2 == sum);
+    REQUIRE_EQUAL(3 + 2, sum);
 
     // #TEST#: RTWA24 (deprecated)
 }
@@ -243,7 +244,7 @@ static void TestReplaceTypeWithAutoUnorderedSet()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     // #TEST#: RTWA26 (deprecated)
 
@@ -253,7 +254,7 @@ static void TestReplaceTypeWithAutoUnorderedSet()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     // #TEST#: RTWA28 (deprecated)
 }
@@ -269,7 +270,7 @@ static void TestReplaceTypeWithAutoVector()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA30 Replace type with auto
@@ -277,7 +278,7 @@ static void TestReplaceTypeWithAutoVector()
     {
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
     // #TEST#: RTWA31 Replace type with auto
@@ -286,7 +287,7 @@ static void TestReplaceTypeWithAutoVector()
         ++*it;
         sum += *it;
     }
-    assert(3 + 2 == sum);
+    REQUIRE_EQUAL(3 + 2, sum);
 
     sum = 0;
     // #TEST#: RTWA32 Replace type with auto
@@ -295,7 +296,7 @@ static void TestReplaceTypeWithAutoVector()
         --*it;
         sum += *it;
     }
-    assert(2 + 1 == sum);
+    REQUIRE_EQUAL(2 + 1, sum);
 }
 
 void TestReplaceTypeWithAuto()

@@ -1,4 +1,5 @@
-#include <cassert>
+#include "Require.h"
+
 #include <cmath>
 
 // Add override keyword to method overriding virtual method in base class
@@ -97,12 +98,12 @@ void TestAddOverride()
     Implementation i;
     i.Method();
     i.Setter(i.Getter());
-    assert(!i.Getter());
+    REQUIRE_EQUAL(true, !i.Getter());
     i.Setter(3.14159f);
-    assert(3 == i.Getter());
+    REQUIRE_EQUAL(3, i.Getter());
 
     DerivedImplementation d;
     d.Method();
     d.Setter(i.Getter());
-    assert(3 == d.Getter());
+    REQUIRE_EQUAL(3, d.Getter());
 }

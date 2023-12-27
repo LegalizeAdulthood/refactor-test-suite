@@ -33,7 +33,7 @@ int Function2(int a, int b);
 class ChangeSignature
 {
 public:
-    inline int Method1(int a, int b)
+    int Method1(int a, int b)
     {
         return a + b;
     }
