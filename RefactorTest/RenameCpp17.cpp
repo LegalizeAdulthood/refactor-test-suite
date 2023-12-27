@@ -449,7 +449,8 @@ struct Container
     // #TEST#: R789 Rename template parameter Iter
     template <typename Iter>
     // #TEST#: R790 Rename use of Container
-    // #TEST#: R791 Rename use of Iter
+    // #TEST#: R791 Rename first use of Iter
+    // #TEST#: R972 Rename second use of Iter
     Container(Iter begin, Iter end) : m_how(2)
     {
     }
