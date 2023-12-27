@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/InlineTypeAlias.cpp b/RefactorTest/InlineTypeAlias.cpp
+index 2bc2e1d..1bf6e6a 100644
+--- a/RefactorTest/InlineTypeAlias.cpp
++++ b/RefactorTest/InlineTypeAlias.cpp
+@@ -64,7 +64,7 @@ void f2()
+     // #TEST#: ITA11 Inline typedef StringVec
+     typedef StringVecT::const_iterator ConstIteratorT;
+     // #TEST#: ITA12 Inline typedef ConstIterator
+-    const ConstIteratorT end = v.cend();
++    const StringVecT::const_iterator end = v.cend();
+     REQUIRE_EQUAL(end, begin);
+ }
+ 

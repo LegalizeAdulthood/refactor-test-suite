@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/InlineTypeAlias.cpp b/RefactorTest/InlineTypeAlias.cpp
+index 77db45a..856fbaf 100644
+--- a/RefactorTest/InlineTypeAlias.cpp
++++ b/RefactorTest/InlineTypeAlias.cpp
+@@ -13,7 +13,7 @@ using StringVec = std::vector<std::string>;
+ typedef int IntT;
+ typedef std::string StringT;
+ // #TEST#: ITA13 Inline typedef StringT
+-typedef std::vector<StringT> StringVecT;
++typedef std::vector<std::string> StringVecT;
+ 
+ }    // namespace InlineTypeAlias
+ 
