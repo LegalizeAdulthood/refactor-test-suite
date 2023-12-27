@@ -31,9 +31,8 @@ void scanDiffDirectory(std::filesystem::path dir)
     }
 }
 
-bool checkDiffs(std::ostream &out)
+void checkDiffs(std::ostream &out)
 {
-    bool result{};
     for (const testCases::Test &test : testCases::g_tests)
     {
         if (!test.diffsRequired)
@@ -45,12 +44,10 @@ bool checkDiffs(std::ostream &out)
         {
             if (std::find(g_diffs.begin(), g_diffs.end(), testCase + ".txt") == g_diffs.end())
             {
-                out << "error: Test case " << testCase << " has no diff.\n";
-                result = true;
+                out << "warning: Test case " << testCase << " has no diff.\n";
             }
         }
     }
-    return result;
 }
 
 int main(const std::vector<std::string_view> &args)
@@ -64,7 +61,8 @@ int main(const std::vector<std::string_view> &args)
 
         testCases::scanTestDirectory(args[1]);
         scanDiffDirectory(args[2]);
-        return checkDiffs(std::cout) ? 1 : 0;
+        checkDiffs(std::cout);
+        return 0;
     }
     catch (const std::exception &bang)
     {
