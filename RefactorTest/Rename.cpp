@@ -454,6 +454,7 @@ struct F6
     // #TEST#: R560 Rename T
     // #TEST#: R561 Rename U
     template <typename T, typename U>
+    // #TEST#: R562 (deprecated)
     // #TEST#: R563 Rename f
     // #TEST#: R564 Rename T parameter x type
     // #TEST#: R565 Rename x parameter
@@ -689,6 +690,8 @@ restart:
         int interface = gcnew + 1;
         // #TEST#: R90 Rename variable internal
         int internal = interface + 1;
+        // #TEST#: R91 (deprecated)
+        // #TEST#: R92 (deprecated)
         // #TEST#: R93 Rename variable override
         int override = internal + 1;
         // #TEST#: R94 Rename variable pin_ptr

@@ -218,6 +218,8 @@ static void TestReplaceTypeWithAutoUnorderedMap()
     }
     assert(2 + 1 == sum);
 
+    // #TEST#: RTWA22 (deprecated)
+
     sum = 0;
     // #TEST#: RTWA23 Replace type with auto
     for (std::unordered_map<int, int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
@@ -226,6 +228,8 @@ static void TestReplaceTypeWithAutoUnorderedMap()
         sum += it->second;
     }
     assert(3 + 2 == sum);
+
+    // #TEST#: RTWA24 (deprecated)
 }
 
 static void TestReplaceTypeWithAutoUnorderedSet()
@@ -241,6 +245,8 @@ static void TestReplaceTypeWithAutoUnorderedSet()
     }
     assert(2 + 1 == sum);
 
+    // #TEST#: RTWA26 (deprecated)
+
     sum = 0;
     // #TEST#: RTWA27 Replace type with auto
     for (std::unordered_set<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
@@ -248,6 +254,8 @@ static void TestReplaceTypeWithAutoUnorderedSet()
         sum += *it;
     }
     assert(2 + 1 == sum);
+
+    // #TEST#: RTWA28 (deprecated)
 }
 
 static void TestReplaceTypeWithAutoVector()
