@@ -9,7 +9,7 @@
 #include <utility>
 #include <vector>
 
-namespace testNames
+namespace testDiffs
 {
 
 struct Test
@@ -201,7 +201,7 @@ int main(const std::vector<std::string_view> &args)
     }
 }
 
-}    // namespace testNames
+}    // namespace testDiffs
 
 int main(int argc, char *argv[])
 {
@@ -211,5 +211,5 @@ int main(int argc, char *argv[])
         args.emplace_back(argv[i]);
     }
 
-    return testNames::main(args);
+    return testDiffs::main(args);
 }
