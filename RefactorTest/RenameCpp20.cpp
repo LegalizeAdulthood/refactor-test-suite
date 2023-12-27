@@ -99,6 +99,7 @@ void f2()
     using RenameCpp20::Point;
     {
         // #TEST#: R864 Rename use of Point
+        // #TEST#: R973 Rename local variable p
         // #TEST#: R865 Rename use of x
         Point p{.x = 10};
         // #TEST#: R866 Rename use of x
@@ -110,7 +111,8 @@ void f2()
     }
     {
         // #TEST#: R869 Rename use of Point
-        // #TEST#: R870 Rename use of x
+        // #TEST#: R974 Rename local variable p
+        // #TEST#: R870 Rename use of y
         Point p{.y = 10};
         // #TEST#: R871 Rename use of x
         REQUIRE_EQUAL(0, p.x);
@@ -121,7 +123,9 @@ void f2()
     }
     {
         // #TEST#: R874 Rename use of Point
+        // #TEST#: R975 Rename local variable p
         // #TEST#: R875 Rename use of x
+        // #TEST#: R976 Rename use of y
         Point p{.x = 20, .y = 10};
         // #TEST#: R876 Rename use of x
         REQUIRE_EQUAL(20, p.x);
@@ -185,8 +189,14 @@ void f4()
     // #TEST#: R892 Rename use of T
     // #TEST#: R893 Rename use of N
     auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
+    // #TEST#: R977 Rename type alias T
+    using T = int;
+    // #TEST#: R979 Rename local constant N
+    const size_t N = 3;
     // #TEST#: R894 Rename use of fn
-    auto vals = fn.operator()<3, int>();
+    // #TEST#: R980 Rename use of N
+    // #TEST#: R978 Rename use of T
+    auto vals = fn.operator()<N, T>();
     std::iota(std::begin(vals), std::end(vals), 10);
     REQUIRE_EQUAL(3, vals.size());
     REQUIRE_EQUAL(10, vals[0]);
@@ -261,7 +271,6 @@ void f8()
 {
     int one = 1;
     int two = 2;
-    int three = 3;
     {
         // #TEST#: R915 Rename local variable vals
         // #TEST#: R916 Rename use of one
@@ -407,30 +416,37 @@ void f10()
     {
         int t{2};
         // #TEST#: R953 Rename use of autoSqrInPlace
+        // #TEST#: R981 Rename use of t
         autoSqrInPlace(t);
         REQUIRE_EQUAL(4, t);
     }
     {
         float t{2.0f};
         // #TEST#: R954 Rename use of autoSqrInPlace
+        // #TEST#: R982 Rename use of t
         autoSqrInPlace(t);
         REQUIRE_EQUAL(4.0f, t);
     }
     {
         int t{2};
         // #TEST#: R955 Rename use of autoSqrPtr
+        // #TEST#: R983 Rename use of t
         autoSqrPtr(&t);
         REQUIRE_EQUAL(4, t);
     }
     {
         float t{2.0f};
         // #TEST#: R956 Rename use of autoSqrPtr
+        // #TEST#: R984 Rename use of t
         autoSqrPtr(&t);
         REQUIRE_EQUAL(4.0f, t);
     }
     {
+        // #TEST#: R985 Rename local variable t1
+        int t1{1};
         // #TEST#: R957 Rename use of product
-        REQUIRE_EQUAL(6, product(1, 2, 3));
+        // #TEST#: R986 Rename use of t1
+        REQUIRE_EQUAL(6, product(t1, 2, 3));
         // #TEST#: R958 Rename use of product
         REQUIRE_EQUAL(6.0f, product(1.0f, 2.0f, 3.0f));
     }
