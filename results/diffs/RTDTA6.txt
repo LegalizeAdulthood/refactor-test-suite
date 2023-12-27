@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+index 75f50a5..37f459d 100644
+--- a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
++++ b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+@@ -49,7 +49,7 @@ namespace
+ void f1()
+ {
+     // #TEST#: RTDTA6 Replace typedef with type alias
+-    typedef int IntT;
++    using IntT = int;
+     IntT x{10};
+     REQUIRE_EQUAL(10, x);
+ 

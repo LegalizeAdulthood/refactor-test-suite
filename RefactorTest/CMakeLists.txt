@@ -45,6 +45,7 @@ add_executable(refactor-test-suite
     ReplaceNullZeroWithNullPtr.cpp
     ReplaceStringLiteralWithRawStringLiteral.cpp
     ReplaceTernaryWithIf.cpp
+    ReplaceTypedefWithTypeAlias.cpp
     ReplaceTypeWithAuto.cpp
     ReverseConditional.cpp
     SimplifyBooleanExpression.cpp

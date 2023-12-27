@@ -50,6 +50,7 @@ std::vector<Test> g_tests{
     {"Replace NULL/0 With nullptr", "RZNP"},
     {"Replace String Literal With Raw String Literal", "RAW"},
     {"Replace Ternary With If", "RTI"},
+    {"Replace typedef With Type Alias", "RTDTA"},
     {"Replace Type With auto", "RTWA"},
     {"Reverse Conditional", "RC"},
     {"Simplify Boolean Expression", "SB"},

@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+index 75f50a5..0927e40 100644
+--- a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
++++ b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+@@ -57,7 +57,7 @@ void f1()
+     using ReplaceTypedefWithTypeAlias::StringVecT;
+     const StringVecT::const_iterator begin = v.cbegin();
+     // #TEST#: RTDTA7 Replace typedef with type alias
+-    typedef StringVecT::const_iterator ConstIteratorT;
++    using ConstIteratorT = StringVecT::const_iterator;
+     const ConstIteratorT end = v.cend();
+     REQUIRE_EQUAL(end, begin);
+ 

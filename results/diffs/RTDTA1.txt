@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+index 75f50a5..d015a7f 100644
+--- a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
++++ b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+@@ -22,7 +22,7 @@ struct Foo
+ };
+ 
+ // #TEST#: RTDTA1 Replace typedef with type alias
+-typedef int IntT;
++using IntT = int;
+ // #TEST#: RTDTA2 Replace typedef with type alias
+ typedef std::string StringT;
+ // #TEST#: RTDTA3 Replace typedef with type alias

@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+index 75f50a5..122354d 100644
+--- a/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
++++ b/RefactorTest/ReplaceTypedefWithTypeAlias.cpp
+@@ -30,7 +30,7 @@ typedef std::vector<StringT> StringVecT;
+ // #TEST#: RTDTA4 Replace typedef with type alias
+ typedef void (Foo::*FooFn)();
+ // #TEST#: RTDTA5 Replace typedef with type alias
+-typedef int (Foo::*FooGn)(int x);
++using FooGn = int (Foo::*)(int);
+ 
+ }    // namespace ReplaceTypedefWithTypeAlias
+ 

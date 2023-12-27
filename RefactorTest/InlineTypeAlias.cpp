@@ -17,7 +17,7 @@ typedef std::vector<StringT> StringVecT;
 
 }    // namespace InlineTypeAlias
 
-std::ostream &operator<<(std::ostream &str, InlineTypeAlias::StringVec::const_iterator &it)
+static std::ostream &operator<<(std::ostream &str, InlineTypeAlias::StringVec::const_iterator &it)
 {
     if (it == InlineTypeAlias::StringVec::const_iterator())
     {

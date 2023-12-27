@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
         TestReplaceNullZeroWithNullPtr();
         TestReplaceStringLiteralWithRawStringLiteral();
         TestReplaceTernaryWithIf();
+        TestReplaceTypedefWithTypeAlias();
         TestReplaceTypeWithAuto();
         TestReverseConditional();
         TestSimplifyBooleanExpression();

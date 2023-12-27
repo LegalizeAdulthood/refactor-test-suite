@@ -53,6 +53,7 @@ extern void TestReplaceNestedConditionalWithGuardClause();
 extern void TestReplaceNullZeroWithNullPtr();
 extern void TestReplaceStringLiteralWithRawStringLiteral();
 extern void TestReplaceTernaryWithIf();
+extern void TestReplaceTypedefWithTypeAlias();
 extern void TestReplaceTypeWithAuto();
 extern void TestReplaceWithAlias();
 extern void TestReplaceWithConstant();
