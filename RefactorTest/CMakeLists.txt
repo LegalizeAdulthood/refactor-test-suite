@@ -20,6 +20,7 @@ add_executable(refactor-test-suite
     InlineMacro.cpp
     InlineRecentAssignment.cpp
     InlineResult.cpp
+    InlineTypeAlias.cpp
     InlineVariable.cpp
     MakeMethodStatic.cpp
     MoveImplementationToSourceFile.h

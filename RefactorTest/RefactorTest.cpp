@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
         TestInlineMacro();
         TestInlineRecentAssignment();
         TestInlineResult();
+        TestInlineTypeAlias();
         TestInlineVariable();
         TestExtractVariable();
         TestMakeMethodStatic();

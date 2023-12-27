@@ -36,6 +36,7 @@ constexpr Test g_tests[]{
     {"Inline Macro", "IM"},
     {"Inline Recent Assignment", "IRA"},
     {"Inline Result", "IR"},
+    {"Inline Type Alias", "ITA"},
     {"Inline Variable", "IV"},
     {"Make Method Static", "MMS"},
     {"Move Implementation to Source File", "MISF"},

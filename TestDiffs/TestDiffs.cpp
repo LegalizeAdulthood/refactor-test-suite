@@ -39,6 +39,7 @@ constexpr Test g_tests[]{
     {"Inline Macro", "IM"},
     {"Inline Recent Assignment", "IRA", false},
     {"Inline Result", "IR", false},
+    {"Inline Type Alias", "ITA"},
     {"Inline Variable", "IV"},
     {"Make Method Static", "MMS"},
     {"Move Implementation to Source File", "MISF"},
@@ -155,8 +156,9 @@ void scanDiffDirectory(std::filesystem::path dir)
     }
 }
 
-void checkDiffs(std::ostream &out)
+bool checkDiffs(std::ostream &out)
 {
+    bool result{};
     for (const Test &test : g_tests)
     {
         if (!test.required)
@@ -168,10 +170,12 @@ void checkDiffs(std::ostream &out)
         {
             if (std::find(g_diffs.begin(), g_diffs.end(), testCase + ".txt") == g_diffs.end())
             {
-                out << "Test case " << testCase << " has no diff.\n";
+                out << "error: Test case " << testCase << " has no diff.\n";
+                result = true;
             }
         }
     }
+    return result;
 }
 
 int main(const std::vector<std::string_view> &args)
@@ -186,8 +190,7 @@ int main(const std::vector<std::string_view> &args)
         scanTestDirectory(args[1]);
         sortTestCases();
         scanDiffDirectory(args[2]);
-        checkDiffs(std::cout);
-        return 0;
+        return checkDiffs(std::cout) ? 1 : 0;
     }
     catch (const std::exception &bang)
     {
