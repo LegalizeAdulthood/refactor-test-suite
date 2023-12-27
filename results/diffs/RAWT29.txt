@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceAutoWithType.cpp b/RefactorTest/ReplaceAutoWithType.cpp
+index 94cb1a4..e9eade4 100644
+--- a/RefactorTest/ReplaceAutoWithType.cpp
++++ b/RefactorTest/ReplaceAutoWithType.cpp
+@@ -301,7 +301,7 @@ namespace
+ void f1()
+ {
+     // #TEST#: RAWT29 Replace auto with type
+-    auto i{3};
++    int i{3};
+     REQUIRE_EQUAL(3, i);
+     REQUIRE_TYPE_EQUAL(int, i);
+     using namespace std::string_literals;

@@ -44,6 +44,7 @@ std::vector<Test> g_tests{
     {"Remove Unused Parameter", "RUP"},
     {"Rename", "R"},
     {"Reorder Parameters", "RP"},
+    {"Replace auto With Type", "RAWT"},
     {"Replace auto_ptr With unique_ptr", "RAWU"},
     {"Replace If With Ternary", "RIT"},
     {"Replace Iterative For With Range For", "RIRF"},

@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceAutoWithType.cpp b/RefactorTest/ReplaceAutoWithType.cpp
+index 94cb1a4..da4a1f7 100644
+--- a/RefactorTest/ReplaceAutoWithType.cpp
++++ b/RefactorTest/ReplaceAutoWithType.cpp
+@@ -97,7 +97,7 @@ static void TestReplaceAutoWithTypeMap()
+     c[2] = 2;
+     int sum = 0;
+     // #TEST#: RAWT9 Replace auto with type
+-    for (auto it = c.cbegin(), end = c.cend(); it != end; ++it)
++    for (std::map<int, int>::const_iterator it = c.cbegin(), end = c.cend(); it != end; ++it)
+     {
+         sum += it->second;
+     }

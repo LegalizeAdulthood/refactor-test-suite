@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceAutoWithType.cpp b/RefactorTest/ReplaceAutoWithType.cpp
+index 94cb1a4..ead2984 100644
+--- a/RefactorTest/ReplaceAutoWithType.cpp
++++ b/RefactorTest/ReplaceAutoWithType.cpp
+@@ -246,7 +246,7 @@ static void TestReplaceAutoWithTypeUnorderedSet()
+ 
+     sum = 0;
+     // #TEST#: RAWT24 Replace auto with type
+-    for (auto it = c.begin(), end = c.end(); it != end; ++it)
++    for (std::unordered_set<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
+     {
+         sum += *it;
+     }

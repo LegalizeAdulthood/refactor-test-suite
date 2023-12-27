@@ -40,6 +40,7 @@ add_executable(refactor-test-suite
     ReorderParameters.cpp
     Require.h
     ReplaceAutoPtrWithUniquePtr.cpp
+    ReplaceAutoWithType.cpp
     ReplaceIfWithTernary.cpp
     ReplaceIterativeForWithRangeFor.cpp
     ReplaceNullZeroWithNullPtr.cpp

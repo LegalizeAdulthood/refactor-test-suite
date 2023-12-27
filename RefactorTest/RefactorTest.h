@@ -47,6 +47,7 @@ inline void TestRenameCpp20() {}
 extern void TestRenameFileToMatchType();
 extern void TestRenameTypeToMatchFile();
 extern void TestReorderParameters();
+extern void TestReplaceAutoWithType();
 extern void TestReplaceIfWithTernary();
 extern void TestReplaceIterativeForWithRangeFor();
 extern void TestReplaceNestedConditionalWithGuardClause();

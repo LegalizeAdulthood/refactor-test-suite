@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceAutoWithType.cpp b/RefactorTest/ReplaceAutoWithType.cpp
+index 94cb1a4..14ca5ff 100644
+--- a/RefactorTest/ReplaceAutoWithType.cpp
++++ b/RefactorTest/ReplaceAutoWithType.cpp
+@@ -73,7 +73,7 @@ static void TestReplaceAutoWithTypeList()
+ 
+     sum = 0;
+     // #TEST#: RAWT7 Replace auto with type
+-    for (auto it = c.begin(), end = c.end(); it != end; ++it)
++    for (std::list<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
+     {
+         ++*it;
+         sum += *it;

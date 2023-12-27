@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceAutoWithType.cpp b/RefactorTest/ReplaceAutoWithType.cpp
+index 94cb1a4..4b4fea1 100644
+--- a/RefactorTest/ReplaceAutoWithType.cpp
++++ b/RefactorTest/ReplaceAutoWithType.cpp
+@@ -153,7 +153,7 @@ static void TestReplaceAutoWithTypeMultimap()
+ 
+     sum = 0;
+     // #TEST#: RAWT15 Replace auto with type
+-    for (auto it = c.begin(), end = c.end(); it != end; ++it)
++    for (std::multimap<int, int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
+     {
+         ++it->second;
+         sum += it->second;

@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
         TestRenameCpp17();
         TestRenameCpp20();
         TestReorderParameters();
+        TestReplaceAutoWithType();
         TestReplaceIfWithTernary();
         TestReplaceIterativeForWithRangeFor();
         TestReplaceNullZeroWithNullPtr();
