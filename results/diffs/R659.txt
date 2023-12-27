@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index 0c2172a..c3c5160 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -111,9 +111,9 @@ void f3()
+     // #TEST#: R657 Rename parameter val
+     // #TEST#: R658 Rename use of initial
+     // #TEST#: R659 Rename use of val
+-    constexpr auto fn = [initial](int val) constexpr
++    constexpr auto fn = [initial](int goink) constexpr
+     {
+-        return initial + val;
++        return initial + goink;
+     };
+     // #TEST#: R969 Rename use of fn
+     static_assert(10 == fn(0));

@@ -1,0 +1,37 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index fd51b87..68fc991 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -269,12 +269,12 @@ void f7()
+ // aggregate initialization using parentheses
+ void f8()
+ {
+-    int one = 1;
++    int goink = 1;
+     int two = 2;
+     {
+         // #TEST#: R915 Rename local variable vals
+         // #TEST#: R916 Rename use of one
+-        const int vals[3](one, 2, 3);
++        const int vals[3](goink, 2, 3);
+         // #TEST#: R917 Rename use of vals
+         REQUIRE_EQUAL(1, vals[0]);
+         REQUIRE_EQUAL(2, vals[1]);
+@@ -291,7 +291,7 @@ void f8()
+         // #TEST#: R919 Rename use of Point
+         // #TEST#: R920 Rename use of one
+         // #TEST#: R921 Rename use of two
+-        const Point p(one, two);
++        const Point p(goink, two);
+         // #TEST#: R922 Rename use of p
+         REQUIRE_EQUAL(1, p.x);
+         REQUIRE_EQUAL(2, p.y);
+@@ -308,7 +308,7 @@ void f8()
+         // #TEST#: R924 Rename use of Multiple
+         // #TEST#: R925 Rename local variable vals
+         // #TEST#: R926 Rename use of one
+-        const Multiple vals(one);
++        const Multiple vals(goink);
+         // #TEST#: R927 Rename use of vals
+         REQUIRE_EQUAL(1, vals.x);
+     }

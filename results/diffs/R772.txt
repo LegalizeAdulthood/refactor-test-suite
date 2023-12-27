@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index c346b5d..840934e 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -403,13 +403,13 @@ void f8()
+         // #TEST#: R769 Rename local variable p1
+         // #TEST#: R770 Rename use of f1
+         // #TEST#: R771 Rename use of i1
+-        const auto *p1 = new std::pair{f1, i1};
++        const auto *goink = new std::pair{f1, i1};
+         // #TEST#: R772 Rename use of p1
+-        REQUIRE_EQUAL(1.0f, p1->first);
++        REQUIRE_EQUAL(1.0f, goink->first);
+         // #TEST#: R773 Rename use of p1
+-        REQUIRE_EQUAL(10, p1->second);
++        REQUIRE_EQUAL(10, goink->second);
+         // #TEST#: R774 Rename use of p1
+-        delete p1;
++        delete goink;
+         // #TEST#: R775 Rename local variable name
+         const char *name{"one"};
+         // #TEST#: R776 Rename local variable p2

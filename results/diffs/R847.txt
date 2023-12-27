@@ -1,0 +1,27 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index cdd8233..83478ac 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -61,18 +61,18 @@ void f1()
+     // integral type comparison
+     {
+         // #TEST#: R843 Rename x
+-        int x{1};
++        int goink{1};
+         // #TEST#: R844 Rename y
+         int y{2};
+         // #TEST#: R845 Rename first use of x
+         // #TEST#: R846 Rename second use of x
+-        REQUIRE_EQUAL(std::strong_ordering::equal, x <=> x);
++        REQUIRE_EQUAL(std::strong_ordering::equal, goink <=> goink);
+         // #TEST#: R847 Rename use of x
+         // #TEST#: R848 Rename use of y
+-        REQUIRE_EQUAL(std::strong_ordering::less, x <=> y);
++        REQUIRE_EQUAL(std::strong_ordering::less, goink <=> y);
+         // #TEST#: R849 Rename use of y
+         // #TEST#: R850 Rename use of x
+-        REQUIRE_EQUAL(std::strong_ordering::greater, y <=> x);
++        REQUIRE_EQUAL(std::strong_ordering::greater, y <=> goink);
+     }
+     // floating-point type comparison
+     {

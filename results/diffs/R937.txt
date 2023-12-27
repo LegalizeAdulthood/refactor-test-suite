@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index fd51b87..084bdaf 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -352,13 +352,13 @@ void f9()
+ {
+     // #TEST#: R934 Rename local variable gen
+     // #TEST#: R935 Rename use of fibonacci
+-    auto gen = fibonacci(10);
++    auto goink = fibonacci(10);
+     std::vector<int> v;
+     // #TEST#: R936 Rename use of gen
+-    for (int i = 0; gen; ++i)
++    for (int i = 0; goink; ++i)
+     {
+         // #TEST#: R937 Rename use of gen
+-        v.push_back(gen());
++        v.push_back(goink());
+     }
+     REQUIRE_EQUAL(10, v.size());
+     REQUIRE_EQUAL(0, v[0]);

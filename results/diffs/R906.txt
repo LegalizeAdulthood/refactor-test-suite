@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index 2aa7a68..e5c819d 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -218,9 +218,9 @@ T f5Fn(T first, Args... args)
+     // #TEST#: R903 Rename first use of args
+     // #TEST#: R904 Rename second use of first
+     // #TEST#: R905 Rename second use of args
+-    auto fn = [first, args...] { return (first + ... + args); };
++    auto goink = [first, args...] { return (first + ... + args); };
+     // #TEST#: R906 Rename use of fn
+-    return fn();
++    return goink();
+ }
+ 
+ // pack expansions in lambda init captures

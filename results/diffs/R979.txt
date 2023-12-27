@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index 2aa7a68..fe5bc79 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -192,11 +192,11 @@ void f4()
+     // #TEST#: R977 Rename type alias T
+     using T = int;
+     // #TEST#: R979 Rename local constant N
+-    const size_t N = 3;
++    const size_t Goink = 3;
+     // #TEST#: R894 Rename use of fn
+     // #TEST#: R980 Rename use of N
+     // #TEST#: R978 Rename use of T
+-    auto vals = fn.operator()<N, T>();
++    auto vals = fn.operator()<Goink, T>();
+     std::iota(std::begin(vals), std::end(vals), 10);
+     REQUIRE_EQUAL(3, vals.size());
+     REQUIRE_EQUAL(10, vals[0]);

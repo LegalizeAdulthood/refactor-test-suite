@@ -1,0 +1,20 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index d55964a..de29f10 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -71,13 +71,13 @@ private:
+ 
+ // #TEST#: R648 Rename template parameter T
+ // #TEST#: R649 Rename template parameter N
+-template <typename T, size_t N>
++template <typename T, size_t Goink>
+ // #TEST#: R650 Rename function f
+ int f()
+ {
+     // #TEST#: R651 Rename use of T
+     // #TEST#: R652 Rename use of N
+-    if constexpr (sizeof(T) == N)
++    if constexpr (sizeof(T) == Goink)
+     {
+         return 10;
+     }

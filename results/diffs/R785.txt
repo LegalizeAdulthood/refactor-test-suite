@@ -1,0 +1,20 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index d7d8359..cdf5c0a 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -436,13 +436,13 @@ void f8()
+ }
+ 
+ // #TEST#: R785 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R786 Rename struct Container
+ struct Container
+ {
+     // #TEST#: R787 Rename use of Container
+     // #TEST#: R788 Rename use of T
+-    Container(T t) : m_how(1)
++    Container(Goink t) : m_how(1)
+     {
+     }
+ 

@@ -1,0 +1,29 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index 3d0f364..0d3320b 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -284,19 +284,19 @@ void f6()
+ 
+     // #TEST#: R729 Rename local variable i
+     // #TEST#: R730 Rename use of i
+-    switch (int i = val % 2; i)
++    switch (int goink = val % 2; goink)
+     {
+     case 0:
+         // #TEST#: R731 Rename use of i
+-        ++i;
++        ++goink;
+         // #TEST#: R732 Rename use of i
+-        val = 100 + i;
++        val = 100 + goink;
+         break;
+     case 1:
+         // #TEST#: R733 Rename use of i
+-        ++i;
++        ++goink;
+         // #TEST#: R734 Rename use of i
+-        val = 200 + i;
++        val = 200 + goink;
+         break;
+     default:
+         val = 0;

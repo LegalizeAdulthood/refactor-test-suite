@@ -1,0 +1,28 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index 0c2172a..bf2fa25 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -135,9 +135,9 @@ void f3()
+ void f4()
+ {
+     // #TEST#: R662 Rename use of g_counter
+-    ++RenameCpp17::g_counter;
++    ++RenameCpp17::g_goink;
+     // #TEST#: R663 Rename use of g_counter
+-    REQUIRE_EQUAL(1, RenameCpp17::g_counter);
++    REQUIRE_EQUAL(1, RenameCpp17::g_goink);
+ }
+ 
+ void f5()
+diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
+index 37491e7..86ad95a 100644
+--- a/RefactorTest/RenameCpp17.h
++++ b/RefactorTest/RenameCpp17.h
+@@ -16,6 +16,6 @@ extern int z;
+ }    // namespace A::B::C
+ 
+ // #TEST#: R664 Rename variable g_counter
+-inline int g_counter{0};
++inline int g_goink{0};
+ 
+ }    // namespace RenameCpp17

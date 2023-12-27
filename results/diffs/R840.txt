@@ -1,0 +1,65 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index d7d8359..f0b0d9d 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -33,7 +33,7 @@ namespace RenameCpp17::A::B::C
+ int x{10};
+ 
+ int y{20};
+-int z{30};
++int goink{30};
+ 
+ }    // namespace RenameCpp17::A::B::C
+ 
+@@ -510,10 +510,10 @@ void f11()
+         // #TEST#: R824 Rename C
+         // #TEST#: R825 Rename y
+         // #TEST#: R826 Rename z
+-        using RenameCpp17::A::B::C::y, RenameCpp17::A::B::C::z;
++        using RenameCpp17::A::B::C::y, RenameCpp17::A::B::C::goink;
+         // #TEST#: R827 Rename use of y
+         // #TEST#: R828 Rename use of z
+-        REQUIRE_EQUAL(50, y + z);
++        REQUIRE_EQUAL(50, y + goink);
+     }
+     {
+         using namespace RenameCpp17;
+@@ -522,10 +522,10 @@ void f11()
+         // #TEST#: R831 Rename C
+         // #TEST#: R832 Rename y
+         // #TEST#: R833 Rename z
+-        using A::B::C::y, A::B::C::z;
++        using A::B::C::y, A::B::C::goink;
+         // #TEST#: R834 Rename use of y
+         // #TEST#: R835 Rename use of z
+-        REQUIRE_EQUAL(50, y + z);
++        REQUIRE_EQUAL(50, y + goink);
+     }
+     {
+         // #TEST#: R836 Rename A
+@@ -534,10 +534,10 @@ void f11()
+         // #TEST#: R838 Rename C
+         // #TEST#: R839 Rename y
+         // #TEST#: R840 Rename z
+-        using B::C::y, B::C::z;
++        using B::C::y, B::C::goink;
+         // #TEST#: R841 Rename use of y
+         // #TEST#: R842 Rename use of z
+-        REQUIRE_EQUAL(50, y + z);
++        REQUIRE_EQUAL(50, y + goink);
+     }
+ }
+ 
+diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
+index 37491e7..ad37f33 100644
+--- a/RefactorTest/RenameCpp17.h
++++ b/RefactorTest/RenameCpp17.h
+@@ -12,7 +12,7 @@ namespace A::B::C
+ extern int x;
+ 
+ extern int y;
+-extern int z;
++extern int goink;
+ }    // namespace A::B::C
+ 
+ // #TEST#: R664 Rename variable g_counter

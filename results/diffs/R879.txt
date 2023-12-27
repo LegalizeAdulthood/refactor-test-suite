@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index b319d77..db88c05 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -137,7 +137,7 @@ void f2()
+ }
+ 
+ // #TEST#: R879 Rename function gen
+-std::vector<int> gen()
++std::vector<int> goink()
+ {
+     return {1, 2, 3, 4, 5};
+ }
+@@ -159,7 +159,7 @@ void f3()
+         // #TEST#: R881 Rename function gen
+         // #TEST#: R882 Rename local variable i
+         // #TEST#: R883 Rename use of v
+-        for (v = gen(); const int i : v)
++        for (v = goink(); const int i : v)
+         {
+             // #TEST#: R884 Rename use of i
+             sum += i;

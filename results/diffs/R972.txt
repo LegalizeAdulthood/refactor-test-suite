@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index d7d8359..624e072 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -447,11 +447,11 @@ struct Container
+     }
+ 
+     // #TEST#: R789 Rename template parameter Iter
+-    template <typename Iter>
++    template <typename Goink>
+     // #TEST#: R790 Rename use of Container
+     // #TEST#: R791 Rename first use of Iter
+     // #TEST#: R972 Rename second use of Iter
+-    Container(Iter begin, Iter end) : m_how(2)
++    Container(Goink begin, Goink end) : m_how(2)
+     {
+     }
+ 

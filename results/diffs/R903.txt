@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index 2aa7a68..76cc874 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -211,14 +211,14 @@ template <typename T, typename... Args>
+ // #TEST#: R898 Rename second use of T
+ // #TEST#: R899 Rename use of Args
+ // #TEST#: R900 Rename parameter args
+-T f5Fn(T first, Args... args)
++T f5Fn(T first, Args... goink)
+ {
+     // #TEST#: R901 Rename local variable fn
+     // #TEST#: R902 Rename first use of first
+     // #TEST#: R903 Rename first use of args
+     // #TEST#: R904 Rename second use of first
+     // #TEST#: R905 Rename second use of args
+-    auto fn = [first, args...] { return (first + ... + args); };
++    auto fn = [first, goink...] { return (first + ... + goink); };
+     // #TEST#: R906 Rename use of fn
+     return fn();
+ }

@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/RenameCpp14.h b/RefactorTest/RenameCpp14.h
+index a4197f1..138aa12 100644
+--- a/RefactorTest/RenameCpp14.h
++++ b/RefactorTest/RenameCpp14.h
+@@ -12,14 +12,14 @@ template <class T>
+ constexpr T pi2 = T(2.0L) * T(3.1415926535897932385L);
+ 
+ // #TEST#: R963 Rename template parameter T
+-template <class T>
++template <class Goink>
+ // #TEST#: R964 Rename first use of T
+ // #TEST#: R965 Rename second use of T
+-T circularArea2(T r)
++Goink circularArea2(Goink r)
+ {
+     // #TEST#: R620 Rename use of pi2
+     // #TEST#: R966 Rename use of T
+-    return pi2<T> * r * r;
++    return pi2<Goink> * r * r;
+ }
+ 
+ }    // namespace RenameCpp14

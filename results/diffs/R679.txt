@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index 0c2172a..6ac2ec6 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -165,9 +165,9 @@ void f5()
+         // #TEST#: R676 Rename binding vx
+         // #TEST#: R677 Rename binding vy
+         // #TEST#: R678 Rename use of vals
+-        auto &[vx, vy] = vals;
++        auto &[goink, vy] = vals;
+         // #TEST#: R679 Rename use of vx
+-        vx = 4;
++        goink = 4;
+         // #TEST#: R680 Rename use of vy
+         vy = 5;
+         REQUIRE_EQUAL(4, vals[0]);

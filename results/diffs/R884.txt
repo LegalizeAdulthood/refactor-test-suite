@@ -1,0 +1,17 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index b319d77..9c05d62 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -159,10 +159,10 @@ void f3()
+         // #TEST#: R881 Rename function gen
+         // #TEST#: R882 Rename local variable i
+         // #TEST#: R883 Rename use of v
+-        for (v = gen(); const int i : v)
++        for (v = gen(); const int goink : v)
+         {
+             // #TEST#: R884 Rename use of i
+-            sum += i;
++            sum += goink;
+         }
+         REQUIRE_EQUAL(1 + 2 + 3 + 4 + 5, sum);
+     }

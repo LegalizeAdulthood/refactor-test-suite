@@ -1,0 +1,30 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index d84e297..bdb3858 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -391,7 +391,7 @@ void autoSqrInPlace(auto &t)
+ 
+ // #TEST#: R944 Rename function autoSqrPtr
+ // #TEST#: R945 Rename parameter t
+-void autoSqrPtr(auto *t)
++void goink(auto *t)
+ {
+     *t *= *t;
+ }
+@@ -431,14 +431,14 @@ void f10()
+         int t{2};
+         // #TEST#: R955 Rename use of autoSqrPtr
+         // #TEST#: R983 Rename use of t
+-        autoSqrPtr(&t);
++        goink(&t);
+         REQUIRE_EQUAL(4, t);
+     }
+     {
+         float t{2.0f};
+         // #TEST#: R956 Rename use of autoSqrPtr
+         // #TEST#: R984 Rename use of t
+-        autoSqrPtr(&t);
++        goink(&t);
+         REQUIRE_EQUAL(4.0f, t);
+     }
+     {

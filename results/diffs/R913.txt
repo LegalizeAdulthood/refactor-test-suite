@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index 2aa7a68..f7b777f 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -250,14 +250,14 @@ const char *f7DynamicInit()
+     return "dynamic initializer";
+ }
+ 
+-constexpr const char *f7Init(bool param)
++constexpr const char *goink(bool param)
+ {
+     return param ? "constant initializer" : f7DynamicInit();
+ }
+ 
+ // #TEST#: R912 Rename variable f7Val
+ // #TEST#: R913 Rename function f7Init
+-constinit const char *f7Val = f7Init(true);
++constinit const char *f7Val = goink(true);
+ 
+ // constinit
+ void f7()

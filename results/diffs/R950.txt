@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index fd51b87..dc05793 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -399,11 +399,11 @@ void autoSqrPtr(auto *t)
+ // #TEST#: R946 Rename function product
+ // #TEST#: R947 Rename parameter first
+ // #TEST#: R948 Rename parameter args
+-auto product(auto first, auto... args)
++auto product(auto first, auto... goink)
+ {
+     // #TEST#: R949 Rename use of first
+     // #TEST#: R950 Rename use of args
+-    return (first * ... * args);
++    return (first * ... * goink);
+ }
+ 
+ // abbreviated function template

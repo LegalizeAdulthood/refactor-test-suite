@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index 3d0f364..ca34e7b 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -215,11 +215,11 @@ void f5()
+         // #TEST#: R699 Rename binding val4
+         // #TEST#: R700 Rename binding name4
+         // #TEST#: R701 Rename use of p
+-        const auto &[val4, name4] = p;
++        const auto &[val4, goink] = p;
+         // #TEST#: R702 Rename use of val4
+         REQUIRE_EQUAL(11, val4);
+         // #TEST#: R703 Rename use of name4
+-        REQUIRE_EQUAL(std::string{"eleven"}, name4);
++        REQUIRE_EQUAL(std::string{"eleven"}, goink);
+     }
+ 
+     // binding to data members

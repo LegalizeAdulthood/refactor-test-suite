@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index c346b5d..ead69c8 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -428,10 +428,10 @@ void f8()
+     {
+         int src[]{1, 2, 3};
+         // #TEST#: R783 Rename local variable dest
+-        std::vector<int> dest;
++        std::vector<int> goink;
+         // #TEST#: R784 Rename use of dest
+-        std::copy(std::begin(src), std::end(src), std::back_insert_iterator(dest));
+-        REQUIRE_EQUAL(true, std::equal(std::begin(src), std::end(src), dest.begin()));
++        std::copy(std::begin(src), std::end(src), std::back_insert_iterator(goink));
++        REQUIRE_EQUAL(true, std::equal(std::begin(src), std::end(src), goink.begin()));
+     }
+ }
+ 

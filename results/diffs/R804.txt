@@ -1,0 +1,19 @@
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index d7d8359..887c674 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -474,12 +474,12 @@ void f9()
+     const Container c1{7};
+     // #TEST#: R800 Rename use of c1
+     REQUIRE_EQUAL(1, c1.m_how);
+-    std::vector vals{1.0f, 2.0f, 3.0f};
++    std::vector goink{1.0f, 2.0f, 3.0f};
+     // #TEST#: R801 Rename use of Container
+     // #TEST#: R802 Rename local variable c2
+     // #TEST#: R803 Rename first use of vals
+     // #TEST#: R804 Rename second use of vals
+-    const Container c2{vals.begin(), vals.end()};
++    const Container c2{goink.begin(), goink.end()};
+     // #TEST#: R805 Rename use of c2
+     REQUIRE_EQUAL(2, c2.m_how);
+ }

@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index fd51b87..2f9d3aa 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -308,9 +308,9 @@ void f8()
+         // #TEST#: R924 Rename use of Multiple
+         // #TEST#: R925 Rename local variable vals
+         // #TEST#: R926 Rename use of one
+-        const Multiple vals(one);
++        const Multiple goink(one);
+         // #TEST#: R927 Rename use of vals
+-        REQUIRE_EQUAL(1, vals.x);
++        REQUIRE_EQUAL(1, goink.x);
+     }
+ }
+ 
