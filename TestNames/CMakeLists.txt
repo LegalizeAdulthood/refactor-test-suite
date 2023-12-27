@@ -9,3 +9,4 @@ set_target_properties(test-names PROPERTIES
     CXX_STANDARD_REQUIRED ON
     FOLDER Tools
 )
+target_link_libraries(test-names PUBLIC test-cases)
