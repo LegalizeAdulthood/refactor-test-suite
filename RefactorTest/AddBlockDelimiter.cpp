@@ -33,4 +33,7 @@ int AddBlockDelimiters(bool flag)
 
 }    // namespace
 
-void TestAddBlockDelimiter() { AddBlockDelimiters(false); }
+void TestAddBlockDelimiter()
+{
+    AddBlockDelimiters(false);
+}
