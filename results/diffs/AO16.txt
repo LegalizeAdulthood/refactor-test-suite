@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/AddOverride.cpp b/RefactorTest/AddOverride.cpp
+index 267be92..2fc1ad7 100644
+--- a/RefactorTest/AddOverride.cpp
++++ b/RefactorTest/AddOverride.cpp
+@@ -154,7 +154,7 @@ public:
+     }
+ 
+     // #TEST#: AO16 Add override
+-    virtual void ConstVolatile() const volatile
++    void ConstVolatile() const volatile override
+     {
+     }
+ };
