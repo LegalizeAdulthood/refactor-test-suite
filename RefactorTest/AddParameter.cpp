@@ -99,7 +99,7 @@ static AddParameterTester *GetOne()
     return new AddParameterTester();
 }
 
-// #TEST#: AP13 Add parameter
+// #TEST#: AP13 Add parameter of type double
 void AddParameterFn()
 {
 }
