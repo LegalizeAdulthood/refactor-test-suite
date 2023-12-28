@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index 7e94f5d..30f5e81 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -254,7 +254,7 @@ public:
+     {
+     }
+     // #TEST#: AP75 Add parameter before first, int goink
+-    static void AddParameterStaticDefaultInline(int first = 0)
++    static void AddParameterStaticDefaultInline(int goink, int first = 0)
+     {
+     }
+     // #TEST#: AP76 Add parameter, int goink

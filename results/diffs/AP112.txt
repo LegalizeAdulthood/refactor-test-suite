@@ -1,0 +1,26 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index 663c3ba..7eed666 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -85,7 +85,7 @@ void TestAddParameter()
+     // #TEST#: AP111 Add parameter, int goink
+     s.AddParameter(1);
+     // #TEST#: AP112 Add parameter, int goink
+-    s.AddParameter2<int>();
++    s.AddParameter2<int>(0);
+     // #TEST#: AP113 Add parameter, int goink
+     s.AddParameterRef(ref);
+     // #TEST#: AP114 Add parameter before first, int goink
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index fa2ecc5..faba659 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -124,7 +124,7 @@ struct AddParameterStruct
+ 
+     template <typename T>
+     // #TEST#: AP41 Add parameter, int goink
+-    void AddParameter2()
++    void AddParameter2(int goink)
+     {
+     }
+ 

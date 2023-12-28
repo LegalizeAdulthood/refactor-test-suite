@@ -1,0 +1,29 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index a759b33..80938ac 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -113,9 +113,9 @@ void TestAddParameter()
+     // #TEST#: AP128 Add parameter, int goink
+     AddParameterStruct::StaticTemplate<int>(0);
+     // #TEST#: AP129 Add parameter before x, int goink
+-    AddParameterStruct::StaticTemplateDefault<int>();
++    AddParameterStruct::StaticTemplateDefault<int>(0);
+     // #TEST#: AP130 Add parameter before x, int goink
+-    AddParameterStruct::StaticTemplateDefault<int>(1);
++    AddParameterStruct::StaticTemplateDefault<int>(0, 1);
+     // #TEST#: AP131 Add parameter, int goink
+     AddParameter2<AddParameterStructTester>();
+ 
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index fa2ecc5..fecb466 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -158,7 +158,7 @@ struct AddParameterStruct
+     }
+     template <typename T>
+     // #TEST#: AP53 Add parameter before x, int goink
+-    static void StaticTemplateDefault(int x = 0)
++    static void StaticTemplateDefault(int goink, int x = 0)
+     {
+     }
+ };

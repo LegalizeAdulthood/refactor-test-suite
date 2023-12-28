@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index 2c96615..25c8717 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -214,7 +214,7 @@ public:
+     }
+     template <typename T>
+     // #TEST#: AP67 Add parameter before x, int goink
+-    static void StaticTemplateDefault(int x = 0)
++    static void StaticTemplateDefault(int goink, int x = 0)
+     {
+     }
+ };

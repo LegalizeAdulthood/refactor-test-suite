@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index 7e94f5d..42797c4 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -279,7 +279,7 @@ public:
+         return Other(0);
+     }
+     // #TEST#: AP81 Add parameter, int goink
+-    Other OtherTemplate()
++    Other OtherTemplate(int goink)
+     {
+         return Other(0);
+     }

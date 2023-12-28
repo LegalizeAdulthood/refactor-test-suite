@@ -1,35 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index b1fba17..4b75d61 100644
+index a759b33..ee3f2be 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -39,7 +39,7 @@ void TestAddParameter()
-     test.AddParameter2<int>();
-     test.AddParameter(1);
+@@ -52,7 +52,7 @@ void TestAddParameter()
+     // #TEST#: AP96 Add parameter, int *goink
      test.AddParameter(ref);
+     // #TEST#: AP97 Add parameter, int goink
 -    test.AddParameterRef(ref);
 +    test.AddParameterRef(ref, 0);
+     // #TEST#: AP98 Add parameter before first, int goink
      test.AddParameterDefault();
-     test.AddParameterDefault(1);
- 
-@@ -137,7 +137,7 @@ void AddParameterTester::AddParameter(int first)
+     // #TEST#: AP99 Add parameter before first, int goink
+@@ -194,7 +194,7 @@ void AddParameterTester::AddParameter(int first)
  }
  
- // #TEST#: AP20 Add parameter
+ // #TEST#: AP20 Add parameter, int goink
 -void AddParameterTester::AddParameterRef(const int &first)
-+void AddParameterTester::AddParameterRef(const int &first, int Goink)
++void AddParameterTester::AddParameterRef(const int &first, int goink)
  {
  }
  
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d44dc23..ff36242 100644
+index fa2ecc5..a5f6618 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -31,7 +31,7 @@ public:
-     // #TEST#: AP3 Add parameter
+@@ -38,7 +38,7 @@ public:
+     // #TEST#: AP3 Add parameter, int *goink
      void AddParameter(int first);
-     // #TEST#: AP4 Add parameter
+     // #TEST#: AP4 Add parameter after first, int goink
 -    void AddParameterRef(const int &first);
-+    void AddParameterRef(const int &first, int Goink);
-     // #TEST#: AP5 Add parameter
++    void AddParameterRef(const int &first, int goink);
+     // #TEST#: AP5 Add parameter before first, int goink
      void AddParameterDefault(int first = 0);
  

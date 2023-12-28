@@ -1,26 +1,26 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index b1fba17..6d6f596 100644
+index a759b33..b9783f3 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -49,7 +49,7 @@ void TestAddParameter()
-     AddParameterTester::Static();
-     AddParameterTester::StaticDefault(0);
+@@ -71,7 +71,7 @@ void TestAddParameter()
+     // #TEST#: AP105 Add parameter before x, int goink
      AddParameterTester::StaticDefault(1, 2);
+     // #TEST#: AP106 Add parameter before x, int goink
 -    AddParameterTester::StaticTemplate<int>(0);
 +    AddParameterTester::StaticTemplate<int>(0, 0);
+     // #TEST#: AP107 Add parameter before x, int goink
      AddParameterTester::StaticTemplateDefault<int>();
-     AddParameterTester::StaticTemplateDefault<int>(1);
-     AddParameter2<AddParameterTester2>();
+     // #TEST#: AP108 Add parameter before x, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d44dc23..35106f2 100644
+index fa2ecc5..52ac160 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -49,7 +49,7 @@ public:
+@@ -56,7 +56,7 @@ public:
      static void StaticDefault(int x, int y = 0);
-     // #TEST#: AP10 Add parameter
      template <typename T>
+     // #TEST#: AP10 Add parameter before x, int goink
 -    static void StaticTemplate(int x)
-+    static void StaticTemplate(int Goink, int x)
++    static void StaticTemplate(int goink, int x)
      {
          T val = x;
      }
