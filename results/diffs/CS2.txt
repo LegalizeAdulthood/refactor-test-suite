@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
-index 742dfcb..6ae4336 100644
+index 2008aa8..8b9c4e8 100644
 --- a/RefactorTest/ChangeSignature.h
 +++ b/RefactorTest/ChangeSignature.h
 @@ -10,9 +10,9 @@ namespace ChangeSignatureNamespace
-     // #TEST#: CS3 Rename function to Primitive
-     // #TEST#: CS4 Add const qualifier to first parameter
-     // #TEST#: CS5 Add const qualifier to second parameter
--    inline int Function1(int a, int b)
-+    inline int Function1(int a, int operand2)
-     {
--        return a + b;
-+        return a + operand2;
-     }
+ // #TEST#: CS3 Rename function to Primitive
+ // #TEST#: CS4 Add const qualifier to first parameter
+ // #TEST#: CS5 Add const qualifier to second parameter
+-inline int Function1(int a, int b)
++inline int Function1(int a, int operand2)
+ {
+-    return a + b;
++    return a + operand2;
+ }
  
-     // #TEST#: CS6 Change type of prefix to 'std::string const &'
+ // #TEST#: CS6 Change type of prefix to 'std::string const &'

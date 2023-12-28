@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
-index 2008aa8..eafa12e 100644
+index fb88588..9653bf0 100644
 --- a/RefactorTest/ChangeSignature.h
 +++ b/RefactorTest/ChangeSignature.h
 @@ -10,7 +10,7 @@ namespace ChangeSignatureNamespace
@@ -7,7 +7,7 @@ index 2008aa8..eafa12e 100644
  // #TEST#: CS4 Add const qualifier to first parameter
  // #TEST#: CS5 Add const qualifier to second parameter
 -inline int Function1(int a, int b)
-+inline int Function1(int a, const int b)
++inline int Function1(const int a, int b)
  {
      return a + b;
  }

@@ -1,27 +1,27 @@
 diff --git a/RefactorTest/ChangeSignature.cpp b/RefactorTest/ChangeSignature.cpp
-index 87fed1e..7c0b285 100644
+index 9665d01..4005a2b 100644
 --- a/RefactorTest/ChangeSignature.cpp
 +++ b/RefactorTest/ChangeSignature.cpp
-@@ -35,7 +35,7 @@ void f1()
-     // #TEST#: CS31 Rename function to Primitive
-     // #TEST#: CS32 Add const qualifier to first parameter
-     // #TEST#: CS33 Add const qualifier to second parameter
+@@ -36,7 +36,7 @@ void f1()
+     // #TEST#: CS33 Rename function to Primitive
+     // #TEST#: CS34 Add const qualifier to first parameter
+     // #TEST#: CS35 Add const qualifier to second parameter
 -    REQUIRE_EQUAL(7, Function1(3, 4));
 +    REQUIRE_EQUAL(7, Primitive(3, 4));
  }
  
  void f2()
-@@ -67,7 +67,7 @@ void f3()
-     // #TEST#: CS41 Rename function to Primitive
-     // #TEST#: CS42 Add const qualifier to first parameter
-     // #TEST#: CS43 Add const qualifier to second parameter
+@@ -68,7 +68,7 @@ void f3()
+     // #TEST#: CS43 Rename function to Primitive
+     // #TEST#: CS44 Add const qualifier to first parameter
+     // #TEST#: CS45 Add const qualifier to second parameter
 -    REQUIRE_EQUAL(7, ChangeSignatureNamespace::Function1(3, 4));
 +    REQUIRE_EQUAL(7, ChangeSignatureNamespace::Primitive(3, 4));
  }
  
  }    // namespace
 diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
-index 2008aa8..95afe41 100644
+index fb88588..86406f2 100644
 --- a/RefactorTest/ChangeSignature.h
 +++ b/RefactorTest/ChangeSignature.h
 @@ -10,7 +10,7 @@ namespace ChangeSignatureNamespace

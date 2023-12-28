@@ -33,14 +33,24 @@ int Function2(int a, int b);
 class ChangeSignature
 {
 public:
+    // #TEST#: CS12 Rename first parameter to goink
+    // #TEST#: CS13 Rename second parameter to goink
+    // #TEST#: CS14 Rename method to Primitive
+    // #TEST#: CS15 Change type of first parameter to float
+    // #TEST#: CS16 Change return type to float
     int Method1(int a, int b)
     {
         return a + b;
     }
+
+    // #TEST#: CS17 Rename first parameter to goink
+    // #TEST#: CS18 Rename second parameter to goink
+    // #TEST#: CS19 Change type of first parameter to float
+    // #TEST#: CS20 Change return type to float
     int Method2(int a, int b);
 
 private:
-    int member1;
+    int member1{};
 };
 
 }    // namespace ChangeSignatureNamespace

@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
+index fb88588..5b3b165 100644
+--- a/RefactorTest/ChangeSignature.h
++++ b/RefactorTest/ChangeSignature.h
+@@ -38,9 +38,9 @@ public:
+     // #TEST#: CS14 Rename method to Primitive
+     // #TEST#: CS15 Change type of first parameter to float
+     // #TEST#: CS16 Change return type to float
+-    int Method1(int a, int b)
++    int Method1(int a, int goink)
+     {
+-        return a + b;
++        return a + goink;
+     }
+ 
+     // #TEST#: CS17 Rename first parameter to goink

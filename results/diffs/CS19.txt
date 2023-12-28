@@ -1,0 +1,26 @@
+diff --git a/RefactorTest/ChangeSignature.cpp b/RefactorTest/ChangeSignature.cpp
+index 9665d01..262e022 100644
+--- a/RefactorTest/ChangeSignature.cpp
++++ b/RefactorTest/ChangeSignature.cpp
+@@ -21,7 +21,7 @@ int Function2(int a, int b)
+ // #TEST#: CS28 Rename method to Primitive
+ // #TEST#: CS29 Change type of first parameter to float
+ // #TEST#: CS30 Change return type to float
+-int ChangeSignature::Method2(int a, int b)
++int ChangeSignature::Method2(float a, int b)
+ {
+     return a + b;
+ }
+diff --git a/RefactorTest/ChangeSignature.h b/RefactorTest/ChangeSignature.h
+index fb88588..d2a9876 100644
+--- a/RefactorTest/ChangeSignature.h
++++ b/RefactorTest/ChangeSignature.h
+@@ -47,7 +47,7 @@ public:
+     // #TEST#: CS18 Rename second parameter to goink
+     // #TEST#: CS19 Change type of first parameter to float
+     // #TEST#: CS20 Change return type to float
+-    int Method2(int a, int b);
++    int Method2(float a, int b);
+ 
+ private:
+     int member1{};
