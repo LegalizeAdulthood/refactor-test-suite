@@ -304,9 +304,8 @@ void f1()
     auto i{3};
     REQUIRE_EQUAL(3, i);
     REQUIRE_TYPE_EQUAL(int, i);
-    using namespace std::string_literals;
     // #TEST#: RAWT30 Replace auto with type
-    auto s{"Text"s};
+    auto s{std::string{"Text"}};
     REQUIRE_EQUAL(std::string{"Text"}, s);
     REQUIRE_TYPE_EQUAL(std::string, s);
 }
