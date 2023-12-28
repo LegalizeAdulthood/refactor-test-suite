@@ -57,7 +57,7 @@ void TestCreateMultiVariableDeclaration()
     stj = sti;
 
     // #TEST#: CMVD4 Create multi-variable declaration from next two lines
-    std::vector<float> vi(3);
+    std::vector<float> vi(4);
     std::vector<float> vj(4);
     vi = vj;
 
