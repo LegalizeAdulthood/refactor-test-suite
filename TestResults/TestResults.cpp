@@ -54,7 +54,7 @@ void scanResultsFile(std::filesystem::path path)
     {
         const std::string title = line.substr(line.find_first_not_of(' ', line.find_first_of(' ')));
         const char *prefix = testCases::getPrefixForTestName(title);
-        if(prefix == nullptr)
+        if (prefix == nullptr)
         {
             g_errors.push_back(path.string() + '(' + std::to_string(lineNum) + "): test title '" + std::string{title}
                                + "' not found.");
@@ -89,14 +89,40 @@ void scanResultsFile(std::filesystem::path path)
     }
 }
 
+bool markedDeprecated(const std::string &label)
+{
+    const std::string prefix = label.substr(0, label.find_first_of("0123456789"));
+    for (const std::string &result : g_testResults[prefix])
+    {
+        if (result.find(label) != std::string::npos)
+        {
+            return result.find("(deprecated)") != std::string::npos;
+        }
+    }
+    return false;
+}
+
 void checkResults()
 {
-    for (const char * testReport : g_testReports)
+    for (const char *testReport : g_testReports)
     {
         const std::vector<std::string> &labels = g_testResultsLabels[testReport];
+        auto findLabel = [&](const std::string &label)
+        { return std::find(labels.begin(), labels.end(), label) != labels.end(); };
+        for (const std::string &deprecated : testCases::getDeprecatedLabels(testReport))
+        {
+            if (!findLabel(deprecated))
+            {
+                g_errors.push_back("error: No test results for deprecated test " + deprecated);
+            }
+        }
         for (const std::string &testCase : testCases::g_testCases[testReport])
         {
-            if (std::find(labels.begin(), labels.end(), testCase) ==labels.end())
+            if (testCases::isDeprecatedLabel(testCase) && !markedDeprecated(testCase))
+            {
+                g_errors.push_back("error: Test results for " + testCase + " not marked deprecated.");
+            }
+            if (std::find(labels.begin(), labels.end(), testCase) == labels.end())
             {
                 g_errors.push_back("error: No test results for " + testCase);
             }

@@ -60,11 +60,7 @@ void printMarkDown(std::ostream &out)
                "---- | ------\n";
         for (const std::string &testCase : testCases::g_testCases[test.prefix])
         {
-            if (testCases::isDeprecatedLabel(testCase))
-            {
-                continue;
-            }
-            out << testCase << " | \n";
+            out << testCase << " | " << (testCases::isDeprecatedLabel(testCase) ? "(deprecated)" : "") << '\n';
         }
     }
 }

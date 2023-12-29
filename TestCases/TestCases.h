@@ -20,6 +20,7 @@ extern std::map<const char *, std::vector<std::string>> g_testCases;
 
 std::vector<std::string> scanTestDirectory(std::string_view dir);
 bool isDeprecatedLabel(const std::string &label);
+const std::vector<std::string>& getDeprecatedLabels(const char *prefix);
 const char *getPrefixForTestName(std::string_view name);
 
 }    // namespace testCases

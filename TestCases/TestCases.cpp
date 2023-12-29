@@ -60,7 +60,7 @@ std::vector<Test> g_tests{
 
 std::map<const char *, std::vector<std::string>> g_testCases;
 std::vector<std::string> g_labels;
-std::vector<std::string> g_deprecatedLabels;
+std::map<const char *, std::vector<std::string>> g_deprecatedLabels;
 std::string g_currentFile;
 int g_currentLine{};
 std::vector<std::string> g_errors;
@@ -87,7 +87,7 @@ void checkLabel(std::string_view label, std::string_view desc)
     g_labels.emplace_back(label);
     if (desc == "(deprecated)")
     {
-        g_deprecatedLabels.emplace_back(label);
+        g_deprecatedLabels[pos->prefix].emplace_back(label);
     }
 }
 
@@ -156,7 +156,22 @@ std::vector<std::string> scanTestDirectory(std::string_view dir)
 
 bool isDeprecatedLabel(const std::string &label)
 {
-    return std::find(g_deprecatedLabels.begin(), g_deprecatedLabels.end(), label) != g_deprecatedLabels.end();
+    const std::string prefix = label.substr(0, label.find_first_of("0123456789"));
+    const auto pos =
+        std::find_if(std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.prefix == prefix; });
+    if (pos == std::end(g_tests))
+    {
+        throw std::runtime_error("Unknown test prefix " + std::string{prefix});
+    }
+    auto &labels = g_deprecatedLabels[pos->prefix];
+    return std::find(labels.begin(), labels.end(), label) != labels.end();
+}
+
+const std::vector<std::string> &getDeprecatedLabels(const char *prefix)
+{
+    static std::vector<std::string> empty;
+    auto pos = g_deprecatedLabels.find(prefix);
+    return pos == g_deprecatedLabels.end() ? empty : pos->second;
 }
 
 const char *getPrefixForTestName(std::string_view name)
