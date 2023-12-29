@@ -1,4 +1,4 @@
-add_executable(refactor-test-suite
+add_library(refactor-test-cases STATIC
     AddOverride.cpp
     AddParameter.h
     AddParameter.cpp
@@ -28,7 +28,6 @@ add_executable(refactor-test-suite
     MoveMethod.h
     MoveMethod.cpp
     OptimizeNamespaceReferences.cpp
-    RefactorTest.h
     RemoveBlockDelimiter.cpp
     RemoveUnusedParameters.h
     RemoveUnusedParameters.cpp
@@ -52,7 +51,6 @@ add_executable(refactor-test-suite
     SimplifyBooleanExpression.cpp
     SplitInitializationFromDeclaration.cpp
     SplitMultiVariableDeclaration.cpp
-    RefactorTest.cpp
     Config.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/include/Config.h
 )
@@ -65,7 +63,7 @@ if("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
         FOLDER Libs
         CXX_STANDARD 14
         CXX_STANDARD_REQUIRED ON)
-    target_link_libraries(refactor-test-suite PUBLIC refactor-14)
+    target_link_libraries(refactor-test-cases PUBLIC refactor-14)
     set(HAVE_CPP14 ON)
 endif()
 if("cxx_std_17" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
@@ -74,7 +72,7 @@ if("cxx_std_17" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
         FOLDER Libs
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON)
-    target_link_libraries(refactor-test-suite PUBLIC refactor-17)
+    target_link_libraries(refactor-test-cases PUBLIC refactor-17)
     set(HAVE_CPP17 ON)
 endif()
 if("cxx_std_20" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
@@ -83,16 +81,16 @@ if("cxx_std_20" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
         FOLDER Libs
         CXX_STANDARD 20
         CXX_STANDARD_REQUIRED ON)
-    target_link_libraries(refactor-test-suite PUBLIC refactor-20)
+    target_link_libraries(refactor-test-cases PUBLIC refactor-20)
     set(HAVE_CPP20 ON)
 endif()
 configure_file(Config.h.in include/Config.h)
-set_target_properties(refactor-test-suite PROPERTIES
+set_target_properties(refactor-test-cases PROPERTIES
     CXX_STANDARD 11
     CXX_STANDARD_REQUIRED ON
-    FOLDER Tools
+    FOLDER Libs
 )
-target_include_directories(refactor-test-suite PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
+target_include_directories(refactor-test-cases PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_property(SOURCE ReplaceAutoPtrWithUniquePtr.cpp
         APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-declarations)
@@ -101,10 +99,21 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
             APPEND PROPERTY COMPILE_FLAGS -Wno-deprecated-register)
     endif()
 elseif(MSVC)
-    target_compile_definitions(refactor-test-suite PUBLIC _CRT_SECURE_NO_WARNINGS)
+    target_compile_definitions(refactor-test-cases PUBLIC _CRT_SECURE_NO_WARNINGS)
     set_property(SOURCE RenameCpp11.cpp
         APPEND PROPERTY COMPILE_FLAGS /wd4290)
 endif()
+
+add_executable(refactor-test-suite
+    RefactorTest.h
+    RefactorTest.cpp
+)
+set_target_properties(refactor-test-suite PROPERTIES
+    CXX_STANDARD 11
+    CXX_STANDARD_REQUIRED ON
+    FOLDER Tools
+)
+target_link_libraries(refactor-test-suite PUBLIC refactor-test-cases)
 add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND refactor-test-suite)
 add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND test-names ${CMAKE_CURRENT_SOURCE_DIR} > ${CMAKE_BINARY_DIR}/Tool.md)
 add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND test-diffs ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/results/diffs)
