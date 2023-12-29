@@ -104,7 +104,7 @@ void checkResults()
     }
 }
 
-void reportResults(std::ostream &out)
+int reportResults(std::ostream &out)
 {
     for (const std::string &warning : g_warnings)
     {
@@ -116,8 +116,9 @@ void reportResults(std::ostream &out)
         {
             std::cerr << error << '\n';
         }
-        throw std::runtime_error("errors found");
+        return 1;
     }
+    return 0;
 }
 
 int main(const std::vector<std::string_view> &args)
@@ -132,18 +133,17 @@ int main(const std::vector<std::string_view> &args)
         g_errors = testCases::scanTestDirectory(args[1]);
         scanResultsFile(args[2]);
         checkResults();
-        reportResults(std::cout);
-        return 0;
+        return reportResults(std::cout);
     }
     catch (const std::exception &bang)
     {
         std::cerr << "Unexpected exception: " << bang.what() << '\n';
-        return 1;
+        return 2;
     }
     catch (...)
     {
         std::cerr << "Unknown exception\n";
-        return 2;
+        return 3;
     }
 }
 
