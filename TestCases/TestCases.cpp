@@ -3,9 +3,8 @@
 #include <algorithm>
 #include <filesystem>
 #include <fstream>
-#include <iostream>
+#include <iterator>
 #include <map>
-#include <stdexcept>
 #include <string>
 #include <string_view>
 #include <utility>
@@ -158,6 +157,13 @@ std::vector<std::string> scanTestDirectory(std::string_view dir)
 bool isDeprecatedLabel(const std::string &label)
 {
     return std::find(g_deprecatedLabels.begin(), g_deprecatedLabels.end(), label) != g_deprecatedLabels.end();
+}
+
+const char *getPrefixForTestName(std::string_view name)
+{
+    auto pos =
+        std::find_if(std::begin(g_tests), std::end(g_tests), [name](const Test &test) { return test.name == name; });
+    return pos != std::end(g_tests) ? pos->prefix : nullptr;
 }
 
 }    // namespace testCases
