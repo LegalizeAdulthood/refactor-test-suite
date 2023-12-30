@@ -19,8 +19,52 @@ std::vector<std::string> g_warnings;
 std::vector<std::string> g_diffs;
 std::vector<std::string> g_preamble;
 std::vector<const char *> g_testReports;
-std::map<std::string, std::vector<std::string>> g_testResults;
+struct TestResult
+{
+    std::string line;
+    bool hasResult;
+    bool deprecated;
+    bool passed;
+};
+std::map<std::string, std::vector<TestResult>> g_testResults;
 std::map<std::string, std::vector<std::string>> g_testResultsLabels;
+
+bool isTestCaseResult(const std::string &line)
+{
+    if (line.empty())
+    {
+        return false;
+    }
+    const auto bar = line.find_first_of('|');
+    if (bar == std::string::npos)
+    {
+        return false;
+    }
+    const auto firstNonSpace = line.find_first_not_of(' ');
+    if (firstNonSpace == bar)
+    {
+        return false;
+    }
+    const auto endFirstWord = line.find_last_not_of(' ', bar);
+    const std::string firstWord = line.substr(firstNonSpace, endFirstWord - firstNonSpace - 1);
+    if (firstWord.empty() || firstWord == "Case" || firstWord.find_first_not_of('-') == std::string::npos)
+    {
+        return false;
+    }
+    const auto beginSecondWord = line.find_first_not_of(' ', bar + 1);
+    if (beginSecondWord == std::string::npos)
+    {
+        // Test label with no result reported
+        return true;
+    }
+    const auto lastNonSpace = line.find_last_not_of(' ');
+    if (lastNonSpace == bar)
+    {
+        return false;
+    }
+    const std::string secondWord = line.substr(beginSecondWord, lastNonSpace - beginSecondWord + 1);
+    return secondWord != "Result" && secondWord.find_first_not_of('-') != std::string::npos;
+}
 
 void scanResultsFile(std::filesystem::path path)
 {
@@ -71,7 +115,7 @@ void scanResultsFile(std::filesystem::path path)
 
         g_testReports.push_back(prefix);
         const std::string test = prefix;
-        std::vector<std::string> &results = g_testResults[test];
+        std::vector<TestResult> &results = g_testResults[test];
         std::vector<std::string> &labels = g_testResultsLabels[test];
         while (file)
         {
@@ -84,7 +128,26 @@ void scanResultsFile(std::filesystem::path path)
             {
                 labels.push_back(line.substr(0, line.find_first_of(' ')));
             }
-            results.emplace_back(std::move(line));
+            if (!isTestCaseResult(line))
+            {
+                continue;
+            }
+            const auto bar = line.find('|');
+            bool hasResult = line.find_first_not_of(' ', bar) != std::string::npos;
+            const bool deprecated = line.find("(deprecated)", bar) != std::string::npos;
+            bool passed{};
+            if (!deprecated)
+            {
+                if (line.find("Pass", bar) != std::string::npos)
+                {
+                    passed = true;
+                }
+                else if (line.find("Failure", bar) == std::string::npos)
+                {
+                    hasResult = false;
+                }
+            }
+            results.push_back({line, hasResult, deprecated, passed});
         }
     }
 }
@@ -92,14 +155,10 @@ void scanResultsFile(std::filesystem::path path)
 bool markedDeprecated(const std::string &label)
 {
     const std::string prefix = label.substr(0, label.find_first_of("0123456789"));
-    for (const std::string &result : g_testResults[prefix])
-    {
-        if (result.find(label) != std::string::npos)
-        {
-            return result.find("(deprecated)") != std::string::npos;
-        }
-    }
-    return false;
+    const std::vector<TestResult> &results = g_testResults[prefix];
+    const auto matchesLabel = [&](const TestResult &result) { return result.line.find(label) != std::string::npos; };
+    const auto pos = std::find_if(results.begin(), results.end(), matchesLabel);
+    return pos != results.end() && pos->deprecated;
 }
 
 void checkResults()
@@ -125,6 +184,19 @@ void checkResults()
             if (std::find(labels.begin(), labels.end(), testCase) == labels.end())
             {
                 g_errors.push_back("error: No test results for " + testCase);
+            }
+        }
+        for (const TestResult &result : g_testResults[testReport])
+        {
+            const std::string label = result.line.substr(0, result.line.find_first_of(' '));
+            if (!result.hasResult)
+            {
+                g_warnings.push_back("warning: No result for test " + label);
+            }
+            else if (result.deprecated && !testCases::isDeprecatedLabel(label))
+            {
+                g_errors.push_back("error: Test result for " + label
+                                   + " is marked deprecated, but test case is not deprecated");
             }
         }
     }
