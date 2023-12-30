@@ -1,8 +1,8 @@
-# Visual Studio 2015
+# Visual Studio 2017
 
 Home: [Visual Studio 2017](http://www.visualstudio.com/)
 
-Version: Microsoft Visual Studio Community 2017, Version 15.5.7
+Version: Microsoft Visual Studio Community 2022, Version 17.7.5
 
 Notes:
  * Intellisense must be enabled for most refactorings to work properly.
@@ -28,10 +28,6 @@ Notes:
    from the editor.
  * **Reorder Parameters** is available through **Change Signature**, but the unused
    parameters are not indicated visually in the IDE.
- * Microsoft retired the Connect bug tracker in January, 2018.  (I never got any
-   email notification to the best of my recollection.)  All my URLs to
-   previously filed bugs no longer work, preventing me from correlating previous
-   results to current results and identifying if claimed fixes are actually fixed.
 
 <hr/>
 
@@ -63,6 +59,149 @@ AP22 | Failure (declaration not updated) [206946](https://developercommunity.vis
 AP23 | Pass
 AP24 | Failure (doesn't select all instances) [206939](https://developercommunity.visualstudio.com/content/problem/206939/change-signature-on-static-method-doesnt-update-us.html)
 AP25 | Failure (not available) [206938](https://developercommunity.visualstudio.com/content/problem/206938/change-signature-doesnt-recognize-static-function.html)
+AP26 | 
+AP27 | 
+AP28 | 
+AP29 | 
+AP30 | 
+AP31 | 
+AP32 | 
+AP33 | 
+AP34 | 
+AP35 | 
+AP36 | 
+AP37 | 
+AP38 | 
+AP39 | 
+AP40 | 
+AP41 | 
+AP42 | 
+AP43 | 
+AP44 | 
+AP45 | 
+AP46 | 
+AP47 | 
+AP48 | 
+AP49 | 
+AP50 | 
+AP51 | 
+AP52 | 
+AP53 | 
+AP54 | 
+AP55 | 
+AP56 | 
+AP57 | 
+AP58 | 
+AP59 | 
+AP60 | 
+AP61 | 
+AP62 | 
+AP63 | 
+AP64 | 
+AP65 | 
+AP66 | 
+AP67 | 
+AP68 | 
+AP69 | 
+AP70 | 
+AP71 | 
+AP72 | 
+AP73 | 
+AP74 | 
+AP75 | 
+AP76 | 
+AP77 | 
+AP78 | 
+AP79 | 
+AP80 | 
+AP81 | 
+AP82 | 
+AP83 | 
+AP84 | 
+AP85 | 
+AP86 | 
+AP87 | 
+AP88 | 
+AP89 | 
+AP90 | 
+AP91 | 
+AP92 | 
+AP93 | 
+AP94 | 
+AP95 | 
+AP96 | 
+AP97 | 
+AP98 | 
+AP99 | 
+AP100 | 
+AP101 | 
+AP102 | 
+AP103 | 
+AP104 | 
+AP105 | 
+AP106 | 
+AP107 | 
+AP108 | 
+AP109 | 
+AP110 | 
+AP111 | 
+AP112 | 
+AP113 | 
+AP114 | 
+AP115 | 
+AP116 | 
+AP117 | 
+AP118 | 
+AP119 | 
+AP120 | 
+AP121 | 
+AP122 | 
+AP123 | 
+AP124 | 
+AP125 | 
+AP126 | 
+AP127 | 
+AP128 | 
+AP129 | 
+AP130 | 
+AP131 | 
+AP132 | 
+AP133 | 
+AP134 | 
+AP135 | 
+AP136 | 
+AP137 | 
+AP138 | 
+AP139 | 
+AP140 | 
+AP141 | 
+AP142 | 
+AP143 | 
+AP144 | 
+AP145 | 
+AP146 | 
+AP147 | 
+AP148 | 
+AP149 | 
+AP150 | 
+AP151 | 
+AP152 | 
+AP153 | 
+AP154 | 
+AP155 | 
+AP156 | 
+AP157 | 
+AP158 | 
+AP159 | 
+AP160 | 
+AP161 | 
+AP162 | 
+AP163 | 
+AP164 | 
+AP165 | 
+AP166 | 
+AP167 | 
+AP168 | 
 
 ## Change Signature
 Case | Result
@@ -78,6 +217,40 @@ CS8  | Failure (instances not renamed) [206953](https://developercommunity.visua
 CS9  | Failure (unavailable) [206954](https://developercommunity.visualstudio.com/content/problem/206954/cant-rename-function-from-change-signature.html)
 CS10 | Pass
 CS11 | Pass
+CS12 | 
+CS13 | 
+CS14 | 
+CS15 | 
+CS16 | 
+CS17 | 
+CS18 | 
+CS19 | 
+CS20 | 
+CS21 | 
+CS22 | 
+CS23 | 
+CS24 | 
+CS25 | 
+CS26 | 
+CS27 | 
+CS28 | 
+CS29 | 
+CS30 | 
+CS31 | 
+CS32 | 
+CS33 | 
+CS34 | 
+CS35 | 
+CS36 | 
+CS37 | 
+CS38 | 
+CS39 | 
+CS40 | 
+CS41 | 
+CS42 | 
+CS43 | 
+CS44 | 
+CS45 | 
 
 ## Extract Function
 Case | Result
@@ -101,6 +274,7 @@ EXF16 | Failure (creates invalid code) [206898](https://developercommunity.visua
 EXF17 | Pass
 EXF18 | Failure (data flow) [206897](https://developercommunity.visualstudio.com/content/problem/206897/extract-function-cant-handle-statements-defining-v.html)
 EXF19 | Failure (creates invalid code) [206899](https://developercommunity.visualstudio.com/content/problem/206899/extract-function-creates-invalid-code-on-macro-exp.html)
+EXF20 |
 
 ## Extract Method
 Case | Result
@@ -249,6 +423,8 @@ R87  | Pass
 R88  | Pass
 R89  | Pass
 R90  | Pass
+R91 | (deprecated)
+R92 | (deprecated)
 R93  | Pass
 R94  | Pass
 R95  | Pass
@@ -718,7 +894,7 @@ R558 | Pass
 R559 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
 R560 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
 R561 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R562 | n/a
+R562 | (deprecated)
 R563 | Pass
 R564 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
 R565 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
@@ -762,19 +938,400 @@ R602 | Pass
 R603 | Pass
 R604 | Pass
 R605 | Pass
+R606 | 
+R607 | 
+R608 | 
+R609 | 
+R610 | 
+R611 | 
+R612 | 
+R613 | 
+R614 | 
+R615 | 
+R616 | 
+R617 | 
+R618 | 
+R619 | 
+R620 | 
+R621 | 
+R622 | 
+R623 | 
+R624 | 
+R625 | 
+R626 | 
+R627 | 
+R628 | 
+R629 | 
+R630 | 
+R631 | 
+R632 | 
+R633 | 
+R634 | 
+R635 | 
+R636 | 
+R637 | 
+R638 | 
+R639 | 
+R640 | 
+R641 | 
+R642 | 
+R643 | 
+R644 | 
+R645 | 
+R646 | 
+R647 | 
+R648 | 
+R649 | 
+R650 | 
+R651 | 
+R652 | 
+R653 | 
+R654 | 
+R655 | 
+R656 | 
+R657 | 
+R658 | 
+R659 | 
+R660 | 
+R661 | 
+R662 | 
+R663 | 
+R664 | 
+R665 | 
+R666 | 
+R667 | 
+R668 | 
+R669 | 
+R670 | 
+R671 | 
+R672 | 
+R673 | 
+R674 | 
+R675 | 
+R676 | 
+R677 | 
+R678 | 
+R679 | 
+R680 | 
+R681 | 
+R682 | 
+R683 | 
+R684 | 
+R685 | 
+R686 | 
+R687 | 
+R688 | 
+R689 | 
+R690 | 
+R691 | 
+R692 | 
+R693 | 
+R694 | 
+R695 | 
+R696 | 
+R697 | 
+R698 | 
+R699 | 
+R700 | 
+R701 | 
+R702 | 
+R703 | 
+R704 | 
+R705 | 
+R706 | 
+R707 | 
+R708 | 
+R709 | 
+R710 | 
+R711 | 
+R712 | 
+R713 | 
+R714 | 
+R715 | 
+R716 | 
+R717 | 
+R718 | 
+R719 | 
+R720 | 
+R721 | 
+R722 | 
+R723 | 
+R724 | 
+R725 | 
+R726 | 
+R727 | 
+R728 | 
+R729 | 
+R730 | 
+R731 | 
+R732 | 
+R733 | 
+R734 | 
+R735 | 
+R736 | 
+R737 | 
+R738 | 
+R739 | 
+R740 | 
+R741 | 
+R742 | 
+R743 | 
+R744 | 
+R745 | 
+R746 | 
+R747 | 
+R748 | 
+R749 | 
+R750 | 
+R751 | 
+R752 | 
+R753 | 
+R754 | 
+R755 | 
+R756 | 
+R757 | 
+R758 | 
+R759 | 
+R760 | 
+R761 | 
+R762 | 
+R763 | 
+R764 | 
+R765 | 
+R766 | 
+R767 | 
+R768 | 
+R769 | 
+R770 | 
+R771 | 
+R772 | 
+R773 | 
+R774 | 
+R775 | 
+R776 | 
+R777 | 
+R778 | 
+R779 | 
+R780 | 
+R781 | 
+R782 | 
+R783 | 
+R784 | 
+R785 | 
+R786 | 
+R787 | 
+R788 | 
+R789 | 
+R790 | 
+R791 | 
+R792 | 
+R793 | 
+R794 | 
+R795 | 
+R796 | 
+R797 | 
+R798 | 
+R799 | 
+R800 | 
+R801 | 
+R802 | 
+R803 | 
+R804 | 
+R805 | 
+R806 | 
+R807 | 
+R808 | 
+R809 | 
+R810 | 
+R811 | 
+R812 | 
+R813 | 
+R814 | 
+R815 | 
+R816 | 
+R817 | 
+R818 | 
+R819 | 
+R820 | 
+R821 | 
+R822 | 
+R823 | 
+R824 | 
+R825 | 
+R826 | 
+R827 | 
+R828 | 
+R829 | 
+R830 | 
+R831 | 
+R832 | 
+R833 | 
+R834 | 
+R835 | 
+R836 | 
+R837 | 
+R838 | 
+R839 | 
+R840 | 
+R841 | 
+R842 | 
+R843 | 
+R844 | 
+R845 | 
+R846 | 
+R847 | 
+R848 | 
+R849 | 
+R850 | 
+R851 | 
+R852 | 
+R853 | 
+R854 | 
+R855 | 
+R856 | 
+R857 | 
+R858 | 
+R859 | 
+R860 | 
+R861 | 
+R862 | 
+R863 | 
+R864 | 
+R865 | 
+R866 | 
+R867 | 
+R868 | 
+R869 | 
+R870 | 
+R871 | 
+R872 | 
+R873 | 
+R874 | 
+R875 | 
+R876 | 
+R877 | 
+R878 | 
+R879 | 
+R880 | 
+R881 | 
+R882 | 
+R883 | 
+R884 | 
+R885 | 
+R886 | 
+R887 | 
+R888 | 
+R889 | 
+R890 | 
+R891 | 
+R892 | 
+R893 | 
+R894 | 
+R895 | 
+R896 | 
+R897 | 
+R898 | 
+R899 | 
+R900 | 
+R901 | 
+R902 | 
+R903 | 
+R904 | 
+R905 | 
+R906 | 
+R907 | 
+R908 | 
+R909 | 
+R910 | 
+R911 | 
+R912 | 
+R913 | 
+R914 | 
+R915 | 
+R916 | 
+R917 | 
+R918 | 
+R919 | 
+R920 | 
+R921 | 
+R922 | 
+R923 | 
+R924 | 
+R925 | 
+R926 | 
+R927 | 
+R928 | 
+R929 | 
+R930 | 
+R931 | 
+R932 | 
+R933 | 
+R934 | 
+R935 | 
+R936 | 
+R937 | 
+R938 | 
+R939 | 
+R940 | 
+R941 | 
+R942 | 
+R943 | 
+R944 | 
+R945 | 
+R946 | 
+R947 | 
+R948 | 
+R949 | 
+R950 | 
+R951 | 
+R952 | 
+R953 | 
+R954 | 
+R955 | 
+R956 | 
+R957 | 
+R958 | 
+R959 | 
+R960 | 
+R961 | 
+R962 | 
+R963 | 
+R964 | 
+R965 | 
+R966 | 
+R967 | 
+R968 | 
+R969 | 
+R970 | 
+R971 | 
+R972 | 
+R973 | 
+R974 | 
+R975 | 
+R976 | 
+R977 | 
+R978 | 
+R979 | 
+R980 | 
+R981 | 
+R982 | 
+R983 | 
+R984 | 
+R985 | 
+R986 | 
 
 ## Reorder Parameters
 Case | Result
 ---- | ------
-RP1  | Failure (not available) [206947](https://developercommunity.visualstudio.com/content/problem/206947/enhance-change-signature-to-allow-promotion-of-ret.html) 
+RP1  | (deprecated)
 RP2  | Failure (not available) [206947](https://developercommunity.visualstudio.com/content/problem/206947/enhance-change-signature-to-allow-promotion-of-ret.html) 
 RP3  | Failure (selects wrong instances) [206949](https://developercommunity.visualstudio.com/content/problem/206949/change-signature-selects-unrelated-instances-by-de.html)
 RP4  | Pass
 RP5  | Failure (selects unrelated instances) [206950](https://developercommunity.visualstudio.com/content/problem/206950/change-signature-selects-unrelated-instances.html)
 RP6  | Pass
-RP7  | Failure (not available) [206947](https://developercommunity.visualstudio.com/content/problem/206947/enhance-change-signature-to-allow-promotion-of-ret.html) 
-RP8  | Failure (not available) [206947](https://developercommunity.visualstudio.com/content/problem/206947/enhance-change-signature-to-allow-promotion-of-ret.html) 
-RP9  | Failure (not available) [206947](https://developercommunity.visualstudio.com/content/problem/206947/enhance-change-signature-to-allow-promotion-of-ret.html) 
+RP7  | (deprecated)
+RP8  | (deprecated)
+RP9  | (deprecated)
 
 ## Replace String Literal With Raw String Literal
 Case | Result
