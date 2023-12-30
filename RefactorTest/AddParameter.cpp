@@ -1,6 +1,14 @@
 #include "AddParameter.h"
+#include "Require.h"
 
 // Adds a new parameter to a method declaration and updates all calls accordingly.
+
+namespace
+{
+
+void f1();
+
+}    // namespace
 
 // #TEST#: AP149 Add parameter, int goink
 static AddParameterTester *GetOne();
@@ -148,6 +156,8 @@ void TestAddParameter()
     // #TEST#: AP139 Add parameter, int goink
     def3 = GetOne();
     delete def3;
+
+    f1();
 }
 
 // #TEST#: AP140 Add parameter, int goink
@@ -239,3 +249,110 @@ void AddParameterStruct::Static()
 void AddParameterStruct::StaticDefault(int x, int y)
 {
 }
+
+namespace
+{
+
+class Interface
+{
+public:
+    virtual ~Interface()
+    {
+    }
+
+    // #TEST#: AP150 Add parameter, int goink
+    virtual int fn() = 0;
+
+    // #TEST#: AP151 Add parameter, int goink
+    virtual int fn2(int x) = 0;
+};
+
+class Derived : public Interface
+{
+public:
+    ~Derived() override = default;
+
+    // #TEST#: AP152 Add parameter, int goink
+    int fn() override;
+
+    // #TEST#: AP153 Add parameter, int goink
+    int fn2(int x) override;
+};
+
+class OtherDerived : public Interface
+{
+public:
+    ~OtherDerived() override = default;
+
+    // #TEST#: AP154 Add parameter, int goink
+    int fn() override
+    {
+        return 3;
+    }
+
+    // #TEST#: AP155 Add parameter, int goink
+    int fn2(int x) override
+    {
+        return x + 2;
+    }
+};
+
+class MoreDerived : public Derived
+{
+public:
+    ~MoreDerived() override = default;
+
+    // #TEST#: AP156 Add parameter, int goink
+    int fn() override;
+
+    // #TEST#: AP157 Add parameter, int goink
+    int fn2(int x) override;
+};
+
+// #TEST#: AP158 Add parameter, int goink
+int Derived::fn()
+{
+    return 1;
+}
+
+// #TEST#: AP159 Add parameter, int goink
+int Derived::fn2(int x)
+{
+    return x;
+}
+
+// #TEST#: AP160 Add parameter, int goink
+int MoreDerived::fn()
+{
+    return 2;
+}
+
+// #TEST#: AP161 Add parameter, int goink
+int MoreDerived::fn2(int x)
+{
+    // #TEST#: AP162 Add parameter, int goink
+    return 1 + Derived::fn2(x);
+}
+
+void f1()
+{
+    Derived d;
+    // #TEST#: AP163 Add parameter, int goink
+    REQUIRE_EQUAL(1, d.fn());
+    // #TEST#: AP164 Add parameter, int goink
+    REQUIRE_EQUAL(2, d.fn2(2));
+
+    MoreDerived md;
+    // #TEST#: AP165 Add parameter, int goink
+    REQUIRE_EQUAL(2, md.fn());
+    // #TEST#: AP166 Add parameter, int goink
+    REQUIRE_EQUAL(3, md.fn2(2));
+
+    OtherDerived od;
+    // #TEST#: AP167 Add parameter, int goink
+    REQUIRE_EQUAL(3, od.fn());
+    // #TEST#: AP168 Add parameter, int goink
+    REQUIRE_EQUAL(4, od.fn2(2));
+}
+
+}    // namespace

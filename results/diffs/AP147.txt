@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..0458253 100644
+index 44d4092..4057a7e 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -106,10 +106,10 @@ void TestAddParameter()
+@@ -114,10 +114,10 @@ void TestAddParameter()
      AddParameterStruct::Static();
      // #TEST#: AP124 Add parameter before y, int goink
      // #TEST#: AP125 Add parameter after y, int goink = 3
@@ -15,7 +15,7 @@ index a759b33..0458253 100644
      // #TEST#: AP128 Add parameter, int goink
      AddParameterStruct::StaticTemplate<int>(0);
      // #TEST#: AP129 Add parameter before x, int goink
-@@ -236,6 +236,6 @@ void AddParameterStruct::Static()
+@@ -246,7 +246,7 @@ void AddParameterStruct::Static()
  
  // #TEST#: AP147 Add parameter before y, int goink
  // #TEST#: AP148 Add parameter after y, int goink = 3
@@ -23,8 +23,9 @@ index a759b33..0458253 100644
 +void AddParameterStruct::StaticDefault(int x, int goink, int y)
  {
  }
+ 
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..84bec5a 100644
+index 7e94f5d..329cbe6 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
 @@ -149,7 +149,7 @@ struct AddParameterStruct
