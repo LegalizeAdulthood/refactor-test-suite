@@ -32,6 +32,17 @@ AO2 | Pass
 AO3 | Pass
 AO4 | Pass
 AO5 | Pass
+AO6 | 
+AO7 | 
+AO8 | 
+AO9 | 
+AO10 | 
+AO11 | 
+AO12 | 
+AO13 | 
+AO14 | 
+AO15 | 
+AO16 | 
 
 ## Replace auto_ptr With unique_ptr
 Case | Result
@@ -142,6 +153,8 @@ RZNP23  | Pass
 RZNP24  | Pass
 RZNP25  | Pass
 RZNP26  | Pass
+RZNP27 | 
+RZNP28 | 
 
 ## Replace Type With auto
 Case | Result
@@ -167,13 +180,13 @@ RTWA18 | Pass
 RTWA19 | Pass
 RTWA20 | Pass
 RTWA21 | Pass
-RTWA22 | Pass
+RTWA22 | (deprecated)
 RTWA23 | Pass
-RTWA24 | Pass
+RTWA24 | (deprecated)
 RTWA25 | Pass
-RTWA26 | Pass
+RTWA26 | (deprecated)
 RTWA27 | Pass
-RTWA28 | Pass
+RTWA28 | (deprecated)
 RTWA29 | Pass
 RTWA30 | Pass
 RTWA31 | Pass
