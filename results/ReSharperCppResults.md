@@ -1145,387 +1145,387 @@ R602 | Pass
 R603 | Pass
 R604 | Pass
 R605 | Pass
-R606 | 
-R607 | 
-R608 | 
-R609 | 
-R610 | 
-R611 | 
-R612 | 
-R613 | 
-R614 | 
-R615 | 
-R616 | 
-R617 | 
-R618 | 
-R619 | 
-R620 | 
-R621 | 
-R622 | 
-R623 | 
-R624 | 
-R625 | 
-R626 | 
-R627 | 
-R628 | 
-R629 | 
-R630 | 
-R631 | 
-R632 | 
-R633 | 
-R634 | 
-R635 | 
-R636 | 
-R637 | 
-R638 | 
-R639 | 
-R640 | 
-R641 | 
-R642 | 
-R643 | 
-R644 | 
-R645 | 
-R646 | 
-R647 | 
-R648 | 
-R649 | 
-R650 | 
-R651 | 
-R652 | 
-R653 | 
-R654 | 
-R655 | 
-R656 | 
-R657 | 
-R658 | 
-R659 | 
-R660 | 
-R661 | 
-R662 | 
-R663 | 
-R664 | 
-R665 | 
-R666 | 
-R667 | 
-R668 | 
-R669 | 
-R670 | 
-R671 | 
-R672 | 
-R673 | 
-R674 | 
-R675 | 
-R676 | 
-R677 | 
-R678 | 
-R679 | 
-R680 | 
-R681 | 
-R682 | 
-R683 | 
-R684 | 
-R685 | 
-R686 | 
-R687 | 
-R688 | 
-R689 | 
-R690 | 
-R691 | 
-R692 | 
-R693 | 
-R694 | 
-R695 | 
-R696 | 
-R697 | 
-R698 | 
-R699 | 
-R700 | 
-R701 | 
-R702 | 
-R703 | 
-R704 | 
-R705 | 
-R706 | 
-R707 | 
-R708 | 
-R709 | 
-R710 | 
-R711 | 
-R712 | 
-R713 | 
-R714 | 
-R715 | 
-R716 | 
-R717 | 
-R718 | 
-R719 | 
-R720 | 
-R721 | 
-R722 | 
-R723 | 
-R724 | 
-R725 | 
-R726 | 
-R727 | 
-R728 | 
-R729 | 
-R730 | 
-R731 | 
-R732 | 
-R733 | 
-R734 | 
-R735 | 
-R736 | 
-R737 | 
-R738 | 
-R739 | 
-R740 | 
-R741 | 
-R742 | 
-R743 | 
-R744 | 
-R745 | 
-R746 | 
-R747 | 
-R748 | 
-R749 | 
-R750 | 
-R751 | 
-R752 | 
-R753 | 
-R754 | 
-R755 | 
-R756 | 
-R757 | 
-R758 | 
-R759 | 
-R760 | 
-R761 | 
-R762 | 
-R763 | 
-R764 | 
-R765 | 
-R766 | 
-R767 | 
-R768 | 
-R769 | 
-R770 | 
-R771 | 
-R772 | 
-R773 | 
-R774 | 
-R775 | 
-R776 | 
-R777 | 
-R778 | 
-R779 | 
-R780 | 
-R781 | 
-R782 | 
-R783 | 
-R784 | 
-R785 | 
-R786 | 
-R787 | 
-R788 | 
-R789 | 
-R790 | 
-R791 | 
-R792 | 
-R793 | 
-R794 | 
-R795 | 
-R796 | 
-R797 | 
-R798 | 
-R799 | 
-R800 | 
-R801 | 
-R802 | 
-R803 | 
-R804 | 
-R805 | 
-R806 | 
-R807 | 
-R808 | 
-R809 | 
-R810 | 
-R811 | 
-R812 | 
-R813 | 
-R814 | 
-R815 | 
-R816 | 
-R817 | 
-R818 | 
-R819 | 
-R820 | 
-R821 | 
-R822 | 
-R823 | 
-R824 | 
-R825 | 
-R826 | 
-R827 | 
-R828 | 
-R829 | 
-R830 | 
-R831 | 
-R832 | 
-R833 | 
-R834 | 
-R835 | 
-R836 | 
-R837 | 
-R838 | 
-R839 | 
-R840 | 
-R841 | 
-R842 | 
-R843 | 
-R844 | 
-R845 | 
-R846 | 
-R847 | 
-R848 | 
-R849 | 
-R850 | 
-R851 | 
-R852 | 
-R853 | 
-R854 | 
-R855 | 
-R856 | 
-R857 | 
-R858 | 
-R859 | 
-R860 | 
-R861 | 
-R862 | 
-R863 | 
-R864 | 
-R865 | 
-R866 | 
-R867 | 
-R868 | 
-R869 | 
-R870 | 
-R871 | 
-R872 | 
-R873 | 
-R874 | 
-R875 | 
-R876 | 
-R877 | 
-R878 | 
-R879 | 
-R880 | 
-R881 | 
-R882 | 
-R883 | 
-R884 | 
-R885 | 
-R886 | 
-R887 | 
-R888 | 
-R889 | 
-R890 | 
-R891 | 
-R892 | 
-R893 | 
-R894 | 
-R895 | 
-R896 | 
-R897 | 
-R898 | 
-R899 | 
-R900 | 
-R901 | 
-R902 | 
-R903 | 
-R904 | 
-R905 | 
-R906 | 
-R907 | 
-R908 | 
-R909 | 
-R910 | 
-R911 | 
-R912 | 
-R913 | 
-R914 | 
-R915 | 
-R916 | 
-R917 | 
-R918 | 
-R919 | 
-R920 | 
-R921 | 
-R922 | 
-R923 | 
-R924 | 
-R925 | 
-R926 | 
-R927 | 
-R928 | 
-R929 | 
-R930 | 
-R931 | 
-R932 | 
-R933 | 
-R934 | 
-R935 | 
-R936 | 
-R937 | 
-R938 | 
-R939 | 
-R940 | 
-R941 | 
-R942 | 
-R943 | 
-R944 | 
-R945 | 
-R946 | 
-R947 | 
-R948 | 
-R949 | 
-R950 | 
-R951 | 
-R952 | 
-R953 | 
-R954 | 
-R955 | 
-R956 | 
-R957 | 
-R958 | 
-R959 | 
-R960 | 
-R961 | 
-R962 | 
-R963 | 
-R964 | 
-R965 | 
-R966 | 
-R967 | 
-R968 | 
-R969 | 
-R970 | 
-R971 | 
-R972 | 
-R973 | 
-R974 | 
-R975 | 
-R976 | 
-R977 | 
-R978 | 
-R979 | 
-R980 | 
-R981 | 
-R982 | 
-R983 | 
-R984 | 
-R985 | 
-R986 | 
+R606 | Pass
+R607 | Pass
+R608 | Pass
+R609 | Pass
+R610 | Failure (doesn't update macro arguments) [RSCPP-35264](https://youtrack.jetbrains.com/issue/RSCPP-35264/Rename-use-of-variable-template-doesnt-update-macro-arguments)
+R611 | Pass
+R612 | Pass
+R613 | Pass
+R614 | Pass
+R615 | Pass
+R616 | Pass
+R617 | Pass
+R618 | Pass
+R619 | Pass
+R620 | Failure (doesn't update macro arguments) [RSCPP-35264](https://youtrack.jetbrains.com/issue/RSCPP-35264/Rename-use-of-variable-template-doesnt-update-macro-arguments)
+R621 | Pass
+R622 | Pass
+R623 | Pass
+R624 | Pass
+R625 | Pass
+R626 | Pass
+R627 | Pass
+R628 | Pass
+R629 | Pass
+R630 | Pass
+R631 | Pass
+R632 | Pass
+R633 | Pass
+R634 | Pass
+R635 | Pass
+R636 | Pass
+R637 | Pass
+R638 | Pass
+R639 | Pass
+R640 | Pass
+R641 | Pass
+R642 | Pass
+R643 | Pass
+R644 | Pass
+R645 | Pass
+R646 | Pass
+R647 | Pass
+R648 | Pass
+R649 | Pass
+R650 | Pass
+R651 | Pass
+R652 | Pass
+R653 | Pass
+R654 | Pass
+R655 | Pass
+R656 | Pass
+R657 | Pass
+R658 | Pass
+R659 | Pass
+R660 | Pass
+R661 | Pass
+R662 | Pass
+R663 | Pass
+R664 | Pass
+R665 | Pass
+R666 | Pass
+R667 | Pass
+R668 | Pass
+R669 | Pass
+R670 | Pass
+R671 | Pass
+R672 | Pass
+R673 | Pass
+R674 | Pass
+R675 | Pass
+R676 | Pass
+R677 | Pass
+R678 | Pass
+R679 | Pass
+R680 | Pass
+R681 | Pass
+R682 | Pass
+R683 | Pass
+R684 | Pass
+R685 | Pass
+R686 | Pass
+R687 | Pass
+R688 | Pass
+R689 | Pass
+R690 | Pass
+R691 | Pass
+R692 | Pass
+R693 | Pass
+R694 | Pass
+R695 | Pass
+R696 | Pass
+R697 | Pass
+R698 | Pass
+R699 | Pass
+R700 | Pass
+R701 | Pass
+R702 | Pass
+R703 | Pass
+R704 | Pass
+R705 | Pass
+R706 | Pass
+R707 | Pass
+R708 | Pass
+R709 | Pass
+R710 | Pass
+R711 | Pass
+R712 | Pass
+R713 | Pass
+R714 | Pass
+R715 | Pass
+R716 | Pass
+R717 | Pass
+R718 | Pass
+R719 | Pass
+R720 | Pass
+R721 | Pass
+R722 | Pass
+R723 | Pass
+R724 | Pass
+R725 | Pass
+R726 | Pass
+R727 | Pass
+R728 | Pass
+R729 | Pass
+R730 | Pass
+R731 | Pass
+R732 | Pass
+R733 | Pass
+R734 | Pass
+R735 | Pass
+R736 | Pass
+R737 | Pass
+R738 | Pass
+R739 | Pass
+R740 | Pass
+R741 | Pass
+R742 | Pass
+R743 | Pass
+R744 | Pass
+R745 | Pass
+R746 | Pass
+R747 | Pass
+R748 | Pass
+R749 | Pass
+R750 | Pass
+R751 | Pass
+R752 | Pass
+R753 | Pass
+R754 | Pass
+R755 | Pass
+R756 | Pass
+R757 | Pass
+R758 | Pass
+R759 | Pass
+R760 | Pass
+R761 | Pass
+R762 | Pass
+R763 | Pass
+R764 | Pass
+R765 | Pass
+R766 | Pass
+R767 | Pass
+R768 | Pass
+R769 | Pass
+R770 | Pass
+R771 | Pass
+R772 | Pass
+R773 | Pass
+R774 | Pass
+R775 | Pass
+R776 | Pass
+R777 | Pass
+R778 | Pass
+R779 | Pass
+R780 | Pass
+R781 | Pass
+R782 | Pass
+R783 | Pass
+R784 | Pass
+R785 | Pass
+R786 | Pass
+R787 | Pass
+R788 | Pass
+R789 | Pass
+R790 | Pass
+R791 | Pass
+R792 | Pass
+R793 | Pass
+R794 | Pass
+R795 | Pass
+R796 | Pass
+R797 | Pass
+R798 | Pass
+R799 | Pass
+R800 | Pass
+R801 | Pass
+R802 | Pass
+R803 | Pass
+R804 | Pass
+R805 | Pass
+R806 | Pass
+R807 | Pass
+R808 | Pass
+R809 | Pass
+R810 | Pass
+R811 | Pass
+R812 | Pass
+R813 | Pass
+R814 | Pass
+R815 | Pass
+R816 | Pass
+R817 | Pass
+R818 | Pass
+R819 | Pass
+R820 | Pass
+R821 | Pass
+R822 | Pass
+R823 | Pass
+R824 | Pass
+R825 | Pass
+R826 | Pass
+R827 | Pass
+R828 | Pass
+R829 | Pass
+R830 | Pass
+R831 | Pass
+R832 | Pass
+R833 | Pass
+R834 | Pass
+R835 | Pass
+R836 | Pass
+R837 | Pass
+R838 | Pass
+R839 | Pass
+R840 | Pass
+R841 | Pass
+R842 | Pass
+R843 | Pass
+R844 | Pass
+R845 | Pass
+R846 | Pass
+R847 | Pass
+R848 | Pass
+R849 | Pass
+R850 | Pass
+R851 | Pass
+R852 | Pass
+R853 | Pass
+R854 | Pass
+R855 | Pass
+R856 | Pass
+R857 | Pass
+R858 | Pass
+R859 | Pass
+R860 | Pass
+R861 | Pass
+R862 | Pass
+R863 | Pass
+R864 | Pass
+R865 | Pass
+R866 | Pass
+R867 | Pass
+R868 | Pass
+R869 | Pass
+R870 | Pass
+R871 | Pass
+R872 | Pass
+R873 | Pass
+R874 | Pass
+R875 | Pass
+R876 | Pass
+R877 | Pass
+R878 | Pass
+R879 | Pass
+R880 | Pass
+R881 | Pass
+R882 | Pass
+R883 | Pass
+R884 | Pass
+R885 | Pass
+R886 | Pass
+R887 | Pass
+R888 | Pass
+R889 | Pass
+R890 | Failure (does nothing) [RSCPP-35265](https://youtrack.jetbrains.com/issue/RSCPP-35265/Rename-of-lambda-non-type-template-parameter-does-nothing)
+R891 | Pass
+R892 | Pass
+R893 | Failure (does nothing) [RSCPP-35265](https://youtrack.jetbrains.com/issue/RSCPP-35265/Rename-of-lambda-non-type-template-parameter-does-nothing)
+R894 | Pass
+R895 | Pass
+R896 | Pass
+R897 | Pass
+R898 | Pass
+R899 | Pass
+R900 | Pass
+R901 | Pass
+R902 | Pass
+R903 | Pass
+R904 | Pass
+R905 | Pass
+R906 | Pass
+R907 | Pass
+R908 | Pass
+R909 | Pass
+R910 | Pass
+R911 | Pass
+R912 | Pass
+R913 | Pass
+R914 | Pass
+R915 | Pass
+R916 | Pass
+R917 | Pass
+R918 | Pass
+R919 | Pass
+R920 | Pass
+R921 | Pass
+R922 | Pass
+R923 | Pass
+R924 | Pass
+R925 | Pass
+R926 | Pass
+R927 | Pass
+R928 | Pass
+R929 | Pass
+R930 | Pass
+R931 | Pass
+R932 | Pass
+R933 | Pass
+R934 | Pass
+R935 | Pass
+R936 | Pass
+R937 | Pass
+R938 | Pass
+R939 | Pass
+R940 | Pass
+R941 | Pass
+R942 | Pass
+R943 | Pass
+R944 | Pass
+R945 | Pass
+R946 | Pass
+R947 | Pass
+R948 | Pass
+R949 | Pass
+R950 | Pass
+R951 | Pass
+R952 | Pass
+R953 | Pass
+R954 | Pass
+R955 | Pass
+R956 | Pass
+R957 | Pass
+R958 | Pass
+R959 | Pass
+R960 | Pass
+R961 | Pass
+R962 | Pass 
+R963 | Pass
+R964 | Pass
+R965 | Pass
+R966 | Pass
+R967 | Pass
+R968 | Pass
+R969 | Pass
+R970 | Pass
+R971 | Pass
+R972 | Pass
+R973 | Pass
+R974 | Pass
+R975 | Pass
+R976 | Pass
+R977 | Pass
+R978 | Pass
+R979 | Pass
+R980 | Pass
+R981 | Pass
+R982 | Pass
+R983 | Pass
+R984 | Pass
+R985 | Pass
+R986 | Pass
 
 ## Reorder Parameters
 Case | Result
