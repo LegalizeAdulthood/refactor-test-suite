@@ -1,25 +1,25 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index bf17201..54a4a6a 100644
+index 03d4f8d..b50399e 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -196,13 +196,19 @@ namespace ExtractMethodNamespace
-         }
+@@ -193,13 +193,19 @@ public:
+     }
  
-         typedef void (Foo::*ConstMethodPtr)(int) const;
+     typedef void (Foo::*ConstMethodPtr)(int) const;
 +
-+        void Goink(ConstMethodPtr& member)
-+        {
-+            member = &Foo::Const1;
-+        }
++    void goink(ConstMethodPtr &member)
++    {
++        member = &Foo::Const1;
++    }
 +
-         ConstMethodPtr Method6(int x)
+     ConstMethodPtr Method6(int x)
+     {
+         ConstMethodPtr member;
+         if (x < 0)
          {
-             ConstMethodPtr member;
-             if (x < 0)
-             {
-                 // #TEST#: EM12 Extract Method on next line
--                member = &Foo::Const1;
-+                Goink(member);
-             }
-             else
-             {
+             // #TEST#: EM12 Extract Method on next line, void goink(ConstMethodPtr &member)
+-            member = &Foo::Const1;
++            goink(member);
+         }
+         else
+         {

@@ -1,21 +1,21 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index bf17201..5785815 100644
+index c5bd1b8..d073f59 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -15,10 +15,15 @@ namespace ExtractMethodNamespace
-         int _x;
-         int _y;
+@@ -14,10 +14,15 @@ struct Bar
+     int _x;
+     int _y;
  
-+        void Goink()
-+        {
-+            _x = 3;
-+        }
++    void goink()
++    {
++        _x = 3;
++    }
 +
-         void Method1()
-         {
-             // #TEST#: EM1 Extract Method on next line
--            _x = 3;
-+            Goink();
-             _y = 4;
-         }
+     void Method1()
+     {
+         // #TEST#: EM1 Extract Method on next line, void goink()
+-        _x = 3;
++        goink();
+         _y = 4;
+     }
  

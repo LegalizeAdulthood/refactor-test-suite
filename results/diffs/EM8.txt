@@ -1,24 +1,24 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index bf17201..a5a7f7e 100644
+index 03d4f8d..29e8b1c 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -129,13 +129,18 @@ namespace ExtractMethodNamespace
-             _y = 4;
-         }
+@@ -126,13 +126,18 @@ public:
+         _y = 4;
+     }
  
-+        void Goink(int(*& result)())
-+        {
-+            result = Function1;
-+        }
++    void goink(int (*&result)())
++    {
++        result = Function1;
++    }
 +
-         int (*Method2(int x))()
+     int (*Method2(int x))()
+     {
+         int (*result)();
+         if (x < 0)
          {
-             int (*result)();
-             if (x < 0)
-             {
-                 // #TEST#: EM8 Extract Method on next line
--                result = Function1;
-+                Goink(result);
-             }
-             else
-             {
+             // #TEST#: EM8 Extract Method on next line, void goink(int (*&result)())
+-            result = Function1;
++            goink(result);
+         }
+         else
+         {

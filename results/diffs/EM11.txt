@@ -1,24 +1,24 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index bf17201..a9e9525 100644
+index 03d4f8d..48a6ec8 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -181,12 +181,18 @@ namespace ExtractMethodNamespace
-         }
+@@ -178,12 +178,18 @@ public:
+     }
  
-         void (Foo::*cmember)(int) const;
+     void (Foo::*cmember)(int) const;
 +
-+        void Goink()
-+        {
-+            cmember = &Foo::Const1;
-+        }
++    void goink()
++    {
++        cmember = &Foo::Const1;
++    }
 +
-         void (Foo::*Method5(int x))(int) const
+     void (Foo::*Method5(int x))(int) const
+     {
+         if (x < 0)
          {
-             if (x < 0)
-             {
-                 // #TEST#: EM11 Extract Method on next line
--                cmember = &Foo::Const1;
-+                Goink();
-             }
-             else
-             {
+             // #TEST#: EM11 Extract Method on next line, void goink()
+-            cmember = &Foo::Const1;
++            goink();
+         }
+         else
+         {

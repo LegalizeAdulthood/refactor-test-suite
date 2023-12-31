@@ -1,23 +1,23 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index bf17201..6c54859 100644
+index 03d4f8d..575db2f 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -151,12 +151,17 @@ namespace ExtractMethodNamespace
+@@ -148,12 +148,17 @@ public:
  
-         void (Foo::*member)(int);
+     void (Foo::*member)(int);
  
-+        void Goink()
-+        {
-+            member = &Foo::Operation1;
-+        }
++    void goink()
++    {
++        member = &Foo::Operation1;
++    }
 +
-         void (Foo::*Method3(int x))(int)
+     void (Foo::*Method3(int x))(int)
+     {
+         if (x < 0)
          {
-             if (x < 0)
-             {
-                 // #TEST#: EM9 Extract Method on next line
--                member = &Foo::Operation1;
-+                Goink();
-             }
-             else
-             {
+             // #TEST#: EM9 Extract Method on next line, void goink()
+-            member = &Foo::Operation1;
++            goink();
+         }
+         else
+         {

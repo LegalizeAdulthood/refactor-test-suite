@@ -1,0 +1,21 @@
+diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
+index cc839d5..05a084a 100644
+--- a/RefactorTest/ExtractMethod.cpp
++++ b/RefactorTest/ExtractMethod.cpp
+@@ -321,10 +321,15 @@ class Operator
+ public:
+     operator int() { return Internal(); }
+ 
++    float goink()
++    {
++        return float(operator int());
++    }
++
+     operator float()
+     {
+         // #TEST#: EM21 Extract return expression, float goink()
+-        return float(operator int());
++        return goink();
+     }
+ 
+ private:
