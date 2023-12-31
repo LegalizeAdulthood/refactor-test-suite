@@ -23,8 +23,14 @@ class Foo
 {
 public:
     // #TEST#: RUP4 Remove Unused Parameter x
-    int Method1(int x) { return 2; }
-    int Method2(int x) { return x; }
+    int Method1(int x)
+    {
+        return 2;
+    }
+    int Method2(int x)
+    {
+        return x;
+    }
 };
 
 typedef int (Foo::*FooMemberPtr)(int);
@@ -52,11 +58,17 @@ using namespace RemoveUnusedParametersNamespace;
 extern int goop(int a, int b);
 
 // #TEST#: RUP3 Remove Unused Parameter b
-extern int goop(int a, int b) { return a; }
+extern int goop(int a, int b)
+{
+    return a;
+}
 
 namespace
 {
-int plus1(int i) { return i + 1; }
+int plus1(int i)
+{
+    return i + 1;
+}
 
 }    // namespace
 
@@ -67,5 +79,6 @@ void TestRemoveUnusedParameter()
     Foo f;
     REQUIRE_EQUAL(2, f.Method1(0));
     REQUIRE_EQUAL(-1, TestMemberPointer2(f, &Foo::Method2, -1));
-    REQUIRE_EQUAL(10, goop(10, 20));
+    const int i = goop(10, 20);
+    REQUIRE_EQUAL(10, i);
 }
