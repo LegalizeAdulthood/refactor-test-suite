@@ -432,7 +432,7 @@ void AddParameterUnion::AddParameterRef(const int &first)
 {
 }
 
-// #TEST#: AP194 Add parameter, int goink
+// #TEST#: AP194 Add parameter before first, int goink
 void AddParameterUnion::AddParameterDefault(int first)
 {
 }
