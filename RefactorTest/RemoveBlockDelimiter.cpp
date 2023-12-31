@@ -51,4 +51,7 @@ int RemoveBlockDelimiters(bool flag)
 
 }    // namespace
 
-void TestRemoveBlockDelimiter() { RemoveBlockDelimiters(false); }
+void TestRemoveBlockDelimiter()
+{
+    RemoveBlockDelimiters(false);
+}

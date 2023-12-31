@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/RemoveBlockDelimiter.cpp b/RefactorTest/RemoveBlockDelimiter.cpp
-index d36336c..a1b5470 100644
+index 7e4632f..b1a560b 100644
 --- a/RefactorTest/RemoveBlockDelimiter.cpp
 +++ b/RefactorTest/RemoveBlockDelimiter.cpp
 @@ -24,10 +24,8 @@ int RemoveBlockDelimiters(bool flag)
