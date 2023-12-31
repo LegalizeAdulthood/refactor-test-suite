@@ -1,22 +1,13 @@
 diff --git a/RefactorTest/MakeMethodStatic.cpp b/RefactorTest/MakeMethodStatic.cpp
-index b77802d..47761a2 100644
+index 68785bf..51bdc20 100644
 --- a/RefactorTest/MakeMethodStatic.cpp
 +++ b/RefactorTest/MakeMethodStatic.cpp
-@@ -18,7 +18,7 @@ namespace MakeMethodStaticNamespace
-         }
+@@ -12,7 +12,7 @@ public:
+     int Add(int a, int b) { return a + b; }
  
-         // #TEST#: MMS2 Make method static
--        int Add(int b)
-+        static int Add(int b)
-         {
-             return _a + b;
-         }
-@@ -43,7 +43,7 @@ void TestMakeMethodStatic()
-     Foo f;
-     int sum = f.Add(1, 2);
-     REQUIRE_EQUAL(3, sum);
--    sum = f.Add(2);
-+    sum = Foo::Add(2);
-     REQUIRE_EQUAL(2, sum);
-     sum = f.AddConst(3);
-     REQUIRE_EQUAL(3, sum);
+     // #TEST#: MMS2 Make method static
+-    int Add(int b) { return _a + b; }
++    static int Add(int b) { return _a + b; }
+ 
+     // #TEST#: MMS3 Make method static
+     int AddConst(int b) const { return _a + b; }
