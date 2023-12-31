@@ -1,21 +1,21 @@
 diff --git a/RefactorTest/ReverseConditional.cpp b/RefactorTest/ReverseConditional.cpp
-index 2f9eb3f..d1cefb2 100644
+index 4cd26f0..9e56370 100644
 --- a/RefactorTest/ReverseConditional.cpp
 +++ b/RefactorTest/ReverseConditional.cpp
-@@ -26,13 +26,13 @@ namespace ReverseConditionalNamespace
-                 if (i != 2)
+@@ -25,13 +25,13 @@ int Test1()
+             if (i != 2)
+             {
+                 // #TEST#: RC4 Reverse Conditional
+-                if (i != 1)
++                if (i == 1)
                  {
-                     // #TEST#: RC4 Reverse Conditional
--                    if (i != 1)
-+                    if (i == 1)
-                     {
--                        j = 7;
-+                        j = 2;
-                     }
-                     else
-                     {
--                        j = 2;
-+                        j = 7;
-                     }
+-                    j = 7;
++                    j = 2;
                  }
                  else
+                 {
+-                    j = 2;
++                    j = 7;
+                 }
+             }
+             else
