@@ -1,9 +1,8 @@
 diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
-index 800c819..3153739 100644
+index 8dc399d..eca52e9 100644
 --- a/RefactorTest/MoveImplementationToSourceFile.cpp
 +++ b/RefactorTest/MoveImplementationToSourceFile.cpp
-@@ -1,6 +1,11 @@
- #include "stdafx.h"
+@@ -1,5 +1,10 @@
  #include "MoveImplementationToSourceFile.h"
  
 +int MoveImplementationToSourceFile::Base::f()
@@ -15,11 +14,11 @@ index 800c819..3153739 100644
  {
      using namespace MoveImplementationToSourceFile;
 diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
-index 00b4a56..47ac893 100644
+index c0a111e..f7e191c 100644
 --- a/RefactorTest/MoveImplementationToSourceFile.h
 +++ b/RefactorTest/MoveImplementationToSourceFile.h
-@@ -21,10 +21,7 @@ struct Base
-     {}
+@@ -22,10 +22,7 @@ struct Base
+     }
  
      // #TEST#: MISF4 Move implementation to source file
 -    int f()

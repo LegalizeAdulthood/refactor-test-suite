@@ -1,9 +1,8 @@
 diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
-index 800c819..17f79fc 100644
+index 8dc399d..a2de8d9 100644
 --- a/RefactorTest/MoveImplementationToSourceFile.cpp
 +++ b/RefactorTest/MoveImplementationToSourceFile.cpp
-@@ -1,6 +1,11 @@
- #include "stdafx.h"
+@@ -1,5 +1,10 @@
  #include "MoveImplementationToSourceFile.h"
  
 +int MoveImplementationToSourceFile::Nested::Derived::h() const
@@ -15,11 +14,11 @@ index 800c819..17f79fc 100644
  {
      using namespace MoveImplementationToSourceFile;
 diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
-index 00b4a56..38248b0 100644
+index c0a111e..5d7bdba 100644
 --- a/RefactorTest/MoveImplementationToSourceFile.h
 +++ b/RefactorTest/MoveImplementationToSourceFile.h
-@@ -144,10 +144,7 @@ public:
-     {}
+@@ -157,10 +157,7 @@ public:
+     }
  
      // #TEST#: MISF25 Move implementation to source file
 -    int h() const override

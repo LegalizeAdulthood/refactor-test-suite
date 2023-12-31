@@ -13,10 +13,10 @@ index 8dc399d..bcc31fd 100644
  {
      using namespace MoveImplementationToSourceFile;
 diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
-index 29f739e..9795a7a 100644
+index c0a111e..ae480b3 100644
 --- a/RefactorTest/MoveImplementationToSourceFile.h
 +++ b/RefactorTest/MoveImplementationToSourceFile.h
-@@ -58,9 +58,7 @@ public:
+@@ -62,9 +62,7 @@ public:
      virtual void f() = 0;
  
      // #TEST#: MISF9 Move implementation to source file
