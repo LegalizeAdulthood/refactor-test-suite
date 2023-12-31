@@ -27,8 +27,8 @@ add_library(refactor-test-cases STATIC
     MoveImplementationToSourceFile.cpp
     MoveMethod.h
     MoveMethod.cpp
-    OptimizeNamespaceReferences.cpp
     RemoveBlockDelimiter.cpp
+    RemoveUnusedIncludes.cpp
     RemoveUnusedParameters.h
     RemoveUnusedParameters.cpp
     Rename.h
