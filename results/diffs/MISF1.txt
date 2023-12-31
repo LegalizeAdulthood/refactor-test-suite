@@ -1,30 +1,31 @@
 diff --git a/RefactorTest/MoveImplementationToSourceFile.cpp b/RefactorTest/MoveImplementationToSourceFile.cpp
-index 8dc399d..6b61bd0 100644
+index 8dc399d..be3bf1b 100644
 --- a/RefactorTest/MoveImplementationToSourceFile.cpp
 +++ b/RefactorTest/MoveImplementationToSourceFile.cpp
-@@ -24,3 +24,9 @@ void TestMoveImplementationToSourceFile()
-     int (Nested::VirtualBase::*np)() const = nd.GetOperation();
-     REQUIRE_EQUAL(1, (nd.*np)());
- }
-+
-+// #TEST#: MISF1 Move implementation to source file
+@@ -1,5 +1,10 @@
+ #include "MoveImplementationToSourceFile.h"
+ 
 +int MoveImplementationToSourceFile::f()
 +{
 +    return 1;
 +}
++
+ void TestMoveImplementationToSourceFile()
+ {
+     using namespace MoveImplementationToSourceFile;
 diff --git a/RefactorTest/MoveImplementationToSourceFile.h b/RefactorTest/MoveImplementationToSourceFile.h
-index 00b4a56..51342d8 100644
+index c0a111e..c0267a7 100644
 --- a/RefactorTest/MoveImplementationToSourceFile.h
 +++ b/RefactorTest/MoveImplementationToSourceFile.h
-@@ -5,10 +5,7 @@ namespace MoveImplementationToSourceFile
+@@ -4,10 +4,7 @@
+ namespace MoveImplementationToSourceFile
  {
- 
  // #TEST#: MISF1 Move implementation to source file
 -inline int f()
 -{
 -    return 1;
 -}
-+int f();
++inline int f();
  
  struct Base
  {

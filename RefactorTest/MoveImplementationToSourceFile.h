@@ -13,11 +13,13 @@ struct Base
 {
     // #TEST#: MISF2 Move implementation to source file
     Base() : i{10}
-    {}
+    {
+    }
 
     // #TEST#: MISF3 Move implementation to source file
     ~Base()
-    {}
+    {
+    }
 
     // #TEST#: MISF4 Move implementation to source file
     int f()
@@ -52,7 +54,9 @@ class VirtualBase
 {
 public:
     // #TEST#: MISF7 Move implementation to source file
-    virtual ~VirtualBase() {}
+    virtual ~VirtualBase()
+    {
+    }
 
     // #TEST#: MISF8 Move implementation to source file (should not be available)
     virtual void f() = 0;
@@ -74,18 +78,22 @@ class Derived : public VirtualBase
 public:
     // #TEST#: MISF12 Move implementation to source file
     Derived()
-    {}
+    {
+    }
 
     // #TEST#: MISF13 Move implementation to source file
     virtual ~Derived()
-    {}
+    {
+    }
 
     // #TEST#: MISF14 Move implementation to source file
     void f() override
-    {}
+    {
+    }
 
     void g() override
-    {}
+    {
+    }
 
     // #TEST#: MISF15 Move implementation to source file
     int h() const override
@@ -107,7 +115,9 @@ class VirtualBase
 {
 public:
     // #TEST#: MISF17 Move implementation to source file
-    virtual ~VirtualBase() {}
+    virtual ~VirtualBase()
+    {
+    }
 
     // #TEST#: MISF18 Move implementation to source file (should not be available)
     virtual void f() = 0;
@@ -129,18 +139,22 @@ class Derived : public VirtualBase
 public:
     // #TEST#: MISF22 Move implementation to source file
     Derived()
-    {}
+    {
+    }
 
     // #TEST#: MISF23 Move implementation to source file
     virtual ~Derived()
-    {}
+    {
+    }
 
     // #TEST#: MISF24 Move implementation to source file
     void f() override
-    {}
+    {
+    }
 
     void g() override
-    {}
+    {
+    }
 
     // #TEST#: MISF25 Move implementation to source file
     int h() const override
