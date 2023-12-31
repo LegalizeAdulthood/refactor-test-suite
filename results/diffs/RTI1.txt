@@ -1,21 +1,17 @@
 diff --git a/RefactorTest/ReplaceTernaryWithIf.cpp b/RefactorTest/ReplaceTernaryWithIf.cpp
-index 23ce8e7..ee8f65b 100644
+index 6d10201..9134060 100644
 --- a/RefactorTest/ReplaceTernaryWithIf.cpp
 +++ b/RefactorTest/ReplaceTernaryWithIf.cpp
-@@ -16,7 +16,15 @@ namespace ReplaceTernaryWithIf
-         int y = GetValue();
+@@ -15,7 +15,11 @@ void TestInteger()
+     int y = GetValue();
  
-         // #TEST#: RTI1 Replace Ternary Expression With If
--        int x = (y == 10) ? y : 1;
-+        int x;
-+		if (y == 10)
-+		{
-+			x = y;
-+		}
-+		else
-+		{
-+			x = 1;
-+		}
-         REQUIRE_EQUAL(10, x);
+     // #TEST#: RTI1 Replace Ternary Expression With If
+-    int x = (y == 10) ? y : 1;
++    int x;
++    if ((y == 10))
++        x = y;
++    else
++        x = 1;
+     REQUIRE_EQUAL(10, x);
  
-         int i = 1;
+     int i = 1;

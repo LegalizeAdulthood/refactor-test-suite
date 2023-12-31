@@ -1,21 +1,17 @@
 diff --git a/RefactorTest/ReplaceTernaryWithIf.cpp b/RefactorTest/ReplaceTernaryWithIf.cpp
-index 060480f..aa75d08 100644
+index 6d10201..28bfa3b 100644
 --- a/RefactorTest/ReplaceTernaryWithIf.cpp
 +++ b/RefactorTest/ReplaceTernaryWithIf.cpp
-@@ -35,7 +35,15 @@ namespace ReplaceTernaryWithIf
-         float f = 1.0f;
+@@ -34,7 +34,11 @@ void TestFloatDouble()
+     float f = 1.0f;
  
-         // #TEST#: RTI4 Replace Ternary Expression With If
--        double x = (f == 10.0f) ? -10.0 : 10.0f;
-+        double x;
-+		if (f == 10.0f)
-+		{
-+			x = -10.0;
-+		}
-+		else
-+		{
-+			x = 10.0f;
-+		}
-         REQUIRE_EQUAL(10.0, x);
+     // #TEST#: RTI4 Replace Ternary Expression With If
+-    double x = (f == 10.0f) ? -10.0 : 10.0f;
++    double x;
++    if ((f == 10.0f))
++        x = -10.0;
++    else
++        x = 10.0f;
+     REQUIRE_EQUAL(10.0, x);
  
-         float g = 2.0f;
+     float g = 2.0f;

@@ -1,21 +1,17 @@
 diff --git a/RefactorTest/ReplaceTernaryWithIf.cpp b/RefactorTest/ReplaceTernaryWithIf.cpp
-index 060480f..aa69a91 100644
+index 6d10201..960f867 100644
 --- a/RefactorTest/ReplaceTernaryWithIf.cpp
 +++ b/RefactorTest/ReplaceTernaryWithIf.cpp
-@@ -80,7 +80,15 @@ namespace ReplaceTernaryWithIf
-         int (Foo::*mem1)() = &Foo::Operation1;
+@@ -79,7 +79,11 @@ void TestMemberPointer()
+     int (Foo::*mem1)() = &Foo::Operation1;
  
-         // #TEST#: RTI9 Replace Ternary Expression With If
--        int (Foo::*mem2)() = (mem1 == &Foo::Operation1) ? &Foo::Operation2 : &Foo::Operation1;
-+        int (Foo::*mem2)();
-+		if (mem1 == &Foo::Operation1)
-+		{
-+			mem2 = &Foo::Operation2;
-+		}
-+		else
-+		{
-+			mem2 = &Foo::Operation1;
-+		}
-         Foo f;
-         REQUIRE_EQUAL(2, (f.*mem2)());
+     // #TEST#: RTI9 Replace Ternary Expression With If
+-    int (Foo::*mem2)() = (mem1 == &Foo::Operation1) ? &Foo::Operation2 : &Foo::Operation1;
++    int (Foo::*mem2)();
++    if ((mem1 == &Foo::Operation1))
++        mem2 = &Foo::Operation2;
++    else
++        mem2 = &Foo::Operation1;
+     Foo f;
+     REQUIRE_EQUAL(2, (f.*mem2)());
  
