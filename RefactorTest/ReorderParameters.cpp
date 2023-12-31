@@ -1,14 +1,19 @@
 #include "Require.h"
 
-// Enables you to change the order of parameters including promoting out
-// parameters in the signature to the return value.
+// Change the order of parameters.
 
 namespace ReorderParametersNamespace
 {
-int Function1(int x) { return x * 2; }
+int Function1(int x)
+{
+    return x * 2;
+}
 
 // #TEST#: RP1 (deprecated)
-int Function2(int x) { return x * 4; }
+int Function2(int x)
+{
+    return x * 4;
+}
 
 // #TEST#: RP2 Reorder parameters
 int TestFunction(int (*fn)(int), int i)
@@ -28,17 +33,32 @@ int TestFunction(int (*fn)(int), int i)
 class Foo
 {
 public:
-    int Operation1(int x) { return 1 - x; }
-    int Operation2(int x) { return 2 * x; }
-    int Const1(int x) const { return x + 2; }
-    int Const2(int x) const { return x + 4; }
+    int Operation1(int x)
+    {
+        return 1 - x;
+    }
+    int Operation2(int x)
+    {
+        return 2 * x;
+    }
+    int Const1(int x) const
+    {
+        return x + 2;
+    }
+    int Const2(int x) const
+    {
+        return x + 4;
+    }
 
     // #TEST#: RP8 (deprecated)
     void ConstOperation3(int &x) const;
 };
 
 // #TEST#: RP9 (deprecated)
-void Foo::ConstOperation3(int &x) const { x = 2; }
+void Foo::ConstOperation3(int &x) const
+{
+    x = 2;
+}
 
 // #TEST#: RP3 Reorder parameters move parameter i to first parameter
 int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
@@ -107,18 +127,25 @@ int TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
 }    // namespace ReorderParametersNamespace
 
 // #TEST#: RP7 (deprecated)
-static int Function3(int x) { return x * 4; }
+static int Function3(int x)
+{
+    return x * 4;
+}
 
 using namespace ReorderParametersNamespace;
 
 void TestReorderParameters()
 {
     REQUIRE_EQUAL(-4, TestFunction(Function1, -1));
-    REQUIRE_EQUAL(8, TestFunction(Function1, 1));
-    Foo f;
-    int result = TestMemberPointer(f, &Foo::Operation1, Function2(1));
+    int result = TestFunction(Function1, 1);
     REQUIRE_EQUAL(8, result);
-    REQUIRE_EQUAL(16, TestConstMemberPointer(f, &Foo::Const1, 6));
-    REQUIRE_EQUAL(8, TestMemberPointer2(f, &Foo::Operation1, Function3(1)));
-    REQUIRE_EQUAL(16, TestConstMemberPointer2(f, &Foo::Const1, 6));
+    Foo f;
+    result = TestMemberPointer(f, &Foo::Operation1, Function2(1));
+    REQUIRE_EQUAL(8, result);
+    result = TestConstMemberPointer(f, &Foo::Const1, 6);
+    REQUIRE_EQUAL(16, result);
+    result = TestMemberPointer2(f, &Foo::Operation1, Function3(1));
+    REQUIRE_EQUAL(8, result);
+    result = TestConstMemberPointer2(f, &Foo::Const1, 6);
+    REQUIRE_EQUAL(16, result);
 }
