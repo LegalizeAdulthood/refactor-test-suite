@@ -16,7 +16,7 @@ Notes:
 * **Inline Macro** is available as the quick fix *Substitute macro call*.
 * **Inline Type Alias** is available as the quick fix *Substitute type alias* or *Substitute typedef*.
 * **Make Method Static** is available as a quick fix.
-* **Move Implementation to Source File** is available as the quick fix *Move function implementation to source file*.
+* **Move Implementation to Source File** is available as the quick fix *Move definition to source file* or *Move definition out of class scope*.
 * **Remove Block Delimiter** is available as the quick fix *Remove braces*.
 * **Remove Unused Parameter** is available as a quick fix.
 * **Reorder Parameters** is available through **Change Signature**.
