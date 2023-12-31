@@ -7,6 +7,7 @@ namespace
 {
 
 void f1();
+void f3();
 
 }    // namespace
 
@@ -30,7 +31,7 @@ struct AddParameterStructTester
     }
 };
 
-void TestAddParameter()
+static void f2()
 {
     // #TEST#: AP86 Add parameter, int *goink
     AddParameterFn();
@@ -355,4 +356,95 @@ void f1()
     REQUIRE_EQUAL(4, od.fn2(2));
 }
 
+void f3()
+{
+    AddParameterUnion u;
+    // #TEST#: AP169 Add parameter, int *goink
+    u.AddParameter();
+    // #TEST#: AP170 Add parameter, int goink
+    u.AddParameter2<int>();
+    // #TEST#: AP171 Add parameter, int goink
+    u.AddParameter(0);
+    const int j2{3};
+    // #TEST#: AP172 Add parameter, int goink
+    u.AddParameterRef(j2);
+    // #TEST#: AP173 Add parameter before first, int goink
+    u.AddParameterDefault(4);
+    // #TEST#: AP174 Add parameter, int goink
+    AddParameterUnion::AddParameterStaticInline();
+    // #TEST#: AP175 Add parameter before first, int goink
+    AddParameterUnion::AddParameterStaticDefaultInline(5);
+    // #TEST#: AP176 Add parameter, int goink
+    AddParameterUnion::Static();
+    // #TEST#: AP177 Add parameter before y, int goink
+    AddParameterUnion::StaticDefault(6);
+    // #TEST#: AP178 Add parameter, int goink
+    AddParameterUnion::StaticTemplate<int>(7);
+    // #TEST#: AP179 Add parameter before x, int goink
+    AddParameterUnion::StaticTemplateDefault<int>(8);
+
+    AddParameterUnionTemplate<int> u2;
+    // #TEST#: AP180 Add parameter, int *goink
+    u2.AddParameter();
+    // #TEST#: AP181 Add parameter, int goink
+    u2.AddParameter2<int>();
+    // #TEST#: AP182 Add parameter, int goink
+    u2.AddParameter(1);
+    const int j{3};
+    // #TEST#: AP183 Add parameter, int goink
+    u2.AddParameterRef(j);
+    // #TEST#: AP184 Add parameter before first, int goink
+    u2.AddParameterDefault();
+    // #TEST#: AP185 Add parameter, int goink
+    AddParameterUnionTemplate<const char *>::AddParameterStaticInline();
+    // #TEST#: AP186 Add parameter before first, int goink
+    AddParameterUnionTemplate<float>::AddParameterStaticDefaultInline();
+    // #TEST#: AP187 Add parameter, int goink
+    AddParameterUnionTemplate<double>::Static();
+    // #TEST#: AP188 Add parameter before y, int goink
+    AddParameterUnionTemplate<double>::StaticDefault(2);
+    // #TEST#: AP202 Add parameter, int goink
+    AddParameterUnionTemplate<double>::StaticTemplate<int>(3);
+    // #TEST#: AP189 Add parameter before x, int goink
+    AddParameterUnionTemplate<double>::StaticTemplateDefault<int>();
+    // #TEST#: AP190 Add parameter, int goink
+    const double k = AddParameterUnionTemplate<double>::OtherStaticTemplate();
+    REQUIRE_EQUAL(0.0, k);
+    // #TEST#: AP191 Add parameter, int goink
+    const double k2 = u2.OtherTemplate();
+    REQUIRE_EQUAL(0.0, k2);
+}
+
 }    // namespace
+
+// #TEST#: AP192 Add parameter, int goink
+void AddParameterUnion::AddParameter(int first)
+{
+}
+
+// #TEST#: AP193 Add parameter, int goink
+void AddParameterUnion::AddParameterRef(const int &first)
+{
+}
+
+// #TEST#: AP194 Add parameter, int goink
+void AddParameterUnion::AddParameterDefault(int first)
+{
+}
+
+// #TEST#: AP195 Add parameter, int goink
+void AddParameterUnion::Static()
+{
+}
+
+// #TEST#: AP196 Add parameter before y, int goink
+void AddParameterUnion::StaticDefault(int x, int y)
+{
+}
+
+void TestAddParameter()
+{
+    f1();
+    f2();
+    f3();
+}

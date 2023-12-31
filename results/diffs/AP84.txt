@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..31184fd 100644
+index 9035c6f..c829cc7 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -119,7 +119,7 @@ void TestAddParameter()
+@@ -128,7 +128,7 @@ static void f2()
      // #TEST#: AP131 Add parameter, int goink
      AddParameter2<AddParameterStructTester>();
  
@@ -11,7 +11,7 @@ index a759b33..31184fd 100644
      // #TEST#: AP132 Add parameter, int goink
      inner.Operation();
      // #TEST#: AP133 Add parameter, int goink
-@@ -132,7 +132,7 @@ void TestAddParameter()
+@@ -141,7 +141,7 @@ static void f2()
      // #TEST#: AP135 Add parameter, int goink
      outer2.Operation();
      namespace Frob = AddParameterNamespace;
@@ -21,7 +21,7 @@ index a759b33..31184fd 100644
      inner2.Operation();
  
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index 7e94f5d..b148ebe 100644
+index d7aff00..902bbaf 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
 @@ -307,7 +307,7 @@ public:

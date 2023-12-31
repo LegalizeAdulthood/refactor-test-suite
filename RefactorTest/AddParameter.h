@@ -319,3 +319,33 @@ public:
 };
 
 }    // namespace AddParameterNamespace
+
+template <typename Other>
+// #TEST#: AP197 Add parameter, int goink
+void AddParameterUnionTemplate<Other>::AddParameter(int first)
+{
+}
+
+template <typename Other>
+// #TEST#: AP198 Add parameter, int goink
+void AddParameterUnionTemplate<Other>::AddParameterRef(const int &first)
+{
+}
+
+template <typename Other>
+// #TEST#: AP199 Add parameter before first, int goink
+void AddParameterUnionTemplate<Other>::AddParameterDefault(int first)
+{
+}
+
+template <typename Other>
+// #TEST#: AP200 Add parameter, int goink
+void AddParameterUnionTemplate<Other>::Static()
+{
+}
+
+template <typename Other>
+// #TEST#: AP201 Add parameter before y, int goink
+void AddParameterUnionTemplate<Other>::StaticDefault(int x, int y)
+{
+}

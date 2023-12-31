@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..28dce74 100644
+index 9035c6f..a1d4a55 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -125,12 +125,12 @@ void TestAddParameter()
+@@ -134,12 +134,12 @@ static void f2()
      // #TEST#: AP133 Add parameter, int goink
      AddParameterNamespace::Outer outer = AddParameterNamespace::Outer();
      // #TEST#: AP134 Add parameter, int goink
@@ -18,7 +18,7 @@ index a759b33..28dce74 100644
      Frob::Outer::Inner inner2;
      // #TEST#: AP136 Add parameter, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index 7e94f5d..a8bdedd 100644
+index d7aff00..db6513d 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
 @@ -299,7 +299,7 @@ public:

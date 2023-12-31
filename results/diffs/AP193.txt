@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..6a3c85c 100644
+index ef5fa34..b69e99e 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
 @@ -367,7 +367,7 @@ void f3()
@@ -8,7 +8,7 @@ index 9035c6f..6a3c85c 100644
      // #TEST#: AP172 Add parameter, int goink
 -    u.AddParameterRef(j2);
 +    u.AddParameterRef(j2, 0);
-     // #TEST#: AP173 Add parameter, int goink
+     // #TEST#: AP173 Add parameter before first, int goink
      u.AddParameterDefault(4);
      // #TEST#: AP174 Add parameter, int goink
 @@ -423,7 +423,7 @@ void AddParameterUnion::AddParameter(int first)

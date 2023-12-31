@@ -1,20 +1,20 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..808191d 100644
+index 9693d84..3839535 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
 @@ -377,7 +377,7 @@ void f3()
      // #TEST#: AP176 Add parameter, int goink
      AddParameterUnion::Static();
-     // #TEST#: AP177 Add parameter, int goink
+     // #TEST#: AP177 Add parameter before y, int goink
 -    AddParameterUnion::StaticDefault(6);
 +    AddParameterUnion::StaticDefault(6, 0);
      // #TEST#: AP178 Add parameter, int goink
      AddParameterUnion::StaticTemplate<int>(7);
-     // #TEST#: AP179 Add parameter, int goink
+     // #TEST#: AP179 Add parameter before x, int goink
 @@ -438,7 +438,7 @@ void AddParameterUnion::Static()
  }
  
- // #TEST#: AP196 Add parameter, int goink
+ // #TEST#: AP196 Add parameter before y, int goink
 -void AddParameterUnion::StaticDefault(int x, int y)
 +void AddParameterUnion::StaticDefault(int x, int goink, int y)
  {

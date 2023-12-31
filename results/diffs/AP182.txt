@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..ff60acf 100644
+index ef5fa34..dd160ff 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
 @@ -389,7 +389,7 @@ void f3()
