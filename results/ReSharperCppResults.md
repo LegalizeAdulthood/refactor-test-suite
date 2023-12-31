@@ -5,25 +5,38 @@ Home: [ReSharper for C++](http://www.jetbrains.com/resharper-cpp/)
 Version: JetBrains ReSharper 2023.3.2
 Build 233.0.20231218.91950 built on 2023-12-18
 
-
 Notes:
-* **Add Block Delimiter** is available as the quick fix *Surround with block*.  The tests pass if only code is selected and not the surrounding comment lines.
+* `clang-tidy` is integrated with ReSharper for C++ and provides quick fixes for issues found by clang-tidy.
+  Only results implemented directly by ReSharper for C++ are reported here.
+* **Add Block Delimiter** is available as the quick fix *Surround with block*.
+  The tests pass if only code is selected and not the surrounding comment lines.
 * **Add Override** is available as the quick fix *Add 'override' specifier to an overriding function*.
-* **Add Parameter** is available through **Change Signature**.  Default file selections were accepted and the argument value of zero was chosen.
-* **Create Method Stub** is available as the quick fix *Create member function*, *Create constructor* or *Create global function* followed by the quick fix *Generate inline implementation of function*
-* **Create Multi-Variable Declaration** is available by selecting the multiple declarations and applying the quick fix *Join declarations*.
+* **Add Parameter** is available through **Change Signature**.
+  Default file selections were accepted and the argument value of zero was chosen.
+* **Create Method Stub** is available as the quick fix *Create member function*,
+  *Create constructor* or *Create global function* followed by the quick fix
+  *Generate inline implementation of function*.
+* **Create Multi-Variable Declaration** is available by selecting the multiple declarations and
+  applying the quick fix *Join declarations*.
 * **Flatten Conditional** is available as the quick fix *Merge nested 'if' statements*.
 * **Inline Macro** is available as the quick fix *Substitute macro call*.
 * **Inline Type Alias** is available as the quick fix *Substitute type alias* or *Substitute typedef*.
 * **Make Method Static** is available as a quick fix.
-* **Move Implementation to Source File** is available as the quick fix *Move definition to source file* or *Move definition out of class scope*.
+* **Move Implementation to Source File** is available as the quick fix *Move definition to source file* or
+  *Move definition out of class scope*.
 * **Remove Block Delimiter** is available as the quick fix *Remove braces*.
 * **Remove Unused Parameter** is available as a quick fix.
 * **Reorder Parameters** is available through **Change Signature**.
+* **Replace auto With Type** is available as the quick fix *Specify type explicitly*.
 * **Replace If With Ternary** is available as the quick fix *Convert 'if' to '?:'*.
+* **Replace NULL/0 With nullptr** is available as the quick fix *Replace expression with 'nullptr'*.
+* **Replace String Literal With Raw String Literal** is available as the quick fix *Convert to raw string literal*.
 * **Replace Ternary With If** is available as the quick fix *Convert '?:' to 'if'*.
+* **Replace typedef With Type Alias** is available as the quick fix *Replace with a type alias*.
+* **Replace Type WIth Auto** is available as the quick fix *Use 'auto'*.
 * **Reverse Conditional** is available as the quick fix *Invert 'if' statement*.
-* **Split Multi-Variable Declaration** is available as the quick fix *Split declaration with multiple declarators*.
+* **Split Initialization From Declaration** is available as the quick fix *Split declaration and assignment*.
+* **Split Multi-Variable Declaration** is available as the quick fix *Split declaration*.
 
 <hr/>
 
@@ -1527,6 +1540,40 @@ RP7 | (deprecated)
 RP8 | (deprecated)
 RP9 | (deprecated)
 
+## Replace auto With Type
+Case | Result
+---- | ------
+RAWT1 | 
+RAWT2 | 
+RAWT3 | 
+RAWT4 | 
+RAWT5 | 
+RAWT6 | 
+RAWT7 | 
+RAWT8 | 
+RAWT9 | 
+RAWT10 | 
+RAWT11 | 
+RAWT12 | 
+RAWT13 | 
+RAWT14 | 
+RAWT15 | 
+RAWT16 | 
+RAWT17 | 
+RAWT18 | 
+RAWT19 | 
+RAWT20 | 
+RAWT21 | 
+RAWT22 | 
+RAWT23 | 
+RAWT24 | 
+RAWT25 | 
+RAWT26 | 
+RAWT27 | 
+RAWT28 | 
+RAWT29 | 
+RAWT30 | 
+
 ## Replace If With Ternary
 Case | Result
 ---- | ------
@@ -1572,6 +1619,20 @@ RZNP26 | Pass
 RZNP27 | Pass
 RZNP28 | Pass
 
+## Replace String Literal With Raw String Literal
+Case | Result
+---- | ------
+RAW1 | 
+RAW2 | 
+RAW3 | 
+RAW4 | 
+RAW5 | 
+RAW6 | 
+RAW7 | 
+RAW8 | 
+RAW9 | 
+RAW10 | 
+
 ## Replace Ternary With If
 Case | Result
 ---- | ------
@@ -1586,6 +1647,17 @@ RTI8 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issu
 RTI9 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
 RTI10 | Pass
 RTI11 | Pass
+
+## Replace typedef With Type Alias
+Case | Result
+---- | ------
+RTDTA1 | 
+RTDTA2 | 
+RTDTA3 | 
+RTDTA4 | 
+RTDTA5 | 
+RTDTA6 | 
+RTDTA7 | 
 
 ## Replace Type With auto
 Case | Result
@@ -1634,6 +1706,21 @@ RC5 | Pass
 RC6 | Pass
 RC7 | Pass
 RC8 | Pass
+
+## Split Initialization From Declaration
+Case | Result
+---- | ------
+SID1 | 
+SID2 | 
+SID3 | 
+SID4 | 
+SID5 | 
+SID6 | 
+SID7 | 
+SID8 | 
+SID9 | 
+SID10 | 
+SID11 | 
 
 ## Split Multi-Variable Declaration
 Case | Result
