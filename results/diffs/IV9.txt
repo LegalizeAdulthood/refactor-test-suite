@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
-index 148c7ed..8945eb3 100644
+index 826c9b0..b0e0f1e 100644
 --- a/RefactorTest/InlineVariable.cpp
 +++ b/RefactorTest/InlineVariable.cpp
-@@ -110,9 +110,8 @@ void TestConstMemberPointer2()
+@@ -116,9 +116,8 @@ void TestConstMemberPointer2()
      // #TEST#: IV8 Inline Variable member
      int j = (f.*member)();
      require_equal(1, j);

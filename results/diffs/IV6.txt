@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
-index 3be43b7..0288154 100644
+index 826c9b0..e4e1ace 100644
 --- a/RefactorTest/InlineVariable.cpp
 +++ b/RefactorTest/InlineVariable.cpp
-@@ -92,10 +92,9 @@ void TestConstMemberPointer()
+@@ -98,10 +98,9 @@ void TestConstMemberPointer()
  
  void TestMemberPointer2()
  {

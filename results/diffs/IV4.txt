@@ -1,19 +1,16 @@
 diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
-index 77d10de..aef9042 100644
+index 826c9b0..6fb11a6 100644
 --- a/RefactorTest/InlineVariable.cpp
 +++ b/RefactorTest/InlineVariable.cpp
-@@ -73,12 +73,10 @@ public:
+@@ -75,9 +75,9 @@ public:
  void TestMemberPointer()
  {
      // #TEST#: IV4 Inline Variable member
 -    int (Foo::*member)() = &Foo::Operation1;
++    int (Foo::*member)();
      Foo f;
 -    int j = (f.*member)();
 +    int j = f.Operation1();
      require_equal(1, j);
--    member = &Foo::Operation2;
--    j += (f.*member)();
-+    j += f.Operation2();
-     require_equal(3, j);
- }
- 
+     member = &Foo::Operation2;
+     j += (f.*member)();

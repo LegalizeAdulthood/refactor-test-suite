@@ -1,21 +1,21 @@
 diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
-index 12b4e33..76d93ef 100644
+index 826c9b0..8b6d4ef 100644
 --- a/RefactorTest/InlineVariable.cpp
 +++ b/RefactorTest/InlineVariable.cpp
-@@ -15,14 +15,13 @@ namespace InlineVariableNamespace
-     void TestInteger()
-     {
-         // #TEST#: IV1 Inline Variable i
--        int i = 4;
--        int j = i*4 + 6;
-+        int j = 4*4 + 6;
-         require_equal(22, j);
-         j += 10;
-         require_equal(32, j);
-         j /= 15;
-         require_equal(2, j);
--        j &= 7 + i;
-+        j &= 7 + 4;
-         require_equal(2, j);
-     }
+@@ -13,14 +13,13 @@ int Function2() { return 2; }
+ void TestInteger()
+ {
+     // #TEST#: IV1 Inline Variable i
+-    int i = 4;
+-    int j = i * 4 + 6;
++    int j = 4 * 4 + 6;
+     require_equal(22, j);
+     j += 10;
+     require_equal(32, j);
+     j /= 15;
+     require_equal(2, j);
+-    j &= 7 + i;
++    j &= 7 + 4;
+     require_equal(2, j);
+ }
  
