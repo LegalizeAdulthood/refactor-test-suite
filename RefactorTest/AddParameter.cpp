@@ -341,19 +341,24 @@ void f1()
     // #TEST#: AP163 Add parameter, int goink
     REQUIRE_EQUAL(1, d.fn());
     // #TEST#: AP164 Add parameter, int goink
-    REQUIRE_EQUAL(2, d.fn2(2));
+    int res = d.fn2(2);
+    REQUIRE_EQUAL(2, res);
 
     MoreDerived md;
     // #TEST#: AP165 Add parameter, int goink
-    REQUIRE_EQUAL(2, md.fn());
+    res = md.fn();
+    REQUIRE_EQUAL(2, res);
     // #TEST#: AP166 Add parameter, int goink
-    REQUIRE_EQUAL(3, md.fn2(2));
+    res = md.fn2(2);
+    REQUIRE_EQUAL(3, res);
 
     OtherDerived od;
     // #TEST#: AP167 Add parameter, int goink
-    REQUIRE_EQUAL(3, od.fn());
+    res = od.fn();
+    REQUIRE_EQUAL(3, res);
     // #TEST#: AP168 Add parameter, int goink
-    REQUIRE_EQUAL(4, od.fn2(2));
+    res = od.fn2(2);
+    REQUIRE_EQUAL(4, res);
 }
 
 void f3()

@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..d443eb5 100644
+index 6824133..7c01e62 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -360,7 +360,7 @@ void f3()
+@@ -365,7 +365,7 @@ void f3()
  {
      AddParameterUnion u;
      // #TEST#: AP169 Add parameter, int *goink

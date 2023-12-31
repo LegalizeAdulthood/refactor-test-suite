@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 2214789..83f5d3c 100644
+index 6824133..abda4d3 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -264,7 +264,7 @@ public:
+@@ -265,7 +265,7 @@ public:
      virtual int fn() = 0;
  
      // #TEST#: AP151 Add parameter, int goink
@@ -11,7 +11,7 @@ index 2214789..83f5d3c 100644
  };
  
  class Derived : public Interface
-@@ -276,7 +276,7 @@ public:
+@@ -277,7 +277,7 @@ public:
      int fn() override;
  
      // #TEST#: AP153 Add parameter, int goink
@@ -20,7 +20,7 @@ index 2214789..83f5d3c 100644
  };
  
  class OtherDerived : public Interface
-@@ -291,7 +291,7 @@ public:
+@@ -292,7 +292,7 @@ public:
      }
  
      // #TEST#: AP155 Add parameter, int goink
@@ -29,7 +29,7 @@ index 2214789..83f5d3c 100644
      {
          return x + 2;
      }
-@@ -306,7 +306,7 @@ public:
+@@ -307,7 +307,7 @@ public:
      int fn() override;
  
      // #TEST#: AP157 Add parameter, int goink
@@ -38,7 +38,7 @@ index 2214789..83f5d3c 100644
  };
  
  // #TEST#: AP158 Add parameter, int goink
-@@ -316,7 +316,7 @@ int Derived::fn()
+@@ -317,7 +317,7 @@ int Derived::fn()
  }
  
  // #TEST#: AP159 Add parameter, int goink
@@ -47,7 +47,7 @@ index 2214789..83f5d3c 100644
  {
      return x;
  }
-@@ -328,10 +328,10 @@ int MoreDerived::fn()
+@@ -329,10 +329,10 @@ int MoreDerived::fn()
  }
  
  // #TEST#: AP161 Add parameter, int goink
@@ -60,26 +60,30 @@ index 2214789..83f5d3c 100644
  }
  
  void f1()
-@@ -340,19 +340,19 @@ void f1()
+@@ -341,7 +341,7 @@ void f1()
      // #TEST#: AP163 Add parameter, int goink
      REQUIRE_EQUAL(1, d.fn());
      // #TEST#: AP164 Add parameter, int goink
--    REQUIRE_EQUAL(2, d.fn2(2));
-+    REQUIRE_EQUAL(2, d.fn2(2, 0));
+-    int res = d.fn2(2);
++    int res = d.fn2(2, 0);
+     REQUIRE_EQUAL(2, res);
  
      MoreDerived md;
-     // #TEST#: AP165 Add parameter, int goink
-     REQUIRE_EQUAL(2, md.fn());
+@@ -349,7 +349,7 @@ void f1()
+     res = md.fn();
+     REQUIRE_EQUAL(2, res);
      // #TEST#: AP166 Add parameter, int goink
--    REQUIRE_EQUAL(3, md.fn2(2));
-+    REQUIRE_EQUAL(3, md.fn2(2, 0));
+-    res = md.fn2(2);
++    res = md.fn2(2, 0);
+     REQUIRE_EQUAL(3, res);
  
      OtherDerived od;
-     // #TEST#: AP167 Add parameter, int goink
-     REQUIRE_EQUAL(3, od.fn());
+@@ -357,7 +357,7 @@ void f1()
+     res = od.fn();
+     REQUIRE_EQUAL(3, res);
      // #TEST#: AP168 Add parameter, int goink
--    REQUIRE_EQUAL(4, od.fn2(2));
-+    REQUIRE_EQUAL(4, od.fn2(2, 0));
+-    res = od.fn2(2);
++    res = od.fn2(2, 0);
+     REQUIRE_EQUAL(4, res);
  }
  
- }    // namespace
