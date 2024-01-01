@@ -1636,15 +1636,15 @@ RAW10 | Failure (generates invalid code) [RSCPP-35267](https://youtrack.jetbrain
 ## Replace Ternary With If
 Case | Result
 ---- | ------
-RTI1 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI1 | Pass
 RTI2 | Pass
-RTI3 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
-RTI4 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI3 | Pass
+RTI4 | Pass
 RTI5 | Pass
-RTI6 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
-RTI7 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
-RTI8 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
-RTI9 | Failure (not available) [RSCPP-16133](https://youtrack.jetbrains.com/issue/RSCPP-16133)
+RTI6 | Pass
+RTI7 | Pass
+RTI8 | Pass
+RTI9 | Pass
 RTI10 | Pass
 RTI11 | Pass
 
