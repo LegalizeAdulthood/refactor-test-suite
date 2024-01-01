@@ -1,5 +1,5 @@
 diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
-index 19ce6b0..47df928 100644
+index 5cdf789..951d627 100644
 --- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
 +++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
 @@ -30,7 +30,7 @@ std::string const regex{"goink\\(one|two\\)\\\\\\?.*\\nfrob"};
@@ -10,4 +10,4 @@ index 19ce6b0..47df928 100644
 +std::string const contains_sentinel{R"delimiter(whoops)")delimiter"};
  
  // #TEST#: RAW10
- std::string const contains_delim{"whoops)\")delim\""};
+ std::string const contains_delim{"whoops)\")delimiter\""};

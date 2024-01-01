@@ -33,7 +33,7 @@ std::string const path{"C:\\Program Files\\Vendor\\Application\\Application.exe"
 std::string const contains_sentinel{"whoops)\""};
 
 // #TEST#: RAW10
-std::string const contains_delim{"whoops)\")delim\""};
+std::string const contains_delim{"whoops)\")delimiter\""};
 
 }    // namespace
 
@@ -48,5 +48,5 @@ void TestReplaceStringLiteralWithRawStringLiteral()
     REQUIRE_EQUAL(std::string("goink\\(one|two\\)\\\\\\?.*\\nfrob"), regex);
     REQUIRE_EQUAL(std::string("C:\\Program Files\\Vendor\\Application\\Application.exe"), path);
     REQUIRE_EQUAL(std::string("whoops)\""), contains_sentinel);
-    REQUIRE_EQUAL(std::string("whoops)\")delim\""), contains_delim);
+    REQUIRE_EQUAL(std::string("whoops)\")delimiter\""), contains_delim);
 }
