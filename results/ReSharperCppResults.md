@@ -1651,13 +1651,13 @@ RTI11 | Pass
 ## Replace typedef With Type Alias
 Case | Result
 ---- | ------
-RTDTA1 | 
-RTDTA2 | 
-RTDTA3 | 
-RTDTA4 | 
-RTDTA5 | 
-RTDTA6 | 
-RTDTA7 | 
+RTDTA1 | Pass
+RTDTA2 | Pass
+RTDTA3 | Pass
+RTDTA4 | Pass
+RTDTA5 | Pass
+RTDTA6 | Pass
+RTDTA7 | Pass
 
 ## Replace Type With auto
 Case | Result
