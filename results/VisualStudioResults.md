@@ -58,214 +58,214 @@ AP4  | Pass
 AP5  | Pass
 AP6  | Pass
 AP7  | Pass
-AP8  | Failure (not all instances selected) [206937](https://developercommunity.visualstudio.com/content/problem/206937/change-signature-fails-for-static-class-method.html)
+AP8  | Failure (definition not updated) []()
 AP9  | Pass
 AP10 | Pass
 AP11 | Pass
-AP12 | Pass
-AP13 | Failure (not all instances selected) [206940](https://developercommunity.visualstudio.com/content/problem/206940/change-signature-fails-to-update-forward-declarati.html)
+AP12 | Failure (unrelated code changed) []()
+AP13 | Failure (declaration not updated) []()
 AP14 | Pass
-AP15 | Failure (not all instances selected, wrong instances selected) [206941](https://developercommunity.visualstudio.com/content/problem/206941/change-signature-doesnt-select-call-sites-for-over.html), [206943](https://developercommunity.visualstudio.com/content/problem/206943/change-signature-modifies-overload.html)
-AP16 | Failure (not all instances selected, wrong instances selected) [206941](https://developercommunity.visualstudio.com/content/problem/206941/change-signature-doesnt-select-call-sites-for-over.html), [206943](https://developercommunity.visualstudio.com/content/problem/206943/change-signature-modifies-overload.html)
+AP15 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP16 | Failure (changes unrelated overloads; disregards dialog selection) []()
 AP17 | Pass
 AP18 | Pass
 AP19 | Pass
 AP20 | Pass
 AP21 | Pass
-AP22 | Failure (declaration not updated) [206946](https://developercommunity.visualstudio.com/content/problem/206946/change-signature-on-static-method-definition-doesn.html)
+AP22 | Failure (declaration not updated) []()
 AP23 | Pass
-AP24 | Failure (doesn't select all instances) [206939](https://developercommunity.visualstudio.com/content/problem/206939/change-signature-on-static-method-doesnt-update-us.html)
-AP25 | Failure (not available) [206938](https://developercommunity.visualstudio.com/content/problem/206938/change-signature-doesnt-recognize-static-function.html)
-AP26 | 
-AP27 | 
-AP28 | 
-AP29 | 
-AP30 | 
-AP31 | 
-AP32 | 
-AP33 | 
-AP34 | 
-AP35 | 
-AP36 | 
-AP37 | 
-AP38 | 
-AP39 | 
-AP40 | 
-AP41 | 
-AP42 | 
-AP43 | 
-AP44 | 
-AP45 | 
-AP46 | 
-AP47 | 
-AP48 | 
-AP49 | 
-AP50 | 
-AP51 | 
-AP52 | 
-AP53 | 
-AP54 | 
-AP55 | 
-AP56 | 
-AP57 | 
-AP58 | 
-AP59 | 
-AP60 | 
-AP61 | 
-AP62 | 
-AP63 | 
-AP64 | 
-AP65 | 
-AP66 | 
-AP67 | 
-AP68 | 
-AP69 | 
-AP70 | 
-AP71 | 
-AP72 | 
-AP73 | 
-AP74 | 
-AP75 | 
-AP76 | 
-AP77 | 
-AP78 | 
-AP79 | 
-AP80 | 
-AP81 | 
-AP82 | 
-AP83 | 
-AP84 | 
-AP85 | 
-AP86 | 
-AP87 | 
-AP88 | 
-AP89 | 
-AP90 | 
-AP91 | 
-AP92 | 
-AP93 | 
-AP94 | 
-AP95 | 
-AP96 | 
-AP97 | 
-AP98 | 
-AP99 | 
-AP100 | 
-AP101 | 
-AP102 | 
-AP103 | 
-AP104 | 
-AP105 | 
-AP106 | 
-AP107 | 
-AP108 | 
-AP109 | 
-AP110 | 
-AP111 | 
-AP112 | 
-AP113 | 
-AP114 | 
-AP115 | 
-AP116 | 
-AP117 | 
-AP118 | 
-AP119 | 
-AP120 | 
-AP121 | 
-AP122 | 
-AP123 | 
-AP124 | 
-AP125 | 
-AP126 | 
-AP127 | 
-AP128 | 
-AP129 | 
-AP130 | 
-AP131 | 
-AP132 | 
-AP133 | 
-AP134 | 
-AP135 | 
-AP136 | 
-AP137 | 
-AP138 | 
-AP139 | 
-AP140 | 
-AP141 | 
-AP142 | 
-AP143 | 
-AP144 | 
-AP145 | 
-AP146 | 
-AP147 | 
-AP148 | 
-AP149 | 
-AP150 | 
-AP151 | 
-AP152 | 
-AP153 | 
-AP154 | 
-AP155 | 
-AP156 | 
-AP157 | 
-AP158 | 
-AP159 | 
-AP160 | 
-AP161 | 
-AP162 | 
-AP163 | 
-AP164 | 
-AP165 | 
-AP166 | 
-AP167 | 
-AP168 | 
-AP169 | 
-AP170 | 
-AP171 | 
-AP172 | 
-AP173 | 
-AP174 | 
-AP175 | 
-AP176 | 
-AP177 | 
-AP178 | 
-AP179 | 
-AP180 | 
-AP181 | 
-AP182 | 
-AP183 | 
-AP184 | 
-AP185 | 
-AP186 | 
-AP187 | 
-AP188 | 
-AP189 | 
-AP190 | 
-AP191 | 
-AP192 | 
-AP193 | 
-AP194 | 
-AP195 | 
-AP196 | 
-AP197 | 
-AP198 | 
-AP199 | 
-AP200 | 
-AP201 | 
-AP202 | 
+AP24 | Failure (template usages not updated) []()
+AP25 | Failure (not available) []()
+AP26 | Failure (template usages not updated) []()
+AP27 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP28 | Pass
+AP29 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP30 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP31 | Pass
+AP32 | Pass
+AP33 | Failure (c'tor usages not updated) []()
+AP34 | Pass
+AP35 | Pass
+AP36 | Pass
+AP37 | Pass
+AP38 | Pass
+AP39 | Failure (c'tor usages not updated) []()
+AP40 | Pass
+AP41 | Pass
+AP42 | Pass
+AP43 | Pass
+AP44 | Pass
+AP45 | Failure (default value on definition, not declaration) []()
+AP46 | Pass
+AP47 | Pass
+AP48 | Pass
+AP49 | Failure (definition not updated) []()
+AP50 | Pass
+AP51 | Failure (default value on definition, not declaration) []()
+AP52 | Pass
+AP53 | Pass
+AP54 | Failure (c'tor usages not updated) []()
+AP55 | Pass
+AP56 | Pass
+AP57 | Pass
+AP58 | Pass
+AP59 | Pass
+AP60 | Pass
+AP61 | Pass
+AP62 | Pass
+AP63 | Failure (definition not updated) []()
+AP64 | Pass
+AP65 | Failure (default value on definition, not declaration) []()
+AP66 | Pass
+AP67 | Pass
+AP68 | Failure (c'tor usages not updated) []()
+AP69 | Pass
+AP70 | Pass
+AP71 | Pass
+AP72 | Pass
+AP73 | Pass
+AP74 | Pass
+AP75 | Pass
+AP76 | Pass
+AP77 | Pass
+AP78 | Pass
+AP79 | Pass
+AP80 | Pass
+AP81 | Pass
+AP82 | Failure (c'tor usages not updated) []()
+AP83 | Pass
+AP84 | Failure (c'tor usages not updated) []()
+AP85 | Pass
+AP86 | Failure (declaration not updated) []()
+AP87 | Pass
+AP88 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP89 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP90 | Pass
+AP91 | Pass
+AP92 | Pass
+AP93 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP94 | Failure (error occured while applying changes; textIndex out of range) []()
+AP95 | Failure (changes unrelated overloads) []()
+AP96 | Failure (changes unrelated overloads) []()
+AP97 | Pass
+AP98 | Pass
+AP99 | Pass
+AP100 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP101 | Pass
+AP102 | Pass
+AP103 | Failure (declaration not updated) []()
+AP104 | Pass
+AP105 | Pass
+AP106 | Pass
+AP107 | Pass
+AP108 | Pass
+AP109 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP110 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP111 | Pass
+AP112 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP113 | Pass
+AP114 | Pass
+AP115 | Failure (default value on definition, not declaration) []()
+AP116 | Pass
+AP117 | Failure (default value on definition, not declaration) []()
+AP118 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP119 | Pass
+AP120 | Pass
+AP121 | Pass
+AP122 | Pass
+AP123 | Failure (declaration not updated) []()
+AP124 | Pass
+AP125 | Failure (default value on definition, not declaration) []()
+AP126 | Pass
+AP127 | Failure (default value on definition, not declaration) []()
+AP128 | Pass
+AP129 | Pass
+AP130 | Pass
+AP131 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP132 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP133 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP134 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP135 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP136 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP137 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP138 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP139 | Pass
+AP140 | Pass
+AP141 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP142 | Pass
+AP143 | Pass
+AP144 | Pass
+AP145 | Failure (default value on definition, not declaration) []()
+AP146 | Failure (declaration not updated) []()
+AP147 | Pass
+AP148 | Failure (default value on definition, not declaration) []()
+AP149 | Pass
+AP150 | Failure (declarations not updated; not all usages updated) []()
+AP151 | Failure (declarations not updated; not all usages updated) []()
+AP152 | Failure (declarations not updated; not all usages updated) []()
+AP153 | Failure (declarations not updated; not all usages updated) []()
+AP154 | Failure (declarations not updated; not all usages updated) []()
+AP155 | Failure (declarations not updated; not all usages updated) []()
+AP156 | Failure (declarations not updated; not all usages updated) []()
+AP157 | Failure (declarations not updated; not all usages updated) []()
+AP158 | Failure (declarations not updated; not all usages updated) []()
+AP159 | Failure (declarations not updated; not all usages updated) []()
+AP160 | Failure (declarations not updated; not all usages updated) []()
+AP161 | Failure (declarations not updated; not all usages updated) []()
+AP162 | Failure (declarations not updated; not all usages updated) []()
+AP163 | Failure (declarations not updated; not all usages updated) []()
+AP164 | Failure (declarations not updated; not all usages updated) []()
+AP165 | Failure (declarations not updated; not all usages updated) []()
+AP166 | Failure (declarations not updated; not all usages updated) []()
+AP167 | Failure (declarations not updated; not all usages updated) []()
+AP168 | Failure (declarations not updated; not all usages updated) []()
+AP169 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP170 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP171 | Pass
+AP172 | Pass
+AP173 | Pass
+AP174 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP175 | Pass
+AP176 | Failure (declaration not updated) []()
+AP177 | Pass
+AP178 | Pass
+AP179 | Pass
+AP180 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP181 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP182 | Pass
+AP183 | Pass
+AP184 | Pass
+AP185 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP186 | Pass
+AP187 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP188 | Pass
+AP189 | Pass
+AP190 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP191 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP192 | Pass
+AP193 | Pass
+AP194 | Pass
+AP195 | Failure (declaration not updated) []()
+AP196 | Pass
+AP197 | Pass
+AP198 | Pass
+AP199 | Pass
+AP200 | Pass
+AP201 | Pass
+AP202 | Pass
 
 ## Change Signature
 Case | Result
 ---- | ------
-CS1  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
-CS2  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
-CS3  | Failure (unavailable) [206954](https://developercommunity.visualstudio.com/content/problem/206954/cant-rename-function-from-change-signature.html)
+CS1  | Failure (instances not renamed) []()
+CS2  | Failure (instances not renamed) []()
+CS3  | Failure (unavailable) []()
 CS4  | Pass
 CS5  | Pass
 CS6  | Pass
-CS7  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
-CS8  | Failure (instances not renamed) [206953](https://developercommunity.visualstudio.com/content/problem/206953/change-signature-doesnt-rename-uses-of-parameter.html)
-CS9  | Failure (unavailable) [206954](https://developercommunity.visualstudio.com/content/problem/206954/cant-rename-function-from-change-signature.html)
+CS7  | Failure (instances not renamed) []()
+CS8  | Failure (instances not renamed) []()
+CS9  | Failure (unavailable) []()
 CS10 | Pass
 CS11 | Pass
 CS12 | 
@@ -306,7 +306,7 @@ CS45 |
 ## Extract Function
 Case | Result
 ---- | ------
-EXF1  | Failure (data flow) [206897](https://developercommunity.visualstudio.com/content/problem/206897/extract-function-cant-handle-statements-defining-v.html)
+EXF1  | Failure (data flow) []()
 EXF2  | Pass
 EXF3  | Pass
 EXF4  | Pass
@@ -321,10 +321,10 @@ EXF12 | Pass
 EXF13 | Pass
 EXF14 | Pass
 EXF15 | Pass
-EXF16 | Failure (creates invalid code) [206898](https://developercommunity.visualstudio.com/content/problem/206898/extract-function-creates-invalid-code.html)
+EXF16 | Failure (creates invalid code) []()
 EXF17 | Pass
-EXF18 | Failure (data flow) [206897](https://developercommunity.visualstudio.com/content/problem/206897/extract-function-cant-handle-statements-defining-v.html)
-EXF19 | Failure (creates invalid code) [206899](https://developercommunity.visualstudio.com/content/problem/206899/extract-function-creates-invalid-code-on-macro-exp.html)
+EXF18 | Failure (data flow) []()
+EXF19 | Failure (creates invalid code) []()
 EXF20 |
 
 ## Extract Method
@@ -332,32 +332,32 @@ Case | Result
 ---- | ------
 EM1 | Pass
 EM2 | Pass
-EM3 | Pass (unnecessary use of namespace) [206900](https://developercommunity.visualstudio.com/content/problem/206900/extract-method-uses-redundant-namespace-specifier.html)
-EM4 | Pass (unnecessary use of namespace) [206900](https://developercommunity.visualstudio.com/content/problem/206900/extract-method-uses-redundant-namespace-specifier.html)
-EM5 | Pass (unnecessary use of namespace) [206900](https://developercommunity.visualstudio.com/content/problem/206900/extract-method-uses-redundant-namespace-specifier.html)
-EM6 | Pass (unnecessary use of namespace) [206900](https://developercommunity.visualstudio.com/content/problem/206900/extract-method-uses-redundant-namespace-specifier.html)
+EM3 | Pass (unnecessary use of namespace) []()
+EM4 | Pass (unnecessary use of namespace) []()
+EM5 | Pass (unnecessary use of namespace) []()
+EM6 | Pass (unnecessary use of namespace) []()
 EM7 | Pass
 EM8 | Pass
 EM9 | Pass
 EM10 | Pass
-EM11 | Failure (creates invalid code) [206911](https://developercommunity.visualstudio.com/content/problem/206911/extract-method-creates-invalid-code.html)
-EM12 | Pass (unnecessary use of namespace) [206900](https://developercommunity.visualstudio.com/content/problem/206900/extract-method-uses-redundant-namespace-specifier.html)
+EM11 | Failure (creates invalid code) []()
+EM12 | Pass (unnecessary use of namespace) []()
 EM13 | Pass
 EM14 | Pass
 EM15 | Pass
 EM16 | Pass
-EM17 | Failure (creates invalid code) [206911](https://developercommunity.visualstudio.com/content/problem/206911/extract-method-creates-invalid-code.html)
+EM17 | Failure (creates invalid code) []()
 EM18 | Pass
-EM19 | Failure (data flow) [206897](https://developercommunity.visualstudio.com/content/problem/206897/extract-function-cant-handle-statements-defining-v.html)
-EM20 | Pass (unnecessary use of namespace) [206900](https://developercommunity.visualstudio.com/content/problem/206900/extract-method-uses-redundant-namespace-specifier.html)
+EM19 | Failure (data flow) []()
+EM20 | Pass (unnecessary use of namespace) []()
 EM21 | 
 
 ## Move Implementation to Source File
 Case | Result
 ---- | ------
-MISF1  | Pass (leaves `inline` in header) [206912](https://developercommunity.visualstudio.com/content/problem/206912/move-definition-leaves-behind-pointless-inline-spe.html)
-MISF2  | Failure (unknown error) [206914](https://developercommunity.visualstudio.com/content/problem/206914/move-definition-location-on-constructor-gives-unkn.html)
-MISF3  | Pass (sensitive to cursor placement) [206915](https://developercommunity.visualstudio.com/content/problem/206915/move-definition-fails-to-move-destructor-if-cursor.html)
+MISF1  | Pass (leaves `inline` in header) []()
+MISF2  | Failure (unknown error) []()
+MISF3  | Pass (sensitive to cursor placement) []()
 MISF4  | Pass
 MISF5  | Pass
 MISF6  | Pass
@@ -370,7 +370,7 @@ MISF12 | Pass
 MISF13 | Pass
 MISF14 | Pass
 MISF15 | Pass
-MISF16 | Failure (creates invalid code) [206916](https://developercommunity.visualstudio.com/content/problem/206916/move-definition-location-creates-invalid-code.html)
+MISF16 | Failure (creates invalid code) []()
 MISF17 | Pass
 MISF18 | Pass
 MISF19 | Pass
@@ -380,7 +380,7 @@ MISF22 | Pass
 MISF23 | Pass
 MISF24 | Pass
 MISF25 | Pass
-MISF26 | Failure (creates invalid code) [206916](https://developercommunity.visualstudio.com/content/problem/206916/move-definition-location-creates-invalid-code.html)
+MISF26 | Failure (creates invalid code) []()
 
 ## Rename
 Case | Result
@@ -409,7 +409,7 @@ R21  | Pass
 R22  | Pass
 R23  | Pass
 R24  | Pass
-R25  | Failure (not available) [206917](https://developercommunity.visualstudio.com/content/problem/206917/rename-unavailable-on-macro-argument.html)
+R25  | Failure (not available) []()
 R26  | Pass
 R27  | Pass
 R28  | Pass
@@ -454,18 +454,18 @@ R66  | Pass
 R67  | Pass
 R68  | Pass
 R69  | Pass
-R70  | Failure (doesn't select correct instances) [206918](https://developercommunity.visualstudio.com/content/problem/206918/rename-of-virtual-method-doesnt-select-all-overrid.html)
-R71  | Failure (doesn't select correct instances) [206918](https://developercommunity.visualstudio.com/content/problem/206918/rename-of-virtual-method-doesnt-select-all-overrid.html)
-R72  | Failure (doesn't select correct instances) [206918](https://developercommunity.visualstudio.com/content/problem/206918/rename-of-virtual-method-doesnt-select-all-overrid.html)
-R73  | Failure (doesn't select correct instances) [206918](https://developercommunity.visualstudio.com/content/problem/206918/rename-of-virtual-method-doesnt-select-all-overrid.html)
-R74  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R75  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R76  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R77  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R78  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R79  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R80  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R81  | Failure (selects unrelated instances, doesn't select all instances) [206919](https://developercommunity.visualstudio.com/content/problem/206919/rename-of-macro-selects-unrelated-instances-by-def.html), [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
+R70  | Failure (doesn't select correct instances) []()
+R71  | Failure (doesn't select correct instances) []()
+R72  | Failure (doesn't select correct instances) []()
+R73  | Failure (doesn't select correct instances) []()
+R74  | Failure (selects unrelated instances, doesn't select all instances) []()
+R75  | Failure (selects unrelated instances, doesn't select all instances) []()
+R76  | Failure (selects unrelated instances, doesn't select all instances) []()
+R77  | Failure (selects unrelated instances, doesn't select all instances) []()
+R78  | Failure (selects unrelated instances, doesn't select all instances) []()
+R79  | Failure (selects unrelated instances, doesn't select all instances) []()
+R80  | Failure (selects unrelated instances, doesn't select all instances) []()
+R81  | Failure (selects unrelated instances, doesn't select all instances) []()
 R82  | Pass
 R83  | Pass
 R84  | Pass
@@ -483,7 +483,7 @@ R95  | Pass
 R96  | Pass
 R97  | Pass
 R98  | Pass
-R99  | Failure (not available) [206917](https://developercommunity.visualstudio.com/content/problem/206917/rename-unavailable-on-macro-argument.html)
+R99  | Failure (not available) []()
 R100 | Pass
 R101 | Pass
 R102 | Pass
@@ -492,9 +492,9 @@ R104 | Pass
 R105 | Pass
 R106 | Pass
 R107 | Pass
-R108 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R109 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R110 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R108 | Failure (selects unrelated instances) []()
+R109 | Failure (selects unrelated instances) []()
+R110 | Failure (selects unrelated instances) []()
 R111 | Pass
 R112 | Pass
 R113 | Pass
@@ -530,88 +530,88 @@ R142 | Pass
 R143 | Pass
 R144 | Pass
 R145 | Pass
-R146 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R147 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R148 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R146 | Failure (selects unrelated instances) []()
+R147 | Failure (selects unrelated instances) []()
+R148 | Failure (selects unrelated instances) []()
 R149 | Pass
-R150 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R150 | Failure (selects unrelated instances) []()
 R151 | Pass
 R152 | Pass
 R153 | Pass
-R154 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R154 | Failure (selects unrelated instances) []()
 R155 | Pass
-R156 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R156 | Failure (selects unrelated instances) []()
 R157 | Pass
 R158 | Pass
-R159 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R159 | Failure (selects unrelated instances) []()
 R160 | Pass
 R161 | Pass
 R162 | Pass
-R163 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R164 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R163 | Failure (selects unrelated instances) []()
+R164 | Failure (selects unrelated instances) []()
 R165 | Pass
-R166 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R166 | Failure (action not enabled in dialog) []()
 R167 | Pass
-R168 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R169 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R168 | Failure (action not enabled in dialog) []()
+R169 | Failure (action not enabled in dialog) []()
 R170 | Pass
-R171 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R172 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R171 | Failure (action not enabled in dialog) []()
+R172 | Failure (action not enabled in dialog) []()
 R173 | Pass
-R174 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R175 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R174 | Failure (action not enabled in dialog) []()
+R175 | Failure (action not enabled in dialog) []()
 R176 | Pass
 R177 | Pass
-R178 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R179 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R178 | Failure (action not enabled in dialog) []()
+R179 | Failure (action not enabled in dialog) []()
 R180 | Pass
 R181 | Pass
-R182 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R183 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R182 | Failure (action not enabled in dialog) []()
+R183 | Failure (action not enabled in dialog) []()
 R184 | Pass
 R185 | Pass
-R186 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R187 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R186 | Failure (action not enabled in dialog) []()
+R187 | Failure (action not enabled in dialog) []()
 R188 | Pass
 R189 | Pass
-R190 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R191 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R190 | Failure (action not enabled in dialog) []()
+R191 | Failure (action not enabled in dialog) []()
 R192 | Pass
 R193 | Pass
-R194 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R195 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R194 | Failure (action not enabled in dialog) []()
+R195 | Failure (action not enabled in dialog) []()
 R196 | Pass
 R197 | Pass
-R198 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R199 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R198 | Failure (action not enabled in dialog) []()
+R199 | Failure (action not enabled in dialog) []()
 R200 | Pass
 R201 | Pass
 R202 | Pass
 R203 | Pass
-R204 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R205 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R204 | Failure (action not enabled in dialog) []()
+R205 | Failure (action not enabled in dialog) []()
 R206 | Pass
 R207 | Pass
 R208 | Pass
 R209 | Pass
-R210 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R211 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R210 | Failure (action not enabled in dialog) []()
+R211 | Failure (action not enabled in dialog) []()
 R212 | Pass
 R213 | Pass
 R214 | Pass
 R215 | Pass
-R216 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
-R217 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R216 | Failure (action not enabled in dialog) []()
+R217 | Failure (action not enabled in dialog) []()
 R218 | Pass
 R219 | Pass
 R220 | Pass
 R221 | Pass
-R222 | Failure (action not enabled in dialog) [206922](https://developercommunity.visualstudio.com/content/problem/206922/rename-fails-for-user-defined-literal-operator.html)
+R222 | Failure (action not enabled in dialog) []()
 R223 | Pass
-R224 | Failure (not all instances selected) [206923](https://developercommunity.visualstudio.com/content/problem/206923/rename-of-type-alias-doesnt-select-all-instances.html)
+R224 | Failure (not all instances selected) []()
 R225 | Pass
-R226 | Failure (not all instances selected) [206923](https://developercommunity.visualstudio.com/content/problem/206923/rename-of-type-alias-doesnt-select-all-instances.html)
-R227 | Failure (selects incorrect instances) [206924](https://developercommunity.visualstudio.com/content/problem/206924/rename-of-type-alias-selects-symbols-from-standard.html)
+R226 | Failure (not all instances selected) []()
+R227 | Failure (selects incorrect instances) []()
 R228 | Pass
 R229 | Pass
 R230 | Pass
@@ -620,36 +620,36 @@ R232 | Pass
 R233 | Pass
 R234 | Pass
 R235 | Pass
-R236 | Failure (not all instances selected) [206925](https://developercommunity.visualstudio.com/content/problem/206925/rename-doesnt-select-instances-in-member-initializ.html)
+R236 | Failure (not all instances selected) []()
 R237 | Pass
 R238 | Pass
-R239 | Failure (can't find definition) [206926](https://developercommunity.visualstudio.com/content/problem/206926/rename-of-initializing-expression-cant-find-defini.html)
+R239 | Failure (can't find definition) []()
 R240 | Pass
 R241 | Pass
-R242 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R243 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R242 | Failure (selects unrelated instances) []()
+R243 | Failure (selects unrelated instances) []()
 R244 | Pass
 R245 | Pass
-R246 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R247 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R248 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R246 | Failure (selects unrelated instances) []()
+R247 | Failure (selects unrelated instances) []()
+R248 | Failure (selects unrelated instances) []()
 R249 | Pass
-R250 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R250 | Failure (selects unrelated instances) []()
 R251 | Pass
-R252 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R253 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R254 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R252 | Failure (selects unrelated instances) []()
+R253 | Failure (selects unrelated instances) []()
+R254 | Failure (selects unrelated instances) []()
 R255 | Pass
-R256 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R256 | Failure (selects unrelated instances) []()
 R257 | Pass
 R258 | Pass
 R259 | Pass
 R260 | Pass
 R261 | Pass
 R262 | Pass
-R263 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R263 | Failure (selects unrelated instances) []()
 R264 | Pass
-R265 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R265 | Failure (selects unrelated instances) []()
 R266 | Pass
 R267 | Pass
 R268 | Pass
@@ -658,12 +658,12 @@ R270 | Pass
 R271 | Pass
 R272 | Pass
 R273 | Pass
-R274 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R275 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R276 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R274 | Failure (selects unrelated instances) []()
+R275 | Failure (selects unrelated instances) []()
+R276 | Failure (selects unrelated instances) []()
 R277 | Pass
 R278 | Pass
-R279 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R279 | Failure (selects unrelated instances) []()
 R280 | Pass
 R281 | Pass
 R282 | Pass
@@ -671,12 +671,12 @@ R283 | Pass
 R284 | Pass
 R285 | Pass
 R286 | Pass
-R287 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R288 | Failure (not all instances selected) [206927](https://developercommunity.visualstudio.com/content/problem/206927/rename-doesnt-select-instances-in-decltype-express.html)
-R289 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R290 | Failure (can't find definition) [206928](https://developercommunity.visualstudio.com/content/problem/206928/rename-of-variable-in-decltype-expression-cant-fin.html)
-R291 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R292 | Failure (not all instances selected) [206927](https://developercommunity.visualstudio.com/content/problem/206927/rename-doesnt-select-instances-in-decltype-express.html)
+R287 | Failure (selects unrelated instances) []()
+R288 | Failure (not all instances selected) []()
+R289 | Failure (selects unrelated instances) []()
+R290 | Failure (can't find definition) []()
+R291 | Failure (selects unrelated instances) []()
+R292 | Failure (not all instances selected) []()
 R293 | Pass
 R294 | Pass
 R295 | Pass
@@ -760,7 +760,7 @@ R372 | Pass
 R373 | Pass
 R374 | Pass
 R375 | Pass
-R376 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R376 | Failure (selects unrelated instances) []()
 R377 | Pass
 R378 | Pass
 R379 | Pass
@@ -800,12 +800,12 @@ R412 | Pass
 R413 | Pass
 R414 | Pass
 R415 | Pass
-R416 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R417 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R416 | Failure (selects unrelated instances) []()
+R417 | Failure (selects unrelated instances) []()
 R418 | Pass
-R419 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R419 | Failure (selects unrelated instances) []()
 R420 | Pass
-R421 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R421 | Failure (selects unrelated instances) []()
 R422 | Pass
 R423 | Pass
 R424 | Pass
@@ -813,24 +813,24 @@ R425 | Pass
 R426 | Pass
 R427 | Pass
 R428 | Pass
-R429 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R430 | Failure (can't find definition) [206917](https://developercommunity.visualstudio.com/content/problem/206917/rename-unavailable-on-macro-argument.html)
-R431 | Failure (can't find definition) [206917](https://developercommunity.visualstudio.com/content/problem/206917/rename-unavailable-on-macro-argument.html)
+R429 | Failure (not all instances selected) []()
+R430 | Failure (can't find definition) []()
+R431 | Failure (can't find definition) []()
 R432 | Pass
-R433 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R434 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R435 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R436 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R437 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
+R433 | Failure (not all instances selected) []()
+R434 | Failure (not all instances selected) []()
+R435 | Failure (not all instances selected) []()
+R436 | Failure (not all instances selected) []()
+R437 | Failure (not all instances selected) []()
 R438 | Pass
 R439 | Pass
 R440 | Pass
 R441 | Pass
 R442 | Pass
 R443 | Pass
-R444 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R445 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
-R446 | Failure (not all instances selected) [206920](https://developercommunity.visualstudio.com/content/problem/206920/rename-of-macro-doesnt-find-instances-in-undef.html)
+R444 | Failure (not all instances selected) []()
+R445 | Failure (not all instances selected) []()
+R446 | Failure (not all instances selected) []()
 R447 | Pass
 R448 | Pass
 R449 | Pass
@@ -838,15 +838,15 @@ R450 | Pass
 R451 | Pass
 R452 | Pass
 R453 | Pass
-R454 | Failure (selects wrong instances) [206930](https://developercommunity.visualstudio.com/content/problem/206930/rename-on-lvalue-ref-method-selects-wrong-instance.html)
+R454 | Failure (selects wrong instances) []()
 R455 | Pass
-R456 | Failure (selects wrong instances) [206931](https://developercommunity.visualstudio.com/content/problem/206931/rename-of-method-accepting-lvalue-reference-parame.html)
+R456 | Failure (selects wrong instances) []()
 R457 | Pass
 R458 | Pass
 R459 | Pass
-R460 | Failure (selects wrong instances) [206930](https://developercommunity.visualstudio.com/content/problem/206930/rename-on-lvalue-ref-method-selects-wrong-instance.html)
+R460 | Failure (selects wrong instances) []()
 R461 | Pass
-R462 | Failure (selects wrong instances) [206931](https://developercommunity.visualstudio.com/content/problem/206931/rename-of-method-accepting-lvalue-reference-parame.html)
+R462 | Failure (selects wrong instances) []()
 R463 | Pass
 R464 | Pass
 R465 | Pass
@@ -871,25 +871,25 @@ R483 | Pass
 R484 | Pass
 R485 | Pass
 R486 | Pass
-R487 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R487 | Failure (selects unrelated instances) []()
 R488 | Pass
-R489 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R489 | Failure (selects unrelated instances) []()
 R490 | Pass
 R491 | Pass
-R492 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R492 | Failure (selects unrelated instances) []()
 R493 | Pass
 R494 | Pass
-R495 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R495 | Failure (selects unrelated instances) []()
 R496 | Pass
-R497 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R497 | Failure (selects unrelated instances) []()
 R498 | Pass
 R499 | Pass
-R500 | Failure (selects unrelated instances) [212271](https://developercommunity.visualstudio.com/content/problem/212271/rename-of-local-namespace-alias-selects-unrelated.html)
+R500 | Failure (selects unrelated instances) []()
 R501 | Pass
 R502 | Pass
 R503 | Pass
-R504 | Failure (fails to select all instances) [212275](https://developercommunity.visualstudio.com/content/problem/212275/renaming-class-member-fails-to-select-all-instance.html)
-R505 | Failure (fails to select all instances) [212275](https://developercommunity.visualstudio.com/content/problem/212275/renaming-class-member-fails-to-select-all-instance.html)
+R504 | Failure (fails to select all instances) []()
+R505 | Failure (fails to select all instances) []()
 R506 | Pass
 R507 | Pass
 R508 | Pass
@@ -899,72 +899,72 @@ R511 | Pass
 R512 | Pass
 R513 | Pass
 R514 | Pass
-R515 | Failure (fails to select all instances) [212276](https://developercommunity.visualstudio.com/content/problem/212276/rename-of-member-of-class-template-argument-fails.html)
+R515 | Failure (fails to select all instances) []()
 R516 | Pass
 R517 | Pass
 R518 | Pass
 R519 | Pass
 R520 | Pass
 R521 | Pass
-R522 | Failure (fails to select all instances) [212276](https://developercommunity.visualstudio.com/content/problem/212276/rename-of-member-of-class-template-argument-fails.html)
+R522 | Failure (fails to select all instances) []()
 R523 | Pass
 R524 | Pass
 R525 | Pass
-R526 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R527 | Failure (pops up symbol dialog) [212279](https://developercommunity.visualstudio.com/content/problem/212279/rename-of-template-class-declaration-pops-up-symbo.html)
-R528 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R526 | Failure (selects unrelated instances) []()
+R527 | Failure (pops up symbol dialog) []()
+R528 | Failure (fails to select all instances) []()
 R529 | Pass
 R530 | Pass
-R531 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R531 | Failure (fails to select all instances) []()
 R532 | Pass
 R533 | Pass
-R534 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R534 | Failure (fails to select all instances) []()
 R535 | Pass
-R536 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R536 | Failure (fails to select all instances) []()
 R537 | Pass
-R538 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R538 | Failure (fails to select all instances) []()
 R539 | Pass
-R540 | Failure (fails to select all instances) [212291](https://developercommunity.visualstudio.com/content/problem/212291/renaming-a-template-specialization-doesnt-select-b.html)
+R540 | Failure (fails to select all instances) []()
 R541 | Pass
-R542 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R542 | Failure (selects unrelated instances) []()
 R543 | Pass
-R544 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
-R545 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R546 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R547 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
-R548 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R544 | Failure (fails to select all instances) []()
+R545 | Failure (selects unrelated instances) []()
+R546 | Failure (selects unrelated instances) []()
+R547 | Failure (fails to select all instances) []()
+R548 | Failure (selects unrelated instances) []()
 R549 | Pass
-R550 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
-R551 | Failure (fails to select all instances) [212298](https://developercommunity.visualstudio.com/content/problem/212298/renaming-a-nested-type-in-a-template-class-fails-t.html)
+R550 | Failure (fails to select all instances) []()
+R551 | Failure (fails to select all instances) []()
 R552 | Pass
-R553 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
+R553 | Failure (fails to rename selected instance) []()
 R554 | Pass
-R555 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
+R555 | Failure (fails to rename selected instance) []()
 R556 | Pass
-R557 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
+R557 | Failure (fails to rename selected instance) []()
 R558 | Pass
-R559 | Failure (fails to rename selected instance) [212300](https://developercommunity.visualstudio.com/content/problem/212300/renaming-use-of-a-template-class-member-fails-to-r.html)
-R560 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R561 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R559 | Failure (fails to rename selected instance) []()
+R560 | Failure (selects unrelated instances) []()
+R561 | Failure (selects unrelated instances) []()
 R562 | (deprecated)
 R563 | Pass
-R564 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R565 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
-R566 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R567 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
-R568 | Failure (selects unrelated instances) [212302](https://developercommunity.visualstudio.com/content/problem/212302/rename-of-identifier-in-decltype-expression-select.html)
-R569 | Failure (selects unrelated instances) [212302](https://developercommunity.visualstudio.com/content/problem/212302/rename-of-identifier-in-decltype-expression-select.html)
+R564 | Failure (selects unrelated instances) []()
+R565 | Failure (use in decltype not selected) []()
+R566 | Failure (selects unrelated instances) []()
+R567 | Failure (use in decltype not selected) []()
+R568 | Failure (selects unrelated instances) []()
+R569 | Failure (selects unrelated instances) []()
 R570 | Pass
-R571 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
-R572 | Failure (use in decltype not selected) [212301](https://developercommunity.visualstudio.com/content/problem/212301/rename-of-function-argument-doesnt-select-usage-in.html)
-R573 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R574 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R571 | Failure (use in decltype not selected) []()
+R572 | Failure (use in decltype not selected) []()
+R573 | Failure (selects unrelated instances) []()
+R574 | Failure (selects unrelated instances) []()
 R575 | Pass
-R576 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R577 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
-R578 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R576 | Failure (selects unrelated instances) []()
+R577 | Failure (selects unrelated instances) []()
+R578 | Failure (selects unrelated instances) []()
 R579 | Pass
-R580 | Failure (selects unrelated instances) [206921](https://developercommunity.visualstudio.com/content/problem/206921/rename-of-template-argument-selects-unrelated-inst.html)
+R580 | Failure (selects unrelated instances) []()
 R581 | Pass
 R582 | Pass
 R583 | Pass
@@ -1376,10 +1376,10 @@ R986 |
 Case | Result
 ---- | ------
 RP1  | (deprecated)
-RP2  | Failure (not available) [206947](https://developercommunity.visualstudio.com/content/problem/206947/enhance-change-signature-to-allow-promotion-of-ret.html) 
-RP3  | Failure (selects wrong instances) [206949](https://developercommunity.visualstudio.com/content/problem/206949/change-signature-selects-unrelated-instances-by-de.html)
+RP2  | Failure (not available) []()
+RP3  | Failure (selects wrong instances) []()
 RP4  | Pass
-RP5  | Failure (selects unrelated instances) [206950](https://developercommunity.visualstudio.com/content/problem/206950/change-signature-selects-unrelated-instances.html)
+RP5  | Failure (selects unrelated instances) []()
 RP6  | Pass
 RP7  | (deprecated)
 RP8  | (deprecated)
