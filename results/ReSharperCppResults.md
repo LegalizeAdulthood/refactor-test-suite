@@ -1622,16 +1622,16 @@ RZNP28 | Pass
 ## Replace String Literal With Raw String Literal
 Case | Result
 ---- | ------
-RAW1 | 
-RAW2 | 
-RAW3 | 
-RAW4 | 
-RAW5 | 
-RAW6 | 
-RAW7 | 
-RAW8 | 
-RAW9 | 
-RAW10 | 
+RAW1 | Pass
+RAW2 | Pass
+RAW3 | Pass
+RAW4 | Pass
+RAW5 | Pass
+RAW6 | Pass
+RAW7 | Pass
+RAW8 | Pass
+RAW9 | Pass
+RAW10 | Failure (generates invalid code) [RSCPP-35267](https://youtrack.jetbrains.com/issue/RSCPP-35267/Convert-to-raw-string-literal-creates-invalid-code-when-string-contains-delimiter)
 
 ## Replace Ternary With If
 Case | Result
