@@ -1533,9 +1533,9 @@ Case | Result
 RP1 | (deprecated)
 RP2 | Failure (creates invalid code in macro argument) [RSCPP-21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
 RP3 | Pass
-RP4 | Failure (unable to update usage) [RSCPP-21211](https://youtrack.jetbrains.com/issue/RSCPP-21211)
-RP5 | Failure (creates invalid code in macro argument) [RSCPP-21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
-RP6 | Failure (unable to update usage) [RSCPP-21211](https://youtrack.jetbrains.com/issue/RSCPP-21211)
+RP4 | Pass
+RP5 | Pass
+RP6 | Pass
 RP7 | (deprecated)
 RP8 | (deprecated)
 RP9 | (deprecated)
