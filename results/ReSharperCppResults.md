@@ -1543,36 +1543,36 @@ RP9 | (deprecated)
 ## Replace auto With Type
 Case | Result
 ---- | ------
-RAWT1 | 
-RAWT2 | 
-RAWT3 | 
-RAWT4 | 
-RAWT5 | 
-RAWT6 | 
-RAWT7 | 
-RAWT8 | 
-RAWT9 | 
-RAWT10 | 
-RAWT11 | 
-RAWT12 | 
-RAWT13 | 
-RAWT14 | 
-RAWT15 | 
-RAWT16 | 
-RAWT17 | 
-RAWT18 | 
-RAWT19 | 
-RAWT20 | 
-RAWT21 | 
-RAWT22 | 
-RAWT23 | 
-RAWT24 | 
-RAWT25 | 
-RAWT26 | 
-RAWT27 | 
-RAWT28 | 
-RAWT29 | 
-RAWT30 | 
+RAWT1 | Pass
+RAWT2 | Pass
+RAWT3 | Pass
+RAWT4 | Pass
+RAWT5 | Pass
+RAWT6 | Pass
+RAWT7 | Pass
+RAWT8 | Pass
+RAWT9 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT10 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT11 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT12 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT13 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT14 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT15 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT16 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT17 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT18 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT19 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT20 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT21 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT22 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT23 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT24 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT25 | Pass
+RAWT26 | Pass
+RAWT27 | Pass
+RAWT28 | Pass
+RAWT29 | Pass
+RAWT30 | Pass
 
 ## Replace If With Ternary
 Case | Result
