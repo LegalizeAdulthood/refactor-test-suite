@@ -1710,17 +1710,17 @@ RC8 | Pass
 ## Split Initialization From Declaration
 Case | Result
 ---- | ------
-SID1 | 
-SID2 | 
-SID3 | 
-SID4 | 
-SID5 | 
-SID6 | 
-SID7 | 
-SID8 | 
-SID9 | 
-SID10 | 
-SID11 | 
+SID1 | Pass
+SID2 | Pass
+SID3 | Pass
+SID4 | Pass
+SID5 | Pass
+SID6 | Pass
+SID7 | Pass
+SID8 | Pass
+SID9 | Pass
+SID10 | Pass
+SID11 | Pass
 
 ## Split Multi-Variable Declaration
 Case | Result
