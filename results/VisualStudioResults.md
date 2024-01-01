@@ -1,33 +1,39 @@
-# Visual Studio 2017
+# Visual Studio
 
-Home: [Visual Studio 2017](http://www.visualstudio.com/)
+Home: [Visual Studio 2022](http://www.visualstudio.com/)
 
 Version: Microsoft Visual Studio Community 2022, Version 17.7.5
 
 Notes:
- * Intellisense must be enabled for most refactorings to work properly.
- * When applying an operation, the default selections on any prompting dialogs
-   were used.
+* All extensions that can provide refactorings, such as ReSharper for C++,
+  are disabled while testing to ensure that only core Visual Studio refactoring
+  capabilities are tested.
+* Intellisense must be enabled for most refactorings to work properly.
+* When applying an operation, the default selections on any prompting dialogs
+  were used.
 
-   Getting the default selection correct for a refactoring is important,
-   particularly when changing a name that is used in thousands of places.
-   Making the developer manually resolve which identical text is actually a
-   related name makes the developer act like a compiler.  The compiler already
-   knows which names refer to the same thing by using the context of the names.
-   Any refactoring tool worth using has to employ the same logic as the compiler
-   to correctly resolve names.  In other words, a refactoring tool has to be at
-   least as smart as a compiler.
+  Getting the default selection correct for a refactoring is important,
+  particularly when changing a name that is used in thousands of places.
+  Making the developer manually resolve which identical text is actually a
+  related name makes the developer act like a compiler.  The compiler already
+  knows which names refer to the same thing by using the context of the names.
+  Any refactoring tool worth using has to employ the same logic as the compiler
+  to correctly resolve names.  In other words, a refactoring tool has to be at
+  least as smart as a compiler.
 
-   If the correct instances of a name can't be selected by a refactoring tool,
-   then you might as well use Find/Replace across a file set.
- * **Add Parameter** is available through **Change Signature**.
- * **Move Implementation to Source File** is available as **Move Definition
-   Location**.
- * **Rename** shifts the focus to the Visual C++ Refactoring output in the Output
-   pane.  This is pretty annoying as it keeps taking the keyboard focus away
-   from the editor.
- * **Reorder Parameters** is available through **Change Signature**, but the unused
-   parameters are not indicated visually in the IDE.
+  If the correct instances of a name can't be selected by a refactoring tool,
+  then you might as well use Find/Replace across a file set.
+* Change locations to files are listed in the *Visual C++ Refactoring* tab of the Output pane.
+* **Add Block Delimiter** is available by selecting a block of code and typing `{`.
+* **Add Parameter** is available through **Change Signature**.
+* **Move Implementation to Source File** is available as **Move Definition
+  Location**.
+* **Remove Unused Parameters** is available through **Change Signature**, but the unused
+  parameters are not indicated visually in the IDE.
+* **Reorder Parameters** is available through **Change Signature**.
+* **Replace String Literal WIth Raw String Literal** is available through the action *Edit.ConvertToRawStringLiteral*.
+* In general, bugs reported against Visual Studio refactoring functionality get closed with no action taken.
+  Not a single bug reported in 2017 was marked as fixed, although some test cases now pass.
 
 <hr/>
 
@@ -202,6 +208,40 @@ AP165 |
 AP166 | 
 AP167 | 
 AP168 | 
+AP169 | 
+AP170 | 
+AP171 | 
+AP172 | 
+AP173 | 
+AP174 | 
+AP175 | 
+AP176 | 
+AP177 | 
+AP178 | 
+AP179 | 
+AP180 | 
+AP181 | 
+AP182 | 
+AP183 | 
+AP184 | 
+AP185 | 
+AP186 | 
+AP187 | 
+AP188 | 
+AP189 | 
+AP190 | 
+AP191 | 
+AP192 | 
+AP193 | 
+AP194 | 
+AP195 | 
+AP196 | 
+AP197 | 
+AP198 | 
+AP199 | 
+AP200 | 
+AP201 | 
+AP202 | 
 
 ## Change Signature
 Case | Result
@@ -299,6 +339,7 @@ EM17 | Failure (creates invalid code) [206911](https://developercommunity.visual
 EM18 | Pass
 EM19 | Failure (data flow) [206897](https://developercommunity.visualstudio.com/content/problem/206897/extract-function-cant-handle-statements-defining-v.html)
 EM20 | Pass (unnecessary use of namespace) [206900](https://developercommunity.visualstudio.com/content/problem/206900/extract-method-uses-redundant-namespace-specifier.html)
+EM21 | 
 
 ## Move Implementation to Source File
 Case | Result
