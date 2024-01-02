@@ -1,25 +1,25 @@
 diff --git a/RefactorTest/ExtractFunction.cpp b/RefactorTest/ExtractFunction.cpp
-index d6416f3..c239faa 100644
+index 02dc2dd..48de405 100644
 --- a/RefactorTest/ExtractFunction.cpp
 +++ b/RefactorTest/ExtractFunction.cpp
-@@ -135,13 +135,19 @@ namespace ExtractFunction
-     }
+@@ -152,13 +152,19 @@ int (Foo::*TestConstMember(int x))() const
+ }
  
-     typedef int (Foo::*PtrConstMemberT)() const;
+ typedef int (Foo::*PtrConstMemberT)() const;
 +
-+    void Goink(PtrConstMemberT& member)
-+    {
-+        member = &Foo::Method1;
-+    }
++void goink(PtrConstMemberT &member)
++{
++    member = &Foo::Method1;
++}
 +
-     PtrConstMemberT TestConstMember2(int x)
+ PtrConstMemberT TestConstMember2(int x)
+ {
+     PtrConstMemberT member;
+     if (x > 0)
      {
-         PtrConstMemberT member;
-         if (x > 0)
-         {
-             // #TEST#: EXF17 Extract function on statement
--            member = &Foo::Method1;
-+            Goink(member);
-         }
-         else
-         {
+         // #TEST#: EXF17 Extract function on statement
+-        member = &Foo::Method1;
++        goink(member);
+     }
+     else
+     {

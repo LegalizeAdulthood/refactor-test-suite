@@ -12,7 +12,7 @@ add_library(refactor-test-cases STATIC
     CreateMultiVariableDeclaration.cpp
     ExtractConstant.cpp
     ExtractFunction.cpp
-    ExtractFunction2.cpp
+    ExtractFunction2.c
     ExtractMethod.cpp
     ExtractParameter.cpp
     ExtractVariable.cpp
@@ -55,7 +55,7 @@ add_library(refactor-test-cases STATIC
     ${CMAKE_CURRENT_BINARY_DIR}/include/Config.h
 )
 source_group("Header Files" REGULAR_EXPRESSION ".*\\.h")
-source_group("Source Files" REGULAR_EXPRESSION ".*\\.cpp")
+source_group("Source Files" REGULAR_EXPRESSION ".*\\.(cpp|c)")
 source_group("CMake Template Files" REGULAR_EXPRESSION ".*\\.in")
 if("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
     add_library(refactor-14 OBJECT RenameCpp14.h RenameCpp14.cpp)

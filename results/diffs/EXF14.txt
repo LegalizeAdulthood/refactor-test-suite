@@ -1,24 +1,24 @@
 diff --git a/RefactorTest/ExtractFunction.cpp b/RefactorTest/ExtractFunction.cpp
-index d6416f3..7c920e2 100644
+index 02dc2dd..8d7fef1 100644
 --- a/RefactorTest/ExtractFunction.cpp
 +++ b/RefactorTest/ExtractFunction.cpp
-@@ -88,13 +88,18 @@ namespace ExtractFunction
-         int Method2() const { return 2; }
-     };
+@@ -105,13 +105,18 @@ public:
+     }
+ };
  
-+    void Goink(int( Foo::*& member)(int))
-+    {
-+        member = &Foo::Operation1;
-+    }
++void goink(int (Foo::*&member)(int))
++{
++    member = &Foo::Operation1;
++}
 +
-     int (Foo::*TestMember(int x))(int)
+ int (Foo::*TestMember(int x))(int)
+ {
+     int (Foo::*member)(int);
+     if (x > 0)
      {
-         int (Foo::*member)(int);
-         if (x > 0)
-         {
-             // #TEST#: EXF14 Extract function on statement
--            member = &Foo::Operation1;
-+            Goink(member);
-         }
-         else
-         {
+         // #TEST#: EXF14 Extract function on statement
+-        member = &Foo::Operation1;
++        goink(member);
+     }
+     else
+     {

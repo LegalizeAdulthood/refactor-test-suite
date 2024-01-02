@@ -43,8 +43,14 @@ int TestInteger()
     return x + 3;
 }
 
-int Function1(int x) { return x; }
-int Function2(int x) { return x; }
+int Function1(int x)
+{
+    return x;
+}
+int Function2(int x)
+{
+    return x;
+}
 
 int (*TestFunction(int x))(int)
 {
@@ -80,11 +86,23 @@ Function *TestFunction2(int x)
 class Foo
 {
 public:
-    int Operation1(int x) { return x; }
-    int Operation2(int x) { return x * 2; }
+    int Operation1(int x)
+    {
+        return x;
+    }
+    int Operation2(int x)
+    {
+        return x * 2;
+    }
 
-    int Method1() const { return 1; }
-    int Method2() const { return 2; }
+    int Method1() const
+    {
+        return 1;
+    }
+    int Method2() const
+    {
+        return 2;
+    }
 };
 
 int (Foo::*TestMember(int x))(int)
@@ -149,8 +167,14 @@ PtrConstMemberT TestConstMember2(int x)
     return member;
 }
 
-int Function1() { return 1; }
-int Function2() { return 2; }
+int Function1()
+{
+    return 1;
+}
+int Function2()
+{
+    return 2;
+}
 
 struct Bar
 {

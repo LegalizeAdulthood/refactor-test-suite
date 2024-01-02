@@ -1,12 +1,24 @@
-diff --git a/RefactorTest/ExtractFunction2.cpp b/RefactorTest/ExtractFunction2.cpp
-index a7401c7..5e76ad5 100644
---- a/RefactorTest/ExtractFunction2.cpp
-+++ b/RefactorTest/ExtractFunction2.cpp
-@@ -1,6 +1,11 @@
- #include "stdafx.h"
+diff --git a/RefactorTest/CMakeLists.txt b/RefactorTest/CMakeLists.txt
+index 043212d..e7b5e82 100644
+--- a/RefactorTest/CMakeLists.txt
++++ b/RefactorTest/CMakeLists.txt
+@@ -55,7 +55,7 @@ add_library(refactor-test-cases STATIC
+     ${CMAKE_CURRENT_BINARY_DIR}/include/Config.h
+ )
+ source_group("Header Files" REGULAR_EXPRESSION ".*\\.h")
+-source_group("Source Files" REGULAR_EXPRESSION ".*\\.cpp")
++source_group("Source Files" REGULAR_EXPRESSION ".*\\.(cpp|c)")
+ source_group("CMake Template Files" REGULAR_EXPRESSION ".*\\.in")
+ if("cxx_std_14" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
+     add_library(refactor-14 OBJECT RenameCpp14.h RenameCpp14.cpp)
+diff --git a/RefactorTest/ExtractFunction2.c b/RefactorTest/ExtractFunction2.c
+index baec870..ee0e805 100644
+--- a/RefactorTest/ExtractFunction2.c
++++ b/RefactorTest/ExtractFunction2.c
+@@ -1,5 +1,10 @@
  #include <stdio.h>
  
-+int Goink(FILE *f)
++int goink(FILE *f)
 +{
 +    return getc(f);
 +}
@@ -14,12 +26,12 @@ index a7401c7..5e76ad5 100644
  void TestExtractFunctionCFile()
  {
      FILE *f = fopen("tmp.tmp", "wb");
-@@ -8,7 +13,7 @@ void TestExtractFunctionCFile()
+@@ -7,7 +12,7 @@ void TestExtractFunctionCFile()
      for (int i = 0; i < 10; i++)
      {
          // #TEST#: EXF19 Extract Function on right hand side of assignment.
 -        y += getc(f);
-+        y += Goink(f);
++        y += goink(f);
      }
      fclose(f);
  }
