@@ -306,7 +306,7 @@ CS45 | Pass
 ## Extract Function
 Case | Result
 ---- | ------
-EXF1  | Failure (data flow)
+EXF1  | Failure (not available)
 EXF2  | Pass
 EXF3  | Pass
 EXF4  | Pass
