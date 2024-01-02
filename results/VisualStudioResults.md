@@ -58,53 +58,53 @@ AP4  | Pass
 AP5  | Pass
 AP6  | Pass
 AP7  | Pass
-AP8  | Failure (definition not updated) []()
+AP8  | Failure (definition not updated)
 AP9  | Pass
 AP10 | Pass
 AP11 | Pass
-AP12 | Failure (unrelated code changed) []()
-AP13 | Failure (declaration not updated) []()
+AP12 | Failure (unrelated code changed)
+AP13 | Failure (declaration not updated)
 AP14 | Pass
-AP15 | Failure (changes unrelated overloads; disregards dialog selection) []()
-AP16 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP15 | Failure (changes unrelated overloads; disregards dialog selection)
+AP16 | Failure (changes unrelated overloads; disregards dialog selection)
 AP17 | Pass
 AP18 | Pass
 AP19 | Pass
 AP20 | Pass
 AP21 | Pass
-AP22 | Failure (declaration not updated) []()
+AP22 | Failure (declaration not updated)
 AP23 | Pass
-AP24 | Failure (template usages not updated) []()
-AP25 | Failure (not available) []()
-AP26 | Failure (template usages not updated) []()
-AP27 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP24 | Failure (template usages not updated)
+AP25 | Failure (not available)
+AP26 | Failure (template usages not updated)
+AP27 | Failure (error occured while applying changes; Value does not fall within expected range)
 AP28 | Pass
-AP29 | Failure (changes unrelated overloads; disregards dialog selection) []()
-AP30 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP29 | Failure (changes unrelated overloads; disregards dialog selection)
+AP30 | Failure (changes unrelated overloads; disregards dialog selection)
 AP31 | Pass
 AP32 | Pass
-AP33 | Failure (c'tor usages not updated) []()
+AP33 | Failure (c'tor usages not updated)
 AP34 | Pass
 AP35 | Pass
 AP36 | Pass
 AP37 | Pass
 AP38 | Pass
-AP39 | Failure (c'tor usages not updated) []()
+AP39 | Failure (c'tor usages not updated)
 AP40 | Pass
 AP41 | Pass
 AP42 | Pass
 AP43 | Pass
 AP44 | Pass
-AP45 | Failure (default value on definition, not declaration) []()
+AP45 | Failure (default value on definition, not declaration)
 AP46 | Pass
 AP47 | Pass
 AP48 | Pass
-AP49 | Failure (definition not updated) []()
+AP49 | Failure (definition not updated)
 AP50 | Pass
-AP51 | Failure (default value on definition, not declaration) []()
+AP51 | Failure (default value on definition, not declaration)
 AP52 | Pass
 AP53 | Pass
-AP54 | Failure (c'tor usages not updated) []()
+AP54 | Failure (c'tor usages not updated)
 AP55 | Pass
 AP56 | Pass
 AP57 | Pass
@@ -113,12 +113,12 @@ AP59 | Pass
 AP60 | Pass
 AP61 | Pass
 AP62 | Pass
-AP63 | Failure (definition not updated) []()
+AP63 | Failure (definition not updated)
 AP64 | Pass
-AP65 | Failure (default value on definition, not declaration) []()
+AP65 | Failure (default value on definition, not declaration)
 AP66 | Pass
 AP67 | Pass
-AP68 | Failure (c'tor usages not updated) []()
+AP68 | Failure (c'tor usages not updated)
 AP69 | Pass
 AP70 | Pass
 AP71 | Pass
@@ -132,120 +132,120 @@ AP78 | Pass
 AP79 | Pass
 AP80 | Pass
 AP81 | Pass
-AP82 | Failure (c'tor usages not updated) []()
+AP82 | Failure (c'tor usages not updated)
 AP83 | Pass
-AP84 | Failure (c'tor usages not updated) []()
+AP84 | Failure (c'tor usages not updated)
 AP85 | Pass
-AP86 | Failure (declaration not updated) []()
+AP86 | Failure (declaration not updated)
 AP87 | Pass
-AP88 | Failure (changes unrelated overloads; disregards dialog selection) []()
-AP89 | Failure (changes unrelated overloads; disregards dialog selection) []()
+AP88 | Failure (changes unrelated overloads; disregards dialog selection)
+AP89 | Failure (changes unrelated overloads; disregards dialog selection)
 AP90 | Pass
 AP91 | Pass
 AP92 | Pass
-AP93 | Failure (error occured while applying changes; Value does not fall within expected range) []()
-AP94 | Failure (error occured while applying changes; textIndex out of range) []()
-AP95 | Failure (changes unrelated overloads) []()
-AP96 | Failure (changes unrelated overloads) []()
+AP93 | Failure (error occured while applying changes; Value does not fall within expected range)
+AP94 | Failure (error occured while applying changes; textIndex out of range)
+AP95 | Failure (changes unrelated overloads)
+AP96 | Failure (changes unrelated overloads)
 AP97 | Pass
 AP98 | Pass
 AP99 | Pass
-AP100 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP100 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
 AP101 | Pass
 AP102 | Pass
-AP103 | Failure (declaration not updated) []()
+AP103 | Failure (declaration not updated)
 AP104 | Pass
 AP105 | Pass
 AP106 | Pass
 AP107 | Pass
 AP108 | Pass
-AP109 | Failure (error occured while applying changes; Value does not fall within expected range) []()
-AP110 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP109 | Failure (error occured while applying changes; Value does not fall within expected range)
+AP110 | Failure (error occured while applying changes; Value does not fall within expected range)
 AP111 | Pass
-AP112 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP112 | Failure (error occured while applying changes; Value does not fall within expected range)
 AP113 | Pass
 AP114 | Pass
-AP115 | Failure (default value on definition, not declaration) []()
+AP115 | Failure (default value on definition, not declaration)
 AP116 | Pass
-AP117 | Failure (default value on definition, not declaration) []()
-AP118 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP117 | Failure (default value on definition, not declaration)
+AP118 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
 AP119 | Pass
 AP120 | Pass
 AP121 | Pass
 AP122 | Pass
-AP123 | Failure (declaration not updated) []()
+AP123 | Failure (declaration not updated)
 AP124 | Pass
-AP125 | Failure (default value on definition, not declaration) []()
+AP125 | Failure (default value on definition, not declaration)
 AP126 | Pass
-AP127 | Failure (default value on definition, not declaration) []()
+AP127 | Failure (default value on definition, not declaration)
 AP128 | Pass
 AP129 | Pass
 AP130 | Pass
-AP131 | Failure (error occured while applying changes; Value does not fall within expected range) []()
-AP132 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
-AP133 | Failure (error occured while applying changes; Value does not fall within expected range) []()
-AP134 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
-AP135 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
-AP136 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
-AP137 | Failure (error occured while applying changes; Value does not fall within expected range) []()
-AP138 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP131 | Failure (error occured while applying changes; Value does not fall within expected range)
+AP132 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
+AP133 | Failure (error occured while applying changes; Value does not fall within expected range)
+AP134 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
+AP135 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
+AP136 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
+AP137 | Failure (error occured while applying changes; Value does not fall within expected range)
+AP138 | Failure (error occured while applying changes; Value does not fall within expected range)
 AP139 | Pass
 AP140 | Pass
-AP141 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP141 | Failure (error occured while applying changes; Value does not fall within expected range)
 AP142 | Pass
 AP143 | Pass
 AP144 | Pass
-AP145 | Failure (default value on definition, not declaration) []()
-AP146 | Failure (declaration not updated) []()
+AP145 | Failure (default value on definition, not declaration)
+AP146 | Failure (declaration not updated)
 AP147 | Pass
-AP148 | Failure (default value on definition, not declaration) []()
+AP148 | Failure (default value on definition, not declaration)
 AP149 | Pass
-AP150 | Failure (declarations not updated; not all usages updated) []()
-AP151 | Failure (declarations not updated; not all usages updated) []()
-AP152 | Failure (declarations not updated; not all usages updated) []()
-AP153 | Failure (declarations not updated; not all usages updated) []()
-AP154 | Failure (declarations not updated; not all usages updated) []()
-AP155 | Failure (declarations not updated; not all usages updated) []()
-AP156 | Failure (declarations not updated; not all usages updated) []()
-AP157 | Failure (declarations not updated; not all usages updated) []()
-AP158 | Failure (declarations not updated; not all usages updated) []()
-AP159 | Failure (declarations not updated; not all usages updated) []()
-AP160 | Failure (declarations not updated; not all usages updated) []()
-AP161 | Failure (declarations not updated; not all usages updated) []()
-AP162 | Failure (declarations not updated; not all usages updated) []()
-AP163 | Failure (declarations not updated; not all usages updated) []()
-AP164 | Failure (declarations not updated; not all usages updated) []()
-AP165 | Failure (declarations not updated; not all usages updated) []()
-AP166 | Failure (declarations not updated; not all usages updated) []()
-AP167 | Failure (declarations not updated; not all usages updated) []()
-AP168 | Failure (declarations not updated; not all usages updated) []()
-AP169 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
-AP170 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP150 | Failure (declarations not updated; not all usages updated)
+AP151 | Failure (declarations not updated; not all usages updated)
+AP152 | Failure (declarations not updated; not all usages updated)
+AP153 | Failure (declarations not updated; not all usages updated)
+AP154 | Failure (declarations not updated; not all usages updated)
+AP155 | Failure (declarations not updated; not all usages updated)
+AP156 | Failure (declarations not updated; not all usages updated)
+AP157 | Failure (declarations not updated; not all usages updated)
+AP158 | Failure (declarations not updated; not all usages updated)
+AP159 | Failure (declarations not updated; not all usages updated)
+AP160 | Failure (declarations not updated; not all usages updated)
+AP161 | Failure (declarations not updated; not all usages updated)
+AP162 | Failure (declarations not updated; not all usages updated)
+AP163 | Failure (declarations not updated; not all usages updated)
+AP164 | Failure (declarations not updated; not all usages updated)
+AP165 | Failure (declarations not updated; not all usages updated)
+AP166 | Failure (declarations not updated; not all usages updated)
+AP167 | Failure (declarations not updated; not all usages updated)
+AP168 | Failure (declarations not updated; not all usages updated)
+AP169 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
+AP170 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
 AP171 | Pass
 AP172 | Pass
 AP173 | Pass
-AP174 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP174 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
 AP175 | Pass
-AP176 | Failure (declaration not updated) []()
+AP176 | Failure (declaration not updated)
 AP177 | Pass
 AP178 | Pass
 AP179 | Pass
-AP180 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
-AP181 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP180 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
+AP181 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
 AP182 | Pass
 AP183 | Pass
 AP184 | Pass
-AP185 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP185 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
 AP186 | Pass
-AP187 | Failure (error occured while applying changes; Value does not fall within expected range) []()
+AP187 | Failure (error occured while applying changes; Value does not fall within expected range)
 AP188 | Pass
 AP189 | Pass
-AP190 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
-AP191 | Failure (error occured while applying changes; Object reference not set to an instance of an object) []()
+AP190 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
+AP191 | Failure (error occured while applying changes; Object reference not set to an instance of an object)
 AP192 | Pass
 AP193 | Pass
 AP194 | Pass
-AP195 | Failure (declaration not updated) []()
+AP195 | Failure (declaration not updated)
 AP196 | Pass
 AP197 | Pass
 AP198 | Pass
@@ -257,15 +257,15 @@ AP202 | Pass
 ## Change Signature
 Case | Result
 ---- | ------
-CS1  | Failure (instances not renamed) []()
-CS2  | Failure (instances not renamed) []()
-CS3  | Failure (unavailable) []()
+CS1  | Failure (instances not renamed)
+CS2  | Failure (instances not renamed)
+CS3  | Failure (unavailable)
 CS4  | Pass
 CS5  | Pass
 CS6  | Pass
-CS7  | Failure (instances not renamed) []()
-CS8  | Failure (instances not renamed) []()
-CS9  | Failure (unavailable) []()
+CS7  | Failure (instances not renamed)
+CS8  | Failure (instances not renamed)
+CS9  | Failure (unavailable)
 CS10 | Pass
 CS11 | Pass
 CS12 | 
@@ -306,7 +306,7 @@ CS45 |
 ## Extract Function
 Case | Result
 ---- | ------
-EXF1  | Failure (data flow) []()
+EXF1  | Failure (data flow)
 EXF2  | Pass
 EXF3  | Pass
 EXF4  | Pass
@@ -321,10 +321,10 @@ EXF12 | Pass
 EXF13 | Pass
 EXF14 | Pass
 EXF15 | Pass
-EXF16 | Failure (creates invalid code) []()
+EXF16 | Failure (creates invalid code)
 EXF17 | Pass
-EXF18 | Failure (data flow) []()
-EXF19 | Failure (creates invalid code) []()
+EXF18 | Failure (data flow)
+EXF19 | Failure (creates invalid code)
 EXF20 |
 
 ## Extract Method
@@ -332,32 +332,32 @@ Case | Result
 ---- | ------
 EM1 | Pass
 EM2 | Pass
-EM3 | Pass (unnecessary use of namespace) []()
-EM4 | Pass (unnecessary use of namespace) []()
-EM5 | Pass (unnecessary use of namespace) []()
-EM6 | Pass (unnecessary use of namespace) []()
+EM3 | Pass (unnecessary use of namespace)
+EM4 | Pass (unnecessary use of namespace)
+EM5 | Pass (unnecessary use of namespace)
+EM6 | Pass (unnecessary use of namespace)
 EM7 | Pass
 EM8 | Pass
 EM9 | Pass
 EM10 | Pass
-EM11 | Failure (creates invalid code) []()
-EM12 | Pass (unnecessary use of namespace) []()
+EM11 | Failure (creates invalid code)
+EM12 | Pass (unnecessary use of namespace)
 EM13 | Pass
 EM14 | Pass
 EM15 | Pass
 EM16 | Pass
-EM17 | Failure (creates invalid code) []()
+EM17 | Failure (creates invalid code)
 EM18 | Pass
-EM19 | Failure (data flow) []()
-EM20 | Pass (unnecessary use of namespace) []()
+EM19 | Failure (data flow)
+EM20 | Pass (unnecessary use of namespace)
 EM21 | 
 
 ## Move Implementation to Source File
 Case | Result
 ---- | ------
-MISF1  | Pass (leaves `inline` in header) []()
-MISF2  | Failure (unknown error) []()
-MISF3  | Pass (sensitive to cursor placement) []()
+MISF1  | Pass (leaves `inline` in header)
+MISF2  | Failure (unknown error)
+MISF3  | Pass (sensitive to cursor placement)
 MISF4  | Pass
 MISF5  | Pass
 MISF6  | Pass
@@ -370,7 +370,7 @@ MISF12 | Pass
 MISF13 | Pass
 MISF14 | Pass
 MISF15 | Pass
-MISF16 | Failure (creates invalid code) []()
+MISF16 | Failure (creates invalid code)
 MISF17 | Pass
 MISF18 | Pass
 MISF19 | Pass
@@ -380,7 +380,7 @@ MISF22 | Pass
 MISF23 | Pass
 MISF24 | Pass
 MISF25 | Pass
-MISF26 | Failure (creates invalid code) []()
+MISF26 | Failure (creates invalid code)
 
 ## Rename
 Case | Result
@@ -409,7 +409,7 @@ R21  | Pass
 R22  | Pass
 R23  | Pass
 R24  | Pass
-R25  | Failure (not available) []()
+R25  | Failure (not available)
 R26  | Pass
 R27  | Pass
 R28  | Pass
@@ -454,18 +454,18 @@ R66  | Pass
 R67  | Pass
 R68  | Pass
 R69  | Pass
-R70  | Failure (doesn't select correct instances) []()
-R71  | Failure (doesn't select correct instances) []()
-R72  | Failure (doesn't select correct instances) []()
-R73  | Failure (doesn't select correct instances) []()
-R74  | Failure (selects unrelated instances, doesn't select all instances) []()
-R75  | Failure (selects unrelated instances, doesn't select all instances) []()
-R76  | Failure (selects unrelated instances, doesn't select all instances) []()
-R77  | Failure (selects unrelated instances, doesn't select all instances) []()
-R78  | Failure (selects unrelated instances, doesn't select all instances) []()
-R79  | Failure (selects unrelated instances, doesn't select all instances) []()
-R80  | Failure (selects unrelated instances, doesn't select all instances) []()
-R81  | Failure (selects unrelated instances, doesn't select all instances) []()
+R70  | Failure (doesn't select correct instances)
+R71  | Failure (doesn't select correct instances)
+R72  | Failure (doesn't select correct instances)
+R73  | Failure (doesn't select correct instances)
+R74  | Failure (selects unrelated instances, doesn't select all instances)
+R75  | Failure (selects unrelated instances, doesn't select all instances)
+R76  | Failure (selects unrelated instances, doesn't select all instances)
+R77  | Failure (selects unrelated instances, doesn't select all instances)
+R78  | Failure (selects unrelated instances, doesn't select all instances)
+R79  | Failure (selects unrelated instances, doesn't select all instances)
+R80  | Failure (selects unrelated instances, doesn't select all instances)
+R81  | Failure (selects unrelated instances, doesn't select all instances)
 R82  | Pass
 R83  | Pass
 R84  | Pass
@@ -483,7 +483,7 @@ R95  | Pass
 R96  | Pass
 R97  | Pass
 R98  | Pass
-R99  | Failure (not available) []()
+R99  | Failure (not available)
 R100 | Pass
 R101 | Pass
 R102 | Pass
@@ -492,9 +492,9 @@ R104 | Pass
 R105 | Pass
 R106 | Pass
 R107 | Pass
-R108 | Failure (selects unrelated instances) []()
-R109 | Failure (selects unrelated instances) []()
-R110 | Failure (selects unrelated instances) []()
+R108 | Failure (selects unrelated instances)
+R109 | Failure (selects unrelated instances)
+R110 | Failure (selects unrelated instances)
 R111 | Pass
 R112 | Pass
 R113 | Pass
@@ -530,88 +530,88 @@ R142 | Pass
 R143 | Pass
 R144 | Pass
 R145 | Pass
-R146 | Failure (selects unrelated instances) []()
-R147 | Failure (selects unrelated instances) []()
-R148 | Failure (selects unrelated instances) []()
+R146 | Failure (selects unrelated instances)
+R147 | Failure (selects unrelated instances)
+R148 | Failure (selects unrelated instances)
 R149 | Pass
-R150 | Failure (selects unrelated instances) []()
+R150 | Failure (selects unrelated instances)
 R151 | Pass
 R152 | Pass
 R153 | Pass
-R154 | Failure (selects unrelated instances) []()
+R154 | Failure (selects unrelated instances)
 R155 | Pass
-R156 | Failure (selects unrelated instances) []()
+R156 | Failure (selects unrelated instances)
 R157 | Pass
 R158 | Pass
-R159 | Failure (selects unrelated instances) []()
+R159 | Failure (selects unrelated instances)
 R160 | Pass
 R161 | Pass
 R162 | Pass
-R163 | Failure (selects unrelated instances) []()
-R164 | Failure (selects unrelated instances) []()
+R163 | Failure (selects unrelated instances)
+R164 | Failure (selects unrelated instances)
 R165 | Pass
-R166 | Failure (action not enabled in dialog) []()
+R166 | Failure (action not enabled in dialog)
 R167 | Pass
-R168 | Failure (action not enabled in dialog) []()
-R169 | Failure (action not enabled in dialog) []()
+R168 | Failure (action not enabled in dialog)
+R169 | Failure (action not enabled in dialog)
 R170 | Pass
-R171 | Failure (action not enabled in dialog) []()
-R172 | Failure (action not enabled in dialog) []()
+R171 | Failure (action not enabled in dialog)
+R172 | Failure (action not enabled in dialog)
 R173 | Pass
-R174 | Failure (action not enabled in dialog) []()
-R175 | Failure (action not enabled in dialog) []()
+R174 | Failure (action not enabled in dialog)
+R175 | Failure (action not enabled in dialog)
 R176 | Pass
 R177 | Pass
-R178 | Failure (action not enabled in dialog) []()
-R179 | Failure (action not enabled in dialog) []()
+R178 | Failure (action not enabled in dialog)
+R179 | Failure (action not enabled in dialog)
 R180 | Pass
 R181 | Pass
-R182 | Failure (action not enabled in dialog) []()
-R183 | Failure (action not enabled in dialog) []()
+R182 | Failure (action not enabled in dialog)
+R183 | Failure (action not enabled in dialog)
 R184 | Pass
 R185 | Pass
-R186 | Failure (action not enabled in dialog) []()
-R187 | Failure (action not enabled in dialog) []()
+R186 | Failure (action not enabled in dialog)
+R187 | Failure (action not enabled in dialog)
 R188 | Pass
 R189 | Pass
-R190 | Failure (action not enabled in dialog) []()
-R191 | Failure (action not enabled in dialog) []()
+R190 | Failure (action not enabled in dialog)
+R191 | Failure (action not enabled in dialog)
 R192 | Pass
 R193 | Pass
-R194 | Failure (action not enabled in dialog) []()
-R195 | Failure (action not enabled in dialog) []()
+R194 | Failure (action not enabled in dialog)
+R195 | Failure (action not enabled in dialog)
 R196 | Pass
 R197 | Pass
-R198 | Failure (action not enabled in dialog) []()
-R199 | Failure (action not enabled in dialog) []()
+R198 | Failure (action not enabled in dialog)
+R199 | Failure (action not enabled in dialog)
 R200 | Pass
 R201 | Pass
 R202 | Pass
 R203 | Pass
-R204 | Failure (action not enabled in dialog) []()
-R205 | Failure (action not enabled in dialog) []()
+R204 | Failure (action not enabled in dialog)
+R205 | Failure (action not enabled in dialog)
 R206 | Pass
 R207 | Pass
 R208 | Pass
 R209 | Pass
-R210 | Failure (action not enabled in dialog) []()
-R211 | Failure (action not enabled in dialog) []()
+R210 | Failure (action not enabled in dialog)
+R211 | Failure (action not enabled in dialog)
 R212 | Pass
 R213 | Pass
 R214 | Pass
 R215 | Pass
-R216 | Failure (action not enabled in dialog) []()
-R217 | Failure (action not enabled in dialog) []()
+R216 | Failure (action not enabled in dialog)
+R217 | Failure (action not enabled in dialog)
 R218 | Pass
 R219 | Pass
 R220 | Pass
 R221 | Pass
-R222 | Failure (action not enabled in dialog) []()
+R222 | Failure (action not enabled in dialog)
 R223 | Pass
-R224 | Failure (not all instances selected) []()
+R224 | Failure (not all instances selected)
 R225 | Pass
-R226 | Failure (not all instances selected) []()
-R227 | Failure (selects incorrect instances) []()
+R226 | Failure (not all instances selected)
+R227 | Failure (selects incorrect instances)
 R228 | Pass
 R229 | Pass
 R230 | Pass
@@ -620,36 +620,36 @@ R232 | Pass
 R233 | Pass
 R234 | Pass
 R235 | Pass
-R236 | Failure (not all instances selected) []()
+R236 | Failure (not all instances selected)
 R237 | Pass
 R238 | Pass
-R239 | Failure (can't find definition) []()
+R239 | Failure (can't find definition)
 R240 | Pass
 R241 | Pass
-R242 | Failure (selects unrelated instances) []()
-R243 | Failure (selects unrelated instances) []()
+R242 | Failure (selects unrelated instances)
+R243 | Failure (selects unrelated instances)
 R244 | Pass
 R245 | Pass
-R246 | Failure (selects unrelated instances) []()
-R247 | Failure (selects unrelated instances) []()
-R248 | Failure (selects unrelated instances) []()
+R246 | Failure (selects unrelated instances)
+R247 | Failure (selects unrelated instances)
+R248 | Failure (selects unrelated instances)
 R249 | Pass
-R250 | Failure (selects unrelated instances) []()
+R250 | Failure (selects unrelated instances)
 R251 | Pass
-R252 | Failure (selects unrelated instances) []()
-R253 | Failure (selects unrelated instances) []()
-R254 | Failure (selects unrelated instances) []()
+R252 | Failure (selects unrelated instances)
+R253 | Failure (selects unrelated instances)
+R254 | Failure (selects unrelated instances)
 R255 | Pass
-R256 | Failure (selects unrelated instances) []()
+R256 | Failure (selects unrelated instances)
 R257 | Pass
 R258 | Pass
 R259 | Pass
 R260 | Pass
 R261 | Pass
 R262 | Pass
-R263 | Failure (selects unrelated instances) []()
+R263 | Failure (selects unrelated instances)
 R264 | Pass
-R265 | Failure (selects unrelated instances) []()
+R265 | Failure (selects unrelated instances)
 R266 | Pass
 R267 | Pass
 R268 | Pass
@@ -658,12 +658,12 @@ R270 | Pass
 R271 | Pass
 R272 | Pass
 R273 | Pass
-R274 | Failure (selects unrelated instances) []()
-R275 | Failure (selects unrelated instances) []()
-R276 | Failure (selects unrelated instances) []()
+R274 | Failure (selects unrelated instances)
+R275 | Failure (selects unrelated instances)
+R276 | Failure (selects unrelated instances)
 R277 | Pass
 R278 | Pass
-R279 | Failure (selects unrelated instances) []()
+R279 | Failure (selects unrelated instances)
 R280 | Pass
 R281 | Pass
 R282 | Pass
@@ -671,12 +671,12 @@ R283 | Pass
 R284 | Pass
 R285 | Pass
 R286 | Pass
-R287 | Failure (selects unrelated instances) []()
-R288 | Failure (not all instances selected) []()
-R289 | Failure (selects unrelated instances) []()
-R290 | Failure (can't find definition) []()
-R291 | Failure (selects unrelated instances) []()
-R292 | Failure (not all instances selected) []()
+R287 | Failure (selects unrelated instances)
+R288 | Failure (not all instances selected)
+R289 | Failure (selects unrelated instances)
+R290 | Failure (can't find definition)
+R291 | Failure (selects unrelated instances)
+R292 | Failure (not all instances selected)
 R293 | Pass
 R294 | Pass
 R295 | Pass
@@ -760,7 +760,7 @@ R372 | Pass
 R373 | Pass
 R374 | Pass
 R375 | Pass
-R376 | Failure (selects unrelated instances) []()
+R376 | Failure (selects unrelated instances)
 R377 | Pass
 R378 | Pass
 R379 | Pass
@@ -800,12 +800,12 @@ R412 | Pass
 R413 | Pass
 R414 | Pass
 R415 | Pass
-R416 | Failure (selects unrelated instances) []()
-R417 | Failure (selects unrelated instances) []()
+R416 | Failure (selects unrelated instances)
+R417 | Failure (selects unrelated instances)
 R418 | Pass
-R419 | Failure (selects unrelated instances) []()
+R419 | Failure (selects unrelated instances)
 R420 | Pass
-R421 | Failure (selects unrelated instances) []()
+R421 | Failure (selects unrelated instances)
 R422 | Pass
 R423 | Pass
 R424 | Pass
@@ -813,24 +813,24 @@ R425 | Pass
 R426 | Pass
 R427 | Pass
 R428 | Pass
-R429 | Failure (not all instances selected) []()
-R430 | Failure (can't find definition) []()
-R431 | Failure (can't find definition) []()
+R429 | Failure (not all instances selected)
+R430 | Failure (can't find definition)
+R431 | Failure (can't find definition)
 R432 | Pass
-R433 | Failure (not all instances selected) []()
-R434 | Failure (not all instances selected) []()
-R435 | Failure (not all instances selected) []()
-R436 | Failure (not all instances selected) []()
-R437 | Failure (not all instances selected) []()
+R433 | Failure (not all instances selected)
+R434 | Failure (not all instances selected)
+R435 | Failure (not all instances selected)
+R436 | Failure (not all instances selected)
+R437 | Failure (not all instances selected)
 R438 | Pass
 R439 | Pass
 R440 | Pass
 R441 | Pass
 R442 | Pass
 R443 | Pass
-R444 | Failure (not all instances selected) []()
-R445 | Failure (not all instances selected) []()
-R446 | Failure (not all instances selected) []()
+R444 | Failure (not all instances selected)
+R445 | Failure (not all instances selected)
+R446 | Failure (not all instances selected)
 R447 | Pass
 R448 | Pass
 R449 | Pass
@@ -838,15 +838,15 @@ R450 | Pass
 R451 | Pass
 R452 | Pass
 R453 | Pass
-R454 | Failure (selects wrong instances) []()
+R454 | Failure (selects wrong instances)
 R455 | Pass
-R456 | Failure (selects wrong instances) []()
+R456 | Failure (selects wrong instances)
 R457 | Pass
 R458 | Pass
 R459 | Pass
-R460 | Failure (selects wrong instances) []()
+R460 | Failure (selects wrong instances)
 R461 | Pass
-R462 | Failure (selects wrong instances) []()
+R462 | Failure (selects wrong instances)
 R463 | Pass
 R464 | Pass
 R465 | Pass
@@ -871,25 +871,25 @@ R483 | Pass
 R484 | Pass
 R485 | Pass
 R486 | Pass
-R487 | Failure (selects unrelated instances) []()
+R487 | Failure (selects unrelated instances)
 R488 | Pass
-R489 | Failure (selects unrelated instances) []()
+R489 | Failure (selects unrelated instances)
 R490 | Pass
 R491 | Pass
-R492 | Failure (selects unrelated instances) []()
+R492 | Failure (selects unrelated instances)
 R493 | Pass
 R494 | Pass
-R495 | Failure (selects unrelated instances) []()
+R495 | Failure (selects unrelated instances)
 R496 | Pass
-R497 | Failure (selects unrelated instances) []()
+R497 | Failure (selects unrelated instances)
 R498 | Pass
 R499 | Pass
-R500 | Failure (selects unrelated instances) []()
+R500 | Failure (selects unrelated instances)
 R501 | Pass
 R502 | Pass
 R503 | Pass
-R504 | Failure (fails to select all instances) []()
-R505 | Failure (fails to select all instances) []()
+R504 | Failure (fails to select all instances)
+R505 | Failure (fails to select all instances)
 R506 | Pass
 R507 | Pass
 R508 | Pass
@@ -899,72 +899,72 @@ R511 | Pass
 R512 | Pass
 R513 | Pass
 R514 | Pass
-R515 | Failure (fails to select all instances) []()
+R515 | Failure (fails to select all instances)
 R516 | Pass
 R517 | Pass
 R518 | Pass
 R519 | Pass
 R520 | Pass
 R521 | Pass
-R522 | Failure (fails to select all instances) []()
+R522 | Failure (fails to select all instances)
 R523 | Pass
 R524 | Pass
 R525 | Pass
-R526 | Failure (selects unrelated instances) []()
-R527 | Failure (pops up symbol dialog) []()
-R528 | Failure (fails to select all instances) []()
+R526 | Failure (selects unrelated instances)
+R527 | Failure (pops up symbol dialog)
+R528 | Failure (fails to select all instances)
 R529 | Pass
 R530 | Pass
-R531 | Failure (fails to select all instances) []()
+R531 | Failure (fails to select all instances)
 R532 | Pass
 R533 | Pass
-R534 | Failure (fails to select all instances) []()
+R534 | Failure (fails to select all instances)
 R535 | Pass
-R536 | Failure (fails to select all instances) []()
+R536 | Failure (fails to select all instances)
 R537 | Pass
-R538 | Failure (fails to select all instances) []()
+R538 | Failure (fails to select all instances)
 R539 | Pass
-R540 | Failure (fails to select all instances) []()
+R540 | Failure (fails to select all instances)
 R541 | Pass
-R542 | Failure (selects unrelated instances) []()
+R542 | Failure (selects unrelated instances)
 R543 | Pass
-R544 | Failure (fails to select all instances) []()
-R545 | Failure (selects unrelated instances) []()
-R546 | Failure (selects unrelated instances) []()
-R547 | Failure (fails to select all instances) []()
-R548 | Failure (selects unrelated instances) []()
+R544 | Failure (fails to select all instances)
+R545 | Failure (selects unrelated instances)
+R546 | Failure (selects unrelated instances)
+R547 | Failure (fails to select all instances)
+R548 | Failure (selects unrelated instances)
 R549 | Pass
-R550 | Failure (fails to select all instances) []()
-R551 | Failure (fails to select all instances) []()
+R550 | Failure (fails to select all instances)
+R551 | Failure (fails to select all instances)
 R552 | Pass
-R553 | Failure (fails to rename selected instance) []()
+R553 | Failure (fails to rename selected instance)
 R554 | Pass
-R555 | Failure (fails to rename selected instance) []()
+R555 | Failure (fails to rename selected instance)
 R556 | Pass
-R557 | Failure (fails to rename selected instance) []()
+R557 | Failure (fails to rename selected instance)
 R558 | Pass
-R559 | Failure (fails to rename selected instance) []()
-R560 | Failure (selects unrelated instances) []()
-R561 | Failure (selects unrelated instances) []()
+R559 | Failure (fails to rename selected instance)
+R560 | Failure (selects unrelated instances)
+R561 | Failure (selects unrelated instances)
 R562 | (deprecated)
 R563 | Pass
-R564 | Failure (selects unrelated instances) []()
-R565 | Failure (use in decltype not selected) []()
-R566 | Failure (selects unrelated instances) []()
-R567 | Failure (use in decltype not selected) []()
-R568 | Failure (selects unrelated instances) []()
-R569 | Failure (selects unrelated instances) []()
+R564 | Failure (selects unrelated instances)
+R565 | Failure (use in decltype not selected)
+R566 | Failure (selects unrelated instances)
+R567 | Failure (use in decltype not selected)
+R568 | Failure (selects unrelated instances)
+R569 | Failure (selects unrelated instances)
 R570 | Pass
-R571 | Failure (use in decltype not selected) []()
-R572 | Failure (use in decltype not selected) []()
-R573 | Failure (selects unrelated instances) []()
-R574 | Failure (selects unrelated instances) []()
+R571 | Failure (use in decltype not selected)
+R572 | Failure (use in decltype not selected)
+R573 | Failure (selects unrelated instances)
+R574 | Failure (selects unrelated instances)
 R575 | Pass
-R576 | Failure (selects unrelated instances) []()
-R577 | Failure (selects unrelated instances) []()
-R578 | Failure (selects unrelated instances) []()
+R576 | Failure (selects unrelated instances)
+R577 | Failure (selects unrelated instances)
+R578 | Failure (selects unrelated instances)
 R579 | Pass
-R580 | Failure (selects unrelated instances) []()
+R580 | Failure (selects unrelated instances)
 R581 | Pass
 R582 | Pass
 R583 | Pass
@@ -1376,10 +1376,10 @@ R986 |
 Case | Result
 ---- | ------
 RP1  | (deprecated)
-RP2  | Failure (not available) []()
-RP3  | Failure (selects wrong instances) []()
+RP2  | Failure (not available)
+RP3  | Failure (selects wrong instances)
 RP4  | Pass
-RP5  | Failure (selects unrelated instances) []()
+RP5  | Failure (selects unrelated instances)
 RP6  | Pass
 RP7  | (deprecated)
 RP8  | (deprecated)
