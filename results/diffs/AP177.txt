@@ -1,0 +1,35 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index bb20346..bed671f 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -382,7 +382,7 @@ void f3()
+     // #TEST#: AP176 Add parameter, int goink
+     AddParameterUnion::Static();
+     // #TEST#: AP177 Add parameter before y, int goink
+-    AddParameterUnion::StaticDefault(6);
++    AddParameterUnion::StaticDefault(6, 0);
+     // #TEST#: AP178 Add parameter, int goink
+     AddParameterUnion::StaticTemplate<int>(7);
+     // #TEST#: AP179 Add parameter before x, int goink
+@@ -443,7 +443,7 @@ void AddParameterUnion::Static()
+ }
+ 
+ // #TEST#: AP196 Add parameter before y, int goink
+-void AddParameterUnion::StaticDefault(int x, int y)
++void AddParameterUnion::StaticDefault(int x, int goink, int y)
+ {
+ }
+ 
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index d7aff00..9099f4b 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -205,7 +205,7 @@ public:
+     static void Static();
+     // #TEST#: AP64 Add parameter before y, int goink
+     // #TEST#: AP65 Add parameter after y, int goink = 1
+-    static void StaticDefault(int x, int y = 0);
++    static void StaticDefault(int x, int goink, int y = 0);
+     template <typename T>
+     // #TEST#: AP66 Add parameter, int goink
+     static void StaticTemplate(int x)
