@@ -388,7 +388,7 @@ EXF14 | Pass
 EXF15 | Pass
 EXF16 | Pass
 EXF17 | Pass
-EXF18 | Pass
+EXF18 | Pass (extracts method, not function) [CPP-1916](https://youtrack.jetbrains.com/issue/CPP-1916/Make-Extract-Function-available-in-a-class-context)
 EXF19 | Pass
 
 ## Extract Method
