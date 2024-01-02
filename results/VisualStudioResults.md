@@ -268,40 +268,40 @@ CS8  | Failure (instances not renamed)
 CS9  | Failure (unavailable)
 CS10 | Pass
 CS11 | Pass
-CS12 | 
-CS13 | 
-CS14 | 
-CS15 | 
-CS16 | 
-CS17 | 
-CS18 | 
-CS19 | 
-CS20 | 
-CS21 | 
-CS22 | 
-CS23 | 
-CS24 | 
-CS25 | 
-CS26 | 
-CS27 | 
-CS28 | 
-CS29 | 
-CS30 | 
-CS31 | 
-CS32 | 
-CS33 | 
-CS34 | 
-CS35 | 
-CS36 | 
-CS37 | 
-CS38 | 
-CS39 | 
-CS40 | 
-CS41 | 
-CS42 | 
-CS43 | 
-CS44 | 
-CS45 | 
+CS12 | Failure (instances not renamed)
+CS13 | Failure (instances not renamed)
+CS14 | Failure (unavailable)
+CS15 | Pass
+CS16 | Failure (unavailable)
+CS17 | Failure (instances not renamed)
+CS18 | Failure (instances not renamed)
+CS19 | Pass
+CS20 | Failure (not available)
+CS21 | Failure (instances not renamed)
+CS22 | Failure (instances not renamed)
+CS23 | Failure (not available)
+CS24 | Pass
+CS25 | Pass
+CS26 | Failure (instances not renamed)
+CS27 | Failure (instances not renamed)
+CS28 | Failure (not available)
+CS29 | Pass
+CS30 | Failure (not available)
+CS31 | Failure (instances not renamed)
+CS32 | Failure (instances not renamed)
+CS33 | Failure (not available)
+CS34 | Pass
+CS35 | Pass
+CS36 | Failure (instances not renamed)
+CS37 | Failure (instances not renamed)
+CS38 | Failure (not available)
+CS39 | Pass
+CS40 | Pass
+CS41 | Failure (instances not renamed)
+CS42 | Failure (instances not renamed)
+CS43 | Failure (not available)
+CS44 | Pass
+CS45 | Pass
 
 ## Extract Function
 Case | Result
