@@ -347,9 +347,9 @@ EM15 | Pass
 EM16 | Pass
 EM17 | Failure (creates invalid code)
 EM18 | Pass
-EM19 | Failure (data flow)
+EM19 | Failure (unavailable)
 EM20 | Pass (unnecessary use of namespace)
-EM21 | 
+EM21 | Pass
 
 ## Move Implementation to Source File
 Case | Result
