@@ -318,14 +318,13 @@ EXF9  | Pass
 EXF10 | Pass
 EXF11 | Pass
 EXF12 | Pass
-EXF13 | Pass
-EXF14 | Pass
-EXF15 | Pass
-EXF16 | Failure (creates invalid code)
-EXF17 | Pass
-EXF18 | Failure (data flow)
-EXF19 | Failure (creates invalid code)
-EXF20 |
+EXF13 | Failure (references typedef before it is declared)
+EXF14 | Failure (references class before it is declared)
+EXF15 | Failure (references typedef before it is declared)
+EXF16 | Failure (references class before it is declared)
+EXF17 | Failure (references typedef before it is declared)
+EXF18 | Failure (unavailable)
+EXF19 | Pass
 
 ## Extract Method
 Case | Result
