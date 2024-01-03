@@ -1,6 +1,6 @@
 # Summary Results
 
-Refactoring | [Xcode](results/AppleXcodeResults.md) | [clang-tidy](results/ClangTidyResults.md) | [CLion](results/CLionResults.md) | [Eclipse CDT](results/EclipseCDTResults.md) | [Qt Creator](results/QtCreatorResults.md) | [ReSharper for C++](results/ReSharperCppResults.md) | [Visual AssistX](results/VisualAssistXResults.md) | [Visual Studio 2017](results/VisualStudio2017Results.md)
+Refactoring | [Xcode](results/AppleXcodeResults.md) | [clang-tidy](results/ClangTidyResults.md) | [CLion](results/CLionResults.md) | [Eclipse CDT](results/EclipseCDTResults.md) | [Qt Creator](results/QtCreatorResults.md) | [ReSharper for C++](results/ReSharperCppResults.md) | [Visual AssistX](results/VisualAssistXResults.md) | [Visual Studio](results/VisualStudioResults.md)
 ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | -----
 Add Block Delimiter | n/a | 100% (7/7) | 100% (7/7) | n/a | n/a | 0% (0/7) | n/a | n/a
 Add Override | n/a | 100% (5/5) | 100% (5/5) | n/a | n/a | 100% (5/5) | n/a | n/a
