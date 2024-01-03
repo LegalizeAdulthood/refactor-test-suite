@@ -91,26 +91,25 @@ CS45 | Failure (not available)
 ## Extract Function
 Case | Result
 ---- | ------
-EXF1 | Failure
-EXF2 | Failure
-EXF3 | Failure
-EXF4 | Failure
-EXF5 | Failure
-EXF6 | Failure
-EXF7 | Failure
-EXF8 | Failure
-EXF9 | Failure
-EXF10 | Failure
-EXF11 | Failure
-EXF12 | Failure
-EXF13 | Failure
-EXF14 | Failure
-EXF15 | Failure
-EXF16 | Failure
-EXF17 | Failure
-EXF18 | Failure
-EXF19 | Failure [case=4369](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11916)
-EXF20 | Failure [case=4369](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11916)
+EXF1 | Failure (creates invalid code)
+EXF2 | Pass
+EXF3 | Failure (changes meaning of code)
+EXF4 | Pass
+EXF5 | Pass
+EXF6 | Pass
+EXF7 | Failure (changes meaning of code)
+EXF8 | Pass
+EXF9 | Failure (changes meaning of code)
+EXF10 | Pass
+EXF11 | Pass
+EXF12 | Failure (creates invalid code)
+EXF13 | Failure (creates invalid code)
+EXF14 | Failure (creates invalid code)
+EXF15 | Failure (reads uninitialized data)
+EXF16 | Failure (creates invalid code)
+EXF17 | Failure (reads uninitialized data)
+EXF18 | Failure (creates invalid code)
+EXF19 | Failure (changes meaning of code)
 
 ## Extract Method
 Case | Result
