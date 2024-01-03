@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
-index 8d878a6..9e57c1b 100644
+index 7b927b3..b629891 100644
 --- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
 +++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
 @@ -33,7 +33,7 @@ std::string const path{"C:\\Program Files\\Vendor\\Application\\Application.exe"
  std::string const contains_sentinel{"whoops)\""};
  
  // #TEST#: RAW10
--std::string const contains_delim{"whoops)\")delimiter\""};
-+std::string const contains_delim{R"delimiter2(whoops)")delimiter")delimiter2"};
+-std::string const contains_delim{"whoops)\")delim\""};
++std::string const contains_delim{R"delim1(whoops)")delim")delim1"};
  
- }    // namespace
- 
+ // #TEST#: RAW11
+ std::string const contains_delimiter{"whoops)\")delimiter\""};
