@@ -31,7 +31,7 @@ The original release of the test suite is described
 - [clang-tidy 6.0.0](results/ClangTidyResults.md)
 - [ReSharper for C++ 2017.3.2](results/ReSharperCppResults.md)
 - [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
-- [Visual Studio 2017](results/VisualStudio2017Results.md)
+- [Visual Studio 2022](results/VisualStudioResults.md)
 
 ## Work in Progress
 
