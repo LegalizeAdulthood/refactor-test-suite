@@ -1375,11 +1375,11 @@ R986 | Pass
 Case | Result
 ---- | ------
 RP1  | (deprecated)
-RP2  | Failure (not available)
-RP3  | Failure (selects wrong instances)
-RP4  | Pass
-RP5  | Failure (selects unrelated instances)
-RP6  | Pass
+RP2  | Failure (error occured while applying changes; Value does not fall within expected range)
+RP3  | Failure (error occured while applying changes; textIndex out of range)
+RP4  | Failure (error occured while applying changes; Value does not fall within expected range)
+RP5  | Failure (error occured while applying changes; textIndex out of range)
+RP6  | Failure (error occured while applying changes; Value does not fall within expected range)
 RP7  | (deprecated)
 RP8  | (deprecated)
 RP9  | (deprecated)
