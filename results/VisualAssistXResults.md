@@ -115,26 +115,26 @@ EXF19 | Failure (changes meaning of code)
 Case | Result
 ---- | ------
 EM1 | Pass
-EM2 | Failure [case=82956](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11883)
-EM3 | Failure [case=82956](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11883)
-EM4 | Pass
-EM5 | Failure
-EM6 | Pass
+EM2 | Failure (creates invalid code)
+EM3 | Failure (creates invalid code)
+EM4 | Pass (reads uninitialized memory)
+EM5 | Failure (creates invalid code)
+EM6 | Pass (reads uninitialized memory)
 EM7 | Pass
-EM8 | Failure
-EM9 | Failure
+EM8 | Failure (creates invalid code)
+EM9 | Pass
 EM10 | Pass
-EM11 | Failure
+EM11 | Failure (creates invalid code)
 EM12 | Pass
 EM13 | Pass
-EM14 | Failure
-EM15 | Failure
+EM14 | Pass
+EM15 | Pass
 EM16 | Pass
-EM17 | Failure
+EM17 | Failure (creates invalid code)
 EM18 | Pass
-EM19 | Failure [case=2063](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11884)
-EM20 | Failure [case=83005](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11885)
-EM21 |
+EM19 | Failure (creates invalid code)
+EM20 | Failure (creates invalid code)
+EM21 | Failure (changes meaning of code)
 
 ## Move Implementation to Source File
 Case | Result
