@@ -139,31 +139,31 @@ EM21 | Failure (changes meaning of code)
 ## Move Implementation to Source File
 Case | Result
 ---- | ------
-MISF1  | Pass
-MISF2  | Failure (invalid syntax)
-MISF3  | Pass
-MISF4  | Pass
-MISF5  | Pass
-MISF6  | Pass
-MISF7  | Pass
+MISF1  | Failure (loses namespace qualifier)
+MISF2  | Failure (loses namespace qualifier)
+MISF3  | Failure (loses namespace qualifier)
+MISF4  | Failure (loses namespace qualifier)
+MISF5  | Failure (loses namespace qualifier)
+MISF6  | Failure (loses namespace qualifier)
+MISF7  | Failure (loses namespace qualifier)
 MISF8  | Pass
-MISF9  | Pass
+MISF9  | Failure (loses namespace qualifier)
 MISF10 | Pass
-MISF11 | Pass
-MISF12 | Pass
-MISF13 | Pass
-MISF14 | Pass
-MISF15 | Pass
+MISF11 | Failure (loses namespace qualifier)
+MISF12 | Failure (loses namespace qualifier)
+MISF13 | Failure (loses namespace qualifier)
+MISF14 | Failure (loses namespace qualifier)
+MISF15 | Failure (loses namespace qualifier)
 MISF16 | Failure (not available)
-MISF17 | Pass
+MISF17 | Failure (loses namespace qualifier)
 MISF18 | Pass
-MISF19 | Pass
+MISF19 | Failure (loses namespace qualifier)
 MISF20 | Pass
 MISF21 | Pass
-MISF22 | Pass
-MISF23 | Pass
-MISF24 | Pass
-MISF25 | Pass
+MISF22 | Failure (loses namespace qualifier)
+MISF23 | Failure (loses namespace qualifier)
+MISF24 | Failure (loses namespace qualifier)
+MISF25 | Failure (loses namespace qualifier)
 MISF26 | Failure (not available)
 
 ## Rename
