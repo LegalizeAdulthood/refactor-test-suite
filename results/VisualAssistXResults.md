@@ -167,994 +167,1003 @@ MISF25 | Failure (loses namespace qualifier)
 MISF26 | Failure (not available)
 
 ## Rename
+
+**Rename** can be very sensitive to recent changes in the editor,
+which different matches and selections showing up in the selection
+dialog when invoked repeatedly after recent editor changes.  This
+can often result in a test case failing initially, only to succeed
+if the selection dialog is dismissed and re-invoked via the keyboard
+shortcut.  To get reliable results, make sure that Intellisense has
+completely updated before refactoring.
+
 Case | Result
 ---- | ------
-R1      | Failure (doesn't select all instances of identifier) [case=58805](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11900)
-R2      | Failure (doesn't select all instances of identifier)
-R3      | Failure (doesn't select all instances of identifier)
-R4      | Failure (doesn't select all instances of identifier) [case=1384](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11901)
-R5      | Pass
-R6      | Pass
-R7      | Pass
-R8      | Pass [case=34692](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11904)
-R9      | Pass
-R10     | Pass
-R11     | Pass
-R12     | Pass
-R13     | Pass
-R14     | Failure (doesn't select all instances of identifier)
-R15     | Pass
-R16     | Pass
-R17     | Pass
-R18     | Pass
-R19     | Failure (doesn't select all instances of identifier)
-R20     | Failure (doesn't select all instances of identifier)
-R21     | Pass
-R22     | Pass
-R23     | Pass
-R24     | Pass
-R25     | Failure (not available) [case=83603](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11905)
-R26     | Pass
-R27     | Failure (doesn't select all instances of identifier)
-R28     | Pass
-R29     | Failure (doesn't select all instances of identifier) [~~~case=83847~~~](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11906)
-R30     | Pass
-R31     | Pass
-R32     | Failure (suggested identifier contains ~ and is allowed)
-R33     | Failure (doesn't select all instances of identifier)
-R34     | Failure (doesn't select all instances of identifier)
-R35     | Failure (not available)
-R36     | Failure (doesn't select all instances of identifier) [~~~case=83847~~~](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11907)
-R37     | Pass
-R38     | Pass
-R39     | Pass
-R40     | Pass
-R41     | Failure (not available) [case=83848](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11908)
-R42     | Pass
-R43     | Pass
-R44     | Pass
-R45     | Failure (not available)
-R46     | Pass
-R47     | Pass
-R48     | Pass
-R49     | Pass
-R50     | Pass
-R51     | Pass
-R52     | Pass
-R53     | Pass
-R54     | Pass
-R55     | Pass
-R56     | Pass
-R57     | Pass
-R58     | Pass
-R59     | Pass
-R60     | Pass
-R61     | Pass
-R62     | Pass
-R63     | Pass
-R64     | Pass
-R65     | Pass
-R66     | Pass
-R67     | Pass
-R68     | Pass
-R69     | Pass
-R70     | Pass
-R71     | Failure (doesn't select all instances of identifier)
-R72     | Failure (doesn't select all instances of identifier)
-R73     | Failure (doesn't select all instances of identifier)
-R74     | Pass [case=83856](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11909), [case=58805](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11909)
-R75     | Pass
-R76     | Pass
-R77     | Failure (not available) [case=83858](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11910)
-R78     | Pass
-R79     | Pass
-R80     | Pass
-R81     | Failure (not available) [case=83858](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11910)
-R82     | Failure (doesn't select all instances of identifier)
-R83     | Failure (doesn't select all instances of identifier)
-R84     | Pass
-R85     | Pass
-R86     | Pass
-R87     | Pass
-R88     | Pass
-R89     | Pass
-R90     | Pass
-R91     | (deprecated)
-R92     | (deprecated)
-R93     | Pass
-R94     | Pass
-R95     | Pass
-R96     | Pass
-R97     | Pass
-R98     | Pass
-R99 | 
-R100 | 
-R101 | 
-R102 | 
-R103 | 
-R104 | 
-R105 | 
-R106 | 
-R107 | 
-R108 | 
-R109 | 
-R110 | 
-R111 | 
-R112 | 
-R113 | 
-R114 | 
-R115 | 
-R116 | 
-R117 | 
-R118 | 
-R119 | 
-R120 | 
-R121 | 
-R122 | 
-R123 | 
-R124 | 
-R125 | 
-R126 | 
-R127 | 
-R128 | 
-R129 | 
-R130 | 
-R131 | 
-R132 | 
-R133 | 
-R134 | 
-R135 | 
-R136 | 
-R137 | 
-R138 | 
-R139 | 
-R140 | 
-R141 | 
-R142 | 
-R143 | 
-R144 | 
-R145 | 
-R146 | 
-R147 | 
-R148 | 
-R149 | 
-R150 | 
-R151 | 
-R152 | 
-R153 | 
-R154 | 
-R155 | 
-R156 | 
-R157 | 
-R158 | 
-R159 | 
-R160 | 
-R161 | 
-R162 | 
-R163 | 
-R164 | 
-R165 | 
-R166 | 
-R167 | 
-R168 | 
-R169 | 
-R170 | 
-R171 | 
-R172 | 
-R173 | 
-R174 | 
-R175 | 
-R176 | 
-R177 | 
-R178 | 
-R179 | 
-R180 | 
-R181 | 
-R182 | 
-R183 | 
-R184 | 
-R185 | 
-R186 | 
-R187 | 
-R188 | 
-R189 | 
-R190 | 
-R191 | 
-R192 | 
-R193 | 
-R194 | 
-R195 | 
-R196 | 
-R197 | 
-R198 | 
-R199 | 
-R200 | 
-R201 | 
-R202 | 
-R203 | 
-R204 | 
-R205 | 
-R206 | 
-R207 | 
-R208 | 
-R209 | 
-R210 | 
-R211 | 
-R212 | 
-R213 | 
-R214 | 
-R215 | 
-R216 | 
-R217 | 
-R218 | 
-R219 | 
-R220 | 
-R221 | 
-R222 | 
-R223 | 
-R224 | 
-R225 | 
-R226 | 
-R227 | 
-R228 | 
-R229 | 
-R230 | 
-R231 | 
-R232 | 
-R233 | 
-R234 | 
-R235 | 
-R236 | 
-R237 | 
-R238 | 
-R239 | 
-R240 | 
-R241 | 
-R242 | 
-R243 | 
-R244 | 
-R245 | 
-R246 | 
-R247 | 
-R248 | 
-R249 | 
-R250 | 
-R251 | 
-R252 | 
-R253 | 
-R254 | 
-R255 | 
-R256 | 
-R257 | 
-R258 | 
-R259 | 
-R260 | 
-R261 | 
-R262 | 
-R263 | 
-R264 | 
-R265 | 
-R266 | 
-R267 | 
-R268 | 
-R269 | 
-R270 | 
-R271 | 
-R272 | 
-R273 | 
-R274 | 
-R275 | 
-R276 | 
-R277 | 
-R278 | 
-R279 | 
-R280 | 
-R281 | 
-R282 | 
-R283 | 
-R284 | 
-R285 | 
-R286 | 
-R287 | 
-R288 | 
-R289 | 
-R290 | 
-R291 | 
-R292 | 
-R293 | 
-R294 | 
-R295 | 
-R296 | 
-R297 | 
-R298 | 
-R299 | 
-R300 | 
-R301 | 
-R302 | 
-R303 | 
-R304 | 
-R305 | 
-R306 | 
-R307 | 
-R308 | 
-R309 | 
-R310 | 
-R311 | 
-R312 | 
-R313 | 
-R314 | 
-R315 | 
-R316 | 
-R317 | 
-R318 | 
-R319 | 
-R320 | 
-R321 | 
-R322 | 
-R323 | 
-R324 | 
-R325 | 
-R326 | 
-R327 | 
-R328 | 
-R329 | 
-R330 | 
-R331 | 
-R332 | 
-R333 | 
-R334 | 
-R335 | 
-R336 | 
-R337 | 
-R338 | 
-R339 | 
-R340 | 
-R341 | 
-R342 | 
-R343 | 
-R344 | 
-R345 | 
-R346 | 
-R347 | 
-R348 | 
-R349 | 
-R350 | 
-R351 | 
-R352 | 
-R353 | 
-R354 | 
-R355 | 
-R356 | 
-R357 | 
-R358 | 
-R359 | 
-R360 | 
-R361 | 
-R362 | 
-R363 | 
-R364 | 
-R365 | 
-R366 | 
-R367 | 
-R368 | 
-R369 | 
-R370 | 
-R371 | 
-R372 | 
-R373 | 
-R374 | 
-R375 | 
-R376 | 
-R377 | 
-R378 | 
-R379 | 
-R380 | 
-R381 | 
-R382 | 
-R383 | 
-R384 | 
-R385 | 
-R386 | 
-R387 | 
-R388 | 
-R389 | 
-R390 | 
-R391 | 
-R392 | 
-R393 | 
-R394 | 
-R395 | 
-R396 | 
-R397 | 
-R398 | 
-R399 | 
-R400 | 
-R401 | 
-R402 | 
-R403 | 
-R404 | 
-R405 | 
-R406 | 
-R407 | 
-R408 | 
-R409 | 
-R410 | 
-R411 | 
-R412 | 
-R413 | 
-R414 | 
-R415 | 
-R416 | 
-R417 | 
-R418 | 
-R419 | 
-R420 | 
-R421 | 
-R422 | 
-R423 | 
-R424 | 
-R425 | 
-R426 | 
-R427 | 
-R428 | 
-R429 | 
-R430 | 
-R431 | 
-R432 | 
-R433 | 
-R434 | 
-R435 | 
-R436 | 
-R437 | 
-R438 | 
-R439 | 
-R440 | 
-R441 | 
-R442 | 
-R443 | 
-R444 | 
-R445 | 
-R446 | 
-R447 | 
-R448 | 
-R449 | 
-R450 | 
-R451 | 
-R452 | 
-R453 | 
-R454 | 
-R455 | 
-R456 | 
-R457 | 
-R458 | 
-R459 | 
-R460 | 
-R461 | 
-R462 | 
-R463 | 
-R464 | 
-R465 | 
-R466 | 
-R467 | 
-R468 | 
-R469 | 
-R470 | 
-R471 | 
-R472 | 
-R473 | 
-R474 | 
-R475 | 
-R476 | 
-R477 | 
-R478 | 
-R479 | 
-R480 | 
-R481 | 
-R482 | 
-R483 | 
-R484 | 
-R485 | 
-R486 | 
-R487 | 
-R488 | 
-R489 | 
-R490 | 
-R491 | 
-R492 | 
-R493 | 
-R494 | 
-R495 | 
-R496 | 
-R497 | 
-R498 | 
-R499 | 
-R500 | 
-R501 | 
-R502 | 
-R503 | 
-R504 | 
-R505 | 
-R506 | 
-R507 | 
-R508 | 
-R509 | 
-R510 | 
-R511 | 
-R512 | 
-R513 | 
-R514 | 
-R515 | 
-R516 | 
-R517 | 
-R518 | 
-R519 | 
-R520 | 
-R521 | 
-R522 | 
-R523 | 
-R524 | 
-R525 | 
-R526 | 
-R527 | 
-R528 | 
-R529 | 
-R530 | 
-R531 | 
-R532 | 
-R533 | 
-R534 | 
-R535 | 
-R536 | 
-R537 | 
-R538 | 
-R539 | 
-R540 | 
-R541 | 
-R542 | 
-R543 | 
-R544 | 
-R545 | 
-R546 | 
-R547 | 
-R548 | 
-R549 | 
-R550 | 
-R551 | 
-R552 | 
-R553 | 
-R554 | 
-R555 | 
-R556 | 
-R557 | 
-R558 | 
-R559 | 
-R560 | 
-R561 | 
+R1   | Failure (renames unrelated identifiers)
+R2   | Failure (renames unrelated identifiers, doesn't select all instances of identifier)
+R3   | Failure (renames unrelated identifiers, doesn't select all instances of identifier)
+R4   | Failure (renames unrelated identifiers)
+R5   | Failure (renames unrelated identifiers)
+R6   | Failure (renames unrelated identifiers)
+R7   | Failure (renames unrelated identifiers)
+R8   | Failure (renames unrelated identifiers)
+R9   | Pass
+R10  | Failure (renames unrelated identifiers)
+R11  | Pass
+R12  | Failure (renames unrelated identifiers)
+R13  | Pass
+R14  | Failure (renames unrelated identifiers)
+R15  | Failure (renames unrelated identifiers)
+R16  | Pass
+R17  | Pass
+R18  | Pass
+R19  | Failure (renames unrelated identifiers)
+R20  | Failure (renames unrelated identifiers)
+R21  | Failure (renames unrelated identifiers)
+R22  | Failure (renames unrelated identifiers)
+R23  | Failure (renames unrelated identifiers)
+R24  | Pass
+R25  | Failure (not available)
+R26  | Pass
+R27  | Failure (renames unrelated identifiers)
+R28  | Failure (renames unrelated identifiers)
+R29  | Failure (renames unrelated identifiers)
+R30  | Pass
+R31  | Pass
+R32  | Failure (renames unrelated identifiers)
+R33  | Failure (renames unrelated identifiers)
+R34  | Pass
+R35  | Pass
+R36  | Failure (renames unrelated identifiers)
+R37  | Failure (renames unrelated identifiers)
+R38  | Pass
+R39  | Failure (not available)
+R40  | Failure (renames unrelated identifiers)
+R41  | Failure (renames unrelated identifiers)
+R42  | Failure (not available)
+R43  | Failure (not available)
+R44  | Pass
+R45  | Failure (not available)
+R46  | Failure (doesn't select all instances)
+R47  | Failure (doesn't select all instances)
+R48  | Pass
+R49  | Failure (doesn't select all instances)
+R50  | Pass
+R51  | Failure (not available)
+R52  | Failure (renames unrelated identifiers, creates invalid code)
+R53  | Failure (doesn't select all instances)
+R54  | Failure (doesn't select all instances)
+R55  | Pass
+R56  | Pass
+R57  | Failure (selects no instances)
+R58  | Pass
+R59  | Failure (doesn't select all instances)
+R60  | Pass
+R61  | Pass
+R62  | Failure (doesn't select all instances)
+R63  | Pass
+R64  | Pass
+R65  | Failure (doesn't select all instances)
+R66  | Pass
+R67  | Pass
+R68  | Pass
+R69  | Failure (doesn't select all instances)
+R70  | Pass
+R71  | Pass
+R72  | Pass
+R73  | Pass
+R74  | Failure (deosn't select all instances, selects unrelated instances)
+R75  | Failure (deosn't select all instances, selects unrelated instances)
+R76  | Failure (deosn't select all instances, selects unrelated instances)
+R77  | Failure (not available)
+R78  | Failure (deosn't select all instances, selects unrelated instances)
+R79  | Failure (deosn't select all instances, selects unrelated instances)
+R80  | Failure (deosn't select all instances, selects unrelated instances)
+R81  | Failure (not available)
+R82  | Pass
+R83  | Pass
+R84  | Pass
+R85  | Pass
+R86  | Pass
+R87  | Pass
+R88  | Pass
+R89  | Pass
+R90  | Pass
+R91  | (deprecated)
+R92  | (deprecated)
+R93  | Failure (creates invalid code)
+R94  | Pass
+R95  | Pass
+R96  | Pass
+R97  | Pass
+R98  | Pass
+R99  | Failure (unavailable)
+R100 | Failure (selects unrelated instances)
+R101 | Pass
+R102 | Pass
+R103 | Pass
+R104 | Failure (selects unrelated instances)
+R105 | Pass
+R106 | Pass
+R107 | Pass
+R108 | Failure (selects unrelated instances)
+R109 | Failure (selects unrelated instances)
+R110 | Failure (selects unrelated instances)
+R111 | Pass
+R112 | Pass
+R113 | Pass
+R114 | Pass
+R115 | Pass
+R116 | Pass
+R117 | Pass
+R118 | Pass
+R119 | Pass
+R120 | Pass
+R121 | Pass
+R122 | Pass
+R123 | Pass
+R124 | Pass
+R125 | Pass
+R126 | Pass
+R127 | Pass
+R128 | Pass
+R129 | Pass
+R130 | Pass
+R131 | Pass
+R132 | Pass
+R133 | Pass
+R134 | Pass
+R135 | Pass
+R136 | Pass
+R137 | Pass
+R138 | Pass
+R139 | Pass
+R140 | Pass
+R141 | Pass
+R142 | Pass
+R143 | Pass
+R144 | Pass
+R145 | Pass
+R146 | Failure (selects unrelated instances)
+R147 | Failure (not available)
+R148 | Failure (selects unrelated instances)
+R149 | Pass
+R150 | Failure (not available)
+R151 | Failure (not available)
+R152 | Pass
+R153 | Failure (not available)
+R154 | Failure (not available)
+R155 | Failure (not available)
+R156 | Failure (not available)
+R157 | Failure (selects unrelated instances)
+R158 | Failure (selects unrelated instances)
+R159 | Failure (not available)
+R160 | Failure (not available)
+R161 | Failure (not available)
+R162 | Failure (selects unrelated instances)
+R163 | Failure (not available)
+R164 | Failure (not available)
+R165 | Failure (not available)
+R166 | Failure (not available)
+R167 | Failure (not available)
+R168 | Failure (not available)
+R169 | Failure (not available)
+R170 | Pass
+R171 | Failure (not available)
+R172 | Failure (not available)
+R173 | Pass
+R174 | Failure (not available)
+R175 | Failure (not available)
+R176 | Pass
+R177 | Pass
+R178 | Failure (not available)
+R179 | Failure (not available)
+R180 | Pass
+R181 | Pass
+R182 | Failure (not available)
+R183 | Failure (not available)
+R184 | Pass
+R185 | Pass
+R186 | Failure (not available)
+R187 | Failure (not available)
+R188 | Pass
+R189 | Pass
+R190 | Failure (not available)
+R191 | Failure (not available)
+R192 | Pass
+R193 | Pass
+R194 | Failure (not available)
+R195 | Failure (not available)
+R196 | Pass
+R197 | Pass
+R198 | Failure (not available)
+R199 | Failure (not available)
+R200 | Pass
+R201 | Pass
+R202 | Pass
+R203 | Pass
+R204 | Failure (not available)
+R205 | Failure (not available)
+R206 | Pass
+R207 | Pass
+R208 | Pass
+R209 | Pass
+R210 | Failure (not available)
+R211 | Failure (not available)
+R212 | Pass
+R213 | Pass
+R214 | Pass
+R215 | Pass
+R216 | Failure (not available)
+R217 | Failure (not available)
+R218 | Pass
+R219 | Pass
+R220 | Pass
+R221 | Pass
+R222 | Failure (not available)
+R223 | Pass
+R224 | Pass
+R225 | Pass
+R226 | Pass
+R227 | Pass
+R228 | Pass
+R229 | Pass
+R230 | Pass
+R231 | Pass
+R232 | Pass
+R233 | Pass
+R234 | Pass
+R235 | Pass
+R236 | Pass
+R237 | Pass
+R238 | Pass
+R239 | Pass
+R240 | Pass
+R241 | Pass
+R242 | Failure (not available)
+R243 | Failure (not available)
+R244 | Failure (not available)
+R245 | Failure (not available)
+R246 | Failure (not available)
+R247 | Failure (not available)
+R248 | Failure (not available)
+R249 | Failure (not available)
+R250 | Failure (not available)
+R251 | Failure (not available)
+R252 | Failure (not available)
+R253 | Failure (not available)
+R254 | Failure (not available)
+R255 | Failure (not available)
+R256 | Failure (not available)
+R257 | Failure (not available)
+R258 | Failure (not available)
+R259 | Failure (doesn't select all instances)
+R260 | Failure (not available)
+R261 | Failure (doesn't select all instances)
+R262 | Failure (not available)
+R263 | Failure (not available)
+R264 | Pass
+R265 | Failure (not available)
+R266 | Failure (not available)
+R267 | Failure (not available)
+R268 | Failure (not available)
+R269 | Failure (not available)
+R270 | Failure (not available)
+R271 | Pass
+R272 | Failure (not available)
+R273 | Failure (not available)
+R274 | Failure (not available)
+R275 | Failure (not available)
+R276 | Failure (not available)
+R277 | Failure (not available)
+R278 | Failure (not available)
+R279 | Failure (not available)
+R280 | Failure (not available)
+R281 | Pass
+R282 | Pass
+R283 | Pass
+R284 | Pass
+R285 | Pass
+R286 | Pass
+R287 | Failure (selects unrelated instances)
+R288 | Pass
+R289 | Failure (selects unrelated instances)
+R290 | Pass
+R291 | Failure (selects unrelated instances)
+R292 | Pass
+R293 | Pass
+R294 | Pass
+R295 | Pass
+R296 | Pass
+R297 | Pass
+R298 | Pass
+R299 | Pass
+R300 | Pass
+R301 | Pass
+R302 | Pass
+R303 | Pass
+R304 | Pass
+R305 | Pass
+R306 | Pass
+R307 | Pass
+R308 | Pass
+R309 | Pass
+R310 | Pass
+R311 | Pass
+R312 | Pass
+R313 | Pass
+R314 | Pass
+R315 | Pass
+R316 | Pass
+R317 | Pass
+R318 | Pass
+R319 | Failure (doesn't select all instances)
+R320 | Pass
+R321 | Failure (doesn't select all instances)
+R322 | Failure (doesn't select all instances)
+R323 | Failure (doesn't select all instances)
+R324 | Failure (not available)
+R325 | Failure (doesn't select all instances)
+R326 | Pass
+R327 | Pass
+R328 | Pass
+R329 | Pass
+R330 | Pass
+R331 | Pass
+R332 | Pass
+R333 | Pass
+R334 | Pass
+R335 | Pass
+R336 | Pass
+R337 | Pass
+R338 | Pass
+R339 | Pass
+R340 | Pass
+R341 | Pass
+R342 | Pass
+R343 | Pass
+R344 | Pass
+R345 | Pass
+R346 | Pass
+R347 | Pass
+R348 | Pass
+R349 | Pass
+R350 | Pass
+R351 | Pass
+R352 | Pass
+R353 | Pass
+R354 | Pass
+R355 | Pass
+R356 | Pass
+R357 | Pass
+R358 | Pass
+R359 | Pass
+R360 | Pass
+R361 | Pass
+R362 | Pass
+R363 | Pass
+R364 | Pass
+R365 | Pass
+R366 | Pass
+R367 | Pass
+R368 | Pass
+R369 | Pass
+R370 | Pass
+R371 | Pass
+R372 | Pass
+R373 | Pass
+R374 | Pass
+R375 | Pass
+R376 | Failure (selects unrelated instances)
+R377 | Pass
+R378 | Pass
+R379 | Pass
+R380 | Pass
+R381 | Pass
+R382 | Pass
+R383 | Pass
+R384 | Pass
+R385 | Pass
+R386 | Pass
+R387 | Pass
+R388 | Pass
+R389 | Pass
+R390 | Pass
+R391 | Pass
+R392 | Pass
+R393 | Pass
+R394 | Pass
+R395 | Pass
+R396 | Pass
+R397 | Pass
+R398 | Pass
+R399 | Pass
+R400 | Pass
+R401 | Pass
+R402 | Pass
+R403 | Pass
+R404 | Pass
+R405 | Pass
+R406 | Pass
+R407 | Pass
+R408 | Pass
+R409 | Pass
+R410 | Pass
+R411 | Pass
+R412 | Pass
+R413 | Pass
+R414 | Pass
+R415 | Pass
+R416 | Failure (selects unrelated instances)
+R417 | Failure (selects unrelated instances)
+R418 | Failure (selects unrelated instances)
+R419 | Failure (selects unrelated instances)
+R420 | Pass
+R421 | Failure (selects unrelated instances)
+R422 | Pass
+R423 | Pass
+R424 | Pass
+R425 | Failure (selects unrelated instances)
+R426 | Failure (selects unrelated instances)
+R427 | Failure (selects unrelated instances)
+R428 | Failure (selects unrelated instances)
+R429 | Failure (doesn't select all instances)
+R430 | Failure (not available)
+R431 | Failure (not available)
+R432 | Pass
+R433 | Failure (doesn't select all instances)
+R434 | Failure (not available)
+R435 | Failure (doesn't select all instances)
+R436 | Failure (doesn't select all instances)
+R437 | Failure (not available)
+R438 | Pass
+R439 | Pass
+R440 | Pass
+R441 | Pass
+R442 | Pass
+R443 | Pass
+R444 | Failure (doesn't select all instances)
+R445 | Failure (doesn't select all instances)
+R446 | Failure (unavailable)
+R447 | Pass
+R448 | Pass
+R449 | Pass
+R450 | Pass
+R451 | Pass
+R452 | Pass
+R453 | Pass
+R454 | Failure (selects unrelated instances)
+R455 | Failure (selects unrelated instances)
+R456 | Failure (selects unrelated instances)
+R457 | Failure (selects unrelated instances)
+R458 | Pass
+R459 | Pass
+R460 | Failure (selects unrelated instances)
+R461 | Pass
+R462 | Failure (selects unrelated instances)
+R463 | Failure (selects unrelated instances)
+R464 | Pass
+R465 | Pass
+R466 | Pass
+R467 | Pass
+R468 | Pass
+R469 | Pass
+R470 | Pass
+R471 | Pass
+R472 | Pass
+R473 | Failure (changes unrelated code)
+R474 | Pass
+R475 | Pass
+R476 | Pass
+R477 | Pass
+R478 | Pass
+R479 | Pass
+R480 | Pass
+R481 | Pass
+R482 | Pass
+R483 | Pass
+R484 | Pass
+R485 | Pass
+R486 | Pass
+R487 | Pass
+R488 | Pass
+R489 | Pass
+R490 | Pass
+R491 | Pass
+R492 | Pass
+R493 | Pass
+R494 | Pass
+R495 | Pass
+R496 | Pass
+R497 | Pass
+R498 | Pass
+R499 | Pass
+R500 | Pass
+R501 | Pass
+R502 | Failure (selects unrelated instances)
+R503 | Failure (selects unrelated instances)
+R504 | Pass
+R505 | Pass
+R506 | Failure (selects unrelated instances)
+R507 | Failure (selects unrelated instances)
+R508 | Failure (selects unrelated instances)
+R509 | Failure (doesn't select all instances)
+R510 | Failure (selects unrelated instances)
+R511 | Pass
+R512 | Failure (selects unrelated instances)
+R513 | Pass
+R514 | Pass
+R515 | Pass
+R516 | Failure (selects unrelated instances)
+R517 | Failure (selects unrelated instances)
+R518 | Pass
+R519 | Failure (selects unrelated instances)
+R520 | Failure (selects unrelated instances)
+R521 | Pass
+R522 | Failure (selects unrelated instances)
+R523 | Pass
+R524 | Failure (selects unrelated instances)
+R525 | Failure (selects unrelated instances)
+R526 | Failure (selects unrelated instances)
+R527 | Pass
+R528 | Pass
+R529 | Pass
+R530 | Pass
+R531 | Pass
+R532 | Pass
+R533 | Pass
+R534 | Pass
+R535 | Failure (selects unrelated instances)
+R536 | Pass
+R537 | Failure (unavailable)
+R538 | Pass
+R539 | Failure (selects unrelated instances)
+R540 | Pass
+R541 | Failure (unavailable)
+R542 | Failure (selects unrelated instances)
+R543 | Pass
+R544 | Pass
+R545 | Failure (selects unrelated instances)
+R546 | Failure (selects unrelated instances)
+R547 | Pass
+R548 | Failure (selects unrelated instances)
+R549 | Pass
+R550 | Pass
+R551 | Pass
+R552 | Pass
+R553 | Pass
+R554 | Pass
+R555 | Pass
+R556 | Pass
+R557 | Pass
+R558 | Pass
+R559 | Pass
+R560 | Failure (selects unrelated instances)
+R561 | Failure (selects unrelated instances)
 R562 | (deprecated)
-R563 | 
-R564 | 
-R565 | 
-R566 | 
-R567 | 
-R568 | 
-R569 | 
-R570 | 
-R571 | 
-R572 | 
-R573 | 
-R574 | 
-R575 | 
-R576 | 
-R577 | 
-R578 | 
-R579 | 
-R580 | 
-R581 | 
-R582 | 
-R583 | 
-R584 | 
-R585 | 
-R586 | 
-R587 | 
-R588 | 
-R589 | 
-R590 | 
-R591 | 
-R592 | 
-R593 | 
-R594 | 
-R595 | 
-R596 | 
-R597 | 
-R598 | 
-R599 | 
-R600 | 
-R601 | 
-R602 | 
-R603 | 
-R604 | 
-R605 | 
-R606 | 
-R607 | 
-R608 | 
-R609 | 
-R610 | 
-R611 | 
-R612 | 
-R613 | 
-R614 | 
-R615 | 
-R616 | 
-R617 | 
-R618 | 
-R619 | 
-R620 | 
-R621 | 
-R622 | 
-R623 | 
-R624 | 
-R625 | 
-R626 | 
-R627 | 
-R628 | 
-R629 | 
-R630 | 
-R631 | 
-R632 | 
-R633 | 
-R634 | 
-R635 | 
-R636 | 
-R637 | 
-R638 | 
-R639 | 
-R640 | 
-R641 | 
-R642 | 
-R643 | 
-R644 | 
-R645 | 
-R646 | 
-R647 | 
-R648 | 
-R649 | 
-R650 | 
-R651 | 
-R652 | 
-R653 | 
-R654 | 
-R655 | 
-R656 | 
-R657 | 
-R658 | 
-R659 | 
-R660 | 
-R661 | 
-R662 | 
-R663 | 
-R664 | 
-R665 | 
-R666 | 
-R667 | 
-R668 | 
-R669 | 
-R670 | 
-R671 | 
-R672 | 
-R673 | 
-R674 | 
-R675 | 
-R676 | 
-R677 | 
-R678 | 
-R679 | 
-R680 | 
-R681 | 
-R682 | 
-R683 | 
-R684 | 
-R685 | 
-R686 | 
-R687 | 
-R688 | 
-R689 | 
-R690 | 
-R691 | 
-R692 | 
-R693 | 
-R694 | 
-R695 | 
-R696 | 
-R697 | 
-R698 | 
-R699 | 
-R700 | 
-R701 | 
-R702 | 
-R703 | 
-R704 | 
-R705 | 
-R706 | 
-R707 | 
-R708 | 
-R709 | 
-R710 | 
-R711 | 
-R712 | 
-R713 | 
-R714 | 
-R715 | 
-R716 | 
-R717 | 
-R718 | 
-R719 | 
-R720 | 
-R721 | 
-R722 | 
-R723 | 
-R724 | 
-R725 | 
-R726 | 
-R727 | 
-R728 | 
-R729 | 
-R730 | 
-R731 | 
-R732 | 
-R733 | 
-R734 | 
-R735 | 
-R736 | 
-R737 | 
-R738 | 
-R739 | 
-R740 | 
-R741 | 
-R742 | 
-R743 | 
-R744 | 
-R745 | 
-R746 | 
-R747 | 
-R748 | 
-R749 | 
-R750 | 
-R751 | 
-R752 | 
-R753 | 
-R754 | 
-R755 | 
-R756 | 
-R757 | 
-R758 | 
-R759 | 
-R760 | 
-R761 | 
-R762 | 
-R763 | 
-R764 | 
-R765 | 
-R766 | 
-R767 | 
-R768 | 
-R769 | 
-R770 | 
-R771 | 
-R772 | 
-R773 | 
-R774 | 
-R775 | 
-R776 | 
-R777 | 
-R778 | 
-R779 | 
-R780 | 
-R781 | 
-R782 | 
-R783 | 
-R784 | 
-R785 | 
-R786 | 
-R787 | 
-R788 | 
-R789 | 
-R790 | 
-R791 | 
-R792 | 
-R793 | 
-R794 | 
-R795 | 
-R796 | 
-R797 | 
-R798 | 
-R799 | 
-R800 | 
-R801 | 
-R802 | 
-R803 | 
-R804 | 
-R805 | 
-R806 | 
-R807 | 
-R808 | 
-R809 | 
-R810 | 
-R811 | 
-R812 | 
-R813 | 
-R814 | 
-R815 | 
-R816 | 
-R817 | 
-R818 | 
-R819 | 
-R820 | 
-R821 | 
-R822 | 
-R823 | 
-R824 | 
-R825 | 
-R826 | 
-R827 | 
-R828 | 
-R829 | 
-R830 | 
-R831 | 
-R832 | 
-R833 | 
-R834 | 
-R835 | 
-R836 | 
-R837 | 
-R838 | 
-R839 | 
-R840 | 
-R841 | 
-R842 | 
-R843 | 
-R844 | 
-R845 | 
-R846 | 
-R847 | 
-R848 | 
-R849 | 
-R850 | 
-R851 | 
-R852 | 
-R853 | 
-R854 | 
-R855 | 
-R856 | 
-R857 | 
-R858 | 
-R859 | 
-R860 | 
-R861 | 
-R862 | 
-R863 | 
-R864 | 
-R865 | 
-R866 | 
-R867 | 
-R868 | 
-R869 | 
-R870 | 
-R871 | 
-R872 | 
-R873 | 
-R874 | 
-R875 | 
-R876 | 
-R877 | 
-R878 | 
-R879 | 
-R880 | 
-R881 | 
-R882 | 
-R883 | 
-R884 | 
-R885 | 
-R886 | 
-R887 | 
-R888 | 
-R889 | 
-R890 | 
-R891 | 
-R892 | 
-R893 | 
-R894 | 
-R895 | 
-R896 | 
-R897 | 
-R898 | 
-R899 | 
-R900 | 
-R901 | 
-R902 | 
-R903 | 
-R904 | 
-R905 | 
-R906 | 
-R907 | 
-R908 | 
-R909 | 
-R910 | 
-R911 | 
-R912 | 
-R913 | 
-R914 | 
-R915 | 
-R916 | 
-R917 | 
-R918 | 
-R919 | 
-R920 | 
-R921 | 
-R922 | 
-R923 | 
-R924 | 
-R925 | 
-R926 | 
-R927 | 
-R928 | 
-R929 | 
-R930 | 
-R931 | 
-R932 | 
-R933 | 
-R934 | 
-R935 | 
-R936 | 
-R937 | 
-R938 | 
-R939 | 
-R940 | 
-R941 | 
-R942 | 
-R943 | 
-R944 | 
-R945 | 
-R946 | 
-R947 | 
-R948 | 
-R949 | 
-R950 | 
-R951 | 
-R952 | 
-R953 | 
-R954 | 
-R955 | 
-R956 | 
-R957 | 
-R958 | 
-R959 | 
-R960 | 
-R961 | 
-R962 | 
-R963 | 
-R964 | 
-R965 | 
-R966 | 
-R967 | 
-R968 | 
-R969 | 
-R970 | 
-R971 | 
-R972 | 
-R973 | 
-R974 | 
-R975 | 
-R976 | 
-R977 | 
-R978 | 
-R979 | 
-R980 | 
-R981 | 
-R982 | 
-R983 | 
-R984 | 
-R985 | 
-R986 | 
+R563 | Pass
+R564 | Failure (selects unrelated instances)
+R565 | Pass
+R566 | Failure (selects unrelated instances)
+R567 | Pass
+R568 | Pass
+R569 | Pass
+R570 | Pass
+R571 | Pass
+R572 | Pass
+R573 | Failure (selects unrelated instances)
+R574 | Failure (selects unrelated instances)
+R575 | Pass
+R576 | Failure (selects unrelated instances)
+R577 | Failure (selects unrelated instances)
+R578 | Failure (selects unrelated instances)
+R579 | Pass
+R580 | Failure (selects unrelated instances)
+R581 | Pass
+R582 | Pass
+R583 | Pass
+R584 | Pass
+R585 | Pass
+R586 | Pass
+R587 | Pass
+R588 | Pass
+R589 | Pass
+R590 | Pass
+R591 | Pass
+R592 | Pass
+R593 | Pass
+R594 | Pass
+R595 | Pass
+R596 | Pass
+R597 | Pass
+R598 | Pass
+R599 | Pass
+R600 | Pass
+R601 | Pass
+R602 | Pass
+R603 | Pass
+R604 | Pass
+R605 | Pass
+R606 | Failure (selects unrelated instances)
+R607 | Failure (selects unrelated instances)
+R608 | Pass
+R609 | Failure (selects unrelated instances)
+R610 | Pass
+R611 | Failure (selects unrelated instances)
+R612 | Pass
+R613 | Pass
+R614 | Pass
+R615 | Pass
+R616 | Failure (selects unrelated instances)
+R617 | Failure (selects unrelated instances)
+R618 | Pass
+R619 | Failure (selects unrelated instances)
+R620 | Pass
+R621 | Pass
+R622 | Pass
+R623 | Pass
+R624 | Pass
+R625 | Pass
+R626 | Pass
+R627 | Failure (not available)
+R628 | Failure (not available)
+R629 | Pass
+R630 | Failure (not available)
+R631 | Failure (not available)
+R632 | Pass
+R633 | Pass
+R634 | Failure (not available)
+R635 | Failure (not available)
+R636 | Pass
+R637 | Failure (not available)
+R638 | Failure (not available)
+R639 | Pass
+R640 | Pass
+R641 | Pass
+R642 | Pass
+R643 | Pass
+R644 | Pass
+R645 | Pass
+R646 | Pass
+R647 | Pass
+R648 | Failure (selects unrelated instances)
+R649 | Pass
+R650 | Pass
+R651 | Failure (selects unrelated instances)
+R652 | Pass
+R653 | Pass
+R654 | Pass
+R655 | Pass
+R656 | Pass
+R657 | Pass
+R658 | Pass
+R659 | Pass
+R660 | Pass
+R661 | Pass
+R662 | Pass
+R663 | Pass
+R664 | Pass
+R665 | Pass
+R666 | Pass
+R667 | Pass
+R668 | Pass
+R669 | Pass
+R670 | Pass
+R671 | Pass
+R672 | Pass
+R673 | Pass
+R674 | Pass
+R675 | Pass
+R676 | Pass
+R677 | Pass
+R678 | Pass
+R679 | Pass
+R680 | Pass
+R681 | Pass
+R682 | Pass
+R683 | Pass
+R684 | Pass
+R685 | Pass
+R686 | Failure (not available)
+R687 | Failure (not available)
+R688 | Pass
+R689 | Failure (not available)
+R690 | Failure (not available)
+R691 | Pass
+R692 | Failure (not available)
+R693 | Failure (not available)
+R694 | Failure (not available)
+R695 | Failure (not available)
+R696 | Pass
+R697 | Failure (not available)
+R698 | Failure (not available)
+R699 | Failure (not available)
+R700 | Failure (not available)
+R701 | Pass
+R702 | Failure (not available)
+R703 | Failure (not available)
+R704 | Failure (not available)
+R705 | Failure (not available)
+R706 | Pass
+R707 | Failure (not available)
+R708 | Failure (not available)
+R709 | Failure (not available)
+R710 | Failure (not available)
+R711 | Pass
+R712 | Failure (not available)
+R713 | Failure (not available)
+R714 | Failure (not available)
+R715 | Failure (not available)
+R716 | Pass
+R717 | Failure (not available)
+R718 | Failure (not available)
+R719 | Failure (not available)
+R720 | Failure (not available)
+R721 | Pass
+R722 | Failure (not available)
+R723 | Failure (not available)
+R724 | Pass
+R725 | Pass
+R726 | Pass
+R727 | Pass
+R728 | Pass
+R729 | Failure (not available)
+R730 | Failure (not available)
+R731 | Failure (not available)
+R732 | Failure (not available)
+R733 | Failure (not available)
+R734 | Failure (not available)
+R735 | Failure (not available)
+R736 | Pass
+R737 | Failure (not available)
+R738 | Failure (not available)
+R739 | Failure (not available)
+R740 | Failure (not available)
+R741 | Pass
+R742 | Failure (not available)
+R743 | Failure (not available)
+R744 | Failure (not available)
+R745 | Failure (not available)
+R746 | Pass
+R747 | Failure (not available)
+R748 | Pass
+R749 | Failure (not available)
+R750 | Pass
+R751 | Failure (not available)
+R752 | Failure (not available)
+R753 | Pass
+R754 | Failure (not available)
+R755 | Pass
+R756 | Failure (not available)
+R757 | Pass
+R758 | Failure (not available)
+R759 | Pass
+R760 | Pass
+R761 | Pass
+R762 | Pass
+R763 | Pass
+R764 | Pass
+R765 | Pass
+R766 | Pass
+R767 | Pass
+R768 | Pass
+R769 | Pass
+R770 | Pass
+R771 | Pass
+R772 | Pass
+R773 | Pass
+R774 | Pass
+R775 | Pass
+R776 | Pass
+R777 | Pass
+R778 | Pass
+R779 | Pass
+R780 | Pass
+R781 | Pass
+R782 | Pass
+R783 | Pass
+R784 | Pass
+R785 | Failure (selects unrelated instances)
+R786 | Pass
+R787 | Pass
+R788 | Failure (selects unrelated instances)
+R789 | Failure (selects unrelated instances)
+R790 | Pass
+R791 | Failure (selects unrelated instances)
+R792 | Failure (selects unrelated instances)
+R793 | Pass
+R794 | Failure (selects unrelated instances)
+R795 | Failure (selects unrelated instances)
+R796 | Pass
+R797 | Failure (selects unrelated instances)
+R798 | Pass
+R799 | Pass
+R800 | Pass
+R801 | Pass
+R802 | Pass
+R803 | Pass
+R804 | Pass
+R805 | Pass
+R806 | Pass
+R807 | Pass
+R808 | Pass
+R809 | Pass
+R810 | Pass
+R811 | Pass
+R812 | Pass
+R813 | Pass
+R814 | Pass
+R815 | Pass
+R816 | Pass
+R817 | Pass
+R818 | Pass
+R819 | Pass
+R820 | Pass
+R821 | Pass
+R822 | Pass
+R823 | Pass
+R824 | Pass
+R825 | Pass
+R826 | Pass
+R827 | Pass
+R828 | Pass
+R829 | Pass
+R830 | Pass
+R831 | Pass
+R832 | Pass
+R833 | Pass
+R834 | Pass
+R835 | Pass
+R836 | Pass
+R837 | Pass
+R838 | Pass
+R839 | Pass
+R840 | Pass
+R841 | Pass
+R842 | Pass
+R843 | Pass
+R844 | Pass
+R845 | Pass
+R846 | Pass
+R847 | Pass
+R848 | Pass
+R849 | Pass
+R850 | Pass
+R851 | Pass
+R852 | Pass
+R853 | Pass
+R854 | Pass
+R855 | Pass
+R856 | Pass
+R857 | Pass
+R858 | Pass
+R859 | Pass
+R860 | Pass
+R861 | Pass
+R862 | Pass
+R863 | Pass
+R864 | Pass
+R865 | Pass
+R866 | Pass
+R867 | Pass
+R868 | Pass
+R869 | Pass
+R870 | Pass
+R871 | Pass
+R872 | Pass
+R873 | Pass
+R874 | Pass
+R875 | Pass
+R876 | Pass
+R877 | Pass
+R878 | Pass
+R879 | Pass
+R880 | Pass
+R881 | Pass
+R882 | Pass
+R883 | Pass
+R884 | Pass
+R885 | Pass
+R886 | Pass
+R887 | Pass
+R888 | Pass
+R889 | Pass
+R890 | Failure (selects unrelated instances)
+R891 | Failure (selects unrelated instances)
+R892 | Failure (selects unrelated instances)
+R893 | Failure (selects unrelated instances)
+R894 | Pass
+R895 | Failure (selects unrelated instances)
+R896 | Failure (not available)
+R897 | Failure (selects unrelated instances)
+R898 | Failure (selects unrelated instances)
+R899 | Failure (not available)
+R900 | Failure (not available)
+R901 | Pass
+R902 | Pass
+R903 | Failure (not available)
+R904 | Pass
+R905 | Failure (not available)
+R906 | Pass
+R907 | Pass
+R908 | Pass
+R909 | Pass
+R910 | Pass
+R911 | Pass
+R912 | Pass
+R913 | Pass
+R914 | Pass
+R915 | Pass
+R916 | Pass
+R917 | Pass
+R918 | Pass
+R919 | Pass
+R920 | Pass
+R921 | Pass
+R922 | Pass
+R923 | Pass
+R924 | Pass
+R925 | Pass
+R926 | Pass
+R927 | Pass
+R928 | Pass
+R929 | Pass
+R930 | Pass
+R931 | Pass
+R932 | Pass
+R933 | Pass
+R934 | Pass
+R935 | Pass
+R936 | Pass
+R937 | Pass
+R938 | Pass
+R939 | Pass
+R940 | Pass
+R941 | Pass
+R942 | Pass
+R943 | Pass
+R944 | Pass
+R945 | Pass
+R946 | Pass
+R947 | Pass
+R948 | Failure (not available)
+R949 | Pass
+R950 | Failure (not available)
+R951 | Pass
+R952 | Pass
+R953 | Pass
+R954 | Pass
+R955 | Pass
+R956 | Pass
+R957 | Pass
+R958 | Pass
+R959 | Failure (selects unrelated instances)
+R960 | Failure (selects unrelated instances)
+R961 | Failure (selects unrelated instances)
+R962 | Failure (selects unrelated instances)
+R963 | Failure (selects unrelated instances)
+R964 | Failure (selects unrelated instances)
+R965 | Failure (selects unrelated instances)
+R966 | Failure (selects unrelated instances)
+R967 | Pass
+R968 | Pass
+R969 | Pass
+R970 | Failure (not available)
+R971 | Failure (not available)
+R972 | Failure (selects unrelated instances)
+R973 | Pass
+R974 | Pass
+R975 | Pass
+R976 | Pass
+R977 | Failure (selects unrelated instances)
+R978 | Failure (selects unrelated instances)
+R979 | Failure (selects unrelated instances)
+R980 | Failure (selects unrelated instances)
+R981 | Pass
+R982 | Pass
+R983 | Pass
+R984 | Pass
+R985 | Pass
+R986 | Pass
 
 <hr/>
 
