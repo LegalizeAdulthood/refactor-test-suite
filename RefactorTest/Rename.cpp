@@ -20,8 +20,14 @@
 class Operations
 {
 public:
-    int Operation1() { return 1; }
-    int Operation2() { return 2; }
+    int Operation1()
+    {
+        return 1;
+    }
+    int Operation2()
+    {
+        return 2;
+    }
 };
 
 // #TEST#: R1 Rename this class, but class in Rename2.cpp shouldn't be renamed
@@ -29,17 +35,23 @@ class Rename1
 {
 public:
     // #TEST#: R2 Rename this class via its c'tor
-    Rename1() : x() {}
+    Rename1() : x()
+    {
+    }
 
     // #TEST#: R32 Rename this class via its d'tor
-    ~Rename1() {}
+    ~Rename1()
+    {
+    }
 
     // #TEST#: R33 Rename this class via typedef
     // #TEST#: R34 Rename typedef MyClass
     typedef Rename1 MyClass;
 
     // #TEST#: R3 Rename this method
-    void Operation() {}
+    void Operation()
+    {
+    }
 
     int x;
 };
@@ -56,10 +68,15 @@ static int y = 1;
 class Rename1
 {
 public:
-    Rename1() : _y(0) {}
+    Rename1() : _y(0)
+    {
+    }
 
     // #TEST#: R8 rename this method
-    int Operation() { return 0; }
+    int Operation()
+    {
+        return 0;
+    }
 
 private:
     void Method()
@@ -82,9 +99,15 @@ int x = 0;
 class X
 {
 public:
-    X() {}
-    ~X() {}
-    void Operation() {}
+    X()
+    {
+    }
+    ~X()
+    {
+    }
+    void Operation()
+    {
+    }
 };
 
 }    // namespace Y
@@ -95,7 +118,10 @@ union U
     float f;
     double d;
     const char *s;
-    void member(int x_) { x = x_; }
+    void member(int x_)
+    {
+        x = x_;
+    }
     float member() const
     {
         // #TEST#: R38 Rename data member f
@@ -113,8 +139,14 @@ struct SU
         double d;
         const char *s;
     };
-    float member() const { return f; }
-    void member(int x_) { x = x_; }
+    float member() const
+    {
+        return f;
+    }
+    void member(int x_)
+    {
+        x = x_;
+    }
 };
 
 // #TEST#: R39 Rename class Operations
@@ -147,7 +179,9 @@ int Renamed = 0;
 class Base
 {
 public:
-    virtual ~Base() {}
+    virtual ~Base()
+    {
+    }
     // #TEST#: R70 Rename virtual method
     virtual Base *Operation() = 0;
 };
@@ -155,17 +189,27 @@ public:
 class Derived1 : public virtual Base
 {
 public:
-    virtual ~Derived1() {}
+    virtual ~Derived1()
+    {
+    }
     // #TEST#: R71 Rename virtual method
-    virtual Base *Operation() { return this; }
+    virtual Base *Operation()
+    {
+        return this;
+    }
 };
 
 class Derived2 : public virtual Derived1
 {
 public:
-    virtual ~Derived2() {}
+    virtual ~Derived2()
+    {
+    }
     // #TEST#: R72 Rename virtual method
-    virtual Base *Operation() { return this; }
+    virtual Base *Operation()
+    {
+        return this;
+    }
 };
 
 void TestDerived()
@@ -240,7 +284,10 @@ namespace F2Outer
 namespace F2Inner
 {
 // #TEST#: R477 Rename function f2_aux
-int f2_aux() { return 1; }
+int f2_aux()
+{
+    return 1;
+}
 
 }    // namespace F2Inner
 }    // namespace F2Outer
@@ -321,7 +368,9 @@ class T3
 public:
     // #TEST#: R503 Rename T3
     // #TEST#: R504 Rename i3
-    T3(int i) : i3(i) {}
+    T3(int i) : i3(i)
+    {
+    }
     // #TEST#: R505 Rename i3
     int i3;
 };

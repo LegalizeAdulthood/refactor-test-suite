@@ -10,9 +10,13 @@ template <typename T>
 struct Extern
 {
     // #TEST#: R378 Rename Extern
-    Extern() {}
+    Extern()
+    {
+    }
     // #TEST#: R379 Rename Extern
-    Extern(T t) : t(t) {}
+    Extern(T t) : t(t)
+    {
+    }
     T t = T();
 };
 

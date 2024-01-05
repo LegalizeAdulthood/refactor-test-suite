@@ -26,10 +26,14 @@ static_assert(flag, "Flag is false");
 static_assert(!flag2, "Flag2 is true");
 
 // #TEST#: R102 Rename flag3 in noexcept specifier
-void f1() noexcept(flag3) {}
+void f1() noexcept(flag3)
+{
+}
 
 // #TEST#: R103 Rename flag4 in noexcept specifier
-void f2() noexcept(!flag4) {}
+void f2() noexcept(!flag4)
+{
+}
 
 // #TEST#: R108 Rename T used in noexcept expression
 template <typename T>
@@ -112,7 +116,8 @@ void f7()
         int y = 2;
         std::string s = "foo";
     };
-    const auto check = [](const X &x) {
+    const auto check = [](const X &x)
+    {
         require_equal(1, x.x);
         require_equal(2, x.y);
         require_equal(std::string("foo"), x.s);
@@ -224,7 +229,10 @@ public:
         m_str = result.str();
     }
 
-    const std::string &str() const { return m_str; }
+    const std::string &str() const
+    {
+        return m_str;
+    }
 
 private:
     std::string m_str;
@@ -529,7 +537,9 @@ struct Initializer
     // #TEST#: R243 Rename Args
     // #TEST#: R244 Rename args constructor argument
     // #TEST#: R245 Rename args initializer
-    Initializer(Args... args) : t(args...) {}
+    Initializer(Args... args) : t(args...)
+    {
+    }
     // #TEST#: R246 Rename Args
     std::tuple<Args...> t;
 };
@@ -570,7 +580,9 @@ struct f19_aux
     {
         // #TEST#: R254 Rename Args
         // #TEST#: R255 Rename args
-        apply(Args... args) : t(args...) {}
+        apply(Args... args) : t(args...)
+        {
+        }
 
         // #TEST#: R256 Rename Args
         std::tuple<Args...> t;
@@ -594,19 +606,25 @@ struct Mixin : Bases...
     // #TEST#: R260 Rename bases in constructor argument list
     // #TEST#: R261 Rename Bases in initializer list pack expansion
     // #TEST#: R262 Rename bases in initializer list pack expansion
-    Mixin(const Bases &...bases) : Bases(bases)... {}
+    Mixin(const Bases &...bases) : Bases(bases)...
+    {
+    }
 };
 
 void f20()
 {
     struct Int
     {
-        Int(int i) : m(i) {}
+        Int(int i) : m(i)
+        {
+        }
         int m;
     };
     struct Float
     {
-        Float(float f) : m(f) {}
+        Float(float f) : m(f)
+        {
+        }
         float m;
     };
     Mixin<Int, std::string, Float> m(10, std::string{"foo"}, 20.f);
@@ -629,7 +647,7 @@ void f21_aux(std::ostream &stream, Args... args)
         // #TEST#: R269 Rename s
         // #TEST#: R270 Rename args
         f10_aux(s, args...);
-    // #TEST#: R271 Rename stream
+        // #TEST#: R271 Rename stream
     }(stream);
 }
 
@@ -650,7 +668,10 @@ void f22_aux() throw(Exceptions...)
 {
 }
 
-void f22() { f22_aux<std::runtime_error, std::invalid_argument>(); }
+void f22()
+{
+    f22_aux<std::runtime_error, std::invalid_argument>();
+}
 
 // #TEST#: R274 Rename Types
 template <typename... Types>
@@ -660,7 +681,9 @@ struct alignas(Types...) Aligned
     // #TEST#: R276 Rename Types
     // #TEST#: R277 Rename args in constructor parameter list
     // #TEST#: R278 Rename args in initializer list
-    Aligned(Types... args) : t(args...) {}
+    Aligned(Types... args) : t(args...)
+    {
+    }
     // #TEST#: R279 Rename Types
     std::tuple<Types...> t;
 };
@@ -680,12 +703,18 @@ void f24()
     {
         // #TEST#: R281 Rename constructor X
         // #TEST#: R282 Rename delegated constructor X
-        X() : X(10) {}
+        X() : X(10)
+        {
+        }
         // #TEST#: R283 Rename constructor X
         // #TEST#: R284 Rename delegated constructor X
-        X(int x) : X(x, "hello world!") {}
+        X(int x) : X(x, "hello world!")
+        {
+        }
         // #TEST#: R285 Rename constructor X
-        X(int num, const char *text) : x(num), s(text) {}
+        X(int num, const char *text) : x(num), s(text)
+        {
+        }
 
         int x;
         std::string s;
@@ -762,10 +791,12 @@ void f26()
     // #TEST#: R316 Rename s in lambda body
     // #TEST#: R317 Rename nl in expression in lambda body
     // #TEST#: R318 Rename s in lambda argument list
-    require_equal(std::string{"hello world!\n"}, [](const std::string &s) {
-        std::string nl{"\n"};
-        return s + nl;
-    }(s));
+    require_equal(std::string{"hello world!\n"},
+                  [](const std::string &s)
+                  {
+                      std::string nl{"\n"};
+                      return s + nl;
+                  }(s));
 
     // #TEST#: R319 Rename E
     enum class E
@@ -949,7 +980,10 @@ void f33()
 
 // #TEST#: R393 Rename f34_aux
 // #TEST#: R394 Rename j
-constexpr int f34_aux(int j) { return ii + j; }
+constexpr int f34_aux(int j)
+{
+    return ii + j;
+}
 
 // #TEST#: R395 Rename f34_aux
 static_assert(f34_aux(3) == 18, "f34_aux(3) == 18");
@@ -969,7 +1003,10 @@ void f34()
 struct X35
 {
     // #TEST#: R398 Rename size
-    constexpr std::size_t size() const { return sizeof(X35); }
+    constexpr std::size_t size() const
+    {
+        return sizeof(X35);
+    }
 
     // #TEST#: R399 Rename sz
     static constexpr int sz = 4;
@@ -993,7 +1030,10 @@ int x36 = 10;
 // #TEST#: R403 Rename d36
 double d36 = 20.5;
 // #TEST#: R404 Rename s36
-std::string s36() { return "hello world!"; }
+std::string s36()
+{
+    return "hello world!";
+}
 
 }    // namespace Inline36
 
@@ -1092,7 +1132,10 @@ void f41()
 #undef F41_AUX
 
 // #TEST#: R447 Rename f42_aux
-void f42_aux(std::ostream &stream, int x) { f10_aux(stream, x); }
+void f42_aux(std::ostream &stream, int x)
+{
+    f10_aux(stream, x);
+}
 
 void f42()
 {
@@ -1123,22 +1166,38 @@ void f44()
     class X
     {
     public:
-        X(const std::string &s) : m_s(s + " lvalue") {}
+        X(const std::string &s) : m_s(s + " lvalue")
+        {
+        }
         // #TEST#: R452 Rename parameter s
         // #TEST#: R453 Rename parameter s in initializer list
-        X(std::string &&s) : m_s(s + " rvalue") {}
+        X(std::string &&s) : m_s(s + " rvalue")
+        {
+        }
 
         // #TEST#: R454 Rename method s
-        const std::string &s() const & { return m_s; }
+        const std::string &s() const &
+        {
+            return m_s;
+        }
         // #TEST#: R455 Rename method s
-        std::string s() const && { return m_s + " rvalue"; }
+        std::string s() const &&
+        {
+            return m_s + " rvalue";
+        }
 
         // #TEST#: R456 Rename method set
-        void set(const std::string &s) { m_s = s + " lvalue"; }
+        void set(const std::string &s)
+        {
+            m_s = s + " lvalue";
+        }
         // #TEST#: R457 Rename method set
         // #TEST#: R458 Rename parameter s
         // #TEST#: R459 Rename parameter s in method body
-        void set(std::string &&s) { m_s = s + " rvalue"; }
+        void set(std::string &&s)
+        {
+            m_s = s + " rvalue";
+        }
 
     private:
         std::string m_s;
@@ -1197,11 +1256,21 @@ void f45()
 {
     struct X
     {
-        X() {}
-        X(const std::string &s) : s(s) {}
-        X(std::string &&s) noexcept : s(std::move(s)), c(false) {}
-        X(const X &rhs) : s(rhs.s) {}
-        X(X &&rhs) noexcept : s(std::move(rhs.s)), c(false) {}
+        X()
+        {
+        }
+        X(const std::string &s) : s(s)
+        {
+        }
+        X(std::string &&s) noexcept : s(std::move(s)), c(false)
+        {
+        }
+        X(const X &rhs) : s(rhs.s)
+        {
+        }
+        X(X &&rhs) noexcept : s(std::move(rhs.s)), c(false)
+        {
+        }
 
         std::string s;
         bool c = true;
