@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 8ff936b..f9547ff 100644
+index d1c1283..8c70762 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -448,7 +448,7 @@ void f4()
+@@ -459,7 +459,7 @@ void f4()
  // #TEST#: R542 Rename T
  template <typename T>
  // #TEST#: R543 Rename F5
@@ -11,7 +11,7 @@ index 8ff936b..f9547ff 100644
  {
  public:
      // #TEST#: R544 Rename type
-@@ -462,7 +462,7 @@ public:
+@@ -473,7 +473,7 @@ public:
  
  template <>
  // #TEST#: R549 Rename F5
@@ -19,8 +19,8 @@ index 8ff936b..f9547ff 100644
 +class Goink<int>
  {
  public:
-     // #TEST#: F550 Rename type
-@@ -475,16 +475,16 @@ void f5()
+     // #TEST#: R550 Rename type
+@@ -486,16 +486,16 @@ void f5()
  {
      // #TEST#: R552 Rename F5
      // #TEST#: R553 Rename x
@@ -40,4 +40,4 @@ index 8ff936b..f9547ff 100644
 +    require_equal(true, std::is_same<Goink<int>::type, unsigned int>::value);
  }
  
- }
+ struct F6

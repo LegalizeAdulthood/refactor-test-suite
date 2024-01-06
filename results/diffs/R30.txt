@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..e9aafcc 100644
+index d1c1283..987c9c4 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -293,10 +293,10 @@ void TestRename()
+@@ -658,10 +658,10 @@ void TestRename()
  
      y = 3;
      {
 -        int y = 3;
-+        int Goink = 3;
++        int goink = 3;
          // #TEST#: R30 Rename y, which shadows outer scope y
 -        y = 4;
 -        if (y != 4)
-+        Goink = 4;
-+        if (Goink != 4)
++        goink = 4;
++        if (goink != 4)
          {
              throw std::runtime_error("R30 may have failed");
          }

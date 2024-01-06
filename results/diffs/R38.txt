@@ -1,31 +1,31 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..87d3bdc 100644
+index d1c1283..006bd5e 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -105,7 +105,7 @@ namespace Y
+@@ -115,7 +115,7 @@ public:
  union U
  {
      int x;
 -    float f;
-+    float Goink;
++    float goink;
      double d;
      const char *s;
      void member(int x_)
-@@ -115,7 +115,7 @@ union U
+@@ -125,7 +125,7 @@ union U
      float member() const
      {
          // #TEST#: R38 Rename data member f
 -        return f;
-+        return Goink;
++        return goink;
      }
  };
  
-@@ -235,7 +235,7 @@ void TestRename()
+@@ -600,7 +600,7 @@ void TestRename()
  {
      U u;
      u.x = 1;
 -    u.f = 1.0f;
-+    u.Goink = 1.0f;
++    u.goink = 1.0f;
      u.d = 1.0;
      u.s = "Foo";
      u.member(2);

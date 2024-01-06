@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..7ceb45d 100644
+index d1c1283..fac4bce 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -147,17 +147,17 @@ static int (Operations::*GetOperation(bool flag))()
+@@ -157,17 +157,17 @@ static int (Operations::*GetOperation(bool flag))()
      // #TEST#: R42 Rename class Operations
      // #TEST#: R43 Rename variable result
      // #TEST#: R44 Rename member Operation1
 -    int (Operations::*result)() = &Operations::Operation1;
-+    int (Operations::*Goink)() = &Operations::Operation1;
++    int (Operations::*goink)() = &Operations::Operation1;
      // #TEST#: R45 Rename variable flag
      if (flag)
      {
@@ -15,11 +15,11 @@ index 2d7e3d4..7ceb45d 100644
          // #TEST#: R47 Rename class Operations
          // #TEST#: R48 Rename method Operation2
 -        result = &Operations::Operation2;
-+        Goink = &Operations::Operation2;
++        goink = &Operations::Operation2;
      }
      // #TEST#: R49 Rename variable result
 -    return result;
-+    return Goink;
++    return goink;
  }
  
  // #TEST#: R56 Rename namespace RenameNamespace

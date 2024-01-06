@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 8ff936b..5496c34 100644
+index d1c1283..3284145 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -446,18 +446,18 @@ void f4()
+@@ -457,18 +457,18 @@ void f4()
  }
  
  // #TEST#: R542 Rename T

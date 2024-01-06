@@ -1,22 +1,25 @@
 diff --git a/RefactorTest/RenameCpp11.h b/RefactorTest/RenameCpp11.h
-index 481f212..66e047f 100644
+index 54c1f21..c5a9d39 100644
 --- a/RefactorTest/RenameCpp11.h
 +++ b/RefactorTest/RenameCpp11.h
-@@ -6,15 +6,15 @@ namespace RenameCpp11
+@@ -5,7 +5,7 @@
+ namespace RenameCpp11
  {
- 
  // #TEST#: R376 Rename T
 -template <typename T>
 +template <typename Goink>
  // #TEST#: R377 Rename Extern
  struct Extern
  {
-     // #TEST#: R378 Rename Extern
-     Extern() {}
+@@ -14,10 +14,10 @@ struct Extern
+     {
+     }
      // #TEST#: R379 Rename Extern
--    Extern(T t) : t(t) {}
+-    Extern(T t) : t(t)
++    Extern(Goink t) : t(t)
+     {
+     }
 -    T t = T();
-+    Extern(Goink t) : t(t) {}
 +    Goink t = Goink();
  };
  

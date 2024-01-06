@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 905d66a..56dd256 100644
+index d1c1283..425ee1c 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -491,7 +491,7 @@ struct F6
+@@ -502,7 +502,7 @@ struct F6
  {
      // #TEST#: R560 Rename T
      // #TEST#: R561 Rename U
 -    template <typename T, typename U>
 +    template <typename T, typename Goink>
+     // #TEST#: R562 (deprecated)
      // #TEST#: R563 Rename f
      // #TEST#: R564 Rename T parameter x type
-     // #TEST#: R565 Rename x parameter
-@@ -499,7 +499,7 @@ struct F6
+@@ -511,7 +511,7 @@ struct F6
      // #TEST#: R567 Rename y parameter
      // #TEST#: R568 Rename x in decltype expression
      // #TEST#: R569 Rename y in decltype expression

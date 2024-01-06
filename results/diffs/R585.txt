@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 905d66a..29b092f 100644
+index d1c1283..cd8683b 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -502,7 +502,7 @@ struct F6
+@@ -514,7 +514,7 @@ struct F6
      auto f(T x, U y) -> decltype(x + y)
      {
          // #TEST#: R570 Rename count
 -        ++count;
-+        ++Goink;
++        ++goink;
          // #TEST#: R571 Rename x
          // #TEST#: R572 Rename y
          return x + y;
-@@ -521,14 +521,14 @@ struct F6
+@@ -533,14 +533,14 @@ struct F6
      decltype(T() + U()) g(T x, U y)
      {
          // #TEST#: R582 Rename count
 -        ++count;
-+        ++Goink;
++        ++goink;
          // #TEST#: R583 Rename x
          // #TEST#: R584 Rename y
          return x + y;
@@ -24,16 +24,16 @@ index 905d66a..29b092f 100644
  
      // #TEST#: R585 Rename count
 -    int count = 0;
-+    int Goink = 0;
++    int goink = 0;
  };
  
  void f6()
-@@ -539,14 +539,14 @@ void f6()
+@@ -551,14 +551,14 @@ void f6()
      // #TEST#: R587 Rename method f
      require_equal(std::string{"foobar"}, x.f(std::string{"foo"}, "bar"));
      // #TEST#: R588 Rename count
 -    require_equal(2, x.count);
-+    require_equal(2, x.Goink);
++    require_equal(2, x.goink);
  
      // #TEST#: R589 Rename method g
      require_equal(3.0, x.g(1.0, 2));
@@ -41,7 +41,7 @@ index 905d66a..29b092f 100644
      require_equal(std::string{"foobar"}, x.g("foo", std::string{"bar"}));
      // #TEST#: R591 Rename count
 -    require_equal(4, x.count);
-+    require_equal(4, x.Goink);
++    require_equal(4, x.goink);
  }
  
- }
+ // #TEST#: R592 Rename F7Base

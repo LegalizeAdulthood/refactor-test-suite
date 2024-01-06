@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 3876218..89af338 100644
+index d1c1283..b0f4858 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -415,7 +415,7 @@ public:
-     // #TEST#: F529 Rename type
+@@ -426,7 +426,7 @@ public:
+     // #TEST#: R529 Rename type
      using type = unsigned int;
-     // #TEST#: F530 Rename x
+     // #TEST#: R530 Rename x
 -    unsigned int x = 4;
-+    unsigned int Goink = 4;
++    unsigned int goink = 4;
  };
  
  template <>
-@@ -433,7 +433,7 @@ void f4()
+@@ -444,7 +444,7 @@ void f4()
  {
      // #TEST#: R534 Rename F4
      // #TEST#: R535 Rename x
 -    require_equal(4U, F4<int>().x);
-+    require_equal(4U, F4<int>().Goink);
++    require_equal(4U, F4<int>().goink);
      // #TEST#: R536 Rename F4
      // #TEST#: R537 Rename type
      require_equal(true, std::is_same<F4<int>::type, unsigned int>::value);

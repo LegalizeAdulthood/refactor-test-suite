@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..6f4de4c 100644
+index d1c1283..be78406 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -380,9 +380,9 @@ restart:
+@@ -748,9 +748,9 @@ restart:
          // #TEST#: R95 Rename variable property
          int property = pin_ptr + 1;
          // #TEST#: R96 Rename variable safe_cast
 -        int safe_cast = property + 1;
-+        int GOINK_safe_cast = property + 1;
++        int goink = property + 1;
          // #TEST#: R97 Rename variable sealed
 -        int sealed = safe_cast + 1;
-+        int sealed = GOINK_safe_cast + 1;
++        int sealed = goink + 1;
          int x = sealed + 1;
-         std::string spaces;
-         spaces.append(' ', x);
+         std::string dashes;
+         dashes.append(x, '-');

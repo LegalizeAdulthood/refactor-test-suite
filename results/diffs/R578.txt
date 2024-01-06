@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 905d66a..fcd7c55 100644
+index d1c1283..0dc3323 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -510,7 +510,7 @@ struct F6
+@@ -522,7 +522,7 @@ struct F6
  
      // #TEST#: R573 Rename T
      // #TEST#: R574 Rename U
@@ -11,7 +11,7 @@ index 905d66a..fcd7c55 100644
      // #TEST#: R575 Rename g
      // #TEST#: R576 Rename T in decltype expression
      // #TEST#: R577 Rename U in decltype expression
-@@ -518,7 +518,7 @@ struct F6
+@@ -530,7 +530,7 @@ struct F6
      // #TEST#: R579 Rename x parameter
      // #TEST#: R580 Rename U parameter y type
      // #TEST#: R581 Rename y parameter

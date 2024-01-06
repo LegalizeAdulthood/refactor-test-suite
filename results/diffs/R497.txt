@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 6c3eaea..c08b181 100644
+index d1c1283..528ffe3 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -336,9 +336,9 @@ void f2_aux7()
+@@ -345,9 +345,9 @@ void f2_aux7()
      // #TEST#: R497 Rename namespace A
      // #TEST#: R498 Rename namespace F2Outer
      // #TEST#: R499 Rename namespace F2Inner

@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..5fc59be 100644
+index d1c1283..a489fcd 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -83,7 +83,7 @@ namespace X
- }
+@@ -91,7 +91,7 @@ private:
+ }    // namespace X
  
  // #TEST#: R9 rename this namespace
 -namespace Y
 +namespace Goink
  {
-     // #TEST#: R10 rename this variable
-     int x = 0;
-@@ -262,7 +262,7 @@ void TestRename()
+ // #TEST#: R10 rename this variable
+ int x = 0;
+@@ -627,7 +627,7 @@ void TestRename()
      TestRename1();
  
      {
@@ -20,7 +20,7 @@ index 2d7e3d4..5fc59be 100644
          X xFoo;
          xFoo.Operation();
      }
-@@ -278,7 +278,7 @@ void TestRename()
+@@ -643,7 +643,7 @@ void TestRename()
      // #TEST#: R21 rename the variable X::x
      // #TEST#: R22 rename the variable X::y
      // #TEST#: R23 rename the variable Y::x

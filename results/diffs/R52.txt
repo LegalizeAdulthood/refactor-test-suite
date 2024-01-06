@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..f085c2d 100644
+index d1c1283..122e8d0 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -142,7 +142,7 @@ struct SU
+@@ -152,7 +152,7 @@ struct SU
  // #TEST#: R39 Rename class Operations
  // #TEST#: R40 Rename function GetOperation
  // #TEST#: R41 Rename parameter flag
 -static int (Operations::*GetOperation(bool flag))()
-+static int (Operations::*Goink(bool flag))()
++static int (Operations::*goink(bool flag))()
  {
      // #TEST#: R42 Rename class Operations
      // #TEST#: R43 Rename variable result
-@@ -316,7 +316,7 @@ void TestRename()
+@@ -681,7 +681,7 @@ void TestRename()
      // #TEST#: R50 Rename class Operations
      // #TEST#: R51 Rename variable member
      // #TEST#: R52 Rename function GetOperation
 -    int (Operations::*member)() = GetOperation(true);
-+    int (Operations::*member)() = Goink(true);
++    int (Operations::*member)() = goink(true);
      // #TEST#: R53 Rename variable member
      // #TEST#: R54 Rename class Operations
      // #TEST#: R55 Rename method Operation2

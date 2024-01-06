@@ -1,16 +1,18 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..da10d4b 100644
+index d1c1283..8695a20 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -372,9 +372,9 @@ restart:
+@@ -738,11 +738,11 @@ restart:
          // #TEST#: R89 Rename variable interface
          int interface = gcnew + 1;
          // #TEST#: R90 Rename variable internal
 -        int internal = interface + 1;
-+        int GOINK_internal = interface + 1;
++        int goink = interface + 1;
+         // #TEST#: R91 (deprecated)
+         // #TEST#: R92 (deprecated)
          // #TEST#: R93 Rename variable override
 -        int override = internal + 1;
-+        int override = GOINK_internal + 1;
++        int override = goink + 1;
          // #TEST#: R94 Rename variable pin_ptr
          int pin_ptr = override + 1;
          // #TEST#: R95 Rename variable property

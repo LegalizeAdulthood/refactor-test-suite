@@ -1,28 +1,28 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..3d5d7ba 100644
+index d1c1283..af30d00 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -42,7 +42,7 @@ public:
+@@ -49,7 +49,7 @@ public:
      typedef Rename1 MyClass;
  
      // #TEST#: R3 Rename this method
 -    void Operation()
-+    void Goink()
++    void goink()
      {
      }
  
-@@ -252,12 +252,12 @@ void TestRename()
+@@ -617,12 +617,12 @@ void TestRename()
      // #TEST#: R35 Rename MyClass
      // #TEST#: R36 Rename Rename1 from scope qualifier
      Rename1::MyClass myClass;
 -    myClass.Operation();
-+    myClass.Goink();
++    myClass.goink();
  
      // #TEST#: R11 Rename this variable
      Rename1 test;
      // #TEST#: R12 Rename this method
 -    test.Operation();
-+    test.Goink();
++    test.goink();
      // #TEST#: R13 Rename this function
      TestRename1();
  

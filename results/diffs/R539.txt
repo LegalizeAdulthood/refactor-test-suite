@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 3876218..7af39d8 100644
+index d1c1283..46bb080 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -426,7 +426,7 @@ public:
+@@ -437,7 +437,7 @@ public:
      // #TEST#: R532 Rename type
      using type = double;
      // #TEST#: R533 Rename x
 -    double x = 10.5;
-+    double Goink = 10.5;
++    double goink = 10.5;
  };
  
  void f4()
-@@ -439,7 +439,7 @@ void f4()
+@@ -450,7 +450,7 @@ void f4()
      require_equal(true, std::is_same<F4<int>::type, unsigned int>::value);
      // #TEST#: R538 Rename F4
      // #TEST#: R539 Rename x
 -    require_equal(10.5, F4<float>().x);
-+    require_equal(10.5, F4<float>().Goink);
++    require_equal(10.5, F4<float>().goink);
      // #TEST#: R540 Rename F4
      // #TEST#: R541 Rename type
      require_equal(true, std::is_same<F4<float>::type, double>::value);

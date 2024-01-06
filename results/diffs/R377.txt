@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index a2ae8c8..7b4f63d 100644
+index 96b65ff..dc8a134 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -909,12 +909,12 @@ void f30()
+@@ -938,12 +938,12 @@ void f30()
  void f31()
  {
      // #TEST#: R371 Rename Extern
@@ -18,9 +18,9 @@ index a2ae8c8..7b4f63d 100644
      require_equal(std::string{"hello world!"}, y.t);
  }
  
-@@ -924,9 +924,9 @@ namespace RenameCpp11
+@@ -1288,9 +1288,9 @@ void f45()
+ namespace RenameCpp11
  {
- 
  // #TEST#: R374 Rename Extern
 -template struct Extern<int>;
 +template struct Goink<int>;
@@ -28,13 +28,13 @@ index a2ae8c8..7b4f63d 100644
 -template struct Extern<std::string>;
 +template struct Goink<std::string>;
  
- }
+ }    // namespace RenameCpp11
  
 diff --git a/RefactorTest/RenameCpp11.h b/RefactorTest/RenameCpp11.h
-index 481f212..b408735 100644
+index 54c1f21..a83f3c0 100644
 --- a/RefactorTest/RenameCpp11.h
 +++ b/RefactorTest/RenameCpp11.h
-@@ -8,19 +8,19 @@ namespace RenameCpp11
+@@ -7,23 +7,23 @@ namespace RenameCpp11
  // #TEST#: R376 Rename T
  template <typename T>
  // #TEST#: R377 Rename Extern
@@ -42,11 +42,15 @@ index 481f212..b408735 100644
 +struct Goink
  {
      // #TEST#: R378 Rename Extern
--    Extern() {}
-+    Goink() {}
+-    Extern()
++    Goink()
+     {
+     }
      // #TEST#: R379 Rename Extern
--    Extern(T t) : t(t) {}
-+    Goink(T t) : t(t) {}
+-    Extern(T t) : t(t)
++    Goink(T t) : t(t)
+     {
+     }
      T t = T();
  };
  
@@ -57,5 +61,5 @@ index 481f212..b408735 100644
 -extern template struct Extern<std::string>;
 +extern template struct Goink<std::string>;
  
- }
+ }    // namespace RenameCpp11
  

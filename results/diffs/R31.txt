@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 952f46a..25a3977 100644
+index d1c1283..5bd6e2d 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -75,9 +75,9 @@ public:
+@@ -81,9 +81,9 @@ public:
  private:
      void Method()
      {
 -        int _y = -4;
-+        int Goink = -4;
++        int goink = -4;
          // #TEST#: R31 rename _y, which shadows member _y
 -        _y = 6;
-+        Goink = 6;
++        goink = 6;
      }
      int _y;
  };

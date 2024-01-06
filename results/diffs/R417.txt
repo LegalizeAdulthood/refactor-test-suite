@@ -1,10 +1,10 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 6744aba..bf01fa3 100644
+index d1c1283..972820d 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -235,14 +235,14 @@ namespace
+@@ -251,14 +251,14 @@ using namespace RenameNamespace;
+ namespace
  {
- 
  // #TEST#: R416 Rename T
 -template <typename T>
 +template <typename Goink>

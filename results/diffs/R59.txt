@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..8e1bfe7 100644
+index d1c1283..d6b391c 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -15,7 +15,7 @@
+@@ -17,7 +17,7 @@
  // #TEST#: R26 Rename this macro
- #define MACRO_ONE_ARG(x_) (2.0f*x_)
+ #define MACRO_ONE_ARG(x_) (2.0f * x_)
  
 -class Operations
 +class Goink
  {
  public:
-     int Operation1() { return 1; }
-@@ -142,19 +142,19 @@ struct SU
+     int Operation1()
+@@ -152,19 +152,19 @@ struct SU
  // #TEST#: R39 Rename class Operations
  // #TEST#: R40 Rename function GetOperation
  // #TEST#: R41 Rename parameter flag
@@ -34,7 +34,7 @@ index 2d7e3d4..8e1bfe7 100644
      }
      // #TEST#: R49 Rename variable result
      return result;
-@@ -316,21 +316,21 @@ void TestRename()
+@@ -681,21 +681,21 @@ void TestRename()
      // #TEST#: R50 Rename class Operations
      // #TEST#: R51 Rename variable member
      // #TEST#: R52 Rename function GetOperation
@@ -60,7 +60,7 @@ index 2d7e3d4..8e1bfe7 100644
      // #TEST#: R64 Rename variable ops2
      // #TEST#: R65 Rename variable member
      (ops2->*member)();
-@@ -338,7 +338,7 @@ void TestRename()
+@@ -703,7 +703,7 @@ void TestRename()
      delete ops2;
  
      // #TEST#: R67 Rename variable ops3

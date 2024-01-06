@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 6744aba..5bfebfd 100644
+index d1c1283..27e95ca 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -242,11 +242,11 @@ template <typename T>
+@@ -258,11 +258,11 @@ template <typename T>
  // #TEST#: R420 Rename value
  // #TEST#: R421 Rename T second parameter type
  // #TEST#: R422 Rename x
 -T f1_aux(T value, T x = 1)
-+T f1_aux(T Goink, T x = 1)
++T f1_aux(T goink, T x = 1)
  {
      // #TEST#: R423 Rename value
      // #TEST#: R424 Rename x
 -    return value + x;
-+    return Goink + x;
++    return goink + x;
  }
  
  void f1()

@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 952f46a..f133bed 100644
+index d1c1283..1a055cb 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -59,10 +59,10 @@ int x = 0;
+@@ -65,10 +65,10 @@ int x = 0;
  static int y = 1;
  
  // #TEST#: R7 rename this class
@@ -15,7 +15,7 @@ index 952f46a..f133bed 100644
      {
      }
  
-@@ -623,7 +623,7 @@ void TestRename()
+@@ -635,7 +635,7 @@ void TestRename()
      // #TEST#: R14 Rename the namespace X
      // #TEST#: R15 Rename the class Rename1
      // #TEST#: R16 Rename the variable test2
@@ -24,7 +24,7 @@ index 952f46a..f133bed 100644
      // #TEST#: R17 rename the variable y
      // #TEST#: R18 rename the variable test2
      // #TEST#: R19 rename the method Operation
-@@ -662,8 +662,8 @@ void TestRename()
+@@ -674,8 +674,8 @@ void TestRename()
      // #TEST#: R98 Rename the variable y
      y++;
  

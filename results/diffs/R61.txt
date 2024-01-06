@@ -1,26 +1,26 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index 2d7e3d4..d3f33d2 100644
+index d1c1283..7bf18e1 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -324,10 +324,10 @@ void TestRename()
+@@ -689,10 +689,10 @@ void TestRename()
  
      // #TEST#: R59 Rename class Operations
      // #TEST#: R60 Rename variable ops
 -    Operations ops;
-+    Operations Goink;
++    Operations goink;
      // #TEST#: R61 Rename variable ops
      // #TEST#: R62 Rename variable member
 -    (ops.*member)();
-+    (Goink.*member)();
++    (goink.*member)();
  
      // #TEST#: R63 Rename variable ops2
      Operations *ops2 = new Operations();
-@@ -338,7 +338,7 @@ void TestRename()
+@@ -703,7 +703,7 @@ void TestRename()
      delete ops2;
  
      // #TEST#: R67 Rename variable ops3
 -    Operations &ops3 = ops;
-+    Operations &ops3 = Goink;
++    Operations &ops3 = goink;
      // #TEST#: R68 Rename variable ops3
      // #TEST#: R69 Rename variable member
      ((&ops3)->*member)();
