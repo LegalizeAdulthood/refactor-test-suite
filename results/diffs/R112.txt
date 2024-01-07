@@ -1,20 +1,20 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 833b1db..c6b5ea0 100644
+index 96b65ff..4090f95 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -44,13 +44,13 @@ void f4()
+@@ -49,13 +49,13 @@ void f4()
      // #TEST#: R111 Rename c16
      char16_t c16 = u'x';
      // #TEST#: R112 Rename c32
 -    char32_t c32 = U'x';
-+    char32_t Goink = U'x';
++    char32_t goink = U'x';
  
      std::ostringstream s;
      // #TEST#: R113 Rename c16
      s << static_cast<int>(c16);
      // #TEST#: R114 Rename c32
 -    s << static_cast<int>(c32);
-+    s << static_cast<int>(Goink);
++    s << static_cast<int>(goink);
  }
  
- }
+ void f5()

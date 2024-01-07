@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 282d87c..fa52230 100644
+index e73e1db..d42bc48 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -531,7 +531,7 @@ struct Initializer
+@@ -537,7 +537,7 @@ struct Initializer
      // #TEST#: R243 Rename Args
      // #TEST#: R244 Rename args constructor argument
      // #TEST#: R245 Rename args initializer
--    Initializer(Args... args) : t(args...) {}
-+    Initializer(Args... Goink) : t(Goink...) {}
+-    Initializer(Args... args) : t(args...)
++    Initializer(Args... goink) : t(goink...)
+     {
+     }
      // #TEST#: R246 Rename Args
-     std::tuple<Args...> t;
- };

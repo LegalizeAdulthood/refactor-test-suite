@@ -1,9 +1,9 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 67b647e..4c4461e 100644
+index e73e1db..a5d31d7 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -769,7 +769,7 @@ void f26()
-     require_equal(std::string{"hello world!\n"}, [](const std::string &s){ std::string nl{"\n"}; return s + nl; }(s));
+@@ -799,7 +799,7 @@ void f26()
+                   }(s));
  
      // #TEST#: R319 Rename E
 -    enum class E
@@ -11,7 +11,7 @@ index 67b647e..4c4461e 100644
      {
          one,
          // #TEST#: R320 Rename two
-@@ -778,12 +778,12 @@ void f26()
+@@ -808,12 +808,12 @@ void f26()
      };
      // #TEST#: R321 Rename E in declaration
      // #TEST#: R322 Rename E in initialization expression
@@ -25,4 +25,4 @@ index 67b647e..4c4461e 100644
 +    require_equal(static_cast<int>(Goink::two), static_cast<int>([]() -> Goink { return Goink::two; }()));
  }
  
- }
+ void f27()

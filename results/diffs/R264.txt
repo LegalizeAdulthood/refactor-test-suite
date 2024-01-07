@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 90db2a9..e48e31b 100644
+index e73e1db..e811a57 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -624,7 +624,7 @@ template <typename... Args>
- // #TEST#: R264 Renem stream
+@@ -638,7 +638,7 @@ template <typename... Args>
+ // #TEST#: R264 Rename stream
  // #TEST#: R265 Rename Args
  // #TEST#: R266 Rename args
 -void f21_aux(std::ostream &stream, Args... args)
-+void f21_aux(std::ostream &Goink, Args... args)
++void f21_aux(std::ostream &goink, Args... args)
  {
      // #TEST#: R267 Rename args
      // #TEST#: R268 Rename s
-@@ -634,7 +634,7 @@ void f21_aux(std::ostream &stream, Args... args)
+@@ -648,7 +648,7 @@ void f21_aux(std::ostream &stream, Args... args)
          // #TEST#: R270 Rename args
          f10_aux(s, args...);
-     // #TEST#: R271 Rename stream
+         // #TEST#: R271 Rename stream
 -    }(stream);
-+    }(Goink);
++    }(goink);
  }
  
  void f21()

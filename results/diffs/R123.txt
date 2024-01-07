@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 7ee257e..5c97ae2 100644
+index 96b65ff..caf0cfb 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -90,48 +90,48 @@ void f6()
+@@ -93,48 +93,48 @@ void f6()
  void f7()
  {
      // #TEST#: R121 Rename X
@@ -23,11 +23,11 @@ index 7ee257e..5c97ae2 100644
          // #TEST#: R127 Rename X via default d'tor
 -        ~X() = default;
 +        ~Goink() = default;
-         // #TEST#: R128 Rename X via default copy assignment
+         // #TEST#: R128 Rename X via default copy assignment return type
          // #TEST#: R129 Rename X via default copy assignment argument
 -        X &operator=(const X &rhs) = default;
 +        Goink &operator=(const Goink &rhs) = default;
-         // #TEST#: R130 Rename X via default move assignment
+         // #TEST#: R130 Rename X via default move assignment return type
          // #TEST#: R131 Rename X via default move assignment argument
 -        X &operator=(X &&rhs) = default;
 +        Goink &operator=(Goink &&rhs) = default;

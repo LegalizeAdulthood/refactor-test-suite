@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index b7ded66..babb89f 100644
+index e73e1db..726930f 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -427,11 +427,11 @@ std::ostream &operator<<(std::ostream &stream, const std::basic_string<char16_t>
+@@ -423,11 +423,11 @@ std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
  // #TEST#: R211 Rename xs3
  // #TEST#: R212 Rename text
  // #TEST#: R213 Rename len
 -std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len)
-+std::basic_string<char16_t> operator""_xs3(const char16_t *Goink, std::size_t len)
++std::basic_string<char16_t> operator""_xs3(const char16_t *goink, std::size_t len)
  {
      // #TEST#: R214 Rename text
      // #TEST#: R215 Rename len
 -    return {text, len};
-+    return {Goink, len};
++    return {goink, len};
  }
  
- void f13()
+ // #TEST#: R217 Rename xs4

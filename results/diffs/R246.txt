@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 282d87c..ac23aab 100644
+index e73e1db..728f8b1 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -525,15 +525,15 @@ void f16()
+@@ -531,17 +531,17 @@ void f16()
  }
  
  // #TEST#: R242 Rename Args
@@ -13,8 +13,10 @@ index 282d87c..ac23aab 100644
      // #TEST#: R243 Rename Args
      // #TEST#: R244 Rename args constructor argument
      // #TEST#: R245 Rename args initializer
--    Initializer(Args... args) : t(args...) {}
-+    Initializer(Goink... args) : t(args...) {}
+-    Initializer(Args... args) : t(args...)
++    Initializer(Goink... args) : t(args...)
+     {
+     }
      // #TEST#: R246 Rename Args
 -    std::tuple<Args...> t;
 +    std::tuple<Goink...> t;

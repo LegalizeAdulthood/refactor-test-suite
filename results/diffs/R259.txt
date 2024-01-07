@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 67ddccb..efed0e7 100644
+index e73e1db..a5aa1d9 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -588,15 +588,15 @@ void f19()
+@@ -598,15 +598,15 @@ void f19()
  }
  
  // #TEST#: R257 Rename Bases

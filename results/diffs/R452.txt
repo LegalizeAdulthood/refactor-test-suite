@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 2c23b34..e0aa3a5 100644
+index e73e1db..f39c83b 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1138,7 +1138,7 @@ void f44()
-         X(const std::string &s) : m_s(s + " lvalue") {}
+@@ -1171,7 +1171,7 @@ void f44()
+         }
          // #TEST#: R452 Rename parameter s
          // #TEST#: R453 Rename parameter s in initializer list
--        X(std::string &&s) : m_s(s + " rvalue") {}
-+        X(std::string &&Goink) : m_s(Goink + " rvalue") {}
+-        X(std::string &&s) : m_s(s + " rvalue")
++        X(std::string &&goink) : m_s(goink + " rvalue")
+         {
+         }
  
-         // #TEST#: R454 Rename method s
-         const std::string &s() const & { return m_s; }

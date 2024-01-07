@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index dd76962..46ffd0c 100644
+index 96b65ff..36c645a 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -29,12 +29,12 @@ void f2() noexcept(!flag4)
+@@ -36,12 +36,12 @@ void f2() noexcept(!flag4)
  }
  
  // #TEST#: R108 Rename T used in noexcept expression
@@ -17,4 +17,4 @@ index dd76962..46ffd0c 100644
 +    Goink x = Goink();
  }
  
- }
+ void f4()

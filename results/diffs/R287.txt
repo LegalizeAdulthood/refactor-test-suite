@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 686b0b3..5bed4af 100644
+index e73e1db..b53798c 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -701,15 +701,15 @@ void f24()
+@@ -726,15 +726,15 @@ void f24()
  }
  
  // #TEST#: R287 Rename T
@@ -10,7 +10,7 @@ index 686b0b3..5bed4af 100644
 +template <typename Goink, typename U>
  // #TEST#: R288 Rename arg in parameter list
  // #TEST#: R289 Rename T
- // #TEST#: R290 REname arg in decltype expression
+ // #TEST#: R290 Rename arg in decltype expression
 -auto f25_aux(U arg) -> decltype(T(arg))
 +auto f25_aux(U arg) -> decltype(Goink(arg))
  {

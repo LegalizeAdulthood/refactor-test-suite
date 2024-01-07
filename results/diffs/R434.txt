@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 4214d26..9f8327e 100644
+index e73e1db..a234f42 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1043,18 +1043,18 @@ void f37()
+@@ -1074,18 +1074,18 @@ void f37()
  // #TEST#: R430 Rename stream_ in macro argument list
  // #TEST#: R431 Rename stream_ in macro expansion text
  // #TEST#: R432 Rename not available for __VA_ARGS__ in macro expansion text
@@ -22,5 +22,5 @@ index 4214d26..9f8327e 100644
 -#undef F38_AUX
 +#undef GOINK
  
- }
- 
+ // #TEST#: R435 Rename F39_AUX
+ #define F39_AUX(...) f10_aux(__VA_ARGS__)

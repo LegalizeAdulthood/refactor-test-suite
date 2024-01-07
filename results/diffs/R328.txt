@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index b78729b..c7389d8 100644
+index e73e1db..9da63c3 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -794,10 +794,10 @@ void f27()
+@@ -823,10 +823,10 @@ void f27()
      std::ostringstream result;
      // #TEST#: R328 Rename i
      // #TEST#: R329 Rename v
 -    for (int i : v)
-+    for (int Goink : v)
++    for (int goink : v)
      {
          // #TEST#: R330 Rename i
 -        result << i << '\n';
-+        result << Goink << '\n';
++        result << goink << '\n';
      }
      require_equal(std::string{"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"}, result.str());
  

@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index d75eb58..540ba68 100644
+index e73e1db..2630a68 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -353,10 +353,10 @@ double operator""_xd2(long double value)
+@@ -361,10 +361,10 @@ double operator""_xd2(long double value)
  
  // #TEST#: R183 Rename xc
  // #TEST#: R184 Rename value
 -char operator""_xc(char value)
-+char operator""_xc(char Goink)
++char operator""_xc(char goink)
  {
      // #TEST#: R185 Rename value
 -    return value;
-+    return Goink;
++    return goink;
  }
  
- void f13()
+ // #TEST#: R187 Rename xc2

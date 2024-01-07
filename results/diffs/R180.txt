@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 115e6ab..ee4df80 100644
+index e73e1db..0c378a6 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -345,10 +345,10 @@ int operator""_xull3(unsigned long long int value)
+@@ -353,10 +353,10 @@ int operator""_xull3(unsigned long long int value)
  
  // #TEST#: R179 Rename xd2
  // #TEST#: R180 Rename value
 -double operator""_xd2(long double value)
-+double operator""_xd2(long double Goink)
++double operator""_xd2(long double goink)
  {
      // #TEST#: R181 Rename value
 -    return static_cast<double>(value);
-+    return static_cast<double>(Goink);
++    return static_cast<double>(goink);
  }
  
- void f13()
+ // #TEST#: R183 Rename xc

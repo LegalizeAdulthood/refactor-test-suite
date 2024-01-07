@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 8786920..93b5961 100644
+index e73e1db..12b41a5 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -927,9 +927,9 @@ void f32()
+@@ -956,9 +956,9 @@ void f32()
      require_equal(10, x);
      // #TEST#: R384 Rename Integral
      // #TEST#: R385 Rename Integer

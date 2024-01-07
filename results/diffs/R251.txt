@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index f8300ff..6873757 100644
+index e73e1db..a6a6b09 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -548,11 +548,11 @@ void f17()
+@@ -556,11 +556,11 @@ void f17()
  template <typename... Args>
  // #TEST#: R248 Rename Args
  // #TEST#: R249 Rename args
 -void f18_aux(std::ostream &stream, Args... args)
-+void f18_aux(std::ostream &stream, Args... Goink)
++void f18_aux(std::ostream &stream, Args... goink)
  {
      // #TEST#: R250 Rename Args
      // #TEST#: R251 Rename args
--    int ignored[sizeof...(Args)] = { (stream << args << ' ', 0)... };
-+    int ignored[sizeof...(Args)] = { (stream << Goink << ' ', 0)... };
+-    int ignored[sizeof...(Args)] = {(stream << args << ' ', 0)...};
++    int ignored[sizeof...(Args)] = {(stream << goink << ' ', 0)...};
  }
  
  void f18()

@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 4ca5395..10c1187 100644
+index 96b65ff..bd3a03d 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -69,21 +69,21 @@ void f5()
+@@ -73,21 +73,21 @@ void f5()
  void f6()
  {
      // #TEST#: R117 Rename X used in alignas specifier
@@ -27,4 +27,4 @@ index 4ca5395..10c1187 100644
 +    require_equal(alignof(Goink), alignof(Y));
  }
  
- }
+ void f7()

@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index cb7c79f..f5e58f5 100644
+index e73e1db..5995c6a 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -468,14 +468,14 @@ void f13()
+@@ -474,14 +474,14 @@ void f13()
  template <typename Char>
  // #TEST#: R224 Rename String
  // #TEST#: R225 Rename Char
@@ -19,4 +19,4 @@ index cb7c79f..f5e58f5 100644
 +    require_equal(Goink<char>{"foo"}, s);
  }
  
- }
+ void f15()

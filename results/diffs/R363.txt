@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 3a5b867..a497453 100644
+index e73e1db..9dbf459 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -882,9 +882,9 @@ void f29()
+@@ -911,9 +911,9 @@ void f29()
      // #TEST#: R361 Rename second x in expression
      // #TEST#: R362 Rename second y in expression
      // #TEST#: R363 Rename z
 -    decltype(x + y - x - y) z = 10;
-+    decltype(x + y - x - y) Goink = 10;
++    decltype(x + y - x - y) goink = 10;
      // #TEST#: R364 Rename z
 -    require_equal(10, z);
-+    require_equal(10, Goink);
++    require_equal(10, goink);
  }
  
- }
+ void f30()

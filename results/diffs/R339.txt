@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index b78729b..5a5f8af 100644
+index e73e1db..fe1f3f3 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -824,10 +824,10 @@ void f27()
+@@ -853,10 +853,10 @@ void f27()
  
      // #TEST#: R337 Rename i
      // #TEST#: R338 Rename v
 -    for (auto &i : v)
-+    for (auto &Goink : v)
++    for (auto &goink : v)
      {
          // #TEST#: R339 Rename i
 -        i /= 10;
-+        Goink /= 10;
++        goink /= 10;
      }
      result.str("");
      std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });

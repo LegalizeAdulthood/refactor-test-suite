@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 30652ae..8846b8d 100644
+index e73e1db..bd35a11 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1019,9 +1019,9 @@ void f36()
+@@ -1050,9 +1050,9 @@ void f36()
  void f37()
  {
      // #TEST#: R408 Rename s1
 -    const char *s1{u8"foo"};
-+    const char *Goink{u8"foo"};
++    const char *goink{u8"foo"};
      // #TEST#: R409 Rename s1
 -    require_equal(std::string{"foo"}, std::string{s1});
-+    require_equal(std::string{"foo"}, std::string{Goink});
++    require_equal(std::string{"foo"}, std::string{goink});
  
      // #TEST#: R410 Rename s2
      const char16_t *s2{u"foo"};

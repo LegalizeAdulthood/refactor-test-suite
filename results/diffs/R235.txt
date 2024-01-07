@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index a27e0a8..709fbaf 100644
+index e73e1db..b407325 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -491,7 +491,7 @@ void f15()
+@@ -497,7 +497,7 @@ void f15()
      enum class Y : int
      {
          // #TEST#: R230 Rename One
@@ -11,7 +11,7 @@ index a27e0a8..709fbaf 100644
          Two,
          Three
      };
-@@ -501,7 +501,7 @@ void f15()
+@@ -507,7 +507,7 @@ void f15()
      // #TEST#: R234 Rename One
      X x = X::One;
      // #TEST#: R235 Rename One

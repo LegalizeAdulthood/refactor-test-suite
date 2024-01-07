@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 67ddccb..d0e82ad 100644
+index e73e1db..9d1ff4d 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -596,7 +596,7 @@ struct Mixin : Bases...
+@@ -606,7 +606,7 @@ struct Mixin : Bases...
      // #TEST#: R260 Rename bases in constructor argument list
      // #TEST#: R261 Rename Bases in initializer list pack expansion
      // #TEST#: R262 Rename bases in initializer list pack expansion
 -    Mixin(const Bases &...bases) : Bases(bases)...
-+    Mixin(const Bases &...Goink) : Bases(Goink)...
++    Mixin(const Bases &...goink) : Bases(goink)...
      {
      }
  };

@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 0e4a6ea..b858b4d 100644
+index 96b65ff..0c1d3d4 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -181,12 +181,12 @@ void f10_aux(std::ostream &stream, T head)
+@@ -184,12 +184,12 @@ void f10_aux(std::ostream &stream, T head)
  
  // #TEST#: R146 Rename T
  // #TEST#: R147 Rename Args

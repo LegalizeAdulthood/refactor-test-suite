@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index d279ee7..f191f1a 100644
+index 96b65ff..4e8bd43 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -240,9 +240,9 @@ void f11()
+@@ -249,9 +249,9 @@ void f11()
  }
  
  // #TEST#: R163 Rename Types

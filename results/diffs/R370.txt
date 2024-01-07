@@ -1,19 +1,19 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index cbdda82..7f010d3 100644
+index e73e1db..6516649 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -894,12 +894,12 @@ void f30()
+@@ -923,12 +923,12 @@ void f30()
      // #TEST#: R366 Rename y
      int y = 20;
      // #TEST#: R367 REname z
 -    int z = 30;
-+    int Goink = 30;
++    int goink = 30;
      std::ostringstream result;
      // #TEST#: R368 Rename x
      // #TEST#: R369 Rename y
      // #TEST#: R370 Rename z
--    for (int i : { 1, x, y, z, 4 })
-+    for (int i : { 1, x, y, Goink, 4 })
+-    for (int i : {1, x, y, z, 4})
++    for (int i : {1, x, y, goink, 4})
      {
          result << i << '\n';
      }

@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 6ebdef3..d36ca8d 100644
+index e73e1db..d9768c6 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -645,9 +645,9 @@ void f21()
+@@ -662,9 +662,9 @@ void f21()
  }
  
- // #TEST#: R272 Renema Exceptions
+ // #TEST#: R272 Rename Exceptions
 -template <typename... Exceptions>
 +template <typename... Goink>
  // #TEST#: R273 Rename Exceptions
--void f22_aux() throw (Exceptions...)
-+void f22_aux() throw (Goink...)
+-void f22_aux() throw(Exceptions...)
++void f22_aux() throw(Goink...)
  {
  }
  

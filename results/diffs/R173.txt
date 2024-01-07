@@ -1,74 +1,74 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 3470634..259e984 100644
+index 96b65ff..4145caf 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -285,50 +285,50 @@ unsigned long long operator""_xull2(const char *text)
+@@ -293,50 +293,50 @@ unsigned long long operator""_xull2(const char *text)
  
  // #TEST#: R172 Rename xd
  // #TEST#: R173 Rename text
 -double operator""_xd(const char *text)
-+double operator""_xd(const char *Goink)
++double operator""_xd(const char *goink)
  {
      const auto is_e = [](char c) { return c == 'e' || c == 'E'; };
      double value = 0.0;
      bool positive = true;
 -    if (*text == '-' || *text == '+')
-+    if (*Goink == '-' || *Goink == '+')
++    if (*goink == '-' || *goink == '+')
      {
 -        positive = *text == '+';
 -        ++text;
-+        positive = *Goink == '+';
-+        ++Goink;
++        positive = *goink == '+';
++        ++goink;
      }
 -    while (*text)
-+    while (*Goink)
++    while (*goink)
      {
 -        if (*text == '.' || is_e(*text))
-+        if (*Goink == '.' || is_e(*Goink))
++        if (*goink == '.' || is_e(*goink))
          {
              break;
          }
          value *= 10.0;
 -        value += *text - '0';
 -        ++text;
-+        value += *Goink - '0';
-+        ++Goink;
++        value += *goink - '0';
++        ++goink;
      }
 -    if (*text == '.')
-+    if (*Goink == '.')
++    if (*goink == '.')
      {
 -        ++text;
-+        ++Goink;
++        ++goink;
          double fraction = 1.0;
 -        while (*text)
-+        while (*Goink)
++        while (*goink)
          {
 -            if (is_e(*text))
-+            if (is_e(*Goink))
++            if (is_e(*goink))
              {
                  break;
              }
              fraction /= 10.0;
--            value += (*text - '0')*fraction;
+-            value += (*text - '0') * fraction;
 -            ++text;
-+            value += (*Goink - '0')*fraction;
-+            ++Goink;
++            value += (*goink - '0') * fraction;
++            ++goink;
          }
      }
 -    if (is_e(*text))
-+    if (is_e(*Goink))
++    if (is_e(*goink))
      {
 -        ++text;
-+        ++Goink;
++        ++goink;
          unsigned int exponent = 0;
 -        while (*text)
-+        while (*Goink)
++        while (*goink)
          {
              exponent *= 10U;
 -            exponent += *text - '0';
 -            ++text;
-+            exponent += *Goink - '0';
-+            ++Goink;
++            exponent += *goink - '0';
++            ++goink;
          }
          value *= std::pow(10.0, exponent);
      }

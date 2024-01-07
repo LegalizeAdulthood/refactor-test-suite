@@ -1,11 +1,11 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 7221774..a2ed2c6 100644
+index 96b65ff..1dec1e7 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -137,31 +137,31 @@ void f7()
+@@ -141,31 +141,31 @@ void f7()
  void f8()
  {
-    // #TEST#: R132 Rename X
+     // #TEST#: R132 Rename X
 -    struct X
 +    struct Goink
      {
@@ -39,6 +39,6 @@ index 7221774..a2ed2c6 100644
      // #TEST#: R143 Rename X
 -    X *x = nullptr;
 +    Goink *x = nullptr;
-  }
- 
  }
+ 
+ void f9()

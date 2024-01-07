@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 948755d..09ad78a 100644
+index e73e1db..0197c86 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1089,16 +1089,16 @@ void f40()
+@@ -1120,16 +1120,16 @@ void f40()
  }
  
  // #TEST#: R444 Rename F41_AUX
@@ -12,13 +12,13 @@ index 948755d..09ad78a 100644
  void f41()
  {
      // #TEST#: R445 Rename F41_AUX
--    require_equal(15, []{ return F41_AUX; }());
-+    require_equal(15, []{ return GOINK; }());
+-    require_equal(15, [] { return F41_AUX; }());
++    require_equal(15, [] { return GOINK; }());
  }
  
  // #TEST#: R446 Rename F41_AUX
 -#undef F41_AUX
 +#undef GOINK
  
- }
- 
+ // #TEST#: R447 Rename f42_aux
+ void f42_aux(std::ostream &stream, int x)

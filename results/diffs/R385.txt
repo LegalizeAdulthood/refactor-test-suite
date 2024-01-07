@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 8786920..95b4d04 100644
+index e73e1db..6078994 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -921,13 +921,13 @@ void f31()
+@@ -950,13 +950,13 @@ void f31()
  void f32()
  {
      // #TEST#: R382 Rename Integer
