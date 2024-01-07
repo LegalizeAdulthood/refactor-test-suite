@@ -452,7 +452,7 @@ void f13()
     require_equal(-555, -555_xull3);
     // #TEST#: R182 Rename xd2
     require_equal(2.0, 2.0_xd2);
-    // #TEST#: R186 Renamve xc
+    // #TEST#: R186 Rename xc
     require_equal('c', 'c'_xc);
     // #TEST#: R190 Rename xc2
     require_equal(L'c', L'c'_xc2);
