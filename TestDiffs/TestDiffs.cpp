@@ -33,14 +33,14 @@ void scanDiffDirectory(std::filesystem::path dir)
 
 void checkDiffs(std::ostream &out)
 {
-    for (const testCases::Test &test : testCases::g_tests)
+    for (const testCases::Test &test : testCases::getTests())
     {
         if (!test.diffsRequired)
         {
             continue;
         }
 
-        for (const std::string &testCase : testCases::g_testCases[test.prefix])
+        for (const std::string &testCase : testCases::getTestCaseLabels(test.prefix))
         {
             if (std::find(g_diffs.begin(), g_diffs.end(), testCase + ".txt") == g_diffs.end())
             {
