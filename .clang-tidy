@@ -1,0 +1,23 @@
+---
+Checks: >
+   -clang-diagnostic-*,
+   -clang-analyzer-*,
+   modernize-loop-convert,
+   modernize-replace-auto-ptr,
+   modernize-use-auto,
+   modernize-use-nullptr,
+   modernize-use-override,
+   readability-braces-around-statements
+WarningsAsErrors: ''
+HeaderFileExtensions:
+  - h
+ImplementationFileExtensions:
+  - c
+  - cpp
+HeaderFilterRegex: ''
+AnalyzeTemporaryDtors: false
+FormatStyle:     file
+CheckOptions:
+  readability-braces-around-statements.ShortStatementLines: '1'
+SystemHeaders:   false
+...

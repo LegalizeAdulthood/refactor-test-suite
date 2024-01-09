@@ -6,6 +6,7 @@ Version: 6.0.0svn
 
 * clang-tidy support is integrated into ReSharper for C++ 2017.3.3
 * All tests performed through quick fixes applied through ReSharper for C++
+* clang-tidy checks configured through `.clang-tidy` configuration file
 * **Add Block Delimiter** available through check [*readability-braces-around-statements*](https://clang.llvm.org/extra/clang-tidy/checks/readability-braces-around-statements.html)
 * **Add Override** available through check [*modernize-use-override*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-override.html)
 * **Replace `auto_ptr` With `unique_ptr`** available through check [*modernize-replace-auto-ptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-replace-auto-ptr.html)
