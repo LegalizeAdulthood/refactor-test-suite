@@ -1,4 +1,4 @@
-add_library(refactor-test-cases OBJECT
+add_library(refactor-test-cases STATIC
     AddOverride.cpp
     AddParameter.h
     AddParameter.cpp

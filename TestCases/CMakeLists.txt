@@ -3,7 +3,7 @@ if(NOT ("cxx_std_17" IN_LIST CMAKE_CXX_COMPILE_FEATURES))
     return()
 endif()
 
-add_library(test-cases OBJECT
+add_library(test-cases STATIC
     TestCases.h
     TestCases.cpp
     ToolResults.h
