@@ -16,10 +16,10 @@ void checkMissingTestCases()
 {
     const auto extractCaseNum = [](const std::string &label)
     { return std::stoi(label.substr(label.find_first_of("0123456789"))); };
-    for (const testCases::Test &test : testCases::g_tests)
+    for (const testCases::Test &test : testCases::getTests())
     {
         int num{1};
-        for (const std::string &testCase : testCases::g_testCases[test.prefix])
+        for (const std::string &testCase : testCases::getTestCaseLabels(test.prefix))
         {
             int caseNum = extractCaseNum(testCase);
             do
@@ -53,12 +53,12 @@ void printMarkDown(std::ostream &out)
 
     out << "# Tool\n\n";
 
-    for (const testCases::Test &test : testCases::g_tests)
+    for (const testCases::Test &test : testCases::getTests())
     {
         out << "\n## " << test.name
             << "\nCase | Result\n"
                "---- | ------\n";
-        for (const std::string &testCase : testCases::g_testCases[test.prefix])
+        for (const std::string &testCase : testCases::getTestCaseLabels(test.prefix))
         {
             out << testCase << " | " << (testCases::isDeprecatedLabel(testCase) ? "(deprecated)" : "") << '\n';
         }

@@ -6,6 +6,8 @@ endif()
 add_library(test-cases STATIC
     TestCases.h
     TestCases.cpp
+    ToolResults.h
+    ToolResults.cpp
 )
 set_target_properties(test-cases PROPERTIES
     CXX_STANDARD 17

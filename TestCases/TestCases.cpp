@@ -147,6 +147,23 @@ void sortTestCases()
     }
 }
 
+const std::vector<Test> & getTests()
+{
+    return g_tests;
+}
+
+const std::map<const char *, std::vector<std::string>> & getTestCases()
+{
+    return g_testCases;
+}
+
+const std::vector<std::string> &getTestCaseLabels(const char *prefix)
+{
+    const auto it = g_testCases.find(prefix);
+    static std::vector<std::string> empty;
+    return it == g_testCases.cend() ? empty : it->second;
+}
+
 std::vector<std::string> scanTestDirectory(std::string_view dir)
 {
     scanTestCaseDirectory(dir);
