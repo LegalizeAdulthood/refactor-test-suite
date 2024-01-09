@@ -11,6 +11,15 @@
       "displayName": "Default Config",
       "description": "Configure",
       "binaryDir": "${sourceDir}/../build"
+    },
+    {
+      "name": "ninja",
+      "displayName": "Configure with ninja and compile_commands.json",
+      "binaryDir": "${sourceDir}/../build-ninja",
+      "generator": "Ninja Multi-Config",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true
+      }
     }
   ],
   "buildPresets": [
