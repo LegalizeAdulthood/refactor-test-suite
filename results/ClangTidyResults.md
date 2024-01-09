@@ -2,10 +2,10 @@
 
 Home: [clang-tidy](https://clang.llvm.org/extra/clang-tidy/index.html)
 
-Version: 6.0.0svn
+Version: 17.0.6
 
-* clang-tidy support is integrated into ReSharper for C++ 2017.3.3
-* All tests performed through quick fixes applied through ReSharper for C++
+* clang-tidy support may be integrated into an IDE, such as ReSharper for C++.
+* All tests performed by invoking clang-tidy from the command-line on a source file.
 * clang-tidy checks configured through `.clang-tidy` configuration file
 * **Add Block Delimiter** available through check [*readability-braces-around-statements*](https://clang.llvm.org/extra/clang-tidy/checks/readability-braces-around-statements.html)
 * **Add Override** available through check [*modernize-use-override*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-override.html)
