@@ -1,6 +1,7 @@
 #include <TestCases.h>
 #include <ToolResults.h>
 
+#include <algorithm>
 #include <filesystem>
 #include <iomanip>
 #include <iostream>
