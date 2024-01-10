@@ -1,0 +1,45 @@
+diff --git a/RefactorTest/ReplaceAutoPtrWithUniquePtr.cpp b/RefactorTest/ReplaceAutoPtrWithUniquePtr.cpp
+index b1f0414..af9d618 100644
+--- a/RefactorTest/ReplaceAutoPtrWithUniquePtr.cpp
++++ b/RefactorTest/ReplaceAutoPtrWithUniquePtr.cpp
+@@ -1,23 +1,24 @@
+ #include "Require.h"
+ 
+ #include <memory>
++#include <utility>
+ 
+ static void TestStackAutoPtr()
+ {
+     // #TEST#: RAWU1 Replace auto_ptr with unique_ptr
+-    std::auto_ptr<int> i(new int(0));
++    std::unique_ptr<int> i(new int(0));
+     *i = 10;
+     REQUIRE_EQUAL(10, *i);
+ 
+     // #TEST#: RAWU2 Replace auto_ptr with unique_ptr
+-    std::auto_ptr<int> cpy;
+-    cpy = i;
++    std::unique_ptr<int> cpy;
++    cpy = std::move(i);
+     REQUIRE_EQUAL(10, *cpy);
+     REQUIRE_EQUAL(true, nullptr == i.get());
+ }
+ 
+ // #TEST#: RAWU3 Replace auto_ptr with unique_ptr
+-static void takeOwnership(std::auto_ptr<int> p)
++static void takeOwnership(std::unique_ptr<int> p)
+ {
+     REQUIRE_EQUAL(10, *p);
+ }
+@@ -25,9 +26,9 @@ static void takeOwnership(std::auto_ptr<int> p)
+ static void TestAutoPtrArgument()
+ {
+     // #TEST#: RAWU4 Replace auto_ptr with unique_ptr
+-    std::auto_ptr<int> i(new int(10));
++    std::unique_ptr<int> i(new int(10));
+     REQUIRE_EQUAL(10, *i);
+-    takeOwnership(i);
++    takeOwnership(std::move(i));
+     REQUIRE_EQUAL(true, nullptr == i.get());
+ }
+ 
