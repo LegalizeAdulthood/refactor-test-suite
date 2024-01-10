@@ -13,6 +13,7 @@ Version: 17.0.6
 * **Replace Iterative For With Range For** available through check [*modernize-loop-convert*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/loop-convert.html)
 * **Replace `NULL`/`0` With `nullptr`** available through check [*modernize-use-nullptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/use-nullptr.html)
 * **Replace Type With `auto`** available through check [*modernize-use-auto*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/use-auto.html)
+* **Simplify Boolean Expression** available through check [*readability-simplify-boolean-expression*](https://clang.llvm.org/extra/clang-tidy/checks/readability/simplify-boolean-expr.html)
 
 ## Add Block Delimiter
 Case | Result
@@ -192,3 +193,20 @@ RTWA29 | Pass
 RTWA30 | Pass
 RTWA31 | Pass
 RTWA32 | Pass
+
+## Simplify Boolean Expression
+Case | Result
+---- | ------
+SB1 | Pass
+SB2 | Pass
+SB3 | Pass
+SB4 | Pass
+SB5 | Failure
+SB6 | Pass
+SB7 | Pass
+SB8 | Failure
+SB9 | Failure
+SB10 | Failure
+SB11 | Failure
+SB12 | Failure
+SB13 | Failure
