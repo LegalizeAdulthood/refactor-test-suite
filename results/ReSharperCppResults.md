@@ -8,8 +8,10 @@ Build 233.0.20231218.91950 built on 2023-12-18
 Notes:
 * `clang-tidy` is integrated with ReSharper for C++ and provides quick fixes for issues found by clang-tidy.
   Only results implemented directly by ReSharper for C++ are reported here.
-* **Add Block Delimiter** is available as the quick fix *Surround with block*.
-  The tests pass if only code is selected and not the surrounding comment lines.
+* **Add Block Delimiter** is available as the quick fix *Surround with block* with selected code
+  or with the quick action *Add braces*.
+  The tests pass with *Surround with block* if only code is selected and not the surrounding comment lines.
+  The tests pass with *Add braces* with no additional constraints.
 * **Add Override** is available as the quick fix *Add 'override' specifier to an overriding function*.
 * **Add Parameter** is available through **Change Signature**.
   Default file selections were accepted and the argument value of zero was chosen.
@@ -43,13 +45,13 @@ Notes:
 ## Add Block Delimiter
 Case | Result
 ---- | ------
-ABD1 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD2 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD3 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD4 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD5 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD6 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
-ABD7 | Failure (unavailable) [RSCPP-15789](https://youtrack.jetbrains.com/issue/RSCPP-15789)
+ABD1 | Pass
+ABD2 | Pass
+ABD3 | Pass
+ABD4 | Pass
+ABD5 | Pass
+ABD6 | Pass
+ABD7 | Pass
 
 ## Add Override
 Case | Result
