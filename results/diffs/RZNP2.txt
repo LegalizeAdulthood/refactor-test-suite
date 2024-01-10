@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
-index 45aecb9..f47ad8e 100644
+index 0b95909..7fc0d01 100644
 --- a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
 +++ b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
-@@ -8,7 +8,7 @@ class Initializer
- {
- public:
-     Initializer(char *p_ = NULL,             // #TEST#: RZNP1 Replace NULL with nullptr
--                char *q_ = 0,                // #TEST#: RZNP2 Replace 0 with nullptr
-+                char *q_ = nullptr,          // #TEST#: RZNP2 Replace 0 with nullptr
-                 char const *f_ = NULL,       // #TEST#: RZNP3 Replace NULL with nullptr
-                 char const *g_ = 0,          // #TEST#: RZNP4 Replace 0 with nullptr
-                 char const *const h_ = NULL, // #TEST#: RZNP5 Replace NULL with nullptr
+@@ -10,7 +10,7 @@ public:
+     // #TEST#: RZNP1 Replace NULL with nullptr
+     Initializer(char *p_ = NULL,
+                 // #TEST#: RZNP2 Replace 0 with nullptr
+-                char *q_ = 0,
++                char *q_ = nullptr,
+                 // #TEST#: RZNP3 Replace NULL with nullptr
+                 char const *f_ = NULL,
+                 // #TEST#: RZNP4 Replace 0 with nullptr

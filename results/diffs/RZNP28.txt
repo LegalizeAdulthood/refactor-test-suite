@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
-index ee4f918..2361939 100644
+index be024dd..d318b65 100644
 --- a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
 +++ b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
-@@ -114,7 +114,7 @@ static void TestMemberPointers()
+@@ -117,7 +117,7 @@ static void TestMemberPointers()
      REQUIRE_EQUAL(true, !member);
  
      // #TEST#: RZNP28 Replace 0 with nullptr

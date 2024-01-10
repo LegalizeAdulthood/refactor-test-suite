@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
-index 45aecb9..11d108f 100644
+index 0b95909..54abbfc 100644
 --- a/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
 +++ b/RefactorTest/ReplaceNullZeroWithNullPtr.cpp
-@@ -89,7 +89,7 @@ static void TestAssignment()
-     char c = 0;                 // #TEST#: RZNP21 Should not be available
-     char *d = nullptr;          // #TEST#: RZNP22 Should not be available
-     char const *f = NULL;       // #TEST#: RZNP23 Replace NULL with nullptr
--    char const *g = 0;          // #TEST#: RZNP24 Replace 0 with nullptr
-+    char const *g = nullptr;    // #TEST#: RZNP24 Replace 0 with nullptr
-     char const *const h = NULL; // #TEST#: RZNP25 Replace NULL with nullptr
-     char const *const i = 0;    // #TEST#: RZNP26 Replace 0 with nullptr
- 
+@@ -114,7 +114,7 @@ static void TestAssignment()
+     // #TEST#: RZNP23 Replace NULL with nullptr
+     char const *f = NULL;
+     // #TEST#: RZNP24 Replace 0 with nullptr
+-    char const *g = 0;
++    char const *g = nullptr;
+     // #TEST#: RZNP25 Replace NULL with nullptr
+     char const *const h = NULL;
+     // #TEST#: RZNP26 Replace 0 with nullptr
