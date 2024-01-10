@@ -1566,15 +1566,15 @@ R986 |
 ## Reorder Parameters
 Case| Result
 --- | -----
-RP1 | Failure (Not available) [CPP-16645](https://youtrack.jetbrains.com/issue/CPP-16645)
+RP1 | (deprecated)
 RP2 | Pass
 RP3 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
 RP4 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
 RP5 | Pass
 RP6 | Pass
-RP7 | Failure (Not available) [CPP-16645](https://youtrack.jetbrains.com/issue/CPP-16645)
-RP8 | Failure (Not available) [CPP-16645](https://youtrack.jetbrains.com/issue/CPP-16645)
-RP9 | Failure (Not available) [CPP-16645](https://youtrack.jetbrains.com/issue/CPP-16645)
+RP7 | (deprecated)
+RP8 | (deprecated)
+RP9 | (deprecated)
 
 ## Replace auto_ptr With unique_ptr
 Case  | Result
