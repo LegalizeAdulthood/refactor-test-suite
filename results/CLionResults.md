@@ -548,7 +548,7 @@ MM34  | Failure [CPP-16587](https://youtrack.jetbrains.com/issue/CPP-16587)
 MM35  | Failure [CPP-1936](https://youtrack.jetbrains.com/issue/CPP-1936)
 MM36  | Pass
 
-## Remove Block Delimiter (Not available)
+## Remove Block Delimiter
 Case | Result
 ---- | ------
 RBD1 | Failure (not available)
