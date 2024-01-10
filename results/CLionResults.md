@@ -1728,6 +1728,8 @@ RTI6 | Pass
 RTI7 | Pass
 RTI8 | Pass
 RTI9 | Pass
+RTI10 |
+RTI11 |
 
 ## Replace Type With auto
 Case   | Result
