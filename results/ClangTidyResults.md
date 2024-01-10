@@ -33,17 +33,17 @@ AO2 | Pass
 AO3 | Pass
 AO4 | Pass
 AO5 | Pass
-AO6 | 
-AO7 | 
-AO8 | 
-AO9 | 
-AO10 | 
-AO11 | 
-AO12 | 
-AO13 | 
-AO14 | 
-AO15 | 
-AO16 | 
+AO6 | Pass
+AO7 | Pass
+AO8 | Pass
+AO9 | Pass
+AO10 | Pass
+AO11 | Pass
+AO12 | Pass
+AO13 | Pass
+AO14 | Pass
+AO15 | Pass
+AO16 | Pass
 
 ## Replace auto_ptr With unique_ptr
 Case | Result
