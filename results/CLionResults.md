@@ -1755,13 +1755,13 @@ RTWA18 | Pass
 RTWA19 | Pass
 RTWA20 | Pass
 RTWA21 | Pass
-RTWA22 | Pass
+RTWA22 | (deprecated)
 RTWA23 | Pass
-RTWA24 | Pass
+RTWA24 | (deprecated)
 RTWA25 | Pass
-RTWA26 | Pass
+RTWA26 | (deprecated)
 RTWA27 | Pass
-RTWA28 | Pass
+RTWA28 | (deprecated)
 RTWA29 | Pass
 RTWA30 | Pass
 RTWA31 | Pass
