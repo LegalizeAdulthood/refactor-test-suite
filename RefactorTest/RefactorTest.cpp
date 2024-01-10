@@ -19,8 +19,6 @@ int main(int argc, char *argv[])
         TestExtractMethod();
         TestFlattenConditional();
         TestInlineMacro();
-        TestInlineRecentAssignment();
-        TestInlineResult();
         TestInlineTypeAlias();
         TestInlineVariable();
         TestExtractVariable();

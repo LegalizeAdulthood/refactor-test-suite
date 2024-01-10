@@ -29,8 +29,6 @@ Not supported by CDT 9.4.2:
 * EP - Extract Parameter
 * FC - Flatten Conditional
 * IM - Inline Macro
-* IRA - Inline Recent Assignment
-* IR - Inline Result
 * IV - Inline Variable
 * MMS - Make Method Static - ER [Eclipse:352803](https://bugs.eclipse.org/bugs/show_bug.cgi?id=352803)
 * Pull Members Up

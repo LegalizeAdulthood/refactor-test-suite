@@ -13,8 +13,6 @@ extern void TestExtractFunction();
 extern void TestExtractMethod();
 extern void TestFlattenConditional();
 extern void TestInlineMacro();
-extern void TestInlineRecentAssignment();
-extern void TestInlineResult();
 extern void TestInlineTypeAlias();
 extern void TestInlineVariable();
 extern void TestExtractConstant();

@@ -18,8 +18,6 @@ add_library(refactor-test-cases STATIC
     ExtractVariable.cpp
     FlattenConditional.cpp
     InlineMacro.cpp
-    InlineRecentAssignment.cpp
-    InlineResult.cpp
     InlineTypeAlias.cpp
     InlineVariable.cpp
     MakeMethodStatic.cpp

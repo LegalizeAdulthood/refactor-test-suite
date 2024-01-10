@@ -31,8 +31,6 @@ std::vector<Test> g_tests{
     {"Extract Variable", "EXV"},
     {"Flatten Conditional", "FC"},
     {"Inline Macro", "IM"},
-    {"Inline Recent Assignment", "IRA", false},
-    {"Inline Result", "IR", false},
     {"Inline Type Alias", "ITA"},
     {"Inline Variable", "IV"},
     {"Make Method Static", "MMS"},

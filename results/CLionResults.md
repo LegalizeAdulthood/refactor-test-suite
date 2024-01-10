@@ -257,21 +257,6 @@ IM4  | Pass
 IM5  | Pass
 IM6  | Pass
 
-## Inline Recent Assignment
-Case | Result
----- | ------
-IRA1 | Failure (not available) [CPP-1923](https://youtrack.jetbrains.com/issue/CPP-1923)
-IRA2 | Failure (not available) [CPP-1923](https://youtrack.jetbrains.com/issue/CPP-1923)
-
-## Inline Result
-Case | Result
----- | ------
-IR1  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
-IR2  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
-IR3  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
-IR4  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
-IR5  | Failure [CPP-1924](https://youtrack.jetbrains.com/issue/CPP-1924)
-
 ## Inline Variable
 Case | Result
 ---- | ------
