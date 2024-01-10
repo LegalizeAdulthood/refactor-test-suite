@@ -35,9 +35,29 @@
       "name": "default",
       "displayName": "default",
       "configurePreset": "default",
+      "configuration": "Debug",
       "output": {
         "outputOnFailure": true
       }
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "default",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "default"
+        },
+        {
+          "type": "build",
+          "name": "default"
+        },
+        {
+          "type": "test",
+          "name": "default"
+        }
+      ]
     }
   ]
 }
