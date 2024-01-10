@@ -17,11 +17,13 @@ Notes:
 * **Create Setter Method** is performed with Code / Generate... / Setter.
 * **Flatten Conditional** is performed by repeatedly applying the action *Merge
 Nested Ifs*.
+* **Remove Block Delimiter** is performed by applying the action
+  *Remove braces from '...' statement*.
+* **Reorder Parameters** is performed with **Change Signature**.
 * **Replace If With Ternary** is performed by applying the action *Replace
 'if else' with '?:'*.
 * **Replace Ternary With If** is performed by applying the action *Replace
-'?;' with 'if else'*.
-* **Reorder Parameters** is performed with **Change Signature**.
+  '?;' with 'if else'*.
 * **Reverse Conditional** is performed with Invert Condition
 * **Create Multi Variable Declaration** is not available.
 
@@ -551,12 +553,12 @@ MM36  | Pass
 ## Remove Block Delimiter
 Case | Result
 ---- | ------
-RBD1 | Failure (not available)
-RBD2 | Failure (not available)
+RBD1 | Pass
+RBD2 | Pass
 RBD3 | Pass
-RBD4 | Failure (not available)
-RBD5 | Failure (not available)
-RBD6 | Failure (not available)
+RBD4 | Pass
+RBD5 | Pass
+RBD6 | Pass
 RBD7 | Pass
 RBD8 | Pass
 
