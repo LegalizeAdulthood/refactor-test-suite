@@ -2,34 +2,25 @@
 
 Home: [CLion](https://www.jetbrains.com/clion/)
 
-Version: CL-192.5438.15
+Version: 2023.3.2
 
 Notes:
 
-Methodology: Default suggestions are selected when refactoring.  Some
+* Methodology: Default suggestions are selected when refactoring.  Some
 refactorings can be performed successfully if suggestions are excluded.
-
-**Add Block Delimiter** is performed by selecting the code and performing
-Code / Surround With... / {}.
-
-**Add Parameter** is performed with **Change Signature**.
-
-**Create Setter Method** is performed with Code / Generate... / Setter.
-
-**Flatten Conditional** is performed by repeatedly applying the fixup Merge
-Nested Ifs.
-
-**Replace If With Ternary** is performed by applying the fixup Replace
-'if else' with '?:'.
-
-**Replace Ternary With If** is performed by applying the fixup Replace
-'?;' with 'if else'.
-
-**Reorder Parameters** is performed with **Change Signature**.
-
-**Reverse Conditional** is performed with Invert Condition
-
-**Create Multi Variable Declaration** is not available.
+* **Add Block Delimiter** is performed by placing the cursor on the enclosing
+  control statement and applying the action *Add braces to '...' statement*.
+* **Add Parameter** is performed with **Change Signature**.
+* **Create Setter Method** is performed with Code / Generate... / Setter.
+* **Flatten Conditional** is performed by repeatedly applying the action *Merge
+Nested Ifs*.
+* **Replace If With Ternary** is performed by applying the action *Replace
+'if else' with '?:'*.
+* **Replace Ternary With If** is performed by applying the action *Replace
+'?;' with 'if else'*.
+* **Reorder Parameters** is performed with **Change Signature**.
+* **Reverse Conditional** is performed with Invert Condition
+* **Create Multi Variable Declaration** is not available.
 
 <hr/>
 
