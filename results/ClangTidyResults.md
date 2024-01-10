@@ -154,8 +154,8 @@ RZNP23  | Pass
 RZNP24  | Pass
 RZNP25  | Pass
 RZNP26  | Pass
-RZNP27 | 
-RZNP28 | 
+RZNP27 | Pass
+RZNP28 | Pass
 
 ## Replace Type With auto
 Case | Result
