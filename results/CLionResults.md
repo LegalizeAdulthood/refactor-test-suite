@@ -48,24 +48,201 @@ AP4  | Pass
 AP5  | Pass
 AP6  | Pass
 AP7  | Pass
-AP8  | Pass
-AP9  | Pass
+AP8  | Failure (doesn't update definition)
+AP9  | Failure (doesn't update definition)
 AP10 | Pass
 AP11 | Pass
 AP12 | Pass
-AP13 | Pass
+AP13 | Failure (doesn't update declaration)
 AP14 | Pass
 AP15 | Pass
 AP16 | Pass
 AP17 | Pass
-AP18 | Pass
+AP18 | Failure (gets confused about default values)
 AP19 | Pass
 AP20 | Pass
-AP21 | Pass
+AP21 | Failure (gets confused about default values)
 AP22 | Pass
-AP23 | Pass
+AP23 | Failure (gets confused about default values)
 AP24 | Failure (doesn't update other template arguments) [CPP-16560](https://youtrack.jetbrains.com/issue/CPP-16560)
-AP25 | Failure (doesn't detect function, method or block) [CPP-16560](https://youtrack.jetbrains.com/issue/CPP-16560)
+AP25 | Failure (not available) [CPP-16560](https://youtrack.jetbrains.com/issue/CPP-16560)
+AP26 | Failure (doesn't update template related uses)
+AP27 | Pass
+AP28 | Pass
+AP29 | Failure (creates invalid code)
+AP30 | Pass
+AP31 | Pass
+AP32 | Pass
+AP33 | Pass
+AP34 | Pass
+AP35 | Pass
+AP36 | Pass
+AP37 | Pass
+AP38 | Pass
+AP39 | Pass
+AP40 | Pass
+AP41 | Pass
+AP42 | Failure (doesn't update definition)
+AP43 | Pass
+AP44 | Pass
+AP45 | Failure (not available)
+AP46 | Pass
+AP47 | Pass
+AP48 | Failure (not available)
+AP49 | Failure (doesn't update definition)
+AP50 | Pass
+AP51 | Failure (not available)
+AP52 | Pass
+AP53 | Pass
+AP54 | Pass
+AP55 | Pass
+AP56 | Pass
+AP57 | Failure (doesn't update definition)
+AP58 | Pass
+AP59 | Pass
+AP60 | Pass
+AP61 | Pass
+AP62 | Failure (not available)
+AP63 | Failure (doesn't update definition)
+AP64 | Pass
+AP65 | Failure (not available)
+AP66 | Pass
+AP67 | Pass
+AP68 | Pass
+AP69 | Pass
+AP70 | Pass
+AP71 | Pass
+AP72 | Pass
+AP73 | Pass
+AP74 | Pass
+AP75 | Pass
+AP76 | Failure (doesn't update definition)
+AP77 | Pass
+AP78 | Pass
+AP79 | Pass
+AP80 | Pass
+AP81 | Pass
+AP82 | Pass
+AP83 | Failure (changes unrelated code)
+AP84 | Pass
+AP85 | Failure (changes unrelated code)
+AP86 | Pass
+AP87 | Pass
+AP88 | Pass
+AP89 | Pass
+AP90 | Pass
+AP91 | Failure (drops default argument)
+AP92 | Failure (drops default argument)
+AP93 | Pass
+AP94 | Pass
+AP95 | Pass
+AP96 | Pass
+AP97 | Pass
+AP98 | Failure (drops default argument)
+AP99 | Failure (drops default argument)
+AP100 | Pass
+AP101 | Pass
+AP102 | Pass
+AP103 | Pass
+AP104 | Failure (drops default argument)
+AP105 | Failure (drops default argument)
+AP106 | Pass
+AP107 | Pass
+AP108 | Pass
+AP109 | Pass
+AP110 | Pass
+AP111 | Pass
+AP112 | Pass
+AP113 | Pass
+AP114 | Failure (drops default argument)
+AP115 | Failure (not available)
+AP116 | Failure (drops default argument)
+AP117 | Failure (not available)
+AP118 | Pass
+AP119 | Pass
+AP120 | Failure (not available)
+AP121 | Pass
+AP122 | Failure (not available)
+AP123 | Pass
+AP124 | Failure (drops default argument)
+AP125 | Failure (not available)
+AP126 | Failure (drops default argument)
+AP127 | Failure (not available)
+AP128 | Pass
+AP129 | Pass
+AP130 | Pass
+AP131 | Pass
+AP132 | Failure (changes unrelated code)
+AP133 | Pass
+AP134 | Failure (changes unrelated code)
+AP135 | Failure (changes unrelated code)
+AP136 | Failure (changes unrelated code)
+AP137 | Pass
+AP138 | Pass
+AP139 | Pass
+AP140 | Pass
+AP141 | Pass
+AP142 | Pass
+AP143 | Pass 
+AP144 | Failure (drops default argument)
+AP145 | Failure (not available)
+AP146 | Pass
+AP147 | Failure (drops default argument)
+AP148 | Failure (not available)
+AP149 | Pass
+AP150 | Pass
+AP151 | Pass
+AP152 | Pass
+AP153 | Pass
+AP154 | Pass
+AP155 | Pass
+AP156 | Pass
+AP157 | Pass
+AP158 | Pass
+AP159 | Pass
+AP160 | Pass
+AP161 | Pass
+AP162 | Pass
+AP163 | Pass
+AP164 | Pass
+AP165 | Pass
+AP166 | Pass
+AP167 | Pass
+AP168 | Pass
+AP169 | Pass
+AP170 | Pass
+AP171 | Pass
+AP172 | Pass
+AP173 | Failure (drops default argument)
+AP174 | Pass
+AP175 | Pass
+AP176 | Pass
+AP177 | Failure (drops default argument)
+AP178 | Pass
+AP179 | Pass
+AP180 | Pass
+AP181 | Pass
+AP182 | Pass
+AP183 | Pass
+AP184 | Failure (drops default argument)
+AP185 | Pass
+AP186 | Pass
+AP187 | Pass
+AP188 | Failure (drops default argument)
+AP189 | Pass
+AP190 | Pass
+AP191 | Pass
+AP192 | Pass
+AP193 | Pass
+AP194 | Failure (drops default argument)
+AP195 | Pass
+AP196 | Failure (drops default argument)
+AP197 | Pass
+AP198 | Pass
+AP199 | Failure (drops default argument)
+AP200 | Pass
+AP201 | Failure (drops default argument)
+AP202 | Pass  
 
 ## Change Signature
 Case | Result
