@@ -417,6 +417,7 @@ EM17 | Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
 EM18 | Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
 EM19 | Pass
 EM20 | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM21 |
 
 ## Extract Parameter
 Case | Result
