@@ -7,12 +7,12 @@ Version: 17.0.6
 * clang-tidy support may be integrated into an IDE, such as ReSharper for C++.
 * All tests performed by invoking clang-tidy from the command-line on a source file.
 * clang-tidy checks configured through `.clang-tidy` configuration file
-* **Add Block Delimiter** available through check [*readability-braces-around-statements*](https://clang.llvm.org/extra/clang-tidy/checks/readability-braces-around-statements.html)
-* **Add Override** available through check [*modernize-use-override*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-override.html)
-* **Replace `auto_ptr` With `unique_ptr`** available through check [*modernize-replace-auto-ptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-replace-auto-ptr.html)
-* **Replace Iterative For With Range For** available through check [*modernize-loop-convert*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-loop-convert.html)
-* **Replace `NULL`/`0` With `nullptr`** available through check [*modernize-use-nullptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-nullptr.html)
-* **Replace Type With `auto`** available through check [*modernize-use-auto*](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-auto.html)
+* **Add Block Delimiter** available through check [*readability-braces-around-statements*](https://clang.llvm.org/extra/clang-tidy/checks/readability/braces-around-statements.html)
+* **Add Override** available through check [*modernize-use-override*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/use-override.html)
+* **Replace `auto_ptr` With `unique_ptr`** available through check [*modernize-replace-auto-ptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/replace-auto-ptr.html)
+* **Replace Iterative For With Range For** available through check [*modernize-loop-convert*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/loop-convert.html)
+* **Replace `NULL`/`0` With `nullptr`** available through check [*modernize-use-nullptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/use-nullptr.html)
+* **Replace Type With `auto`** available through check [*modernize-use-auto*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/use-auto.html)
 
 ## Add Block Delimiter
 Case | Result
