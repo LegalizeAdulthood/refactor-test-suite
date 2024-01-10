@@ -1714,6 +1714,7 @@ RAW7  | Pass
 RAW8  | Pass
 RAW9  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
 RAW10 | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
+RAW11 |
 
 ## Replace Ternary With If
 Case | Result
