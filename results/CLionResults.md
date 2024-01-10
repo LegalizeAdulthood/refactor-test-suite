@@ -258,6 +258,40 @@ CS8  |  Pass
 CS9  |  Pass
 CS10 |  Pass
 CS11 |  Pass
+CS12 |
+CS13 |
+CS14 |
+CS15 |
+CS16 |
+CS17 |
+CS18 |
+CS19 |
+CS20 |
+CS21 |
+CS22 |
+CS23 |
+CS24 |
+CS25 |
+CS26 |
+CS27 |
+CS28 |
+CS29 |
+CS30 |
+CS31 |
+CS32 |
+CS33 |
+CS34 |
+CS35 |
+CS36 |
+CS37 |
+CS38 |
+CS39 |
+CS40 |
+CS41 |
+CS42 |
+CS43 |
+CS44 |
+CS45 |
 
 ## Create Method Stub
 Case | Result
