@@ -6,10 +6,13 @@ Version: 2023.3.2
 
 Notes:
 
-* Methodology: Default suggestions are selected when refactoring.  Some
-refactorings can be performed successfully if suggestions are excluded.
+* Methodology:
+  * Default suggestions are selected when refactoring.
+  * Some refactorings can be performed successfully if suggestions are excluded.
+  * If a refactoring is performed via clang-tidy those results are omitted.
 * **Add Block Delimiter** is performed by placing the cursor on the enclosing
   control statement and applying the action *Add braces to '...' statement*.
+* **Add Override** can be performed through clang-tidy integration.
 * **Add Parameter** is performed with **Change Signature**.
 * **Create Setter Method** is performed with Code / Generate... / Setter.
 * **Flatten Conditional** is performed by repeatedly applying the action *Merge
@@ -34,15 +37,6 @@ ABD4 |  Pass
 ABD5 |  Pass
 ABD6 |  Pass
 ABD7 |  Pass
-
-## Add Override
-Case | Result
----- | ------
-AO1  | Pass
-AO2  | Pass
-AO3  | Pass
-AO4  | Pass
-AO5  | Pass
 
 ## Add Parameter
 Case | Result
