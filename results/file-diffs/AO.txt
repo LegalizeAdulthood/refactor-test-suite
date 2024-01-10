@@ -1,0 +1,104 @@
+diff --git a/RefactorTest/AddOverride.cpp b/RefactorTest/AddOverride.cpp
+index 267be92..528748f 100644
+--- a/RefactorTest/AddOverride.cpp
++++ b/RefactorTest/AddOverride.cpp
+@@ -36,23 +36,23 @@ public:
+     }
+ 
+     // #TEST#: AO8 Add override
+-    virtual ~Implementation()
++    ~Implementation() override
+     {
+     }
+ 
+     // #TEST#: AO1 Add override
+-    virtual void Method()
++    void Method() override
+     {
+     }
+ 
+     // #TEST#: AO2 Add override
+-    virtual int Getter() const
++    int Getter() const override
+     {
+         return value_;
+     }
+ 
+     // #TEST#: AO3 Add override
+-    virtual void Setter(int value)
++    void Setter(int value) override
+     {
+         value_ = value;
+     }
+@@ -64,27 +64,27 @@ public:
+     }
+ 
+     // #TEST#: AO9 Add override
+-    virtual void LValueRef() &
++    void LValueRef() & override
+     {
+     }
+ 
+     // #TEST#: AO10 Add override
+-    virtual void RValueRef() &&
++    void RValueRef() && override
+     {
+     }
+ 
+     // #TEST#: AO11 Add override
+-    virtual void NoExcept() noexcept
++    void NoExcept() noexcept override
+     {
+     }
+ 
+     // #TEST#: AO12 Add override
+-    virtual void Volatile() volatile
++    void Volatile() volatile override
+     {
+     }
+ 
+     // #TEST#: AO13 Add override
+-    virtual void ConstVolatile() const volatile
++    void ConstVolatile() const volatile override
+     {
+     }
+ 
+@@ -129,32 +129,32 @@ public:
+     }
+ 
+     // #TEST#: AO5 Add override
+-    virtual void Method()
++    void Method() override
+     {
+     }
+ 
+     // #TEST#: AO6 Add override
+-    virtual void LValueRef() &
++    void LValueRef() & override
+     {
+     }
+ 
+     // #TEST#: AO7 Add override
+-    virtual void RValueRef() &&
++    void RValueRef() && override
+     {
+     }
+ 
+     // #TEST#: AO14 Add override
+-    virtual void NoExcept() noexcept
++    void NoExcept() noexcept override
+     {
+     }
+ 
+     // #TEST#: AO15 Add override
+-    virtual void Volatile() volatile
++    void Volatile() volatile override
+     {
+     }
+ 
+     // #TEST#: AO16 Add override
+-    virtual void ConstVolatile() const volatile
++    void ConstVolatile() const volatile override
+     {
+     }
+ };
