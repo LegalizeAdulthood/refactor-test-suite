@@ -57,73 +57,73 @@ RAWU4 | Pass
 Case | Result
 ---- | ------
 RIRF1 | Pass
-RIRF2 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF3 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF2 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF3 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF4 | Pass
-RIRF5 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF6 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF5 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF6 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF7 | Pass
-RIRF8 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
-RIRF9 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF8 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF9 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF10 | Pass
-RIRF11 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF12 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF11 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF12 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF13 | Pass
-RIRF14 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF15 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF14 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF15 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF16 | Pass
-RIRF17 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF18 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF17 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF18 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF19 | Pass
-RIRF20 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
-RIRF21 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF20 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF21 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF22 | Pass
-RIRF23 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF24 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF23 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF24 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF25 | Pass
-RIRF26 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF27 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF26 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF27 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF28 | Pass
-RIRF29 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF30 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF29 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF30 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF31 | Pass
-RIRF32 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF33 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF32 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF33 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF34 | Pass
-RIRF35 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF36 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF35 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF36 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF37 | Pass
-RIRF38 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF39 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF38 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF39 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF40 | Pass
-RIRF41 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
-RIRF42 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF41 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF42 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF43 | Pass
-RIRF44 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF45 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF44 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF45 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF46 | Pass
-RIRF47 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
-RIRF48 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
-RIRF49 | Failure (substitutes internal typedefs) [36688](https://bugs.llvm.org/show_bug.cgi?id=36688)
-RIRF50 | Failure (doesn't recognize caching end compare) [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
-RIRF51 | Failure (doesn't recognize caching end compare, reverse loop) [22196](http://llvm.org/bugs/show_bug.cgi?id=22196), [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
-RIRF52 | Failure (doesn't recognize caching end compare) [22196](http://llvm.org/bugs/show_bug.cgi?id=22196)
-RIRF53 | Failure (doesn't recognize caching end compare, reverse loop) [22196](http://llvm.org/bugs/show_bug.cgi?id=22196), [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF47 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF48 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF49 | Failure (substitutes internal typedefs) [36688](https://llvm.org/show_bug.cgi?id=36688)
+RIRF50 | Failure (doesn't recognize caching end compare) [22570](https://github.com/llvm/llvm-project/issues/22570)
+RIRF51 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF52 | Failure (doesn't recognize caching end compare) [22570](https://github.com/llvm/llvm-project/issues/22570)
+RIRF53 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF54 | Pass
-RIRF55 | Failure (doesn't recognize caching end compare, reverse loop) [22196](http://llvm.org/bugs/show_bug.cgi?id=22196), [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF55 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF56 | Pass
 RIRF57 | Pass
-RIRF58 | Failure (doesn't recognize 0..N-1 loop) [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF58 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
 RIRF59 | Pass
 RIRF60 | Pass
-RIRF61 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF61 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF62 | Pass
 RIRF63 | Pass
-RIRF64 | Failure (doesn't recognize caching end compare, 0..N-1 loop) [22196](http://llvm.org/bugs/show_bug.cgi?id=22196), [22194](http://llvm.org/bugs/show_bug.cgi?id=22194)
+RIRF64 | Failure (doesn't recognize caching end compare, 0..N-1 loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22568](https://github.com/llvm/llvm-project/issues/22568)
 RIRF65 | Pass
 RIRF66 | Pass
-RIRF67 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
-RIRF68 | Failure (doesn't recognize reverse loop) [22195](http://llvm.org/bugs/show_bug.cgi?id=22195)
+RIRF67 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF68 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 
 ## Replace NULL/0 With nullptr
 Case | Result
