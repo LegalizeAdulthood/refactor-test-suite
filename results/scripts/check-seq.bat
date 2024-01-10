@@ -9,7 +9,7 @@ if "X%prefix%"=="X" goto badargs
 if "X%i%"=="X" goto badargs
 :next
 if not exist results\diffs\%prefix%%i%.txt goto no-such-diff
-type c:\tmp\oneline.txt
+echo.
 echo Perform test %prefix%%i%
 pause
 call check %prefix%%i%
