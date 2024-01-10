@@ -512,11 +512,6 @@ MM34  | Failure [CPP-16587](https://youtrack.jetbrains.com/issue/CPP-16587)
 MM35  | Failure [CPP-1936](https://youtrack.jetbrains.com/issue/CPP-1936)
 MM36  | Pass
 
-## Optimize Namespace References
-Case | Result
----- | -----
-ONR1 | Pass
-
 ## Remove Block Delimiter (Not available)
 Case | Result
 ---- | ------
@@ -528,6 +523,11 @@ RBD5 | Failure (not available)
 RBD6 | Failure (not available)
 RBD7 | Pass
 RBD8 | Pass
+
+## Remove Unused Includes
+Case | Result
+---- | -----
+RUI1 | Pass
 
 ## Remove Unused Parameter
 Case | Result
