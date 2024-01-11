@@ -2,11 +2,10 @@
 
 Home: [Visual AssistX](http://www.wholetomato.com/)
 
-Version: 10.5.1738.0, 10.8.2043.0
+Version: 10.9.2508.0
 
 Notes:
 
-* Version 10.8.2043.0 was used for Move Implementation to Source File testing.
 * Visual AssistX performs Create Method Stub with Create Implementation From Usage.
 * Visual AssistX provides the following [refactorings](https://www.wholetomato.com/features/feature-refactoring):
   * Change Signature

@@ -2,8 +2,7 @@
 
 Home: [ReSharper for C++](http://www.jetbrains.com/resharper-cpp/)
 
-Version: JetBrains ReSharper 2023.3.2
-Build 233.0.20231218.91950 built on 2023-12-18
+Version: 2023.3.2
 
 Notes:
 * `clang-tidy` is integrated with ReSharper for C++ and provides quick fixes for issues found by clang-tidy.

@@ -25,15 +25,17 @@ The original release of the test suite is described
 
 ## [Summary Results](SummaryResults.md)
 
-## Current Products
+Results for tools with significant testing.
 
-- [CLion CL-192.5438.15](results/CLionResults.md)
-- [clang-tidy 6.0.0](results/ClangTidyResults.md)
-- [ReSharper for C++ 2017.3.2](results/ReSharperCppResults.md)
-- [Visual AssistX 10.5.1738.0](results/VisualAssistXResults.md)
-- [Visual Studio 2022](results/VisualStudioResults.md)
+- [CLion 2023.3.2](results/CLionResults.md)
+- [clang-tidy 17.0.6](results/ClangTidyResults.md)
+- [ReSharper for C++ 2023.3.2](results/ReSharperCppResults.md)
+- [Visual AssistX 10.9.2508.0](results/VisualAssistXResults.md)
+- [Visual Studio 2022, 17.7.5](results/VisualStudioResults.md)
 
-## Work in Progress
+## [Preliminary Results](PreliminaryResults.md)
+
+Preliminary results for tools with minimal testing.
 
 - [Apple Xcode](results/AppleXcodeResults.md)
 - [Eclipse CDT](results/EclipseCDTResults.md)
