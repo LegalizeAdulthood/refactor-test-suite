@@ -302,8 +302,8 @@ Case | Result
 CMS1  | Pass
 CMS2  | Pass
 CMS3  | Pass
-CMS4  | Failure [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
-CMS5  | Failure [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS4  | Failure (doesn't create default c'tor) [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS5  | Failure (doesn't create default c'tor) [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
 CMS6  | Pass
 CMS7  | Pass
 CMS8  | Failure (not available) [CPP-1908](https://youtrack.jetbrains.com/issue/CPP-1908)
@@ -390,11 +390,11 @@ EXF10 | Pass
 EXF11 | Pass
 EXF12 | Pass
 EXF13 | Pass
-EXF14 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF15 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF16 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF17 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF18 | Failure [CPP-1916](https://youtrack.jetbrains.com/issue/CPP-1916)
+EXF14 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF15 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF16 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF17 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF18 | Failure (changes member ptr to fn ptr) [CPP-1916](https://youtrack.jetbrains.com/issue/CPP-1916)
 EXF19 | Pass
 
 ## Extract Method
@@ -1571,8 +1571,8 @@ Case| Result
 --- | -----
 RP1 | (deprecated)
 RP2 | Pass
-RP3 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-RP4 | Failure [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP3 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP4 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
 RP5 | Pass
 RP6 | Pass
 RP7 | (deprecated)
