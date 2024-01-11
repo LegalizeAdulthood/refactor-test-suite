@@ -12,6 +12,6 @@ add_library(test-cases STATIC
 set_target_properties(test-cases PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
-    FOLDER Libs
+    FOLDER Tools/Libs
 )
 target_include_directories(test-cases PUBLIC .)
