@@ -26,6 +26,7 @@ Nested Ifs*.
   '?;' with 'if else'*.
 * **Reverse Conditional** is performed with Invert Condition
 * **Create Multi Variable Declaration** is not available.
+* For **Rename** only code usages were renamed, if prompted.
 
 <hr/>
 
@@ -589,14 +590,14 @@ R8   | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R9   | Pass
 R10  | Pass
 R11  | Pass
-R12  | Failure (not available) [CPP-1940](https://youtrack.jetbrains.com/issue/CPP-1940)
+R12  | Failure (doesn't select all instances, selects unrelated instances)
 R13  | Pass
 R14  | Pass
 R15  | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R16  | Pass
 R17  | Pass
 R18  | Pass
-R19  | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R19  | Failure (selects unrelated instances)
 R20  | Pass
 R21  | Pass
 R22  | Pass
@@ -609,18 +610,18 @@ R28  | Pass
 R29  | Pass
 R30  | Pass
 R31  | Pass
-R32  | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
-R33  | Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R32  | Failure (selects unrelated instances)
+R33  | Failure (selects unrelated instances)
 R34  | Pass
 R35  | Pass
-R36  | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R36  | Failure (doesn't select all instances, selects unrelated instances)
 R37  | Pass
 R38  | Pass
 R39  | Pass
 R40  | Pass
 R41  | Pass
 R42  | Pass
-R43  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R43  | Pass (unrelated instances selected)
 R44  | Pass
 R45  | Pass
 R46  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
@@ -675,7 +676,7 @@ R94  | Pass
 R95  | Pass
 R96  | Pass
 R97  | Pass
-R98  | Failure [CPP-1941](https://youtrack.jetbrains.com/issue/CPP-1941)
+R98  | Pass
 R99  | Pass
 R100 | Pass
 R101 | Pass
@@ -704,7 +705,7 @@ R123 | Pass
 R124 | Pass
 R125 | Pass
 R126 | Pass
-R127 | Failure [CPP-16647](https://youtrack.jetbrains.com/issue/CPP-16647)
+R127 | Failure (creates invalid code) [CPP-16647](https://youtrack.jetbrains.com/issue/CPP-16647)
 R128 | Pass
 R129 | Pass
 R130 | Pass
@@ -715,7 +716,7 @@ R134 | Pass
 R135 | Pass
 R136 | Pass
 R137 | Pass
-R138 | Failure [CPP-16647](https://youtrack.jetbrains.com/issue/CPP-16647)
+R138 | Failure (creates invalid code) [CPP-16647](https://youtrack.jetbrains.com/issue/CPP-16647)
 R139 | Pass
 R140 | Pass
 R141 | Pass
@@ -734,12 +735,12 @@ R153 | Pass
 R154 | Pass
 R155 | Pass
 R156 | Pass
-R157 | Failure [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
-R158 | Failure [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R157 | Failure (renames unrelated instances) [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R158 | Failure (renames unrelated instances) [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
 R159 | Pass
 R160 | Pass
 R161 | Pass
-R162 | Failure [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R162 | Failure (renames unrelated instances) [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
 R163 | Pass
 R164 | Pass
 R165 | Pass
@@ -801,10 +802,10 @@ R220 | Pass
 R221 | Pass
 R222 | Pass
 R223 | Pass
-R224 | Failure [CPP-16658](https://youtrack.jetbrains.com/issue/CPP-16658)
+R224 | Pass
 R225 | Pass
-R226 | Failure [CPP-16658](https://youtrack.jetbrains.com/issue/CPP-16658)
-R227 | Failure [CPP-16658](https://youtrack.jetbrains.com/issue/CPP-16658)
+R226 | Pass
+R227 | Pass
 R228 | Pass
 R229 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R230 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
@@ -837,9 +838,9 @@ R256 | Pass
 R257 | Pass
 R258 | Pass
 R259 | Pass
-R260 | Failure [CPP-16683](https://youtrack.jetbrains.com/issue/CPP-16683)
+R260 | Pass
 R261 | Pass
-R262 | Failure [CPP-16683](https://youtrack.jetbrains.com/issue/CPP-16683)
+R262 | Pass
 R263 | Pass
 R264 | Pass
 R265 | Pass
@@ -859,7 +860,7 @@ R278 | Pass
 R279 | Pass
 R280 | Pass
 R281 | Pass
-R282 | Failure [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R282 | Pass
 R283 | Pass
 R284 | Pass
 R285 | Pass
@@ -1009,7 +1010,7 @@ R428 | Pass
 R429 | Pass
 R430 | Pass
 R431 | Pass
-R432 | Failure [CPP-16690](https://youtrack.jetbrains.com/issue/CPP-16690)
+R432 | Pass
 R433 | Pass
 R434 | Pass
 R435 | Pass
@@ -1081,8 +1082,8 @@ R500 | Pass
 R501 | Pass
 R502 | Pass
 R503 | Pass
-R504 | Failure [CPP-16696](https://youtrack.jetbrains.com/issue/CPP-16696)
-R505 | Failure [CPP-16696](https://youtrack.jetbrains.com/issue/CPP-16696)
+R504 | Pass
+R505 | Pass
 R506 | Pass
 R507 | Pass
 R508 | Pass
@@ -1099,44 +1100,44 @@ R518 | Pass
 R519 | Pass
 R520 | Pass
 R521 | Pass
-R522 | Failure [CPP-16696](https://youtrack.jetbrains.com/issue/CPP-16696)
+R522 | Pass
 R523 | Pass
 R524 | Pass
 R525 | Pass
 R526 | Pass
 R527 | Pass
 R528 | Pass
-R529 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
-R530 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R529 | Pass
+R530 | Pass
 R531 | Pass
-R532 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
-R533 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R532 | Pass
+R533 | Pass
 R534 | Pass
-R535 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R535 | Pass
 R536 | Pass
-R537 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R537 | Pass
 R538 | Pass
-R539 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R539 | Pass
 R540 | Pass
-R541 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R541 | Pass
 R542 | Pass
 R543 | Pass
-R544 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R544 | Pass
 R545 | Pass
 R546 | Pass
-R547 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R547 | Pass
 R548 | Pass
 R549 | Pass
-R550 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
-R551 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R550 | Pass
+R551 | Pass
 R552 | Pass
-R553 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R553 | Pass
 R554 | Pass
-R555 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R555 | Pass
 R556 | Pass
-R557 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R557 | Pass
 R558 | Pass
-R559 | Failure [CPP-16699](https://youtrack.jetbrains.com/issue/CPP-16699)
+R559 | Pass
 R560 | Pass
 R561 | Pass
 R562 | (deprecated)
