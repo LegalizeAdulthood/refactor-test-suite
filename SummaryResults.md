@@ -1,41 +1,42 @@
 # Summary Results
 
 Refactoring | [Xcode](results/AppleXcodeResults.md) | [clang-tidy](results/ClangTidyResults.md) | [CLion](results/CLionResults.md) | [Eclipse CDT](results/EclipseCDTResults.md) | [Qt Creator](results/QtCreatorResults.md) | [ReSharper for C++](results/ReSharperCppResults.md) | [Visual AssistX](results/VisualAssistXResults.md) | [Visual Studio](results/VisualStudioResults.md)
------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | -----
-Add Block Delimiter | n/a | 100% (7/7) | 100% (7/7) | n/a | n/a | 0% (0/7) | n/a | n/a
-Add Override | n/a | 100% (5/5) | 100% (5/5) | n/a | n/a | 100% (5/5) | n/a | n/a
-Add Parameter | n/a | n/a | 92% (23/25) | n/a | n/a | 95.84% (23/24) | n/a | 72% (18/25)
-Change Signature | n/a | n/a | 100% (11/11) | n/a | n/a | 100% (11/11) | 0% (0/1) | 45.46% (5/11)
-Create Method Stub | n/a | n/a | 81.82% (18/22) | n/a | n/a | 72.73% (16/22) | n/a | n/a
-Create Multi-Variable Declaration | n/a | n/a | n/a | n/a | n/a | 91.67% (11/12) | n/a | n/a
-Create Overload | n/a | n/a | n/a | 100% (1/1) | n/a | n/a | n/a | n/a
-Create Setter Method | n/a | n/a | 96.77% (30/31) | 100% (1/1) | n/a | n/a | n/a | n/a
-Extract Constant | n/a | n/a | 69.23% (9/13) | 100% (1/1) | n/a | n/a | n/a | n/a
-Extract Function | n/a | n/a | 73.69% (14/19) | 100% (2/2) | n/a | 100% (19/19) | 0% (0/20) | 78.95% (15/19)
-Extract Method | n/a | n/a | 20% (4/20) | 100% (1/1) | n/a | 100% (20/20) | 45% (9/20) | 85% (17/20)
-Extract Parameter | n/a | n/a | 50% (3/6) | n/a | n/a | n/a | n/a | n/a
-Extract Variable | n/a | n/a | 66.67% (4/6) | 100% (1/1) | n/a | 100% (6/6) | n/a | n/a
-Flatten Conditional | n/a | n/a | 100% (1/1) | n/a | n/a | 0% (0/1) | n/a | n/a
-Inline Macro | n/a | n/a | 83.34% (5/6) | n/a | n/a | 83.34% (5/6) | n/a | n/a
-Inline Recent Assignment | n/a | n/a | 0% (0/2) | n/a | n/a | n/a | n/a | n/a
-Inline Result | n/a | n/a | 0% (0/5) | n/a | n/a | n/a | n/a | n/a
-Inline Variable | n/a | n/a | 16.67% (2/12) | n/a | n/a | 100% (12/12) | n/a | n/a
-Make Method Static | n/a | n/a | 66.67% (2/3) | n/a | n/a | 0% (0/3) | n/a | n/a
-Move Implementation to Source File | n/a | n/a | 92.31% (24/26) | 100% (1/1) | n/a | 100% (26/26) | 88.47% (23/26) | 88.47% (23/26)
-Move Method | n/a | n/a | 50% (18/36) | 100% (1/1) | n/a | n/a | n/a | n/a
-Optimize Namespace References | n/a | n/a | 100% (1/1) | 100% (1/1) | n/a | n/a | n/a | n/a
-Remove Block Delimiter | n/a | n/a | 37.5% (3/8) | n/a | n/a | 100% (8/8) | n/a | n/a
-Remove Unused Parameter | n/a | n/a | 75% (3/4) | n/a | n/a | 50% (2/4) | n/a | n/a
-Rename | 100% (1/1) | n/a | 89.42% (541/605) | 83.34% (10/12) | 0% (0/2) | 98.18% (591/602) | 75% (72/96) | 75.92% (457/602)
-Reorder Parameters | n/a | n/a | 33.33% (3/9) | n/a | n/a | 11.12% (1/9) | n/a | 22.23% (2/9)
-Replace If With Ternary | n/a | n/a | 66.67% (6/9) | n/a | n/a | 66.67% (6/9) | n/a | n/a
-Replace Iterative For With Range For | n/a | 36.77% (25/68) | 38.23% (26/68) | n/a | n/a | n/a | n/a | n/a
-Replace NULL/0 With nullptr | n/a | 100% (26/26) | 100% (26/26) | n/a | n/a | 100% (28/28) | n/a | n/a
-Replace String Literal With Raw String Literal | n/a | n/a | 20% (2/10) | n/a | n/a | n/a | n/a | 100% (10/10)
-Replace Ternary With If | n/a | n/a | 77.78% (7/9) | n/a | n/a | 36.37% (4/11) | n/a | n/a
-Replace Type With auto | n/a | 100% (32/32) | 100% (32/32) | n/a | n/a | 100% (29/29) | n/a | n/a
-Replace auto_ptr With unique_ptr | n/a | 100% (4/4) | 100% (4/4) | n/a | n/a | n/a | n/a | n/a
-Reverse Conditional | n/a | n/a | 100% (8/8) | n/a | n/a | 100% (8/8) | n/a | n/a
-Simplify Boolean Expression | n/a | n/a | 100% (13/13) | n/a | n/a | n/a | n/a | n/a
-Split Initialization From Declaration | n/a | n/a | 81.82% (9/11) | n/a | n/a | n/a | n/a | n/a
-Split Multi-Variable Declaration | n/a | n/a | 100% (19/19) | n/a | n/a | 84.22% (16/19) | n/a | n/a
+----------- | ----- | ---------- | ----- | ----------- | ---------- | ----------------- | -------------- | -------------
+Add Block Delimiter | (n/a) | 100% (7/7) | 100% (7/7) | (n/a) | (n/a) | 100% (7/7) | (n/a) | 100% (7/7)
+Add Override | (n/a) | 100% (16/16) | (n/a) | (n/a) | (n/a) | 100% (16/16) | (n/a) | (n/a)
+Add Parameter | (n/a) | (n/a) | 73.27% (202/202) | (n/a) | (n/a) | 78.71% (202/202) | (n/a) | 58.91% (202/202)
+Change Signature | (n/a) | (n/a) | 100% (11/45) | (n/a) | (n/a) | 100% (45/45) | 64.44% (45/45) | 35.56% (45/45)
+Create Method Stub | (n/a) | (n/a) | 77.27% (22/22) | (n/a) | (n/a) | 86.36% (22/22) | (n/a) | (n/a)
+Create Multi-Variable Declaration | (n/a) | (n/a) | (n/a) | (n/a) | (n/a) | 91.67% (12/12) | (n/a) | (n/a)
+Create Overload | (n/a) | (n/a) | (n/a) | 100% (1/56) | (n/a) | (n/a) | (n/a) | (n/a)
+Create Setter Method | (n/a) | (n/a) | 96.77% (31/31) | 100% (1/31) | (n/a) | (n/a) | (n/a) | (n/a)
+Extract Constant | (n/a) | (n/a) | 84.62% (13/13) | 100% (1/13) | (n/a) | (n/a) | (n/a) | (n/a)
+Extract Function | (n/a) | (n/a) | 73.68% (19/19) | 100% (2/19) | (n/a) | 100% (19/19) | 36.84% (19/19) | 63.16% (19/19)
+Extract Method | (n/a) | (n/a) | 20% (20/21) | 100% (1/21) | (n/a) | 100% (21/21) | 57.14% (21/21) | 85.71% (21/21)
+Extract Parameter | (n/a) | (n/a) | 33.33% (6/6) | (n/a) | (n/a) | (n/a) | (n/a) | (n/a)
+Extract Variable | (n/a) | (n/a) | 66.67% (6/6) | (n/a) | (n/a) | 100% (6/6) | (n/a) | (n/a)
+Flatten Conditional | (n/a) | (n/a) | 100% (1/1) | (n/a) | (n/a) | 0% (1/1) | (n/a) | (n/a)
+Inline Macro | (n/a) | (n/a) | 83.33% (6/7) | (n/a) | (n/a) | 85.71% (7/7) | (n/a) | (n/a)
+Inline Type Alias | (n/a) | (n/a) | (n/a) | (n/a) | (n/a) | 100% (13/13) | (n/a) | (n/a)
+Inline Variable | (n/a) | (n/a) | 16.67% (12/12) | (n/a) | (n/a) | 100% (12/12) | (n/a) | (n/a)
+Make Method Static | (n/a) | (n/a) | 66.67% (3/3) | (n/a) | (n/a) | 0% (3/3) | (n/a) | (n/a)
+Move Implementation to Source File | (n/a) | (n/a) | 92.31% (26/26) | 100% (1/26) | (n/a) | 100% (26/26) | 19.23% (26/26) | 88.46% (26/26)
+Move Method | (n/a) | (n/a) | 50% (36/36) | 100% (1/36) | (n/a) | (n/a) | (n/a) | (n/a)
+Remove Block Delimiter | (n/a) | (n/a) | 100% (8/8) | (n/a) | (n/a) | 100% (8/8) | (n/a) | (n/a)
+Remove Unused Includes | (n/a) | (n/a) | 100% (1/1) | (n/a) | (n/a) | 100% (1/1) | (n/a) | (n/a)
+Remove Unused Parameter | (n/a) | (n/a) | 75% (4/4) | (n/a) | (n/a) | 50% (4/4) | (n/a) | (n/a)
+Rename | 100% (1/986) | (n/a) | 93.72% (605/986) | 83.33% (12/986) | 0% (2/986) | 98.17% (986/986) | 67.44% (986/986) | 90.26% (986/986)
+Reorder Parameters | (n/a) | (n/a) | 33.33% (9/9) | (n/a) | (n/a) | 44.44% (9/9) | (n/a) | 0% (9/9)
+Replace auto With Type | (n/a) | (n/a) | (n/a) | (n/a) | (n/a) | 46.67% (30/30) | (n/a) | (n/a)
+Replace auto_ptr With unique_ptr | (n/a) | 100% (4/4) | 100% (4/4) | (n/a) | (n/a) | (n/a) | (n/a) | (n/a)
+Replace If With Ternary | (n/a) | (n/a) | 66.67% (9/9) | (n/a) | (n/a) | 66.67% (9/9) | (n/a) | (n/a)
+Replace Iterative For With Range For | (n/a) | 36.76% (68/68) | 38.24% (68/68) | (n/a) | (n/a) | (n/a) | (n/a) | (n/a)
+Replace NULL/0 With nullptr | (n/a) | 100% (28/28) | 100% (28/28) | (n/a) | (n/a) | 100% (28/28) | (n/a) | (n/a)
+Replace String Literal With Raw String Literal | (n/a) | (n/a) | 20% (10/11) | (n/a) | (n/a) | 90.91% (11/11) | (n/a) | 100% (11/11)
+Replace Ternary With If | (n/a) | (n/a) | 77.78% (9/11) | (n/a) | (n/a) | 100% (11/11) | (n/a) | (n/a)
+Replace typedef With Type Alias | (n/a) | (n/a) | (n/a) | (n/a) | (n/a) | 100% (7/7) | (n/a) | (n/a)
+Replace Type With auto | (n/a) | 87.5% (32/32) | 87.5% (32/32) | (n/a) | (n/a) | 87.5% (32/32) | (n/a) | (n/a)
+Reverse Conditional | (n/a) | (n/a) | 100% (8/8) | (n/a) | (n/a) | 100% (8/8) | (n/a) | (n/a)
+Simplify Boolean Expression | (n/a) | 46.15% (13/13) | 100% (13/13) | (n/a) | (n/a) | (n/a) | (n/a) | (n/a)
+Split Initialization From Declaration | (n/a) | (n/a) | 81.82% (11/11) | (n/a) | (n/a) | 100% (11/11) | (n/a) | (n/a)
+Split Multi-Variable Declaration | (n/a) | (n/a) | 100% (19/19) | (n/a) | (n/a) | 84.21% (19/19) | (n/a) | (n/a)
