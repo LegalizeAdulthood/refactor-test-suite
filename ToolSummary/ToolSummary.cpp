@@ -5,6 +5,7 @@
 #include <filesystem>
 #include <iomanip>
 #include <iostream>
+#include <map>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -15,6 +16,14 @@ namespace
 {
 
 std::vector<testCases::ToolResults> g_toolResults;
+std::map<std::string, const char *> g_toolTitles = {{"AppleXcode", "Xcode"},
+                                                    {"ClangTidy", "clang-tidy"},
+                                                    {"CLion", "CLion"},
+                                                    {"EclipseCDT", "Eclipse CDT"},
+                                                    {"QtCreator", "Qt Creator"},
+                                                    {"ReSharperCpp", "ReSharper for C++"},
+                                                    {"VisualAssistX", "Visual AssistX"},
+                                                    {"VisualStudio", "Visual Studio"}};
 
 void scanResultsDirectory(std::filesystem::path dir)
 {
@@ -41,7 +50,7 @@ struct ToolSummary
     std::vector<testCases::TestSummary> summary;
 };
 
-inline std::string percent(int numerator, int denominator)
+std::string percent(int numerator, int denominator)
 {
     std::ostringstream str;
     const double fraction = 100.0 * double(numerator) / double(denominator);
@@ -64,8 +73,14 @@ void reportSummary()
     std::string separator(11, '-');    // len("Refactoring") == 11
     for (const ToolSummary &tool : summary)
     {
-        std::cout << " | " << tool.name;
-        separator += " | " + std::string(tool.name.size(), '-');
+        auto it = g_toolTitles.find(tool.name);
+        if (it == g_toolTitles.end())
+        {
+            throw std::runtime_error("Unknown tool " + tool.name);
+        }
+        const std::string toolName = it->second;
+        std::cout << " | [" << toolName << "](results/" << tool.name << "Results.md)";
+        separator += " | " + std::string(toolName.size(), '-');
     }
     std::cout << '\n' << separator << '\n';
 
