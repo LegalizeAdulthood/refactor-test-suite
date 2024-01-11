@@ -5,7 +5,7 @@ endif()
 foreach(result 
         #AppleXcode
         ClangTidy
-        #CLion
+        CLion
         #EclipseCDT
         #QtCreator
         ReSharperCpp
