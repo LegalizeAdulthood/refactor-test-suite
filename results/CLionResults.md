@@ -366,11 +366,11 @@ EC3  | Pass
 EC4  | Pass
 EC5  | Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
 EC6  | Pass
-EC7  | Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
+EC7  | Pass
 EC8  | Pass
 EC9  | Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
 EC10 | Pass
-EC11 | Failure [CPP-1929](https://youtrack.jetbrains.com/issue/CPP-1929), [CPP-1930](https://youtrack.jetbrains.com/issue/CPP-1930)
+EC11 | Pass
 EC12 | Pass
 EC13 | Pass
 
