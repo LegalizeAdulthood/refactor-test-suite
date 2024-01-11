@@ -11,7 +11,7 @@
 #include <utility>
 #include <vector>
 
-namespace testDiffs
+namespace
 {
 
 std::vector<std::string> g_diffs;
@@ -76,7 +76,7 @@ int main(const std::vector<std::string_view> &args)
     }
 }
 
-}    // namespace testDiffs
+}    // namespace
 
 int main(int argc, char *argv[])
 {
@@ -86,5 +86,5 @@ int main(int argc, char *argv[])
         args.emplace_back(argv[i]);
     }
 
-    return testDiffs::main(args);
+    return main(args);
 }

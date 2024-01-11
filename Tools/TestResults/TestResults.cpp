@@ -7,7 +7,7 @@
 #include <string_view>
 #include <vector>
 
-namespace testResults
+namespace
 {
 
 bool reportResults(const testCases::ToolResults &result, std::ostream &out)
@@ -56,7 +56,7 @@ int main(const std::vector<std::string_view> &args)
     }
 }
 
-}    // namespace testResults
+}    // namespace
 
 int main(int argc, char *argv[])
 {
@@ -66,5 +66,5 @@ int main(int argc, char *argv[])
         args.emplace_back(argv[i]);
     }
 
-    return testResults::main(args);
+    return main(args);
 }

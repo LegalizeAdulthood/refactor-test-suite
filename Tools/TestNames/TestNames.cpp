@@ -6,7 +6,7 @@
 #include <string_view>
 #include <vector>
 
-namespace testNames
+namespace
 {
 
 std::vector<std::string> g_errors;
@@ -91,7 +91,7 @@ int main(const std::vector<std::string_view> &args)
     }
 }
 
-}    // namespace testNames
+}    // namespace
 
 int main(int argc, char *argv[])
 {
@@ -101,5 +101,5 @@ int main(int argc, char *argv[])
         args.emplace_back(argv[i]);
     }
 
-    return testNames::main(args);
+    return main(args);
 }
