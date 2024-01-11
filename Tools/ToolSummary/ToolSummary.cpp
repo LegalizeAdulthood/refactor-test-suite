@@ -86,25 +86,32 @@ void reportSummary()
 
     for (const testCases::Test &test : testCases::getTests())
     {
-        std::cout << test.name;
+        bool hasResult{};
+        std::ostringstream line;
+        line << test.name;
         for (const ToolSummary &tool : summary)
         {
-            std::cout << " | ";
+            line << " | ";
             auto it = std::find_if(tool.summary.begin(),
                                    tool.summary.end(),
                                    [prefix = test.prefix](const testCases::TestSummary &testSummary)
                                    { return testSummary.name == prefix; });
             if (it == tool.summary.end())
             {
-                std::cout << "(n/a)";
+                line << "(n/a)";
             }
             else
             {
-                std::cout << percent(it->passes, it->numCasesReported) << " (" << it->numCasesReported << '/'
+                line << percent(it->passes, it->numCasesReported) << " (" << it->numCasesReported << '/'
                           << testCases::getNumTestCases(test.prefix) << ')';
+                hasResult = true;
             }
         }
-        std::cout << '\n';
+        line << '\n';
+        if (hasResult)
+        {
+            std::cout << line.str();
+        }
     }
 }
 
