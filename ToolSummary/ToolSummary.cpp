@@ -11,7 +11,7 @@
 #include <string_view>
 #include <vector>
 
-namespace testResults
+namespace
 {
 
 std::vector<testCases::ToolResults> g_toolResults;
@@ -119,7 +119,7 @@ int main(const std::vector<std::string_view> &args)
     }
 }
 
-}    // namespace testResults
+}    // namespace
 
 int main(int argc, char *argv[])
 {
@@ -129,5 +129,5 @@ int main(int argc, char *argv[])
         args.emplace_back(argv[i]);
     }
 
-    return testResults::main(args);
+    return main(args);
 }
