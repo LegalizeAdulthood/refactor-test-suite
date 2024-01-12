@@ -14,7 +14,7 @@ Notes:
   control statement and applying the action *Add braces to '...' statement*.
 * **Add Override** can be performed through clang-tidy integration.
 * **Add Parameter** is performed with **Change Signature**.
-* **Create Setter Method** is performed with Code / Generate... / Setter.
+* **Create Setter Method** is performed with *Code / Generate... / Setter* on the enclosing class.
 * **Flatten Conditional** is performed by repeatedly applying the action *Merge
 Nested Ifs*.
 * **Remove Block Delimiter** is performed by applying the action
