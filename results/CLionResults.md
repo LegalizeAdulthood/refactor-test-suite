@@ -17,6 +17,7 @@ Notes:
 * **Create Setter Method** is performed with *Code / Generate... / Setter* on the enclosing class.
 * **Flatten Conditional** is performed by repeatedly applying the action
   *Merge Nested Ifs*.
+* **Inline Macro** is performed by applying the action *Substitue macro once*.
 * **Remove Block Delimiter** is performed by applying the action
   *Remove braces from '...' statement*.
 * For **Rename** only code usages were renamed, if prompted.
