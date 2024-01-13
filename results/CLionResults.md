@@ -493,7 +493,7 @@ MISF12 | Pass
 MISF13 | Pass
 MISF14 | Pass
 MISF15 | Pass
-MISF16 | Failure
+MISF16 | Failure (operation too complex)
 MISF17 | Pass
 MISF18 | Pass
 MISF19 | Pass
@@ -503,7 +503,7 @@ MISF22 | Pass
 MISF23 | Pass
 MISF24 | Pass
 MISF25 | Pass
-MISF26 | Failure
+MISF26 | Failure (operation too complex)
 
 ## Move Method
 Case | Result
