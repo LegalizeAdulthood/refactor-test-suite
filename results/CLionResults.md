@@ -401,26 +401,26 @@ EXF19 | Pass
 Case | Result
 ---- | ------
 EM1  | Pass
-EM2  | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM3  | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM4  | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM5  | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM6  | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM2  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM3  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM4  | Pass
+EM5  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM6  | Pass
 EM7  | Pass
-EM8  | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM9  | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM10 | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM11 | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM12 | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM13 | Failure [CPP-1918](https://youtrack.jetbrains.com/issue/CPP-1918)
+EM8  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM9  | Pass
+EM10 | Pass
+EM11 | Pass
+EM12 | Pass
+EM13 | Failure (generates invalid code when extracted below) [CPP-1918](https://youtrack.jetbrains.com/issue/CPP-1918)
 EM14 | Pass
-EM15 | Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM16 | Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM17 | Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM18 | Failure [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM15 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM16 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM17 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM18 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
 EM19 | Pass
-EM20 | Failure [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM21 |
+EM20 | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM21 | Pass
 
 ## Extract Parameter
 Case | Result
