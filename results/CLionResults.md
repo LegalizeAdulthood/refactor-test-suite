@@ -573,21 +573,21 @@ RUP4 | Pass
 ## Rename
 Case | Result
 ---- | ------
-R1   | Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R2   | Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R3   | Failure [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R1   | Failure (selects unrelated names) [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R2   | Failure (selects unrelated names) [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R3   | Failure (selects unrelated names) [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
 R4   | Pass
 R5   | Pass
 R6   | Pass
-R7   | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
-R8   | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R7   | Failure (creates invalid code) [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R8   | Failure (creates invalid code) [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R9   | Pass
 R10  | Pass
 R11  | Pass
 R12  | Failure (doesn't select all instances, selects unrelated instances)
 R13  | Pass
 R14  | Pass
-R15  | Failure [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R15  | Failure (creates invalid code) [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R16  | Pass
 R17  | Pass
 R18  | Pass
@@ -801,19 +801,19 @@ R225 | Pass
 R226 | Pass
 R227 | Pass
 R228 | Pass
-R229 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R230 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R229 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R230 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R231 | Pass
 R232 | Pass
 R233 | Pass
-R234 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R235 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R234 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R235 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R236 | Pass
-R237 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R238 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R237 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R238 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R239 | Pass
-R240 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R241 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R240 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R241 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R242 | Pass
 R243 | Pass
 R244 | Pass
@@ -892,13 +892,13 @@ R316 | Pass
 R317 | Pass
 R318 | Pass
 R319 | Pass
-R320 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R320 | Failure (doesn't select all instances) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R321 | Pass
 R322 | Pass
 R323 | Pass
 R324 | Pass
 R325 | Pass
-R326 | Failure [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R326 | Failure (doesn't select all instances) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R327 | Pass
 R328 | Pass
 R329 | Pass
@@ -1087,7 +1087,7 @@ R511 | Pass
 R512 | Pass
 R513 | Pass
 R514 | Pass
-R515 | Failure [CPP-16696](https://youtrack.jetbrains.com/issue/CPP-16696)
+R515 | Failure (doesn't select all instances) [CPP-16696](https://youtrack.jetbrains.com/issue/CPP-16696)
 R516 | Pass
 R517 | Pass
 R518 | Pass
@@ -1178,21 +1178,21 @@ R602 | Pass
 R603 | Pass
 R604 | Pass
 R605 | Pass
-R606 |
-R607 |
-R608 |
-R609 |
-R610 |
-R611 |
-R612 |
-R613 |
-R614 |
-R615 |
-R616 |
-R617 |
-R618 |
-R619 |
-R620 |
+R606 | Pass
+R607 | Pass
+R608 | Pass
+R609 | Pass
+R610 | Pass
+R611 | Pass
+R612 | Pass
+R613 | Pass
+R614 | Pass
+R615 | Pass
+R616 | Pass
+R617 | Pass
+R618 | Pass
+R619 | Pass
+R620 | Pass
 R621 |
 R622 |
 R623 |
