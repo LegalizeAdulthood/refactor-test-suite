@@ -568,7 +568,7 @@ Case | Result
 RUP1 | Pass
 RUP2 | Pass
 RUP3 | Pass
-RUP4 | Failure [CPP-16644](https://youtrack.jetbrains.com/issue/CPP-16644)
+RUP4 | Pass
 
 ## Rename
 Case | Result
