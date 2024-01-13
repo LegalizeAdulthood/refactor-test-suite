@@ -9,6 +9,7 @@ Version: 17.0.6
 * clang-tidy checks configured through `.clang-tidy` configuration file
 * **Add Block Delimiter** available through check [*readability-braces-around-statements*](https://clang.llvm.org/extra/clang-tidy/checks/readability/braces-around-statements.html)
 * **Add Override** available through check [*modernize-use-override*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/use-override.html)
+* **Make Method Static** available through check [*readability-convert-member-functions-to-static*](https://clang.llvm.org/extra/clang-tidy/checks/readability/convert-member-functions-to-static.html)
 * **Replace `auto_ptr` With `unique_ptr`** available through check [*modernize-replace-auto-ptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/replace-auto-ptr.html)
 * **Replace Iterative For With Range For** available through check [*modernize-loop-convert*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/loop-convert.html)
 * **Replace `NULL`/`0` With `nullptr`** available through check [*modernize-use-nullptr*](https://clang.llvm.org/extra/clang-tidy/checks/modernize/use-nullptr.html)
