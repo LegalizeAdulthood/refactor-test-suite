@@ -424,11 +424,11 @@ EM21 | Pass
 ## Extract Parameter
 Case | Result
 ---- | ------
-EP1  | Failure [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
-EP2  | Failure [CPP-16582](https://youtrack.jetbrains.com/issue/CPP-16582)
+EP1  | Failure (changes member ptr to fn ptr) [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
+EP2  | Failure (creates invalid code) [CPP-16582](https://youtrack.jetbrains.com/issue/CPP-16582)
 EP3  | Failure (should not be available) [CPP-1921](https://youtrack.jetbrains.com/issue/CPP-1921)
 EP4  | Pass
-EP5  | Failure [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
+EP5  | Failure (changes member ptr to fn ptr) [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
 EP6  | Pass
 
 ## Extract Variable
