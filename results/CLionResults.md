@@ -434,12 +434,12 @@ EP6  | Pass
 ## Extract Variable
 Case | Result
 ---- | ------
-EXV1 | Failure [CPP-1931](https://youtrack.jetbrains.com/issue/CPP-1931)
+EXV1 | Failure (converts member ptr to fn ptr) [CPP-1931](https://youtrack.jetbrains.com/issue/CPP-1931)
 EXV2 | Pass
 EXV3 | Pass
 EXV4 | Pass
 EXV5 | Pass
-EXV6 | Failure [CPP-1932](https://youtrack.jetbrains.com/issue/CPP-1932)
+EXV6 | Failure (expands too many typedefs) [CPP-1932](https://youtrack.jetbrains.com/issue/CPP-1932)
 
 ## Flatten Conditional
 Case | Result
