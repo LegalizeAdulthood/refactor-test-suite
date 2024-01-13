@@ -456,7 +456,7 @@ IM3  | Pass
 IM4  | Pass
 IM5  | Pass
 IM6  | Pass
-IM7 |
+IM7 | Pass
 
 ## Inline Variable
 Case | Result
