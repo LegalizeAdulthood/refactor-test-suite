@@ -15,18 +15,17 @@ Notes:
 * **Add Override** can be performed through clang-tidy integration.
 * **Add Parameter** is performed with **Change Signature**.
 * **Create Setter Method** is performed with *Code / Generate... / Setter* on the enclosing class.
-* **Flatten Conditional** is performed by repeatedly applying the action *Merge
-Nested Ifs*.
+* **Flatten Conditional** is performed by repeatedly applying the action
+  *Merge Nested Ifs*.
 * **Remove Block Delimiter** is performed by applying the action
   *Remove braces from '...' statement*.
+* For **Rename** only code usages were renamed, if prompted.
 * **Reorder Parameters** is performed with **Change Signature**.
 * **Replace If With Ternary** is performed by applying the action *Replace
 'if else' with '?:'*.
 * **Replace Ternary With If** is performed by applying the action *Replace
   '?;' with 'if else'*.
 * **Reverse Conditional** is performed with Invert Condition
-* **Create Multi Variable Declaration** is not available.
-* For **Rename** only code usages were renamed, if prompted.
 
 <hr/>
 
