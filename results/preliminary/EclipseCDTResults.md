@@ -195,6 +195,7 @@ EM17  |
 EM18  |
 EM19  |
 EM20 |
+EM21 |
 
 ## Extract Function
 Case | Result
@@ -302,12 +303,12 @@ MM34  |
 MM35  |
 MM36  |
 
-## Optimize Namespace References
+## Remove Unused Includes
 * CDT: Source > Organize Includes
 
 Case | Result
 ---- | ------
-ONR1  | Pass
+RUI1  | Pass
 
 ## Rename
 Case | Result
