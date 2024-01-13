@@ -18,6 +18,7 @@ Notes:
 * **Flatten Conditional** is performed by repeatedly applying the action
   *Merge Nested Ifs*.
 * **Inline Macro** is performed by applying the action *Substitue macro once*.
+* **Make Method Static** is available through clang-tidy integration.
 * **Remove Block Delimiter** is performed by applying the action
   *Remove braces from '...' statement*.
 * For **Rename** only code usages were renamed, if prompted.
@@ -473,13 +474,6 @@ IV9  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/C
 IV10 | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV11 | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV12 | Failure (not available) [CPP-2252](https://youtrack.jetbrains.com/issue/CPP-2252)
-
-## Make Method Static
-Case | Result
----- | ------
-MMS1 | Pass
-MMS2 | Pass
-MMS3 | Failure 
 
 ## Move Implementation to Source File
 Case   | Result
