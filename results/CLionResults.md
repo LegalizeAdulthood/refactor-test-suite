@@ -502,7 +502,7 @@ MISF12 | Pass
 MISF13 | Pass
 MISF14 | Pass
 MISF15 | Pass
-MISF16 | Failure (operation too complex)
+MISF16 | Failure (operation too complex) [36996](https://youtrack.jetbrains.com/issue/CPP-36996/Split-function-into-declaration-and-definition-fails-with-operation-too-complex)
 MISF17 | Pass
 MISF18 | Pass
 MISF19 | Pass
@@ -512,7 +512,7 @@ MISF22 | Pass
 MISF23 | Pass
 MISF24 | Pass
 MISF25 | Pass
-MISF26 | Failure (operation too complex)
+MISF26 | Failure (operation too complex) [36996](https://youtrack.jetbrains.com/issue/CPP-36996/Split-function-into-declaration-and-definition-fails-with-operation-too-complex)
 
 ## Move Method
 Case | Result
@@ -593,14 +593,14 @@ R8   | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issu
 R9   | Pass
 R10  | Pass
 R11  | Pass
-R12  | Failure (doesn't select all instances, selects unrelated instances)
+R12  | Failure (doesn't select all instances, selects unrelated instances) [36997](https://youtrack.jetbrains.com/issue/CPP-36997/Renaming-a-method-from-usage-doesnt-rename-method-and-renames-unrelated-identifiers)
 R13  | Pass
 R14  | Pass
 R15  | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R16  | Pass
 R17  | Pass
 R18  | Pass
-R19  | Failure (selects unrelated instances)
+R19  | Failure (selects unrelated instances) [36998](https://youtrack.jetbrains.com/issue/CPP-36998/Renaming-a-method-from-usage-renames-unrelated-identifiers)
 R20  | Pass
 R21  | Pass
 R22  | Pass
@@ -613,18 +613,18 @@ R28  | Pass
 R29  | Pass
 R30  | Pass
 R31  | Pass
-R32  | Failure (selects unrelated instances)
-R33  | Failure (selects unrelated instances)
+R32  | Failure (selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R33  | Failure (selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
 R34  | Pass
 R35  | Pass
-R36  | Failure (doesn't select all instances, selects unrelated instances)
+R36  | Failure (doesn't select all instances, selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
 R37  | Pass
 R38  | Pass
 R39  | Pass
 R40  | Pass
 R41  | Pass
 R42  | Pass
-R43  | Pass (unrelated instances selected)
+R43  | Pass
 R44  | Pass
 R45  | Pass
 R46  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
@@ -1415,14 +1415,14 @@ R830 | Pass
 R831 | Pass
 R832 | Pass
 R833 | Pass
-R834 | Failure (not available)
+R834 | Failure (not available) [36999](https://youtrack.jetbrains.com/issue/CPP-36999/Cant-Rename-variable-from-usage)
 R835 | Pass
 R836 | Pass
 R837 | Pass
 R838 | Pass
 R839 | Pass
 R840 | Pass
-R841 | Failure (not available)
+R841 | Failure (not available) [36999](https://youtrack.jetbrains.com/issue/CPP-36999/Cant-Rename-variable-from-usage)
 R842 | Pass
 R843 | Pass
 R844 | Pass
@@ -1473,8 +1473,8 @@ R888 | Pass
 R889 | Pass
 R890 | Pass
 R891 | Pass
-R892 | Failure (not available)
-R893 | Failure (not available)
+R892 | Failure (not available) [37000](https://youtrack.jetbrains.com/issue/CPP-37000/Cant-rename-explicit-template-parameter-to-lambda-from-usage)
+R893 | Failure (not available) [37000](https://youtrack.jetbrains.com/issue/CPP-37000/Cant-rename-explicit-template-parameter-to-lambda-from-usage)
 R894 | Pass
 R895 | Pass
 R896 | Pass
