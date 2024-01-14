@@ -1607,8 +1607,8 @@ RTI6 | Pass
 RTI7 | Pass
 RTI8 | Pass
 RTI9 | Pass
-RTI10 |
-RTI11 |
+RTI10 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
+RTI11 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
 
 ## Replace Type With auto
 Case   | Result
