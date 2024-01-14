@@ -1586,21 +1586,6 @@ RIT7 | Pass
 RIT8 | Pass
 RIT9 | Failure (creates invalid code) [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
 
-## Replace String Literal With Raw String Literal
-Case  | Result
------ | ------
-RAW1  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW2  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW3  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW4  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW5  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW6  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW7  | Pass
-RAW8  | Pass
-RAW9  | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW10 | Failure [CPP-16674](https://youtrack.jetbrains.com/issue/CPP-16674)
-RAW11 |
-
 ## Replace Ternary With If
 Case | Result
 ---- | ------
