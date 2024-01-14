@@ -1595,10 +1595,10 @@ RIT9 | Failure (creates invalid code) [CPP-1945](https://youtrack.jetbrains.com/
 Case | Result
 ---- | ------
 RTI1 | Pass
-RTI2 | Failure [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
+RTI2 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
 RTI3 | Pass
 RTI4 | Pass
-RTI5 | Failure [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
+RTI5 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
 RTI6 | Pass
 RTI7 | Pass
 RTI8 | Pass
