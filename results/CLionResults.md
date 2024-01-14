@@ -23,8 +23,8 @@ Notes:
   *Remove braces from '...' statement*.
 * For **Rename** only code usages were renamed, if prompted.
 * **Reorder Parameters** is performed with **Change Signature**.
-* **Replace If With Ternary** is performed by applying the action *Replace
-'if else' with '?:'*.
+* **Replace If With Ternary** is performed by applying the action
+  *Replace 'if else' with '?:'*.
 * **Replace Ternary With If** is performed by applying the action *Replace
   '?;' with 'if else'*.
 * **Reverse Conditional** is performed with Invert Condition
@@ -1584,7 +1584,7 @@ RIT5 | Pass
 RIT6 | Pass
 RIT7 | Pass
 RIT8 | Pass
-RIT9 | Failure [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
+RIT9 | Failure (creates invalid code) [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
 
 ## Replace Iterative For With Range For
 Case   | Result
