@@ -15,35 +15,45 @@ bool isTestCaseResult(const std::string &line)
     {
         return false;
     }
-    const auto bar = line.find_first_of('|');
-    if (bar == std::string::npos)
+    const auto separatingBar = line.find_first_of('|', 1);
+    if (separatingBar == std::string::npos)
     {
         return false;
     }
-    const auto firstNonSpace = line.find_first_not_of(' ');
-    if (firstNonSpace == bar)
+    const auto beginFirstWord = line.find_first_not_of(' ', line[0] == '|' ? 1 : 0);
+    if (beginFirstWord == separatingBar)
     {
         return false;
     }
-    const auto endFirstWord = line.find_last_not_of(' ', bar);
-    const std::string firstWord = line.substr(firstNonSpace, endFirstWord - firstNonSpace - 1);
+    const auto endFirstWord = line.find_last_not_of(" |", separatingBar);
+    const std::string firstWord = line.substr(beginFirstWord, endFirstWord - beginFirstWord + 1);
     if (firstWord.empty() || firstWord == "Case" || firstWord.find_first_not_of('-') == std::string::npos)
     {
         return false;
     }
-    const auto beginSecondWord = line.find_first_not_of(' ', bar + 1);
+    const auto beginSecondWord = line.find_first_not_of(" |", separatingBar + 1);
     if (beginSecondWord == std::string::npos)
     {
         // Test label with no result reported
         return true;
     }
-    const auto lastNonSpace = line.find_last_not_of(' ');
-    if (lastNonSpace == bar)
+    auto endSecondWord = line.find_first_of(" |", beginSecondWord);
+    if (endSecondWord == std::string::npos)
     {
-        return false;
+        endSecondWord = line.length();
     }
-    const std::string secondWord = line.substr(beginSecondWord, lastNonSpace - beginSecondWord + 1);
+    const std::string secondWord = line.substr(beginSecondWord, endSecondWord - beginSecondWord);
     return secondWord != "Result" && secondWord.find_first_not_of('-') != std::string::npos;
+}
+
+std::string getTestLabel(const std::string &line, const std::string &test)
+{
+    std::size_t start = line.find_first_not_of(" |");
+    if (start != std::string::npos && line.substr(start, test.length()) == test)
+    {
+        return line.substr(start, line.find_first_of(' ', start) - start);
+    }
+    return {};
 }
 
 void ToolResults::scanResultsFile(std::filesystem::path path)
@@ -77,7 +87,7 @@ void ToolResults::scanResultsFile(std::filesystem::path path)
     while (file && line.find("##") == 0)
     {
         const std::string title = line.substr(line.find_first_not_of(' ', line.find_first_of(' ')));
-        const char *prefix = testCases::getPrefixForTestName(title);
+        const char *prefix = getPrefixForTestName(title);
         if (prefix == nullptr)
         {
             m_errors.push_back(path.string() + '(' + std::to_string(lineNum) + "): test title '" + std::string{title}
@@ -104,25 +114,26 @@ void ToolResults::scanResultsFile(std::filesystem::path path)
             {
                 break;
             }
-            if (line.substr(0, test.length()) == test)
+            const std::string label = getTestLabel(line, test);
+            if (!label.empty())
             {
-                labels.push_back(line.substr(0, line.find_first_of(' ')));
+                labels.push_back(label);
             }
             if (!isTestCaseResult(line))
             {
                 continue;
             }
-            const auto bar = line.find('|');
-            bool hasResult = line.find_first_not_of(' ', bar) != std::string::npos;
-            const bool deprecated = line.find("(deprecated)", bar) != std::string::npos;
+            const auto separatingBar = line.find('|', line[0] == '|' ? 1 : 0);
+            bool hasResult = line.find_first_not_of(" |", separatingBar) != std::string::npos;
+            const bool deprecated = line.find("(deprecated)", separatingBar) != std::string::npos;
             bool passed{};
             if (!deprecated)
             {
-                if (line.find("Pass", bar) != std::string::npos)
+                if (line.find("Pass", separatingBar) != std::string::npos)
                 {
                     passed = true;
                 }
-                else if (line.find("Failure", bar) == std::string::npos)
+                else if (line.find("Failure", separatingBar) == std::string::npos)
                 {
                     hasResult = false;
                 }
@@ -141,6 +152,15 @@ bool ToolResults::markedDeprecated(const std::string &label)
     return pos != results.end() && pos->deprecated;
 }
 
+std::string getLabel(const TestResult &result)
+{
+    const std::string &line = result.line;
+    const std::size_t start = line[0] == '|' ? 1 : 0;
+    const auto beginLabel = line.find_first_not_of(' ', start);
+    const auto endLabel = line.find_first_of(' ', beginLabel);
+    return line.substr(beginLabel, endLabel - beginLabel);
+}
+
 void ToolResults::checkResults()
 {
     for (const char *testReport : m_testReports)
@@ -148,7 +168,7 @@ void ToolResults::checkResults()
         const std::vector<std::string> &labels = m_testResultsLabels[testReport];
         auto findLabel = [&](const std::string &label)
         { return std::find(labels.begin(), labels.end(), label) != labels.end(); };
-        for (const std::string &deprecated : testCases::getDeprecatedLabels(testReport))
+        for (const std::string &deprecated : getDeprecatedLabels(testReport))
         {
             if (!findLabel(deprecated))
             {
@@ -157,7 +177,7 @@ void ToolResults::checkResults()
         }
         for (const std::string &testCase : getTestCaseLabels(testReport))
         {
-            if (testCases::isDeprecatedLabel(testCase) && !markedDeprecated(testCase))
+            if (isDeprecatedLabel(testCase) && !markedDeprecated(testCase))
             {
                 m_errors.push_back("error: Test results for " + testCase + " not marked deprecated.");
             }
@@ -168,12 +188,12 @@ void ToolResults::checkResults()
         }
         for (const TestResult &result : m_testResults[testReport])
         {
-            const std::string label = result.line.substr(0, result.line.find_first_of(' '));
+            const std::string label = getLabel(result);
             if (!result.hasResult)
             {
                 m_warnings.push_back("warning: No result for test " + label);
             }
-            else if (result.deprecated && !testCases::isDeprecatedLabel(label))
+            else if (result.deprecated && !isDeprecatedLabel(label))
             {
                 m_errors.push_back("error: Test result for " + label
                                    + " is marked deprecated, but test case is not deprecated");
