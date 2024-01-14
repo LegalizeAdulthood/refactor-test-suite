@@ -1573,14 +1573,6 @@ RP7 | (deprecated)
 RP8 | (deprecated)
 RP9 | (deprecated)
 
-## Replace auto_ptr With unique_ptr
-Case  | Result
------ | ------
-RAWU1 | Pass
-RAWU2 | Pass
-RAWU3 | Pass
-RAWU4 | Pass
-
 ## Replace If With Ternary
 Case | Result
 ---- | ------
