@@ -33,6 +33,10 @@ Notes:
   *Invert 'if' condition*.
 * **Simplify Boolean Expression** is performed by applying the action
   *Simplify expression*.
+* **Split Initialization From Declaration** is performed by applying the action
+  *Split into declaration and assignment*.
+* **Split Multi-Variable Declaration** is performed by applying the action
+  *Split into separate declarations*.
 
 <hr/>
 
@@ -1675,7 +1679,7 @@ SB13 | Pass
 Case  | Result
 ----- | ------
 SID1  | Pass
-SID2  | Failure [CPP-1947](https://youtrack.jetbrains.com/issue/CPP-1947)
+SID2  | Pass
 SID3  | Pass
 SID4  | Pass
 SID5  | Pass
