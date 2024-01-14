@@ -1586,38 +1586,6 @@ RIT7 | Pass
 RIT8 | Pass
 RIT9 | Failure (creates invalid code) [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
 
-## Replace NULL/0 With nullptr
-Case   | Result
------- | ------
-RZNP1  | Pass
-RZNP2  | Pass
-RZNP3  | Pass
-RZNP4  | Pass
-RZNP5  | Pass
-RZNP6  | Pass
-RZNP7  | Pass
-RZNP8  | Pass
-RZNP9  | Pass
-RZNP10 | Pass
-RZNP11 | Pass
-RZNP12 | Pass
-RZNP13 | Pass
-RZNP14 | Pass
-RZNP15 | Pass
-RZNP16 | Pass
-RZNP17 | Pass
-RZNP18 | Pass
-RZNP19 | Pass
-RZNP20 | Pass
-RZNP21 | Pass
-RZNP22 | Pass
-RZNP23 | Pass
-RZNP24 | Pass
-RZNP25 | Pass
-RZNP26 | Pass
-RZNP27 | Pass
-RZNP28 | Pass
-
 ## Replace String Literal With Raw String Literal
 Case  | Result
 ----- | ------
