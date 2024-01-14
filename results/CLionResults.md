@@ -61,28 +61,28 @@ AP4  | Pass
 AP5  | Pass
 AP6  | Pass
 AP7  | Pass
-AP8  | Failure (doesn't update definition)
-AP9  | Failure (doesn't update definition)
+AP8  | Pass
+AP9  | Pass
 AP10 | Pass
 AP11 | Pass
 AP12 | Pass
-AP13 | Failure (doesn't update declaration)
+AP13 | Pass
 AP14 | Pass
 AP15 | Pass
 AP16 | Pass
 AP17 | Pass
-AP18 | Failure (gets confused about default values)
+AP18 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP19 | Pass
 AP20 | Pass
-AP21 | Failure (gets confused about default values)
+AP21 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP22 | Pass
-AP23 | Failure (gets confused about default values)
-AP24 | Failure (doesn't update other template arguments) [CPP-16560](https://youtrack.jetbrains.com/issue/CPP-16560)
-AP25 | Failure (not available) [CPP-16560](https://youtrack.jetbrains.com/issue/CPP-16560)
-AP26 | Failure (doesn't update template related uses)
+AP23 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP24 | Failure (doesn't update other template arguments) [16560](https://youtrack.jetbrains.com/issue/CPP-16560)
+AP25 | Failure (not available) [16560](https://youtrack.jetbrains.com/issue/CPP-16560)
+AP26 | Failure (doesn't update template related uses) [36992](https://youtrack.jetbrains.com/issue/CPP-36992/Change-Signature-doesnt-update-related-template-usages)
 AP27 | Pass
 AP28 | Pass
-AP29 | Failure (creates invalid code)
+AP29 | Failure (creates invalid code) [36993](https://youtrack.jetbrains.com/issue/CPP-36993/Change-Signature-creates-invalid-code-when-definition-and-declaration-use-different-argument-names)
 AP30 | Pass
 AP31 | Pass
 AP32 | Pass
@@ -95,30 +95,30 @@ AP38 | Pass
 AP39 | Pass
 AP40 | Pass
 AP41 | Pass
-AP42 | Failure (doesn't update definition)
+AP42 | Pass
 AP43 | Pass
 AP44 | Pass
-AP45 | Failure (not available)
+AP45 | Failure (creates invalid code) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP46 | Pass
 AP47 | Pass
-AP48 | Failure (not available)
-AP49 | Failure (doesn't update definition)
+AP48 | Failure (creates invalid code) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
+AP49 | Pass
 AP50 | Pass
-AP51 | Failure (not available)
+AP51 | Failure (creates invalid code) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP52 | Pass
 AP53 | Pass
 AP54 | Pass
 AP55 | Pass
 AP56 | Pass
-AP57 | Failure (doesn't update definition)
+AP57 | Pass
 AP58 | Pass
 AP59 | Pass
 AP60 | Pass
 AP61 | Pass
-AP62 | Failure (not available)
-AP63 | Failure (doesn't update definition)
+AP62 | Failure (creates invalid code) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
+AP63 | Pass
 AP64 | Pass
-AP65 | Failure (not available)
+AP65 | Failure (creates invalid code) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP66 | Pass
 AP67 | Pass
 AP68 | Pass
@@ -129,36 +129,36 @@ AP72 | Pass
 AP73 | Pass
 AP74 | Pass
 AP75 | Pass
-AP76 | Failure (doesn't update definition)
+AP76 | Pass
 AP77 | Pass
 AP78 | Pass
 AP79 | Pass
 AP80 | Pass
 AP81 | Pass
 AP82 | Pass
-AP83 | Failure (changes unrelated code)
+AP83 | Failure (changes unrelated code) [36995](https://youtrack.jetbrains.com/issue/CPP-36995/Change-Signature-modifies-unrelated-code)
 AP84 | Pass
-AP85 | Failure (changes unrelated code)
+AP85 | Failure (changes unrelated code) [36995](https://youtrack.jetbrains.com/issue/CPP-36995/Change-Signature-modifies-unrelated-code)
 AP86 | Pass
 AP87 | Pass
 AP88 | Pass
 AP89 | Pass
 AP90 | Pass
-AP91 | Failure (drops default argument)
-AP92 | Failure (drops default argument)
+AP91 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP92 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP93 | Pass
 AP94 | Pass
 AP95 | Pass
 AP96 | Pass
 AP97 | Pass
-AP98 | Failure (drops default argument)
-AP99 | Failure (drops default argument)
+AP98 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP99 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP100 | Pass
 AP101 | Pass
 AP102 | Pass
 AP103 | Pass
-AP104 | Failure (drops default argument)
-AP105 | Failure (drops default argument)
+AP104 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP105 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP106 | Pass
 AP107 | Pass
 AP108 | Pass
@@ -167,29 +167,29 @@ AP110 | Pass
 AP111 | Pass
 AP112 | Pass
 AP113 | Pass
-AP114 | Failure (drops default argument)
-AP115 | Failure (not available)
-AP116 | Failure (drops default argument)
-AP117 | Failure (not available)
+AP114 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP115 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
+AP116 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP117 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP118 | Pass
 AP119 | Pass
-AP120 | Failure (not available)
+AP120 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP121 | Pass
-AP122 | Failure (not available)
+AP122 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP123 | Pass
-AP124 | Failure (drops default argument)
-AP125 | Failure (not available)
-AP126 | Failure (drops default argument)
-AP127 | Failure (not available)
+AP124 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP125 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
+AP126 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP127 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP128 | Pass
 AP129 | Pass
 AP130 | Pass
 AP131 | Pass
-AP132 | Failure (changes unrelated code)
+AP132 | Failure (changes unrelated code) [36995](https://youtrack.jetbrains.com/issue/CPP-36995/Change-Signature-modifies-unrelated-code)
 AP133 | Pass
-AP134 | Failure (changes unrelated code)
-AP135 | Failure (changes unrelated code)
-AP136 | Failure (changes unrelated code)
+AP134 | Failure (changes unrelated code) [36995](https://youtrack.jetbrains.com/issue/CPP-36995/Change-Signature-modifies-unrelated-code)
+AP135 | Failure (changes unrelated code) [36995](https://youtrack.jetbrains.com/issue/CPP-36995/Change-Signature-modifies-unrelated-code)
+AP136 | Failure (changes unrelated code) [36995](https://youtrack.jetbrains.com/issue/CPP-36995/Change-Signature-modifies-unrelated-code)
 AP137 | Pass
 AP138 | Pass
 AP139 | Pass
@@ -197,11 +197,11 @@ AP140 | Pass
 AP141 | Pass
 AP142 | Pass
 AP143 | Pass 
-AP144 | Failure (drops default argument)
-AP145 | Failure (not available)
+AP144 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP145 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)
 AP146 | Pass
-AP147 | Failure (drops default argument)
-AP148 | Failure (not available)
+AP147 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
+AP148 | Failure (not available) [36994](https://youtrack.jetbrains.com/issue/CPP-36994/Change-SIgnature-cant-add-new-default-arguments)****
 AP149 | Pass
 AP150 | Pass
 AP151 | Pass
@@ -226,35 +226,35 @@ AP169 | Pass
 AP170 | Pass
 AP171 | Pass
 AP172 | Pass
-AP173 | Failure (drops default argument)
+AP173 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP174 | Pass
 AP175 | Pass
 AP176 | Pass
-AP177 | Failure (drops default argument)
+AP177 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP178 | Pass
 AP179 | Pass
 AP180 | Pass
 AP181 | Pass
 AP182 | Pass
 AP183 | Pass
-AP184 | Failure (drops default argument)
+AP184 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP185 | Pass
 AP186 | Pass
 AP187 | Pass
-AP188 | Failure (drops default argument)
+AP188 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP189 | Pass
 AP190 | Pass
 AP191 | Pass
 AP192 | Pass
 AP193 | Pass
-AP194 | Failure (drops default argument)
+AP194 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP195 | Pass
-AP196 | Failure (drops default argument)
+AP196 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP197 | Pass
 AP198 | Pass
-AP199 | Failure (drops default argument)
+AP199 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP200 | Pass
-AP201 | Failure (drops default argument)
+AP201 | Failure (drops default argument) [36991](https://youtrack.jetbrains.com/issue/CPP-36991/Change-Signature-drops-default-argument-unnecessarily)
 AP202 | Pass  
 
 ## Change Signature
@@ -312,13 +312,13 @@ Case | Result
 CMS1  | Pass
 CMS2  | Pass
 CMS3  | Pass
-CMS4  | Failure (doesn't create default c'tor) [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
-CMS5  | Failure (doesn't create default c'tor) [CPP-1601](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS4  | Failure (doesn't create default c'tor) [1601](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS5  | Failure (doesn't create default c'tor) [1601](https://youtrack.jetbrains.com/issue/CPP-1601)
 CMS6  | Pass
 CMS7  | Pass
-CMS8  | Failure (not available) [CPP-1908](https://youtrack.jetbrains.com/issue/CPP-1908)
-CMS9  | Failure (not available) [CPP-1908](https://youtrack.jetbrains.com/issue/CPP-1908)
-CMS10 | Failure (not available) [CPP-1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS8  | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS9  | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS10 | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
 CMS11 | Pass
 CMS12 | Pass
 CMS13 | Pass
@@ -374,11 +374,11 @@ EC1  | Pass
 EC2  | Pass
 EC3  | Pass
 EC4  | Pass
-EC5  | Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
+EC5  | Failure [1928](https://youtrack.jetbrains.com/issue/CPP-1928)
 EC6  | Pass
 EC7  | Pass
 EC8  | Pass
-EC9  | Failure [CPP-1928](https://youtrack.jetbrains.com/issue/CPP-1928)
+EC9  | Failure [1928](https://youtrack.jetbrains.com/issue/CPP-1928)
 EC10 | Pass
 EC11 | Pass
 EC12 | Pass
@@ -400,57 +400,57 @@ EXF10 | Pass
 EXF11 | Pass
 EXF12 | Pass
 EXF13 | Pass
-EXF14 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF15 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF16 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF17 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-EXF18 | Failure (changes member ptr to fn ptr) [CPP-1916](https://youtrack.jetbrains.com/issue/CPP-1916)
+EXF14 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF15 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF16 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF17 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+EXF18 | Failure (changes member ptr to fn ptr) [1916](https://youtrack.jetbrains.com/issue/CPP-1916)
 EXF19 | Pass
 
 ## Extract Method
 Case | Result
 ---- | ------
 EM1  | Pass
-EM2  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM3  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM2  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM3  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
 EM4  | Pass
-EM5  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM5  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
 EM6  | Pass
 EM7  | Pass
-EM8  | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM8  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
 EM9  | Pass
 EM10 | Pass
 EM11 | Pass
 EM12 | Pass
-EM13 | Failure (generates invalid code when extracted below) [CPP-1918](https://youtrack.jetbrains.com/issue/CPP-1918)
+EM13 | Failure (generates invalid code when extracted below) [1918](https://youtrack.jetbrains.com/issue/CPP-1918)
 EM14 | Pass
-EM15 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM16 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM17 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM18 | Failure (generates invalid code when extracted below) [CPP-1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM15 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM16 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM17 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM18 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
 EM19 | Pass
-EM20 | Failure (generates invalid code) [CPP-1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM20 | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
 EM21 | Pass
 
 ## Extract Parameter
 Case | Result
 ---- | ------
-EP1  | Failure (changes member ptr to fn ptr) [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
-EP2  | Failure (creates invalid code) [CPP-16582](https://youtrack.jetbrains.com/issue/CPP-16582)
-EP3  | Failure (should not be available) [CPP-1921](https://youtrack.jetbrains.com/issue/CPP-1921)
+EP1  | Failure (changes member ptr to fn ptr) [1920](https://youtrack.jetbrains.com/issue/CPP-1920)
+EP2  | Failure (creates invalid code) [16582](https://youtrack.jetbrains.com/issue/CPP-16582)
+EP3  | Failure (should not be available) [1921](https://youtrack.jetbrains.com/issue/CPP-1921)
 EP4  | Pass
-EP5  | Failure (changes member ptr to fn ptr) [CPP-1920](https://youtrack.jetbrains.com/issue/CPP-1920)
+EP5  | Failure (changes member ptr to fn ptr) [1920](https://youtrack.jetbrains.com/issue/CPP-1920)
 EP6  | Pass
 
 ## Extract Variable
 Case | Result
 ---- | ------
-EXV1 | Failure (converts member ptr to fn ptr) [CPP-1931](https://youtrack.jetbrains.com/issue/CPP-1931)
+EXV1 | Failure (converts member ptr to fn ptr) [1931](https://youtrack.jetbrains.com/issue/CPP-1931)
 EXV2 | Pass
 EXV3 | Pass
 EXV4 | Pass
 EXV5 | Pass
-EXV6 | Failure (expands too many typedefs) [CPP-1932](https://youtrack.jetbrains.com/issue/CPP-1932)
+EXV6 | Failure (expands too many typedefs) [1932](https://youtrack.jetbrains.com/issue/CPP-1932)
 
 ## Flatten Conditional
 Case | Result
@@ -460,7 +460,7 @@ FC1  | Pass
 ## Inline Macro
 Case | Result
 ---- | ------
-IM1  | Failure [CPP-1922](https://youtrack.jetbrains.com/issue/CPP-1922)
+IM1  | Failure [1922](https://youtrack.jetbrains.com/issue/CPP-1922)
 IM2  | Pass
 IM3  | Pass
 IM4  | Pass
@@ -472,17 +472,17 @@ IM7 | Pass
 Case | Result
 ---- | ------
 IV1  | Pass
-IV2  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV2  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV3  | Pass
-IV4  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV5  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV6  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV7  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV8  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV9  | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV10 | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV11 | Failure (not available) [CPP-1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV12 | Failure (not available) [CPP-2252](https://youtrack.jetbrains.com/issue/CPP-2252)
+IV4  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV5  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV6  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV7  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV8  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV9  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV10 | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV11 | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV12 | Failure (not available) [2252](https://youtrack.jetbrains.com/issue/CPP-2252)
 
 ## Move Implementation to Source File
 Case   | Result
@@ -522,15 +522,15 @@ MM2   | Pass
 MM3   | Pass
 MM4   | Pass
 MM5   | Pass
-MM6   | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM7   | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM8   | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM6   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM7   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM8   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM9   | Pass
-MM10  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM11  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM12  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM10  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM11  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM12  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM13  | Pass
-MM14  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM14  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM15  | Pass
 MM16  | Pass
 MM17  | Pass
@@ -539,19 +539,19 @@ MM19  | Pass
 MM20  | Pass
 MM21  | Pass
 MM22  | Pass
-MM23  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM24  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM25  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM26  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM27  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM28  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM29  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM30  | Failure [CPP-1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM23  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM24  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM25  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM26  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM27  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM28  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM29  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM30  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM31  | Pass
 MM32  | Pass
-MM33  | Failure [CPP-16587](https://youtrack.jetbrains.com/issue/CPP-16587)
-MM34  | Failure [CPP-16587](https://youtrack.jetbrains.com/issue/CPP-16587)
-MM35  | Failure [CPP-1936](https://youtrack.jetbrains.com/issue/CPP-1936)
+MM33  | Failure [16587](https://youtrack.jetbrains.com/issue/CPP-16587)
+MM34  | Failure [16587](https://youtrack.jetbrains.com/issue/CPP-16587)
+MM35  | Failure [1936](https://youtrack.jetbrains.com/issue/CPP-1936)
 MM36  | Pass
 
 ## Remove Block Delimiter
@@ -582,21 +582,21 @@ RUP4 | Pass
 ## Rename
 Case | Result
 ---- | ------
-R1   | Failure (selects unrelated names) [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R2   | Failure (selects unrelated names) [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R3   | Failure (selects unrelated names) [CPP-1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R1   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R2   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R3   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
 R4   | Pass
 R5   | Pass
 R6   | Pass
-R7   | Failure (creates invalid code) [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
-R8   | Failure (creates invalid code) [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R7   | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R8   | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R9   | Pass
 R10  | Pass
 R11  | Pass
 R12  | Failure (doesn't select all instances, selects unrelated instances)
 R13  | Pass
 R14  | Pass
-R15  | Failure (creates invalid code) [CPP-1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R15  | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R16  | Pass
 R17  | Pass
 R18  | Pass
@@ -627,14 +627,14 @@ R42  | Pass
 R43  | Pass (unrelated instances selected)
 R44  | Pass
 R45  | Pass
-R46  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R46  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R47  | Pass
 R48  | Pass
-R49  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R49  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R50  | Pass
-R51  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R51  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R52  | Pass
-R53  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R53  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R54  | Pass
 R55  | Pass
 R56  | Pass
@@ -643,26 +643,26 @@ R58  | Pass
 R59  | Pass
 R60  | Pass
 R61  | Pass
-R62  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R62  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R63  | Pass
 R64  | Pass
-R65  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R65  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R66  | Pass
 R67  | Pass
 R68  | Pass
-R69  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R70  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R71  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R72  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R73  | Pass (unrelated comments selected by default) [CPP-1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R74  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R75  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R76  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R77  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R78  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R79  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R80  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R81  | Failure (selects unrelated macro by default) [CPP-1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R69  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R70  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R71  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R72  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R73  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R74  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R75  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R76  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R77  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R78  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R79  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R80  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R81  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
 R82  | Pass
 R83  | Pass
 R84  | Pass
@@ -708,7 +708,7 @@ R123 | Pass
 R124 | Pass
 R125 | Pass
 R126 | Pass
-R127 | Failure (creates invalid code) [CPP-16647](https://youtrack.jetbrains.com/issue/CPP-16647)
+R127 | Failure (creates invalid code) [16647](https://youtrack.jetbrains.com/issue/CPP-16647)
 R128 | Pass
 R129 | Pass
 R130 | Pass
@@ -719,7 +719,7 @@ R134 | Pass
 R135 | Pass
 R136 | Pass
 R137 | Pass
-R138 | Failure (creates invalid code) [CPP-16647](https://youtrack.jetbrains.com/issue/CPP-16647)
+R138 | Failure (creates invalid code) [16647](https://youtrack.jetbrains.com/issue/CPP-16647)
 R139 | Pass
 R140 | Pass
 R141 | Pass
@@ -738,12 +738,12 @@ R153 | Pass
 R154 | Pass
 R155 | Pass
 R156 | Pass
-R157 | Failure (renames unrelated instances) [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
-R158 | Failure (renames unrelated instances) [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R157 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R158 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
 R159 | Pass
 R160 | Pass
 R161 | Pass
-R162 | Failure (renames unrelated instances) [CPP-16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R162 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
 R163 | Pass
 R164 | Pass
 R165 | Pass
@@ -810,19 +810,19 @@ R225 | Pass
 R226 | Pass
 R227 | Pass
 R228 | Pass
-R229 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R230 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R229 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R230 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R231 | Pass
 R232 | Pass
 R233 | Pass
-R234 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R235 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R234 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R235 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R236 | Pass
-R237 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R238 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R237 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R238 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R239 | Pass
-R240 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R241 | Failure (creates invalid code) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R240 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R241 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R242 | Pass
 R243 | Pass
 R244 | Pass
@@ -901,13 +901,13 @@ R316 | Pass
 R317 | Pass
 R318 | Pass
 R319 | Pass
-R320 | Failure (doesn't select all instances) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R320 | Failure (doesn't select all instances) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R321 | Pass
 R322 | Pass
 R323 | Pass
 R324 | Pass
 R325 | Pass
-R326 | Failure (doesn't select all instances) [CPP-16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R326 | Failure (doesn't select all instances) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R327 | Pass
 R328 | Pass
 R329 | Pass
@@ -1096,7 +1096,7 @@ R511 | Pass
 R512 | Pass
 R513 | Pass
 R514 | Pass
-R515 | Failure (doesn't select all instances) [CPP-16696](https://youtrack.jetbrains.com/issue/CPP-16696)
+R515 | Failure (doesn't select all instances) [16696](https://youtrack.jetbrains.com/issue/CPP-16696)
 R516 | Pass
 R517 | Pass
 R518 | Pass
@@ -1574,8 +1574,8 @@ Case| Result
 --- | -----
 RP1 | (deprecated)
 RP2 | Pass
-RP3 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-RP4 | Failure (changes member ptr to fn ptr) [CPP-1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP3 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP4 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
 RP5 | Pass
 RP6 | Pass
 RP7 | (deprecated)
@@ -1586,29 +1586,29 @@ RP9 | (deprecated)
 Case | Result
 ---- | ------
 RIT1 | Pass
-RIT2 | Failure (not available) [CPP-1944](https://youtrack.jetbrains.com/issue/CPP-1944)
+RIT2 | Failure (not available) [1944](https://youtrack.jetbrains.com/issue/CPP-1944)
 RIT3 | Pass
-RIT4 | Failure (not available) [CPP-1944](https://youtrack.jetbrains.com/issue/CPP-1944)
+RIT4 | Failure (not available) [1944](https://youtrack.jetbrains.com/issue/CPP-1944)
 RIT5 | Pass
 RIT6 | Pass
 RIT7 | Pass
 RIT8 | Pass
-RIT9 | Failure (creates invalid code) [CPP-1945](https://youtrack.jetbrains.com/issue/CPP-1945)
+RIT9 | Failure (creates invalid code) [1945](https://youtrack.jetbrains.com/issue/CPP-1945)
 
 ## Replace Ternary With If
 Case | Result
 ---- | ------
 RTI1 | Pass
-RTI2 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
+RTI2 | Failure (should not be available) [1946](https://youtrack.jetbrains.com/issue/CPP-1946)
 RTI3 | Pass
 RTI4 | Pass
-RTI5 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
+RTI5 | Failure (should not be available) [1946](https://youtrack.jetbrains.com/issue/CPP-1946)
 RTI6 | Pass
 RTI7 | Pass
 RTI8 | Pass
 RTI9 | Pass
-RTI10 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
-RTI11 | Failure (should not be available) [CPP-1946](https://youtrack.jetbrains.com/issue/CPP-1946)
+RTI10 | Failure (should not be available) [1946](https://youtrack.jetbrains.com/issue/CPP-1946)
+RTI11 | Failure (should not be available) [1946](https://youtrack.jetbrains.com/issue/CPP-1946)
 
 ## Replace Type With auto
 Case   | Result
@@ -1688,7 +1688,7 @@ SID7  | Pass
 SID8  | Pass
 SID9  | Pass
 SID10 | Pass
-SID11 | Failure (not available) [CPP-1948](https://youtrack.jetbrains.com/issue/CPP-1948)
+SID11 | Failure (not available) [1948](https://youtrack.jetbrains.com/issue/CPP-1948)
 
 ## Split Multi-Variable Declaration
 Case   | Result
