@@ -11,6 +11,7 @@ namespace
 
 std::vector<std::string> g_errors;
 std::vector<std::string> g_warnings;
+bool g_renderTableBorder{};
 
 void checkMissingTestCases()
 {
@@ -52,23 +53,30 @@ void printMarkDown(std::ostream &out)
     }
 
     out << "# Tool\n\n";
-
+    const char *const borderStart = g_renderTableBorder ? "| " : "";
+    const char *const borderEnd = g_renderTableBorder ? " |\n" : "\n";
     for (const testCases::Test &test : testCases::getTests())
     {
-        out << "\n## " << test.name
-            << "\nCase | Result\n"
-               "---- | ------\n";
+        out << "\n## " << test.name << '\n'                    //
+            << borderStart << "Case | Result" << borderEnd     //
+            << borderStart << "---- | ------" << borderEnd;    //
         for (const std::string &testCase : testCases::getTestCaseLabels(test.prefix))
         {
-            out << testCase << " | " << (testCases::isDeprecatedLabel(testCase) ? "(deprecated)" : "") << '\n';
+            out << borderStart << testCase << " | " << (testCases::isDeprecatedLabel(testCase) ? "(deprecated)" : "")
+                << borderEnd;
         }
     }
 }
 
-int main(const std::vector<std::string_view> &args)
+int main(std::vector<std::string_view> args)
 {
     try
     {
+        if (args.size() == 3 && args[1] == "--border")
+        {
+            g_renderTableBorder = true;
+            args.erase(args.begin() + 1);
+        }
         if (args.size() < 2)
         {
             throw std::runtime_error("Missing directory argument");
