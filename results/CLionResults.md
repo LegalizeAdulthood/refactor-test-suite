@@ -460,7 +460,7 @@ FC1  | Pass
 ## Inline Macro
 Case | Result
 ---- | ------
-IM1  | Failure [1922](https://youtrack.jetbrains.com/issue/CPP-1922)
+IM1  | Failure (can't inline one macro inside another) [1922](https://youtrack.jetbrains.com/issue/CPP-1922)
 IM2  | Pass
 IM3  | Pass
 IM4  | Pass
