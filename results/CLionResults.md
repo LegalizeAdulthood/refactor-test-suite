@@ -363,7 +363,7 @@ CSM25 | Pass
 CSM26 | Pass
 CSM27 | Pass
 CSM28 | Pass
-CSM29 | Failure (not available)
+CSM29 | (deprecated)
 CSM30 | Pass
 CSM31 | Pass
 
