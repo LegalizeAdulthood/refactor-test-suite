@@ -25,9 +25,14 @@ Notes:
 * **Reorder Parameters** is performed with **Change Signature**.
 * **Replace If With Ternary** is performed by applying the action
   *Replace 'if else' with '?:'*.
-* **Replace Ternary With If** is performed by applying the action *Replace
-  '?;' with 'if else'*.
-* **Reverse Conditional** is performed with Invert Condition
+* **Replace Ternary With If** is performed by applying the action
+  *Replace '?;' with 'if else'*.
+* **Replace Type With auto** is performed by applying the action
+  *Replace the type with 'auto'*.
+* **Reverse Conditional** is performed by applying the action
+  *Invert 'if' condition*.
+* **Simplify Boolean Expression** is performed by applying the action
+  *Simplify expression*.
 
 <hr/>
 
