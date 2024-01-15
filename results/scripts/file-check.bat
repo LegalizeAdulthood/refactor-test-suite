@@ -5,7 +5,7 @@ rem
 rem Example: file-check ABD
 rem
 setlocal
-set diff=%TEMP%\diff.txt
+set diff=%TEMP%\file-diff.txt
 cls
 git diff RefactorTest | find /v "index" | drop-comments > %diff%
 if not exist results\file-diffs\%1.txt exit /b 1
