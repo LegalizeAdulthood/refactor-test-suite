@@ -149,7 +149,7 @@ CSM25 |
 CSM26 |
 CSM27 |
 CSM28 |
-CSM29 |
+CSM29 | (deprecated)
 CSM30 |
 CSM31 |
 
