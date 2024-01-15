@@ -127,7 +127,13 @@ void ToolResults::scanResultsFile(std::filesystem::path path)
             bool hasResult = line.find_first_not_of(" |", separatingBar) != std::string::npos;
             const bool deprecated = line.find("(deprecated)", separatingBar) != std::string::npos;
             bool passed{};
-            if (!deprecated)
+            if (deprecated)
+            {
+                // Deprecated tests are considered passing.
+                hasResult = true;
+                passed = true;
+            }
+            else
             {
                 if (line.find("Pass", separatingBar) != std::string::npos)
                 {
@@ -217,18 +223,22 @@ std::vector<TestSummary> ToolResults::getSummary() const
         for (const TestResult &result : testResults->second)
         {
             ++summary.numCases;
-            if (!result.hasResult)
+            if (result.deprecated)
+            {
+                ++summary.numDeprecated;
+            }
+            else if (!result.hasResult)
             {
                 continue;
             }
             ++summary.numCasesReported;
             if (result.passed)
             {
-                ++summary.passes;
+                ++summary.numPassed;
             }
             else
             {
-                ++summary.failures;
+                ++summary.numFailed;
             }
         }
         toolSummary.push_back(summary);

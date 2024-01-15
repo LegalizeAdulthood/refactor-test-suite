@@ -102,8 +102,8 @@ void reportSummary()
             }
             else
             {
-                line << percent(it->passes, it->numCasesReported) << " (" << it->numCasesReported << '/'
-                          << testCases::getNumTestCases(test.prefix) << ')';
+                line << percent(it->numPassed, it->numCasesReported) << " (" << it->numCasesReported << '/'
+                     << it->numCases << ')';
                 hasResult = true;
             }
         }

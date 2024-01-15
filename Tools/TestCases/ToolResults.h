@@ -32,8 +32,9 @@ inline std::string toolNameFromResultsFile(std::filesystem::path path)
 struct TestSummary
 {
     std::string name;
-    int passes;
-    int failures;
+    int numPassed;
+    int numFailed;
+    int numDeprecated;
     int numCases;
     int numCasesReported;
 };
