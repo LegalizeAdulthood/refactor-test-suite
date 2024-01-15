@@ -1,5 +1,7 @@
 [![CMake workflow](https://github.com/LegalizeAdulthood/refactor-test-suite/actions/workflows/cmake.yml/badge.svg)](https://github.com/LegalizeAdulthood/refactor-test-suite/actions/workflows/cmake.yml)
 
+# Introduction
+
 This is a test suite for C++ refactoring tools.  It consists of
 a set of source files with comments marking different locations
 in the code where a refactoring could be tested.
@@ -18,6 +20,9 @@ same diffs from a computer.
 
 The original release of the test suite is described
 [in this blog post](http://legalizeadulthood.wordpress.com/2010/02/02/c-refactoring-tools-test-suite-available/).
+
+This test suite is explained in detail in a [Utah C++ Programmers](https://utahcpp.wordpress.com)
+video [Refactoring Tools Roundup](https://www.youtube.com/watch?v=TzQ4-zoDG44) from January, 2024.
 
 # [How To Contribute](Contributing.md)
 
@@ -46,3 +51,31 @@ Preliminary results for tools with minimal testing.
 - [Cevelop](https://www.cevelop.com/) - Extensions for Eclipse CDT
 - [Code::Blocks](http://www.codeblocks.org/)
 - [KDevelop](https://www.kdevelop.org/) - [Refactoring](https://community.kde.org/KDevelop/RefactoringTools)
+
+# Building
+
+CMake presets are provided for building the code.  The
+`default` workflow preset configures, builds the code
+and runs the tests.  To rebuild the test suite and perform
+internal validation, simply build the code using the
+`default` preset for configuration and build.  To run the
+CTest related tests, the `default` preset can be used.
+
+Examples:
+
+```shell
+cmake --preset default               # configure
+cmake --build --preset default       # build
+ctest --preset default               # test
+cmake --workflow --preset default    # configure, build and test
+```
+
+The `refactor-test-suite` target compiles all the source code
+to be refactored.  The code contains some runtime checks to
+validate that the semantics of refactored code has not changed.
+The test suite executes as a post-build event so that simply
+building `refactor-test-suite` validates the semantics as
+part of the build.
+
+The CTest related tests perform validation of the results
+files for the tools.
