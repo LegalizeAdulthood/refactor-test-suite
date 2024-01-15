@@ -1,0 +1,54 @@
+diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+index 0b1d375..635afe8 100644
+--- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
++++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+@@ -6,7 +6,7 @@
+ namespace
+ {
+ // #TEST#: RAW1
+-std::string const backslash{"goink\\frob"};
++std::string const backslash{R"(goink\frob)"};
+ 
+ // #TEST#: RAW2
+ std::string const newline{"goink\nfrob"};
+@@ -15,31 +15,31 @@ std::string const newline{"goink\nfrob"};
+ std::string const tab{"goink\tfrob"};
+ 
+ // #TEST#: RAW4
+-std::string const single_quote{"goink\'frob"};
++std::string const single_quote{R"(goink'frob)"};
+ 
+ // #TEST#: RAW5
+-std::string const double_quote{"goink\"frob"};
++std::string const double_quote{R"(goink"frob)"};
+ 
+ // #TEST#: RAW6
+-std::string const question_mark{"goink\?frob"};
++std::string const question_mark{R"(goink?frob)"};
+ 
+ // #TEST#: RAW7
+-std::string const regex{"goink\\(one|two\\)\\\\\\?.*\\nfrob"};
++std::string const regex{R"(goink\(one|two\)\\\?.*\nfrob)"};
+ 
+ // #TEST#: RAW8
+-std::string const path{"C:\\Program Files\\Vendor\\Application\\Application.exe"};
++std::string const path{R"(C:\Program Files\Vendor\Application\Application.exe)"};
+ 
+ // #TEST#: RAW9
+-std::string const contains_sentinel{"whoops)\""};
++std::string const contains_sentinel{R"lit(whoops)")lit"};
+ 
+ // #TEST#: RAW10
+-std::string const contains_delim{"whoops)\")delim\""};
++std::string const contains_delim{R"lit(whoops)")delim")lit"};
+ 
+ // #TEST#: RAW11
+-std::string const contains_delimiter{"whoops)\")delimiter\""};
++std::string const contains_delimiter{R"lit(whoops)")delimiter")lit"};
+ 
+ // #TEST#: RAW12
+-std::string const contains_lit{"whoops)\")lit\""};
++std::string const contains_lit{R"lit1(whoops)")lit")lit1"};
+ 
+ }    // namespace
+ 
