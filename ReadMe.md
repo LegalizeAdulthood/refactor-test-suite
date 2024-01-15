@@ -87,3 +87,6 @@ compilation database is required.  This can be generated with the
 ```shell
 cmake --preset ninja
 ```
+
+See the documentation on [how to contribute](Contributing.md) for
+information about how to execute tests.
