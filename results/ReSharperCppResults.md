@@ -1634,6 +1634,7 @@ RAW8 | Pass
 RAW9 | Pass
 RAW10 | Pass
 RAW11 | Failure (generates invalid code) [RSCPP-35267](https://youtrack.jetbrains.com/issue/RSCPP-35267/Convert-to-raw-string-literal-creates-invalid-code-when-string-contains-delimiter)
+RAW12 | Pass
 
 ## Replace Ternary With If
 Case | Result
