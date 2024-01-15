@@ -19,5 +19,6 @@ AnalyzeTemporaryDtors: false
 FormatStyle:     file
 CheckOptions:
   readability-braces-around-statements.ShortStatementLines: '1'
+  modernize-raw-string-literal.ReplaceShorterLiterals: true
 SystemHeaders:   false
 ...

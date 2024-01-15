@@ -159,6 +159,23 @@ RZNP26  | Pass
 RZNP27 | Pass
 RZNP28 | Pass
 
+## Replace String Literal With Raw String Literal
+
+Case | Result
+---- | ------
+RAW1 | Pass
+RAW2 | Failure (not available)
+RAW3 | Failure (not available)
+RAW4 | Pass
+RAW5 | Pass
+RAW6 | Pass
+RAW7 | Pass
+RAW8 | Pass
+RAW9 | Pass
+RAW10 | Pass
+RAW11 | Pass
+RAW12 | Pass
+
 ## Replace Type With auto
 Case | Result
 ---- | ------
