@@ -79,3 +79,11 @@ part of the build.
 
 The CTest related tests perform validation of the results
 files for the tools.
+
+To execute `clang-tidy` related tests, a `compile_commands.json`
+compilation database is required.  This can be generated with the
+`ninja` configuration preset:
+
+```shell
+cmake --preset ninja
+```
