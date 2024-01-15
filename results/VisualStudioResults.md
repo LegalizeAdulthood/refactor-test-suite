@@ -1398,3 +1398,4 @@ RAW8  | Pass
 RAW9  | Pass
 RAW10 | Pass
 RAW11 | Pass
+RAW12 | Pass
