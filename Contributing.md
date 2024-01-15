@@ -52,7 +52,10 @@ tests are being executed for the first time.
    You can record the results with one commit per refactoring or
    one commit for all the updated results.
 1. Update the version information for the tool at the top of the results file.
-1. Regenerate the appropriate summary results markdown for the tool.
+1. Run `ctest --preset default` to validate your changes to the results file.
+1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the
+   appropriate summary results markdown for the tool.
+1. Issue a pull request with your changes.
 
 ## Update Test Cases
 
@@ -74,7 +77,10 @@ First, we'll want to check the failures:
 1. Update the version information for the tool at the top of the results file.
 1. Add a note at the top of the results file indicating which refactorings
    were tested for the updated version.
-1. Regenerate the appropriate summary results markdown for the tool.
+1. Run `ctest --preset default` to validate your changes to the results file.
+1. Use the support tool [tool-summary](#executable-tool-summary) to regenerate the
+   appropriate summary results markdown for the tool.
+1. Issue a pull request with your changes.
 
 Re-checking the passing tests to look for regressions is similar,
 but is more work.  Make a note at the top of the results file indicating
@@ -86,20 +92,29 @@ which tests were executed against the updated version.
 1. Create a new branch for your test cases.
 1. Locate the source file for the existing test cases.
 1. Review the existing test cases to make sure that your new tests
-  check a different scenario than existing test cases.
+   check a different scenario than existing test cases.
 1. For each new test case:
- 1. Add a test case to the source file.
- 1. Commit the test case with git to have a record of the source code
-   before it is refactored.
- 1. Execute the test case and record the results:
-    1. Add the test case id and result to the table
-    1. If the test case failed, create a bug report with
-       the product vendor.  Include a copy of the test suite
-       by creating an archive with `git archive`.
-    1. Add a link to the bug report in the results table.
- 1. Revert any changes made by the refactoring to restore the
-   original test case code.
- 1. Repeat for any remaining test cases.
+   1. Add a test case to the source file.
+   1. Commit the test case with git to have a record of the source code
+      before it is refactored.
+   1. Execute the test case and record the results:
+      1. Add the test case id and result to the table
+      1. If the test case failed, create a bug report with
+         the product vendor.  Include a copy of the test suite
+         by creating an archive with `git archive`, e.g. `git archive -o before.zip HEAD`
+      1. Add a link to the bug report in the results table.
+   1. Revert any changes made by the refactoring to restore the
+      original test case code.
+   1. Repeat for any remaining test cases.
+1. Use the support tool [test-diffs](#executable-test-diffs) to validate that all your
+   new test cases have diffs recorded for the expected results.
+1. Use the support tool [test-results](#executable-test-results) to validate your changes
+   to the results file for the tool you're testing.
+1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
+   Add the newly created test ids to the results files for any other tools that implement
+   this refactoring with the results column blank.
+1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the summary
+   reports.
 1. Issue a pull request with your changes.
 
 ## Add Tests for a New Refactoring
@@ -107,30 +122,47 @@ which tests were executed against the updated version.
 1. Fork the github repository.
 1. Create a new branch for your test cases.
 1. Create a new source file to hold the test cases.
+1. Update the list of refactoring names and abbreviations in `Tools/TestCases/TestCases.cpp`
+   to include a new entry for your refactoring.  By default refactorings require a diff for
+   each test case.
 1. Add the source file to the `CMakeLists.txt` build
-1. Declare the runtime test function in `stdafx.h`
+   1. If the source file depends on language features after C++11, add it to
+      the appropriate library target named after that C++ version, e.g. `refactor-20`.
+1. Declare the runtime test function in `RefactorTest.h`.
+   If the runtime function depends on newer versions of C++,
+   guard the declaraiont with the appropriate preprocessor symbol from `Config.h`
+   and declare an empty inline function if the symbol is not defined.
 1. Call the runtime test function from `RefactorTest.cpp`
 1. Add the runtime test function to the new source file.
 1. Build and execute the test suite to make sure this works.
 1. Add a new section with a table of results to the relevant
-  product file in the `results` directory.
+   product file in the `results` directory.
 1. Commit this initial change.
 1. Add new test cases:
- 1. Add a test case to the new source file and perform runtime checks where
-   feasible to ensure that the refactoring hasn't changed the meaning of
-   the code.  The file `Require.h` contains a simple function for comparing
-   an expected value with an actual value.
- 1. Commit the test case with git to have a record of the source code
-   before it is refactored.
- 1. Execute the test case and record the results:
-    1. Add the test case id and result to the table.
-    2. If the test case failed, create a bug report with the product
-       vendor.  Include a copy of the test suite by creating an archive with
-       `git archive`.
-    3. Add a link to the bug report in the results table.
- 1. Revert any changes made by the refactoring to restore the
-    original test case code.
- 1. Repeat for any remaining test cases.
+   1. Add a test case to the new source file and perform runtime checks where
+      feasible to ensure that the refactoring hasn't changed the meaning of
+      the code.  The file `Require.h` contains a simple function for comparing
+      an expected value with an actual value.
+   1. Commit the test case with git to have a record of the source code
+      before it is refactored.
+   1. Execute the test case and record the results:
+      1. Add the test case id and result to the table.
+      2. If the test case failed, create a bug report with the product
+         vendor.  Include a copy of the test suite by creating an archive with
+         `git archive`.
+      3. Add a link to the bug report in the results table.
+   1. Revert any changes made by the refactoring to restore the
+      original test case code.
+   1. Repeat for any remaining test cases.
+1. Use the support tool [test-diffs](#executable-test-diffs) to validate that all your
+   new test cases have diffs recorded for the expected results.
+1. Use the support tool [test-results](#executable-test-results) to validate your changes
+   to the results file for the tool you're testing.
+1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
+   Add the newly created test ids to the results files for any other tools that implement
+   this refactoring with the results column blank.
+1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the summary
+   reports.
 1. Issue a pull request with your changes.
 
 # Repository Organization
@@ -206,6 +238,9 @@ reporting test results for a tool and generating reports.
 This static library contains common code used to scan test case source
 files and test report markdown files.  The results of the scan produce
 data structures that can be used by the tools.
+
+The file `Tools/TestCases/TestCases.cpp` contains a mapping of test names
+to their identifier abbreviation, e.g. "Rename" corresponds to "R".
 
 ## Executable test-diffs
 
