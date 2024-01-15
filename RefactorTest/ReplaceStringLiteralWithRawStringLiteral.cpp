@@ -38,6 +38,9 @@ std::string const contains_delim{"whoops)\")delim\""};
 // #TEST#: RAW11
 std::string const contains_delimiter{"whoops)\")delimiter\""};
 
+// #TEST#: RAW12
+std::string const contains_lit{"whoops)\")lit\""};
+
 }    // namespace
 
 void TestReplaceStringLiteralWithRawStringLiteral()
@@ -53,4 +56,5 @@ void TestReplaceStringLiteralWithRawStringLiteral()
     REQUIRE_EQUAL(std::string("whoops)\""), contains_sentinel);
     REQUIRE_EQUAL(std::string("whoops)\")delim\""), contains_delim);
     REQUIRE_EQUAL(std::string("whoops)\")delimiter\""), contains_delimiter);
+    REQUIRE_EQUAL(std::string("whoops)\")lit\""), contains_lit);
 }
