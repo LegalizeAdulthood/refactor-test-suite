@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+index 0b1d375..0f0c441 100644
+--- a/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
++++ b/RefactorTest/ReplaceStringLiteralWithRawStringLiteral.cpp
+@@ -39,7 +39,7 @@ std::string const contains_delim{"whoops)\")delim\""};
+ std::string const contains_delimiter{"whoops)\")delimiter\""};
+ 
+ // #TEST#: RAW12
+-std::string const contains_lit{"whoops)\")lit\""};
++std::string const contains_lit{R"delimiter(whoops)")lit")delimiter"};
+ 
+ }    // namespace
+ 
