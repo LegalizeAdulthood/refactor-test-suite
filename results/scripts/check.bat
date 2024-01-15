@@ -1,4 +1,9 @@
 @echo off
+rem
+rem Usage: check [id]
+rem
+rem Example: check R100
+rem
 setlocal
 set diff=%TEMP%\diff.txt
 cls

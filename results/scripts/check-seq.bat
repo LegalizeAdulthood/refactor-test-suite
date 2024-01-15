@@ -2,6 +2,11 @@
 rem Implements a workflow for running through a sequence of tests
 rem and comparing local changes to the git repository to recorded
 rem diffs for tests.
+rem
+rem Usage: check-seq [test] [start]
+rem
+rem Example: check-seq R 100
+rem
 setlocal
 set prefix=%1
 set i=%2

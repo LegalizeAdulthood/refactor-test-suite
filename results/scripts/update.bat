@@ -1,3 +1,10 @@
+@rem
+@rem Updates the diff associated with a test.
+@rem
+@rem Usage: update [id]
+@rem
+@rem Example: update R100
+@rem
 @setlocal
 @cls
 @echo %1
