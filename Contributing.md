@@ -326,6 +326,23 @@ been run and consecutive test ids have been added, tool markdown files can be
 updated from the generated `Tool.md` and result diffs can be added as the cases
 are tested.
 
+## Executable renumber-tests
+
+Example: `renumber-tests RefactorTest R R results`
+
+The executable renumber-tests is used to renumber the test cases sequentially
+within the source files.  This makes the test cases easier to execute since
+results can be recorded sequentially for a tool.  The tool will renumber the
+test markers in source files, in results files and update the corresponding
+test case diffs.  The tool assumes that a single file only has test cases for
+a single refactoring.  All the test files in the test suite follow this pattern.
+
+Use this tool if you add new test cases somewhere in the middle of an existing
+test case source file.  First run add-tests to add the new test cases where they
+are in the file and then use renumber-tests to resequence all the tests, including
+your new tests, as a single group of tests.  Best practice is to git commit the
+results of add-tests and then make a separate commit for the results of renumber-tests.
+
 ## Executable drop-comments
 
 Example: `cat results/diffs/ABD1.txt | drop-comments`

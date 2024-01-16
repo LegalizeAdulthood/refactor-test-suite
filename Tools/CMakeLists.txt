@@ -1,5 +1,6 @@
 add_subdirectory(AddTests)
 add_subdirectory(DropComments)
+add_subdirectory(RenumberTests)
 add_subdirectory(TestCases)
 add_subdirectory(TestDiffs)
 add_subdirectory(TestNames)
