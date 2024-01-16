@@ -93,21 +93,28 @@ which tests were executed against the updated version.
 1. Locate the source file for the existing test cases.
 1. Review the existing test cases to make sure that your new tests
    check a different scenario than existing test cases.
-1. For each new test case:
-   1. Add a test case to the source file.
-   1. Commit the test case with git to have a record of the source code
-      before it is refactored.
-   1. Execute the test case and record the results:
-      1. Add the test case id and result to the table
-      1. If the test case failed, create a bug report with
-         the product vendor.  Include a copy of the test suite
-         by creating an archive with `git archive`, e.g. `git archive -o before.zip HEAD`
-      1. Add a link to the bug report in the results table.
-   1. Revert any changes made by the refactoring to restore the
-      original test case code.
-   1. Repeat for any remaining test cases.
-1. Use the support tool [test-diffs](#executable-test-diffs) to validate that all your
-   new test cases have diffs recorded for the expected results.
+1. Add the new test cases to the source files using temporary test markers of the form
+   `#GOINK#: ID <instructions>` instead of `#TEST#: ID <instructions>`.
+   This temporary marker will prevent automated test failures while you develop
+   the test cases.  Add runtime tests for the new test cases to validate the semantics
+   of the code being refactored.
+1. After all the test cases have been added, use the support tool
+   [add-tests](#executable-add-tests) to adjust the temporary test markers with
+   appropriate test markers for the refactoring, numbering new test cases for you.
+1. Build the test suite.  You should get no errors, but warnings about missing diffs
+   for your new test cases.
+1. Commit the test cases with git to have a record of the source code
+   before it is refactored.
+1. Execute the test cases and record the results:
+   1. Add the test case id and result to the table
+   1. If the test case failed, consider creating a bug report with
+      the product vendor.  Include a copy of the test suite
+       by creating an archive with `git archive`, e.g. `git archive -o before.zip HEAD`
+   1. Add a link to the bug report in the results table.
+1. Revert any changes made by the refactoring to restore the original test case code.
+1. The [support scripts](#support-scripts) can assist you in recording test results,
+   read through them before executing your new test cases.
+1. Build the test suite to validate that all warnings about missing diffs are gone.
 1. Use the support tool [test-results](#executable-test-results) to validate your changes
    to the results file for the tool you're testing.
 1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
@@ -115,7 +122,12 @@ which tests were executed against the updated version.
    this refactoring with the results column blank.
 1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the summary
    reports.
-1. Issue a pull request with your changes.
+1. Issue a pull request with your changes, which should include:
+   1. Modified test case files.
+   1. Added result diffs for new test cases.
+   1. Updated tool results file for the tool you tested.
+   1. Updated tool results files with blank results for any other tools supporting the refactoring.
+   1. Updated summary results.
 
 ## Add Tests for a New Refactoring
 
@@ -139,23 +151,28 @@ which tests were executed against the updated version.
    product file in the `results` directory.
 1. Commit this initial change.
 1. Add new test cases:
+   1. Add new test cases using the temporary test marker `#GOINK#: ID <instructions>`
    1. Add a test case to the new source file and perform runtime checks where
       feasible to ensure that the refactoring hasn't changed the meaning of
       the code.  The file `Require.h` contains a simple function for comparing
       an expected value with an actual value.
+   1. After all the test cases have been added, use the support tool
+      [add-tests](#executable-add-tests) to adjust the temporary test markers with
+      appropriate test markers for the refactoring, numbering new test cases for you.
+   1. Build the test suite.  You should get no errors, but warnings about missing diffs
+      for your new test cases.
    1. Commit the test case with git to have a record of the source code
       before it is refactored.
-   1. Execute the test case and record the results:
+   1. Execute the test cases and record the results:
       1. Add the test case id and result to the table.
-      2. If the test case failed, create a bug report with the product
+      2. If the test case failed, consider creating a bug report with the product
          vendor.  Include a copy of the test suite by creating an archive with
          `git archive`.
       3. Add a link to the bug report in the results table.
-   1. Revert any changes made by the refactoring to restore the
-      original test case code.
-   1. Repeat for any remaining test cases.
-1. Use the support tool [test-diffs](#executable-test-diffs) to validate that all your
-   new test cases have diffs recorded for the expected results.
+      4. Revert any changes made by the refactoring to restore the
+         original test case code between test cases.
+      5. The [support scripts](#support-scripts) can be of assistance in executing test cases.
+1. Build the test suite and validate that there are no warnings about missing diffs.
 1. Use the support tool [test-results](#executable-test-results) to validate your changes
    to the results file for the tool you're testing.
 1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
@@ -288,6 +305,28 @@ generates a summary markdown file for the group to standard output.
 This is used to regenerate the [summary results](SummaryResults.md) and
 [preliminary results](PreliminaryResults.md) reports when test results for a
 tool are updated.
+
+## Executable add-tests
+
+Example: `add-tests RefactorTest R RefactorTest/NewRename.cpp`
+
+The executable add-tests scans the test case directory for existing test cases
+and replaces temporary test markers in a source file with consecutive markers
+for new test cases.  The temporary markers are of the form:
+
+```C++
+// #GOINK#: ID <instructions>
+```
+
+The text `#GOINK#` is replaced with `#TEST#`, the `ID` text is ignored and
+replaced with test ids for the given prefix, starting after the last test
+case number found in the test case directory.
+
+Using a temporary test case marker while developing tests keeps the automated
+tests passing while new test cases are under development.  Once add-tests has
+been run and consecutive test ids have been added, tool markdown files can be
+updated from the generated `Tool.md` and result diffs can be added as the cases
+are tested.
 
 ## Executable drop-comments
 

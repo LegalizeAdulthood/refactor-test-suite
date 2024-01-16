@@ -1,0 +1,135 @@
+#include <TestCases.h>
+
+#include <algorithm>
+#include <filesystem>
+#include <fstream>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <string_view>
+#include <utility>
+#include <vector>
+
+namespace
+{
+
+std::string g_testPrefix;
+int g_numTestCases{};
+std::string g_sourceFile;
+std::vector<std::string> g_sourceLines;
+
+bool readSourceFile(std::string_view sourceFile)
+{
+    if (!std::filesystem::exists(sourceFile))
+    {
+        std::cerr << "File " << sourceFile << " does not exist.";
+        return false;
+    }
+    {
+        std::ifstream str(sourceFile.data());
+        while (str)
+        {
+            std::string line;
+            std::getline(str, line);
+            g_sourceLines.emplace_back(std::move(line));
+        }
+    }
+    std::filesystem::copy_file(sourceFile, std::string{sourceFile} + ".bak");
+    g_sourceFile = sourceFile;
+    return true;
+}
+
+void writeTestMarkers()
+{
+    std::string marker{"#GOINK#: "};
+    int testNum{g_numTestCases};
+    std::ofstream str(g_sourceFile);
+    for (std::string line : g_sourceLines)
+    {
+        const auto goink = line.find(marker);
+        if (goink != std::string::npos)
+        {
+            ++testNum;
+            auto markerEnd = line.find_first_of(' ', goink + marker.length());
+            line = line.substr(0, goink) + "#TEST#: " + g_testPrefix + std::to_string(testNum) + line.substr(markerEnd);
+        }
+        str << line << '\n';
+    }
+}
+
+bool readTestCases(std::string_view testCaseDirectory)
+{
+    std::vector<std::string> errors = testCases::scanTestDirectory(testCaseDirectory);
+    if (!errors.empty())
+    {
+        std::cerr << "Test cases contain errors:\n";
+        for (const std::string &error : errors)
+        {
+            std::cerr << error << '\n';
+        }
+        return false;
+    }
+    return true;
+}
+
+bool setTestCasePrefix(std::string_view prefix)
+{
+    const std::vector<testCases::Test> &tests = testCases::getTests();
+    auto it =
+        std::find_if(tests.begin(), tests.end(), [&](const testCases::Test &test) { return test.prefix == prefix; });
+    if (it == tests.end())
+    {
+        std::cerr << "Unknown test prefix '" << prefix << "'\n";
+        return false;
+    }
+    g_testPrefix = it->prefix;
+    g_numTestCases = static_cast<int>(testCases::getNumTestCases(it->prefix));
+    return true;
+}
+
+int usage(std::string_view program)
+{
+    std::cout << "Usage: " << program << " <RefactorTest> <TestPrefix> <SourceFile.cpp>\n";
+    return 1;
+}
+
+int main(std::vector<std::string_view> args)
+{
+    try
+    {
+        if (args.size() < 4)
+        {
+            return usage(args[0]);
+        }
+
+        if (!readTestCases(args[1]) || !setTestCasePrefix(args[2]) || !readSourceFile(args[3]))
+        {
+            return 1;
+        }
+        writeTestMarkers();
+        return 0;
+    }
+    catch (const std::exception &bang)
+    {
+        std::cerr << "Unexpected exception: " << bang.what() << '\n';
+        return 1;
+    }
+    catch (...)
+    {
+        std::cerr << "Unknown exception\n";
+        return 2;
+    }
+}
+
+}    // namespace
+
+int main(int argc, char *argv[])
+{
+    std::vector<std::string_view> args;
+    for (int i = 0; i < argc; ++i)
+    {
+        args.emplace_back(argv[i]);
+    }
+
+    return main(args);
+}
