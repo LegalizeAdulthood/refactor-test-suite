@@ -50,6 +50,10 @@ std::ostream &operator<<(std::ostream &str, const std::partial_ordering &val)
 
 namespace RenameCpp20
 {
+
+void TestRenameConcepts();
+void TestRenameConstraints();
+
 }    // namespace RenameCpp20
 
 namespace
@@ -466,4 +470,6 @@ void TestRenameCpp20()
     f8();
     f9();
     f10();
+    RenameCpp20::TestRenameConcepts();
+    RenameCpp20::TestRenameConstraints();
 }

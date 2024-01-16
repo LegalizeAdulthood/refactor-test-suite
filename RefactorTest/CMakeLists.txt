@@ -74,7 +74,12 @@ if("cxx_std_17" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
     set(HAVE_CPP17 ON)
 endif()
 if("cxx_std_20" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
-    add_library(refactor-20 OBJECT RenameCpp20.h RenameCpp20.cpp)
+    add_library(refactor-20 OBJECT
+        RenameCpp20.h
+        RenameCpp20.cpp
+        RenameCpp20Concepts.cpp
+        RenameCpp20Constraints.cpp
+    )
     set_target_properties(refactor-20 PROPERTIES
         FOLDER "Test Cases"
         CXX_STANDARD 20
