@@ -29,13 +29,19 @@ bool reportResults(const testCases::ToolResults &result, std::ostream &out)
     return true;
 }
 
+int usage(std::string_view program)
+{
+    std::cout << "Usage: " << program << " <RefactorTest> <results/ToolResults.md>\n";
+    return 1;
+}
+
 int main(const std::vector<std::string_view> &args)
 {
     try
     {
         if (args.size() < 3)
         {
-            throw std::runtime_error("Missing directory arguments");
+            return usage(args[0]);
         }
 
         testCases::scanTestDirectory(args[1]);

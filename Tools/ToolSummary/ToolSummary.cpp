@@ -115,13 +115,19 @@ void reportSummary()
     }
 }
 
+int usage(std::string_view program)
+{
+    std::cout << "Usage: " << program << " <RefactorTest> <results>\n";
+    return 1;
+}
+
 int main(const std::vector<std::string_view> &args)
 {
     try
     {
         if (args.size() < 3)
         {
-            throw std::runtime_error("Missing directory arguments");
+            return usage(args[0]);
         }
 
         std::vector<std::string> testCaseErrors = testCases::scanTestDirectory(args[1]);

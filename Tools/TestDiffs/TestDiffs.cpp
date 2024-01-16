@@ -50,13 +50,19 @@ void checkDiffs(std::ostream &out)
     }
 }
 
+int usage(std::string_view program)
+{
+    std::cout << "Usage: " << program << " <RefactorTest> <results/diffs>\n";
+    return 1;
+}
+
 int main(const std::vector<std::string_view> &args)
 {
     try
     {
         if (args.size() < 3)
         {
-            throw std::runtime_error("Missing directory arguments");
+            return usage(args[0]);
         }
 
         testCases::scanTestDirectory(args[1]);

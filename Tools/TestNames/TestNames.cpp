@@ -68,6 +68,12 @@ void printMarkDown(std::ostream &out)
     }
 }
 
+int usage(std::string_view program)
+{
+    std::cout << "Usage: " << program << "[--border] <RefactorTest>\n";
+    return 1;
+}
+
 int main(std::vector<std::string_view> args)
 {
     try
@@ -79,7 +85,7 @@ int main(std::vector<std::string_view> args)
         }
         if (args.size() < 2)
         {
-            throw std::runtime_error("Missing directory argument");
+            return usage(args[0]);
         }
 
         g_errors = testCases::scanTestDirectory(args[1]);
