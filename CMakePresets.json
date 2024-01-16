@@ -20,6 +20,15 @@
       "cacheVariables": {
         "CMAKE_EXPORT_COMPILE_COMMANDS": true
       }
+    },
+    {
+      "name": "cdt",
+      "displayName": "Configure with Eclipse CDT w/ninja and compile_commands.json",
+      "binaryDir": "${sourceDir}/../build-cdt",
+      "generator": "Eclipse CDT4 - Ninja",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true
+      }
     }
   ],
   "buildPresets": [
@@ -28,17 +37,48 @@
       "displayName": "default",
       "configurePreset": "default",
       "configuration": "Debug"
+    },
+    {
+      "name": "ninja",
+      "displayName": "ninja",
+      "configurePreset": "ninja",
+      "configuration": "Debug"
+    },
+    {
+      "name": "cdt",
+      "displayName": "Eclipse CDT",
+      "configurePreset": "cdt",
+      "configuration": "Debug"
     }
   ],
   "testPresets": [
     {
-      "name": "default",
-      "displayName": "default",
-      "configurePreset": "default",
-      "configuration": "Debug",
+      "name": "settings",
+      "hidden": true,
       "output": {
         "outputOnFailure": true
       }
+    },
+    {
+      "name": "default",
+      "displayName": "default",
+      "inherits": [ "settings" ],
+      "configurePreset": "default",
+      "configuration": "Debug"
+    },
+    {
+      "name": "ninja",
+      "displayName": "ninja",
+      "inherits": [ "settings" ],
+      "configurePreset": "ninja",
+      "configuration": "Debug"
+    },
+    {
+      "name": "cdt",
+      "displayName": "Eclipse CDT",
+      "inherits": [ "settings" ],
+      "configurePreset": "cdt",
+      "configuration": "Debug"
     }
   ],
   "workflowPresets": [
@@ -56,6 +96,41 @@
         {
           "type": "test",
           "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "ninja",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "ninja"
+        },
+        {
+          "type": "build",
+          "name": "ninja"
+        },
+        {
+          "type": "test",
+          "name": "ninja"
+        }
+      ]
+    },
+    {
+      "name": "cdt",
+      "displayName": "Eclipse CDT",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "cdt"
+        },
+        {
+          "type": "build",
+          "name": "cdt"
+        },
+        {
+          "type": "test",
+          "name": "cdt"
         }
       ]
     }
