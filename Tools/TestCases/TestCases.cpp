@@ -145,7 +145,7 @@ void sortTestCases()
     }
 }
 
-const std::vector<Test> & getTests()
+const std::vector<Test> &getTests()
 {
     return g_tests;
 }
