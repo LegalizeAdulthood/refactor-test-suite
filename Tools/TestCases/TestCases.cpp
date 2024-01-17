@@ -150,7 +150,7 @@ const std::vector<Test> &getTests()
     return g_tests;
 }
 
-const std::map<const char *, std::vector<std::string>> & getTestCases()
+const std::map<const char *, std::vector<std::string>> &getTestCases()
 {
     return g_testCases;
 }

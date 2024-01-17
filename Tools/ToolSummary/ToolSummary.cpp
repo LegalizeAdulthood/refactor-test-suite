@@ -39,8 +39,7 @@ void scanResultsDirectory(std::filesystem::path dir)
         {
             continue;
         }
-        g_toolResults.emplace_back(toolName);
-        g_toolResults.back().scanResultsFile(entry);
+        g_toolResults.emplace_back(entry);
     }
 }
 

@@ -56,14 +56,14 @@ std::string getTestLabel(const std::string &line, const std::string &test)
     return {};
 }
 
-void ToolResults::scanResultsFile(std::filesystem::path path)
+void ToolResults::scanResultsFile()
 {
-    if (!is_regular_file(path))
+    if (!is_regular_file(m_path))
     {
-        throw std::runtime_error(path.string() + " is not a plain file.");
+        throw std::runtime_error(m_path.string() + " is not a plain file.");
     }
 
-    std::ifstream file(path);
+    std::ifstream file(m_path);
     std::string line;
     int lineNum{};
     const auto getLine = [&]
@@ -90,7 +90,7 @@ void ToolResults::scanResultsFile(std::filesystem::path path)
         const char *prefix = getPrefixForTestName(title);
         if (prefix == nullptr)
         {
-            m_errors.push_back(path.string() + '(' + std::to_string(lineNum) + "): test title '" + std::string{title}
+            m_errors.push_back(m_path.string() + '(' + std::to_string(lineNum) + "): test title '" + std::string{title}
                                + "' not found.");
             while (file)
             {

@@ -42,10 +42,17 @@ struct TestSummary
 class ToolResults
 {
 public:
-    explicit ToolResults(std::string name) : m_name(std::move(name))
+    ToolResults(std::filesystem::path path) :
+        m_path(std::move(path)),
+        m_name(std::move(toolNameFromResultsFile(path)))
     {
+        scanResultsFile();
     }
 
+    const std::filesystem::path &getPath() const
+    {
+        return m_path;
+    }
     const std::string &getToolName() const
     {
         return m_name;
@@ -58,12 +65,14 @@ public:
     {
         return m_errors;
     }
-    void scanResultsFile(std::filesystem::path path);
     bool markedDeprecated(const std::string &label);
     void checkResults();
     std::vector<TestSummary> getSummary() const;
 
 private:
+    void scanResultsFile();
+
+    std::filesystem::path m_path;
     std::string m_name;
     std::vector<std::string> m_warnings;
     std::vector<std::string> m_errors;

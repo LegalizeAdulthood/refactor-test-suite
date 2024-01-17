@@ -45,8 +45,7 @@ int main(const std::vector<std::string_view> &args)
         }
 
         testCases::scanTestDirectory(args[1]);
-        testCases::ToolResults results(testCases::toolNameFromResultsFile(args[2]));
-        results.scanResultsFile(args[2]);
+        testCases::ToolResults results(args[2]);
         results.checkResults();
         return reportResults(results, std::cout) ? 1 : 0;
     }
