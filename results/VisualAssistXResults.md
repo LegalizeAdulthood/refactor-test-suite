@@ -35,6 +35,15 @@ Notes:
   * Create Method Implementations
   * Document Method
   * Implement Interface/Virtual Methods
+* When double clicking a list item in the Rename selection dialog,
+  it should put the selected line at the center of the editor window
+  if it repositions the scroll bar
+* **Extract Method** gives no feedback on names [83040](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11890)
+* File should not be selected when no items selected [83859](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11902)
+* **Change Signature** doesn't adjust ptr to member [83184](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11913), [83185](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11913)
+* VAX colors raw string literal as a type [65734](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11975)
+* **Create From Declaration** unavailable for operator== [84291](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11981)
+* **Move Implementation to Source File** fails with C11 [79737](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=12074)
 
 <hr/>
 
@@ -1163,17 +1172,3 @@ R983 | Pass
 R984 | Pass
 R985 | Pass
 R986 | Pass
-
-<hr/>
-
-Other issues:
-
-* when double clicking a list item in the Rename selection dialog,
-  it should put the selected line at the center of the editor window
-  if it repositions the scroll bar
-* Extract Method gives no feedback on names [case=83040](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11890)
-* File should not be selected when no items selected [case=83859](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11902)
-* Change Signature doesn't adjust ptr to member [case=83184](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11913), [case=83185](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11913)
-* VAX colors raw string literal as a type [case=65734](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11975)
-* Create From Declaration unavailable for operator== [case=84291](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=11981)
-* Move Implementation to Source File fails with C11 [~~~case=79737~~~](http://forums.wholetomato.com/forum/topic.asp?TOPIC_ID=12074)
