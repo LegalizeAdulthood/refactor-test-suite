@@ -17,8 +17,6 @@ struct TestResult
     bool deprecated;
     bool passed;
 };
-using ToolTestResults = std::map<std::string, std::vector<TestResult>>;
-using ToolTestResultsLabels = std::map<std::string, std::vector<std::string>>;
 
 inline std::string toolNameFromResultsFile(std::filesystem::path path)
 {
@@ -43,8 +41,8 @@ class ToolResults
 {
 public:
     ToolResults(std::filesystem::path path) :
-        m_path(std::move(path)),
-        m_name(std::move(toolNameFromResultsFile(path)))
+        m_path(path),
+        m_name(toolNameFromResultsFile(path))
     {
         scanResultsFile();
     }
@@ -65,12 +63,26 @@ public:
     {
         return m_errors;
     }
-    bool markedDeprecated(const std::string &label);
     void checkResults();
     std::vector<TestSummary> getSummary() const;
+    bool addTests(const std::string &prefix, const std::vector<std::string> &labels);
+    void writeResults();
 
 private:
+    struct TestResultCollection
+    {
+        std::string title;
+        std::string prefix;
+        std::vector<std::string> preamble;
+        std::vector<std::string> tableHeader;
+        std::vector<TestResult> results;
+        std::vector<std::string> labels;
+
+        bool isMarkedDeprecated(const std::string &label) const;
+    };
+
     void scanResultsFile();
+    TestResultCollection &getTestResultsForPrefix(const std::string &prefix);
 
     std::filesystem::path m_path;
     std::string m_name;
@@ -78,9 +90,8 @@ private:
     std::vector<std::string> m_errors;
     std::vector<std::string> m_diffs;
     std::vector<std::string> m_preamble;
-    std::vector<const char *> m_testReports;
-    ToolTestResults m_testResults;
-    ToolTestResultsLabels m_testResultsLabels;
+    std::vector<const char *> m_testPrefixes;
+    std::vector<TestResultCollection> m_testResults;
 };
 
 }    // namespace testCases

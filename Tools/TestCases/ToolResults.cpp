@@ -4,46 +4,70 @@
 
 #include <algorithm>
 #include <fstream>
+#include <iostream>
+#include <iterator>
 #include <stdexcept>
 
 namespace testCases
 {
 
-bool isTestCaseResult(const std::string &line)
+struct TableRow
+{
+    TableRow(const std::string &line);
+
+    bool valid{};
+    std::string first;
+    std::string second;
+};
+
+TableRow::TableRow(const std::string &line)
 {
     if (line.empty())
     {
-        return false;
-    }
-    const auto separatingBar = line.find_first_of('|', 1);
-    if (separatingBar == std::string::npos)
-    {
-        return false;
+        return;
     }
     const auto beginFirstWord = line.find_first_not_of(' ', line[0] == '|' ? 1 : 0);
-    if (beginFirstWord == separatingBar)
-    {
-        return false;
-    }
+    const auto separatingBar = line.find_first_of('|', 1);
     const auto endFirstWord = line.find_last_not_of(" |", separatingBar);
-    const std::string firstWord = line.substr(beginFirstWord, endFirstWord - beginFirstWord + 1);
-    if (firstWord.empty() || firstWord == "Case" || firstWord.find_first_not_of('-') == std::string::npos)
+    first = line.substr(beginFirstWord, endFirstWord - beginFirstWord + 1);
+    if (first.empty())
     {
-        return false;
+        return;
     }
     const auto beginSecondWord = line.find_first_not_of(" |", separatingBar + 1);
     if (beginSecondWord == std::string::npos)
     {
         // Test label with no result reported
-        return true;
+        valid = true;
+        return;
     }
     auto endSecondWord = line.find_first_of(" |", beginSecondWord);
     if (endSecondWord == std::string::npos)
     {
         endSecondWord = line.length();
     }
-    const std::string secondWord = line.substr(beginSecondWord, endSecondWord - beginSecondWord);
-    return secondWord != "Result" && secondWord.find_first_not_of('-') != std::string::npos;
+    second = line.substr(beginSecondWord, endSecondWord - beginSecondWord);
+    valid = true;
+    ;
+}
+
+bool isTableHeader(const TableRow &row)
+{
+    return row.valid
+        && ((row.first == "Case" && row.second == "Result")
+            || (row.first.find_first_not_of('-') == std::string::npos
+                && row.second.find_first_not_of('-') == std::string::npos));
+}
+
+bool isTableHeader(const std::string &line)
+{
+    return isTableHeader(TableRow(line));
+}
+
+bool isTestCaseResult(const std::string &line)
+{
+    const TableRow row(line);
+    return row.valid && !isTableHeader(row);
 }
 
 std::string getTestLabel(const std::string &line, const std::string &test)
@@ -54,6 +78,13 @@ std::string getTestLabel(const std::string &line, const std::string &test)
         return line.substr(start, line.find_first_of(' ', start) - start);
     }
     return {};
+}
+
+bool ToolResults::TestResultCollection::isMarkedDeprecated(const std::string &label) const
+{
+    const auto matchesLabel = [&](const TestResult &result) { return result.line.find(label) != std::string::npos; };
+    const auto pos = std::find_if(results.begin(), results.end(), matchesLabel);
+    return pos != results.end() && pos->deprecated;
 }
 
 void ToolResults::scanResultsFile()
@@ -103,10 +134,11 @@ void ToolResults::scanResultsFile()
             continue;
         }
 
-        m_testReports.push_back(prefix);
-        const std::string test = prefix;
-        std::vector<TestResult> &results = m_testResults[test];
-        std::vector<std::string> &labels = m_testResultsLabels[test];
+        m_testPrefixes.push_back(prefix);
+        TestResultCollection results;
+        results.title = title;
+        results.prefix = prefix;
+        bool resultsTableSeen{};
         while (file)
         {
             getLine();
@@ -114,14 +146,25 @@ void ToolResults::scanResultsFile()
             {
                 break;
             }
-            const std::string label = getTestLabel(line, test);
-            if (!label.empty())
+            if (isTableHeader(line))
             {
-                labels.push_back(label);
+                results.tableHeader.push_back(line);
+                resultsTableSeen = true;
+                continue;
+            }
+            if (!resultsTableSeen)
+            {
+                results.preamble.push_back(line);
+                continue;
             }
             if (!isTestCaseResult(line))
             {
                 continue;
+            }
+            const std::string label = getTestLabel(line, results.prefix);
+            if (!label.empty())
+            {
+                results.labels.push_back(label);
             }
             const auto separatingBar = line.find('|', line[0] == '|' ? 1 : 0);
             bool hasResult = line.find_first_not_of(" |", separatingBar) != std::string::npos;
@@ -144,18 +187,22 @@ void ToolResults::scanResultsFile()
                     hasResult = false;
                 }
             }
-            results.push_back({line, hasResult, deprecated, passed});
+            results.results.push_back({line, hasResult, deprecated, passed});
         }
+        m_testResults.emplace_back(std::move(results));
     }
 }
 
-bool ToolResults::markedDeprecated(const std::string &label)
+ToolResults::TestResultCollection &ToolResults::getTestResultsForPrefix(const std::string &prefix)
 {
-    const std::string prefix = label.substr(0, label.find_first_of("0123456789"));
-    const std::vector<TestResult> &results = m_testResults[prefix];
-    const auto matchesLabel = [&](const TestResult &result) { return result.line.find(label) != std::string::npos; };
-    const auto pos = std::find_if(results.begin(), results.end(), matchesLabel);
-    return pos != results.end() && pos->deprecated;
+    auto it = std::find_if(m_testResults.begin(),
+                           m_testResults.end(),
+                           [&](const TestResultCollection &results) { return results.prefix == prefix; });
+    if (it == m_testResults.end())
+    {
+        throw std::runtime_error("No test results available for " + prefix);
+    }
+    return *it;
 }
 
 std::string getLabel(const TestResult &result)
@@ -169,21 +216,22 @@ std::string getLabel(const TestResult &result)
 
 void ToolResults::checkResults()
 {
-    for (const char *testReport : m_testReports)
+    for (const char *testPrefix : m_testPrefixes)
     {
-        const std::vector<std::string> &labels = m_testResultsLabels[testReport];
+        TestResultCollection &results = getTestResultsForPrefix(testPrefix);
+        const std::vector<std::string> &labels = results.labels;
         auto findLabel = [&](const std::string &label)
         { return std::find(labels.begin(), labels.end(), label) != labels.end(); };
-        for (const std::string &deprecated : getDeprecatedLabels(testReport))
+        for (const std::string &deprecated : getDeprecatedLabels(testPrefix))
         {
             if (!findLabel(deprecated))
             {
                 m_errors.push_back("error: No test results for deprecated test " + deprecated);
             }
         }
-        for (const std::string &testCase : getTestCaseLabels(testReport))
+        for (const std::string &testCase : getTestCaseLabels(testPrefix))
         {
-            if (isDeprecatedLabel(testCase) && !markedDeprecated(testCase))
+            if (isDeprecatedLabel(testCase) && !results.isMarkedDeprecated(testCase))
             {
                 m_errors.push_back("error: Test results for " + testCase + " not marked deprecated.");
             }
@@ -192,7 +240,7 @@ void ToolResults::checkResults()
                 m_errors.push_back("error: No test results for " + testCase);
             }
         }
-        for (const TestResult &result : m_testResults[testReport])
+        for (const TestResult &result : results.results)
         {
             const std::string label = getLabel(result);
             if (!result.hasResult)
@@ -211,16 +259,22 @@ void ToolResults::checkResults()
 std::vector<TestSummary> ToolResults::getSummary() const
 {
     std::vector<TestSummary> toolSummary;
-    for (std::string test : m_testReports)
+    for (std::string test : m_testPrefixes)
     {
-        const auto &testResults = m_testResults.find(test);
+        auto getTestResults = [this](const std::string &test)
+        {
+            return std::find_if(m_testResults.begin(),
+                                m_testResults.end(),
+                                [&](const TestResultCollection &results) { return results.prefix == test; });
+        };
+        auto testResults = getTestResults(test);
         if (testResults == m_testResults.end())
         {
             throw std::runtime_error("No test results available for " + test);
         }
         TestSummary summary{};
         summary.name = test;
-        for (const TestResult &result : testResults->second)
+        for (const TestResult &result : testResults->results)
         {
             ++summary.numCases;
             if (result.deprecated)
@@ -244,6 +298,46 @@ std::vector<TestSummary> ToolResults::getSummary() const
         toolSummary.push_back(summary);
     }
     return toolSummary;
+}
+
+bool ToolResults::addTests(const std::string &prefix, const std::vector<std::string> &labels)
+{
+    auto matchesPrefix = [&](const char *testPrefix) { return prefix == testPrefix; };
+    if (std::find_if(m_testPrefixes.begin(), m_testPrefixes.end(), matchesPrefix) == m_testPrefixes.end())
+    {
+        return false;
+    }
+    TestResultCollection &results = getTestResultsForPrefix(prefix);
+    std::copy(labels.begin(), labels.end(), std::back_inserter(results.labels));
+    std::transform(labels.begin(),
+                   labels.end(),
+                   std::back_inserter(results.results),
+                   [](const std::string &label) { return TestResult{label + " |"}; });
+    return true;
+}
+
+void ToolResults::writeResults()
+{
+    std::ofstream str(m_path);
+    auto copyLines = [&](const std::vector<std::string> &preamble)
+    { std::copy(preamble.begin(), preamble.end(), std::ostream_iterator<std::string>(str, "\n")); };
+    copyLines(m_preamble);
+    bool insertSeparator{!m_preamble.back().empty()};
+    for (const TestResultCollection &results : m_testResults)
+    {
+        if (insertSeparator)
+        {
+            str << '\n';
+        }
+        str << "## " << results.title << "\n";
+        copyLines(results.preamble);
+        copyLines(results.tableHeader);
+        for (const TestResult &result : results.results)
+        {
+            str << result.line << '\n';
+        }
+        insertSeparator = true;
+    }
 }
 
 }    // namespace testCases

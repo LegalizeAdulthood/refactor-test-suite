@@ -100,7 +100,8 @@ which tests were executed against the updated version.
    of the code being refactored.
 1. After all the test cases have been added, use the support tool
    [add-tests](#executable-add-tests) to adjust the temporary test markers with
-   appropriate test markers for the refactoring, numbering new test cases for you.
+   appropriate test markers for the refactoring, numbering new test cases for you and
+   adding the test cases to all the results files that support this refactoring.
 1. Build the test suite.  You should get no errors, but warnings about missing diffs
    for your new test cases.
 1. Commit the test cases with git to have a record of the source code
@@ -118,8 +119,6 @@ which tests were executed against the updated version.
 1. Use the support tool [test-results](#executable-test-results) to validate your changes
    to the results file for the tool you're testing.
 1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
-   Add the newly created test ids to the results files for any other tools that implement
-   this refactoring with the results column blank.
 1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the summary
    reports.
 1. Issue a pull request with your changes, which should include:
@@ -158,7 +157,8 @@ which tests were executed against the updated version.
       an expected value with an actual value.
    1. After all the test cases have been added, use the support tool
       [add-tests](#executable-add-tests) to adjust the temporary test markers with
-      appropriate test markers for the refactoring, numbering new test cases for you.
+      appropriate test markers for the refactoring, numbering new test cases for you and
+      adding the test cases to all the results files that support this refactoring.
    1. Build the test suite.  You should get no errors, but warnings about missing diffs
       for your new test cases.
    1. Commit the test case with git to have a record of the source code
@@ -176,8 +176,6 @@ which tests were executed against the updated version.
 1. Use the support tool [test-results](#executable-test-results) to validate your changes
    to the results file for the tool you're testing.
 1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
-   Add the newly created test ids to the results files for any other tools that implement
-   this refactoring with the results column blank.
 1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the summary
    reports.
 1. Issue a pull request with your changes.
@@ -308,7 +306,7 @@ tool are updated.
 
 ## Executable add-tests
 
-Example: `add-tests RefactorTest R RefactorTest/NewRename.cpp`
+Example: `add-tests RefactorTest R RefactorTest/NewRename.cpp results`
 
 The executable add-tests scans the test case directory for existing test cases
 and replaces temporary test markers in a source file with consecutive markers
