@@ -16,14 +16,14 @@ namespace
 {
 
 std::vector<testCases::ToolResults> g_toolResults;
-std::map<std::string, const char *> g_toolTitles = {{"AppleXcode", "Xcode"},
-                                                    {"ClangTidy", "clang-tidy"},
-                                                    {"CLion", "CLion"},
-                                                    {"EclipseCDT", "Eclipse CDT"},
-                                                    {"QtCreator", "Qt Creator"},
-                                                    {"ReSharperCpp", "ReSharper for C++"},
-                                                    {"VisualAssistX", "Visual AssistX"},
-                                                    {"VisualStudio", "Visual Studio"}};
+std::map<std::string, std::string> g_toolTitles = {{"AppleXcode", "Xcode"},
+                                                   {"ClangTidy", "clang-tidy"},
+                                                   {"CLion", "CLion"},
+                                                   {"EclipseCDT", "Eclipse CDT"},
+                                                   {"QtCreator", "Qt Creator"},
+                                                   {"ReSharperCpp", "ReSharper for C++"},
+                                                   {"VisualAssistX", "Visual AssistX"},
+                                                   {"VisualStudio", "Visual Studio"}};
 
 void scanResultsDirectory(std::filesystem::path dir)
 {
@@ -66,10 +66,11 @@ void reportSummary()
         summary.push_back({toolResult.getToolName(), toolResult.getSummary()});
     }
 
+    constexpr std::string_view refactoring{"Refactoring"};
     std::cout << "# Summary Results\n"
                  "\n"
-                 "Refactoring";
-    std::string separator(11, '-');    // len("Refactoring") == 11
+                 << refactoring;
+    std::string separator(refactoring.length(), '-');
     for (const ToolSummary &tool : summary)
     {
         auto it = g_toolTitles.find(tool.name);
@@ -79,7 +80,7 @@ void reportSummary()
         }
         const std::string toolName = it->second;
         std::cout << " | [" << toolName << "](results/" << tool.name << "Results.md)";
-        separator += " | " + std::string(toolName.size(), '-');
+        separator += " | " + std::string(toolName.length(), '-');
     }
     std::cout << '\n' << separator << '\n';
 

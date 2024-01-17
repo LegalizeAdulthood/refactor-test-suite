@@ -90,7 +90,7 @@ private:
     std::vector<std::string> m_errors;
     std::vector<std::string> m_diffs;
     std::vector<std::string> m_preamble;
-    std::vector<const char *> m_testPrefixes;
+    std::vector<std::string> m_testPrefixes;
     std::vector<TestResultCollection> m_testResults;
 };
 

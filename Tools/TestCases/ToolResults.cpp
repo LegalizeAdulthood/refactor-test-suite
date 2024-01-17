@@ -118,8 +118,8 @@ void ToolResults::scanResultsFile()
     while (file && line.find("##") == 0)
     {
         const std::string title = line.substr(line.find_first_not_of(' ', line.find_first_of(' ')));
-        const char *prefix = getPrefixForTestName(title);
-        if (prefix == nullptr)
+        const std::string prefix = getPrefixForTestName(title);
+        if (prefix.empty())
         {
             m_errors.push_back(m_path.string() + '(' + std::to_string(lineNum) + "): test title '" + std::string{title}
                                + "' not found.");
@@ -216,7 +216,7 @@ std::string getLabel(const TestResult &result)
 
 void ToolResults::checkResults()
 {
-    for (const char *testPrefix : m_testPrefixes)
+    for (const std::string &testPrefix : m_testPrefixes)
     {
         TestResultCollection &results = getTestResultsForPrefix(testPrefix);
         const std::vector<std::string> &labels = results.labels;
@@ -302,8 +302,7 @@ std::vector<TestSummary> ToolResults::getSummary() const
 
 bool ToolResults::addTests(const std::string &prefix, const std::vector<std::string> &labels)
 {
-    auto matchesPrefix = [&](const char *testPrefix) { return prefix == testPrefix; };
-    if (std::find_if(m_testPrefixes.begin(), m_testPrefixes.end(), matchesPrefix) == m_testPrefixes.end())
+    if (std::find(m_testPrefixes.begin(), m_testPrefixes.end(), prefix) == m_testPrefixes.end())
     {
         return false;
     }

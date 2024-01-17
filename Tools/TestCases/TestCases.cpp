@@ -56,9 +56,9 @@ std::vector<Test> g_tests{
     {"Split Multi-Variable Declaration", "SMVD"},
 };
 
-std::map<const char *, std::vector<std::string>> g_testCases;
+std::map<std::string, std::vector<std::string>> g_testCases;
 std::vector<std::string> g_labels;
-std::map<const char *, std::vector<std::string>> g_deprecatedLabels;
+std::map<std::string, std::vector<std::string>> g_deprecatedLabels;
 std::string g_currentFile;
 int g_currentLine{};
 std::vector<std::string> g_errors;
@@ -150,12 +150,12 @@ const std::vector<Test> &getTests()
     return g_tests;
 }
 
-const std::map<const char *, std::vector<std::string>> &getTestCases()
+const std::map<std::string, std::vector<std::string>> &getTestCases()
 {
     return g_testCases;
 }
 
-const std::vector<std::string> &getTestCaseLabels(const char *prefix)
+const std::vector<std::string> &getTestCaseLabels(const std::string &prefix)
 {
     const auto it = g_testCases.find(prefix);
     static std::vector<std::string> empty;
@@ -182,18 +182,18 @@ bool isDeprecatedLabel(const std::string &label)
     return std::find(labels.begin(), labels.end(), label) != labels.end();
 }
 
-const std::vector<std::string> &getDeprecatedLabels(const char *prefix)
+const std::vector<std::string> &getDeprecatedLabels(const std::string &prefix)
 {
     static std::vector<std::string> empty;
     auto pos = g_deprecatedLabels.find(prefix);
     return pos == g_deprecatedLabels.end() ? empty : pos->second;
 }
 
-const char *getPrefixForTestName(std::string_view name)
+std::string getPrefixForTestName(std::string_view name)
 {
     auto pos =
         std::find_if(std::begin(g_tests), std::end(g_tests), [name](const Test &test) { return test.name == name; });
-    return pos != std::end(g_tests) ? pos->prefix : nullptr;
+    return pos != std::end(g_tests) ? pos->prefix : std::string{};
 }
 
 }    // namespace testCases
