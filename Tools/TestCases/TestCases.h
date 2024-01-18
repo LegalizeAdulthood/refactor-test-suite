@@ -1,6 +1,6 @@
 #pragma once
 
-#include <map>
+#include <filesystem>
 #include <string>
 #include <string_view>
 #include <vector>
@@ -8,23 +8,64 @@
 namespace testCases
 {
 
-struct Test
+class Test
 {
-    std::string name;
-    std::string prefix;
-    bool diffsRequired{true};
+public:
+    static std::vector<std::string> scanTestDirectory(std::filesystem::path dir);
+    static const std::string &getPrefixForTestName(const std::string &name);
+
+    Test(const char *name, const char *prefix) :
+        Test(name, prefix, true)
+    {
+    }
+    Test(const char *name, const char *prefix, bool diffsRequired) :
+        m_name(name),
+        m_prefix(prefix),
+        m_diffsRequired(diffsRequired)
+    {
+    }
+
+    const std::string &getName() const
+    {
+        return m_name;
+    }
+    const std::string &getPrefix() const
+    {
+        return m_prefix;
+    }
+    bool getDiffsRequired() const
+    {
+        return m_diffsRequired;
+    }
+    const std::vector<std::string> &getCases() const
+    {
+        return m_cases;
+    }
+    const std::vector<std::string> &getDeprecatedCases() const
+    {
+        return m_deprecatedCases;
+    }
+    std::size_t getNumTestCases() const
+    {
+        return m_cases.size();
+    }
+    bool isDeprecatedLabel(const std::string &label) const;
+
+private:
+    static void scanTestCaseDirectory(std::filesystem::path dir);
+    static void scanTestCaseFile(std::filesystem::path path);
+    static void scanTestCaseLine(std::string_view line);
+    static void checkLabel(std::string_view label, std::string_view desc);
+    static void sortTestCases();
+
+    std::string m_name;
+    std::string m_prefix;
+    bool m_diffsRequired;
+    std::vector<std::string> m_cases;
+    std::vector<std::string> m_deprecatedCases;
 };
 
 const std::vector<Test> &getTests();
-const std::map<std::string, std::vector<std::string>> &getTestCases();
-const std::vector<std::string> &getTestCaseLabels(const std::string &prefix);
-inline std::size_t getNumTestCases(const std::string &prefix)
-{
-    return getTestCaseLabels(prefix).size();
-}
-std::vector<std::string> scanTestDirectory(std::string_view dir);
-bool isDeprecatedLabel(const std::string &label);
-const std::vector<std::string> &getDeprecatedLabels(const std::string &prefix);
-std::string getPrefixForTestName(std::string_view name);
+const Test &getTestForPrefix(std::string_view prefix);
 
 }    // namespace testCases

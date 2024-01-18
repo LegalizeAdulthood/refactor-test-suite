@@ -44,7 +44,7 @@ int main(const std::vector<std::string_view> &args)
             return usage(args[0]);
         }
 
-        testCases::scanTestDirectory(args[1]);
+        testCases::Test::scanTestDirectory(args[1]);
         testCases::ToolResults results(args[2]);
         results.checkResults();
         return reportResults(results, std::cout) ? 1 : 0;

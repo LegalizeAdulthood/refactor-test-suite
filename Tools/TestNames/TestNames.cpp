@@ -20,14 +20,14 @@ void checkMissingTestCases()
     for (const testCases::Test &test : testCases::getTests())
     {
         int num{1};
-        for (const std::string &testCase : testCases::getTestCaseLabels(test.prefix))
+        for (const std::string &testCase : test.getCases())
         {
             int caseNum = extractCaseNum(testCase);
             do
             {
                 if (num != caseNum)
                 {
-                    g_warnings.emplace_back(std::string{"Missing test case "} + test.prefix + std::to_string(num));
+                    g_warnings.emplace_back(std::string{"Missing test case "} + test.getPrefix() + std::to_string(num));
                 }
             } while (num++ != caseNum);
         }
@@ -57,12 +57,12 @@ void printMarkDown(std::ostream &out)
     const char *const borderEnd = g_renderTableBorder ? " |\n" : "\n";
     for (const testCases::Test &test : testCases::getTests())
     {
-        out << "\n## " << test.name << '\n'                    //
+        out << "\n## " << test.getName() << '\n'               //
             << borderStart << "Case | Result" << borderEnd     //
             << borderStart << "---- | ------" << borderEnd;    //
-        for (const std::string &testCase : testCases::getTestCaseLabels(test.prefix))
+        for (const std::string &testCase : test.getCases())
         {
-            out << borderStart << testCase << " | " << (testCases::isDeprecatedLabel(testCase) ? "(deprecated)" : "")
+            out << borderStart << testCase << " | " << (test.isDeprecatedLabel(testCase) ? "(deprecated)" : "")
                 << borderEnd;
         }
     }
@@ -88,7 +88,7 @@ int main(std::vector<std::string_view> args)
             return usage(args[0]);
         }
 
-        g_errors = testCases::scanTestDirectory(args[1]);
+        g_errors = testCases::Test::scanTestDirectory(args[1]);
         checkMissingTestCases();
         printMarkDown(std::cout);
         return 0;

@@ -22,7 +22,7 @@ std::vector<std::string> g_newLabels;
 
 bool readTestCases(std::string_view testCaseDirectory)
 {
-    std::vector<std::string> errors = testCases::scanTestDirectory(testCaseDirectory);
+    const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDirectory);
     if (!errors.empty())
     {
         std::cerr << "Test cases contain errors:\n";
@@ -37,16 +37,9 @@ bool readTestCases(std::string_view testCaseDirectory)
 
 bool setTestCasePrefix(std::string_view prefix)
 {
-    const std::vector<testCases::Test> &tests = testCases::getTests();
-    auto it =
-        std::find_if(tests.begin(), tests.end(), [&](const testCases::Test &test) { return test.prefix == prefix; });
-    if (it == tests.end())
-    {
-        std::cerr << "Unknown test prefix '" << prefix << "'\n";
-        return false;
-    }
-    g_testPrefix = it->prefix;
-    g_numTestCases = static_cast<int>(testCases::getNumTestCases(it->prefix));
+    const testCases::Test &test = testCases::getTestForPrefix(prefix);
+    g_testPrefix = test.getPrefix();
+    g_numTestCases = static_cast<int>(test.getNumTestCases());
     return true;
 }
 

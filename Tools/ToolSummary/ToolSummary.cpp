@@ -69,7 +69,7 @@ void reportSummary()
     constexpr std::string_view refactoring{"Refactoring"};
     std::cout << "# Summary Results\n"
                  "\n"
-                 << refactoring;
+              << refactoring;
     std::string separator(refactoring.length(), '-');
     for (const ToolSummary &tool : summary)
     {
@@ -88,13 +88,13 @@ void reportSummary()
     {
         bool hasResult{};
         std::ostringstream line;
-        line << test.name;
+        line << test.getName();
         for (const ToolSummary &tool : summary)
         {
             line << " | ";
             auto it = std::find_if(tool.summary.begin(),
                                    tool.summary.end(),
-                                   [prefix = test.prefix](const testCases::TestSummary &testSummary)
+                                   [prefix = test.getPrefix()](const testCases::TestSummary &testSummary)
                                    { return testSummary.name == prefix; });
             if (it == tool.summary.end())
             {
@@ -130,7 +130,7 @@ int main(const std::vector<std::string_view> &args)
             return usage(args[0]);
         }
 
-        std::vector<std::string> testCaseErrors = testCases::scanTestDirectory(args[1]);
+        testCases::Test::scanTestDirectory(args[1]);
         scanResultsDirectory(args[2]);
         reportSummary();
         return 0;

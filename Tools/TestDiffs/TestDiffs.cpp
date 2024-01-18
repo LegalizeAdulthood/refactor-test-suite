@@ -35,12 +35,12 @@ void checkDiffs(std::ostream &out)
 {
     for (const testCases::Test &test : testCases::getTests())
     {
-        if (!test.diffsRequired)
+        if (!test.getDiffsRequired())
         {
             continue;
         }
 
-        for (const std::string &testCase : testCases::getTestCaseLabels(test.prefix))
+        for (const std::string &testCase : test.getCases())
         {
             if (std::find(g_diffs.begin(), g_diffs.end(), testCase + ".txt") == g_diffs.end())
             {
@@ -65,7 +65,7 @@ int main(const std::vector<std::string_view> &args)
             return usage(args[0]);
         }
 
-        testCases::scanTestDirectory(args[1]);
+        testCases::Test::scanTestDirectory(args[1]);
         scanDiffDirectory(args[2]);
         checkDiffs(std::cout);
         return 0;

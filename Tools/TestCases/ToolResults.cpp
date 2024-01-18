@@ -118,7 +118,7 @@ void ToolResults::scanResultsFile()
     while (file && line.find("##") == 0)
     {
         const std::string title = line.substr(line.find_first_not_of(' ', line.find_first_of(' ')));
-        const std::string prefix = getPrefixForTestName(title);
+        const std::string prefix = Test::getPrefixForTestName(title);
         if (prefix.empty())
         {
             m_errors.push_back(m_path.string() + '(' + std::to_string(lineNum) + "): test title '" + std::string{title}
@@ -222,16 +222,17 @@ void ToolResults::checkResults()
         const std::vector<std::string> &labels = results.labels;
         auto findLabel = [&](const std::string &label)
         { return std::find(labels.begin(), labels.end(), label) != labels.end(); };
-        for (const std::string &deprecated : getDeprecatedLabels(testPrefix))
+        const Test &test = getTestForPrefix(testPrefix);
+        for (const std::string &deprecated : test.getDeprecatedCases())
         {
             if (!findLabel(deprecated))
             {
                 m_errors.push_back("error: No test results for deprecated test " + deprecated);
             }
         }
-        for (const std::string &testCase : getTestCaseLabels(testPrefix))
+        for (const std::string &testCase : test.getCases())
         {
-            if (isDeprecatedLabel(testCase) && !results.isMarkedDeprecated(testCase))
+            if (test.isDeprecatedLabel(testCase) && !results.isMarkedDeprecated(testCase))
             {
                 m_errors.push_back("error: Test results for " + testCase + " not marked deprecated.");
             }
@@ -247,7 +248,7 @@ void ToolResults::checkResults()
             {
                 m_warnings.push_back("warning: No result for test " + label);
             }
-            else if (result.deprecated && !isDeprecatedLabel(label))
+            else if (result.deprecated && !test.isDeprecatedLabel(label))
             {
                 m_errors.push_back("error: Test result for " + label
                                    + " is marked deprecated, but test case is not deprecated");

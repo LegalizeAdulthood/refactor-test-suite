@@ -56,40 +56,37 @@ std::vector<Test> g_tests{
     {"Split Multi-Variable Declaration", "SMVD"},
 };
 
-std::map<std::string, std::vector<std::string>> g_testCases;
-std::vector<std::string> g_labels;
-std::map<std::string, std::vector<std::string>> g_deprecatedLabels;
+std::vector<std::string> g_allTestCases;
 std::string g_currentFile;
 int g_currentLine{};
 std::vector<std::string> g_errors;
-std::vector<std::string> g_warnings;
 
-void checkLabel(std::string_view label, std::string_view desc)
+void Test::checkLabel(std::string_view label, std::string_view desc)
 {
-    if (std::find(g_labels.begin(), g_labels.end(), label) != g_labels.end())
+    if (std::find(g_allTestCases.begin(), g_allTestCases.end(), label) != g_allTestCases.end())
     {
         g_errors.emplace_back(g_currentFile + "(" + std::to_string(g_currentLine) + "): Duplicate test label "
                               + std::string{label});
         return;
     }
     const std::string_view prefix = label.substr(0, label.find_first_of("0123456789"));
-    const auto pos =
-        std::find_if(std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.prefix == prefix; });
+    const auto pos = std::find_if(
+        std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.getPrefix() == prefix; });
     if (pos == std::end(g_tests))
     {
         g_errors.emplace_back(g_currentFile + "(" + std::to_string(g_currentLine) + "): Unknown test prefix "
                               + std::string{prefix});
         return;
     }
-    g_testCases[pos->prefix].emplace_back(label);
-    g_labels.emplace_back(label);
+    pos->m_cases.emplace_back(label);
+    g_allTestCases.emplace_back(label);
     if (desc == "(deprecated)")
     {
-        g_deprecatedLabels[pos->prefix].emplace_back(label);
+        pos->m_deprecatedCases.emplace_back(label);
     }
 }
 
-void scanLine(std::string_view line)
+void Test::scanTestCaseLine(std::string_view line)
 {
     if (size_t pos = line.find("#TEST#"); pos != std::string::npos)
     {
@@ -102,7 +99,7 @@ void scanLine(std::string_view line)
     }
 }
 
-void scanFile(std::filesystem::path path)
+void Test::scanTestCaseFile(std::filesystem::path path)
 {
     std::ifstream file(path.string());
     g_currentFile = path.string();
@@ -112,11 +109,11 @@ void scanFile(std::filesystem::path path)
         std::string line;
         std::getline(file, line);
         ++g_currentLine;
-        scanLine(line);
+        scanTestCaseLine(line);
     }
 }
 
-void scanTestCaseDirectory(std::filesystem::path dir)
+void Test::scanTestCaseDirectory(std::filesystem::path dir)
 {
     for (auto &entry : std::filesystem::directory_iterator(dir))
     {
@@ -126,23 +123,27 @@ void scanTestCaseDirectory(std::filesystem::path dir)
         }
         else
         {
-            scanFile(entry);
+            scanTestCaseFile(entry);
         }
     }
 }
 
-void sortTestCases()
+void Test::sortTestCases()
 {
     const auto extractCaseNum = [](const std::string &label)
     { return std::stoi(label.substr(label.find_first_of("0123456789"))); };
-    for (const Test &test : g_tests)
+    for (Test &test : g_tests)
     {
-        std::vector<std::string> &testCases = g_testCases.find(test.prefix)->second;
-        std::sort(testCases.begin(),
-                  testCases.end(),
+        std::sort(test.m_cases.begin(),
+                  test.m_cases.end(),
                   [&](const std::string &lhs, const std::string &rhs)
                   { return extractCaseNum(lhs) < extractCaseNum(rhs); });
     }
+}
+
+bool Test::isDeprecatedLabel(const std::string &label) const
+{
+    return std::find(m_deprecatedCases.begin(), m_deprecatedCases.end(), label) != m_deprecatedCases.end();
 }
 
 const std::vector<Test> &getTests()
@@ -150,50 +151,33 @@ const std::vector<Test> &getTests()
     return g_tests;
 }
 
-const std::map<std::string, std::vector<std::string>> &getTestCases()
+const Test &getTestForPrefix(std::string_view prefix)
 {
-    return g_testCases;
+    auto pos =
+        std::find_if(g_tests.begin(), g_tests.end(), [&](const Test &test) { return test.getPrefix() == prefix; });
+    if (pos == g_tests.end())
+    {
+        throw std::runtime_error("Unknown test prefix " + std::string(prefix));
+    }
+    return *pos;
 }
 
-const std::vector<std::string> &getTestCaseLabels(const std::string &prefix)
-{
-    const auto it = g_testCases.find(prefix);
-    static std::vector<std::string> empty;
-    return it == g_testCases.cend() ? empty : it->second;
-}
-
-std::vector<std::string> scanTestDirectory(std::string_view dir)
+std::vector<std::string> Test::scanTestDirectory(std::filesystem::path dir)
 {
     scanTestCaseDirectory(dir);
     sortTestCases();
     return g_errors;
 }
 
-bool isDeprecatedLabel(const std::string &label)
+const std::string &Test::getPrefixForTestName(const std::string &name)
 {
-    const std::string prefix = label.substr(0, label.find_first_of("0123456789"));
-    const auto pos =
-        std::find_if(std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.prefix == prefix; });
+    auto pos = std::find_if(
+        std::begin(g_tests), std::end(g_tests), [&name](const Test &test) { return test.getName() == name; });
     if (pos == std::end(g_tests))
     {
-        throw std::runtime_error("Unknown test prefix " + std::string{prefix});
+        throw std::runtime_error("Unknown test name " + name);
     }
-    auto &labels = g_deprecatedLabels[pos->prefix];
-    return std::find(labels.begin(), labels.end(), label) != labels.end();
-}
-
-const std::vector<std::string> &getDeprecatedLabels(const std::string &prefix)
-{
-    static std::vector<std::string> empty;
-    auto pos = g_deprecatedLabels.find(prefix);
-    return pos == g_deprecatedLabels.end() ? empty : pos->second;
-}
-
-std::string getPrefixForTestName(std::string_view name)
-{
-    auto pos =
-        std::find_if(std::begin(g_tests), std::end(g_tests), [name](const Test &test) { return test.name == name; });
-    return pos != std::end(g_tests) ? pos->prefix : std::string{};
+    return pos->getPrefix();
 }
 
 }    // namespace testCases
