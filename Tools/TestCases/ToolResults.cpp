@@ -232,7 +232,7 @@ void ToolResults::checkResults()
         }
         for (const std::string &testCase : test.getCases())
         {
-            if (test.isDeprecatedLabel(testCase) && !results.isMarkedDeprecated(testCase))
+            if (test.isDeprecatedCase(testCase) && !results.isMarkedDeprecated(testCase))
             {
                 m_errors.push_back("error: Test results for " + testCase + " not marked deprecated.");
             }
@@ -248,7 +248,7 @@ void ToolResults::checkResults()
             {
                 m_warnings.push_back("warning: No result for test " + label);
             }
-            else if (result.deprecated && !test.isDeprecatedLabel(label))
+            else if (result.deprecated && !test.isDeprecatedCase(label))
             {
                 m_errors.push_back("error: Test result for " + label
                                    + " is marked deprecated, but test case is not deprecated");

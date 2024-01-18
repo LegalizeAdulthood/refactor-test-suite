@@ -166,7 +166,7 @@ void Test::sortTestPaths()
     }
 }
 
-bool Test::isDeprecatedLabel(const std::string &label) const
+bool Test::isDeprecatedCase(const std::string &label) const
 {
     return std::find(m_deprecatedCases.begin(), m_deprecatedCases.end(), label) != m_deprecatedCases.end();
 }

@@ -49,7 +49,7 @@ public:
     {
         return m_cases.size();
     }
-    bool isDeprecatedLabel(const std::string &label) const;
+    bool isDeprecatedCase(const std::string &label) const;
 
 private:
     static void scanTestCaseDirectory(std::filesystem::path dir);
