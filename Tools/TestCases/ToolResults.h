@@ -74,6 +74,9 @@ public:
     bool addTests(const std::string &prefix, const std::vector<std::string> &labels);
     void writeResults();
     bool hasResultsForPrefix(std::string_view prefix) const;
+    void renameTestCases(std::string_view prefix,
+                         const std::vector<std::string_view> &before,
+                         const std::vector<std::string_view> &after);
 
 private:
     struct TestResultCollection
@@ -89,7 +92,7 @@ private:
     };
 
     void scanResultsFile();
-    TestResultCollection &getTestResultsForPrefix(const std::string &prefix);
+    TestResultCollection &getTestResultsForPrefix(std::string_view prefix);
 
     std::filesystem::path m_path;
     std::string m_name;

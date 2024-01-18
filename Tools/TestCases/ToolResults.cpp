@@ -193,14 +193,14 @@ void ToolResults::scanResultsFile()
     }
 }
 
-ToolResults::TestResultCollection &ToolResults::getTestResultsForPrefix(const std::string &prefix)
+ToolResults::TestResultCollection &ToolResults::getTestResultsForPrefix(std::string_view prefix)
 {
     auto it = std::find_if(m_testResults.begin(),
                            m_testResults.end(),
                            [&](const TestResultCollection &results) { return results.prefix == prefix; });
     if (it == m_testResults.end())
     {
-        throw std::runtime_error("No test results available for " + prefix);
+        throw std::runtime_error("No test results available for " + std::string{prefix});
     }
     return *it;
 }
@@ -343,6 +343,52 @@ void ToolResults::writeResults()
 bool ToolResults::hasResultsForPrefix(std::string_view prefix) const
 {
     return std::find(m_testPrefixes.begin(), m_testPrefixes.end(), prefix) != m_testPrefixes.end();
+}
+
+void ToolResults::renameTestCases(std::string_view prefix,
+                                  const std::vector<std::string_view> &before,
+                                  const std::vector<std::string_view> &after)
+{
+    TestResultCollection &results = getTestResultsForPrefix(prefix);
+    std::vector<std::string> newLabels;
+    newLabels.reserve(results.labels.size());
+    for (const std::string &label : results.labels)
+    {
+        const auto it = std::find(before.begin(), before.end(), label);
+        if (it == before.end())
+        {
+            throw std::runtime_error("Unknown label " + label);
+        }
+        newLabels.emplace_back(after[std::distance(before.begin(), it)]);
+    };
+    const auto getLabelNum = [len = prefix.length()](const std::string &label) { return std::stoi(label.substr(len)); };
+    std::sort(newLabels.begin(),
+              newLabels.end(),
+              [getLabelNum](const std::string &lhs, const std::string &rhs)
+              { return getLabelNum(lhs) < getLabelNum(rhs); });
+
+    std::vector<TestResult> newResults;
+    newResults.reserve(results.results.size());
+    for (const TestResult &result : results.results)
+    {
+        TestResult newResult(result);
+        const std::string label = getLabel(result);
+        const auto it = std::find(before.begin(), before.end(), label);
+        if (it == before.end())
+        {
+            throw std::runtime_error("Unknown label " + label);
+        }
+        newResult.line.replace(
+            newResult.line.find(label), label.length(), std::string{after[std::distance(before.begin(), it)]});
+        newResults.emplace_back(std::move(newResult));
+    }
+    const auto getCaseNum = [getLabelNum](const TestResult &text) { return getLabelNum(getLabel(text)); };
+    std::sort(newResults.begin(),
+              newResults.end(),
+              [getCaseNum](const TestResult &lhs, const TestResult &rhs) { return getCaseNum(lhs) < getCaseNum(rhs); });
+
+    std::swap(results.labels, newLabels);
+    std::swap(results.results, newResults);
 }
 
 }    // namespace testCases
