@@ -57,6 +57,7 @@ private:
     static void scanTestCaseLine(std::string_view line);
     static void checkLabel(std::string_view label, std::string_view desc);
     static void sortTestCases();
+    static void sortTestPaths();
 
     std::string m_name;
     std::string m_prefix;

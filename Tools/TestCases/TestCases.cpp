@@ -145,6 +145,27 @@ void Test::sortTestCases()
     }
 }
 
+void Test::sortTestPaths()
+{
+    // a < b
+    //  if a's filename < b's filename
+    //  or
+    //  they have the same filename and a is a header file and b is a source file
+    const auto compare = [](const std::filesystem::path &lhs, const std::filesystem::path &rhs)
+    {
+        return lhs.stem() < rhs.stem()
+            || (lhs.stem() == rhs.stem() && lhs.extension().string() == ".h"
+                && (rhs.extension().string() == ".cpp" || rhs.extension().string() == ".c"));
+    };
+    for (Test &test : g_tests)
+    {
+        if (test.m_paths.size() > 1)
+        {
+            std::sort(test.m_paths.begin(), test.m_paths.end(), compare);
+        }
+    }
+}
+
 bool Test::isDeprecatedLabel(const std::string &label) const
 {
     return std::find(m_deprecatedCases.begin(), m_deprecatedCases.end(), label) != m_deprecatedCases.end();
@@ -169,6 +190,7 @@ const Test &getTestForPrefix(std::string_view prefix)
 std::vector<std::string> Test::scanTestDirectory(std::filesystem::path dir)
 {
     scanTestCaseDirectory(dir);
+    sortTestPaths();
     sortTestCases();
     return g_errors;
 }
