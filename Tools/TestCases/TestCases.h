@@ -45,6 +45,10 @@ public:
     {
         return m_deprecatedCases;
     }
+    const std::vector<std::filesystem::path> &getPaths() const
+    {
+        return m_paths;
+    }
     std::size_t getNumTestCases() const
     {
         return m_cases.size();
