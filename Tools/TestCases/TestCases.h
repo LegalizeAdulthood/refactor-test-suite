@@ -63,6 +63,7 @@ private:
     bool m_diffsRequired;
     std::vector<std::string> m_cases;
     std::vector<std::string> m_deprecatedCases;
+    std::vector<std::filesystem::path> m_paths;
 };
 
 const std::vector<Test> &getTests();

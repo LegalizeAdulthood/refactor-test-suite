@@ -57,7 +57,7 @@ std::vector<Test> g_tests{
 };
 
 std::vector<std::string> g_allTestCases;
-std::string g_currentFile;
+std::filesystem::path g_currentFile;
 int g_currentLine{};
 std::vector<std::string> g_errors;
 
@@ -65,24 +65,28 @@ void Test::checkLabel(std::string_view label, std::string_view desc)
 {
     if (std::find(g_allTestCases.begin(), g_allTestCases.end(), label) != g_allTestCases.end())
     {
-        g_errors.emplace_back(g_currentFile + "(" + std::to_string(g_currentLine) + "): Duplicate test label "
+        g_errors.emplace_back(g_currentFile.string() + "(" + std::to_string(g_currentLine) + "): Duplicate test label "
                               + std::string{label});
         return;
     }
     const std::string_view prefix = label.substr(0, label.find_first_of("0123456789"));
-    const auto pos = std::find_if(
+    const auto test = std::find_if(
         std::begin(g_tests), std::end(g_tests), [&](const Test &test) { return test.getPrefix() == prefix; });
-    if (pos == std::end(g_tests))
+    if (test == std::end(g_tests))
     {
-        g_errors.emplace_back(g_currentFile + "(" + std::to_string(g_currentLine) + "): Unknown test prefix "
+        g_errors.emplace_back(g_currentFile.string() + "(" + std::to_string(g_currentLine) + "): Unknown test prefix "
                               + std::string{prefix});
         return;
     }
-    pos->m_cases.emplace_back(label);
+    test->m_cases.emplace_back(label);
     g_allTestCases.emplace_back(label);
     if (desc == "(deprecated)")
     {
-        pos->m_deprecatedCases.emplace_back(label);
+        test->m_deprecatedCases.emplace_back(label);
+    }
+    if (std::find(test->m_paths.begin(), test->m_paths.end(), g_currentFile) == test->m_paths.end())
+    {
+        test->m_paths.push_back(g_currentFile);
     }
 }
 
@@ -102,7 +106,7 @@ void Test::scanTestCaseLine(std::string_view line)
 void Test::scanTestCaseFile(std::filesystem::path path)
 {
     std::ifstream file(path.string());
-    g_currentFile = path.string();
+    g_currentFile = path;
     g_currentLine = 0;
     while (file)
     {
