@@ -28,6 +28,11 @@ inline std::string toolNameFromResultsFile(std::filesystem::path path)
     return file.substr(0, pos);
 }
 
+inline bool isResultsFile(std::filesystem::path path)
+{
+    return !toolNameFromResultsFile(path).empty();
+}
+
 struct TestSummary
 {
     std::string name;

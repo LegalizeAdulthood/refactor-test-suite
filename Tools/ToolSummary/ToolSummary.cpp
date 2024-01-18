@@ -33,9 +33,7 @@ void scanResultsDirectory(std::filesystem::path dir)
         {
             continue;
         }
-
-        const std::string toolName = testCases::toolNameFromResultsFile(entry.path());
-        if (toolName.empty())
+        if (!testCases::isResultsFile(entry))
         {
             continue;
         }
