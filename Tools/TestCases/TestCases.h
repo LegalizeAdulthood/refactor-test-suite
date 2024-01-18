@@ -8,6 +8,8 @@
 namespace testCases
 {
 
+std::string_view getTestCaseLabel(std::string_view line);
+
 class Test
 {
 public:

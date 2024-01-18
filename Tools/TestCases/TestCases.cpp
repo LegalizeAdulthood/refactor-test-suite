@@ -90,17 +90,31 @@ void Test::checkLabel(std::string_view label, std::string_view desc)
     }
 }
 
-void Test::scanTestCaseLine(std::string_view line)
+std::string_view getTestCaseLabel(std::string_view line)
 {
     if (size_t pos = line.find("#TEST#"); pos != std::string::npos)
     {
         const size_t begin = line.find_first_not_of(" \t", line.find_first_of(' ', pos));
         const size_t end = line.find_first_of(' ', begin);
         const std::string_view label = line.substr(begin, end - begin);
-        const std::string_view desc =
-            end != std::string_view::npos ? line.substr(line.find_first_not_of(' ', end)) : "";
-        checkLabel(label, desc);
+        return label;
     }
+    return {};
+}
+
+void Test::scanTestCaseLine(std::string_view line)
+{
+    const std::string_view label = getTestCaseLabel(line);
+    if (label.empty())
+    {
+        return;
+    }
+
+    const size_t begin = line.find_first_not_of(" \t", line.find(label) + label.length() - 1);
+    const size_t end = line.find_first_of(' ', begin);
+    const std::string_view desc =
+        end != std::string_view::npos ? line.substr(line.find_first_not_of(' ', end)) : "";
+    checkLabel(label, desc);
 }
 
 void Test::scanTestCaseFile(std::filesystem::path path)
