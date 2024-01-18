@@ -340,4 +340,9 @@ void ToolResults::writeResults()
     }
 }
 
+bool ToolResults::hasResultsForPrefix(std::string_view prefix) const
+{
+    return std::find(m_testPrefixes.begin(), m_testPrefixes.end(), prefix) != m_testPrefixes.end();
+}
+
 }    // namespace testCases

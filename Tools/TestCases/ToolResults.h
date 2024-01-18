@@ -4,6 +4,7 @@
 #include <map>
 #include <ostream>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
@@ -67,6 +68,7 @@ public:
     std::vector<TestSummary> getSummary() const;
     bool addTests(const std::string &prefix, const std::vector<std::string> &labels);
     void writeResults();
+    bool hasResultsForPrefix(std::string_view prefix) const;
 
 private:
     struct TestResultCollection
