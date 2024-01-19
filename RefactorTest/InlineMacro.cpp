@@ -45,7 +45,7 @@ void f1_aux(std::ostream &stream, T head, Types... tail)
 void f1()
 {
     std::ostringstream result;
-    // #TEST#: IM7 Inline macro F1_AUX
+    // #TEST#: IM2 Inline macro F1_AUX
     F1_AUX(result, 10, 20.5, "hello world!");
     require_equal(std::string{"10\n20.5\nhello world!\n"}, result.str());
 }
@@ -56,23 +56,23 @@ void f1()
 
 void TestInlineMacro()
 {
-    // #TEST#: IM2 Inline macro MACRO1
+    // #TEST#: IM3 Inline macro MACRO1
     int x = MACRO1;
     REQUIRE_EQUAL(MACRO1, x);
 
-    // #TEST#: IM3 Inline macro MACRO2
+    // #TEST#: IM4 Inline macro MACRO2
     std::string s = MACRO2;
     REQUIRE_EQUAL(std::string{MACRO2}, s);
 
-    // #TEST#: IM4 Inline macro MACRO3
+    // #TEST#: IM5 Inline macro MACRO3
     float f = MACRO3;
     REQUIRE_EQUAL(MACRO3, f);
 
-    // #TEST#: IM5 Inline macro MACRO4
+    // #TEST#: IM6 Inline macro MACRO4
     x = MACRO4(2);
     REQUIRE_EQUAL(MACRO4(2), x);
 
-    // #TEST#: IM6 Inline macro MACRO5
+    // #TEST#: IM7 Inline macro MACRO5
     x = 2;
     MACRO5(x);
     REQUIRE_EQUAL(6, x);

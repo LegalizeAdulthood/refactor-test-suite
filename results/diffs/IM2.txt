@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/InlineMacro.cpp b/RefactorTest/InlineMacro.cpp
-index 470dda9..acf564c 100644
+index 3e79e52..2b31dfe 100644
 --- a/RefactorTest/InlineMacro.cpp
 +++ b/RefactorTest/InlineMacro.cpp
-@@ -24,7 +24,7 @@
- void TestInlineMacro()
+@@ -45,7 +45,7 @@ void f1()
  {
-     // #TEST#: IM2 Inline macro MACRO1
--    int x = MACRO1;
-+    int x = -20;
-     // #TEST#: IM3 Inline macro MACRO2
-     std::string s = MACRO2;
-     // #TEST#: IM4 Inline macro MACRO3
+     std::ostringstream result;
+     // #TEST#: IM2 Inline macro F1_AUX
+-    F1_AUX(result, 10, 20.5, "hello world!");
++    f1_aux(result, 10, 20.5, "hello world!");
+     require_equal(std::string{"10\n20.5\nhello world!\n"}, result.str());
+ }
+ 

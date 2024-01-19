@@ -1,11 +1,13 @@
 diff --git a/RefactorTest/InlineMacro.cpp b/RefactorTest/InlineMacro.cpp
-index 470dda9..66e8202 100644
+index 470dda9..53bc896 100644
 --- a/RefactorTest/InlineMacro.cpp
 +++ b/RefactorTest/InlineMacro.cpp
-@@ -32,5 +32,5 @@ void TestInlineMacro()
-     // #TEST#: IM5 Inline macro MACRO4
-     x = MACRO4(2);
-     // #TEST#: IM6 Inline macro MACRO5
--    MACRO5(x);
-+    do { if (x > 5) { x *= 2; } else { x += 4; } } while (0);
+@@ -30,7 +30,7 @@ void TestInlineMacro()
+     // #TEST#: IM5 Inline macro MACRO3
+     float f = MACRO3;
+     // #TEST#: IM6 Inline macro MACRO4
+-    x = MACRO4(2);
++    x = (MACRO1*2);
+     // #TEST#: IM7 Inline macro MACRO5
+     MACRO5(x);
  }

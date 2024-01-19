@@ -461,12 +461,12 @@ FC1  | Pass
 Case | Result
 ---- | ------
 IM1  | Failure (can't inline one macro inside another) [1922](https://youtrack.jetbrains.com/issue/CPP-1922)
-IM2  | Pass
+IM2 | Pass
 IM3  | Pass
 IM4  | Pass
 IM5  | Pass
 IM6  | Pass
-IM7 | Pass
+IM7  | Pass
 
 ## Inline Variable
 Case | Result
