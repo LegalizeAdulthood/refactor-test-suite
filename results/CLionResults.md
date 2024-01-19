@@ -439,8 +439,8 @@ EP1  | Failure (changes member ptr to fn ptr) [1920](https://youtrack.jetbrains.
 EP2  | Failure (creates invalid code) [16582](https://youtrack.jetbrains.com/issue/CPP-16582)
 EP3  | Failure (should not be available) [1921](https://youtrack.jetbrains.com/issue/CPP-1921)
 EP4  | Pass
-EP5  | Failure (changes member ptr to fn ptr) [1920](https://youtrack.jetbrains.com/issue/CPP-1920)
-EP6  | Pass
+EP5  | Pass
+EP6  | Failure (changes member ptr to fn ptr) [1920](https://youtrack.jetbrains.com/issue/CPP-1920)
 
 ## Extract Variable
 Case | Result

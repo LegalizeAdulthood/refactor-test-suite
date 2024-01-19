@@ -36,11 +36,11 @@ void TestMemberPointer()
     // #TEST#: EP2 Extract Parameter f
     Foo f;
     // #TEST#: EP3 Extract Parameter j
-    // #TEST#: EP6 Extract Parameter f
-    // #TEST#: EP4 Extract Parameter ptr
+    // #TEST#: EP4 Extract Parameter f
+    // #TEST#: EP5 Extract Parameter ptr
     int j = (f.*ptr)();
     require_equal(1, j);
-    // #TEST#: EP5 Extract Parameter ptr
+    // #TEST#: EP6 Extract Parameter ptr
     ptr = &Foo::Operation2;
     j += (f.*ptr)();
     require_equal(3, j);
