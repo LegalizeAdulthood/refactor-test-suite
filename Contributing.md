@@ -268,14 +268,15 @@ does not have an associated diff.
 
 ## Executable test-names
 
-Example: `test-names RefactorTest > Tool.md`
+Example: `test-names -o Tool.md RefactorTest`
 
 The executable test-names checks for missing test cases and generates
 a prototype markdown file for a tool, named `Tool.md`, in the build
 directory.  The prototype markdown file can be used to add or update
 the results for a tool.  Since all test case identifiers are consecutive,
 missing test case identifiers indicate some sort of problem in the test
-case ids.
+case ids.  If any test has non-consecutive test case ids, an error is
+generated.
 
 ## Executable test-results
 
