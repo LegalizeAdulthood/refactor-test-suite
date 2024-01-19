@@ -1,15 +1,12 @@
 diff --git a/RefactorTest/ExtractVariable.cpp b/RefactorTest/ExtractVariable.cpp
-index 5bceae6..610417f 100644
+index ea3d831..6626854 100644
 --- a/RefactorTest/ExtractVariable.cpp
 +++ b/RefactorTest/ExtractVariable.cpp
-@@ -65,8 +65,9 @@ void Function1()
- {
+@@ -84,5 +84,6 @@ void TestExtractVariable()
+ 
      std::string foo;
-     std::string bar = "Bar!";
-+    std::string Goink = bar + " meta?";
      // #TEST#: EXV6 Extract variable for rhs expression
--    foo = bar + " meta?";
+-    foo = "";
++    const char* Goink = "";
 +    foo = Goink;
  }
- 
- }    // namespace ExtractVariableNamespace

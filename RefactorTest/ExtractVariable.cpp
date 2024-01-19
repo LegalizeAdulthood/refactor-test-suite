@@ -29,14 +29,14 @@ public:
         bool flag = true;
         const int &xr = x;
         const int &yr = y;
-        // #TEST#: EXV2 Extract variable for rhs expression
+        // #TEST#: EXV1 Extract variable for rhs expression
         const int &z = flag ? xr : yr;
     }
 
     void Operation3()
     {
         bool which = true;
-        // #TEST#: EXV1 Extract variable for rhs expression
+        // #TEST#: EXV2 Extract variable for rhs expression
         void (Foo::*member)() = which ? &Foo::Operation1 : &Foo::Operation2;
         void (Foo::*member2)() =
             (member == &Foo::Operation1) ? (which ? &Foo::Operation2 : &Foo::Operation1) : &Foo::Operation3;
@@ -65,7 +65,7 @@ void Function1()
 {
     std::string foo;
     std::string bar = "Bar!";
-    // #TEST#: EXV6 Extract variable for rhs expression
+    // #TEST#: EXV5 Extract variable for rhs expression
     foo = bar + " meta?";
 }
 
@@ -83,6 +83,6 @@ void TestExtractVariable()
     f.Operation5();
 
     std::string foo;
-    // #TEST#: EXV5 Extract variable for rhs expression
+    // #TEST#: EXV6 Extract variable for rhs expression
     foo = "";
 }

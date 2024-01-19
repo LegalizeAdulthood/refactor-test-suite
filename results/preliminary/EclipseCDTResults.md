@@ -224,8 +224,8 @@ EXF20 |
 ## Extract Variable
 Case | Result
 ---- | ------
-EXV1  |
-EXV2  | Pass
+EXV1  | Pass
+EXV2  |
 EXV3  |
 EXV4  |
 EXV5  |
