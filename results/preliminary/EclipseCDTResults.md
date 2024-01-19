@@ -156,19 +156,19 @@ CSM31 |
 ## Extract Constant
 Case | Result
 ---- | ------
-EC1   | Pass
+EC1   |
 EC2   |
 EC3   |
-EC4   |
+EC4  |
 EC5   |
 EC6   |
-EC7   |
-EC8   |
-EC9   |
-EC10  |
-EC11  |
-EC12  |
-EC13  |
+EC7  |
+EC8  |
+EC9  |
+EC10   | Pass
+EC11   |
+EC12   |
+EC13   |
 
 ## Extract Method
 * CDT: Refactor > Extract Function...

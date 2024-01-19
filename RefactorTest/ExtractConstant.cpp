@@ -14,10 +14,10 @@ class Foo
 public:
     int Operation1()
     {
-        // #TEST#: EC5 Extract Constant (class)
-        // #TEST#: EC6 Extract Constant (global)
-        // #TEST#: EC7 Extract Constant (macro)
-        // #TEST#: EC13 Extract Constant (local)
+        // #TEST#: EC1 Extract Constant (class)
+        // #TEST#: EC2 Extract Constant (global)
+        // #TEST#: EC3 Extract Constant (macro)
+        // #TEST#: EC4 Extract Constant (local)
         return 1;
     }
     int Const1() const
@@ -30,15 +30,15 @@ public:
     }
     double Operation3()
     {
-        // #TEST#: EC8 Extract Constant
+        // #TEST#: EC5 Extract Constant
         return 1.0;
     }
     const char *Operation4()
     {
-        // #TEST#: EC9 Extract Constant (class)
-        // #TEST#: EC10 Extract Constant (global)
-        // #TEST#: EC11 Extract Constant (macro)
-        // #TEST#: EC12 Extract Constant (local)
+        // #TEST#: EC6 Extract Constant (class)
+        // #TEST#: EC7 Extract Constant (global)
+        // #TEST#: EC8 Extract Constant (macro)
+        // #TEST#: EC9 Extract Constant (local)
         return "Foo";
     }
 };
@@ -91,18 +91,18 @@ bool ExtractConstant::Test(int a, int b) const
 {
     if (a < b)
     {
-        // #TEST#: EC1 Replace all occurrences of 3 with named constant
+        // #TEST#: EC10 Replace all occurrences of 3 with named constant
         if (a < 3)
         {
-            // #TEST#: EC2 Replace all occurrences of true with named constant
+            // #TEST#: EC11 Replace all occurrences of true with named constant
             return true;
         }
-        // #TEST#: EC3 Replace all occurrences of 4 with named constant
+        // #TEST#: EC12 Replace all occurrences of 4 with named constant
         if (b > 4)
         {
             return true;
         }
-        // #TEST#: EC4 Replace all occurrences of false with named constant
+        // #TEST#: EC13 Replace all occurrences of false with named constant
         return false;
     }
     else if (!(a < b))

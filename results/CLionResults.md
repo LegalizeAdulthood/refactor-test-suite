@@ -370,19 +370,19 @@ CSM31 | Pass
 ## Extract Constant
 Case | Result
 ---- | ------
-EC1  | Pass
+EC1  | Failure (can't extract to class scope) [1928](https://youtrack.jetbrains.com/issue/CPP-1928)
 EC2  | Pass
 EC3  | Pass
-EC4  | Pass
-EC5  | Failure (can't extract to class scope) [1928](https://youtrack.jetbrains.com/issue/CPP-1928)
-EC6  | Pass
-EC7  | Pass
-EC8  | Pass
-EC9  | Failure (can't extract to class scope) [1928](https://youtrack.jetbrains.com/issue/CPP-1928)
-EC10 | Pass
-EC11 | Pass
-EC12 | Pass
-EC13 | Pass
+EC4 | Pass
+EC5  | Pass
+EC6  | Failure (can't extract to class scope) [1928](https://youtrack.jetbrains.com/issue/CPP-1928)
+EC7 | Pass
+EC8 | Pass
+EC9 | Pass
+EC10  | Pass
+EC11  | Pass
+EC12  | Pass
+EC13  | Pass
 
 ## Extract Function
 Case | Result
