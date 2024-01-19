@@ -50,17 +50,17 @@ public:
         return x + 4;
     }
 
-    // #TEST#: RP8 (deprecated)
+    // #TEST#: RP3 (deprecated)
     void ConstOperation3(int &x) const;
 };
 
-// #TEST#: RP9 (deprecated)
+// #TEST#: RP4 (deprecated)
 void Foo::ConstOperation3(int &x) const
 {
     x = 2;
 }
 
-// #TEST#: RP3 Reorder parameters move parameter i to first parameter
+// #TEST#: RP5 Reorder parameters move parameter i to first parameter
 int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
 {
     int j;
@@ -75,7 +75,7 @@ int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
     return (f.*member)(j);
 }
 
-// #TEST#: RP4 Reorder parameters move parameter i to first parameter
+// #TEST#: RP6 Reorder parameters move parameter i to first parameter
 int TestConstMemberPointer(Foo &f, int (Foo::*member)(int) const, int i)
 {
     int j;
@@ -92,7 +92,7 @@ int TestConstMemberPointer(Foo &f, int (Foo::*member)(int) const, int i)
 
 typedef int (Foo::*FooMemberPtr)(int);
 
-// #TEST#: RP5 Reorder parameters move parameter i to first parameter
+// #TEST#: RP7 Reorder parameters move parameter i to first parameter
 int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
 {
     int j;
@@ -109,7 +109,7 @@ int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
 
 typedef int (Foo::*FooConstMemberPtr)(int) const;
 
-// #TEST#: RP6 Reorder parameters move parameter i to first parameter
+// #TEST#: RP8 Reorder parameters move parameter i to first parameter
 int TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
 {
     int j;
@@ -126,7 +126,7 @@ int TestConstMemberPointer2(Foo &f, FooConstMemberPtr member, int i)
 
 }    // namespace ReorderParametersNamespace
 
-// #TEST#: RP7 (deprecated)
+// #TEST#: RP9 (deprecated)
 static int Function3(int x)
 {
     return x * 4;

@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/ReorderParameters.cpp b/RefactorTest/ReorderParameters.cpp
-index aadc55b..5b1bfe8 100644
+index aadc55b..b125fca 100644
 --- a/RefactorTest/ReorderParameters.cpp
 +++ b/RefactorTest/ReorderParameters.cpp
-@@ -93,7 +93,7 @@ int TestConstMemberPointer(Foo &f, int (Foo::*member)(int) const, int i)
- typedef int (Foo::*FooMemberPtr)(int);
+@@ -61,7 +61,7 @@ void Foo::ConstOperation3(int &x) const
+ }
  
  // #TEST#: RP5 Reorder parameters move parameter i to first parameter
--int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
-+int TestMemberPointer2(int i, Foo &f, FooMemberPtr member)
+-int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
++int TestMemberPointer(int i, Foo &f, int (Foo::*member)(int))
  {
      int j;
      if (i < 0)
-@@ -144,7 +144,7 @@ void TestReorderParameters()
+@@ -140,7 +140,7 @@ void TestReorderParameters()
+     int result = TestFunction(Function1, 1);
+     REQUIRE_EQUAL(8, result);
+     Foo f;
+-    result = TestMemberPointer(f, &Foo::Operation1, Function2(1));
++    result = TestMemberPointer(Function2(1), f, &Foo::Operation1);
      REQUIRE_EQUAL(8, result);
      result = TestConstMemberPointer(f, &Foo::Const1, 6);
-     REQUIRE_EQUAL(16, result);
--    result = TestMemberPointer2(f, &Foo::Operation1, Function3(1));
-+    result = TestMemberPointer2(Function3(1), f, &Foo::Operation1);
-     REQUIRE_EQUAL(8, result);
-     result = TestConstMemberPointer2(f, &Foo::Const1, 6);
      REQUIRE_EQUAL(16, result);

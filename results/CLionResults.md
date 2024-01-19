@@ -1574,12 +1574,12 @@ Case| Result
 --- | -----
 RP1 | (deprecated)
 RP2 | Pass
-RP3 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-RP4 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-RP5 | Pass
-RP6 | Pass
-RP7 | (deprecated)
-RP8 | (deprecated)
+RP3 | (deprecated)
+RP4 | (deprecated)
+RP5 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP6 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP7 | Pass
+RP8 | Pass
 RP9 | (deprecated)
 
 ## Replace If With Ternary

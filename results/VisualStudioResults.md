@@ -1376,12 +1376,12 @@ Case | Result
 ---- | ------
 RP1  | (deprecated)
 RP2  | Failure (error occured while applying changes; Value does not fall within expected range)
-RP3  | Failure (error occured while applying changes; textIndex out of range)
-RP4  | Failure (error occured while applying changes; Value does not fall within expected range)
+RP3  | (deprecated)
+RP4  | (deprecated)
 RP5  | Failure (error occured while applying changes; textIndex out of range)
 RP6  | Failure (error occured while applying changes; Value does not fall within expected range)
-RP7  | (deprecated)
-RP8  | (deprecated)
+RP7  | Failure (error occured while applying changes; textIndex out of range)
+RP8  | Failure (error occured while applying changes; Value does not fall within expected range)
 RP9  | (deprecated)
 
 ## Replace String Literal With Raw String Literal
