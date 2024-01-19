@@ -328,7 +328,7 @@ are tested.
 
 ## Executable renumber-tests
 
-Example: `renumber-tests RefactorTest R R results`
+Example: `renumber-tests RefactorTest R results`
 
 The executable renumber-tests is used to renumber the test cases sequentially
 within the source files.  This makes the test cases easier to execute since
