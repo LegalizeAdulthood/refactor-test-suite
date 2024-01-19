@@ -335,8 +335,8 @@ CMS22 | Pass
 ## Create Setter Method
 Case | Result
 ---- | ------
-CSM1  | Pass
-CSM2  | Pass
+CSM1 | Pass
+CSM2 | Pass
 CSM3  | Pass
 CSM4  | Pass
 CSM5  | Pass
@@ -344,8 +344,8 @@ CSM6  | Pass
 CSM7  | Pass
 CSM8  | Pass
 CSM9  | Pass
-CSM10 | Pass
-CSM11 | Pass
+CSM10  | Pass
+CSM11  | Pass
 CSM12 | Pass
 CSM13 | Pass
 CSM14 | Pass
@@ -358,12 +358,12 @@ CSM20 | Pass
 CSM21 | Pass
 CSM22 | Pass
 CSM23 | Pass
-CSM24 | Pass
+CSM24 | (deprecated)
 CSM25 | Pass
 CSM26 | Pass
 CSM27 | Pass
 CSM28 | Pass
-CSM29 | (deprecated)
+CSM29 | Pass
 CSM30 | Pass
 CSM31 | Pass
 

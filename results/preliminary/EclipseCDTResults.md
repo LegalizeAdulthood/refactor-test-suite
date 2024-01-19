@@ -121,17 +121,17 @@ CO56  |
 
 Case | Result
 ---- | ------
-CSM1  | Pass
-CSM2  |
-CSM3  |
+CSM1 |
+CSM2 |
+CSM3  | Pass
 CSM4  |
 CSM5  |
 CSM6  |
 CSM7  |
 CSM8  |
 CSM9  |
-CSM10 |
-CSM11 |
+CSM10  |
+CSM11  |
 CSM12 |
 CSM13 |
 CSM14 |
@@ -144,12 +144,12 @@ CSM20 |
 CSM21 |
 CSM22 |
 CSM23 |
-CSM24 |
+CSM24 | (deprecated)
 CSM25 |
 CSM26 |
 CSM27 |
 CSM28 |
-CSM29 | (deprecated)
+CSM29 |
 CSM30 |
 CSM31 |
 
