@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/AddOverride.cpp b/RefactorTest/AddOverride.cpp
-index d278e53..7a272db 100644
+index d278e53..c7177ea 100644
 --- a/RefactorTest/AddOverride.cpp
 +++ b/RefactorTest/AddOverride.cpp
-@@ -113,7 +113,7 @@ public:
+@@ -58,7 +58,7 @@ public:
      }
  
      // #TEST#: AO6 Add override

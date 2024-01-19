@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/AddOverride.cpp b/RefactorTest/AddOverride.cpp
-index 267be92..c84c99d 100644
+index d278e53..d1af301 100644
 --- a/RefactorTest/AddOverride.cpp
 +++ b/RefactorTest/AddOverride.cpp
-@@ -74,7 +74,7 @@ public:
+@@ -108,7 +108,7 @@ public:
      }
  
      // #TEST#: AO11 Add override
--    virtual void NoExcept() noexcept
-+    void NoExcept() noexcept override
+-    virtual void Method()
++    void Method() override
      {
      }
  

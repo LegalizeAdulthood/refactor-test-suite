@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/AddOverride.cpp b/RefactorTest/AddOverride.cpp
-index 1c61478..a172c94 100644
+index 1c61478..d8c3bc0 100644
 --- a/RefactorTest/AddOverride.cpp
 +++ b/RefactorTest/AddOverride.cpp
-@@ -40,7 +40,7 @@ public:
+@@ -35,7 +35,7 @@ public:
      }
  
      // #TEST#: AO2 Add override
--    virtual int Getter() const
-+    int Getter() const override
+-    virtual void Method()
++    void Method() override
      {
-         return value_;
      }
+ 

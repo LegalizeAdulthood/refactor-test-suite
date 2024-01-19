@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/AddOverride.cpp b/RefactorTest/AddOverride.cpp
-index d278e53..9a98179 100644
+index d278e53..a6fcbe3 100644
 --- a/RefactorTest/AddOverride.cpp
 +++ b/RefactorTest/AddOverride.cpp
-@@ -118,7 +118,7 @@ public:
+@@ -63,7 +63,7 @@ public:
      }
  
      // #TEST#: AO7 Add override
@@ -10,4 +10,4 @@ index d278e53..9a98179 100644
 +    void RValueRef() && override
      {
      }
- };
+ 

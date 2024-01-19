@@ -35,55 +35,55 @@ public:
     {
     }
 
-    // #TEST#: AO8 Add override
+    // #TEST#: AO1 Add override
     virtual ~Implementation()
     {
     }
 
-    // #TEST#: AO1 Add override
+    // #TEST#: AO2 Add override
     virtual void Method()
     {
     }
 
-    // #TEST#: AO2 Add override
+    // #TEST#: AO3 Add override
     virtual int Getter() const
     {
         return value_;
     }
 
-    // #TEST#: AO3 Add override
+    // #TEST#: AO4 Add override
     virtual void Setter(int value)
     {
         value_ = value;
     }
 
-    // #TEST#: AO4 Add override (not available)
+    // #TEST#: AO5 Add override (not available)
     virtual void Setter(float value)
     {
         value_ = int(std::floor(value));
     }
 
-    // #TEST#: AO9 Add override
+    // #TEST#: AO6 Add override
     virtual void LValueRef() &
     {
     }
 
-    // #TEST#: AO10 Add override
+    // #TEST#: AO7 Add override
     virtual void RValueRef() &&
     {
     }
 
-    // #TEST#: AO11 Add override
+    // #TEST#: AO8 Add override
     virtual void NoExcept() noexcept
     {
     }
 
-    // #TEST#: AO12 Add override
+    // #TEST#: AO9 Add override
     virtual void Volatile() volatile
     {
     }
 
-    // #TEST#: AO13 Add override
+    // #TEST#: AO10 Add override
     virtual void ConstVolatile() const volatile
     {
     }
@@ -128,17 +128,17 @@ public:
     {
     }
 
-    // #TEST#: AO5 Add override
+    // #TEST#: AO11 Add override
     virtual void Method()
     {
     }
 
-    // #TEST#: AO6 Add override
+    // #TEST#: AO12 Add override
     virtual void LValueRef() &
     {
     }
 
-    // #TEST#: AO7 Add override
+    // #TEST#: AO13 Add override
     virtual void RValueRef() &&
     {
     }
