@@ -1,38 +1,13 @@
-diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..cf3500b 100644
---- a/RefactorTest/AddParameter.cpp
-+++ b/RefactorTest/AddParameter.cpp
-@@ -54,9 +54,9 @@ void TestAddParameter()
-     // #TEST#: AP97 Add parameter, int goink
-     test.AddParameterRef(ref);
-     // #TEST#: AP98 Add parameter before first, int goink
--    test.AddParameterDefault();
-+    test.AddParameterDefault(0);
-     // #TEST#: AP99 Add parameter before first, int goink
--    test.AddParameterDefault(1);
-+    test.AddParameterDefault(0, 1);
- 
-     // #TEST#: AP100 Add parameter, int goink
-     AddParameterTester::AddParameterStaticInline();
-@@ -199,7 +199,7 @@ void AddParameterTester::AddParameterRef(const int &first)
- }
- 
- // #TEST#: AP21 Add parameter before first, int goink
--void AddParameterTester::AddParameterDefault(int first)
-+void AddParameterTester::AddParameterDefault(int goink, int first)
- {
- }
- 
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..c3b7be9 100644
+index fa2ecc5..41c6020 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -40,7 +40,7 @@ public:
-     // #TEST#: AP4 Add parameter after first, int goink
-     void AddParameterRef(const int &first);
-     // #TEST#: AP5 Add parameter before first, int goink
--    void AddParameterDefault(int first = 0);
-+    void AddParameterDefault(int goink, int first = 0);
+@@ -84,7 +84,7 @@ public:
+     }
  
-     // #TEST#: AP6 Add parameter, int goink
-     static void AddParameterStaticInline()
+     // #TEST#: AP21 Add parameter, int goink
+-    static void StaticTemplateArg(T arg)
++    static void StaticTemplateArg(T arg, int goink)
+     {
+     }
+ 

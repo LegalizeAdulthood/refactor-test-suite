@@ -1,38 +1,38 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 4471484..7926dd4 100644
+index 4471484..6cac4fd 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -38,9 +38,9 @@ void TestAddParameter()
-     // #TEST#: AP90 Add parameter, int goink
-     AddParameterFnRef(ref);
-     // #TEST#: AP91 Add parameter before first, int goink
--    AddParameterFnDefault();
-+    AddParameterFnDefault(0);
-     // #TEST#: AP92 Add parameter before first, int goink
--    AddParameterFnDefault(1);
-+    AddParameterFnDefault(0, 1);
- 
-     AddParameterTester test;
-     // #TEST#: AP93 Add parameter, int *goink
-@@ -184,7 +184,7 @@ void AddParameterFnRef(const int &first)
+@@ -48,9 +48,9 @@ void TestAddParameter()
+     // #TEST#: AP89 Add parameter, int goink
+     test.AddParameter2<int>();
+     // #TEST#: AP90 Add parameter, int *goink
+-    test.AddParameter(1);
++    test.AddParameter(1, nullptr);
+     // #TEST#: AP91 Add parameter, int *goink
+-    test.AddParameter(ref);
++    test.AddParameter(ref, nullptr);
+     // #TEST#: AP92 Add parameter, int goink
+     test.AddParameterRef(ref);
+     // #TEST#: AP93 Add parameter before first, int goink
+@@ -189,7 +189,7 @@ void AddParameterFnDefault(int first)
  }
  
- // #TEST#: AP18 Add parameter before first, int goink
--void AddParameterFnDefault(int first)
-+void AddParameterFnDefault(int goink, int first)
+ // #TEST#: AP143 Add parameter, int *goink
+-void AddParameterTester::AddParameter(int first)
++void AddParameterTester::AddParameter(int first, int *goink)
  {
  }
  
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index f03284f..06f3707 100644
+index f03284f..d994a76 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -11,7 +11,7 @@ extern void AddParameterFn(const float &first);
- // #TEST#: AP31 Add parameter, int goink
- extern void AddParameterFnRef(const int &first);
- // #TEST#: AP32 Add parameter before first, int goink
--extern void AddParameterFnDefault(int first = 0);
-+extern void AddParameterFnDefault(int goink, int first = 0);
+@@ -36,7 +36,7 @@ public:
+     }
  
- class AddParameterTester
- {
+     // #TEST#: AP10 Add parameter, int *goink
+-    void AddParameter(int first);
++    void AddParameter(int first, int *goink);
+     // #TEST#: AP11 Add parameter after first, int goink
+     void AddParameterRef(const int &first);
+     // #TEST#: AP12 Add parameter before first, int goink

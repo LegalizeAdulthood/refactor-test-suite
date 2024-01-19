@@ -1,26 +1,26 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..4ca07cc 100644
+index 9035c6f..cd21c8b 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -383,7 +383,7 @@ void f3()
-     // #TEST#: AP179 Add parameter, int goink
-     AddParameterUnion::StaticTemplateDefault<int>(8);
+@@ -411,7 +411,7 @@ void f3()
+     const double k = AddParameterUnionTemplate<double>::OtherStaticTemplate();
+     REQUIRE_EQUAL(0.0, k);
+     // #TEST#: AP197 Add parameter, int goink
+-    const double k2 = u2.OtherTemplate();
++    const double k2 = u2.OtherTemplate(0);
+     REQUIRE_EQUAL(0.0, k2);
+ }
  
--    AddParameterUnionTemplate<int> u2;
-+    AddParameterUnionTemplate<int> u2(0);
-     // #TEST#: AP180 Add parameter, int *goink
-     u2.AddParameter();
-     // #TEST#: AP181 Add parameter, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..46ed5d5 100644
+index d7aff00..e7efb60 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -224,7 +224,7 @@ union AddParameterUnionTemplate
- {
- public:
-     // #TEST#: AP68 Add parameter, int goink
--    AddParameterUnionTemplate()
-+    AddParameterUnionTemplate(int goink)
-     {
+@@ -279,7 +279,7 @@ public:
+         return Other(0);
      }
-     ~AddParameterUnionTemplate()
+     // #TEST#: AP68 Add parameter, int goink
+-    Other OtherTemplate()
++    Other OtherTemplate(int goink)
+     {
+         return Other(0);
+     }

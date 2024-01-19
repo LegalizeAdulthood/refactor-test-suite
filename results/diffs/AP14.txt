@@ -1,35 +1,29 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..8998acb 100644
+index a759b33..fba4d83 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -27,7 +27,7 @@ void TestAddParameter()
-     // #TEST#: AP86 Add parameter, int *goink
-     AddParameterFn();
-     // #TEST#: AP87 Add parameter, int goink
--    AddParameterFn(1);
-+    AddParameterFn(1, 0);
-     // #TEST#: AP88 Add parameter, int goink
-     AddParameterFn(0.0f);
-     const float arg = 1.0f;
-@@ -163,7 +163,7 @@ void AddParameterFn()
- }
- 
- // #TEST#: AP14 Add parameter, int goink
--void AddParameterFn(int first)
-+void AddParameterFn(int first, int goink)
- {
- }
- 
+@@ -61,9 +61,9 @@ void TestAddParameter()
+     // #TEST#: AP95 Add parameter, int goink
+     AddParameterTester::AddParameterStaticInline();
+     // #TEST#: AP96 Add parameter before first, int goink
+-    AddParameterTester::AddParameterStaticDefaultInline();
++    AddParameterTester::AddParameterStaticDefaultInline(0);
+     // #TEST#: AP97 Add parameter before first, int goink
+-    AddParameterTester::AddParameterStaticDefaultInline(10);
++    AddParameterTester::AddParameterStaticDefaultInline(0, 10);
+     // #TEST#: AP98 Add parameter, int goink
+     AddParameterTester::Static();
+     // #TEST#: AP99 Add parameter before x, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..9d82013 100644
+index fa2ecc5..0b6394f 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -3,7 +3,7 @@
- // #TEST#: AP27 Add parameter, int *goink
- extern void AddParameterFn();
- // #TEST#: AP28 Add parameter, int goink
--extern void AddParameterFn(int first);
-+extern void AddParameterFn(int first, int goink);
- // #TEST#: AP29 Add parameter, int goink
- extern void AddParameterFn(float &first);
- // #TEST#: AP30 Add parameter, int goink
+@@ -47,7 +47,7 @@ public:
+     {
+     }
+     // #TEST#: AP14 Add parameter before first, int goink
+-    static void AddParameterStaticDefaultInline(int first = 0)
++    static void AddParameterStaticDefaultInline(int goink, int first = 0)
+     {
+     }
+     // #TEST#: AP15 Add parameter, int goink

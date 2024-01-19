@@ -1,26 +1,13 @@
-diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 663c3ba..3e75451 100644
---- a/RefactorTest/AddParameter.cpp
-+++ b/RefactorTest/AddParameter.cpp
-@@ -225,7 +225,7 @@ void AddParameterStruct::AddParameterRef(const int &first)
- 
- // #TEST#: AP144 Add parameter before first, int goink
- // #TEST#: AP145 Add parameter after first, int goink = 1
--void AddParameterStruct::AddParameterDefault(int first)
-+void AddParameterStruct::AddParameterDefault(int first, int goink)
- {
- }
- 
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..0608b6f 100644
+index fa2ecc5..1a1921a 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -134,7 +134,7 @@ struct AddParameterStruct
-     void AddParameterRef(const int &first);
-     // #TEST#: AP44 Add parameter before first, int goink
-     // #TEST#: AP45 Add parameter after first, int goink = 1
--    void AddParameterDefault(int first = 0);
-+    void AddParameterDefault(int first = 0, int goink = 1);
- 
-     // #TEST#: AP46 Add parameter, int goink
-     static void AddParameterStaticInline()
+@@ -142,7 +142,7 @@ struct AddParameterStruct
+     }
+     // #TEST#: AP34 Add parameter before first, int goink
+     // #TEST#: AP35 Add parameter after first, int goink = 1
+-    static void AddParameterStaticDefaultInline(int first = 0)
++    static void AddParameterStaticDefaultInline(int first = 0, int goink = 1)
+     {
+     }
+     // #TEST#: AP36 Add parameter, int goink

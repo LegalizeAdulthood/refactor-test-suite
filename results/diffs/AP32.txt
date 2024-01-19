@@ -1,38 +1,26 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..51684ff 100644
+index a759b33..ca3792e 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -38,9 +38,9 @@ void TestAddParameter()
-     // #TEST#: AP90 Add parameter, int goink
-     AddParameterFnRef(ref);
-     // #TEST#: AP91 Add parameter before first, int goink
--    AddParameterFnDefault();
-+    AddParameterFnDefault(0);
-     // #TEST#: AP92 Add parameter before first, int goink
--    AddParameterFnDefault(1);
-+    AddParameterFnDefault(0, 1);
+@@ -225,7 +225,7 @@ void AddParameterStruct::AddParameterRef(const int &first)
  
-     AddParameterTester test;
-     // #TEST#: AP93 Add parameter, int *goink
-@@ -184,7 +184,7 @@ void AddParameterFnRef(const int &first)
- }
- 
- // #TEST#: AP18 Add parameter before first, int goink
--void AddParameterFnDefault(int first)
-+void AddParameterFnDefault(int goink, int first)
+ // #TEST#: AP150 Add parameter before first, int goink
+ // #TEST#: AP151 Add parameter after first, int goink = 1
+-void AddParameterStruct::AddParameterDefault(int first)
++void AddParameterStruct::AddParameterDefault(int first, int goink)
  {
  }
  
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..1311826 100644
+index fa2ecc5..0608b6f 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -11,7 +11,7 @@ extern void AddParameterFn(const float &first);
- // #TEST#: AP31 Add parameter, int goink
- extern void AddParameterFnRef(const int &first);
- // #TEST#: AP32 Add parameter before first, int goink
--extern void AddParameterFnDefault(int first = 0);
-+extern void AddParameterFnDefault(int goink, int first = 0);
+@@ -134,7 +134,7 @@ struct AddParameterStruct
+     void AddParameterRef(const int &first);
+     // #TEST#: AP31 Add parameter before first, int goink
+     // #TEST#: AP32 Add parameter after first, int goink = 1
+-    void AddParameterDefault(int first = 0);
++    void AddParameterDefault(int first = 0, int goink = 1);
  
- class AddParameterTester
- {
+     // #TEST#: AP33 Add parameter, int goink
+     static void AddParameterStaticInline()

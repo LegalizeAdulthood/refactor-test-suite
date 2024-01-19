@@ -1,39 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..9a4409c 100644
+index a759b33..ee3f2be 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -90,10 +90,10 @@ void TestAddParameter()
-     s.AddParameterRef(ref);
-     // #TEST#: AP114 Add parameter before first, int goink
-     // #TEST#: AP115 Add parameter after first, int goink = 1
--    s.AddParameterDefault();
-+    s.AddParameterDefault(0);
-     // #TEST#: AP116 Add parameter before first, int goink
-     // #TEST#: AP117 Add parameter after first, int goink = 1
--    s.AddParameterDefault(1);
-+    s.AddParameterDefault(0, 1);
-     // #TEST#: AP118 Add parameter, int goink
-     AddParameterStruct::AddParameterStaticInline();
-     // #TEST#: AP119 Add parameter before first, int goink
-@@ -225,7 +225,7 @@ void AddParameterStruct::AddParameterRef(const int &first)
+@@ -52,7 +52,7 @@ void TestAddParameter()
+     // #TEST#: AP91 Add parameter, int *goink
+     test.AddParameter(ref);
+     // #TEST#: AP92 Add parameter, int goink
+-    test.AddParameterRef(ref);
++    test.AddParameterRef(ref, 0);
+     // #TEST#: AP93 Add parameter before first, int goink
+     test.AddParameterDefault();
+     // #TEST#: AP94 Add parameter before first, int goink
+@@ -194,7 +194,7 @@ void AddParameterTester::AddParameter(int first)
+ }
  
- // #TEST#: AP144 Add parameter before first, int goink
- // #TEST#: AP145 Add parameter after first, int goink = 1
--void AddParameterStruct::AddParameterDefault(int first)
-+void AddParameterStruct::AddParameterDefault(int goink, int first)
+ // #TEST#: AP144 Add parameter, int goink
+-void AddParameterTester::AddParameterRef(const int &first)
++void AddParameterTester::AddParameterRef(const int &first, int goink)
  {
  }
  
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..291ca7a 100644
+index fa2ecc5..a5f6618 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -134,7 +134,7 @@ struct AddParameterStruct
-     void AddParameterRef(const int &first);
-     // #TEST#: AP44 Add parameter before first, int goink
-     // #TEST#: AP45 Add parameter after first, int goink = 1
--    void AddParameterDefault(int first = 0);
-+    void AddParameterDefault(int goink, int first = 0);
+@@ -38,7 +38,7 @@ public:
+     // #TEST#: AP10 Add parameter, int *goink
+     void AddParameter(int first);
+     // #TEST#: AP11 Add parameter after first, int goink
+-    void AddParameterRef(const int &first);
++    void AddParameterRef(const int &first, int goink);
+     // #TEST#: AP12 Add parameter before first, int goink
+     void AddParameterDefault(int first = 0);
  
-     // #TEST#: AP46 Add parameter, int goink
-     static void AddParameterStaticInline()

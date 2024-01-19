@@ -5,25 +5,25 @@ index 6824133..02f51fb 100644
 @@ -262,7 +262,7 @@ public:
      }
  
-     // #TEST#: AP150 Add parameter, int goink
+     // #TEST#: AP155 Add parameter, int goink
 -    virtual int fn() = 0;
 +    virtual int fn(int goink) = 0;
  
-     // #TEST#: AP151 Add parameter, int goink
+     // #TEST#: AP156 Add parameter, int goink
      virtual int fn2(int x) = 0;
 @@ -274,7 +274,7 @@ public:
      ~Derived() override = default;
  
-     // #TEST#: AP152 Add parameter, int goink
+     // #TEST#: AP157 Add parameter, int goink
 -    int fn() override;
 +    int fn(int goink) override;
  
-     // #TEST#: AP153 Add parameter, int goink
+     // #TEST#: AP158 Add parameter, int goink
      int fn2(int x) override;
 @@ -286,7 +286,7 @@ public:
      ~OtherDerived() override = default;
  
-     // #TEST#: AP154 Add parameter, int goink
+     // #TEST#: AP159 Add parameter, int goink
 -    int fn() override
 +    int fn(int goink) override
      {
@@ -32,15 +32,15 @@ index 6824133..02f51fb 100644
 @@ -304,14 +304,14 @@ public:
      ~MoreDerived() override = default;
  
-     // #TEST#: AP156 Add parameter, int goink
+     // #TEST#: AP161 Add parameter, int goink
 -    int fn() override;
 +    int fn(int goink) override;
  
-     // #TEST#: AP157 Add parameter, int goink
+     // #TEST#: AP162 Add parameter, int goink
      int fn2(int x) override;
  };
  
- // #TEST#: AP158 Add parameter, int goink
+ // #TEST#: AP163 Add parameter, int goink
 -int Derived::fn()
 +int Derived::fn(int goink)
  {
@@ -49,7 +49,7 @@ index 6824133..02f51fb 100644
 @@ -323,7 +323,7 @@ int Derived::fn2(int x)
  }
  
- // #TEST#: AP160 Add parameter, int goink
+ // #TEST#: AP165 Add parameter, int goink
 -int MoreDerived::fn()
 +int MoreDerived::fn(int goink)
  {
@@ -58,26 +58,26 @@ index 6824133..02f51fb 100644
 @@ -339,14 +339,14 @@ void f1()
  {
      Derived d;
-     // #TEST#: AP163 Add parameter, int goink
+     // #TEST#: AP168 Add parameter, int goink
 -    REQUIRE_EQUAL(1, d.fn());
 +    REQUIRE_EQUAL(1, d.fn(0));
-     // #TEST#: AP164 Add parameter, int goink
+     // #TEST#: AP169 Add parameter, int goink
      int res = d.fn2(2);
      REQUIRE_EQUAL(2, res);
  
      MoreDerived md;
-     // #TEST#: AP165 Add parameter, int goink
+     // #TEST#: AP170 Add parameter, int goink
 -    res = md.fn();
 +    res = md.fn(0);
      REQUIRE_EQUAL(2, res);
-     // #TEST#: AP166 Add parameter, int goink
+     // #TEST#: AP171 Add parameter, int goink
      res = md.fn2(2);
 @@ -354,7 +354,7 @@ void f1()
  
      OtherDerived od;
-     // #TEST#: AP167 Add parameter, int goink
+     // #TEST#: AP172 Add parameter, int goink
 -    res = od.fn();
 +    res = od.fn(0);
      REQUIRE_EQUAL(3, res);
-     // #TEST#: AP168 Add parameter, int goink
+     // #TEST#: AP173 Add parameter, int goink
      res = od.fn2(2);

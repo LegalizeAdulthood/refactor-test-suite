@@ -1,35 +1,38 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..65c86b3 100644
+index a759b33..cf3500b 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -77,7 +77,7 @@ void TestAddParameter()
-     // #TEST#: AP108 Add parameter before x, int goink
-     AddParameterTester::StaticTemplateDefault<int>(1);
-     // #TEST#: AP109 Add parameter, int goink
--    AddParameter2<AddParameterTester2>();
-+    AddParameter2<AddParameterTester2>(0);
+@@ -54,9 +54,9 @@ void TestAddParameter()
+     // #TEST#: AP92 Add parameter, int goink
+     test.AddParameterRef(ref);
+     // #TEST#: AP93 Add parameter before first, int goink
+-    test.AddParameterDefault();
++    test.AddParameterDefault(0);
+     // #TEST#: AP94 Add parameter before first, int goink
+-    test.AddParameterDefault(1);
++    test.AddParameterDefault(0, 1);
  
-     AddParameterStruct s;
-     // #TEST#: AP110 Add parameter, int *goink
-@@ -117,7 +117,7 @@ void TestAddParameter()
-     // #TEST#: AP130 Add parameter before x, int goink
-     AddParameterStruct::StaticTemplateDefault<int>(1);
-     // #TEST#: AP131 Add parameter, int goink
--    AddParameter2<AddParameterStructTester>();
-+    AddParameter2<AddParameterStructTester>(0);
+     // #TEST#: AP95 Add parameter, int goink
+     AddParameterTester::AddParameterStaticInline();
+@@ -199,7 +199,7 @@ void AddParameterTester::AddParameterRef(const int &first)
+ }
  
-     AddParameterNamespace::Outer::Inner inner;
-     // #TEST#: AP132 Add parameter, int goink
+ // #TEST#: AP145 Add parameter before first, int goink
+-void AddParameterTester::AddParameterDefault(int first)
++void AddParameterTester::AddParameterDefault(int goink, int first)
+ {
+ }
+ 
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..bf3ab12 100644
+index fa2ecc5..c3b7be9 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -101,7 +101,7 @@ public:
+@@ -40,7 +40,7 @@ public:
+     // #TEST#: AP11 Add parameter after first, int goink
+     void AddParameterRef(const int &first);
+     // #TEST#: AP12 Add parameter before first, int goink
+-    void AddParameterDefault(int first = 0);
++    void AddParameterDefault(int goink, int first = 0);
  
- template <typename T>
- // #TEST#: AP12 Add parameter, int goink
--void AddParameter2()
-+void AddParameter2(int goink)
- {
-     // #TEST#: AP25 Add parameter, int goink
-     T::AddParameter();
+     // #TEST#: AP13 Add parameter, int goink
+     static void AddParameterStaticInline()

@@ -1,29 +1,26 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 4471484..92a831c 100644
+index 4471484..8a02873 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -61,9 +61,9 @@ void TestAddParameter()
-     // #TEST#: AP100 Add parameter, int goink
-     AddParameterTester::AddParameterStaticInline();
-     // #TEST#: AP101 Add parameter before first, int goink
--    AddParameterTester::AddParameterStaticDefaultInline();
-+    AddParameterTester::AddParameterStaticDefaultInline(0);
-     // #TEST#: AP102 Add parameter before first, int goink
--    AddParameterTester::AddParameterStaticDefaultInline(10);
-+    AddParameterTester::AddParameterStaticDefaultInline(0, 10);
-     // #TEST#: AP103 Add parameter, int goink
-     AddParameterTester::Static();
-     // #TEST#: AP104 Add parameter before x, int goink
+@@ -71,7 +71,7 @@ void TestAddParameter()
+     // #TEST#: AP100 Add parameter before x, int goink
+     AddParameterTester::StaticDefault(1, 2);
+     // #TEST#: AP101 Add parameter before x, int goink
+-    AddParameterTester::StaticTemplate<int>(0);
++    AddParameterTester::StaticTemplate<int>(0, 0);
+     // #TEST#: AP102 Add parameter before x, int goink
+     AddParameterTester::StaticTemplateDefault<int>();
+     // #TEST#: AP103 Add parameter before x, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index f03284f..d70079f 100644
+index f03284f..53dc92c 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -47,7 +47,7 @@ public:
+@@ -56,7 +56,7 @@ public:
+     static void StaticDefault(int x, int y = 0);
+     template <typename T>
+     // #TEST#: AP17 Add parameter before x, int goink
+-    static void StaticTemplate(int x)
++    static void StaticTemplate(int goink, int x)
      {
+         T val = x;
      }
-     // #TEST#: AP7 Add parameter before first, int goink
--    static void AddParameterStaticDefaultInline(int first = 0)
-+    static void AddParameterStaticDefaultInline(int goink, int first = 0)
-     {
-     }
-     // #TEST#: AP8 Add parameter, int goink

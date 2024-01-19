@@ -1,32 +1,30 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..28dce74 100644
+index 44d4092..4c55253 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -125,12 +125,12 @@ void TestAddParameter()
-     // #TEST#: AP133 Add parameter, int goink
-     AddParameterNamespace::Outer outer = AddParameterNamespace::Outer();
+@@ -11,7 +11,7 @@ void f1();
+ }    // namespace
+ 
+ // #TEST#: AP78 Add parameter, int goink
+-static AddParameterTester *GetOne();
++static AddParameterTester *GetOne(int goink);
+ 
+ class AddParameterTester2
+ {
+@@ -154,14 +154,14 @@ void TestAddParameter()
+     def3 = new AddParameterTester();
+     delete def3;
      // #TEST#: AP134 Add parameter, int goink
--    outer.Operation();
-+    outer.Operation(0);
+-    def3 = GetOne();
++    def3 = GetOne(0);
+     delete def3;
  
-     using AddParameterNamespace::Outer;
-     Outer outer2;
-     // #TEST#: AP135 Add parameter, int goink
--    outer2.Operation();
-+    outer2.Operation(0);
-     namespace Frob = AddParameterNamespace;
-     Frob::Outer::Inner inner2;
+     f1();
+ }
+ 
+ // #TEST#: AP135 Add parameter, int goink
+-static AddParameterTester *GetOne()
++static AddParameterTester *GetOne(int goink)
+ {
      // #TEST#: AP136 Add parameter, int goink
-diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..d529c42 100644
---- a/RefactorTest/AddParameter.h
-+++ b/RefactorTest/AddParameter.h
-@@ -299,7 +299,7 @@ public:
-     }
- 
-     // #TEST#: AP83 Add parameter, int goink
--    void Operation()
-+    void Operation(int goink)
-     {
-     }
- 
+     return new AddParameterTester();

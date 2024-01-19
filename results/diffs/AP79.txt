@@ -1,26 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..4b7069e 100644
+index 0d89cb2..de3c435 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -406,7 +406,7 @@ void f3()
-     // #TEST#: AP202 Add parameter, int goink
-     AddParameterUnionTemplate<double>::StaticTemplate<int>(3);
-     // #TEST#: AP189 Add parameter, int goink
--    AddParameterUnionTemplate<double>::StaticTemplateDefault<int>();
-+    AddParameterUnionTemplate<double>::StaticTemplateDefault<int>(0);
-     // #TEST#: AP190 Add parameter, int goink
-     const double k = AddParameterUnionTemplate<double>::OtherStaticTemplate();
-     REQUIRE_EQUAL(0.0, k);
-diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..f44405a 100644
---- a/RefactorTest/AddParameter.h
-+++ b/RefactorTest/AddParameter.h
-@@ -269,7 +269,7 @@ public:
-     }
-     template <typename T>
-     // #TEST#: AP79 Add parameter before x, int goink
--    static void StaticTemplateDefault(int x = 0)
-+    static void StaticTemplateDefault(int goink, int x = 0)
+@@ -9,7 +9,7 @@ class AddParameterTester2
+ {
+ public:
+     // #TEST#: AP79 Add parameter, int goink
+-    static void AddParameter()
++    static void AddParameter(int goink)
      {
      }
+ };
+@@ -17,7 +17,7 @@ public:
+ struct AddParameterStructTester
+ {
+     // #TEST#: AP80 Add parameter, int goink
+-    static void AddParameter()
++    static void AddParameter(int goink)
+     {
+     }
+ };
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index f03284f..6918ee6 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -104,7 +104,7 @@ template <typename T>
+ void AddParameter2()
+ {
+     // #TEST#: AP25 Add parameter, int goink
+-    T::AddParameter();
++    T::AddParameter(0);
+ }
  
+ struct AddParameterStruct

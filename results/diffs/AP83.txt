@@ -1,32 +1,39 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..a1d4a55 100644
+index 4471484..0d405ff 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -134,12 +134,12 @@ static void f2()
-     // #TEST#: AP133 Add parameter, int goink
-     AddParameterNamespace::Outer outer = AddParameterNamespace::Outer();
-     // #TEST#: AP134 Add parameter, int goink
--    outer.Operation();
-+    outer.Operation(0);
+@@ -29,10 +29,10 @@ void TestAddParameter()
+     // #TEST#: AP82 Add parameter, int goink
+     AddParameterFn(1);
+     // #TEST#: AP83 Add parameter, int goink
+-    AddParameterFn(0.0f);
++    AddParameterFn(0.0f, 0);
+     const float arg = 1.0f;
+     // #TEST#: AP84 Add parameter, int goink
+-    AddParameterFn(arg);
++    AddParameterFn(arg, 0);
+     int data = 2;
+     const int &ref = data;
+     // #TEST#: AP85 Add parameter, int goink
+@@ -174,7 +174,7 @@ void AddParameterFn(float &arg)
+ }
  
-     using AddParameterNamespace::Outer;
-     Outer outer2;
-     // #TEST#: AP135 Add parameter, int goink
--    outer2.Operation();
-+    outer2.Operation(0);
-     namespace Frob = AddParameterNamespace;
-     Frob::Outer::Inner inner2;
-     // #TEST#: AP136 Add parameter, int goink
+ // #TEST#: AP140 Add parameter, int goink
+-void AddParameterFn(const float &arg)
++void AddParameterFn(const float &arg, int goink)
+ {
+ }
+ 
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..db6513d 100644
+index f03284f..3e0e157 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -299,7 +299,7 @@ public:
-     }
- 
-     // #TEST#: AP83 Add parameter, int goink
--    void Operation()
-+    void Operation(int goink)
-     {
-     }
- 
+@@ -7,7 +7,7 @@ extern void AddParameterFn(int first);
+ // #TEST#: AP3 Add parameter, int goink
+ extern void AddParameterFn(float &first);
+ // #TEST#: AP4 Add parameter, int goink
+-extern void AddParameterFn(const float &first);
++extern void AddParameterFn(const float &first, int goink);
+ // #TEST#: AP5 Add parameter, int goink
+ extern void AddParameterFnRef(const int &first);
+ // #TEST#: AP6 Add parameter before first, int goink

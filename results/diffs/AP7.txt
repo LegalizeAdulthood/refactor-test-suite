@@ -1,29 +1,53 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..fba4d83 100644
+index a759b33..13a2332 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -61,9 +61,9 @@ void TestAddParameter()
-     // #TEST#: AP100 Add parameter, int goink
-     AddParameterTester::AddParameterStaticInline();
-     // #TEST#: AP101 Add parameter before first, int goink
--    AddParameterTester::AddParameterStaticDefaultInline();
-+    AddParameterTester::AddParameterStaticDefaultInline(0);
-     // #TEST#: AP102 Add parameter before first, int goink
--    AddParameterTester::AddParameterStaticDefaultInline(10);
-+    AddParameterTester::AddParameterStaticDefaultInline(0, 10);
-     // #TEST#: AP103 Add parameter, int goink
-     AddParameterTester::Static();
-     // #TEST#: AP104 Add parameter before x, int goink
+@@ -42,7 +42,7 @@ void TestAddParameter()
+     // #TEST#: AP87 Add parameter before first, int goink
+     AddParameterFnDefault(1);
+ 
+-    AddParameterTester test;
++    AddParameterTester test(0);
+     // #TEST#: AP88 Add parameter, int *goink
+     test.AddParameter();
+     // #TEST#: AP89 Add parameter, int goink
+@@ -137,13 +137,13 @@ void TestAddParameter()
+     inner2.Operation();
+ 
+     // default constructor
+-    AddParameterTester def1;
++    AddParameterTester def1(0);
+     // #TEST#: AP132 Add parameter, int goink
+-    AddParameterTester def2 = AddParameterTester();
+-    AddParameterTester *def3 = new AddParameterTester;
++    AddParameterTester def2 = AddParameterTester(0);
++    AddParameterTester *def3 = new AddParameterTester(0);
+     delete def3;
+     // #TEST#: AP133 Add parameter, int goink
+-    def3 = new AddParameterTester();
++    def3 = new AddParameterTester(0);
+     delete def3;
+     // #TEST#: AP134 Add parameter, int goink
+     def3 = GetOne();
+@@ -154,7 +154,7 @@ void TestAddParameter()
+ static AddParameterTester *GetOne()
+ {
+     // #TEST#: AP136 Add parameter, int goink
+-    return new AddParameterTester();
++    return new AddParameterTester(0);
+ }
+ 
+ // #TEST#: AP137 Add parameter, int *goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..0b6394f 100644
+index fa2ecc5..716a5b2 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -47,7 +47,7 @@ public:
+@@ -17,7 +17,7 @@ class AddParameterTester
+ {
+ public:
+     // #TEST#: AP7 Add parameter, int goink
+-    AddParameterTester()
++    AddParameterTester(int goink)
      {
      }
-     // #TEST#: AP7 Add parameter before first, int goink
--    static void AddParameterStaticDefaultInline(int first = 0)
-+    static void AddParameterStaticDefaultInline(int goink, int first = 0)
-     {
-     }
-     // #TEST#: AP8 Add parameter, int goink
+     ~AddParameterTester()

@@ -1,35 +1,26 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 0d89cb2..de3c435 100644
+index a759b33..31a6afb 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -9,7 +9,7 @@ class AddParameterTester2
- {
- public:
-     // #TEST#: AP24 Add parameter, int goink
--    static void AddParameter()
-+    static void AddParameter(int goink)
-     {
-     }
- };
-@@ -17,7 +17,7 @@ public:
- struct AddParameterStructTester
- {
-     // #TEST#: AP26 Add parameter, int goink
--    static void AddParameter()
-+    static void AddParameter(int goink)
-     {
-     }
- };
+@@ -79,7 +79,7 @@ void TestAddParameter()
+     // #TEST#: AP104 Add parameter, int goink
+     AddParameter2<AddParameterTester2>();
+ 
+-    AddParameterStruct s;
++    AddParameterStruct s(0);
+     // #TEST#: AP105 Add parameter, int *goink
+     s.AddParameter();
+     // #TEST#: AP106 Add parameter, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index f03284f..6918ee6 100644
+index fa2ecc5..b1333f9 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -104,7 +104,7 @@ template <typename T>
- void AddParameter2()
- {
-     // #TEST#: AP25 Add parameter, int goink
--    T::AddParameter();
-+    T::AddParameter(0);
- }
- 
+@@ -110,7 +110,7 @@ void AddParameter2()
  struct AddParameterStruct
+ {
+     // #TEST#: AP26 Add parameter, int goink
+-    AddParameterStruct()
++    AddParameterStruct(int goink)
+     {
+     }
+     ~AddParameterStruct()

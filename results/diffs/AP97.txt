@@ -1,35 +1,29 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 4471484..f77cff8 100644
+index 4471484..92a831c 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -52,7 +52,7 @@ void TestAddParameter()
-     // #TEST#: AP96 Add parameter, int *goink
-     test.AddParameter(ref);
-     // #TEST#: AP97 Add parameter, int goink
--    test.AddParameterRef(ref);
-+    test.AddParameterRef(ref, 0);
-     // #TEST#: AP98 Add parameter before first, int goink
-     test.AddParameterDefault();
-     // #TEST#: AP99 Add parameter before first, int goink
-@@ -194,7 +194,7 @@ void AddParameterTester::AddParameter(int first)
- }
- 
- // #TEST#: AP20 Add parameter, int goink
--void AddParameterTester::AddParameterRef(const int &first)
-+void AddParameterTester::AddParameterRef(const int &first, int goink)
- {
- }
- 
+@@ -61,9 +61,9 @@ void TestAddParameter()
+     // #TEST#: AP95 Add parameter, int goink
+     AddParameterTester::AddParameterStaticInline();
+     // #TEST#: AP96 Add parameter before first, int goink
+-    AddParameterTester::AddParameterStaticDefaultInline();
++    AddParameterTester::AddParameterStaticDefaultInline(0);
+     // #TEST#: AP97 Add parameter before first, int goink
+-    AddParameterTester::AddParameterStaticDefaultInline(10);
++    AddParameterTester::AddParameterStaticDefaultInline(0, 10);
+     // #TEST#: AP98 Add parameter, int goink
+     AddParameterTester::Static();
+     // #TEST#: AP99 Add parameter before x, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index f03284f..2001ee5 100644
+index f03284f..d70079f 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -38,7 +38,7 @@ public:
-     // #TEST#: AP3 Add parameter, int *goink
-     void AddParameter(int first);
-     // #TEST#: AP4 Add parameter after first, int goink
--    void AddParameterRef(const int &first);
-+    void AddParameterRef(const int &first, int goink);
-     // #TEST#: AP5 Add parameter before first, int goink
-     void AddParameterDefault(int first = 0);
- 
+@@ -47,7 +47,7 @@ public:
+     {
+     }
+     // #TEST#: AP14 Add parameter before first, int goink
+-    static void AddParameterStaticDefaultInline(int first = 0)
++    static void AddParameterStaticDefaultInline(int goink, int first = 0)
+     {
+     }
+     // #TEST#: AP15 Add parameter, int goink

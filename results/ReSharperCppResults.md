@@ -75,22 +75,22 @@ AO16 | Pass
 ## Add Parameter
 Case | Result
 ---- | ------
-AP1  | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
-AP2  | Pass
-AP3  | Pass
-AP4  | Pass
-AP5  | Pass
-AP6  | Pass
-AP7  | Pass
-AP8  | Pass
+AP1 | Pass
+AP2 | Pass
+AP3 | Pass
+AP4 | Pass
+AP5 | Pass
+AP6 | Pass
+AP7 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP8  | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP9  | Pass
-AP10 | Pass
-AP11 | Pass
-AP12 | Pass
-AP13 | Pass
-AP14 | Pass
-AP15 | Pass
-AP16 | Pass
+AP10  | Pass
+AP11  | Pass
+AP12  | Pass
+AP13  | Pass
+AP14  | Pass
+AP15  | Pass
+AP16  | Pass
 AP17 | Pass
 AP18 | Pass
 AP19 | Pass
@@ -98,54 +98,54 @@ AP20 | Pass
 AP21 | Pass
 AP22 | Pass
 AP23 | Pass
-AP24 | Failure (doesn't update other template arguments) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
+AP24 | Pass
 AP25 | Failure (unavailable) [RSCPP-35262](https://youtrack.jetbrains.com/issue/RSCPP-35262/Change-Signature-unavailable-on-call-site-in-template-function)
-AP26 | Failure (doesn't update other template arguments) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
-AP27 | Pass
+AP26 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP27 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP28 | Pass
 AP29 | Pass
 AP30 | Pass
 AP31 | Pass
-AP32 | Pass
-AP33 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP32 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP33 | Pass
 AP34 | Pass
-AP35 | Pass
+AP35 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP36 | Pass
 AP37 | Pass
-AP38 | Pass
-AP39 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP40 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
-AP41 | Pass
-AP42 | Pass
+AP38 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP39 | Pass
+AP40 | Pass
+AP41 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP42 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP43 | Pass
 AP44 | Pass
-AP45 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP45 | Pass
 AP46 | Pass
 AP47 | Pass
-AP48 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
-AP49 | Pass
+AP48 | Pass
+AP49 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP50 | Pass
-AP51 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
-AP52 | Pass
+AP51 | Pass
+AP52 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP53 | Pass
-AP54 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP55 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
-AP56 | Pass
+AP54 | Pass
+AP55 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP56 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP57 | Pass
 AP58 | Pass
 AP59 | Pass
 AP60 | Pass
 AP61 | Pass
-AP62 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP62 | Pass
 AP63 | Pass
 AP64 | Pass
-AP65 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP65 | Pass
 AP66 | Pass
 AP67 | Pass
-AP68 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP69 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP68 | Pass
+AP69 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP70 | Pass
-AP71 | Pass
+AP71 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP72 | Pass
 AP73 | Pass
 AP74 | Pass
@@ -153,21 +153,21 @@ AP75 | Pass
 AP76 | Pass
 AP77 | Pass
 AP78 | Pass
-AP79 | Pass
-AP80 | Pass
+AP79 | Failure (doesn't update other template arguments) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
+AP80 | Failure (doesn't update other template arguments) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
 AP81 | Pass
-AP82 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP82 | Pass
 AP83 | Pass
-AP84 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP84 | Pass
 AP85 | Pass
 AP86 | Pass
 AP87 | Pass
-AP88 | Pass
+AP88 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP89 | Pass
 AP90 | Pass
 AP91 | Pass
 AP92 | Pass
-AP93 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP93 | Pass
 AP94 | Pass
 AP95 | Pass
 AP96 | Pass
@@ -179,14 +179,14 @@ AP101 | Pass
 AP102 | Pass
 AP103 | Pass
 AP104 | Pass
-AP105 | Pass
+AP105 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP106 | Pass
 AP107 | Pass
 AP108 | Pass
 AP109 | Pass
-AP110 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP110 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP111 | Pass
-AP112 | Pass
+AP112 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP113 | Pass
 AP114 | Pass
 AP115 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
@@ -199,67 +199,67 @@ AP121 | Pass
 AP122 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP123 | Pass
 AP124 | Pass
-AP125 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP125 | Pass
 AP126 | Pass
-AP127 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
-AP128 | Pass
+AP127 | Pass
+AP128 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP129 | Pass
 AP130 | Pass
 AP131 | Pass
-AP132 | Pass
+AP132 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP133 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP134 | Pass
 AP135 | Pass
-AP136 | Pass
-AP137 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP138 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP136 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP137 | Pass
+AP138 | Pass
 AP139 | Pass
 AP140 | Pass
-AP141 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP141 | Pass
 AP142 | Pass
 AP143 | Pass
 AP144 | Pass
-AP145 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP145 | Pass
 AP146 | Pass
 AP147 | Pass
-AP148 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP148 | Pass
 AP149 | Pass
-AP150 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
-AP151 | Pass
-AP152 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP150 | Pass
+AP151 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP152 | Pass
 AP153 | Pass
-AP154 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
-AP155 | Pass
-AP156 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
-AP157 | Pass
-AP158 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
-AP159 | Pass
-AP160 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
-AP161 | Pass
+AP154 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP155 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP156 | Pass
+AP157 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP158 | Pass
+AP159 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP160 | Pass
+AP161 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP162 | Pass
 AP163 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP164 | Pass
 AP165 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP166 | Pass
-AP167 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
-AP168 | Pass
-AP169 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
-AP170 | Pass
+AP167 | Pass
+AP168 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP169 | Pass
+AP170 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP171 | Pass
-AP172 | Pass
+AP172 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP173 | Pass
-AP174 | Pass
+AP174 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP175 | Pass
 AP176 | Pass
 AP177 | Pass
 AP178 | Pass
 AP179 | Pass
-AP180 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP180 | Pass
 AP181 | Pass
 AP182 | Pass
 AP183 | Pass
 AP184 | Pass
-AP185 | Pass
+AP185 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP186 | Pass
 AP187 | Pass
 AP188 | Pass

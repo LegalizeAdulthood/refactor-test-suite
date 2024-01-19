@@ -1,30 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 44d4092..4c55253 100644
+index a759b33..ce3aaf0 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -11,7 +11,7 @@ void f1();
- }    // namespace
- 
- // #TEST#: AP149 Add parameter, int goink
--static AddParameterTester *GetOne();
-+static AddParameterTester *GetOne(int goink);
- 
- class AddParameterTester2
- {
-@@ -154,14 +154,14 @@ void TestAddParameter()
-     def3 = new AddParameterTester();
-     delete def3;
-     // #TEST#: AP139 Add parameter, int goink
--    def3 = GetOne();
-+    def3 = GetOne(0);
-     delete def3;
- 
-     f1();
+@@ -87,7 +87,7 @@ void TestAddParameter()
+     // #TEST#: AP107 Add parameter, int goink
+     s.AddParameter2<int>();
+     // #TEST#: AP108 Add parameter, int goink
+-    s.AddParameterRef(ref);
++    s.AddParameterRef(ref, 0);
+     // #TEST#: AP109 Add parameter before first, int goink
+     // #TEST#: AP110 Add parameter after first, int goink = 1
+     s.AddParameterDefault();
+@@ -219,7 +219,7 @@ void AddParameterStruct::AddParameter(int first)
  }
  
- // #TEST#: AP140 Add parameter, int goink
--static AddParameterTester *GetOne()
-+static AddParameterTester *GetOne(int goink)
+ // #TEST#: AP149 Add parameter, int goink
+-void AddParameterStruct::AddParameterRef(const int &first)
++void AddParameterStruct::AddParameterRef(const int &first, int goink)
  {
-     // #TEST#: AP141 Add parameter, int goink
-     return new AddParameterTester();
+ }
+ 
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index fa2ecc5..0043fc5 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -131,7 +131,7 @@ struct AddParameterStruct
+     // #TEST#: AP29 Add parameter, int goink
+     void AddParameter(int first);
+     // #TEST#: AP30 Add parameter, int goink
+-    void AddParameterRef(const int &first);
++    void AddParameterRef(const int &first, int goink);
+     // #TEST#: AP31 Add parameter before first, int goink
+     // #TEST#: AP32 Add parameter after first, int goink = 1
+     void AddParameterDefault(int first = 0);

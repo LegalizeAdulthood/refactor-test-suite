@@ -1,26 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index a759b33..d1b5874 100644
+index a759b33..ae1c5b8 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -168,7 +168,7 @@ void AddParameterFn(int first)
+@@ -83,7 +83,7 @@ void TestAddParameter()
+     // #TEST#: AP105 Add parameter, int *goink
+     s.AddParameter();
+     // #TEST#: AP106 Add parameter, int goink
+-    s.AddParameter(1);
++    s.AddParameter(1, 0);
+     // #TEST#: AP107 Add parameter, int goink
+     s.AddParameter2<int>();
+     // #TEST#: AP108 Add parameter, int goink
+@@ -214,7 +214,7 @@ void AddParameterTester::StaticDefault(int x, int y)
  }
  
- // #TEST#: AP15 Add parameter, int goink
--void AddParameterFn(float &arg)
-+void AddParameterFn(float &arg, int goink)
+ // #TEST#: AP148 Add parameter, int goink
+-void AddParameterStruct::AddParameter(int first)
++void AddParameterStruct::AddParameter(int first, int goink)
  {
-     arg = 1.0f;
  }
+ 
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..f98da55 100644
+index fa2ecc5..8e9af35 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -5,7 +5,7 @@ extern void AddParameterFn();
- // #TEST#: AP28 Add parameter, int goink
- extern void AddParameterFn(int first);
- // #TEST#: AP29 Add parameter, int goink
--extern void AddParameterFn(float &first);
-+extern void AddParameterFn(float &first, int goink);
- // #TEST#: AP30 Add parameter, int goink
- extern void AddParameterFn(const float &first);
- // #TEST#: AP31 Add parameter, int goink
+@@ -129,7 +129,7 @@ struct AddParameterStruct
+     }
+ 
+     // #TEST#: AP29 Add parameter, int goink
+-    void AddParameter(int first);
++    void AddParameter(int first, int goink);
+     // #TEST#: AP30 Add parameter, int goink
+     void AddParameterRef(const int &first);
+     // #TEST#: AP31 Add parameter before first, int goink

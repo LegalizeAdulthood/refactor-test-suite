@@ -1,26 +1,32 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..7fe1a6c 100644
+index 9035c6f..a1d4a55 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -387,7 +387,7 @@ void f3()
-     // #TEST#: AP180 Add parameter, int *goink
-     u2.AddParameter();
-     // #TEST#: AP181 Add parameter, int goink
--    u2.AddParameter2<int>();
-+    u2.AddParameter2<int>(0);
-     // #TEST#: AP182 Add parameter, int goink
-     u2.AddParameter(1);
-     const int j{3};
+@@ -134,12 +134,12 @@ static void f2()
+     // #TEST#: AP128 Add parameter, int goink
+     AddParameterNamespace::Outer outer = AddParameterNamespace::Outer();
+     // #TEST#: AP129 Add parameter, int goink
+-    outer.Operation();
++    outer.Operation(0);
+ 
+     using AddParameterNamespace::Outer;
+     Outer outer2;
+     // #TEST#: AP130 Add parameter, int goink
+-    outer2.Operation();
++    outer2.Operation(0);
+     namespace Frob = AddParameterNamespace;
+     Frob::Outer::Inner inner2;
+     // #TEST#: AP131 Add parameter, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..ad8a468 100644
+index d7aff00..db6513d 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -238,7 +238,7 @@ public:
+@@ -299,7 +299,7 @@ public:
+     }
  
-     template <typename T>
      // #TEST#: AP70 Add parameter, int goink
--    void AddParameter2()
-+    void AddParameter2(int goink)
+-    void Operation()
++    void Operation(int goink)
      {
      }
  

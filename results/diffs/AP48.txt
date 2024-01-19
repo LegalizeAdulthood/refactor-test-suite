@@ -1,13 +1,26 @@
+diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
+index 9035c6f..efa33b8 100644
+--- a/RefactorTest/AddParameter.cpp
++++ b/RefactorTest/AddParameter.cpp
+@@ -373,7 +373,7 @@ void f3()
+     // #TEST#: AP179 Add parameter, int goink
+     AddParameterUnion::AddParameterStaticInline();
+     // #TEST#: AP180 Add parameter, int goink
+-    AddParameterUnion::AddParameterStaticDefaultInline(5);
++    AddParameterUnion::AddParameterStaticDefaultInline(0, 5);
+     // #TEST#: AP181 Add parameter, int goink
+     AddParameterUnion::Static();
+     // #TEST#: AP182 Add parameter, int goink
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index fa2ecc5..1a1921a 100644
+index d7aff00..b421016 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -142,7 +142,7 @@ struct AddParameterStruct
+@@ -198,7 +198,7 @@ public:
      }
-     // #TEST#: AP47 Add parameter before first, int goink
-     // #TEST#: AP48 Add parameter after first, int goink = 1
+     // #TEST#: AP48 Add parameter before first, int goink
+     // #TEST#: AP49 Add parameter after first, int goink = 1
 -    static void AddParameterStaticDefaultInline(int first = 0)
-+    static void AddParameterStaticDefaultInline(int first = 0, int goink = 1)
++    static void AddParameterStaticDefaultInline(int goink, int first = 0)
      {
      }
-     // #TEST#: AP49 Add parameter, int goink
+     // #TEST#: AP50 Add parameter, int goink

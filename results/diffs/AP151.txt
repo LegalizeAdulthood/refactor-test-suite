@@ -1,89 +1,26 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 6824133..abda4d3 100644
+index a759b33..ca3792e 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -265,7 +265,7 @@ public:
-     virtual int fn() = 0;
+@@ -225,7 +225,7 @@ void AddParameterStruct::AddParameterRef(const int &first)
  
-     // #TEST#: AP151 Add parameter, int goink
--    virtual int fn2(int x) = 0;
-+    virtual int fn2(int x, int goink) = 0;
- };
- 
- class Derived : public Interface
-@@ -277,7 +277,7 @@ public:
-     int fn() override;
- 
-     // #TEST#: AP153 Add parameter, int goink
--    int fn2(int x) override;
-+    int fn2(int x, int goink) override;
- };
- 
- class OtherDerived : public Interface
-@@ -292,7 +292,7 @@ public:
-     }
- 
-     // #TEST#: AP155 Add parameter, int goink
--    int fn2(int x) override
-+    int fn2(int x, int goink) override
-     {
-         return x + 2;
-     }
-@@ -307,7 +307,7 @@ public:
-     int fn() override;
- 
-     // #TEST#: AP157 Add parameter, int goink
--    int fn2(int x) override;
-+    int fn2(int x, int goink) override;
- };
- 
- // #TEST#: AP158 Add parameter, int goink
-@@ -317,7 +317,7 @@ int Derived::fn()
- }
- 
- // #TEST#: AP159 Add parameter, int goink
--int Derived::fn2(int x)
-+int Derived::fn2(int x, int goink)
+ // #TEST#: AP150 Add parameter before first, int goink
+ // #TEST#: AP151 Add parameter after first, int goink = 1
+-void AddParameterStruct::AddParameterDefault(int first)
++void AddParameterStruct::AddParameterDefault(int first, int goink)
  {
-     return x;
- }
-@@ -329,10 +329,10 @@ int MoreDerived::fn()
  }
  
- // #TEST#: AP161 Add parameter, int goink
--int MoreDerived::fn2(int x)
-+int MoreDerived::fn2(int x, int goink)
- {
-     // #TEST#: AP162 Add parameter, int goink
--    return 1 + Derived::fn2(x);
-+    return 1 + Derived::fn2(x, 0);
- }
+diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
+index fa2ecc5..0608b6f 100644
+--- a/RefactorTest/AddParameter.h
++++ b/RefactorTest/AddParameter.h
+@@ -134,7 +134,7 @@ struct AddParameterStruct
+     void AddParameterRef(const int &first);
+     // #TEST#: AP31 Add parameter before first, int goink
+     // #TEST#: AP32 Add parameter after first, int goink = 1
+-    void AddParameterDefault(int first = 0);
++    void AddParameterDefault(int first = 0, int goink = 1);
  
- void f1()
-@@ -341,7 +341,7 @@ void f1()
-     // #TEST#: AP163 Add parameter, int goink
-     REQUIRE_EQUAL(1, d.fn());
-     // #TEST#: AP164 Add parameter, int goink
--    int res = d.fn2(2);
-+    int res = d.fn2(2, 0);
-     REQUIRE_EQUAL(2, res);
- 
-     MoreDerived md;
-@@ -349,7 +349,7 @@ void f1()
-     res = md.fn();
-     REQUIRE_EQUAL(2, res);
-     // #TEST#: AP166 Add parameter, int goink
--    res = md.fn2(2);
-+    res = md.fn2(2, 0);
-     REQUIRE_EQUAL(3, res);
- 
-     OtherDerived od;
-@@ -357,7 +357,7 @@ void f1()
-     res = od.fn();
-     REQUIRE_EQUAL(3, res);
-     // #TEST#: AP168 Add parameter, int goink
--    res = od.fn2(2);
-+    res = od.fn2(2, 0);
-     REQUIRE_EQUAL(4, res);
- }
- 
+     // #TEST#: AP33 Add parameter, int goink
+     static void AddParameterStaticInline()

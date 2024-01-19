@@ -1,35 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..6a3c85c 100644
+index 9035c6f..ff60acf 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -367,7 +367,7 @@ void f3()
-     u.AddParameter(0);
-     const int j2{3};
-     // #TEST#: AP172 Add parameter, int goink
--    u.AddParameterRef(j2);
-+    u.AddParameterRef(j2, 0);
-     // #TEST#: AP173 Add parameter, int goink
-     u.AddParameterDefault(4);
-     // #TEST#: AP174 Add parameter, int goink
-@@ -423,7 +423,7 @@ void AddParameterUnion::AddParameter(int first)
- }
- 
- // #TEST#: AP193 Add parameter, int goink
--void AddParameterUnion::AddParameterRef(const int &first)
-+void AddParameterUnion::AddParameterRef(const int &first, int goink)
- {
- }
- 
+@@ -389,7 +389,7 @@ void f3()
+     // #TEST#: AP186 Add parameter, int goink
+     u2.AddParameter2<int>();
+     // #TEST#: AP187 Add parameter, int goink
+-    u2.AddParameter(1);
++    u2.AddParameter(1, 0);
+     const int j{3};
+     // #TEST#: AP188 Add parameter, int goink
+     u2.AddParameterRef(j);
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..5831ff1 100644
+index d7aff00..036b74f 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -188,7 +188,7 @@ public:
-     // #TEST#: AP57 Add parameter, int goink
-     void AddParameter(int first);
+@@ -243,7 +243,7 @@ public:
+     }
+ 
      // #TEST#: AP58 Add parameter, int goink
--    void AddParameterRef(const int &first);
-+    void AddParameterRef(const int &first, int goink);
-     // #TEST#: AP59 Add parameter before first, int goink
-     void AddParameterDefault(int first = 0);
+-    void AddParameter(int first);
++    void AddParameter(int first, int goink);
+     // #TEST#: AP59 Add parameter, int goink
+     void AddParameterRef(const int &first);
+     // #TEST#: AP60 Add parameter before first, int goink
+@@ -322,7 +322,7 @@ public:
+ 
+ template <typename Other>
+ // #TEST#: AP73 Add parameter, int goink
+-void AddParameterUnionTemplate<Other>::AddParameter(int first)
++void AddParameterUnionTemplate<Other>::AddParameter(int first, int goink)
+ {
+ }
  

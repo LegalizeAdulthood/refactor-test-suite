@@ -1,35 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..ff60acf 100644
+index 9035c6f..c829cc7 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -389,7 +389,7 @@ void f3()
-     // #TEST#: AP181 Add parameter, int goink
-     u2.AddParameter2<int>();
-     // #TEST#: AP182 Add parameter, int goink
--    u2.AddParameter(1);
-+    u2.AddParameter(1, 0);
-     const int j{3};
-     // #TEST#: AP183 Add parameter, int goink
-     u2.AddParameterRef(j);
+@@ -128,7 +128,7 @@ static void f2()
+     // #TEST#: AP126 Add parameter, int goink
+     AddParameter2<AddParameterStructTester>();
+ 
+-    AddParameterNamespace::Outer::Inner inner;
++    AddParameterNamespace::Outer::Inner inner(0);
+     // #TEST#: AP127 Add parameter, int goink
+     inner.Operation();
+     // #TEST#: AP128 Add parameter, int goink
+@@ -141,7 +141,7 @@ static void f2()
+     // #TEST#: AP130 Add parameter, int goink
+     outer2.Operation();
+     namespace Frob = AddParameterNamespace;
+-    Frob::Outer::Inner inner2;
++    Frob::Outer::Inner inner2(0);
+     // #TEST#: AP131 Add parameter, int goink
+     inner2.Operation();
+ 
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..036b74f 100644
+index d7aff00..902bbaf 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -243,7 +243,7 @@ public:
-     }
- 
-     // #TEST#: AP71 Add parameter, int goink
--    void AddParameter(int first);
-+    void AddParameter(int first, int goink);
-     // #TEST#: AP72 Add parameter, int goink
-     void AddParameterRef(const int &first);
-     // #TEST#: AP73 Add parameter before first, int goink
-@@ -322,7 +322,7 @@ public:
- 
- template <typename Other>
- // #TEST#: AP197 Add parameter, int goink
--void AddParameterUnionTemplate<Other>::AddParameter(int first)
-+void AddParameterUnionTemplate<Other>::AddParameter(int first, int goink)
- {
- }
+@@ -307,7 +307,7 @@ public:
+     {
+     public:
+         // #TEST#: AP71 Add parameter, int goink
+-        Inner()
++        Inner(int goink)
+         {
+         }
  

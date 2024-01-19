@@ -1,26 +1,26 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index ef5fa34..ee2373e 100644
+index 9035c6f..830ba5e 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -373,7 +373,7 @@ void f3()
-     // #TEST#: AP174 Add parameter, int goink
-     AddParameterUnion::AddParameterStaticInline();
-     // #TEST#: AP175 Add parameter before first, int goink
--    AddParameterUnion::AddParameterStaticDefaultInline(5);
-+    AddParameterUnion::AddParameterStaticDefaultInline(0, 5);
+@@ -362,7 +362,7 @@ void f3()
+     // #TEST#: AP174 Add parameter, int *goink
+     u.AddParameter();
+     // #TEST#: AP175 Add parameter, int goink
+-    u.AddParameter2<int>();
++    u.AddParameter2<int>(0);
      // #TEST#: AP176 Add parameter, int goink
-     AddParameterUnion::Static();
-     // #TEST#: AP177 Add parameter before y, int goink
+     u.AddParameter(0);
+     const int j2{3};
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..b421016 100644
+index d7aff00..7643e9c 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -198,7 +198,7 @@ public:
-     }
-     // #TEST#: AP61 Add parameter before first, int goink
-     // #TEST#: AP62 Add parameter after first, int goink = 1
--    static void AddParameterStaticDefaultInline(int first = 0)
-+    static void AddParameterStaticDefaultInline(int goink, int first = 0)
+@@ -181,7 +181,7 @@ public:
+ 
+     template <typename T>
+     // #TEST#: AP43 Add parameter, int goink
+-    void AddParameter2()
++    void AddParameter2(int goink)
      {
      }
-     // #TEST#: AP63 Add parameter, int goink
+ 

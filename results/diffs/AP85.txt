@@ -1,35 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..23625c7 100644
+index 4471484..b3852c6 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -130,7 +130,7 @@ static void f2()
+@@ -36,7 +36,7 @@ void TestAddParameter()
+     int data = 2;
+     const int &ref = data;
+     // #TEST#: AP85 Add parameter, int goink
+-    AddParameterFnRef(ref);
++    AddParameterFnRef(ref, 0);
+     // #TEST#: AP86 Add parameter before first, int goink
+     AddParameterFnDefault();
+     // #TEST#: AP87 Add parameter before first, int goink
+@@ -179,7 +179,7 @@ void AddParameterFn(const float &arg)
+ }
  
-     AddParameterNamespace::Outer::Inner inner;
-     // #TEST#: AP132 Add parameter, int goink
--    inner.Operation();
-+    inner.Operation(0);
-     // #TEST#: AP133 Add parameter, int goink
-     AddParameterNamespace::Outer outer = AddParameterNamespace::Outer();
-     // #TEST#: AP134 Add parameter, int goink
-@@ -143,7 +143,7 @@ static void f2()
-     namespace Frob = AddParameterNamespace;
-     Frob::Outer::Inner inner2;
-     // #TEST#: AP136 Add parameter, int goink
--    inner2.Operation();
-+    inner2.Operation(0);
+ // #TEST#: AP141 Add parameter, int goink
+-void AddParameterFnRef(const int &first)
++void AddParameterFnRef(const int &first, int goink)
+ {
+ }
  
-     // default constructor
-     AddParameterTester def1;
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..97fbaf2 100644
+index f03284f..bde2810 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -312,7 +312,7 @@ public:
-         }
+@@ -9,7 +9,7 @@ extern void AddParameterFn(float &first);
+ // #TEST#: AP4 Add parameter, int goink
+ extern void AddParameterFn(const float &first);
+ // #TEST#: AP5 Add parameter, int goink
+-extern void AddParameterFnRef(const int &first);
++extern void AddParameterFnRef(const int &first, int goink);
+ // #TEST#: AP6 Add parameter before first, int goink
+ extern void AddParameterFnDefault(int first = 0);
  
-         // #TEST#: AP85 Add parameter, int goink
--        void Operation()
-+        void Operation(int goink)
-         {
-         }
-     };

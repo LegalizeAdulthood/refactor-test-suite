@@ -1,26 +1,35 @@
 diff --git a/RefactorTest/AddParameter.cpp b/RefactorTest/AddParameter.cpp
-index 9035c6f..cd21c8b 100644
+index 1725afb..cd034d1 100644
 --- a/RefactorTest/AddParameter.cpp
 +++ b/RefactorTest/AddParameter.cpp
-@@ -411,7 +411,7 @@ void f3()
-     const double k = AddParameterUnionTemplate<double>::OtherStaticTemplate();
-     REQUIRE_EQUAL(0.0, k);
-     // #TEST#: AP191 Add parameter, int goink
--    const double k2 = u2.OtherTemplate();
-+    const double k2 = u2.OtherTemplate(0);
-     REQUIRE_EQUAL(0.0, k2);
+@@ -33,7 +33,7 @@ struct AddParameterStructTester
+ static void f2()
+ {
+     // #TEST#: AP81 Add parameter, int *goink
+-    AddParameterFn();
++    AddParameterFn(nullptr);
+     // #TEST#: AP82 Add parameter, int goink
+     AddParameterFn(1);
+     // #TEST#: AP83 Add parameter, int goink
+@@ -168,7 +168,7 @@ static AddParameterTester *GetOne()
+ }
+ 
+ // #TEST#: AP137 Add parameter, int *goink
+-void AddParameterFn()
++void AddParameterFn(int *goink)
+ {
  }
  
 diff --git a/RefactorTest/AddParameter.h b/RefactorTest/AddParameter.h
-index d7aff00..e7efb60 100644
+index 7e94f5d..6d26f97 100644
 --- a/RefactorTest/AddParameter.h
 +++ b/RefactorTest/AddParameter.h
-@@ -279,7 +279,7 @@ public:
-         return Other(0);
-     }
-     // #TEST#: AP81 Add parameter, int goink
--    Other OtherTemplate()
-+    Other OtherTemplate(int goink)
-     {
-         return Other(0);
-     }
+@@ -1,7 +1,7 @@
+ #pragma once
+ 
+ // #TEST#: AP1 Add parameter, int *goink
+-extern void AddParameterFn();
++extern void AddParameterFn(int *goink);
+ // #TEST#: AP2 Add parameter, int goink
+ extern void AddParameterFn(int first);
+ // #TEST#: AP3 Add parameter, int goink

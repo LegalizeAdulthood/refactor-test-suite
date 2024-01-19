@@ -5,7 +5,7 @@ index a759b33..11cd5cb 100644
 @@ -9,7 +9,7 @@ class AddParameterTester2
  {
  public:
-     // #TEST#: AP24 Add parameter, int goink
+     // #TEST#: AP79 Add parameter, int goink
 -    static void AddParameter()
 +    static void AddParameter(int goink)
      {
@@ -14,7 +14,7 @@ index a759b33..11cd5cb 100644
 @@ -17,7 +17,7 @@ public:
  struct AddParameterStructTester
  {
-     // #TEST#: AP26 Add parameter, int goink
+     // #TEST#: AP80 Add parameter, int goink
 -    static void AddParameter()
 +    static void AddParameter(int goink)
      {
