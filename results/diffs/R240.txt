@@ -1,21 +1,16 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..b6ad22d 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -518,14 +518,14 @@ void f16()
-     struct X
-     {
-         // #TEST#: R237 Rename x
--        int x = 3;
-+        int goink = 3;
-         // #TEST#: R238 Rename y
-         // #TEST#: R239 Rename j
-         int y = j;
-     };
-     X v;
-     // #TEST#: R240 Rename x
--    require_equal(3, v.x);
-+    require_equal(3, v.goink);
-     // #TEST#: R241 Rename y
-     require_equal(j, v.y);
- }
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..4f066b4 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -744,9 +744,9 @@ restart:
+         // #TEST#: R239 Rename variable override
+         int override = internal + 1;
+         // #TEST#: R240 Rename variable pin_ptr
+-        int pin_ptr = override + 1;
++        int goink = override + 1;
+         // #TEST#: R241 Rename variable property
+-        int property = pin_ptr + 1;
++        int property = goink + 1;
+         // #TEST#: R242 Rename variable safe_cast
+         int safe_cast = property + 1;
+         // #TEST#: R243 Rename variable sealed

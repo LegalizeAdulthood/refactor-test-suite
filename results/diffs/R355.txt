@@ -1,31 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..467cad6 100644
+index e73e1db..f4bbcd8 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -896,22 +896,22 @@ void f28()
- void f29()
+@@ -433,7 +433,7 @@ std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len
+ // #TEST#: R355 Rename xs4
+ // #TEST#: R356 Rename text
+ // #TEST#: R357 Rename len
+-std::basic_string<char32_t> operator""_xs4(const char32_t *text, std::size_t len)
++std::basic_string<char32_t> operator""_goink(const char32_t *text, std::size_t len)
  {
-     // #TEST#: R352 Rename x
--    int x = 3;
-+    int goink = 3;
-     // #TEST#: R353 Rename x in decltype argument
-     // #TEST#: R354 Rename y
-     // #TEST#: R355 Rename x in initializing expression
--    decltype(x) y = x;
-+    decltype(goink) y = goink;
-     // #TEST#: R356 Rename y
-     require_equal(3, y);
-     // #TEST#: R357 Rename y
-     // #TEST#: R358 Rename x
--    require_equal(true, std::is_same<decltype(y), decltype(x)>::value);
-+    require_equal(true, std::is_same<decltype(y), decltype(goink)>::value);
-     // #TEST#: R359 Rename first x in expression
-     // #TEST#: R360 Rename first y in expression
-     // #TEST#: R361 Rename second x in expression
-     // #TEST#: R362 Rename second y in expression
-     // #TEST#: R363 Rename z
--    decltype(x + y - x - y) z = 10;
-+    decltype(goink + y - goink - y) z = 10;
-     // #TEST#: R364 Rename z
-     require_equal(10, z);
+     // #TEST#: R358 Rename text
+     // #TEST#: R359 Rename len
+@@ -467,7 +467,7 @@ void f13()
+     // #TEST#: R371 Rename xs3
+     require_equal(std::string{"foo"}, narrow(u"foo"_xs3));
+     // #TEST#: R372 Rename xs4
+-    require_equal(std::string{"foo"}, narrow(U"foo"_xs4));
++    require_equal(std::string{"foo"}, narrow(U"foo"_goink));
  }
+ 
+ // #TEST#: R373 Rename Char

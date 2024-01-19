@@ -1,22 +1,19 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..05d7bd6 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -14,7 +14,7 @@ namespace
- // #TEST#: R104 Rename flag used in static_assert
- constexpr bool flag = true;
- // #TEST#: R105 Rename flag used in static_assert
--constexpr bool flag2 = false;
-+constexpr bool goink = false;
- // #TEST#: R106 Rename flag used in noexcept specification
- constexpr bool flag3 = true;
- // #TEST#: R107 Rename flag used in noexcept specification
-@@ -23,7 +23,7 @@ constexpr bool flag4 = false;
- // #TEST#: R100 Rename flag in static_assert
- static_assert(flag, "Flag is false");
- // #TEST#: R101 Rename flag2 in static_assert
--static_assert(!flag2, "Flag2 is true");
-+static_assert(!goink, "Flag2 is true");
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..b2a8b3b 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -397,12 +397,12 @@ int f3_aux(T3 t)
+     // #TEST#: R101 Rename T3
+     // #TEST#: R102 Rename t2
+     // #TEST#: R103 Rename i3
+-    ::T3 t2 = ::i3;
++    ::T3 goink = ::i3;
+     // #TEST#: R104 Rename i3
+     require_equal(3, ::i3);
+     // #TEST#: R105 Rename t2
+     // #TEST#: R106 Rename i3
+-    return t2.i3;
++    return goink.i3;
+ }
  
- // #TEST#: R102 Rename flag3 in noexcept specifier
- void f1() noexcept(flag3)
+ void f3()

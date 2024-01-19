@@ -1,37 +1,16 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..f137b37 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -468,7 +468,7 @@ public:
-     // #TEST#: R546 Rename T in declaration
-     // #TEST#: R547 Rename x
-     // #TEST#: R548 Rename T in initializer
--    T x = T(3);
-+    T goink = T(3);
- };
- 
- template <>
-@@ -479,20 +479,20 @@ public:
-     // #TEST#: R550 Rename type
-     using type = unsigned int;
-     // #TEST#: R551 Rename x
--    unsigned int x = 4;
-+    unsigned int goink = 4;
- };
- 
- void f5()
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..bd35a11 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1050,9 +1050,9 @@ void f36()
+ void f37()
  {
-     // #TEST#: R552 Rename F5
-     // #TEST#: R553 Rename x
--    require_equal('\3', F5<char>().x);
-+    require_equal('\3', F5<char>().goink);
-     // #TEST#: R554 Rename F5
-     // #TEST#: R555 Rename type
-     require_equal(true, std::is_same<char, F5<char>::type>::value);
-     // #TEST#: R556 Rename F5
-     // #TEST#: R557 Rename x
--    require_equal(4U, F5<int>().x);
-+    require_equal(4U, F5<int>().goink);
-     // #TEST#: R558 Rename F5
-     // #TEST#: R559 Rename type
-     require_equal(true, std::is_same<F5<int>::type, unsigned int>::value);
+     // #TEST#: R550 Rename s1
+-    const char *s1{u8"foo"};
++    const char *goink{u8"foo"};
+     // #TEST#: R551 Rename s1
+-    require_equal(std::string{"foo"}, std::string{s1});
++    require_equal(std::string{"foo"}, std::string{goink});
+ 
+     // #TEST#: R552 Rename s2
+     const char16_t *s2{u"foo"};

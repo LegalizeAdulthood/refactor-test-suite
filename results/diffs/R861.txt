@@ -1,54 +1,27 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index b319d77..9fcdfe4 100644
+index 6c616d8..b602242 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -105,7 +105,7 @@ void f2()
-         // #TEST#: R866 Rename use of x
-         REQUIRE_EQUAL(10, p.x);
+@@ -61,18 +61,18 @@ void f1()
+     // integral type comparison
+     {
+         // #TEST#: R861 Rename x
+-        int x{1};
++        int goink{1};
+         // #TEST#: R862 Rename y
+         int y{2};
+         // #TEST#: R863 Rename first use of x
+         // #TEST#: R864 Rename second use of x
+-        REQUIRE_EQUAL(std::strong_ordering::equal, x <=> x);
++        REQUIRE_EQUAL(std::strong_ordering::equal, goink <=> goink);
+         // #TEST#: R865 Rename use of x
+         // #TEST#: R866 Rename use of y
+-        REQUIRE_EQUAL(std::strong_ordering::less, x <=> y);
++        REQUIRE_EQUAL(std::strong_ordering::less, goink <=> y);
          // #TEST#: R867 Rename use of y
--        REQUIRE_EQUAL(0, p.y);
-+        REQUIRE_EQUAL(0, p.goink);
-         // #TEST#: R868 Rename use of z
-         REQUIRE_EQUAL(0, p.z);
+         // #TEST#: R868 Rename use of x
+-        REQUIRE_EQUAL(std::strong_ordering::greater, y <=> x);
++        REQUIRE_EQUAL(std::strong_ordering::greater, y <=> goink);
      }
-@@ -113,11 +113,11 @@ void f2()
-         // #TEST#: R869 Rename use of Point
-         // #TEST#: R974 Rename local variable p
-         // #TEST#: R870 Rename use of y
--        Point p{.y = 10};
-+        Point p{.goink = 10};
-         // #TEST#: R871 Rename use of x
-         REQUIRE_EQUAL(0, p.x);
-         // #TEST#: R872 Rename use of y
--        REQUIRE_EQUAL(10, p.y);
-+        REQUIRE_EQUAL(10, p.goink);
-         // #TEST#: R873 Rename use of z
-         REQUIRE_EQUAL(0, p.z);
-     }
-@@ -126,11 +126,11 @@ void f2()
-         // #TEST#: R975 Rename local variable p
-         // #TEST#: R875 Rename use of x
-         // #TEST#: R976 Rename use of y
--        Point p{.x = 20, .y = 10};
-+        Point p{.x = 20, .goink = 10};
-         // #TEST#: R876 Rename use of x
-         REQUIRE_EQUAL(20, p.x);
-         // #TEST#: R877 Rename use of y
--        REQUIRE_EQUAL(10, p.y);
-+        REQUIRE_EQUAL(10, p.goink);
-         // #TEST#: R878 Rename use of z
-         REQUIRE_EQUAL(0, p.z);
-     }
-diff --git a/RefactorTest/RenameCpp20.h b/RefactorTest/RenameCpp20.h
-index 7a5d5d9..03e1686 100644
---- a/RefactorTest/RenameCpp20.h
-+++ b/RefactorTest/RenameCpp20.h
-@@ -13,7 +13,7 @@ struct Point
-     // #TEST#: R860 Rename member x
-     int x;
-     // #TEST#: R861 Rename member y
--    int y;
-+    int goink;
-     // #TEST#: R862 Rename member z
-     int z;
- };
+     // floating-point type comparison
+     {

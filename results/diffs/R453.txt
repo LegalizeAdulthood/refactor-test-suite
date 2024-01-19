@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..f39c83b 100644
+index e73e1db..eb962cd 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1171,7 +1171,7 @@ void f44()
-         }
-         // #TEST#: R452 Rename parameter s
-         // #TEST#: R453 Rename parameter s in initializer list
--        X(std::string &&s) : m_s(s + " rvalue")
-+        X(std::string &&goink) : m_s(goink + " rvalue")
-         {
-         }
+@@ -766,7 +766,7 @@ void f26()
+     // #TEST#: R454 Rename x in lambda body
+     // #TEST#: R455 Rename f in lambda body
+     // #TEST#: R456 Rename x in lambda argument list
+-    require_equal(205.0, [=](int x) { return x * f; }(x));
++    require_equal(205.0, [=](int goink) { return goink * f; }(x));
  
+     // #TEST#: R457 Rename x in lambda capture list
+     // #TEST#: R458 Rename x in lambda body

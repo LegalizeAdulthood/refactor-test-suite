@@ -1,25 +1,22 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index d84e297..296aa87 100644
+index fd51b87..3149c4b 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -399,7 +399,7 @@ void autoSqrPtr(auto *t)
- // #TEST#: R946 Rename function product
- // #TEST#: R947 Rename parameter first
- // #TEST#: R948 Rename parameter args
--auto product(auto first, auto... args)
-+auto goink(auto first, auto... args)
- {
-     // #TEST#: R949 Rename use of first
-     // #TEST#: R950 Rename use of args
-@@ -446,9 +446,9 @@ void f10()
-         int t1{1};
-         // #TEST#: R957 Rename use of product
-         // #TEST#: R986 Rename use of t1
--        REQUIRE_EQUAL(6, product(t1, 2, 3));
-+        REQUIRE_EQUAL(6, goink(t1, 2, 3));
-         // #TEST#: R958 Rename use of product
--        REQUIRE_EQUAL(6.0f, product(1.0f, 2.0f, 3.0f));
-+        REQUIRE_EQUAL(6.0f, goink(1.0f, 2.0f, 3.0f));
+@@ -299,7 +299,7 @@ void f8()
      }
- }
- 
+     {
+         // #TEST#: R945 Rename union Multiple
+-        union Multiple
++        union Goink
+         {
+             int x;
+             float y;
+@@ -308,7 +308,7 @@ void f8()
+         // #TEST#: R946 Rename use of Multiple
+         // #TEST#: R947 Rename local variable vals
+         // #TEST#: R948 Rename use of one
+-        const Multiple vals(one);
++        const Goink vals(one);
+         // #TEST#: R949 Rename use of vals
+         REQUIRE_EQUAL(1, vals.x);
+     }

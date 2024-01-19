@@ -1,21 +1,22 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..1befa85 100644
+index d1c1283..d47ff1b 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -152,14 +152,14 @@ struct SU
- // #TEST#: R39 Rename class Operations
- // #TEST#: R40 Rename function GetOperation
- // #TEST#: R41 Rename parameter flag
--static int (Operations::*GetOperation(bool flag))()
-+static int (Operations::*GetOperation(bool goink))()
+@@ -171,7 +171,7 @@ static int (Operations::*GetOperation(bool flag))()
+ }
+ 
+ // #TEST#: R31 Rename namespace RenameNamespace
+-namespace RenameNamespace
++namespace Goink
  {
-     // #TEST#: R42 Rename class Operations
-     // #TEST#: R43 Rename variable result
-     // #TEST#: R44 Rename member Operation1
-     int (Operations::*result)() = &Operations::Operation1;
-     // #TEST#: R45 Rename variable flag
--    if (flag)
-+    if (goink)
-     {
-         // #TEST#: R46 Rename variable result
-         // #TEST#: R47 Rename class Operations
+ // #TEST#: R32 Rename scoped member Renamed.
+ int Renamed = 0;
+@@ -246,7 +246,7 @@ static int s_macro_value2 = -40;
+ #undef MACRO2
+ 
+ // #TEST#: R45 Rename namespace RenameNamespace
+-using namespace RenameNamespace;
++using namespace Goink;
+ 
+ namespace
+ {

@@ -1,26 +1,22 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..4fc25ac 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -184,18 +184,18 @@ void f10_aux(std::ostream &stream, T head)
- 
- // #TEST#: R146 Rename T
- // #TEST#: R147 Rename Args
--template <typename T, typename... Args>
-+template <typename T, typename... Goink>
- // #TEST#: R148 Rename T
- // #TEST#: R149 Rename head
- // #TEST#: R150 Rename Args
- // #TEST#: R151 Rename tail
--void f10_aux(std::ostream &stream, T head, Args... tail)
-+void f10_aux(std::ostream &stream, T head, Goink... tail)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..425ee1c 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -502,7 +502,7 @@ struct F6
  {
-     // #TEST#: R152 Rename head
-     stream << head << '\n';
-     // #TEST#: R153 Rename tail
-     // #TEST#: R154 Rename Args
--    if (sizeof...(tail) > 0 || sizeof...(Args) > 0)
-+    if (sizeof...(tail) > 0 || sizeof...(Goink) > 0)
+     // #TEST#: R144 Rename T
+     // #TEST#: R145 Rename U
+-    template <typename T, typename U>
++    template <typename T, typename Goink>
+     // #TEST#: R146 (deprecated)
+     // #TEST#: R147 Rename f
+     // #TEST#: R148 Rename T parameter x type
+@@ -511,7 +511,7 @@ struct F6
+     // #TEST#: R151 Rename y parameter
+     // #TEST#: R152 Rename x in decltype expression
+     // #TEST#: R153 Rename y in decltype expression
+-    auto f(T x, U y) -> decltype(x + y)
++    auto f(T x, Goink y) -> decltype(x + y)
      {
-         // #TEST#: R155 Rename tail
-         f10_aux(stream, tail...);
+         // #TEST#: R154 Rename count
+         ++count;

@@ -5,13 +5,13 @@ index d84e297..7940ff3 100644
 @@ -443,10 +443,10 @@ void f10()
      }
      {
-         // #TEST#: R985 Rename local variable t1
+         // #TEST#: R983 Rename local variable t1
 -        int t1{1};
 +        int goink{1};
-         // #TEST#: R957 Rename use of product
-         // #TEST#: R986 Rename use of t1
+         // #TEST#: R984 Rename use of product
+         // #TEST#: R985 Rename use of t1
 -        REQUIRE_EQUAL(6, product(t1, 2, 3));
 +        REQUIRE_EQUAL(6, product(goink, 2, 3));
-         // #TEST#: R958 Rename use of product
+         // #TEST#: R986 Rename use of product
          REQUIRE_EQUAL(6.0f, product(1.0f, 2.0f, 3.0f));
      }

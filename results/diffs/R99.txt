@@ -1,13 +1,36 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..3e43246 100644
+index d1c1283..fed6368 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -15,7 +15,7 @@
- // #TEST#: R25 Rename the macro argument x_ from declaration
- // #TEST#: R99 Rename the macro argument x_ from usage
- // #TEST#: R26 Rename this macro
--#define MACRO_ONE_ARG(x_) (2.0f * x_)
-+#define MACRO_ONE_ARG(goink_) (2.0f * goink_)
+@@ -368,11 +368,11 @@ class T3
+ public:
+     // #TEST#: R87 Rename T3
+     // #TEST#: R88 Rename i3
+-    T3(int i) : i3(i)
++    T3(int i) : goink(i)
+     {
+     }
+     // #TEST#: R89 Rename i3
+-    int i3;
++    int goink;
+ };
  
- class Operations
- {
+ // #TEST#: R90 Rename i3
+@@ -391,7 +391,7 @@ int f3_aux(T3 t)
+     // #TEST#: R98 Rename t
+     T3 t1 = t;
+     // #TEST#: R99 Rename i3
+-    require_equal(2, t1.i3);
++    require_equal(2, t1.goink);
+     // #TEST#: R100 Rename i3
+     require_equal(1, i3);
+     // #TEST#: R101 Rename T3
+@@ -402,7 +402,7 @@ int f3_aux(T3 t)
+     require_equal(3, ::i3);
+     // #TEST#: R105 Rename t2
+     // #TEST#: R106 Rename i3
+-    return t2.i3;
++    return t2.goink;
+ }
+ 
+ void f3()

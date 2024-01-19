@@ -1,44 +1,16 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d7d8359..490b2b0 100644
+index d7d8359..0555fb2 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -30,7 +30,7 @@ namespace RenameCpp17::A::B::C
+@@ -471,9 +471,9 @@ void f9()
  {
- 
- // #TEST#: R813 Rename x
--int x{10};
-+int goink{10};
- 
- int y{20};
- int z{30};
-@@ -490,7 +490,7 @@ void f10()
-     // #TEST#: R815 Rename B
-     // #TEST#: R816 Rename C
-     // #TEST#: R817 Rename x
--    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::x);
-+    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::goink);
- 
-     {
-         // #TEST#: R818 Rename A
-@@ -498,7 +498,7 @@ void f10()
-         // #TEST#: R820 Rename C
-         using namespace RenameCpp17::A::B::C;
-         // #TEST#: R821 Rename x
--        REQUIRE_EQUAL(10, x);
-+        REQUIRE_EQUAL(10, goink);
-     }
- }
- 
-diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
-index 37491e7..6a7134f 100644
---- a/RefactorTest/RenameCpp17.h
-+++ b/RefactorTest/RenameCpp17.h
-@@ -9,7 +9,7 @@ namespace RenameCpp17
- namespace A::B::C
- {
- // #TEST#: R809 Rename x
--extern int x;
-+extern int goink;
- 
- extern int y;
- extern int z;
+     // #TEST#: R820 Rename use of Container
+     // #TEST#: R821 Rename local variable c1
+-    const Container c1{7};
++    const Container goink{7};
+     // #TEST#: R822 Rename use of c1
+-    REQUIRE_EQUAL(1, c1.m_how);
++    REQUIRE_EQUAL(1, goink.m_how);
+     std::vector vals{1.0f, 2.0f, 3.0f};
+     // #TEST#: R823 Rename use of Container
+     // #TEST#: R824 Rename local variable c2

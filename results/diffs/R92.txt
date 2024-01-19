@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..d003259 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -380,7 +380,7 @@ int i3 = 3;
+ 
+ // #TEST#: R91 Rename T3
+ // #TEST#: R92 Rename i3
+-template <class T3, int i3>
++template <class T3, int goink>
+ // #TEST#: R93 Rename f3_aux
+ // #TEST#: R94 Rename T3
+ // #TEST#: R95 Rename t
+@@ -393,7 +393,7 @@ int f3_aux(T3 t)
+     // #TEST#: R99 Rename i3
+     require_equal(2, t1.i3);
+     // #TEST#: R100 Rename i3
+-    require_equal(1, i3);
++    require_equal(1, goink);
+     // #TEST#: R101 Rename T3
+     // #TEST#: R102 Rename t2
+     // #TEST#: R103 Rename i3

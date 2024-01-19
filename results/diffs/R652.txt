@@ -1,20 +1,28 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d55964a..de29f10 100644
+index d7d8359..4db3b2f 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -71,13 +71,13 @@ private:
- 
- // #TEST#: R648 Rename template parameter T
- // #TEST#: R649 Rename template parameter N
--template <typename T, size_t N>
-+template <typename T, size_t Goink>
- // #TEST#: R650 Rename function f
- int f()
+@@ -135,9 +135,9 @@ void f3()
+ void f4()
  {
-     // #TEST#: R651 Rename use of T
-     // #TEST#: R652 Rename use of N
--    if constexpr (sizeof(T) == N)
-+    if constexpr (sizeof(T) == Goink)
-     {
-         return 10;
-     }
+     // #TEST#: R682 Rename use of g_counter
+-    ++RenameCpp17::g_counter;
++    ++RenameCpp17::g_goink;
+     // #TEST#: R683 Rename use of g_counter
+-    REQUIRE_EQUAL(1, RenameCpp17::g_counter);
++    REQUIRE_EQUAL(1, RenameCpp17::g_goink);
+ }
+ 
+ void f5()
+diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
+index 37491e7..86ad95a 100644
+--- a/RefactorTest/RenameCpp17.h
++++ b/RefactorTest/RenameCpp17.h
+@@ -16,6 +16,6 @@ extern int z;
+ }    // namespace A::B::C
+ 
+ // #TEST#: R652 Rename variable g_counter
+-inline int g_counter{0};
++inline int g_goink{0};
+ 
+ }    // namespace RenameCpp17

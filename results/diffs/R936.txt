@@ -1,21 +1,20 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index fd51b87..084bdaf 100644
+index 2aa7a68..9aadf6f 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -352,13 +352,13 @@ void f9()
+@@ -257,13 +257,13 @@ constexpr const char *f7Init(bool param)
+ 
+ // #TEST#: R934 Rename variable f7Val
+ // #TEST#: R935 Rename function f7Init
+-constinit const char *f7Val = f7Init(true);
++constinit const char *goink = f7Init(true);
+ 
+ // constinit
+ void f7()
  {
-     // #TEST#: R934 Rename local variable gen
-     // #TEST#: R935 Rename use of fibonacci
--    auto gen = fibonacci(10);
-+    auto goink = fibonacci(10);
-     std::vector<int> v;
-     // #TEST#: R936 Rename use of gen
--    for (int i = 0; gen; ++i)
-+    for (int i = 0; goink; ++i)
-     {
-         // #TEST#: R937 Rename use of gen
--        v.push_back(gen());
-+        v.push_back(goink());
-     }
-     REQUIRE_EQUAL(10, v.size());
-     REQUIRE_EQUAL(0, v[0]);
+     // #TEST#: R936 Rename use of f7Val
+-    REQUIRE_EQUAL(std::string{"constant initializer"}, f7Val);
++    REQUIRE_EQUAL(std::string{"constant initializer"}, goink);
+ }
+ 
+ // aggregate initialization using parentheses

@@ -1,16 +1,49 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 3d0f364..de61498 100644
+index 3d0f364..5cad368 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -241,9 +241,9 @@ void f5()
-         // #TEST#: R709 Rename binding val2
-         // #TEST#: R710 Rename binding name2
-         // #TEST#: R711 Rename use of f
--        const auto &[val2, name2] = f;
-+        const auto &[goink, name2] = f;
-         // #TEST#: R712 Rename use of val2
--        REQUIRE_EQUAL(1, val2);
-+        REQUIRE_EQUAL(1, goink);
-         // #TEST#: R713 Rename use of name2
-         REQUIRE_EQUAL(std::string{"one"}, name2);
-         // #TEST#: R714 Rename binding val3
+@@ -185,11 +185,11 @@ void f5()
+     // binding to tuple-like type
+     {
+         using pair = std::tuple<int, std::string>;
+-        pair p{1, "one"};
++        pair goink{1, "one"};
+         // #TEST#: R705 Rename binding val
+         // #TEST#: R706 Rename binding name
+         // #TEST#: R707 Rename use of p
+-        const auto [val, name] = p;
++        const auto [val, name] = goink;
+         // #TEST#: R708 Rename use of val
+         REQUIRE_EQUAL(1, val);
+         // #TEST#: R709 Rename use of name
+@@ -197,7 +197,7 @@ void f5()
+         // #TEST#: R710 Rename binding val2
+         // #TEST#: R711 Rename binding name2
+         // #TEST#: R712 Rename use of p
+-        auto [val2, name2] = p;
++        auto [val2, name2] = goink;
+         // #TEST#: R713 Rename use of val2
+         REQUIRE_EQUAL(1, val2);
+         // #TEST#: R714 Rename use of name2
+@@ -205,17 +205,17 @@ void f5()
+         // #TEST#: R715 Rename binding val3
+         // #TEST#: R716 Rename binding name3
+         // #TEST#: R717 Rename use of p
+-        auto &[val3, name3] = p;
++        auto &[val3, name3] = goink;
+         // #TEST#: R718 Rename use of val3
+         val3 = 11;
+         // #TEST#: R719 Rename use of name3
+         name3 = "eleven";
+-        REQUIRE_EQUAL(11, std::get<0>(p));
+-        REQUIRE_EQUAL(std::string{"eleven"}, std::get<1>(p));
++        REQUIRE_EQUAL(11, std::get<0>(goink));
++        REQUIRE_EQUAL(std::string{"eleven"}, std::get<1>(goink));
+         // #TEST#: R720 Rename binding val4
+         // #TEST#: R721 Rename binding name4
+         // #TEST#: R722 Rename use of p
+-        const auto &[val4, name4] = p;
++        const auto &[val4, name4] = goink;
+         // #TEST#: R723 Rename use of val4
+         REQUIRE_EQUAL(11, val4);
+         // #TEST#: R724 Rename use of name4

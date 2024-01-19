@@ -1,22 +1,22 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..87905c6 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -413,7 +413,7 @@ std::string narrow(const std::basic_string<T> &wide)
- // #TEST#: R205 Rename xs2
- // #TEST#: R206 Rename text
- // #TEST#: R207 Rename len
--std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
-+std::wstring operator""_goink(const wchar_t *text, std::size_t len)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..50d3d1d 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -94,7 +94,7 @@ private:
+ namespace Y
  {
-     // #TEST#: R208 Rename text
-     // #TEST#: R209 Rename len
-@@ -463,7 +463,7 @@ void f13()
-     // #TEST#: R204 Rename xs
-     require_equal(std::string{"foo"}, "foo"_xs);
-     // #TEST#: R210 Rename xs2
--    require_equal(std::string{"foo"}, narrow(L"foo"_xs2));
-+    require_equal(std::string{"foo"}, narrow(L"foo"_goink));
-     // #TEST#: R216 Rename xs3
-     require_equal(std::string{"foo"}, narrow(u"foo"_xs3));
-     // #TEST#: R222 Rename xs4
+ // #TEST#: R18 rename this variable
+-int x = 0;
++int goink = 0;
+ 
+ class X
+ {
+@@ -643,7 +643,7 @@ void TestRename()
+     // #TEST#: R203 rename the variable X::x
+     // #TEST#: R204 rename the variable X::y
+     // #TEST#: R205 rename the variable Y::x
+-    int y = test2.Operation() + X::x + X::y + Y::x;
++    int y = test2.Operation() + X::x + X::y + Y::goink;
+ 
+     float x = MACRO_NO_ARGS;
+     x = MACRO_ONE_ARG(2.0f);

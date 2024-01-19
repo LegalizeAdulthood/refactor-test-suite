@@ -1,26 +1,38 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..a234f42 100644
+index e73e1db..4c7ecfe 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1074,18 +1074,18 @@ void f37()
- // #TEST#: R430 Rename stream_ in macro argument list
- // #TEST#: R431 Rename stream_ in macro expansion text
- // #TEST#: R432 Rename not available for __VA_ARGS__ in macro expansion text
--#define F38_AUX(stream_, ...) f10_aux(stream_, __VA_ARGS__)
-+#define GOINK(stream_, ...) f10_aux(stream_, __VA_ARGS__)
- 
- void f38()
+@@ -699,20 +699,20 @@ void f23()
+ void f24()
  {
-     std::ostringstream result;
-     // #TEST#: R433 Rename F38_AUX
--    F38_AUX(result, 10, 20.5, "hello, world!");
-+    GOINK(result, 10, 20.5, "hello, world!");
-     require_equal(std::string{"10\n20.5\nhello, world!\n"}, result.str());
+     // #TEST#: R430 Rename X
+-    struct X
++    struct Goink
+     {
+         // #TEST#: R431 Rename constructor X
+         // #TEST#: R432 Rename delegated constructor X
+-        X() : X(10)
++        Goink() : Goink(10)
+         {
+         }
+         // #TEST#: R433 Rename constructor X
+         // #TEST#: R434 Rename delegated constructor X
+-        X(int x) : X(x, "hello world!")
++        Goink(int x) : Goink(x, "hello world!")
+         {
+         }
+         // #TEST#: R435 Rename constructor X
+-        X(int num, const char *text) : x(num), s(text)
++        Goink(int num, const char *text) : x(num), s(text)
+         {
+         }
+ 
+@@ -720,7 +720,7 @@ void f24()
+         std::string s;
+     };
+     // #TEST#: R436 Rename X
+-    X x;
++    Goink x;
+     require_equal(10, x.x);
+     require_equal(std::string{"hello world!"}, x.s);
  }
- 
- // #TEST#: R434 Rename F38_AUX
--#undef F38_AUX
-+#undef GOINK
- 
- // #TEST#: R435 Rename F39_AUX
- #define F39_AUX(...) f10_aux(__VA_ARGS__)

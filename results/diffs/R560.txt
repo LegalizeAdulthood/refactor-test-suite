@@ -1,22 +1,13 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..745b918 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -502,7 +502,7 @@ struct F6
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..ed7c787 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1074,7 +1074,7 @@ void f37()
+ // #TEST#: R559 Rename stream_ in macro argument list
+ // #TEST#: R560 Rename stream_ in macro expansion text
+ // #TEST#: R561 Rename not available for __VA_ARGS__ in macro expansion text
+-#define F38_AUX(stream_, ...) f10_aux(stream_, __VA_ARGS__)
++#define F38_AUX(goink_, ...) f10_aux(goink_, __VA_ARGS__)
+ 
+ void f38()
  {
-     // #TEST#: R560 Rename T
-     // #TEST#: R561 Rename U
--    template <typename T, typename U>
-+    template <typename Goink, typename U>
-     // #TEST#: R562 (deprecated)
-     // #TEST#: R563 Rename f
-     // #TEST#: R564 Rename T parameter x type
-@@ -511,7 +511,7 @@ struct F6
-     // #TEST#: R567 Rename y parameter
-     // #TEST#: R568 Rename x in decltype expression
-     // #TEST#: R569 Rename y in decltype expression
--    auto f(T x, U y) -> decltype(x + y)
-+    auto f(Goink x, U y) -> decltype(x + y)
-     {
-         // #TEST#: R570 Rename count
-         ++count;

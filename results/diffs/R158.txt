@@ -1,29 +1,22 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..12b3cb6 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -215,13 +215,13 @@ void f10()
- // #TEST#: R156 Rename Args
- template <typename... Args>
- // #TEST#: R157 Rename X
--class X
-+class Goink
- {
- public:
-     // #TEST#: R158 Rename X
-     // #TEST#: R159 Rename Args
-     // #TEST#: R160 Rename args
--    X(Args... args)
-+    Goink(Args... args)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..23de926 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -522,7 +522,7 @@ struct F6
+ 
+     // #TEST#: R157 Rename T
+     // #TEST#: R158 Rename U
+-    template <typename T, typename U>
++    template <typename T, typename Goink>
+     // #TEST#: R159 Rename g
+     // #TEST#: R160 Rename T in decltype expression
+     // #TEST#: R161 Rename U in decltype expression
+@@ -530,7 +530,7 @@ struct F6
+     // #TEST#: R163 Rename x parameter
+     // #TEST#: R164 Rename U parameter y type
+     // #TEST#: R165 Rename y parameter
+-    decltype(T() + U()) g(T x, U y)
++    decltype(T() + Goink()) g(T x, Goink y)
      {
-         std::ostringstream result;
-         // #TEST#: R161 Rename args
-@@ -241,7 +241,7 @@ private:
- void f11()
- {
-     // #TEST#: R162 Rename X
--    X<int, double, std::string> x{10, 20.5, "hello world!"};
-+    Goink<int, double, std::string> x{10, 20.5, "hello world!"};
-     require_equal(std::string{"10\n"
-                               "20.5\n"
-                               "hello world!\n"},
+         // #TEST#: R166 Rename count
+         ++count;

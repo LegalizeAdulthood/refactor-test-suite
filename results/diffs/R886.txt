@@ -1,17 +1,54 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index b319d77..fc67156 100644
+index 22e707f..37cc3f8 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -171,10 +171,10 @@ void f3()
-         // #TEST#: R885 Rename function sink
-         // #TEST#: R886 Rename local variable i
-         // #TEST#: R887 Rename use of v
--        for (sink(sum); const int i : v)
-+        for (sink(sum); const int goink : v)
-         {
-             // #TEST#: R888 Rename use of i
--            sum += i;
-+            sum += goink;
-         }
-         REQUIRE_EQUAL(1 + 2 + 3 + 4 + 5, sum);
+@@ -105,7 +105,7 @@ void f2()
+         // #TEST#: R881 Rename use of x
+         REQUIRE_EQUAL(10, p.x);
+         // #TEST#: R882 Rename use of y
+-        REQUIRE_EQUAL(0, p.y);
++        REQUIRE_EQUAL(0, p.goink);
+         // #TEST#: R883 Rename use of z
+         REQUIRE_EQUAL(0, p.z);
      }
+@@ -113,11 +113,11 @@ void f2()
+         // #TEST#: R884 Rename use of Point
+         // #TEST#: R885 Rename local variable p
+         // #TEST#: R886 Rename use of y
+-        Point p{.y = 10};
++        Point p{.goink = 10};
+         // #TEST#: R887 Rename use of x
+         REQUIRE_EQUAL(0, p.x);
+         // #TEST#: R888 Rename use of y
+-        REQUIRE_EQUAL(10, p.y);
++        REQUIRE_EQUAL(10, p.goink);
+         // #TEST#: R889 Rename use of z
+         REQUIRE_EQUAL(0, p.z);
+     }
+@@ -125,11 +125,11 @@ void f2()
+         // #TEST#: R890 Rename use of Point
+         // #TEST#: R891 Rename local variable p
+         // #TEST#: R892 Rename use of x
+-        Point p{.x = 20, .y = 10};
++        Point p{.x = 20, .goink = 10};
+         // #TEST#: R894 Rename use of x
+         REQUIRE_EQUAL(20, p.x);
+         // #TEST#: R895 Rename use of y
+-        REQUIRE_EQUAL(10, p.y);
++        REQUIRE_EQUAL(10, p.goink);
+         // #TEST#: R896 Rename use of z
+         REQUIRE_EQUAL(0, p.z);
+     }
+diff --git a/RefactorTest/RenameCpp20.h b/RefactorTest/RenameCpp20.h
+index 7a5d5d9..03e1686 100644
+--- a/RefactorTest/RenameCpp20.h
++++ b/RefactorTest/RenameCpp20.h
+@@ -13,7 +13,7 @@ struct Point
+     // #TEST#: R858 Rename member x
+     int x;
+     // #TEST#: R859 Rename member y
+-    int y;
++    int goink;
+     // #TEST#: R860 Rename member z
+     int z;
+ };

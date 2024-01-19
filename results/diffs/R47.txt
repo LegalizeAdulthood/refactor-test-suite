@@ -1,71 +1,21 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..d6b391c 100644
+index d1c1283..972820d 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -17,7 +17,7 @@
- // #TEST#: R26 Rename this macro
- #define MACRO_ONE_ARG(x_) (2.0f * x_)
- 
--class Operations
-+class Goink
+@@ -251,14 +251,14 @@ using namespace RenameNamespace;
+ namespace
  {
- public:
-     int Operation1()
-@@ -152,19 +152,19 @@ struct SU
- // #TEST#: R39 Rename class Operations
- // #TEST#: R40 Rename function GetOperation
- // #TEST#: R41 Rename parameter flag
--static int (Operations::*GetOperation(bool flag))()
-+static int (Goink::*GetOperation(bool flag))()
+ // #TEST#: R46 Rename T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R47 Rename T return type
+ // #TEST#: R48 Rename f1_aux
+ // #TEST#: R49 Rename T first parameter type
+ // #TEST#: R50 Rename value
+ // #TEST#: R51 Rename T second parameter type
+ // #TEST#: R52 Rename x
+-T f1_aux(T value, T x = 1)
++Goink f1_aux(Goink value, Goink x = 1)
  {
-     // #TEST#: R42 Rename class Operations
-     // #TEST#: R43 Rename variable result
-     // #TEST#: R44 Rename member Operation1
--    int (Operations::*result)() = &Operations::Operation1;
-+    int (Goink::*result)() = &Goink::Operation1;
-     // #TEST#: R45 Rename variable flag
-     if (flag)
-     {
-         // #TEST#: R46 Rename variable result
-         // #TEST#: R47 Rename class Operations
-         // #TEST#: R48 Rename method Operation2
--        result = &Operations::Operation2;
-+        result = &Goink::Operation2;
-     }
-     // #TEST#: R49 Rename variable result
-     return result;
-@@ -681,21 +681,21 @@ void TestRename()
-     // #TEST#: R50 Rename class Operations
-     // #TEST#: R51 Rename variable member
-     // #TEST#: R52 Rename function GetOperation
--    int (Operations::*member)() = GetOperation(true);
-+    int (Goink::*member)() = GetOperation(true);
-     // #TEST#: R53 Rename variable member
-     // #TEST#: R54 Rename class Operations
-     // #TEST#: R55 Rename method Operation2
--    member = &Operations::Operation2;
-+    member = &Goink::Operation2;
- 
-     // #TEST#: R59 Rename class Operations
-     // #TEST#: R60 Rename variable ops
--    Operations ops;
-+    Goink ops;
-     // #TEST#: R61 Rename variable ops
-     // #TEST#: R62 Rename variable member
-     (ops.*member)();
- 
-     // #TEST#: R63 Rename variable ops2
--    Operations *ops2 = new Operations();
-+    Goink *ops2 = new Goink();
-     // #TEST#: R64 Rename variable ops2
-     // #TEST#: R65 Rename variable member
-     (ops2->*member)();
-@@ -703,7 +703,7 @@ void TestRename()
-     delete ops2;
- 
-     // #TEST#: R67 Rename variable ops3
--    Operations &ops3 = ops;
-+    Goink &ops3 = ops;
-     // #TEST#: R68 Rename variable ops3
-     // #TEST#: R69 Rename variable member
-     ((&ops3)->*member)();
+     // #TEST#: R53 Rename value
+     // #TEST#: R54 Rename x

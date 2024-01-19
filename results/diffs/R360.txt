@@ -1,27 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..8f0409c 100644
+index 96b65ff..abc85aa 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -900,18 +900,18 @@ void f29()
-     // #TEST#: R353 Rename x in decltype argument
-     // #TEST#: R354 Rename y
-     // #TEST#: R355 Rename x in initializing expression
--    decltype(x) y = x;
-+    decltype(x) goink = x;
-     // #TEST#: R356 Rename y
--    require_equal(3, y);
-+    require_equal(3, goink);
-     // #TEST#: R357 Rename y
-     // #TEST#: R358 Rename x
--    require_equal(true, std::is_same<decltype(y), decltype(x)>::value);
-+    require_equal(true, std::is_same<decltype(goink), decltype(x)>::value);
-     // #TEST#: R359 Rename first x in expression
-     // #TEST#: R360 Rename first y in expression
-     // #TEST#: R361 Rename second x in expression
-     // #TEST#: R362 Rename second y in expression
-     // #TEST#: R363 Rename z
--    decltype(x + y - x - y) z = 10;
-+    decltype(x + goink - x - goink) z = 10;
-     // #TEST#: R364 Rename z
-     require_equal(10, z);
- }
+@@ -264,7 +264,7 @@ void f12()
+ // #TEST#: R315 Rename text
+ template <char... text>
+ // #TEST#: R316 Rename xull
+-unsigned long long operator""_xull()
++unsigned long long operator""_goink()
+ {
+     unsigned long long value = 0;
+     // #TEST#: R317 Rename text
+@@ -443,7 +443,7 @@ std::basic_string<char32_t> operator""_xs4(const char32_t *text, std::size_t len
+ void f13()
+ {
+     // #TEST#: R360 Rename xull
+-    require_equal(555ULL, 555_xull);
++    require_equal(555ULL, 555_goink);
+     // #TEST#: R361 Rename xull2
+     require_equal(666ULL, 666_xull2);
+     // #TEST#: R362 Rename xd

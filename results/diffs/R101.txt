@@ -1,22 +1,37 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..05d7bd6 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -14,7 +14,7 @@ namespace
- // #TEST#: R104 Rename flag used in static_assert
- constexpr bool flag = true;
- // #TEST#: R105 Rename flag used in static_assert
--constexpr bool flag2 = false;
-+constexpr bool goink = false;
- // #TEST#: R106 Rename flag used in noexcept specification
- constexpr bool flag3 = true;
- // #TEST#: R107 Rename flag used in noexcept specification
-@@ -23,7 +23,7 @@ constexpr bool flag4 = false;
- // #TEST#: R100 Rename flag in static_assert
- static_assert(flag, "Flag is false");
- // #TEST#: R101 Rename flag2 in static_assert
--static_assert(!flag2, "Flag2 is true");
-+static_assert(!goink, "Flag2 is true");
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..f2576f2 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -363,12 +363,12 @@ void f2()
+ }
  
- // #TEST#: R102 Rename flag3 in noexcept specifier
- void f1() noexcept(flag3)
+ // #TEST#: R86 Rename T3
+-class T3
++class Goink
+ {
+ public:
+     // #TEST#: R87 Rename T3
+     // #TEST#: R88 Rename i3
+-    T3(int i) : i3(i)
++    Goink(int i) : i3(i)
+     {
+     }
+     // #TEST#: R89 Rename i3
+@@ -397,7 +397,7 @@ int f3_aux(T3 t)
+     // #TEST#: R101 Rename T3
+     // #TEST#: R102 Rename t2
+     // #TEST#: R103 Rename i3
+-    ::T3 t2 = ::i3;
++    ::Goink t2 = ::i3;
+     // #TEST#: R104 Rename i3
+     require_equal(3, ::i3);
+     // #TEST#: R105 Rename t2
+@@ -410,7 +410,7 @@ void f3()
+     // #TEST#: R107 Rename f3_aux
+     // #TEST#: R108 Rename T3 template argument
+     // #TEST#: R109 Rename T3 function argument expression
+-    require_equal(3, f3_aux<T3, 1>(T3{2}));
++    require_equal(3, f3_aux<Goink, 1>(Goink{2}));
+ }
+ 
+ // #TEST#: R110 Rename T

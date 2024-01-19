@@ -1,19 +1,54 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index f7afd67..830f289 100644
+index 3d0f364..f2aac81 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -328,12 +328,12 @@ bool allUnaryLeft(Args... args)
+@@ -269,40 +269,40 @@ void f5()
+ 
+ void f6()
+ {
+-    int val{6};
++    int goink{6};
+     // #TEST#: R745 Rename local variable i
+     // #TEST#: R746 Rename use of i
+     // #TEST#: R747 Rename use of val
+-    if (int i = val % 2; i == 0)
++    if (int i = goink % 2; i == 0)
+     {
+         // #TEST#: R748 Rename use of i
+         ++i;
+         // #TEST#: R749 Rename use of i
+-        val = i;
++        goink = i;
+     }
+-    REQUIRE_EQUAL(1, val);
++    REQUIRE_EQUAL(1, goink);
+ 
+     // #TEST#: R750 Rename local variable i
+     // #TEST#: R751 Rename use of i
+-    switch (int i = val % 2; i)
++    switch (int i = goink % 2; i)
+     {
+     case 0:
+         // #TEST#: R752 Rename use of i
+         ++i;
+         // #TEST#: R753 Rename use of i
+-        val = 100 + i;
++        goink = 100 + i;
+         break;
+     case 1:
+         // #TEST#: R754 Rename use of i
+         ++i;
+         // #TEST#: R755 Rename use of i
+-        val = 200 + i;
++        goink = 200 + i;
+         break;
+     default:
+-        val = 0;
++        goink = 0;
+         break;
+     }
+-    REQUIRE_EQUAL(202, val);
++    REQUIRE_EQUAL(202, goink);
  }
  
- // #TEST#: R745 Rename template parameter Args
--template <typename... Args>
-+template <typename... Goink>
- // #TEST#: R746 Rename function allBinaryRight
- // #TEST#: R748 Rename parameter init
- // #TEST#: R747 Rename use of Args
- // #TEST#: R749 Rename parameter args
--bool allBinaryRight(bool init, Args... args)
-+bool allBinaryRight(bool init, Goink... args)
- {
-     // #TEST#: R751 Rename use of args
-     // #TEST#: R750 Rename use of init
+ // #TEST#: R756 Rename template parameter Args

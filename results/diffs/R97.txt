@@ -1,15 +1,16 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..9b6bca2 100644
+index d1c1283..63b1897 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -750,8 +750,8 @@ restart:
-         // #TEST#: R96 Rename variable safe_cast
-         int safe_cast = property + 1;
-         // #TEST#: R97 Rename variable sealed
--        int sealed = safe_cast + 1;
--        int x = sealed + 1;
-+        int goink = safe_cast + 1;
-+        int x = goink + 1;
-         std::string dashes;
-         dashes.append(x, '-');
-         REQUIRE_EQUAL(std::string("-------------"), dashes);
+@@ -389,9 +389,9 @@ int f3_aux(T3 t)
+     // #TEST#: R96 Rename T3
+     // #TEST#: R97 Rename t1
+     // #TEST#: R98 Rename t
+-    T3 t1 = t;
++    T3 goink = t;
+     // #TEST#: R99 Rename i3
+-    require_equal(2, t1.i3);
++    require_equal(2, goink.i3);
+     // #TEST#: R100 Rename i3
+     require_equal(1, i3);
+     // #TEST#: R101 Rename T3

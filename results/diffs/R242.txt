@@ -1,25 +1,16 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..728f8b1 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -531,17 +531,17 @@ void f16()
- }
- 
- // #TEST#: R242 Rename Args
--template <typename... Args>
-+template <typename... Goink>
- struct Initializer
- {
-     // #TEST#: R243 Rename Args
-     // #TEST#: R244 Rename args constructor argument
-     // #TEST#: R245 Rename args initializer
--    Initializer(Args... args) : t(args...)
-+    Initializer(Goink... args) : t(args...)
-     {
-     }
-     // #TEST#: R246 Rename Args
--    std::tuple<Args...> t;
-+    std::tuple<Goink...> t;
- };
- 
- void f17()
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..be78406 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -748,9 +748,9 @@ restart:
+         // #TEST#: R241 Rename variable property
+         int property = pin_ptr + 1;
+         // #TEST#: R242 Rename variable safe_cast
+-        int safe_cast = property + 1;
++        int goink = property + 1;
+         // #TEST#: R243 Rename variable sealed
+-        int sealed = safe_cast + 1;
++        int sealed = goink + 1;
+         int x = sealed + 1;
+         std::string dashes;
+         dashes.append(x, '-');

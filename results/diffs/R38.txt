@@ -1,31 +1,25 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..006bd5e 100644
+index d1c1283..3279d5a 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -115,7 +115,7 @@ public:
- union U
- {
-     int x;
--    float f;
-+    float goink;
-     double d;
-     const char *s;
-     void member(int x_)
-@@ -125,7 +125,7 @@ union U
-     float member() const
-     {
-         // #TEST#: R38 Rename data member f
--        return f;
-+        return goink;
-     }
- };
+@@ -222,16 +222,16 @@ void TestDerived()
+ }    // namespace RenameNamespace
  
-@@ -600,7 +600,7 @@ void TestRename()
- {
-     U u;
-     u.x = 1;
--    u.f = 1.0f;
-+    u.goink = 1.0f;
-     u.d = 1.0;
-     u.s = "Foo";
-     u.member(2);
+ // #TEST#: R37 Rename macro MACRO1
+-#define MACRO1 -20
++#define GOINK -20
+ // #TEST#: R38 Rename macro MACRO1
+-#if defined(MACRO1)
++#if defined(GOINK)
+ // #TEST#: R39 Rename macro MACRO1
+-static int s_macro_value = MACRO1;
++static int s_macro_value = GOINK;
+ #else
+ static int s_macro_value = -20;
+ #endif
+ // #TEST#: R40 Rename macro MACRO1
+-#undef MACRO1
++#undef GOINK
+ 
+ // #TEST#: R41 Rename macro MACRO2
+ #define MACRO2(x_) (-20 * x_)

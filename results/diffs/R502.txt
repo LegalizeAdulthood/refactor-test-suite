@@ -1,37 +1,31 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..f2576f2 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -363,12 +363,12 @@ void f2()
- }
- 
- // #TEST#: R502 Rename T3
--class T3
-+class Goink
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..467cad6 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -896,22 +896,22 @@ void f28()
+ void f29()
  {
- public:
-     // #TEST#: R503 Rename T3
-     // #TEST#: R504 Rename i3
--    T3(int i) : i3(i)
-+    Goink(int i) : i3(i)
-     {
-     }
-     // #TEST#: R505 Rename i3
-@@ -397,7 +397,7 @@ int f3_aux(T3 t)
-     // #TEST#: R517 Rename T3
-     // #TEST#: R518 Rename t2
-     // #TEST#: R519 Rename i3
--    ::T3 t2 = ::i3;
-+    ::Goink t2 = ::i3;
-     // #TEST#: R520 Rename i3
-     require_equal(3, ::i3);
-     // #TEST#: R521 Rename t2
-@@ -410,7 +410,7 @@ void f3()
-     // #TEST#: R523 Rename f3_aux
-     // #TEST#: R524 Rename T3 template argument
-     // #TEST#: R525 Rename T3 function argument expression
--    require_equal(3, f3_aux<T3, 1>(T3{2}));
-+    require_equal(3, f3_aux<Goink, 1>(Goink{2}));
+     // #TEST#: R502 Rename x
+-    int x = 3;
++    int goink = 3;
+     // #TEST#: R503 Rename x in decltype argument
+     // #TEST#: R504 Rename y
+     // #TEST#: R505 Rename x in initializing expression
+-    decltype(x) y = x;
++    decltype(goink) y = goink;
+     // #TEST#: R506 Rename y
+     require_equal(3, y);
+     // #TEST#: R507 Rename y
+     // #TEST#: R508 Rename x
+-    require_equal(true, std::is_same<decltype(y), decltype(x)>::value);
++    require_equal(true, std::is_same<decltype(y), decltype(goink)>::value);
+     // #TEST#: R509 Rename first x in expression
+     // #TEST#: R510 Rename first y in expression
+     // #TEST#: R511 Rename second x in expression
+     // #TEST#: R512 Rename second y in expression
+     // #TEST#: R513 Rename z
+-    decltype(x + y - x - y) z = 10;
++    decltype(goink + y - goink - y) z = 10;
+     // #TEST#: R514 Rename z
+     require_equal(10, z);
  }
- 
- // #TEST#: R526 Rename T

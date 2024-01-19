@@ -1,22 +1,20 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..f4bbcd8 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -433,7 +433,7 @@ std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len
- // #TEST#: R217 Rename xs4
- // #TEST#: R218 Rename text
- // #TEST#: R219 Rename len
--std::basic_string<char32_t> operator""_xs4(const char32_t *text, std::size_t len)
-+std::basic_string<char32_t> operator""_goink(const char32_t *text, std::size_t len)
- {
-     // #TEST#: R220 Rename text
-     // #TEST#: R221 Rename len
-@@ -467,7 +467,7 @@ void f13()
-     // #TEST#: R216 Rename xs3
-     require_equal(std::string{"foo"}, narrow(u"foo"_xs3));
-     // #TEST#: R222 Rename xs4
--    require_equal(std::string{"foo"}, narrow(U"foo"_xs4));
-+    require_equal(std::string{"foo"}, narrow(U"foo"_goink));
- }
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..bc3dd66 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -695,12 +695,12 @@ void TestRename()
+     (ops.*member)();
  
- // #TEST#: R223 Rename Char
+     // #TEST#: R221 Rename variable ops2
+-    Operations *ops2 = new Operations();
++    Operations *goink = new Operations();
+     // #TEST#: R222 Rename variable ops2
+     // #TEST#: R223 Rename variable member
+-    (ops2->*member)();
++    (goink->*member)();
+     // #TEST#: R224 Rename variable ops2
+-    delete ops2;
++    delete goink;
+ 
+     // #TEST#: R225 Rename variable ops3
+     Operations &ops3 = ops;

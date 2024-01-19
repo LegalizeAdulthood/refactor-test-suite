@@ -1,24 +1,41 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..0197c86 100644
+index e73e1db..996d2d5 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1120,16 +1120,16 @@ void f40()
- }
- 
- // #TEST#: R444 Rename F41_AUX
--#define F41_AUX 15
-+#define GOINK 15
- 
- void f41()
+@@ -747,11 +747,11 @@ void f25()
+ void f26()
  {
-     // #TEST#: R445 Rename F41_AUX
--    require_equal(15, [] { return F41_AUX; }());
-+    require_equal(15, [] { return GOINK; }());
- }
+     // #TEST#: R443 Rename x
+-    int x = 10;
++    int goink = 10;
+     // #TEST#: R444 Rename x in lambda parameter list
+     // #TEST#: R445 Rename x in lambda body
+     // #TEST#: R446 Rename x in lambda argument list
+-    require_equal(100, [](int x) { return x * 10; }(x));
++    require_equal(100, [](int x) { return x * 10; }(goink));
  
- // #TEST#: R446 Rename F41_AUX
--#undef F41_AUX
-+#undef GOINK
+     // #TEST#: R447 Rename f
+     double f = 20.5;
+@@ -760,18 +760,18 @@ void f26()
+     // #TEST#: R450 Rename x in lambda body
+     // #TEST#: R451 Rename f in lambda body
+     // #TEST#: R452 Rename x in lambda argument list
+-    require_equal(205.0, [f](int x) { return x * f; }(x));
++    require_equal(205.0, [f](int x) { return x * f; }(goink));
  
- // #TEST#: R447 Rename f42_aux
- void f42_aux(std::ostream &stream, int x)
+     // #TEST#: R453 Rename x in lambda parameter list
+     // #TEST#: R454 Rename x in lambda body
+     // #TEST#: R455 Rename f in lambda body
+     // #TEST#: R456 Rename x in lambda argument list
+-    require_equal(205.0, [=](int x) { return x * f; }(x));
++    require_equal(205.0, [=](int x) { return x * f; }(goink));
+ 
+     // #TEST#: R457 Rename x in lambda capture list
+     // #TEST#: R458 Rename x in lambda body
+-    require_equal(1, [&x] { return x /= 10; }());
+-    require_equal(1, x);
++    require_equal(1, [&goink] { return goink /= 10; }());
++    require_equal(1, goink);
+ 
+     // #TEST#: R459 Rename f in lambda body
+     require_equal(205.0, [&] { return f *= 10.0; }());

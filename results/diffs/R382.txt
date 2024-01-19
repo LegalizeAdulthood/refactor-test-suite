@@ -1,21 +1,17 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..6078994 100644
+index e73e1db..d049511 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -950,13 +950,13 @@ void f31()
- void f32()
- {
-     // #TEST#: R382 Rename Integer
--    using Integer = int;
-+    using Goink = int;
-     // #TEST#: R383 Rename Integer
--    Integer x = 10;
-+    Goink x = 10;
-     require_equal(10, x);
-     // #TEST#: R384 Rename Integral
-     // #TEST#: R385 Rename Integer
--    using Integral = Integer;
-+    using Integral = Goink;
-     // #TEST#: R386 Rename Integral
-     Integral y = 10;
-     require_equal(10, y);
+@@ -505,10 +505,10 @@ void f15()
+     // #TEST#: R382 Rename x
+     // #TEST#: R383 Rename X on rhs
+     // #TEST#: R384 Rename One
+-    X x = X::One;
++    X goink = X::One;
+     // #TEST#: R385 Rename One
+     Y y = Y::One;
+-    require_equal(static_cast<int>(x), static_cast<int>(y));
++    require_equal(static_cast<int>(goink), static_cast<int>(y));
+ }
+ 
+ void f16()

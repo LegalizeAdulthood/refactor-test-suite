@@ -5,12 +5,12 @@ index 2f9380a..6fb76ae 100644
 @@ -58,11 +58,11 @@ void f2()
      {
          using namespace RenameCpp14;
-         // #TEST#: R614 Rename use of pi2
+         // #TEST#: R627 Rename use of pi2
 -        REQUIRE_EQUAL(pi2<float>, circularArea2(1.0f));
 +        REQUIRE_EQUAL(goink<float>, circularArea2(1.0f));
      }
  
-     // #TEST#: R615 Rename use of pi2
+     // #TEST#: R628 Rename use of pi2
 -    REQUIRE_EQUAL(RenameCpp14::pi2<float>, RenameCpp14::circularArea2(1.0f));
 +    REQUIRE_EQUAL(RenameCpp14::goink<float>, RenameCpp14::circularArea2(1.0f));
  }
@@ -21,18 +21,18 @@ index a4197f1..22a0612 100644
 --- a/RefactorTest/RenameCpp14.h
 +++ b/RefactorTest/RenameCpp14.h
 @@ -9,7 +9,7 @@ template <class T>
- // #TEST#: R618 Rename variable template pi2
- // #TEST#: R619 Rename first use of T
- // #TEST#: R962 Rename second use of T
+ // #TEST#: R608 Rename variable template pi2
+ // #TEST#: R609 Rename first use of T
+ // #TEST#: R610 Rename second use of T
 -constexpr T pi2 = T(2.0L) * T(3.1415926535897932385L);
 +constexpr T goink = T(2.0L) * T(3.1415926535897932385L);
  
- // #TEST#: R963 Rename template parameter T
+ // #TEST#: R611 Rename template parameter T
  template <class T>
 @@ -19,7 +19,7 @@ T circularArea2(T r)
  {
-     // #TEST#: R620 Rename use of pi2
-     // #TEST#: R966 Rename use of T
+     // #TEST#: R614 Rename use of pi2
+     // #TEST#: R615 Rename use of T
 -    return pi2<T> * r * r;
 +    return goink<T> * r * r;
  }

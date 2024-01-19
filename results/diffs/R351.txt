@@ -1,16 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..5f1c0c9 100644
+index e73e1db..726930f 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -888,9 +888,9 @@ void f28()
-     x *= 3;
-     // #TEST#: R349 Rename z
-     // #TEST#: R350 Rename x
--    const auto z = x;
-+    const auto goink = x;
-     // #TEST#: R351 Rename z
--    require_equal(9, z);
-+    require_equal(9, goink);
+@@ -423,11 +423,11 @@ std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
+ // #TEST#: R350 Rename xs3
+ // #TEST#: R351 Rename text
+ // #TEST#: R352 Rename len
+-std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len)
++std::basic_string<char16_t> operator""_xs3(const char16_t *goink, std::size_t len)
+ {
+     // #TEST#: R353 Rename text
+     // #TEST#: R354 Rename len
+-    return {text, len};
++    return {goink, len};
  }
  
- void f29()
+ // #TEST#: R355 Rename xs4

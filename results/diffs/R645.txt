@@ -1,19 +1,13 @@
-diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d55964a..fdd1fe0 100644
---- a/RefactorTest/RenameCpp17.cpp
-+++ b/RefactorTest/RenameCpp17.cpp
-@@ -49,12 +49,12 @@ public:
-         // #TEST#: R641 Rename parameter val
-         // #TEST#: R642 Rename use of val
-         // #TEST#: R643 Rename use of m_i
--        auto fn = [*this](int &val) { val = 3 + m_i; };
-+        auto goink = [*this](int &val) { val = 3 + m_i; };
-         // #TEST#: R644 Rename use of m_i
-         m_i = 1;
-         // #TEST#: R645 Rename use of fn
-         // #TEST#: R646 Rename use of m_i
--        fn(m_i);
-+        goink(m_i);
-         // #TEST#: R647 Rename use of m_i
-         return m_i;
-     }
+diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
+index 2f9380a..c8f00a2 100644
+--- a/RefactorTest/RenameCpp14.cpp
++++ b/RefactorTest/RenameCpp14.cpp
+@@ -95,7 +95,7 @@ void f4()
+     // #TEST#: R644 Rename use of i in capture expression
+     // #TEST#: R645 Rename use of val
+     // #TEST#: R646 Rename use of j
+-    auto fn2 = [val = 1, j = i](int k) { return val + j + k; };
++    auto fn2 = [goink = 1, j = i](int k) { return goink + j + k; };
+     // #TEST#: R647 Rename use of fn2
+     REQUIRE_EQUAL(4, fn2(1));
+ }

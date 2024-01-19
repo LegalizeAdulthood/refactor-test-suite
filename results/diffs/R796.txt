@@ -1,52 +1,24 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d7d8359..ffce5cb 100644
+index c346b5d..26cc3cd 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -438,11 +438,11 @@ void f8()
- // #TEST#: R785 Rename template parameter T
- template <typename T>
- // #TEST#: R786 Rename struct Container
--struct Container
-+struct Goink
- {
-     // #TEST#: R787 Rename use of Container
-     // #TEST#: R788 Rename use of T
--    Container(T t) : m_how(1)
-+    Goink(T t) : m_how(1)
-     {
+@@ -411,16 +411,16 @@ void f8()
+         // #TEST#: R795 Rename use of p1
+         delete p1;
+         // #TEST#: R796 Rename local variable name
+-        const char *name{"one"};
++        const char *goink{"one"};
+         // #TEST#: R797 Rename local variable p2
+         // #TEST#: R798 Rename use of f1
+         // #TEST#: R799 Rename use of name
+-        const auto *p2 = new ValueName{f1, std::string_view{name}};
++        const auto *p2 = new ValueName{f1, std::string_view{goink}};
+         // #TEST#: R800 Rename use of p2
+         REQUIRE_EQUAL(1.0f, p2->value);
+         // #TEST#: R801 Rename use of name
+         // #TEST#: R802 Rename use of p2
+-        REQUIRE_EQUAL(std::string_view{name}, p2->name);
++        REQUIRE_EQUAL(std::string_view{goink}, p2->name);
+         // #TEST#: R803 Rename use of p2
+         delete p2;
      }
- 
-@@ -451,7 +451,7 @@ struct Container
-     // #TEST#: R790 Rename use of Container
-     // #TEST#: R791 Rename first use of Iter
-     // #TEST#: R972 Rename second use of Iter
--    Container(Iter begin, Iter end) : m_how(2)
-+    Goink(Iter begin, Iter end) : m_how(2)
-     {
-     }
- 
-@@ -465,13 +465,13 @@ template <typename Iter>
- // #TEST#: R795 Rename second use of Iter
- // #TEST#: R796 Rename second use of Container
- // #TEST#: R797 Rename third use of Iter
--Container(Iter begin, Iter end)->Container<typename std::iterator_traits<Iter>::value_type>;
-+Goink(Iter begin, Iter end)->Goink<typename std::iterator_traits<Iter>::value_type>;
- 
- void f9()
- {
-     // #TEST#: R798 Rename use of Container
-     // #TEST#: R799 Rename local variable c1
--    const Container c1{7};
-+    const Goink c1{7};
-     // #TEST#: R800 Rename use of c1
-     REQUIRE_EQUAL(1, c1.m_how);
-     std::vector vals{1.0f, 2.0f, 3.0f};
-@@ -479,7 +479,7 @@ void f9()
-     // #TEST#: R802 Rename local variable c2
-     // #TEST#: R803 Rename first use of vals
-     // #TEST#: R804 Rename second use of vals
--    const Container c2{vals.begin(), vals.end()};
-+    const Goink c2{vals.begin(), vals.end()};
-     // #TEST#: R805 Rename use of c2
-     REQUIRE_EQUAL(2, c2.m_how);
- }

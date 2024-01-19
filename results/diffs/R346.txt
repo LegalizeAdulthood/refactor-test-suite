@@ -1,29 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..42adb26 100644
+index e73e1db..7ccb72b 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -876,19 +876,19 @@ void f27()
- void f28()
+@@ -413,11 +413,11 @@ std::string narrow(const std::basic_string<T> &wide)
+ // #TEST#: R345 Rename xs2
+ // #TEST#: R346 Rename text
+ // #TEST#: R347 Rename len
+-std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
++std::wstring operator""_xs2(const wchar_t *goink, std::size_t len)
  {
-     // #TEST#: R343 Rename x
--    auto x = 3;
-+    auto goink = 3;
-     // #TEST#: R344 Rename x
--    require_equal(3, x);
-+    require_equal(3, goink);
-     // #TEST#: R345 Rename y
-     // #TEST#: R346 Rename x
--    auto y = 3 * x;
-+    auto y = 3 * goink;
-     // #TEST#: R347 Rename y
-     require_equal(9, y);
-     // #TEST#: R348 Rename x
--    x *= 3;
-+    goink *= 3;
-     // #TEST#: R349 Rename z
-     // #TEST#: R350 Rename x
--    const auto z = x;
-+    const auto z = goink;
-     // #TEST#: R351 Rename z
-     require_equal(9, z);
+     // #TEST#: R348 Rename text
+     // #TEST#: R349 Rename len
+-    return std::wstring(text, len);
++    return std::wstring(goink, len);
  }
+ 
+ // #TEST#: R350 Rename xs3

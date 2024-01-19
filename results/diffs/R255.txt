@@ -1,13 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..230d13a 100644
+index 96b65ff..05d7bd6 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -580,7 +580,7 @@ struct f19_aux
-     {
-         // #TEST#: R254 Rename Args
-         // #TEST#: R255 Rename args
--        apply(Args... args) : t(args...)
-+        apply(Args... goink) : t(goink...)
-         {
-         }
+@@ -14,7 +14,7 @@ namespace
+ // #TEST#: R250 Rename flag used in static_assert
+ constexpr bool flag = true;
+ // #TEST#: R251 Rename flag used in static_assert
+-constexpr bool flag2 = false;
++constexpr bool goink = false;
+ // #TEST#: R252 Rename flag used in noexcept specification
+ constexpr bool flag3 = true;
+ // #TEST#: R253 Rename flag used in noexcept specification
+@@ -23,7 +23,7 @@ constexpr bool flag4 = false;
+ // #TEST#: R254 Rename flag in static_assert
+ static_assert(flag, "Flag is false");
+ // #TEST#: R255 Rename flag2 in static_assert
+-static_assert(!flag2, "Flag2 is true");
++static_assert(!goink, "Flag2 is true");
  
+ // #TEST#: R256 Rename flag3 in noexcept specifier
+ void f1() noexcept(flag3)

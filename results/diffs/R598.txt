@@ -1,20 +1,17 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..5ef8e43 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -583,13 +583,13 @@ void f7()
-     // #TEST#: R598 Rename p
-     // #TEST#: R599 Rename F7Base
-     // #TEST#: R600 Rename x
--    int &p = F7Base::x;
-+    int &goink = F7Base::x;
-     // #TEST#: R601 Rename q
-     // #TEST#: R602 Rename F7Derived
-     // #TEST#: R603 Rename x
-     int &q = F7Derived::x;
-     // #TEST#: R604 Rename p
--    require_equal(7, p);
-+    require_equal(7, goink);
-     // #TEST#: R605 Rename q
-     require_equal(7, q);
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..221a583 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1235,10 +1235,10 @@ void f44()
+ template <typename T>
+ // #TEST#: R597 Rename function g45_aux
+ // #TEST#: R598 Rename parameter x
+-T g45_aux(T &&x)
++T g45_aux(T &&goink)
+ {
+     // #TEST#: R599 Rename parameter x
+-    T y(x);
++    T y(goink);
+     return y;
  }
+ 

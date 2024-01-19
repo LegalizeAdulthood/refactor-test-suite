@@ -1,47 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..7609fcd 100644
+index 96b65ff..554cd84 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -754,19 +754,19 @@ void f26()
-     require_equal(100, [](int x) { return x * 10; }(x));
+@@ -221,11 +221,11 @@ public:
+     // #TEST#: R308 Rename X
+     // #TEST#: R309 Rename Args
+     // #TEST#: R310 Rename args
+-    X(Args... args)
++    X(Args... goink)
+     {
+         std::ostringstream result;
+         // #TEST#: R311 Rename args
+-        f10_aux(result, args...);
++        f10_aux(result, goink...);
+         m_str = result.str();
+     }
  
-     // #TEST#: R297 Rename f
--    double f = 20.5;
-+    double goink = 20.5;
-     // #TEST#: R298 Rename f in lambda capture list
-     // #TEST#: R299 Rename x in lambda parameter list
-     // #TEST#: R300 Rename x in lambda body
-     // #TEST#: R301 Rename f in lambda body
-     // #TEST#: R302 Rename x in lambda argument list
--    require_equal(205.0, [f](int x) { return x * f; }(x));
-+    require_equal(205.0, [goink](int x) { return x * goink; }(x));
- 
-     // #TEST#: R303 Rename x in lambda parameter list
-     // #TEST#: R304 Rename x in lambda body
-     // #TEST#: R305 Rename f in lambda body
-     // #TEST#: R306 Rename x in lambda argument list
--    require_equal(205.0, [=](int x) { return x * f; }(x));
-+    require_equal(205.0, [=](int x) { return x * goink; }(x));
- 
-     // #TEST#: R307 Rename x in lambda capture list
-     // #TEST#: R308 Rename x in lambda body
-@@ -774,15 +774,15 @@ void f26()
-     require_equal(1, x);
- 
-     // #TEST#: R309 Rename f in lambda body
--    require_equal(205.0, [&] { return f *= 10.0; }());
--    require_equal(205.0, f);
-+    require_equal(205.0, [&] { return goink *= 10.0; }());
-+    require_equal(205.0, goink);
- 
-     // #TEST#: R310 Rename l
-     // #TEST#: R311 Rename f in lambda body
--    const auto l = [&] { return f /= 10.0; };
-+    const auto l = [&] { return goink /= 10.0; };
-     // #TEST#: R312 Rename l
-     require_equal(20.5, l());
--    require_equal(20.5, f);
-+    require_equal(20.5, goink);
- 
-     // #TEST#: R313 Rename s
-     const std::string s{"hello world!"};

@@ -1,28 +1,18 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..1de70ac 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -514,20 +514,20 @@ void f15()
- void f16()
- {
-     // #TEST#: R236 Rename j
--    constexpr int j = 6;
-+    constexpr int goink = 6;
-     struct X
-     {
-         // #TEST#: R237 Rename x
-         int x = 3;
-         // #TEST#: R238 Rename y
-         // #TEST#: R239 Rename j
--        int y = j;
-+        int y = goink;
-     };
-     X v;
-     // #TEST#: R240 Rename x
-     require_equal(3, v.x);
-     // #TEST#: R241 Rename y
--    require_equal(j, v.y);
-+    require_equal(goink, v.y);
- }
- 
- // #TEST#: R242 Rename Args
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..8695a20 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -738,11 +738,11 @@ restart:
+         // #TEST#: R235 Rename variable interface
+         int interface = gcnew + 1;
+         // #TEST#: R236 Rename variable internal
+-        int internal = interface + 1;
++        int goink = interface + 1;
+         // #TEST#: R237 (deprecated)
+         // #TEST#: R238 (deprecated)
+         // #TEST#: R239 Rename variable override
+-        int override = internal + 1;
++        int override = goink + 1;
+         // #TEST#: R240 Rename variable pin_ptr
+         int pin_ptr = override + 1;
+         // #TEST#: R241 Rename variable property

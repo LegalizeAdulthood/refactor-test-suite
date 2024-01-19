@@ -1,20 +1,67 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..bc3dd66 100644
+index d1c1283..1fed5cb 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -695,12 +695,12 @@ void TestRename()
-     (ops.*member)();
+@@ -284,7 +284,7 @@ namespace F2Outer
+ namespace F2Inner
+ {
+ // #TEST#: R61 Rename function f2_aux
+-int f2_aux()
++int goink()
+ {
+     return 1;
+ }
+@@ -297,7 +297,7 @@ void f2_aux2()
+     // #TEST#: R62 Rename namespace F2Outer
+     // #TEST#: R63 Rename namespace F2Inner
+     // #TEST#: R64 Rename function f2_aux
+-    require_equal(1, F2Outer::F2Inner::f2_aux());
++    require_equal(1, F2Outer::F2Inner::goink());
+ }
  
-     // #TEST#: R63 Rename variable ops2
--    Operations *ops2 = new Operations();
-+    Operations *goink = new Operations();
-     // #TEST#: R64 Rename variable ops2
-     // #TEST#: R65 Rename variable member
--    (ops2->*member)();
-+    (goink->*member)();
-     // #TEST#: R66 Rename variable ops2
--    delete ops2;
-+    delete goink;
+ void f2_aux3()
+@@ -306,7 +306,7 @@ void f2_aux3()
+     using namespace F2Outer;
+     // #TEST#: R66 Rename namespace F2Inner
+     // #TEST#: R67 Rename function f2_aux
+-    require_equal(1, F2Inner::f2_aux());
++    require_equal(1, F2Inner::goink());
+ }
  
-     // #TEST#: R67 Rename variable ops3
-     Operations &ops3 = ops;
+ void f2_aux4()
+@@ -315,7 +315,7 @@ void f2_aux4()
+     // #TEST#: R69 Rename namespace F2Inner
+     using namespace F2Outer::F2Inner;
+     // #TEST#: R70 Rename function f2_aux
+-    require_equal(1, f2_aux());
++    require_equal(1, goink());
+ }
+ 
+ void f2_aux5()
+@@ -326,7 +326,7 @@ void f2_aux5()
+     // #TEST#: R73 Rename namespace A
+     // #TEST#: R74 Rename namespace F2Inner
+     // #TEST#: R75 Rename function f2_aux
+-    require_equal(1, A::F2Inner::f2_aux());
++    require_equal(1, A::F2Inner::goink());
+ }
+ 
+ void f2_aux6()
+@@ -337,7 +337,7 @@ void f2_aux6()
+     namespace A = F2Outer::F2Inner;
+     // #TEST#: R79 Rename namespace A
+     // #TEST#: R80 Rename function f2_aux
+-    require_equal(1, A::f2_aux());
++    require_equal(1, A::goink());
+ }
+ 
+ void f2_aux7()
+@@ -349,7 +349,7 @@ void f2_aux7()
+     // #TEST#: R84 Rename namespace A
+     using namespace A;
+     // #TEST#: R85 Rename function f2_aux
+-    require_equal(1, f2_aux());
++    require_equal(1, goink());
+ }
+ 
+ void f2()

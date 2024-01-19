@@ -1,22 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..f48fe5e 100644
+index e73e1db..a6a6b09 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1009,7 +1009,7 @@ struct X35
-     }
- 
-     // #TEST#: R399 Rename sz
--    static constexpr int sz = 4;
-+    static constexpr int goink = 4;
- };
- 
- void f35()
-@@ -1019,7 +1019,7 @@ void f35()
-     constexpr std::size_t size = x.size();
-     require_equal(std::size_t{1}, size);
-     // #TEST#: R401 Rename sz static member
--    constexpr int s = X35::sz;
-+    constexpr int s = X35::goink;
-     require_equal(4, s);
+@@ -556,11 +556,11 @@ void f17()
+ template <typename... Args>
+ // #TEST#: R398 Rename Args
+ // #TEST#: R399 Rename args
+-void f18_aux(std::ostream &stream, Args... args)
++void f18_aux(std::ostream &stream, Args... goink)
+ {
+     // #TEST#: R400 Rename Args
+     // #TEST#: R401 Rename args
+-    int ignored[sizeof...(Args)] = {(stream << args << ' ', 0)...};
++    int ignored[sizeof...(Args)] = {(stream << goink << ' ', 0)...};
  }
  
+ void f18()

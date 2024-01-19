@@ -1,20 +1,22 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index 2aa7a68..9aadf6f 100644
+index 2aa7a68..4dcb5a0 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -257,13 +257,13 @@ constexpr const char *f7Init(bool param)
- 
- // #TEST#: R912 Rename variable f7Val
- // #TEST#: R913 Rename function f7Init
--constinit const char *f7Val = f7Init(true);
-+constinit const char *goink = f7Init(true);
- 
- // constinit
- void f7()
- {
-     // #TEST#: R914 Rename use of f7Val
--    REQUIRE_EQUAL(std::string{"constant initializer"}, f7Val);
-+    REQUIRE_EQUAL(std::string{"constant initializer"}, goink);
- }
- 
- // aggregate initialization using parentheses
+@@ -188,7 +188,7 @@ void f4()
+     // #TEST#: R909 Rename template parameter T
+     // #TEST#: R910 Rename use of T
+     // #TEST#: R911 Rename use of N
+-    auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
++    auto goink = []<size_t N, typename T> { return std::array<T, N>{}; };
+     // #TEST#: R912 Rename type alias T
+     using T = int;
+     // #TEST#: R913 Rename local constant N
+@@ -196,7 +196,7 @@ void f4()
+     // #TEST#: R914 Rename use of fn
+     // #TEST#: R915 Rename use of N
+     // #TEST#: R916 Rename use of T
+-    auto vals = fn.operator()<N, T>();
++    auto vals = goink.operator()<N, T>();
+     std::iota(std::begin(vals), std::end(vals), 10);
+     REQUIRE_EQUAL(3, vals.size());
+     REQUIRE_EQUAL(10, vals[0]);

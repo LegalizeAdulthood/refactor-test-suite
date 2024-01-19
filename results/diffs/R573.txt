@@ -1,22 +1,24 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..0dc3323 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -522,7 +522,7 @@ struct F6
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..0197c86 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1120,16 +1120,16 @@ void f40()
+ }
  
-     // #TEST#: R573 Rename T
-     // #TEST#: R574 Rename U
--    template <typename T, typename U>
-+    template <typename Goink, typename U>
-     // #TEST#: R575 Rename g
-     // #TEST#: R576 Rename T in decltype expression
-     // #TEST#: R577 Rename U in decltype expression
-@@ -530,7 +530,7 @@ struct F6
-     // #TEST#: R579 Rename x parameter
-     // #TEST#: R580 Rename U parameter y type
-     // #TEST#: R581 Rename y parameter
--    decltype(T() + U()) g(T x, U y)
-+    decltype(Goink() + U()) g(Goink x, U y)
-     {
-         // #TEST#: R582 Rename count
-         ++count;
+ // #TEST#: R573 Rename F41_AUX
+-#define F41_AUX 15
++#define GOINK 15
+ 
+ void f41()
+ {
+     // #TEST#: R574 Rename F41_AUX
+-    require_equal(15, [] { return F41_AUX; }());
++    require_equal(15, [] { return GOINK; }());
+ }
+ 
+ // #TEST#: R575 Rename F41_AUX
+-#undef F41_AUX
++#undef GOINK
+ 
+ // #TEST#: R576 Rename f42_aux
+ void f42_aux(std::ostream &stream, int x)

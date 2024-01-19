@@ -1,17 +1,45 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..3d15452 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -377,10 +377,10 @@ wchar_t operator""_xc2(wchar_t value)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..a756ebe 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -31,22 +31,22 @@ public:
+ };
  
- // #TEST#: R191 Rename xc3
- // #TEST#: R192 Rename value
--char16_t operator""_xc3(char16_t value)
-+char16_t operator""_xc3(char16_t goink)
+ // #TEST#: R5 Rename this class, but class in Rename2.cpp shouldn't be renamed
+-class Rename1
++class Goink
  {
-     // #TEST#: R193 Rename value
--    return value;
-+    return goink;
- }
+ public:
+     // #TEST#: R6 Rename this class via its c'tor
+-    Rename1() : x()
++    Goink() : x()
+     {
+     }
  
- // #TEST#: R195 Rename xc4
+     // #TEST#: R7 Rename this class via its d'tor
+-    ~Rename1()
++    ~Goink()
+     {
+     }
+ 
+     // #TEST#: R8 Rename this class via typedef
+     // #TEST#: R9 Rename typedef MyClass
+-    typedef Rename1 MyClass;
++    typedef Goink MyClass;
+ 
+     // #TEST#: R10 Rename this method
+     void Operation()
+@@ -616,11 +616,11 @@ void TestRename()
+ 
+     // #TEST#: R191 Rename MyClass
+     // #TEST#: R192 Rename Rename1 from scope qualifier
+-    Rename1::MyClass myClass;
++    Goink::MyClass myClass;
+     myClass.Operation();
+ 
+     // #TEST#: R193 Rename this variable
+-    Rename1 test;
++    Goink test;
+     // #TEST#: R194 Rename this method
+     test.Operation();
+     // #TEST#: R195 Rename this function

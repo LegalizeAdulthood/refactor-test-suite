@@ -1,26 +1,44 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 0c2172a..b1c68bd 100644
+index 4b92e61..c45b6bc 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -103,17 +103,17 @@ void f2()
- void f3()
+@@ -30,7 +30,7 @@ namespace RenameCpp17::A::B::C
  {
-     // #TEST#: R654 Rename local variable initial
--    constexpr int initial{10};
-+    constexpr int goink{10};
-     // #TEST#: R968 Rename use of initial
--    static_assert(10 == initial);
-+    static_assert(10 == goink);
-     // #TEST#: R655 Rename local variable fn
-     // #TEST#: R656 Rename initial in capture list
-     // #TEST#: R657 Rename parameter val
-     // #TEST#: R658 Rename use of initial
-     // #TEST#: R659 Rename use of val
--    constexpr auto fn = [initial](int val) constexpr
-+    constexpr auto fn = [goink](int val) constexpr
+ 
+ // #TEST#: R656 Rename x
+-int x{10};
++int goink{10};
+ 
+ int y{20};
+ int z{30};
+@@ -476,7 +476,7 @@ void f10()
+     // #TEST#: R829 Rename B
+     // #TEST#: R830 Rename C
+     // #TEST#: R831 Rename x
+-    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::x);
++    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::goink);
+ 
      {
--        return initial + val;
-+        return goink + val;
-     };
-     // #TEST#: R969 Rename use of fn
-     static_assert(10 == fn(0));
+         // #TEST#: R832 Rename A
+@@ -484,7 +484,7 @@ void f10()
+         // #TEST#: R834 Rename C
+         using namespace RenameCpp17::A::B::C;
+         // #TEST#: R835 Rename x
+-        REQUIRE_EQUAL(10, x);
++        REQUIRE_EQUAL(10, goink);
+     }
+ }
+ 
+diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
+index 37491e7..6a7134f 100644
+--- a/RefactorTest/RenameCpp17.h
++++ b/RefactorTest/RenameCpp17.h
+@@ -9,7 +9,7 @@ namespace RenameCpp17
+ namespace A::B::C
+ {
+ // #TEST#: R651 Rename x
+-extern int x;
++extern int goink;
+ 
+ extern int y;
+ extern int z;

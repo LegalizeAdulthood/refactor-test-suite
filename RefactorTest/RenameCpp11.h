@@ -4,25 +4,25 @@
 
 namespace RenameCpp11
 {
-// #TEST#: R376 Rename T
+// #TEST#: R244 Rename T
 template <typename T>
-// #TEST#: R377 Rename Extern
+// #TEST#: R245 Rename Extern
 struct Extern
 {
-    // #TEST#: R378 Rename Extern
+    // #TEST#: R246 Rename Extern
     Extern()
     {
     }
-    // #TEST#: R379 Rename Extern
+    // #TEST#: R247 Rename Extern
     Extern(T t) : t(t)
     {
     }
     T t = T();
 };
 
-// #TEST#: R380 Rename Extern
+// #TEST#: R248 Rename Extern
 extern template struct Extern<int>;
-// #TEST#: R381 Rename Extern
+// #TEST#: R249 Rename Extern
 extern template struct Extern<std::string>;
 
 }    // namespace RenameCpp11

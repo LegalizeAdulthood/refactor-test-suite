@@ -1,22 +1,25 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..122e8d0 100644
+index d1c1283..3279d5a 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -152,7 +152,7 @@ struct SU
- // #TEST#: R39 Rename class Operations
- // #TEST#: R40 Rename function GetOperation
- // #TEST#: R41 Rename parameter flag
--static int (Operations::*GetOperation(bool flag))()
-+static int (Operations::*goink(bool flag))()
- {
-     // #TEST#: R42 Rename class Operations
-     // #TEST#: R43 Rename variable result
-@@ -681,7 +681,7 @@ void TestRename()
-     // #TEST#: R50 Rename class Operations
-     // #TEST#: R51 Rename variable member
-     // #TEST#: R52 Rename function GetOperation
--    int (Operations::*member)() = GetOperation(true);
-+    int (Operations::*member)() = goink(true);
-     // #TEST#: R53 Rename variable member
-     // #TEST#: R54 Rename class Operations
-     // #TEST#: R55 Rename method Operation2
+@@ -222,16 +222,16 @@ void TestDerived()
+ }    // namespace RenameNamespace
+ 
+ // #TEST#: R37 Rename macro MACRO1
+-#define MACRO1 -20
++#define GOINK -20
+ // #TEST#: R38 Rename macro MACRO1
+-#if defined(MACRO1)
++#if defined(GOINK)
+ // #TEST#: R39 Rename macro MACRO1
+-static int s_macro_value = MACRO1;
++static int s_macro_value = GOINK;
+ #else
+ static int s_macro_value = -20;
+ #endif
+ // #TEST#: R40 Rename macro MACRO1
+-#undef MACRO1
++#undef GOINK
+ 
+ // #TEST#: R41 Rename macro MACRO2
+ #define MACRO2(x_) (-20 * x_)

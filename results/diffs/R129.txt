@@ -1,67 +1,26 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..caf0cfb 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -93,48 +93,48 @@ void f6()
- void f7()
- {
-     // #TEST#: R121 Rename X
--    struct X
-+    struct Goink
-     {
-         // #TEST#: R122 Rename X via default c'tor
--        X() = default;
-+        Goink() = default;
-         // #TEST#: R123 Rename X via default copy c'tor
-         // #TEST#: R124 Rename X via default copy c'tor argument
--        X(const X &rhs) = default;
-+        Goink(const Goink &rhs) = default;
-         // #TEST#: R125 Rename X via default move c'tor
-         // #TEST#: R126 Rename X via default move c'tor argument
--        X(X &&rhs) = default;
-+        Goink(Goink &&rhs) = default;
-         // #TEST#: R127 Rename X via default d'tor
--        ~X() = default;
-+        ~Goink() = default;
-         // #TEST#: R128 Rename X via default copy assignment return type
-         // #TEST#: R129 Rename X via default copy assignment argument
--        X &operator=(const X &rhs) = default;
-+        Goink &operator=(const Goink &rhs) = default;
-         // #TEST#: R130 Rename X via default move assignment return type
-         // #TEST#: R131 Rename X via default move assignment argument
--        X &operator=(X &&rhs) = default;
-+        Goink &operator=(Goink &&rhs) = default;
- 
-         int x = 1;
-         int y = 2;
-         std::string s = "foo";
-     };
--    const auto check = [](const X &x)
-+    const auto check = [](const Goink &x)
-     {
-         require_equal(1, x.x);
-         require_equal(2, x.y);
-         require_equal(std::string("foo"), x.s);
-     };
--    const X x1;
-+    const Goink x1;
-     check(x1);
--    const X x2(x1);
-+    const Goink x2(x1);
-     check(x2);
--    X x3;
-+    Goink x3;
-     x3.x = -1;
-     x3.y = -2;
-     x3 = x1;
-     check(x3);
--    const X x4{X()};
-+    const Goink x4{Goink()};
-     check(x4);
--    X x5;
--    x5 = X();
-+    Goink x5;
-+    x5 = Goink();
-     check(x5);
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..3284145 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -457,18 +457,18 @@ void f4()
  }
  
+ // #TEST#: R126 Rename T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R127 Rename F5
+ class F5
+ {
+ public:
+     // #TEST#: R128 Rename type
+     // #TEST#: R129 Rename T
+-    using type = T;
++    using type = Goink;
+     // #TEST#: R130 Rename T in declaration
+     // #TEST#: R131 Rename x
+     // #TEST#: R132 Rename T in initializer
+-    T x = T(3);
++    Goink x = Goink(3);
+ };
+ 
+ template <>

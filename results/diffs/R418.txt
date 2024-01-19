@@ -1,31 +1,18 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..135c3e0 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -258,7 +258,7 @@ template <typename T>
- // #TEST#: R420 Rename value
- // #TEST#: R421 Rename T second parameter type
- // #TEST#: R422 Rename x
--T f1_aux(T value, T x = 1)
-+T goink(T value, T x = 1)
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..43d3858 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -642,11 +642,11 @@ void f21_aux(std::ostream &stream, Args... args)
  {
-     // #TEST#: R423 Rename value
-     // #TEST#: R424 Rename x
-@@ -268,13 +268,13 @@ T f1_aux(T value, T x = 1)
- void f1()
- {
-     // #TEST#: R425 Rename f1_aux
--    require_equal(1, f1_aux(0));
-+    require_equal(1, goink(0));
-     // #TEST#: R426 Rename f1_aux
--    require_equal(std::string{"hello world!"}, f1_aux(std::string{"hello "}, std::string{"world!"}));
-+    require_equal(std::string{"hello world!"}, goink(std::string{"hello "}, std::string{"world!"}));
-     // #TEST#: R427 Rename f1_aux
--    require_equal(2.0, f1_aux(1.0));
-+    require_equal(2.0, goink(1.0));
-     // #TEST#: R428 Rename f1_aux
--    require_equal(7.0f, f1_aux<float>(6));
-+    require_equal(7.0f, goink<float>(6));
+     // #TEST#: R417 Rename args
+     // #TEST#: R418 Rename s
+-    [&, args...](std::ostream &s)
++    [&, args...](std::ostream &goink)
+     {
+         // #TEST#: R419 Rename s
+         // #TEST#: R420 Rename args
+-        f10_aux(s, args...);
++        f10_aux(goink, args...);
+         // #TEST#: R421 Rename stream
+     }(stream);
  }
- 
- // #TEST#: R475 Rename namespace F2Outer

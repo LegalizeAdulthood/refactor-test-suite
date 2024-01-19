@@ -1,38 +1,44 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..4c7ecfe 100644
+index 96b65ff..1dec1e7 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -699,20 +699,20 @@ void f23()
- void f24()
+@@ -141,31 +141,31 @@ void f7()
+ void f8()
  {
-     // #TEST#: R280 Rename X
+     // #TEST#: R282 Rename X
 -    struct X
 +    struct Goink
      {
-         // #TEST#: R281 Rename constructor X
-         // #TEST#: R282 Rename delegated constructor X
--        X() : X(10)
-+        Goink() : Goink(10)
-         {
-         }
-         // #TEST#: R283 Rename constructor X
-         // #TEST#: R284 Rename delegated constructor X
--        X(int x) : X(x, "hello world!")
-+        Goink(int x) : Goink(x, "hello world!")
-         {
-         }
-         // #TEST#: R285 Rename constructor X
--        X(int num, const char *text) : x(num), s(text)
-+        Goink(int num, const char *text) : x(num), s(text)
-         {
-         }
+         // #TEST#: R283 Rename X via deleted c'tor
+-        X() = delete;
++        Goink() = delete;
+         // #TEST#: R284 Rename X via deleted copy c'tor
+         // #TEST#: R285 Rename X via deleted copy c'tor argument
+-        X(const X &rhs) = delete;
++        Goink(const Goink &rhs) = delete;
+         // #TEST#: R286 Rename X via deleted move c'tor
+         // #TEST#: R287 Rename X via deleted move c'tor argument
+-        X(X &&rhs) = delete;
++        Goink(Goink &&rhs) = delete;
+         // #TEST#: R288 Rename X via deleted d'tor
+-        ~X() = delete;
++        ~Goink() = delete;
+         // #TEST#: R289 Rename X via deleted copy assignment return type
+         // #TEST#: R290 Rename X via deleted copy assignment argument
+-        X &operator=(const X &rhs) = delete;
++        Goink &operator=(const Goink &rhs) = delete;
+         // #TEST#: R291 Rename X via deleted move assignment return type
+         // #TEST#: R292 Rename X via deleted move assignment argument
+-        X &operator=(X &&rhs) = delete;
++        Goink &operator=(Goink &&rhs) = delete;
  
-@@ -720,7 +720,7 @@ void f24()
-         std::string s;
+         int x = 1;
+         int y = 2;
+         std::string s = "foo";
      };
-     // #TEST#: R286 Rename X
--    X x;
-+    Goink x;
-     require_equal(10, x.x);
-     require_equal(std::string{"hello world!"}, x.s);
+     // #TEST#: R293 Rename X
+-    X *x = nullptr;
++    Goink *x = nullptr;
  }
+ 
+ void f9()

@@ -1,22 +1,30 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..17208b8 100644
+index e73e1db..08ad5ee 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1028,7 +1028,7 @@ inline namespace Inline36
- // #TEST#: R402 Rename x36
- int x36 = 10;
- // #TEST#: R403 Rename d36
--double d36 = 20.5;
-+double goink = 20.5;
- // #TEST#: R404 Rename s36
- std::string s36()
- {
-@@ -1042,7 +1042,7 @@ void f36()
-     // #TEST#: R405 Rename x36
-     require_equal(10, x36);
-     // #TEST#: R406 Rename d36
--    require_equal(20.5, d36);
-+    require_equal(20.5, goink);
-     // #TEST#: R407 Rename s36
-     require_equal(std::string{"hello world!"}, s36());
+@@ -571,21 +571,21 @@ void f18()
  }
+ 
+ // #TEST#: R402 Rename Args
+-template <typename... Args>
++template <typename... Goink>
+ struct f19_aux
+ {
+     // #TEST#: R403 Rename Args
+-    template <Args...>
++    template <Goink...>
+     struct apply
+     {
+         // #TEST#: R404 Rename Args
+         // #TEST#: R405 Rename args
+-        apply(Args... args) : t(args...)
++        apply(Goink... args) : t(args...)
+         {
+         }
+ 
+         // #TEST#: R406 Rename Args
+-        std::tuple<Args...> t;
++        std::tuple<Goink...> t;
+     };
+ };
+ 

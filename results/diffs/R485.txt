@@ -1,66 +1,64 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..feae8b2 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -281,7 +281,7 @@ void f1()
- namespace F2Outer
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..4dd7718 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -819,11 +819,11 @@ void f26()
+ void f27()
  {
- // #TEST#: R476 Rename namespace F2Inner
--namespace F2Inner
-+namespace Goink
- {
- // #TEST#: R477 Rename function f2_aux
- int f2_aux()
-@@ -297,7 +297,7 @@ void f2_aux2()
-     // #TEST#: R478 Rename namespace F2Outer
-     // #TEST#: R479 Rename namespace F2Inner
-     // #TEST#: R480 Rename function f2_aux
--    require_equal(1, F2Outer::F2Inner::f2_aux());
-+    require_equal(1, F2Outer::Goink::f2_aux());
- }
+     // #TEST#: R477 Rename v
+-    std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
++    std::vector<int> goink{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+     std::ostringstream result;
+     // #TEST#: R478 Rename i
+     // #TEST#: R479 Rename v
+-    for (int i : v)
++    for (int i : goink)
+     {
+         // #TEST#: R480 Rename i
+         result << i << '\n';
+@@ -832,19 +832,19 @@ void f27()
  
- void f2_aux3()
-@@ -306,14 +306,14 @@ void f2_aux3()
-     using namespace F2Outer;
-     // #TEST#: R482 Rename namespace F2Inner
-     // #TEST#: R483 Rename function f2_aux
--    require_equal(1, F2Inner::f2_aux());
-+    require_equal(1, Goink::f2_aux());
- }
+     // #TEST#: R481 Rename i
+     // #TEST#: R482 Rename v
+-    for (int &i : v)
++    for (int &i : goink)
+     {
+         // #TEST#: R483 Rename i
+         i *= 10;
+     }
+     result.str("");
+-    std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });
++    std::for_each(goink.begin(), goink.end(), [&result](int i) { result << i << '\n'; });
+     require_equal(std::string{"10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n"}, result.str());
  
- void f2_aux4()
- {
-     // #TEST#: R484 Rename namespace F2Outer
-     // #TEST#: R485 Rename namespace F2Inner
--    using namespace F2Outer::F2Inner;
-+    using namespace F2Outer::Goink;
-     // #TEST#: R486 Rename function f2_aux
-     require_equal(1, f2_aux());
- }
-@@ -326,7 +326,7 @@ void f2_aux5()
-     // #TEST#: R489 Rename namespace A
-     // #TEST#: R490 Rename namespace F2Inner
-     // #TEST#: R491 Rename function f2_aux
--    require_equal(1, A::F2Inner::f2_aux());
-+    require_equal(1, A::Goink::f2_aux());
- }
+     result.str("");
+     // #TEST#: R484 Rename i
+     // #TEST#: R485 Rename v
+-    for (auto i : v)
++    for (auto i : goink)
+     {
+         // #TEST#: R486 Rename i
+         result << i << '\n';
+@@ -853,19 +853,19 @@ void f27()
  
- void f2_aux6()
-@@ -334,7 +334,7 @@ void f2_aux6()
-     // #TEST#: R492 Rename namespace A
-     // #TEST#: R493 Rename namespace F2Outer
-     // #TEST#: R494 Rename namespace F2Inner
--    namespace A = F2Outer::F2Inner;
-+    namespace A = F2Outer::Goink;
-     // #TEST#: R495 Rename namespace A
-     // #TEST#: R496 Rename function f2_aux
-     require_equal(1, A::f2_aux());
-@@ -345,7 +345,7 @@ void f2_aux7()
-     // #TEST#: R497 Rename namespace A
-     // #TEST#: R498 Rename namespace F2Outer
-     // #TEST#: R499 Rename namespace F2Inner
--    namespace A = F2Outer::F2Inner;
-+    namespace A = F2Outer::Goink;
-     // #TEST#: R500 Rename namespace A
-     using namespace A;
-     // #TEST#: R501 Rename function f2_aux
+     // #TEST#: R487 Rename i
+     // #TEST#: R488 Rename v
+-    for (auto &i : v)
++    for (auto &i : goink)
+     {
+         // #TEST#: R489 Rename i
+         i /= 10;
+     }
+     result.str("");
+-    std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });
++    std::for_each(goink.begin(), goink.end(), [&result](int i) { result << i << '\n'; });
+     require_equal(std::string{"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"}, result.str());
+ 
+     result.str("");
+     // #TEST#: R490 Rename i
+     // #TEST#: R491 Rename v
+-    for (const auto i : v)
++    for (const auto i : goink)
+     {
+         // #TEST#: R492 Rename i
+         result << i << '\n';

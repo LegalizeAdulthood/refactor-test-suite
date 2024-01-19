@@ -1,22 +1,41 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..cc087ce 100644
+index e73e1db..996d2d5 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1194,7 +1194,7 @@ void f44()
-         // #TEST#: R457 Rename method set
-         // #TEST#: R458 Rename parameter s
-         // #TEST#: R459 Rename parameter s in method body
--        void set(std::string &&s)
-+        void goink(std::string &&s)
-         {
-             m_s = s + " rvalue";
-         }
-@@ -1211,7 +1211,7 @@ void f44()
-     require_equal(std::string{"meh lvalue"}, xx.s());
+@@ -747,11 +747,11 @@ void f25()
+ void f26()
+ {
+     // #TEST#: R443 Rename x
+-    int x = 10;
++    int goink = 10;
+     // #TEST#: R444 Rename x in lambda parameter list
+     // #TEST#: R445 Rename x in lambda body
+     // #TEST#: R446 Rename x in lambda argument list
+-    require_equal(100, [](int x) { return x * 10; }(x));
++    require_equal(100, [](int x) { return x * 10; }(goink));
  
-     // #TEST#: R461 Rename method set
--    x.set(std::string{"bar"});
-+    x.goink(std::string{"bar"});
-     require_equal(std::string{"bar rvalue"}, x.s());
+     // #TEST#: R447 Rename f
+     double f = 20.5;
+@@ -760,18 +760,18 @@ void f26()
+     // #TEST#: R450 Rename x in lambda body
+     // #TEST#: R451 Rename f in lambda body
+     // #TEST#: R452 Rename x in lambda argument list
+-    require_equal(205.0, [f](int x) { return x * f; }(x));
++    require_equal(205.0, [f](int x) { return x * f; }(goink));
  
-     std::string s2{"meh"};
+     // #TEST#: R453 Rename x in lambda parameter list
+     // #TEST#: R454 Rename x in lambda body
+     // #TEST#: R455 Rename f in lambda body
+     // #TEST#: R456 Rename x in lambda argument list
+-    require_equal(205.0, [=](int x) { return x * f; }(x));
++    require_equal(205.0, [=](int x) { return x * f; }(goink));
+ 
+     // #TEST#: R457 Rename x in lambda capture list
+     // #TEST#: R458 Rename x in lambda body
+-    require_equal(1, [&x] { return x /= 10; }());
+-    require_equal(1, x);
++    require_equal(1, [&goink] { return goink /= 10; }());
++    require_equal(1, goink);
+ 
+     // #TEST#: R459 Rename f in lambda body
+     require_equal(205.0, [&] { return f *= 10.0; }());

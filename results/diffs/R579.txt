@@ -1,20 +1,22 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..7412cdd 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -530,13 +530,13 @@ struct F6
-     // #TEST#: R579 Rename x parameter
-     // #TEST#: R580 Rename U parameter y type
-     // #TEST#: R581 Rename y parameter
--    decltype(T() + U()) g(T x, U y)
-+    decltype(T() + U()) g(T goink, U y)
-     {
-         // #TEST#: R582 Rename count
-         ++count;
-         // #TEST#: R583 Rename x
-         // #TEST#: R584 Rename y
--        return x + y;
-+        return goink + y;
-     }
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..cbcd0cf 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1147,7 +1147,7 @@ void f42()
  
-     // #TEST#: R585 Rename count
+ template <typename T>
+ // #TEST#: R578 Rename f43_aux
+-void f43_aux(std::ostream &stream, T value)
++void goink(std::ostream &stream, T value)
+ {
+     stream << value << '\n';
+ }
+@@ -1156,7 +1156,7 @@ void f43()
+ {
+     std::ostringstream result;
+     // #TEST#: R579 Rename f43_aux
+-    [&result](int value) { f43_aux(result, value); }(10);
++    [&result](int value) { goink(result, value); }(10);
+     require_equal(std::string{"10\n"}, result.str());
+ }
+ 

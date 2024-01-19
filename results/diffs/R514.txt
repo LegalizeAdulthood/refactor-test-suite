@@ -1,19 +1,16 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..a4bb784 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -384,12 +384,12 @@ template <class T3, int i3>
- // #TEST#: R509 Rename f3_aux
- // #TEST#: R510 Rename T3
- // #TEST#: R511 Rename t
--int f3_aux(T3 t)
-+int f3_aux(T3 goink)
- {
-     // #TEST#: R512 Rename T3
-     // #TEST#: R513 Rename t1
-     // #TEST#: R514 Rename t
--    T3 t1 = t;
-+    T3 t1 = goink;
-     // #TEST#: R515 Rename i3
-     require_equal(2, t1.i3);
-     // #TEST#: R516 Rename i3
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..9dbf459 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -911,9 +911,9 @@ void f29()
+     // #TEST#: R511 Rename second x in expression
+     // #TEST#: R512 Rename second y in expression
+     // #TEST#: R513 Rename z
+-    decltype(x + y - x - y) z = 10;
++    decltype(x + y - x - y) goink = 10;
+     // #TEST#: R514 Rename z
+-    require_equal(10, z);
++    require_equal(10, goink);
+ }
+ 
+ void f30()

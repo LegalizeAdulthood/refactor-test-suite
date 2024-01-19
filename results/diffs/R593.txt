@@ -1,33 +1,22 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..355d0b2 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -565,12 +565,12 @@ void f6()
- struct F7Base
- {
-     // #TEST#: R593 Rename x
--    static int x;
-+    static int goink;
- };
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..2c137e3 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1223,13 +1223,13 @@ void f44()
+     require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.s());
  
- // #TEST#: R594 Rename F7Base
- // #TEST#: R595 Rename x
--int F7Base::x = 7;
-+int F7Base::goink = 7;
+     // #TEST#: R593 Rename variable x2
+-    std::string &&x2 = std::string{"hello"} + ' ' + std::string{"world!"};
++    std::string &&goink = std::string{"hello"} + ' ' + std::string{"world!"};
+     // #TEST#: R594 Rename variable x2
+-    require_equal(std::string{"hello world!"}, x2);
++    require_equal(std::string{"hello world!"}, goink);
+     // #TEST#: R595 Rename variable x2
+-    x2 += "  goodbye!";
++    goink += "  goodbye!";
+     // #TEST#: R596 Rename variable x2
+-    require_equal(std::string{"hello world!  goodbye!"}, x2);
++    require_equal(std::string{"hello world!  goodbye!"}, goink);
+ }
  
- // #TEST#: R596 Rename F7Derived
- // #TEST#: R597 Rename F7Base
-@@ -583,11 +583,11 @@ void f7()
-     // #TEST#: R598 Rename p
-     // #TEST#: R599 Rename F7Base
-     // #TEST#: R600 Rename x
--    int &p = F7Base::x;
-+    int &p = F7Base::goink;
-     // #TEST#: R601 Rename q
-     // #TEST#: R602 Rename F7Derived
-     // #TEST#: R603 Rename x
--    int &q = F7Derived::x;
-+    int &q = F7Derived::goink;
-     // #TEST#: R604 Rename p
-     require_equal(7, p);
-     // #TEST#: R605 Rename q
+ template <typename T>

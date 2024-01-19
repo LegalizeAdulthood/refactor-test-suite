@@ -1,22 +1,13 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index 2aa7a68..17101a6 100644
+index 2aa7a68..e7edb3d 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -231,7 +231,7 @@ void f5()
- 
- // #TEST#: R907 Rename function sqr
- // #TEST#: R908 Rename parameter n
--consteval int sqr(int n)
-+consteval int goink(int n)
- {
-     // #TEST#: R909 Rename first use of n
-     // #TEST#: R910 Rename second use of n
-@@ -242,7 +242,7 @@ consteval int sqr(int n)
- void f6()
- {
-     // #TEST#: R911 Rename use of sqr
--    REQUIRE_EQUAL(4, sqr(2));
-+    REQUIRE_EQUAL(4, goink(2));
- }
- 
- const char *f7DynamicInit()
+@@ -188,7 +188,7 @@ void f4()
+     // #TEST#: R909 Rename template parameter T
+     // #TEST#: R910 Rename use of T
+     // #TEST#: R911 Rename use of N
+-    auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
++    auto fn = []<size_t Goink, typename T> { return std::array<T, Goink>{}; };
+     // #TEST#: R912 Rename type alias T
+     using T = int;
+     // #TEST#: R913 Rename local constant N

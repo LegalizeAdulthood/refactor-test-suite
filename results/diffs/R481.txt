@@ -1,65 +1,17 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..212785f 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -278,7 +278,7 @@ void f1()
- }
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..3133fa8 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -832,10 +832,10 @@ void f27()
  
- // #TEST#: R475 Rename namespace F2Outer
--namespace F2Outer
-+namespace Goink
- {
- // #TEST#: R476 Rename namespace F2Inner
- namespace F2Inner
-@@ -297,13 +297,13 @@ void f2_aux2()
-     // #TEST#: R478 Rename namespace F2Outer
-     // #TEST#: R479 Rename namespace F2Inner
-     // #TEST#: R480 Rename function f2_aux
--    require_equal(1, F2Outer::F2Inner::f2_aux());
-+    require_equal(1, Goink::F2Inner::f2_aux());
- }
- 
- void f2_aux3()
- {
-     // #TEST#: R481 Rename namespace F2Outer
--    using namespace F2Outer;
-+    using namespace Goink;
-     // #TEST#: R482 Rename namespace F2Inner
-     // #TEST#: R483 Rename function f2_aux
-     require_equal(1, F2Inner::f2_aux());
-@@ -313,7 +313,7 @@ void f2_aux4()
- {
-     // #TEST#: R484 Rename namespace F2Outer
-     // #TEST#: R485 Rename namespace F2Inner
--    using namespace F2Outer::F2Inner;
-+    using namespace Goink::F2Inner;
-     // #TEST#: R486 Rename function f2_aux
-     require_equal(1, f2_aux());
- }
-@@ -322,7 +322,7 @@ void f2_aux5()
- {
-     // #TEST#: R487 Rename namespace A
-     // #TEST#: R488 Rename namespace F2Outer
--    namespace A = F2Outer;
-+    namespace A = Goink;
-     // #TEST#: R489 Rename namespace A
-     // #TEST#: R490 Rename namespace F2Inner
-     // #TEST#: R491 Rename function f2_aux
-@@ -334,7 +334,7 @@ void f2_aux6()
-     // #TEST#: R492 Rename namespace A
-     // #TEST#: R493 Rename namespace F2Outer
-     // #TEST#: R494 Rename namespace F2Inner
--    namespace A = F2Outer::F2Inner;
-+    namespace A = Goink::F2Inner;
-     // #TEST#: R495 Rename namespace A
-     // #TEST#: R496 Rename function f2_aux
-     require_equal(1, A::f2_aux());
-@@ -345,7 +345,7 @@ void f2_aux7()
-     // #TEST#: R497 Rename namespace A
-     // #TEST#: R498 Rename namespace F2Outer
-     // #TEST#: R499 Rename namespace F2Inner
--    namespace A = F2Outer::F2Inner;
-+    namespace A = Goink::F2Inner;
-     // #TEST#: R500 Rename namespace A
-     using namespace A;
-     // #TEST#: R501 Rename function f2_aux
+     // #TEST#: R481 Rename i
+     // #TEST#: R482 Rename v
+-    for (int &i : v)
++    for (int &goink : v)
+     {
+         // #TEST#: R483 Rename i
+-        i *= 10;
++        goink *= 10;
+     }
+     result.str("");
+     std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });

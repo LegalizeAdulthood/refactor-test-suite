@@ -1,21 +1,18 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..972820d 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -251,14 +251,14 @@ using namespace RenameNamespace;
- namespace
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..43d3858 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -642,11 +642,11 @@ void f21_aux(std::ostream &stream, Args... args)
  {
- // #TEST#: R416 Rename T
--template <typename T>
-+template <typename Goink>
- // #TEST#: R417 Rename T return type
- // #TEST#: R418 Rename f1_aux
- // #TEST#: R419 Rename T first parameter type
- // #TEST#: R420 Rename value
- // #TEST#: R421 Rename T second parameter type
- // #TEST#: R422 Rename x
--T f1_aux(T value, T x = 1)
-+Goink f1_aux(Goink value, Goink x = 1)
- {
-     // #TEST#: R423 Rename value
-     // #TEST#: R424 Rename x
+     // #TEST#: R417 Rename args
+     // #TEST#: R418 Rename s
+-    [&, args...](std::ostream &s)
++    [&, args...](std::ostream &goink)
+     {
+         // #TEST#: R419 Rename s
+         // #TEST#: R420 Rename args
+-        f10_aux(s, args...);
++        f10_aux(goink, args...);
+         // #TEST#: R421 Rename stream
+     }(stream);
+ }

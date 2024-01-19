@@ -1,26 +1,22 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..3284145 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -457,18 +457,18 @@ void f4()
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..6a33ee5 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1030,7 +1030,7 @@ int x36 = 10;
+ // #TEST#: R545 Rename d36
+ double d36 = 20.5;
+ // #TEST#: R546 Rename s36
+-std::string s36()
++std::string goink()
+ {
+     return "hello world!";
+ }
+@@ -1044,7 +1044,7 @@ void f36()
+     // #TEST#: R548 Rename d36
+     require_equal(20.5, d36);
+     // #TEST#: R549 Rename s36
+-    require_equal(std::string{"hello world!"}, s36());
++    require_equal(std::string{"hello world!"}, goink());
  }
  
- // #TEST#: R542 Rename T
--template <typename T>
-+template <typename Goink>
- // #TEST#: R543 Rename F5
- class F5
- {
- public:
-     // #TEST#: R544 Rename type
-     // #TEST#: R545 Rename T
--    using type = T;
-+    using type = Goink;
-     // #TEST#: R546 Rename T in declaration
-     // #TEST#: R547 Rename x
-     // #TEST#: R548 Rename T in initializer
--    T x = T(3);
-+    Goink x = Goink(3);
- };
- 
- template <>
+ void f37()

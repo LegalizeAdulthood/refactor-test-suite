@@ -1,19 +1,44 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index 2aa7a68..b7ec7c1 100644
+index b319d77..b5e0618 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -206,12 +206,12 @@ void f4()
+@@ -107,7 +107,7 @@ void f2()
+         // #TEST#: R882 Rename use of y
+         REQUIRE_EQUAL(0, p.y);
+         // #TEST#: R883 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+     {
+         // #TEST#: R884 Rename use of Point
+@@ -119,7 +119,7 @@ void f2()
+         // #TEST#: R888 Rename use of y
+         REQUIRE_EQUAL(10, p.y);
+         // #TEST#: R889 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+     {
+         // #TEST#: R890 Rename use of Point
+@@ -132,7 +132,7 @@ void f2()
+         // #TEST#: R895 Rename use of y
+         REQUIRE_EQUAL(10, p.y);
+         // #TEST#: R896 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+ }
  
- // #TEST#: R895 Template parameter T
- // #TEST#: R896 Template parameter Args
--template <typename T, typename... Args>
-+template <typename T, typename... Goink>
- // #TEST#: R897 Rename first use of T
- // #TEST#: R898 Rename second use of T
- // #TEST#: R899 Rename use of Args
- // #TEST#: R900 Rename parameter args
--T f5Fn(T first, Args... args)
-+T f5Fn(T first, Goink... args)
- {
-     // #TEST#: R901 Rename local variable fn
-     // #TEST#: R902 Rename first use of first
+diff --git a/RefactorTest/RenameCpp20.h b/RefactorTest/RenameCpp20.h
+index 7a5d5d9..0e8f864 100644
+--- a/RefactorTest/RenameCpp20.h
++++ b/RefactorTest/RenameCpp20.h
+@@ -15,7 +15,7 @@ struct Point
+     // #TEST#: R859 Rename member y
+     int y;
+     // #TEST#: R860 Rename member z
+-    int z;
++    int goink;
+ };
+ 
+ // Cribbed from https://en.cppreference.com/w/cpp/language/coroutines

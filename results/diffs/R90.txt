@@ -1,18 +1,25 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..8695a20 100644
+index d1c1283..939bab0 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -738,11 +738,11 @@ restart:
-         // #TEST#: R89 Rename variable interface
-         int interface = gcnew + 1;
-         // #TEST#: R90 Rename variable internal
--        int internal = interface + 1;
-+        int goink = interface + 1;
-         // #TEST#: R91 (deprecated)
-         // #TEST#: R92 (deprecated)
-         // #TEST#: R93 Rename variable override
--        int override = internal + 1;
-+        int override = goink + 1;
-         // #TEST#: R94 Rename variable pin_ptr
-         int pin_ptr = override + 1;
-         // #TEST#: R95 Rename variable property
+@@ -376,7 +376,7 @@ public:
+ };
+ 
+ // #TEST#: R90 Rename i3
+-int i3 = 3;
++int goink = 3;
+ 
+ // #TEST#: R91 Rename T3
+ // #TEST#: R92 Rename i3
+@@ -397,9 +397,9 @@ int f3_aux(T3 t)
+     // #TEST#: R101 Rename T3
+     // #TEST#: R102 Rename t2
+     // #TEST#: R103 Rename i3
+-    ::T3 t2 = ::i3;
++    ::T3 t2 = ::goink;
+     // #TEST#: R104 Rename i3
+-    require_equal(3, ::i3);
++    require_equal(3, ::goink);
+     // #TEST#: R105 Rename t2
+     // #TEST#: R106 Rename i3
+     return t2.i3;

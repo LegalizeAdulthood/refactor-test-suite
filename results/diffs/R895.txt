@@ -1,19 +1,54 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index 2aa7a68..ef538d9 100644
+index b319d77..9fcdfe4 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -206,12 +206,12 @@ void f4()
- 
- // #TEST#: R895 Template parameter T
- // #TEST#: R896 Template parameter Args
--template <typename T, typename... Args>
-+template <typename Goink, typename... Args>
- // #TEST#: R897 Rename first use of T
- // #TEST#: R898 Rename second use of T
- // #TEST#: R899 Rename use of Args
- // #TEST#: R900 Rename parameter args
--T f5Fn(T first, Args... args)
-+Goink f5Fn(Goink first, Args... args)
- {
-     // #TEST#: R901 Rename local variable fn
-     // #TEST#: R902 Rename first use of first
+@@ -105,7 +105,7 @@ void f2()
+         // #TEST#: R881 Rename use of x
+         REQUIRE_EQUAL(10, p.x);
+         // #TEST#: R882 Rename use of y
+-        REQUIRE_EQUAL(0, p.y);
++        REQUIRE_EQUAL(0, p.goink);
+         // #TEST#: R883 Rename use of z
+         REQUIRE_EQUAL(0, p.z);
+     }
+@@ -113,11 +113,11 @@ void f2()
+         // #TEST#: R884 Rename use of Point
+         // #TEST#: R885 Rename local variable p
+         // #TEST#: R886 Rename use of y
+-        Point p{.y = 10};
++        Point p{.goink = 10};
+         // #TEST#: R887 Rename use of x
+         REQUIRE_EQUAL(0, p.x);
+         // #TEST#: R888 Rename use of y
+-        REQUIRE_EQUAL(10, p.y);
++        REQUIRE_EQUAL(10, p.goink);
+         // #TEST#: R889 Rename use of z
+         REQUIRE_EQUAL(0, p.z);
+     }
+@@ -126,11 +126,11 @@ void f2()
+         // #TEST#: R891 Rename local variable p
+         // #TEST#: R892 Rename use of x
+         // #TEST#: R893 Rename use of y
+-        Point p{.x = 20, .y = 10};
++        Point p{.x = 20, .goink = 10};
+         // #TEST#: R894 Rename use of x
+         REQUIRE_EQUAL(20, p.x);
+         // #TEST#: R895 Rename use of y
+-        REQUIRE_EQUAL(10, p.y);
++        REQUIRE_EQUAL(10, p.goink);
+         // #TEST#: R896 Rename use of z
+         REQUIRE_EQUAL(0, p.z);
+     }
+diff --git a/RefactorTest/RenameCpp20.h b/RefactorTest/RenameCpp20.h
+index 7a5d5d9..03e1686 100644
+--- a/RefactorTest/RenameCpp20.h
++++ b/RefactorTest/RenameCpp20.h
+@@ -13,7 +13,7 @@ struct Point
+     // #TEST#: R858 Rename member x
+     int x;
+     // #TEST#: R859 Rename member y
+-    int y;
++    int goink;
+     // #TEST#: R860 Rename member z
+     int z;
+ };

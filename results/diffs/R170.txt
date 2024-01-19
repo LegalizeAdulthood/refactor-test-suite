@@ -1,23 +1,25 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..ecaab26 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -279,14 +279,14 @@ unsigned long long operator""_xull()
- 
- // #TEST#: R169 Rename xull2
- // #TEST#: R170 Rename text
--unsigned long long operator""_xull2(const char *text)
-+unsigned long long operator""_xull2(const char *goink)
- {
-     unsigned long long value = 0;
--    while (*text)
-+    while (*goink)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..50e6bc7 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -511,7 +511,7 @@ struct F6
+     // #TEST#: R151 Rename y parameter
+     // #TEST#: R152 Rename x in decltype expression
+     // #TEST#: R153 Rename y in decltype expression
+-    auto f(T x, U y) -> decltype(x + y)
++    auto goink(T x, U y) -> decltype(x + y)
      {
-         value *= 10ULL;
--        value += *text - '0';
--        ++text;
-+        value += *goink - '0';
-+        ++goink;
-     }
-     return value;
- }
+         // #TEST#: R154 Rename count
+         ++count;
+@@ -547,9 +547,9 @@ void f6()
+ {
+     F6 x;
+     // #TEST#: R170 Rename method f
+-    require_equal(3.0, x.f(1, 2.0));
++    require_equal(3.0, x.goink(1, 2.0));
+     // #TEST#: R171 Rename method f
+-    require_equal(std::string{"foobar"}, x.f(std::string{"foo"}, "bar"));
++    require_equal(std::string{"foobar"}, x.goink(std::string{"foo"}, "bar"));
+     // #TEST#: R172 Rename count
+     require_equal(2, x.count);
+ 

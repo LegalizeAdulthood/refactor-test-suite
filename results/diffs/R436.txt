@@ -1,26 +1,38 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..3514d00 100644
+index e73e1db..4c7ecfe 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1088,18 +1088,18 @@ void f38()
- #undef F38_AUX
- 
- // #TEST#: R435 Rename F39_AUX
--#define F39_AUX(...) f10_aux(__VA_ARGS__)
-+#define GOINK(...) f10_aux(__VA_ARGS__)
- 
- void f39()
+@@ -699,20 +699,20 @@ void f23()
+ void f24()
  {
-     std::ostringstream result;
-     // #TEST#: R436 Rename F39_AUX
--    F39_AUX(result, 10, 20.5, "hello, world!");
-+    GOINK(result, 10, 20.5, "hello, world!");
-     require_equal(std::string{"10\n20.5\nhello, world!\n"}, result.str());
+     // #TEST#: R430 Rename X
+-    struct X
++    struct Goink
+     {
+         // #TEST#: R431 Rename constructor X
+         // #TEST#: R432 Rename delegated constructor X
+-        X() : X(10)
++        Goink() : Goink(10)
+         {
+         }
+         // #TEST#: R433 Rename constructor X
+         // #TEST#: R434 Rename delegated constructor X
+-        X(int x) : X(x, "hello world!")
++        Goink(int x) : Goink(x, "hello world!")
+         {
+         }
+         // #TEST#: R435 Rename constructor X
+-        X(int num, const char *text) : x(num), s(text)
++        Goink(int num, const char *text) : x(num), s(text)
+         {
+         }
+ 
+@@ -720,7 +720,7 @@ void f24()
+         std::string s;
+     };
+     // #TEST#: R436 Rename X
+-    X x;
++    Goink x;
+     require_equal(10, x.x);
+     require_equal(std::string{"hello world!"}, x.s);
  }
- 
- // #TEST#: R437 Rename F39_AUX
--#undef F39_AUX
-+#undef GOINK
- 
- // #TEST#: R438 Rename X40
- struct X40

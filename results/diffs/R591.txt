@@ -1,47 +1,22 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..cd8683b 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -514,7 +514,7 @@ struct F6
-     auto f(T x, U y) -> decltype(x + y)
-     {
-         // #TEST#: R570 Rename count
--        ++count;
-+        ++goink;
-         // #TEST#: R571 Rename x
-         // #TEST#: R572 Rename y
-         return x + y;
-@@ -533,14 +533,14 @@ struct F6
-     decltype(T() + U()) g(T x, U y)
-     {
-         // #TEST#: R582 Rename count
--        ++count;
-+        ++goink;
-         // #TEST#: R583 Rename x
-         // #TEST#: R584 Rename y
-         return x + y;
-     }
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..0127ec3 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -1187,7 +1187,7 @@ void f44()
+         }
  
-     // #TEST#: R585 Rename count
--    int count = 0;
-+    int goink = 0;
- };
+         // #TEST#: R585 Rename method set
+-        void set(const std::string &s)
++        void goink(const std::string &s)
+         {
+             m_s = s + " lvalue";
+         }
+@@ -1216,7 +1216,7 @@ void f44()
  
- void f6()
-@@ -551,14 +551,14 @@ void f6()
-     // #TEST#: R587 Rename method f
-     require_equal(std::string{"foobar"}, x.f(std::string{"foo"}, "bar"));
-     // #TEST#: R588 Rename count
--    require_equal(2, x.count);
-+    require_equal(2, x.goink);
+     std::string s2{"meh"};
+     // #TEST#: R591 Rename method set
+-    x.set(s2);
++    x.goink(s2);
+     require_equal(std::string{"meh lvalue"}, x.s());
  
-     // #TEST#: R589 Rename method g
-     require_equal(3.0, x.g(1.0, 2));
-     // #TEST#: R590 Rename method g
-     require_equal(std::string{"foobar"}, x.g("foo", std::string{"bar"}));
-     // #TEST#: R591 Rename count
--    require_equal(4, x.count);
-+    require_equal(4, x.goink);
- }
- 
- // #TEST#: R592 Rename F7Base
+     // #TEST#: R592 Rename method s

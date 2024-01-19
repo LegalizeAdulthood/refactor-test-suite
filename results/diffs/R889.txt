@@ -1,22 +1,44 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index 2aa7a68..4dcb5a0 100644
+index 22e707f..01d7b2e 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -188,7 +188,7 @@ void f4()
-     // #TEST#: R891 Rename template parameter T
-     // #TEST#: R892 Rename use of T
-     // #TEST#: R893 Rename use of N
--    auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
-+    auto goink = []<size_t N, typename T> { return std::array<T, N>{}; };
-     // #TEST#: R977 Rename type alias T
-     using T = int;
-     // #TEST#: R979 Rename local constant N
-@@ -196,7 +196,7 @@ void f4()
-     // #TEST#: R894 Rename use of fn
-     // #TEST#: R980 Rename use of N
-     // #TEST#: R978 Rename use of T
--    auto vals = fn.operator()<N, T>();
-+    auto vals = goink.operator()<N, T>();
-     std::iota(std::begin(vals), std::end(vals), 10);
-     REQUIRE_EQUAL(3, vals.size());
-     REQUIRE_EQUAL(10, vals[0]);
+@@ -107,7 +107,7 @@ void f2()
+         // #TEST#: R882 Rename use of y
+         REQUIRE_EQUAL(0, p.y);
+         // #TEST#: R883 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+     {
+         // #TEST#: R884 Rename use of Point
+@@ -119,7 +119,7 @@ void f2()
+         // #TEST#: R888 Rename use of y
+         REQUIRE_EQUAL(10, p.y);
+         // #TEST#: R889 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+     {
+         // #TEST#: R890 Rename use of Point
+@@ -131,7 +131,7 @@ void f2()
+         // #TEST#: R895 Rename use of y
+         REQUIRE_EQUAL(10, p.y);
+         // #TEST#: R896 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+ }
+ 
+diff --git a/RefactorTest/RenameCpp20.h b/RefactorTest/RenameCpp20.h
+index 7a5d5d9..0e8f864 100644
+--- a/RefactorTest/RenameCpp20.h
++++ b/RefactorTest/RenameCpp20.h
+@@ -15,7 +15,7 @@ struct Point
+     // #TEST#: R859 Rename member y
+     int y;
+     // #TEST#: R860 Rename member z
+-    int z;
++    int goink;
+ };
+ 
+ // Cribbed from https://en.cppreference.com/w/cpp/language/coroutines

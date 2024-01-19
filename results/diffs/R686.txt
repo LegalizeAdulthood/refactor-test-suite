@@ -1,16 +1,18 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 3d0f364..30884f3 100644
+index 0c2172a..4d33de4 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -189,9 +189,9 @@ void f5()
-         // #TEST#: R686 Rename binding val
-         // #TEST#: R687 Rename binding name
-         // #TEST#: R688 Rename use of p
--        const auto [val, name] = p;
-+        const auto [goink, name] = p;
-         // #TEST#: R970 Rename use of val
--        REQUIRE_EQUAL(1, val);
-+        REQUIRE_EQUAL(1, goink);
-         // #TEST#: R971 Rename use of name
-         REQUIRE_EQUAL(std::string{"one"}, name);
-         // #TEST#: R689 Rename binding val2
+@@ -149,11 +149,11 @@ void f5()
+         // #TEST#: R685 Rename binding cx
+         // #TEST#: R686 Rename binding cy
+         // #TEST#: R687 Rename use of vals
+-        const auto [cx, cy] = vals;
++        const auto [cx, goink] = vals;
+         // #TEST#: R688 Rename use of cx
+         REQUIRE_EQUAL(1, cx);
+         // #TEST#: R689 Rename use of cy
+-        REQUIRE_EQUAL(2, cy);
++        REQUIRE_EQUAL(2, goink);
+         // #TEST#: R690 Rename binding x
+         // #TEST#: R691 Rename binding y
+         // #TEST#: R692 Rename use of vals

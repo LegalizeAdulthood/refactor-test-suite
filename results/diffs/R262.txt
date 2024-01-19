@@ -1,13 +1,20 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..9d1ff4d 100644
+index 96b65ff..4090f95 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -606,7 +606,7 @@ struct Mixin : Bases...
-     // #TEST#: R260 Rename bases in constructor argument list
-     // #TEST#: R261 Rename Bases in initializer list pack expansion
-     // #TEST#: R262 Rename bases in initializer list pack expansion
--    Mixin(const Bases &...bases) : Bases(bases)...
-+    Mixin(const Bases &...goink) : Bases(goink)...
-     {
-     }
- };
+@@ -49,13 +49,13 @@ void f4()
+     // #TEST#: R261 Rename c16
+     char16_t c16 = u'x';
+     // #TEST#: R262 Rename c32
+-    char32_t c32 = U'x';
++    char32_t goink = U'x';
+ 
+     std::ostringstream s;
+     // #TEST#: R263 Rename c16
+     s << static_cast<int>(c16);
+     // #TEST#: R264 Rename c32
+-    s << static_cast<int>(c32);
++    s << static_cast<int>(goink);
+ }
+ 
+ void f5()

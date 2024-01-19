@@ -1,22 +1,36 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..28027d6 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -385,7 +385,7 @@ char16_t operator""_xc3(char16_t value)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..209d56e 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -624,7 +624,7 @@ void TestRename()
+     // #TEST#: R194 Rename this method
+     test.Operation();
+     // #TEST#: R195 Rename this function
+-    TestRename1();
++    goink();
  
- // #TEST#: R195 Rename xc4
- // #TEST#: R196 Rename value
--char32_t operator""_xc4(char32_t value)
-+char32_t operator""_goink(char32_t value)
+     {
+         using Y::X;
+diff --git a/RefactorTest/Rename.h b/RefactorTest/Rename.h
+index 74c7acb..36385aa 100644
+--- a/RefactorTest/Rename.h
++++ b/RefactorTest/Rename.h
+@@ -1,4 +1,4 @@
+ #pragma once
+ 
+ extern void TestRename();
+-extern void TestRename1();
++extern void goink();
+diff --git a/RefactorTest/Rename2.cpp b/RefactorTest/Rename2.cpp
+index cc39aa9..d5bc098 100644
+--- a/RefactorTest/Rename2.cpp
++++ b/RefactorTest/Rename2.cpp
+@@ -26,7 +26,7 @@ private:
+ 
+ }    // namespace
+ 
+-void TestRename1()
++void goink()
  {
-     // #TEST#: R197 Rename value
-     return value;
-@@ -459,7 +459,7 @@ void f13()
-     // #TEST#: R194 Rename xc3
-     require_equal(u'c', u'c'_xc3);
-     // #TEST#: R198 Rename xc4
--    require_equal(U'c', U'c'_xc4);
-+    require_equal(U'c', U'c'_goink);
-     // #TEST#: R204 Rename xs
-     require_equal(std::string{"foo"}, "foo"_xs);
-     // #TEST#: R210 Rename xs2
+     Rename1 test;
+     test.Operation();

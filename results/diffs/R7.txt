@@ -1,37 +1,45 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..1a055cb 100644
+index d1c1283..a756ebe 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -65,10 +65,10 @@ int x = 0;
- static int y = 1;
+@@ -31,22 +31,22 @@ public:
+ };
  
- // #TEST#: R7 rename this class
+ // #TEST#: R5 Rename this class, but class in Rename2.cpp shouldn't be renamed
 -class Rename1
 +class Goink
  {
  public:
--    Rename1() : _y(0)
-+    Goink() : _y(0)
+     // #TEST#: R6 Rename this class via its c'tor
+-    Rename1() : x()
++    Goink() : x()
      {
      }
  
-@@ -635,7 +635,7 @@ void TestRename()
-     // #TEST#: R14 Rename the namespace X
-     // #TEST#: R15 Rename the class Rename1
-     // #TEST#: R16 Rename the variable test2
--    X::Rename1 test2;
-+    X::Goink test2;
-     // #TEST#: R17 rename the variable y
-     // #TEST#: R18 rename the variable test2
-     // #TEST#: R19 rename the method Operation
-@@ -674,8 +674,8 @@ void TestRename()
-     // #TEST#: R98 Rename the variable y
-     y++;
+     // #TEST#: R7 Rename this class via its d'tor
+-    ~Rename1()
++    ~Goink()
+     {
+     }
  
--    using X::Rename1;
--    Rename1 fromX;
-+    using X::Goink;
-+    Goink fromX;
-     fromX.Operation();
+     // #TEST#: R8 Rename this class via typedef
+     // #TEST#: R9 Rename typedef MyClass
+-    typedef Rename1 MyClass;
++    typedef Goink MyClass;
  
-     // #TEST#: R50 Rename class Operations
+     // #TEST#: R10 Rename this method
+     void Operation()
+@@ -616,11 +616,11 @@ void TestRename()
+ 
+     // #TEST#: R191 Rename MyClass
+     // #TEST#: R192 Rename Rename1 from scope qualifier
+-    Rename1::MyClass myClass;
++    Goink::MyClass myClass;
+     myClass.Operation();
+ 
+     // #TEST#: R193 Rename this variable
+-    Rename1 test;
++    Goink test;
+     // #TEST#: R194 Rename this method
+     test.Operation();
+     // #TEST#: R195 Rename this function

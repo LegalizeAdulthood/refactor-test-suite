@@ -1,44 +1,18 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 4b92e61..c45b6bc 100644
+index d7d8359..624e072 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -30,7 +30,7 @@ namespace RenameCpp17::A::B::C
- {
- 
- // #TEST#: R813 Rename x
--int x{10};
-+int goink{10};
- 
- int y{20};
- int z{30};
-@@ -476,7 +476,7 @@ void f10()
-     // #TEST#: R815 Rename B
-     // #TEST#: R816 Rename C
-     // #TEST#: R817 Rename x
--    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::x);
-+    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::goink);
- 
-     {
-         // #TEST#: R818 Rename A
-@@ -484,7 +484,7 @@ void f10()
-         // #TEST#: R820 Rename C
-         using namespace RenameCpp17::A::B::C;
-         // #TEST#: R821 Rename x
--        REQUIRE_EQUAL(10, x);
-+        REQUIRE_EQUAL(10, goink);
+@@ -447,11 +447,11 @@ struct Container
      }
- }
  
-diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
-index 37491e7..6a7134f 100644
---- a/RefactorTest/RenameCpp17.h
-+++ b/RefactorTest/RenameCpp17.h
-@@ -9,7 +9,7 @@ namespace RenameCpp17
- namespace A::B::C
- {
- // #TEST#: R809 Rename x
--extern int x;
-+extern int goink;
+     // #TEST#: R810 Rename template parameter Iter
+-    template <typename Iter>
++    template <typename Goink>
+     // #TEST#: R811 Rename use of Container
+     // #TEST#: R812 Rename first use of Iter
+     // #TEST#: R813 Rename second use of Iter
+-    Container(Iter begin, Iter end) : m_how(2)
++    Container(Goink begin, Goink end) : m_how(2)
+     {
+     }
  
- extern int y;
- extern int z;

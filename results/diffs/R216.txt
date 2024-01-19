@@ -1,22 +1,31 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..21443be 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -423,7 +423,7 @@ std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
- // #TEST#: R211 Rename xs3
- // #TEST#: R212 Rename text
- // #TEST#: R213 Rename len
--std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len)
-+std::basic_string<char16_t> operator""_goink(const char16_t *text, std::size_t len)
- {
-     // #TEST#: R214 Rename text
-     // #TEST#: R215 Rename len
-@@ -465,7 +465,7 @@ void f13()
-     // #TEST#: R210 Rename xs2
-     require_equal(std::string{"foo"}, narrow(L"foo"_xs2));
-     // #TEST#: R216 Rename xs3
--    require_equal(std::string{"foo"}, narrow(u"foo"_xs3));
-+    require_equal(std::string{"foo"}, narrow(u"foo"_goink));
-     // #TEST#: R222 Rename xs4
-     require_equal(std::string{"foo"}, narrow(U"foo"_xs4));
- }
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..896e0b3 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -24,7 +24,7 @@ public:
+     {
+         return 1;
+     }
+-    int Operation2()
++    int goink()
+     {
+         return 2;
+     }
+@@ -164,7 +164,7 @@ static int (Operations::*GetOperation(bool flag))()
+         // #TEST#: R27 Rename variable result
+         // #TEST#: R28 Rename class Operations
+         // #TEST#: R29 Rename method Operation2
+-        result = &Operations::Operation2;
++        result = &Operations::goink;
+     }
+     // #TEST#: R30 Rename variable result
+     return result;
+@@ -685,7 +685,7 @@ void TestRename()
+     // #TEST#: R214 Rename variable member
+     // #TEST#: R215 Rename class Operations
+     // #TEST#: R216 Rename method Operation2
+-    member = &Operations::Operation2;
++    member = &Operations::goink;
+ 
+     // #TEST#: R217 Rename class Operations
+     // #TEST#: R218 Rename variable ops

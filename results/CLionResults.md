@@ -582,25 +582,25 @@ RUP4 | Pass
 ## Rename
 Case | Result
 ---- | ------
-R1   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R2   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R3   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R4   | Pass
-R5   | Pass
-R6   | Pass
-R7   | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
-R8   | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
-R9   | Pass
-R10  | Pass
-R11  | Pass
-R12  | Failure (doesn't select all instances, selects unrelated instances) [36997](https://youtrack.jetbrains.com/issue/CPP-36997/Renaming-a-method-from-usage-doesnt-rename-method-and-renames-unrelated-identifiers)
-R13  | Pass
-R14  | Pass
-R15  | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R1  | Pass
+R2  | Pass
+R3  | Pass
+R4  | Pass
+R5   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R6   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R7  | Failure (selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R8  | Failure (selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R9  | Pass
+R10   | Failure (selects unrelated names) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R11   | Pass
+R12   | Pass
+R13   | Pass
+R14   | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R15   | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
 R16  | Pass
-R17  | Pass
+R17   | Pass
 R18  | Pass
-R19  | Failure (selects unrelated instances) [36998](https://youtrack.jetbrains.com/issue/CPP-36998/Renaming-a-method-from-usage-renames-unrelated-identifiers)
+R19  | Pass
 R20  | Pass
 R21  | Pass
 R22  | Pass
@@ -608,79 +608,79 @@ R23  | Pass
 R24  | Pass
 R25  | Pass
 R26  | Pass
-R27  | Pass
+R27  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R28  | Pass
 R29  | Pass
-R30  | Pass
+R30  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
 R31  | Pass
-R32  | Failure (selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R33  | Failure (selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R34  | Pass
-R35  | Pass
-R36  | Failure (doesn't select all instances, selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
-R37  | Pass
-R38  | Pass
-R39  | Pass
-R40  | Pass
-R41  | Pass
-R42  | Pass
-R43  | Pass
-R44  | Pass
+R32  | Pass
+R33  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R34  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R35  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R36  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R37  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R38  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R39  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R40  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R41  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R42  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R43  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
+R44  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
 R45  | Pass
-R46  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R47  | Pass
-R48  | Pass
-R49  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R50  | Pass
-R51  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R52  | Pass
-R53  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R54  | Pass
-R55  | Pass
-R56  | Pass
-R57  | Pass
-R58  | Pass
-R59  | Pass
-R60  | Pass
-R61  | Pass
-R62  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R63  | Pass
-R64  | Pass
-R65  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R66  | Pass
-R67  | Pass
-R68  | Pass
-R69  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R70  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R71  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R72  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R73  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
-R74  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R75  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R76  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R77  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R78  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R79  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R80  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R81  | Failure (selects unrelated macro by default) [1943](https://youtrack.jetbrains.com/issue/CPP-1943)
-R82  | Pass
-R83  | Pass
-R84  | Pass
-R85  | Pass
-R86  | Pass
-R87  | Pass
-R88  | Pass
-R89  | Pass
-R90  | Pass
-R91  | (deprecated)
-R92  | (deprecated)
-R93  | Pass
-R94  | Pass
-R95  | Pass
-R96  | Pass
-R97  | Pass
-R98  | Pass
-R99  | Pass
+R46 | Pass
+R47 | Pass
+R48 | Pass
+R49 | Pass
+R50 | Pass
+R51 | Pass
+R52 | Pass
+R53 | Pass
+R54 | Pass
+R55 | Pass
+R56 | Pass
+R57 | Pass
+R58 | Pass
+R59 | Pass
+R60 | Pass
+R61 | Pass
+R62 | Pass
+R63 | Pass
+R64 | Pass
+R65 | Pass
+R66 | Pass
+R67 | Pass
+R68 | Pass
+R69 | Pass
+R70 | Pass
+R71 | Pass
+R72 | Pass
+R73 | Pass
+R74 | Pass
+R75 | Pass
+R76 | Pass
+R77 | Pass
+R78 | Pass
+R79 | Pass
+R80 | Pass
+R81 | Pass
+R82 | Pass
+R83 | Pass
+R84 | Pass
+R85 | Pass
+R86 | Pass
+R87 | Pass
+R88 | Pass
+R89 | Pass
+R90 | Pass
+R91 | Pass
+R92 | Pass
+R93 | Pass
+R94 | Pass
+R95 | Pass
+R96 | Pass
+R97 | Pass
+R98 | Pass
+R99 | Failure (doesn't select all instances) [16696](https://youtrack.jetbrains.com/issue/CPP-16696)
 R100 | Pass
 R101 | Pass
 R102 | Pass
@@ -708,7 +708,7 @@ R123 | Pass
 R124 | Pass
 R125 | Pass
 R126 | Pass
-R127 | Failure (creates invalid code) [16647](https://youtrack.jetbrains.com/issue/CPP-16647)
+R127 | Pass
 R128 | Pass
 R129 | Pass
 R130 | Pass
@@ -719,7 +719,7 @@ R134 | Pass
 R135 | Pass
 R136 | Pass
 R137 | Pass
-R138 | Failure (creates invalid code) [16647](https://youtrack.jetbrains.com/issue/CPP-16647)
+R138 | Pass
 R139 | Pass
 R140 | Pass
 R141 | Pass
@@ -727,7 +727,7 @@ R142 | Pass
 R143 | Pass
 R144 | Pass
 R145 | Pass
-R146 | Pass
+R146 | (deprecated)
 R147 | Pass
 R148 | Pass
 R149 | Pass
@@ -738,12 +738,12 @@ R153 | Pass
 R154 | Pass
 R155 | Pass
 R156 | Pass
-R157 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
-R158 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R157 | Pass
+R158 | Pass
 R159 | Pass
 R160 | Pass
 R161 | Pass
-R162 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R162 | Pass
 R163 | Pass
 R164 | Pass
 R165 | Pass
@@ -771,60 +771,60 @@ R186 | Pass
 R187 | Pass
 R188 | Pass
 R189 | Pass
-R190 | Pass
-R191 | Pass
-R192 | Pass
-R193 | Pass
-R194 | Pass
-R195 | Pass
-R196 | Pass
-R197 | Pass
-R198 | Pass
-R199 | Pass
-R200 | Pass
-R201 | Pass
-R202 | Pass
-R203 | Pass
-R204 | Pass
-R205 | Pass
-R206 | Pass
-R207 | Pass
-R208 | Pass
-R209 | Pass
-R210 | Pass
-R211 | Pass
-R212 | Pass
-R213 | Pass
-R214 | Pass
-R215 | Pass
-R216 | Pass
-R217 | Pass
-R218 | Pass
-R219 | Pass
-R220 | Pass
-R221 | Pass
-R222 | Pass
-R223 | Pass
-R224 | Pass
-R225 | Pass
-R226 | Pass
-R227 | Pass
-R228 | Pass
-R229 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R230 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R231 | Pass
-R232 | Pass
-R233 | Pass
-R234 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R235 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R236 | Pass
-R237 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R238 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R239 | Pass
-R240 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R241 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
-R242 | Pass
-R243 | Pass
+R190  | Pass
+R191  | Pass
+R192  | Failure (doesn't select all instances, selects unrelated instances) [1938](https://youtrack.jetbrains.com/issue/CPP-1938)
+R193  | Pass
+R194  | Failure (doesn't select all instances, selects unrelated instances) [36997](https://youtrack.jetbrains.com/issue/CPP-36997/Renaming-a-method-from-usage-doesnt-rename-method-and-renames-unrelated-identifiers)
+R195  | Pass
+R196  | Pass
+R197  | Failure (creates invalid code) [1939](https://youtrack.jetbrains.com/issue/CPP-1939)
+R198  | Pass
+R199  | Pass
+R200  | Pass
+R201  | Failure (selects unrelated instances) [36998](https://youtrack.jetbrains.com/issue/CPP-36998/Renaming-a-method-from-usage-renames-unrelated-identifiers)
+R202  | Pass
+R203  | Pass
+R204  | Pass
+R205  | Pass
+R206  | Pass
+R207  | Pass
+R208  | Pass
+R209  | Pass
+R210  | Pass
+R211  | Pass
+R212  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R213  | Pass
+R214  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R215  | Pass
+R216  | Pass
+R217  | Pass
+R218  | Pass
+R219  | Pass
+R220  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R221  | Pass
+R222  | Pass
+R223  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R224  | Pass
+R225  | Pass
+R226  | Pass
+R227  | Pass (unrelated comments selected by default) [1942](https://youtrack.jetbrains.com/issue/CPP-1942)
+R228  | Pass
+R229  | Pass
+R230  | Pass
+R231  | Pass
+R232  | Pass
+R233  | Pass
+R234  | Pass
+R235  | Pass
+R236  | Pass
+R237  | (deprecated)
+R238  | (deprecated)
+R239  | Pass
+R240  | Pass
+R241  | Pass
+R242  | Pass
+R243  | Pass
 R244 | Pass
 R245 | Pass
 R246 | Pass
@@ -858,7 +858,7 @@ R273 | Pass
 R274 | Pass
 R275 | Pass
 R276 | Pass
-R277 | Pass
+R277 | Failure (creates invalid code) [16647](https://youtrack.jetbrains.com/issue/CPP-16647)
 R278 | Pass
 R279 | Pass
 R280 | Pass
@@ -869,7 +869,7 @@ R284 | Pass
 R285 | Pass
 R286 | Pass
 R287 | Pass
-R288 | Pass
+R288 | Failure (creates invalid code) [16647](https://youtrack.jetbrains.com/issue/CPP-16647)
 R289 | Pass
 R290 | Pass
 R291 | Pass
@@ -888,12 +888,12 @@ R303 | Pass
 R304 | Pass
 R305 | Pass
 R306 | Pass
-R307 | Pass
-R308 | Pass
+R307 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
+R308 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
 R309 | Pass
 R310 | Pass
 R311 | Pass
-R312 | Pass
+R312 | Failure (renames unrelated instances) [16649](https://youtrack.jetbrains.com/issue/CPP-16649)
 R313 | Pass
 R314 | Pass
 R315 | Pass
@@ -901,13 +901,13 @@ R316 | Pass
 R317 | Pass
 R318 | Pass
 R319 | Pass
-R320 | Failure (doesn't select all instances) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R320 | Pass
 R321 | Pass
 R322 | Pass
 R323 | Pass
 R324 | Pass
 R325 | Pass
-R326 | Failure (doesn't select all instances) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R326 | Pass
 R327 | Pass
 R328 | Pass
 R329 | Pass
@@ -960,19 +960,19 @@ R375 | Pass
 R376 | Pass
 R377 | Pass
 R378 | Pass
-R379 | Pass
-R380 | Pass
+R379 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R380 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R381 | Pass
 R382 | Pass
 R383 | Pass
-R384 | Pass
-R385 | Pass
+R384 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R385 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R386 | Pass
-R387 | Pass
-R388 | Pass
+R387 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R388 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R389 | Pass
-R390 | Pass
-R391 | Pass
+R390 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
+R391 | Failure (creates invalid code) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R392 | Pass
 R393 | Pass
 R394 | Pass
@@ -1051,13 +1051,13 @@ R466 | Pass
 R467 | Pass
 R468 | Pass
 R469 | Pass
-R470 | Pass
+R470 | Failure (doesn't select all instances) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R471 | Pass
 R472 | Pass
 R473 | Pass
 R474 | Pass
 R475 | Pass
-R476 | Pass
+R476 | Failure (doesn't select all instances) [16659](https://youtrack.jetbrains.com/issue/CPP-16659)
 R477 | Pass
 R478 | Pass
 R479 | Pass
@@ -1096,7 +1096,7 @@ R511 | Pass
 R512 | Pass
 R513 | Pass
 R514 | Pass
-R515 | Failure (doesn't select all instances) [16696](https://youtrack.jetbrains.com/issue/CPP-16696)
+R515 | Pass
 R516 | Pass
 R517 | Pass
 R518 | Pass
@@ -1143,7 +1143,7 @@ R558 | Pass
 R559 | Pass
 R560 | Pass
 R561 | Pass
-R562 | (deprecated)
+R562 | Pass
 R563 | Pass
 R564 | Pass
 R565 | Pass
@@ -1408,35 +1408,35 @@ R823 | Pass
 R824 | Pass
 R825 | Pass
 R826 | Pass
-R827 | Failure (not available)
+R827 | Pass
 R828 | Pass
 R829 | Pass
 R830 | Pass
 R831 | Pass
 R832 | Pass
 R833 | Pass
-R834 | Failure (not available) [36999](https://youtrack.jetbrains.com/issue/CPP-36999/Cant-Rename-variable-from-usage)
+R834 | Pass
 R835 | Pass
 R836 | Pass
 R837 | Pass
 R838 | Pass
 R839 | Pass
 R840 | Pass
-R841 | Failure (not available) [36999](https://youtrack.jetbrains.com/issue/CPP-36999/Cant-Rename-variable-from-usage)
+R841 | Failure (not available)
 R842 | Pass
 R843 | Pass
 R844 | Pass
 R845 | Pass
 R846 | Pass
 R847 | Pass
-R848 | Pass
+R848 | Failure (not available) [36999](https://youtrack.jetbrains.com/issue/CPP-36999/Cant-Rename-variable-from-usage)
 R849 | Pass
 R850 | Pass
 R851 | Pass
 R852 | Pass
 R853 | Pass
 R854 | Pass
-R855 | Pass
+R855 | Failure (not available) [36999](https://youtrack.jetbrains.com/issue/CPP-36999/Cant-Rename-variable-from-usage)
 R856 | Pass
 R857 | Pass
 R858 | Pass
@@ -1473,8 +1473,8 @@ R888 | Pass
 R889 | Pass
 R890 | Pass
 R891 | Pass
-R892 | Failure (not available) [37000](https://youtrack.jetbrains.com/issue/CPP-37000/Cant-rename-explicit-template-parameter-to-lambda-from-usage)
-R893 | Failure (not available) [37000](https://youtrack.jetbrains.com/issue/CPP-37000/Cant-rename-explicit-template-parameter-to-lambda-from-usage)
+R892 | Pass
+R893 | Pass
 R894 | Pass
 R895 | Pass
 R896 | Pass
@@ -1491,8 +1491,8 @@ R906 | Pass
 R907 | Pass
 R908 | Pass
 R909 | Pass
-R910 | Pass
-R911 | Pass
+R910 | Failure (not available) [37000](https://youtrack.jetbrains.com/issue/CPP-37000/Cant-rename-explicit-template-parameter-to-lambda-from-usage)
+R911 | Failure (not available) [37000](https://youtrack.jetbrains.com/issue/CPP-37000/Cant-rename-explicit-template-parameter-to-lambda-from-usage)
 R912 | Pass
 R913 | Pass
 R914 | Pass

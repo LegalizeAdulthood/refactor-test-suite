@@ -1,18 +1,22 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index c346b5d..0ba9570 100644
+index 3d0f364..91ba098 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -346,11 +346,11 @@ template <typename... Args>
- // #TEST#: R755 Rename parameter init
- // #TEST#: R754 Rename use of Args
- // #TEST#: R756 Rename parameter args
--bool allBinaryLeft(bool init, Args... args)
-+bool allBinaryLeft(bool goink, Args... args)
+@@ -310,7 +310,7 @@ template <typename... Args>
+ // #TEST#: R757 Rename function allUnaryRight
+ // #TEST#: R758 Rename use of Args
+ // #TEST#: R759 Rename parameter args
+-bool allUnaryRight(Args... args)
++bool goink(Args... args)
  {
-     // #TEST#: R757 Rename use of init
-     // #TEST#: R758 Rename use of args
--    return (init && ... && args);
-+    return (goink && ... && args);
- }
- 
- void f7()
+     // #TEST#: R760 Rename use of args
+     return (args && ...);
+@@ -357,7 +357,7 @@ void f7()
+ {
+     const bool all1 = allUnaryLeft(true, true, true, true);
+     REQUIRE_EQUAL(true, all1);
+-    const bool all2 = allUnaryRight(true, true, true, true);
++    const bool all2 = goink(true, true, true, true);
+     REQUIRE_EQUAL(true, all2);
+     const bool all3 = allBinaryLeft(true, true, true, true);
+     REQUIRE_EQUAL(true, all3);

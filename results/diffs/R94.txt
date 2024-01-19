@@ -1,16 +1,24 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..4f066b4 100644
+index d1c1283..c48ba83 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -744,9 +744,9 @@ restart:
-         // #TEST#: R93 Rename variable override
-         int override = internal + 1;
-         // #TEST#: R94 Rename variable pin_ptr
--        int pin_ptr = override + 1;
-+        int goink = override + 1;
-         // #TEST#: R95 Rename variable property
--        int property = pin_ptr + 1;
-+        int property = goink + 1;
-         // #TEST#: R96 Rename variable safe_cast
-         int safe_cast = property + 1;
-         // #TEST#: R97 Rename variable sealed
+@@ -380,16 +380,16 @@ int i3 = 3;
+ 
+ // #TEST#: R91 Rename T3
+ // #TEST#: R92 Rename i3
+-template <class T3, int i3>
++template <class Goink, int i3>
+ // #TEST#: R93 Rename f3_aux
+ // #TEST#: R94 Rename T3
+ // #TEST#: R95 Rename t
+-int f3_aux(T3 t)
++int f3_aux(Goink t)
+ {
+     // #TEST#: R96 Rename T3
+     // #TEST#: R97 Rename t1
+     // #TEST#: R98 Rename t
+-    T3 t1 = t;
++    Goink t1 = t;
+     // #TEST#: R99 Rename i3
+     require_equal(2, t1.i3);
+     // #TEST#: R100 Rename i3

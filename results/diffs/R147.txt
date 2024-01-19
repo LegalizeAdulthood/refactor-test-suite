@@ -1,26 +1,25 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..4fc25ac 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -184,18 +184,18 @@ void f10_aux(std::ostream &stream, T head)
- 
- // #TEST#: R146 Rename T
- // #TEST#: R147 Rename Args
--template <typename T, typename... Args>
-+template <typename T, typename... Goink>
- // #TEST#: R148 Rename T
- // #TEST#: R149 Rename head
- // #TEST#: R150 Rename Args
- // #TEST#: R151 Rename tail
--void f10_aux(std::ostream &stream, T head, Args... tail)
-+void f10_aux(std::ostream &stream, T head, Goink... tail)
- {
-     // #TEST#: R152 Rename head
-     stream << head << '\n';
-     // #TEST#: R153 Rename tail
-     // #TEST#: R154 Rename Args
--    if (sizeof...(tail) > 0 || sizeof...(Args) > 0)
-+    if (sizeof...(tail) > 0 || sizeof...(Goink) > 0)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..50e6bc7 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -511,7 +511,7 @@ struct F6
+     // #TEST#: R151 Rename y parameter
+     // #TEST#: R152 Rename x in decltype expression
+     // #TEST#: R153 Rename y in decltype expression
+-    auto f(T x, U y) -> decltype(x + y)
++    auto goink(T x, U y) -> decltype(x + y)
      {
-         // #TEST#: R155 Rename tail
-         f10_aux(stream, tail...);
+         // #TEST#: R154 Rename count
+         ++count;
+@@ -547,9 +547,9 @@ void f6()
+ {
+     F6 x;
+     // #TEST#: R170 Rename method f
+-    require_equal(3.0, x.f(1, 2.0));
++    require_equal(3.0, x.goink(1, 2.0));
+     // #TEST#: R171 Rename method f
+-    require_equal(std::string{"foobar"}, x.f(std::string{"foo"}, "bar"));
++    require_equal(std::string{"foobar"}, x.goink(std::string{"foo"}, "bar"));
+     // #TEST#: R172 Rename count
+     require_equal(2, x.count);
+ 

@@ -1,22 +1,30 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index 22e707f..49e85e1 100644
+index d84e297..812deab 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -125,13 +125,13 @@ void f2()
-         // #TEST#: R874 Rename use of Point
-         // #TEST#: R975 Rename local variable p
-         // #TEST#: R875 Rename use of x
--        Point p{.x = 20, .y = 10};
-+        Point goink{.x = 20, .y = 10};
-         // #TEST#: R876 Rename use of x
--        REQUIRE_EQUAL(20, p.x);
-+        REQUIRE_EQUAL(20, goink.x);
-         // #TEST#: R877 Rename use of y
--        REQUIRE_EQUAL(10, p.y);
-+        REQUIRE_EQUAL(10, goink.y);
-         // #TEST#: R878 Rename use of z
--        REQUIRE_EQUAL(0, p.z);
-+        REQUIRE_EQUAL(0, goink.z);
-     }
- }
+@@ -384,7 +384,7 @@ auto autoSqr(auto t)
  
+ // #TEST#: R964 Rename function autoSqrInPlace
+ // #TEST#: R965 Rename parameter t
+-void autoSqrInPlace(auto &t)
++void goink(auto &t)
+ {
+     t *= t;
+ }
+@@ -417,14 +417,14 @@ void f10()
+         int t{2};
+         // #TEST#: R975 Rename use of autoSqrInPlace
+         // #TEST#: R976 Rename use of t
+-        autoSqrInPlace(t);
++        goink(t);
+         REQUIRE_EQUAL(4, t);
+     }
+     {
+         float t{2.0f};
+         // #TEST#: R977 Rename use of autoSqrInPlace
+         // #TEST#: R978 Rename use of t
+-        autoSqrInPlace(t);
++        goink(t);
+         REQUIRE_EQUAL(4.0f, t);
+     }
+     {

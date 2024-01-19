@@ -1,13 +1,16 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..c5f0840 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -414,7 +414,7 @@ void f3()
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..12b41a5 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -956,9 +956,9 @@ void f32()
+     require_equal(10, x);
+     // #TEST#: R526 Rename Integral
+     // #TEST#: R527 Rename Integer
+-    using Integral = Integer;
++    using Goink = Integer;
+     // #TEST#: R528 Rename Integral
+-    Integral y = 10;
++    Goink y = 10;
+     require_equal(10, y);
  }
- 
- // #TEST#: R526 Rename T
--template <class T>
-+template <class Goink>
- // #TEST#: R527 Rename F4
- class F4;
  

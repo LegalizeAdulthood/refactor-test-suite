@@ -1,13 +1,16 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..80e5191 100644
+index 96b65ff..9e2ecd9 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -751,7 +751,7 @@ void f26()
-     // #TEST#: R294 Rename x in lambda parameter list
-     // #TEST#: R295 Rename x in lambda body
-     // #TEST#: R296 Rename x in lambda argument list
--    require_equal(100, [](int x) { return x * 10; }(x));
-+    require_equal(100, [](int goink) { return goink * 10; }(x));
+@@ -171,9 +171,9 @@ void f8()
+ void f9()
+ {
+     // #TEST#: R294 Rename x
+-    thread_local int x = 0;
++    thread_local int goink = 0;
+     // #TEST#: R295 Rename use of x
+-    require_equal(0, x);
++    require_equal(0, goink);
+ }
  
-     // #TEST#: R297 Rename f
-     double f = 20.5;
+ template <typename T>

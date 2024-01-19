@@ -1,25 +1,27 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..939bab0 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -376,7 +376,7 @@ public:
- };
- 
- // #TEST#: R506 Rename i3
--int i3 = 3;
-+int goink = 3;
- 
- // #TEST#: R507 Rename T3
- // #TEST#: R508 Rename i3
-@@ -397,9 +397,9 @@ int f3_aux(T3 t)
-     // #TEST#: R517 Rename T3
-     // #TEST#: R518 Rename t2
-     // #TEST#: R519 Rename i3
--    ::T3 t2 = ::i3;
-+    ::T3 t2 = ::goink;
-     // #TEST#: R520 Rename i3
--    require_equal(3, ::i3);
-+    require_equal(3, ::goink);
-     // #TEST#: R521 Rename t2
-     // #TEST#: R522 Rename i3
-     return t2.i3;
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..8f0409c 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -900,18 +900,18 @@ void f29()
+     // #TEST#: R503 Rename x in decltype argument
+     // #TEST#: R504 Rename y
+     // #TEST#: R505 Rename x in initializing expression
+-    decltype(x) y = x;
++    decltype(x) goink = x;
+     // #TEST#: R506 Rename y
+-    require_equal(3, y);
++    require_equal(3, goink);
+     // #TEST#: R507 Rename y
+     // #TEST#: R508 Rename x
+-    require_equal(true, std::is_same<decltype(y), decltype(x)>::value);
++    require_equal(true, std::is_same<decltype(goink), decltype(x)>::value);
+     // #TEST#: R509 Rename first x in expression
+     // #TEST#: R510 Rename first y in expression
+     // #TEST#: R511 Rename second x in expression
+     // #TEST#: R512 Rename second y in expression
+     // #TEST#: R513 Rename z
+-    decltype(x + y - x - y) z = 10;
++    decltype(x + goink - x - goink) z = 10;
+     // #TEST#: R514 Rename z
+     require_equal(10, z);
+ }

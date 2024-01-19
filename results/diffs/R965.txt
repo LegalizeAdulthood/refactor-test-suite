@@ -1,22 +1,16 @@
-diff --git a/RefactorTest/RenameCpp14.h b/RefactorTest/RenameCpp14.h
-index a4197f1..138aa12 100644
---- a/RefactorTest/RenameCpp14.h
-+++ b/RefactorTest/RenameCpp14.h
-@@ -12,14 +12,14 @@ template <class T>
- constexpr T pi2 = T(2.0L) * T(3.1415926535897932385L);
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index d84e297..048e1fe 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -384,9 +384,9 @@ auto autoSqr(auto t)
  
- // #TEST#: R963 Rename template parameter T
--template <class T>
-+template <class Goink>
- // #TEST#: R964 Rename first use of T
- // #TEST#: R965 Rename second use of T
--T circularArea2(T r)
-+Goink circularArea2(Goink r)
+ // #TEST#: R964 Rename function autoSqrInPlace
+ // #TEST#: R965 Rename parameter t
+-void autoSqrInPlace(auto &t)
++void autoSqrInPlace(auto &goink)
  {
-     // #TEST#: R620 Rename use of pi2
-     // #TEST#: R966 Rename use of T
--    return pi2<T> * r * r;
-+    return pi2<Goink> * r * r;
+-    t *= t;
++    goink *= goink;
  }
  
- }    // namespace RenameCpp14
+ // #TEST#: R966 Rename function autoSqrPtr

@@ -1,28 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..a5d31d7 100644
+index e73e1db..a045a4e 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -799,7 +799,7 @@ void f26()
-                   }(s));
+@@ -353,7 +353,7 @@ int operator""_xull3(unsigned long long int value)
  
-     // #TEST#: R319 Rename E
--    enum class E
-+    enum class Goink
-     {
-         one,
-         // #TEST#: R320 Rename two
-@@ -808,12 +808,12 @@ void f26()
-     };
-     // #TEST#: R321 Rename E in declaration
-     // #TEST#: R322 Rename E in initialization expression
--    E e = E::one;
-+    Goink e = Goink::one;
-     // #TEST#: R323 Rename E in first argument to require_equal
-     // #TEST#: R324 Rename E in lambda return type
-     // #TEST#: R325 Rename E in lambda body
-     // #TEST#: R326 Rename two in lambda body
--    require_equal(static_cast<int>(E::two), static_cast<int>([]() -> E { return E::two; }()));
-+    require_equal(static_cast<int>(Goink::two), static_cast<int>([]() -> Goink { return Goink::two; }()));
- }
- 
- void f27()
+ // #TEST#: R325 Rename xd2
+ // #TEST#: R326 Rename value
+-double operator""_xd2(long double value)
++double operator""_goink(long double value)
+ {
+     // #TEST#: R327 Rename value
+     return static_cast<double>(value);
+@@ -451,7 +451,7 @@ void f13()
+     // #TEST#: R363 Rename xull3
+     require_equal(-555, -555_xull3);
+     // #TEST#: R364 Rename xd2
+-    require_equal(2.0, 2.0_xd2);
++    require_equal(2.0, 2.0_goink);
+     // #TEST#: R365 Rename xc
+     require_equal('c', 'c'_xc);
+     // #TEST#: R366 Rename xc2

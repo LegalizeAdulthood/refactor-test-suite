@@ -1,22 +1,65 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..c4fa2ef 100644
+index e73e1db..7f8eeff 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -553,14 +553,14 @@ void f17()
- }
- 
- // #TEST#: R247 Rename Args
--template <typename... Args>
-+template <typename... Goink>
- // #TEST#: R248 Rename Args
- // #TEST#: R249 Rename args
--void f18_aux(std::ostream &stream, Args... args)
-+void f18_aux(std::ostream &stream, Goink... args)
+@@ -938,12 +938,12 @@ void f30()
+ void f31()
  {
-     // #TEST#: R250 Rename Args
-     // #TEST#: R251 Rename args
--    int ignored[sizeof...(Args)] = {(stream << args << ' ', 0)...};
-+    int ignored[sizeof...(Goink)] = {(stream << args << ' ', 0)...};
+     // #TEST#: R521 Rename Extern
+-    using RenameCpp11::Extern;
++    using RenameCpp11::Goink;
+     // #TEST#: R522 Rename Extern
+-    Extern<int> x(10);
++    Goink<int> x(10);
+     require_equal(10, x.t);
+     // #TEST#: R523 Rename Extern
+-    Extern<std::string> y("hello world!");
++    Goink<std::string> y("hello world!");
+     require_equal(std::string{"hello world!"}, y.t);
  }
  
- void f18()
+@@ -1288,9 +1288,9 @@ void f45()
+ namespace RenameCpp11
+ {
+ // #TEST#: R604 Rename Extern
+-template struct Extern<int>;
++template struct Goink<int>;
+ // #TEST#: R605 Rename Extern
+-template struct Extern<std::string>;
++template struct Goink<std::string>;
+ 
+ }    // namespace RenameCpp11
+ 
+diff --git a/RefactorTest/RenameCpp11.h b/RefactorTest/RenameCpp11.h
+index 54c1f21..a83f3c0 100644
+--- a/RefactorTest/RenameCpp11.h
++++ b/RefactorTest/RenameCpp11.h
+@@ -7,23 +7,23 @@ namespace RenameCpp11
+ // #TEST#: R244 Rename T
+ template <typename T>
+ // #TEST#: R245 Rename Extern
+-struct Extern
++struct Goink
+ {
+     // #TEST#: R246 Rename Extern
+-    Extern()
++    Goink()
+     {
+     }
+     // #TEST#: R247 Rename Extern
+-    Extern(T t) : t(t)
++    Goink(T t) : t(t)
+     {
+     }
+     T t = T();
+ };
+ 
+ // #TEST#: R248 Rename Extern
+-extern template struct Extern<int>;
++extern template struct Goink<int>;
+ // #TEST#: R249 Rename Extern
+-extern template struct Extern<std::string>;
++extern template struct Goink<std::string>;
+ 
+ }    // namespace RenameCpp11
+ 

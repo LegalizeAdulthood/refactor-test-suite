@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..98744bb 100644
+index e73e1db..eb0221c 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1181,7 +1181,7 @@ void f44()
-             return m_s;
-         }
-         // #TEST#: R455 Rename method s
--        std::string s() const &&
-+        std::string goink() const &&
-         {
-             return m_s + " rvalue";
-         }
-@@ -1220,7 +1220,7 @@ void f44()
-     require_equal(std::string{"meh lvalue"}, x.s());
+@@ -785,7 +785,7 @@ void f26()
+     require_equal(20.5, f);
  
-     // #TEST#: R463 Rename method s
--    require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.s());
-+    require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.goink());
+     // #TEST#: R463 Rename s
+-    const std::string s{"hello world!"};
++    const std::string goink{"hello world!"};
+     // #TEST#: R464 Rename s in lambda parameter list
+     // #TEST#: R465 Rename nl declaration in lambda body
+     // #TEST#: R466 Rename s in lambda body
+@@ -796,7 +796,7 @@ void f26()
+                   {
+                       std::string nl{"\n"};
+                       return s + nl;
+-                  }(s));
++                  }(goink));
  
-     // #TEST#: R464 Rename variable x2
-     std::string &&x2 = std::string{"hello"} + ' ' + std::string{"world!"};
+     // #TEST#: R469 Rename E
+     enum class E

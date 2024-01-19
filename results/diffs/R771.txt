@@ -1,38 +1,18 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index c346b5d..2fd3e33 100644
+index f7afd67..7c758ab 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -378,13 +378,13 @@ struct ValueName
- void f8()
+@@ -333,11 +333,11 @@ template <typename... Args>
+ // #TEST#: R768 Rename parameter init
+ // #TEST#: R769 Rename use of Args
+ // #TEST#: R770 Rename parameter args
+-bool allBinaryRight(bool init, Args... args)
++bool allBinaryRight(bool init, Args... goink)
  {
-     float f1{1.0f};
--    int i1{10};
-+    int goink{10};
-     // declarations
-     {
-         // #TEST#: R759 Rename local variable p
-         // #TEST#: R760 Rename use of f1
-         // #TEST#: R761 Rename use of i1
--        std::pair p{f1, i1};
-+        std::pair p{f1, goink};
-         // #TEST#: R762 Rename use of p
-         REQUIRE_EQUAL(1.0f, p.first);
-         // #TEST#: R763 Rename use of p
-@@ -392,7 +392,7 @@ void f8()
-         // #TEST#: R764 Rename local variable t
-         // #TEST#: R765 Rename use of f1
-         // #TEST#: R766 Rename use of i1
--        std::tuple t{f1, i1};
-+        std::tuple t{f1, goink};
-         // #TEST#: R767 Rename use of t
-         REQUIRE_EQUAL(1.0f, std::get<0>(t));
-         // #TEST#: R768 Rename use of t
-@@ -403,7 +403,7 @@ void f8()
-         // #TEST#: R769 Rename local variable p1
-         // #TEST#: R770 Rename use of f1
-         // #TEST#: R771 Rename use of i1
--        const auto *p1 = new std::pair{f1, i1};
-+        const auto *p1 = new std::pair{f1, goink};
-         // #TEST#: R772 Rename use of p1
-         REQUIRE_EQUAL(1.0f, p1->first);
-         // #TEST#: R773 Rename use of p1
+     // #TEST#: R771 Rename use of args
+     // #TEST#: R772 Rename use of init
+-    return (args && ... && init);
++    return (goink && ... && init);
+ }
+ 
+ // #TEST#: R773 Rename template parameter Args

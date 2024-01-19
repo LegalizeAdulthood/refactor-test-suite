@@ -1,22 +1,38 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..87905c6 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -413,7 +413,7 @@ std::string narrow(const std::basic_string<T> &wide)
- // #TEST#: R205 Rename xs2
- // #TEST#: R206 Rename text
- // #TEST#: R207 Rename len
--std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
-+std::wstring operator""_goink(const wchar_t *text, std::size_t len)
- {
-     // #TEST#: R208 Rename text
-     // #TEST#: R209 Rename len
-@@ -463,7 +463,7 @@ void f13()
-     // #TEST#: R204 Rename xs
-     require_equal(std::string{"foo"}, "foo"_xs);
-     // #TEST#: R210 Rename xs2
--    require_equal(std::string{"foo"}, narrow(L"foo"_xs2));
-+    require_equal(std::string{"foo"}, narrow(L"foo"_goink));
-     // #TEST#: R216 Rename xs3
-     require_equal(std::string{"foo"}, narrow(u"foo"_xs3));
-     // #TEST#: R222 Rename xs4
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..ab323e5 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -643,7 +643,7 @@ void TestRename()
+     // #TEST#: R203 rename the variable X::x
+     // #TEST#: R204 rename the variable X::y
+     // #TEST#: R205 rename the variable Y::x
+-    int y = test2.Operation() + X::x + X::y + Y::x;
++    int goink = test2.Operation() + X::x + X::y + Y::x;
+ 
+     float x = MACRO_NO_ARGS;
+     x = MACRO_ONE_ARG(2.0f);
+@@ -656,7 +656,7 @@ void TestRename()
+         y = -1;
+     }
+ 
+-    y = 3;
++    goink = 3;
+     {
+         int y = 3;
+         // #TEST#: R209 Rename y, which shadows outer scope y
+@@ -666,13 +666,13 @@ void TestRename()
+             throw std::runtime_error("R30 may have failed");
+         }
+     }
+-    if (y != 3)
++    if (goink != 3)
+     {
+         throw std::runtime_error("R30 may have failed");
+     }
+ 
+     // #TEST#: R210 Rename the variable y
+-    y++;
++    goink++;
+ 
+     using X::Rename1;
+     Rename1 fromX;

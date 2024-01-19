@@ -1,38 +1,17 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..6bc10b3 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -424,7 +424,7 @@ class F4<int>
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..b64231d 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -968,10 +968,10 @@ constexpr int ii = 15;
+ void f33()
  {
- public:
-     // #TEST#: R529 Rename type
--    using type = unsigned int;
-+    using goink = unsigned int;
-     // #TEST#: R530 Rename x
-     unsigned int x = 4;
- };
-@@ -435,7 +435,7 @@ class F4<float>
- {
- public:
-     // #TEST#: R532 Rename type
--    using type = double;
-+    using goink = double;
+     // #TEST#: R530 Rename i
+-    constexpr int i = 6;
++    constexpr int goink = 6;
+     // #TEST#: R531 Rename x
+     // #TEST#: R532 Rename i
+-    int constexpr x = 2 * i;
++    int constexpr x = 2 * goink;
      // #TEST#: R533 Rename x
-     double x = 10.5;
- };
-@@ -447,13 +447,13 @@ void f4()
-     require_equal(4U, F4<int>().x);
-     // #TEST#: R536 Rename F4
-     // #TEST#: R537 Rename type
--    require_equal(true, std::is_same<F4<int>::type, unsigned int>::value);
-+    require_equal(true, std::is_same<F4<int>::goink, unsigned int>::value);
-     // #TEST#: R538 Rename F4
-     // #TEST#: R539 Rename x
-     require_equal(10.5, F4<float>().x);
-     // #TEST#: R540 Rename F4
-     // #TEST#: R541 Rename type
--    require_equal(true, std::is_same<F4<float>::type, double>::value);
-+    require_equal(true, std::is_same<F4<float>::goink, double>::value);
- }
- 
- // #TEST#: R542 Rename T
+     require_equal(12, x);
+     // #TEST#: R534 Rename ii

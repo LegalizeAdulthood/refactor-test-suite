@@ -1,16 +1,32 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 0c2172a..f9736c9 100644
+index 0c2172a..9f0017d 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -175,9 +175,9 @@ void f5()
-         // #TEST#: R681 Rename binding crx
-         // #TEST#: R682 Rename binding cry
-         // #TEST#: R683 Rename use of vals
--        const auto &[crx, cry] = vals;
-+        const auto &[goink, cry] = vals;
-         // #TEST#: R684 Rename use of crx
--        REQUIRE_EQUAL(4, crx);
-+        REQUIRE_EQUAL(4, goink);
-         // #TEST#: R685 Rename use of cry
-         REQUIRE_EQUAL(5, cry);
+@@ -111,15 +111,15 @@ void f3()
+     // #TEST#: R676 Rename parameter val
+     // #TEST#: R677 Rename use of initial
+     // #TEST#: R678 Rename use of val
+-    constexpr auto fn = [initial](int val) constexpr
++    constexpr auto goink = [initial](int val) constexpr
+     {
+         return initial + val;
+     };
+     // #TEST#: R679 Rename use of fn
+-    static_assert(10 == fn(0));
++    static_assert(10 == goink(0));
+     int value;
+     // #TEST#: R680 Rename use of fn
+-    if constexpr (15 == fn(5))
++    if constexpr (15 == goink(5))
+     {
+         value = 10;
      }
+@@ -128,7 +128,7 @@ void f3()
+         value = 15;
+     }
+     // #TEST#: R681 Rename use of fn
+-    REQUIRE_EQUAL(15, fn(5));
++    REQUIRE_EQUAL(15, goink(5));
+     REQUIRE_EQUAL(10, value);
+ }
+ 

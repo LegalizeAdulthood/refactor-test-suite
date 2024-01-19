@@ -1,22 +1,67 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..e811a57 100644
+index 96b65ff..caf0cfb 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -638,7 +638,7 @@ template <typename... Args>
- // #TEST#: R264 Rename stream
- // #TEST#: R265 Rename Args
- // #TEST#: R266 Rename args
--void f21_aux(std::ostream &stream, Args... args)
-+void f21_aux(std::ostream &goink, Args... args)
+@@ -93,48 +93,48 @@ void f6()
+ void f7()
  {
-     // #TEST#: R267 Rename args
-     // #TEST#: R268 Rename s
-@@ -648,7 +648,7 @@ void f21_aux(std::ostream &stream, Args... args)
-         // #TEST#: R270 Rename args
-         f10_aux(s, args...);
-         // #TEST#: R271 Rename stream
--    }(stream);
-+    }(goink);
+     // #TEST#: R271 Rename X
+-    struct X
++    struct Goink
+     {
+         // #TEST#: R272 Rename X via default c'tor
+-        X() = default;
++        Goink() = default;
+         // #TEST#: R273 Rename X via default copy c'tor
+         // #TEST#: R274 Rename X via default copy c'tor argument
+-        X(const X &rhs) = default;
++        Goink(const Goink &rhs) = default;
+         // #TEST#: R275 Rename X via default move c'tor
+         // #TEST#: R276 Rename X via default move c'tor argument
+-        X(X &&rhs) = default;
++        Goink(Goink &&rhs) = default;
+         // #TEST#: R277 Rename X via default d'tor
+-        ~X() = default;
++        ~Goink() = default;
+         // #TEST#: R278 Rename X via default copy assignment return type
+         // #TEST#: R279 Rename X via default copy assignment argument
+-        X &operator=(const X &rhs) = default;
++        Goink &operator=(const Goink &rhs) = default;
+         // #TEST#: R280 Rename X via default move assignment return type
+         // #TEST#: R281 Rename X via default move assignment argument
+-        X &operator=(X &&rhs) = default;
++        Goink &operator=(Goink &&rhs) = default;
+ 
+         int x = 1;
+         int y = 2;
+         std::string s = "foo";
+     };
+-    const auto check = [](const X &x)
++    const auto check = [](const Goink &x)
+     {
+         require_equal(1, x.x);
+         require_equal(2, x.y);
+         require_equal(std::string("foo"), x.s);
+     };
+-    const X x1;
++    const Goink x1;
+     check(x1);
+-    const X x2(x1);
++    const Goink x2(x1);
+     check(x2);
+-    X x3;
++    Goink x3;
+     x3.x = -1;
+     x3.y = -2;
+     x3 = x1;
+     check(x3);
+-    const X x4{X()};
++    const Goink x4{Goink()};
+     check(x4);
+-    X x5;
+-    x5 = X();
++    Goink x5;
++    x5 = Goink();
+     check(x5);
  }
  
- void f21()

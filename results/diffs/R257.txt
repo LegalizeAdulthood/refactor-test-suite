@@ -1,23 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..a5aa1d9 100644
+index e73e1db..018e6c2 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -598,15 +598,15 @@ void f19()
+@@ -18,7 +18,7 @@ constexpr bool flag2 = false;
+ // #TEST#: R252 Rename flag used in noexcept specification
+ constexpr bool flag3 = true;
+ // #TEST#: R253 Rename flag used in noexcept specification
+-constexpr bool flag4 = false;
++constexpr bool goink = false;
+ 
+ // #TEST#: R254 Rename flag in static_assert
+ static_assert(flag, "Flag is false");
+@@ -31,7 +31,7 @@ void f1() noexcept(flag3)
  }
  
- // #TEST#: R257 Rename Bases
--template <typename... Bases>
-+template <typename... Goink>
- // #TEST#: R258 Rename Bases
--struct Mixin : Bases...
-+struct Mixin : Goink...
+ // #TEST#: R257 Rename flag4 in noexcept specifier
+-void f2() noexcept(!flag4)
++void f2() noexcept(!goink)
  {
-     // #TEST#: R259 Rename Bases in constructor argument list
-     // #TEST#: R260 Rename bases in constructor argument list
-     // #TEST#: R261 Rename Bases in initializer list pack expansion
-     // #TEST#: R262 Rename bases in initializer list pack expansion
--    Mixin(const Bases &...bases) : Bases(bases)...
-+    Mixin(const Goink &...bases) : Goink(bases)...
-     {
-     }
- };
+ }
+ 

@@ -313,23 +313,23 @@ RUI1  | Pass
 ## Rename
 Case | Result
 ---- | ------
-R1    | Pass
-R2    | Failure (not available) [Eclipse:319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
-R3    | Pass
-R4    | Pass
+R1   |
+R2   |
+R3 | 
+R4   |
 R5    | Pass
-R6    | Pass
-R7    | Pass
-R8    | Pass
-R9    |
-R10   |
-R11   |
-R12   |
-R13   |
-R14   |
-R15   |
-R16   |
-R17   |
+R6    | Failure (not available) [Eclipse:319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
+R7   | Failure (not available) [Eclipse:319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
+R8   | Pass
+R9   | Pass
+R10    | Pass
+R11    | Pass
+R12    | Pass
+R13    | Pass
+R14    | Pass
+R15    | Pass
+R16   | Pass
+R17    |
 R18   |
 R19   |
 R20   |
@@ -343,10 +343,10 @@ R27   |
 R28   |
 R29   |
 R30   |
-R31   | Pass
-R32   | Failure (not available) [Eclipse:319506](https://bugs.eclipse.org/bugs/show_bug.cgi?id=319506) - patch provided, workaround exists
-R33   | Pass
-R34   | Pass
+R31   |
+R32   |
+R33   |
+R34   |
 R35   |
 R36   |
 R37   |
@@ -358,59 +358,59 @@ R42   |
 R43   |
 R44   |
 R45   |
-R46   |
-R47   |
-R48   |
-R49   |
-R50   |
-R51   |
-R52   |
-R53   |
-R54   |
-R55   |
-R56   |
-R57   |
-R58   |
-R59   |
-R60   |
-R61   |
-R62   |
-R63   |
-R64   |
-R65   |
-R66   |
-R67   |
-R68   |
-R69   |
-R70   |
-R71   |
-R72   |
-R73   |
-R74   |
-R75   |
-R76   |
-R77   |
-R78   |
-R79   |
-R80   |
-R81   |
-R82   |
-R83   |
-R84   |
-R85   |
-R86   |
-R87   |
-R88   |
-R89   |
-R90   |
-R91   | (deprecated)
-R92   | (deprecated)
-R93   |
-R94   |
-R95   |
-R96   |
-R97   |
-R98   |
+R46 | 
+R47 | 
+R48 | 
+R49 | 
+R50 | 
+R51 | 
+R52 | 
+R53 | 
+R54 | 
+R55 | 
+R56 | 
+R57 | 
+R58 | 
+R59 | 
+R60 | 
+R61 | 
+R62 | 
+R63 | 
+R64 | 
+R65 | 
+R66 | 
+R67 | 
+R68 | 
+R69 | 
+R70 | 
+R71 | 
+R72 | 
+R73 | 
+R74 | 
+R75 | 
+R76 | 
+R77 | 
+R78 | 
+R79 | 
+R80 | 
+R81 | 
+R82 | 
+R83 | 
+R84 | 
+R85 | 
+R86 | 
+R87 | 
+R88 | 
+R89 | 
+R90 | 
+R91 | 
+R92 | 
+R93 | 
+R94 | 
+R95 | 
+R96 | 
+R97 | 
+R98 | 
 R99 | 
 R100 | 
 R101 | 
@@ -458,7 +458,7 @@ R142 |
 R143 | 
 R144 | 
 R145 | 
-R146 | 
+R146 | (deprecated)
 R147 | 
 R148 | 
 R149 | 
@@ -502,60 +502,60 @@ R186 |
 R187 | 
 R188 | 
 R189 | 
-R190 | 
-R191 | 
-R192 | 
-R193 | 
-R194 | 
-R195 | 
-R196 | 
-R197 | 
-R198 | 
-R199 | 
-R200 | 
-R201 | 
-R202 | 
-R203 | 
-R204 | 
-R205 | 
-R206 | 
-R207 | 
-R208 | 
-R209 | 
-R210 | 
-R211 | 
-R212 | 
-R213 | 
-R214 | 
-R215 | 
-R216 | 
-R217 | 
-R218 | 
-R219 | 
-R220 | 
-R221 | 
-R222 | 
-R223 | 
-R224 | 
-R225 | 
-R226 | 
-R227 | 
-R228 | 
-R229 | 
-R230 | 
-R231 | 
-R232 | 
-R233 | 
-R234 | 
-R235 | 
-R236 | 
-R237 | 
-R238 | 
-R239 | 
-R240 | 
-R241 | 
-R242 | 
-R243 | 
+R190   |
+R191   |
+R192   |
+R193   |
+R194   |
+R195   |
+R196   |
+R197   |
+R198   |
+R199   |
+R200   |
+R201   |
+R202   |
+R203   |
+R204   |
+R205   |
+R206   |
+R207   |
+R208   |
+R209   |
+R210   |
+R211   |
+R212   |
+R213   |
+R214   |
+R215   |
+R216   |
+R217   |
+R218   |
+R219   |
+R220   |
+R221   |
+R222   |
+R223   |
+R224   |
+R225   |
+R226   |
+R227   |
+R228   |
+R229   |
+R230   |
+R231   |
+R232   |
+R233   |
+R234   |
+R235   |
+R236   |
+R237   | (deprecated)
+R238   | (deprecated)
+R239   |
+R240   |
+R241   |
+R242   |
+R243   |
 R244 | 
 R245 | 
 R246 | 
@@ -874,7 +874,7 @@ R558 |
 R559 | 
 R560 | 
 R561 | 
-R562 | (deprecated)
+R562 | 
 R563 | 
 R564 | 
 R565 | 

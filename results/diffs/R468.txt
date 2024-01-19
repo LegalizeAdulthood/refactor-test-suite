@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..72994a8 100644
+index e73e1db..eb0221c 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1235,7 +1235,7 @@ void f44()
- template <typename T>
- // #TEST#: R468 Rename function g45_aux
- // #TEST#: R469 Rename parameter x
--T g45_aux(T &&x)
-+T goink(T &&x)
- {
-     // #TEST#: R470 Rename parameter x
-     T y(x);
-@@ -1249,7 +1249,7 @@ T f45_aux(T &&x)
- {
-     // #TEST#: R473 Rename function g45_aux
-     // #TEST#: R474 Rename parameter x
--    return g45_aux(std::forward<T>(x));
-+    return goink(std::forward<T>(x));
- }
+@@ -785,7 +785,7 @@ void f26()
+     require_equal(20.5, f);
  
- void f45()
+     // #TEST#: R463 Rename s
+-    const std::string s{"hello world!"};
++    const std::string goink{"hello world!"};
+     // #TEST#: R464 Rename s in lambda parameter list
+     // #TEST#: R465 Rename nl declaration in lambda body
+     // #TEST#: R466 Rename s in lambda body
+@@ -796,7 +796,7 @@ void f26()
+                   {
+                       std::string nl{"\n"};
+                       return s + nl;
+-                  }(s));
++                  }(goink));
+ 
+     // #TEST#: R469 Rename E
+     enum class E

@@ -1,35 +1,16 @@
-diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d55964a..e6f7f5a 100644
---- a/RefactorTest/RenameCpp17.cpp
-+++ b/RefactorTest/RenameCpp17.cpp
-@@ -49,24 +49,24 @@ public:
-         // #TEST#: R641 Rename parameter val
-         // #TEST#: R642 Rename use of val
-         // #TEST#: R643 Rename use of m_i
--        auto fn = [*this](int &val) { val = 3 + m_i; };
-+        auto fn = [*this](int &val) { val = 3 + m_goink; };
-         // #TEST#: R644 Rename use of m_i
--        m_i = 1;
-+        m_goink = 1;
-         // #TEST#: R645 Rename use of fn
-         // #TEST#: R646 Rename use of m_i
--        fn(m_i);
-+        fn(m_goink);
-         // #TEST#: R647 Rename use of m_i
--        return m_i;
-+        return m_goink;
-     }
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index fd51b87..ff33b2c 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -391,9 +391,9 @@ void autoSqrInPlace(auto &t)
  
-     int i() const
-     {
--        return m_i;
-+        return m_goink;
-     }
+ // #TEST#: R966 Rename function autoSqrPtr
+ // #TEST#: R967 Rename parameter t
+-void autoSqrPtr(auto *t)
++void autoSqrPtr(auto *goink)
+ {
+-    *t *= *t;
++    *goink *= *goink;
+ }
  
- private:
-     // #TEST#: R967 Rename member m_i
--    int m_i{10};
-+    int m_goink{10};
- };
- 
- // #TEST#: R648 Rename template parameter T
+ // #TEST#: R968 Rename function product

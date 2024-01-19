@@ -1,38 +1,19 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..ab323e5 100644
+index d1c1283..a4bb784 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -643,7 +643,7 @@ void TestRename()
-     // #TEST#: R21 rename the variable X::x
-     // #TEST#: R22 rename the variable X::y
-     // #TEST#: R23 rename the variable Y::x
--    int y = test2.Operation() + X::x + X::y + Y::x;
-+    int goink = test2.Operation() + X::x + X::y + Y::x;
- 
-     float x = MACRO_NO_ARGS;
-     x = MACRO_ONE_ARG(2.0f);
-@@ -656,7 +656,7 @@ void TestRename()
-         y = -1;
-     }
- 
--    y = 3;
-+    goink = 3;
-     {
-         int y = 3;
-         // #TEST#: R30 Rename y, which shadows outer scope y
-@@ -666,13 +666,13 @@ void TestRename()
-             throw std::runtime_error("R30 may have failed");
-         }
-     }
--    if (y != 3)
-+    if (goink != 3)
-     {
-         throw std::runtime_error("R30 may have failed");
-     }
- 
-     // #TEST#: R98 Rename the variable y
--    y++;
-+    goink++;
- 
-     using X::Rename1;
-     Rename1 fromX;
+@@ -384,12 +384,12 @@ template <class T3, int i3>
+ // #TEST#: R93 Rename f3_aux
+ // #TEST#: R94 Rename T3
+ // #TEST#: R95 Rename t
+-int f3_aux(T3 t)
++int f3_aux(T3 goink)
+ {
+     // #TEST#: R96 Rename T3
+     // #TEST#: R97 Rename t1
+     // #TEST#: R98 Rename t
+-    T3 t1 = t;
++    T3 t1 = goink;
+     // #TEST#: R99 Rename i3
+     require_equal(2, t1.i3);
+     // #TEST#: R100 Rename i3

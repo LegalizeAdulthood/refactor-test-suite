@@ -1,22 +1,19 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..ad7fba2 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -487,7 +487,7 @@ void f14()
- void f15()
- {
-     // #TEST#: R228 Rename X
--    enum class X : char
-+    enum class Goink : char
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..b30b5c1 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -715,12 +715,12 @@ void TestRename()
+     int loop = 0;
+ 
+     // #TEST#: R228 Rename label
+-restart:
++goink:
+     loop++;
+     if (loop < 5)
      {
-         // #TEST#: R229 Rename One
-         One,
-@@ -505,7 +505,7 @@ void f15()
-     // #TEST#: R232 Rename x
-     // #TEST#: R233 Rename X on rhs
-     // #TEST#: R234 Rename One
--    X x = X::One;
-+    Goink x = Goink::One;
-     // #TEST#: R235 Rename One
-     Y y = Y::One;
-     require_equal(static_cast<int>(x), static_cast<int>(y));
+         // #TEST#: R229 Rename label
+-        goto restart;
++        goto goink;
+     }
+     REQUIRE_EQUAL(5, loop);
+ 

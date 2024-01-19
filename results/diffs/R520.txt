@@ -1,25 +1,19 @@
-diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..939bab0 100644
---- a/RefactorTest/Rename.cpp
-+++ b/RefactorTest/Rename.cpp
-@@ -376,7 +376,7 @@ public:
- };
- 
- // #TEST#: R506 Rename i3
--int i3 = 3;
-+int goink = 3;
- 
- // #TEST#: R507 Rename T3
- // #TEST#: R508 Rename i3
-@@ -397,9 +397,9 @@ int f3_aux(T3 t)
-     // #TEST#: R517 Rename T3
-     // #TEST#: R518 Rename t2
-     // #TEST#: R519 Rename i3
--    ::T3 t2 = ::i3;
-+    ::T3 t2 = ::goink;
-     // #TEST#: R520 Rename i3
--    require_equal(3, ::i3);
-+    require_equal(3, ::goink);
-     // #TEST#: R521 Rename t2
-     // #TEST#: R522 Rename i3
-     return t2.i3;
+diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
+index e73e1db..6516649 100644
+--- a/RefactorTest/RenameCpp11.cpp
++++ b/RefactorTest/RenameCpp11.cpp
+@@ -923,12 +923,12 @@ void f30()
+     // #TEST#: R516 Rename y
+     int y = 20;
+     // #TEST#: R517 REname z
+-    int z = 30;
++    int goink = 30;
+     std::ostringstream result;
+     // #TEST#: R518 Rename x
+     // #TEST#: R519 Rename y
+     // #TEST#: R520 Rename z
+-    for (int i : {1, x, y, z, 4})
++    for (int i : {1, x, y, goink, 4})
+     {
+         result << i << '\n';
+     }

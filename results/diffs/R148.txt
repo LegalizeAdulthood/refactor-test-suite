@@ -1,19 +1,22 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..0c1d3d4 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -184,12 +184,12 @@ void f10_aux(std::ostream &stream, T head)
- 
- // #TEST#: R146 Rename T
- // #TEST#: R147 Rename Args
--template <typename T, typename... Args>
-+template <typename Goink, typename... Args>
- // #TEST#: R148 Rename T
- // #TEST#: R149 Rename head
- // #TEST#: R150 Rename Args
- // #TEST#: R151 Rename tail
--void f10_aux(std::ostream &stream, T head, Args... tail)
-+void f10_aux(std::ostream &stream, Goink head, Args... tail)
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..745b918 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -502,7 +502,7 @@ struct F6
  {
-     // #TEST#: R152 Rename head
-     stream << head << '\n';
+     // #TEST#: R144 Rename T
+     // #TEST#: R145 Rename U
+-    template <typename T, typename U>
++    template <typename Goink, typename U>
+     // #TEST#: R146 (deprecated)
+     // #TEST#: R147 Rename f
+     // #TEST#: R148 Rename T parameter x type
+@@ -511,7 +511,7 @@ struct F6
+     // #TEST#: R151 Rename y parameter
+     // #TEST#: R152 Rename x in decltype expression
+     // #TEST#: R153 Rename y in decltype expression
+-    auto f(T x, U y) -> decltype(x + y)
++    auto f(Goink x, U y) -> decltype(x + y)
+     {
+         // #TEST#: R154 Rename count
+         ++count;

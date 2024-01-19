@@ -1,18 +1,49 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..7ccb72b 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -413,11 +413,11 @@ std::string narrow(const std::basic_string<T> &wide)
- // #TEST#: R205 Rename xs2
- // #TEST#: R206 Rename text
- // #TEST#: R207 Rename len
--std::wstring operator""_xs2(const wchar_t *text, std::size_t len)
-+std::wstring operator""_xs2(const wchar_t *goink, std::size_t len)
- {
-     // #TEST#: R208 Rename text
-     // #TEST#: R209 Rename len
--    return std::wstring(text, len);
-+    return std::wstring(goink, len);
- }
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..94b2cef 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -57,7 +57,7 @@ public:
+ };
  
- // #TEST#: R211 Rename xs3
+ // #TEST#: R11 Rename this namespace
+-namespace X
++namespace Goink
+ {
+ // #TEST#: R12 rename this variable
+ int x = 0;
+@@ -635,7 +635,7 @@ void TestRename()
+     // #TEST#: R196 Rename the namespace X
+     // #TEST#: R197 Rename the class Rename1
+     // #TEST#: R198 Rename the variable test2
+-    X::Rename1 test2;
++    Goink::Rename1 test2;
+     // #TEST#: R199 rename the variable y
+     // #TEST#: R200 rename the variable test2
+     // #TEST#: R201 rename the method Operation
+@@ -643,7 +643,7 @@ void TestRename()
+     // #TEST#: R203 rename the variable X::x
+     // #TEST#: R204 rename the variable X::y
+     // #TEST#: R205 rename the variable Y::x
+-    int y = test2.Operation() + X::x + X::y + Y::x;
++    int y = test2.Operation() + Goink::x + Goink::y + Y::x;
+ 
+     float x = MACRO_NO_ARGS;
+     x = MACRO_ONE_ARG(2.0f);
+@@ -651,7 +651,7 @@ void TestRename()
+     {
+         // #TEST#: R206 Rename the namespace X
+         // #TEST#: R207 Rename the variable X::y
+-        using X::y;
++        using Goink::y;
+         // #TEST#: R208 Rename y, which is really X::y
+         y = -1;
+     }
+@@ -674,7 +674,7 @@ void TestRename()
+     // #TEST#: R210 Rename the variable y
+     y++;
+ 
+-    using X::Rename1;
++    using Goink::Rename1;
+     Rename1 fromX;
+     fromX.Operation();
+ 

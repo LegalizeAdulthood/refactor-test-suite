@@ -1,22 +1,16 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..26d2ba3 100644
+index d1c1283..5bd6e2d 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -635,7 +635,7 @@ void TestRename()
-     // #TEST#: R14 Rename the namespace X
-     // #TEST#: R15 Rename the class Rename1
-     // #TEST#: R16 Rename the variable test2
--    X::Rename1 test2;
-+    X::Rename1 goink;
-     // #TEST#: R17 rename the variable y
-     // #TEST#: R18 rename the variable test2
-     // #TEST#: R19 rename the method Operation
-@@ -643,7 +643,7 @@ void TestRename()
-     // #TEST#: R21 rename the variable X::x
-     // #TEST#: R22 rename the variable X::y
-     // #TEST#: R23 rename the variable Y::x
--    int y = test2.Operation() + X::x + X::y + Y::x;
-+    int y = goink.Operation() + X::x + X::y + Y::x;
- 
-     float x = MACRO_NO_ARGS;
-     x = MACRO_ONE_ARG(2.0f);
+@@ -81,9 +81,9 @@ public:
+ private:
+     void Method()
+     {
+-        int _y = -4;
++        int goink = -4;
+         // #TEST#: R16 rename _y, which shadows member _y
+-        _y = 6;
++        goink = 6;
+     }
+     int _y;
+ };

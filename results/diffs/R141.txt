@@ -1,44 +1,37 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..1dec1e7 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -141,31 +141,31 @@ void f7()
- void f8()
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..f137b37 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -468,7 +468,7 @@ public:
+     // #TEST#: R130 Rename T in declaration
+     // #TEST#: R131 Rename x
+     // #TEST#: R132 Rename T in initializer
+-    T x = T(3);
++    T goink = T(3);
+ };
+ 
+ template <>
+@@ -479,20 +479,20 @@ public:
+     // #TEST#: R134 Rename type
+     using type = unsigned int;
+     // #TEST#: R135 Rename x
+-    unsigned int x = 4;
++    unsigned int goink = 4;
+ };
+ 
+ void f5()
  {
-     // #TEST#: R132 Rename X
--    struct X
-+    struct Goink
-     {
-         // #TEST#: R133 Rename X via deleted c'tor
--        X() = delete;
-+        Goink() = delete;
-         // #TEST#: R134 Rename X via deleted copy c'tor
-         // #TEST#: R135 Rename X via deleted copy c'tor argument
--        X(const X &rhs) = delete;
-+        Goink(const Goink &rhs) = delete;
-         // #TEST#: R136 Rename X via deleted move c'tor
-         // #TEST#: R137 Rename X via deleted move c'tor argument
--        X(X &&rhs) = delete;
-+        Goink(Goink &&rhs) = delete;
-         // #TEST#: R138 Rename X via deleted d'tor
--        ~X() = delete;
-+        ~Goink() = delete;
-         // #TEST#: R139 Rename X via deleted copy assignment return type
-         // #TEST#: R140 Rename X via deleted copy assignment argument
--        X &operator=(const X &rhs) = delete;
-+        Goink &operator=(const Goink &rhs) = delete;
-         // #TEST#: R141 Rename X via deleted move assignment return type
-         // #TEST#: R142 Rename X via deleted move assignment argument
--        X &operator=(X &&rhs) = delete;
-+        Goink &operator=(Goink &&rhs) = delete;
- 
-         int x = 1;
-         int y = 2;
-         std::string s = "foo";
-     };
-     // #TEST#: R143 Rename X
--    X *x = nullptr;
-+    Goink *x = nullptr;
- }
- 
- void f9()
+     // #TEST#: R136 Rename F5
+     // #TEST#: R137 Rename x
+-    require_equal('\3', F5<char>().x);
++    require_equal('\3', F5<char>().goink);
+     // #TEST#: R138 Rename F5
+     // #TEST#: R139 Rename type
+     require_equal(true, std::is_same<char, F5<char>::type>::value);
+     // #TEST#: R140 Rename F5
+     // #TEST#: R141 Rename x
+-    require_equal(4U, F5<int>().x);
++    require_equal(4U, F5<int>().goink);
+     // #TEST#: R142 Rename F5
+     // #TEST#: R143 Rename type
+     require_equal(true, std::is_same<F5<int>::type, unsigned int>::value);

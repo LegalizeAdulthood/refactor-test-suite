@@ -1,20 +1,44 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d55964a..f5e55dc 100644
+index 4b92e61..c45b6bc 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -71,13 +71,13 @@ private:
- 
- // #TEST#: R648 Rename template parameter T
- // #TEST#: R649 Rename template parameter N
--template <typename T, size_t N>
-+template <typename Goink, size_t N>
- // #TEST#: R650 Rename function f
- int f()
+@@ -30,7 +30,7 @@ namespace RenameCpp17::A::B::C
  {
-     // #TEST#: R651 Rename use of T
-     // #TEST#: R652 Rename use of N
--    if constexpr (sizeof(T) == N)
-+    if constexpr (sizeof(Goink) == N)
+ 
+ // #TEST#: R656 Rename x
+-int x{10};
++int goink{10};
+ 
+ int y{20};
+ int z{30};
+@@ -476,7 +476,7 @@ void f10()
+     // #TEST#: R829 Rename B
+     // #TEST#: R830 Rename C
+     // #TEST#: R831 Rename x
+-    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::x);
++    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::goink);
+ 
      {
-         return 10;
+         // #TEST#: R832 Rename A
+@@ -484,7 +484,7 @@ void f10()
+         // #TEST#: R834 Rename C
+         using namespace RenameCpp17::A::B::C;
+         // #TEST#: R835 Rename x
+-        REQUIRE_EQUAL(10, x);
++        REQUIRE_EQUAL(10, goink);
      }
+ }
+ 
+diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
+index 37491e7..6a7134f 100644
+--- a/RefactorTest/RenameCpp17.h
++++ b/RefactorTest/RenameCpp17.h
+@@ -9,7 +9,7 @@ namespace RenameCpp17
+ namespace A::B::C
+ {
+ // #TEST#: R651 Rename x
+-extern int x;
++extern int goink;
+ 
+ extern int y;
+ extern int z;

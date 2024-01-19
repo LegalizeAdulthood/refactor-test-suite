@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
-index 2f9380a..b1d3bf4 100644
+index 2f9380a..f903a2d 100644
 --- a/RefactorTest/RenameCpp14.cpp
 +++ b/RefactorTest/RenameCpp14.cpp
-@@ -86,7 +86,7 @@ void f4()
-     // #TEST#: R629 Rename use of i in capture expression
-     // #TEST#: R630 Rename use of val
-     // #TEST#: R631 Rename use of j
--    auto fn = [val = 1, j = i] { return val + j; };
-+    auto fn = [val = 1, goink = i] { return val + goink; };
-     // #TEST#: R632 Rename use of fn
-     REQUIRE_EQUAL(3, fn());
-     // #TEST#: R633 Rename local variable fn2
+@@ -71,7 +71,7 @@ void f3()
+     // #TEST#: R630 Rename parameter val in declaration
+     // #TEST#: R631 Rename parameter val in first use
+     // #TEST#: R632 Rename parameter val in second use
+-    auto fn = [](auto val) { return val * decltype(val)(2); };
++    auto fn = [](auto goink) { return goink * decltype(goink)(2); };
+     REQUIRE_EQUAL(4.0f, fn(2.0f));
+     REQUIRE_EQUAL(4, fn(2));
+ }

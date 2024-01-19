@@ -1,22 +1,16 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..ad7fba2 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -487,7 +487,7 @@ void f14()
- void f15()
- {
-     // #TEST#: R228 Rename X
--    enum class X : char
-+    enum class Goink : char
-     {
-         // #TEST#: R229 Rename One
-         One,
-@@ -505,7 +505,7 @@ void f15()
-     // #TEST#: R232 Rename x
-     // #TEST#: R233 Rename X on rhs
-     // #TEST#: R234 Rename One
--    X x = X::One;
-+    Goink x = Goink::One;
-     // #TEST#: R235 Rename One
-     Y y = Y::One;
-     require_equal(static_cast<int>(x), static_cast<int>(y));
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..697d141 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -732,9 +732,9 @@ restart:
+         // #TEST#: R232 Rename variable delegate
+         int delegate = array + 1;
+         // #TEST#: R233 Rename variable event
+-        int event = delegate + 1;
++        int goink = delegate + 1;
+         // #TEST#: R234 Rename variable gcnew
+-        int gcnew = event + 1;
++        int gcnew = goink + 1;
+         // #TEST#: R235 Rename variable interface
+         int interface = gcnew + 1;
+         // #TEST#: R236 Rename variable internal

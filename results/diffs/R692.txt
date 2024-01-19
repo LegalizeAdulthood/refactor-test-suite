@@ -1,16 +1,49 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 3d0f364..bec4a5c 100644
+index 0c2172a..d2eaab1 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -197,9 +197,9 @@ void f5()
-         // #TEST#: R689 Rename binding val2
-         // #TEST#: R690 Rename binding name2
-         // #TEST#: R691 Rename use of p
--        auto [val2, name2] = p;
-+        auto [goink, name2] = p;
-         // #TEST#: R692 Rename use of val2
--        REQUIRE_EQUAL(1, val2);
-+        REQUIRE_EQUAL(1, goink);
-         // #TEST#: R693 Rename use of name2
-         REQUIRE_EQUAL(std::string{"one"}, name2);
-         // #TEST#: R694 Rename binding val3
+@@ -145,11 +145,11 @@ void f5()
+     // binding to arrays
+     {
+         // #TEST#: R684 Rename variable vals
+-        int vals[]{1, 2};
++        int goink[]{1, 2};
+         // #TEST#: R685 Rename binding cx
+         // #TEST#: R686 Rename binding cy
+         // #TEST#: R687 Rename use of vals
+-        const auto [cx, cy] = vals;
++        const auto [cx, cy] = goink;
+         // #TEST#: R688 Rename use of cx
+         REQUIRE_EQUAL(1, cx);
+         // #TEST#: R689 Rename use of cy
+@@ -157,7 +157,7 @@ void f5()
+         // #TEST#: R690 Rename binding x
+         // #TEST#: R691 Rename binding y
+         // #TEST#: R692 Rename use of vals
+-        auto [x, y] = vals;
++        auto [x, y] = goink;
+         // #TEST#: R693 Rename use of x
+         REQUIRE_EQUAL(1, x);
+         // #TEST#: R694 Rename use of y
+@@ -165,17 +165,17 @@ void f5()
+         // #TEST#: R695 Rename binding vx
+         // #TEST#: R696 Rename binding vy
+         // #TEST#: R697 Rename use of vals
+-        auto &[vx, vy] = vals;
++        auto &[vx, vy] = goink;
+         // #TEST#: R698 Rename use of vx
+         vx = 4;
+         // #TEST#: R699 Rename use of vy
+         vy = 5;
+-        REQUIRE_EQUAL(4, vals[0]);
+-        REQUIRE_EQUAL(5, vals[1]);
++        REQUIRE_EQUAL(4, goink[0]);
++        REQUIRE_EQUAL(5, goink[1]);
+         // #TEST#: R700 Rename binding crx
+         // #TEST#: R701 Rename binding cry
+         // #TEST#: R702 Rename use of vals
+-        const auto &[crx, cry] = vals;
++        const auto &[crx, cry] = goink;
+         // #TEST#: R703 Rename use of crx
+         REQUIRE_EQUAL(4, crx);
+         // #TEST#: R704 Rename use of cry
