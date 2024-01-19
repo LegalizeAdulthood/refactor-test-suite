@@ -1,15 +1,16 @@
 diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
-index 826c9b0..d33a9db 100644
+index 826c9b0..bea4e63 100644
 --- a/RefactorTest/InlineVariable.cpp
 +++ b/RefactorTest/InlineVariable.cpp
-@@ -37,9 +37,8 @@ void TestFunction()
+@@ -111,10 +111,9 @@ void TestMemberPointer2()
  
- void TestFunction2()
+ void TestConstMemberPointer2()
  {
--    int (*fn)() = Function1;
-     // #TEST#: IV10 Inline Variable fn
--    int j = (*fn)();
-+    int j = Function1();
+-    int (Foo::*member)() const = &Foo::Method1;
+     Foo f;
+     // #TEST#: IV10 Inline Variable member
+-    int j = (f.*member)();
++    int j = f.Method1();
      require_equal(1, j);
-     int (*fn2)() = Function2;
-     // #TEST#: IV11 Inline Variable fn2
+     int (Foo::*member2)() const = &Foo::Method2;
+     // #TEST#: IV11 Inline Variable member2

@@ -38,11 +38,11 @@ void TestFunction()
 void TestFunction2()
 {
     int (*fn)() = Function1;
-    // #TEST#: IV10 Inline Variable fn
+    // #TEST#: IV3 Inline Variable fn
     int j = (*fn)();
     require_equal(1, j);
     int (*fn2)() = Function2;
-    // #TEST#: IV11 Inline Variable fn2
+    // #TEST#: IV4 Inline Variable fn2
     j += (*fn2)();
     require_equal(3, j);
 }
@@ -51,7 +51,7 @@ void TestString()
 {
     std::string temp = "This is a temp string.";
 
-    // #TEST#: IV3 Inline Variable temp
+    // #TEST#: IV5 Inline Variable temp
     std::string foo = temp;
     require_equal(foo, std::string{"This is a temp string."});
     foo += "  This is more text.";
@@ -74,7 +74,7 @@ public:
 
 void TestMemberPointer()
 {
-    // #TEST#: IV4 Inline Variable member
+    // #TEST#: IV6 Inline Variable member
     int (Foo::*member)() = &Foo::Operation1;
     Foo f;
     int j = (f.*member)();
@@ -86,7 +86,7 @@ void TestMemberPointer()
 
 void TestConstMemberPointer()
 {
-    // #TEST#: IV5 Inline Variable member
+    // #TEST#: IV7 Inline Variable member
     int (Foo::*member)() const = &Foo::Method1;
     Foo f;
     int j = (f.*member)();
@@ -100,11 +100,11 @@ void TestMemberPointer2()
 {
     int (Foo::*member)() = &Foo::Operation1;
     Foo f;
-    // #TEST#: IV6 Inline Variable member
+    // #TEST#: IV8 Inline Variable member
     int j = (f.*member)();
     require_equal(1, j);
     int (Foo::*member2)() = &Foo::Operation2;
-    // #TEST#: IV7 Inline Variable member2
+    // #TEST#: IV9 Inline Variable member2
     j += (f.*member2)();
     require_equal(3, j);
 }
@@ -113,11 +113,11 @@ void TestConstMemberPointer2()
 {
     int (Foo::*member)() const = &Foo::Method1;
     Foo f;
-    // #TEST#: IV8 Inline Variable member
+    // #TEST#: IV10 Inline Variable member
     int j = (f.*member)();
     require_equal(1, j);
     int (Foo::*member2)() const = &Foo::Method2;
-    // #TEST#: IV9 Inline Variable member2
+    // #TEST#: IV11 Inline Variable member2
     j += (f.*member2)();
     require_equal(3, j);
 }

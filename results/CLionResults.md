@@ -473,15 +473,15 @@ Case | Result
 ---- | ------
 IV1  | Pass
 IV2  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV3  | Pass
-IV4  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV5  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV3 | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV4 | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV5  | Pass
 IV6  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV7  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV8  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV9  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV10 | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
-IV11 | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV10  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
+IV11  | Failure (not available) [1925](https://youtrack.jetbrains.com/issue/CPP-1925)
 IV12 | Failure (not available) [2252](https://youtrack.jetbrains.com/issue/CPP-2252)
 
 ## Move Implementation to Source File

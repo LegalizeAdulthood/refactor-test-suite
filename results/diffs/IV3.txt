@@ -1,20 +1,15 @@
 diff --git a/RefactorTest/InlineVariable.cpp b/RefactorTest/InlineVariable.cpp
-index 826c9b0..ae3f631 100644
+index 826c9b0..d33a9db 100644
 --- a/RefactorTest/InlineVariable.cpp
 +++ b/RefactorTest/InlineVariable.cpp
-@@ -49,13 +49,11 @@ void TestFunction2()
+@@ -37,9 +37,8 @@ void TestFunction()
  
- void TestString()
+ void TestFunction2()
  {
--    std::string temp = "This is a temp string.";
--
-     // #TEST#: IV3 Inline Variable temp
--    std::string foo = temp;
-+    std::string foo = "This is a temp string.";
-     require_equal(foo, std::string{"This is a temp string."});
-     foo += "  This is more text.";
--    foo += temp;
-+    foo += std::string("This is a temp string.");
-     require_equal(foo,
-                   std::string{"This is a temp string."
-                               "  This is more text."
+-    int (*fn)() = Function1;
+     // #TEST#: IV3 Inline Variable fn
+-    int j = (*fn)();
++    int j = Function1();
+     require_equal(1, j);
+     int (*fn2)() = Function2;
+     // #TEST#: IV4 Inline Variable fn2
