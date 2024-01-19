@@ -1,24 +1,24 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index 03d4f8d..968c93d 100644
+index 03d4f8d..29e8b1c 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -163,12 +163,18 @@ public:
+@@ -126,13 +126,18 @@ public:
+         _y = 4;
      }
  
-     typedef void (Foo::*MethodPtr)(int);
-+
-+    void goink()
++    void goink(int (*&result)())
 +    {
-+        member = &Foo::Operation1;
++        result = Function1;
 +    }
 +
-     MethodPtr Method4(int x)
+     int (*Method2(int x))()
      {
+         int (*result)();
          if (x < 0)
          {
-             // #TEST#: EM10 Extract Method on next line, void goink()
--            member = &Foo::Operation1;
-+            goink();
+             // #TEST#: EM10 Extract Method on next line, void goink(int (*&result)())
+-            result = Function1;
++            goink(result);
          }
          else
          {

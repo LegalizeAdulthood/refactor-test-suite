@@ -1,25 +1,26 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index 03d4f8d..05471c1 100644
+index 3a0c9f4..279f4f3 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -98,13 +98,19 @@ struct Bar
+@@ -66,6 +66,12 @@ struct Bar
      }
  
-     typedef void (Bar::*ConstMethodPtr)(int) const;
+     typedef void (Bar::*MethodPtr)(int);
 +
-+    void goink(ConstMethodPtr &member)
++    MethodPtr goink()
 +    {
-+        member = &Bar::Const1;
++        return &Bar::Operation1;
 +    }
 +
-     ConstMethodPtr Method6(int x)
+     MethodPtr Method4(int x)
      {
-         ConstMethodPtr member;
-         if (x < 0)
+         MethodPtr member;
+@@ -73,7 +79,7 @@ struct Bar
          {
-             // #TEST#: EM6 Extract Method on next line, void goink(ConstMethodPtr &member)
--            member = &Bar::Const1;
-+            goink(member);
+             // #TEST#: EM5 Extract Method on next line, void goink(MethodPtr &member)
+             // #TEST#: EM6 Extract Method on rhs of assignment, MethodPtr goink()
+-            member = &Bar::Operation1;
++            member = goink();
          }
          else
          {

@@ -411,25 +411,25 @@ EXF19 | Pass
 Case | Result
 ---- | ------
 EM1  | Pass
-EM2  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM2 | Pass
 EM3  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM4  | Pass
-EM5  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
-EM6  | Pass
-EM7  | Pass
-EM8  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM4  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM5  | Pass
+EM6 | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM7  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM8  | Pass
 EM9  | Pass
-EM10 | Pass
-EM11 | Pass
+EM10  | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM11  | Pass
 EM12 | Pass
-EM13 | Failure (generates invalid code when extracted below) [1918](https://youtrack.jetbrains.com/issue/CPP-1918)
+EM13 | Pass
 EM14 | Pass
-EM15 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM16 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM15 | Failure (generates invalid code when extracted below) [1918](https://youtrack.jetbrains.com/issue/CPP-1918)
+EM16 | Pass
 EM17 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
 EM18 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
-EM19 | Pass
-EM20 | Failure (generates invalid code) [1917](https://youtrack.jetbrains.com/issue/CPP-1917)
+EM19 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
+EM20 | Failure (generates invalid code when extracted below) [1919](https://youtrack.jetbrains.com/issue/CPP-1919)
 EM21 | Pass
 
 ## Extract Parameter

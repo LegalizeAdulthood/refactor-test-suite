@@ -1,23 +1,23 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index 03d4f8d..eb63cc4 100644
+index 03d4f8d..4ccad15 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -270,12 +270,18 @@ union Frob
+@@ -234,12 +234,18 @@ union Frob
+     }
  
-     typedef void (Frob::*MethodPtr)(int);
-     MethodPtr member_ptr;
+     int (*fn)();
 +
 +    void goink()
 +    {
-+        member_ptr = &Frob::Operation1;
++        fn = Function1;
 +    }
 +
-     MethodPtr Method4(int x)
+     int (*Method2(int x))()
      {
          if (x < 0)
          {
              // #TEST#: EM16 Extract Method on next line, void goink()
--            member_ptr = &Frob::Operation1;
+-            fn = Function1;
 +            goink();
          }
          else

@@ -330,25 +330,25 @@ EXF19 | Pass
 Case | Result
 ---- | ------
 EM1 | Pass
-EM2 | Pass
-EM3 | Pass (unnecessary use of namespace)
+EM2 | Failure (unavailable)
+EM3 | Pass
 EM4 | Pass (unnecessary use of namespace)
 EM5 | Pass (unnecessary use of namespace)
 EM6 | Pass (unnecessary use of namespace)
-EM7 | Pass
-EM8 | Pass
+EM7 | Pass (unnecessary use of namespace)
+EM8 | Pass (unnecessary use of namespace)
 EM9 | Pass
 EM10 | Pass
-EM11 | Failure (creates invalid code)
-EM12 | Pass (unnecessary use of namespace)
-EM13 | Pass
-EM14 | Pass
+EM11 | Pass
+EM12 | Pass
+EM13 | Failure (creates invalid code)
+EM14 | Pass (unnecessary use of namespace)
 EM15 | Pass
 EM16 | Pass
-EM17 | Failure (creates invalid code)
+EM17 | Pass
 EM18 | Pass
-EM19 | Failure (unavailable)
-EM20 | Pass (unnecessary use of namespace)
+EM19 | Failure (creates invalid code)
+EM20 | Pass
 EM21 | Pass
 
 ## Move Implementation to Source File

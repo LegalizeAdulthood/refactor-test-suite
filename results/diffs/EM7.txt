@@ -1,21 +1,24 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index 03d4f8d..453c7a1 100644
+index 03d4f8d..be3bad1 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -119,10 +119,15 @@ class Foo
- public:
-     Foo() {}
- 
-+    void goink()
-+    {
-+        _x = 3;
-+    }
-+
-     void Method1()
-     {
-         // #TEST#: EM7 Extract Method on next line, void goink()
--        _x = 3;
-+        goink();
-         _y = 4;
+@@ -82,13 +82,18 @@ struct Bar
+         return member;
      }
  
++    void goink(void (Bar::*&member)(int) const)
++    {
++        member = &Bar::Const1;
++    }
++
+     void (Bar::*Method5(int x))(int) const
+     {
+         void (Bar::*member)(int) const;
+         if (x < 0)
+         {
+             // #TEST#: EM7 Extract Method on next line, void goink(void (Bar::*&member)(int) const)
+-            member = &Bar::Const1;
++            goink(member);
+         }
+         else
+         {

@@ -1,26 +1,24 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index 3a0c9f4..279f4f3 100644
+index cc839d5..3850c40 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -66,6 +66,12 @@ struct Bar
-     }
+@@ -301,12 +301,18 @@ union Frob
  
-     typedef void (Bar::*MethodPtr)(int);
+     typedef void (Frob::*ConstMethodPtr)(int) const;
+     ConstMethodPtr cmember_ptr;
 +
-+    MethodPtr goink()
++    void goink()
 +    {
-+        return &Bar::Operation1;
++        cmember_ptr = &Frob::Const1;
 +    }
 +
-     MethodPtr Method4(int x)
+     ConstMethodPtr Method6(int x)
      {
-         MethodPtr member;
-@@ -73,7 +79,7 @@ struct Bar
+         if (x < 0)
          {
-             // #TEST#: EM4 Extract Method on next line, void goink(MethodPtr &member)
-             // #TEST#: EM20 Extract Method on rhs of assignment, MethodPtr goink()
--            member = &Bar::Operation1;
-+            member = goink();
+             // #TEST#: EM20 Extract Method on next line, void goink()
+-            cmember_ptr = &Frob::Const1;
++            goink();
          }
          else
          {

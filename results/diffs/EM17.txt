@@ -1,23 +1,23 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index cc839d5..4a0866c 100644
+index 03d4f8d..02a0801 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -285,12 +285,18 @@ union Frob
-     }
+@@ -254,12 +254,18 @@ union Frob
+     void Const2(int x) const {}
  
-     void (Frob::*cmember)(int) const;
+     void (Frob::*member)(int);
 +
 +    void goink()
 +    {
-+        cmember = &Frob::Const1;
++        member = &Frob::Operation1;
 +    }
 +
-     void (Frob::*Method5(int x))(int) const
+     void (Frob::*Method3(int x))(int)
      {
          if (x < 0)
          {
              // #TEST#: EM17 Extract Method on next line, void goink()
--            cmember = &Frob::Const1;
+-            member = &Frob::Operation1;
 +            goink();
          }
          else

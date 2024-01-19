@@ -1,22 +1,24 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index c31887c..454fb5a 100644
+index cc839d5..4a0866c 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -21,10 +21,16 @@ struct Bar
-         _y = 4;
+@@ -285,12 +285,18 @@ union Frob
      }
  
-+    void goink(int &x) const
+     void (Frob::*cmember)(int) const;
++
++    void goink()
 +    {
-+        x = Function1(_x) + Function2();
++        cmember = &Frob::Const1;
 +    }
 +
-     void ConstOperation() const
+     void (Frob::*Method5(int x))(int) const
      {
-         // #TEST#: EM19 Extract Method on next line, void goink(int &) const
--        int x = Function1(_x) + Function2();
-+        int x;
-+        goink(x);
-         int y = x * 2;
-         require_equal(_x + 2, x);
-         require_equal((_x + 2) * 2, y);
+         if (x < 0)
+         {
+             // #TEST#: EM19 Extract Method on next line, void goink()
+-            cmember = &Frob::Const1;
++            goink();
+         }
+         else
+         {

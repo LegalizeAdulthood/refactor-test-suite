@@ -125,23 +125,23 @@ Case | Result
 EM1 | Pass
 EM2 | Failure (creates invalid code)
 EM3 | Failure (creates invalid code)
-EM4 | Pass (reads uninitialized memory)
-EM5 | Failure (creates invalid code)
-EM6 | Pass (reads uninitialized memory)
-EM7 | Pass
-EM8 | Failure (creates invalid code)
+EM4 | Failure (creates invalid code)
+EM5 | Pass (reads uninitialized memory)
+EM6 | Failure (creates invalid code)
+EM7 | Failure (creates invalid code)
+EM8 | Pass (reads uninitialized memory)
 EM9 | Pass
-EM10 | Pass
-EM11 | Failure (creates invalid code)
+EM10 | Failure (creates invalid code)
+EM11 | Pass
 EM12 | Pass
-EM13 | Pass
+EM13 | Failure (creates invalid code)
 EM14 | Pass
 EM15 | Pass
 EM16 | Pass
-EM17 | Failure (creates invalid code)
+EM17 | Pass
 EM18 | Pass
 EM19 | Failure (creates invalid code)
-EM20 | Failure (creates invalid code)
+EM20 | Pass
 EM21 | Failure (changes meaning of code)
 
 ## Move Implementation to Source File

@@ -23,7 +23,7 @@ struct Bar
 
     void ConstOperation() const
     {
-        // #TEST#: EM19 Extract Method on next line, void goink(int &x) const
+        // #TEST#: EM2 Extract Method on next line, void goink(int &x) const
         int x = Function1(_x) + Function2();
         int y = x * 2;
         require_equal(_x + 2, x);
@@ -35,7 +35,7 @@ struct Bar
         int (*result)();
         if (x < 0)
         {
-            // #TEST#: EM2 Extract Method on next line, void goink(int (*&result)())
+            // #TEST#: EM3 Extract Method on next line, void goink(int (*&result)())
             result = Function1;
         }
         else
@@ -55,7 +55,7 @@ struct Bar
         void (Bar::*member)(int);
         if (x < 0)
         {
-            // #TEST#: EM3 Extract Method on next line, void goink(void (Bar::*&member)())
+            // #TEST#: EM4 Extract Method on next line, void goink(void (Bar::*&member)())
             member = &Bar::Operation1;
         }
         else
@@ -71,8 +71,8 @@ struct Bar
         MethodPtr member;
         if (x < 0)
         {
-            // #TEST#: EM4 Extract Method on next line, void goink(MethodPtr &member)
-            // #TEST#: EM20 Extract Method on rhs of assignment, MethodPtr goink()
+            // #TEST#: EM5 Extract Method on next line, void goink(MethodPtr &member)
+            // #TEST#: EM6 Extract Method on rhs of assignment, MethodPtr goink()
             member = &Bar::Operation1;
         }
         else
@@ -87,7 +87,7 @@ struct Bar
         void (Bar::*member)(int) const;
         if (x < 0)
         {
-            // #TEST#: EM5 Extract Method on next line, void goink(void (Bar::*&member)(int) const)
+            // #TEST#: EM7 Extract Method on next line, void goink(void (Bar::*&member)(int) const)
             member = &Bar::Const1;
         }
         else
@@ -103,7 +103,7 @@ struct Bar
         ConstMethodPtr member;
         if (x < 0)
         {
-            // #TEST#: EM6 Extract Method on next line, void goink(ConstMethodPtr &member)
+            // #TEST#: EM8 Extract Method on next line, void goink(ConstMethodPtr &member)
             member = &Bar::Const1;
         }
         else
@@ -121,7 +121,7 @@ public:
 
     void Method1()
     {
-        // #TEST#: EM7 Extract Method on next line, void goink()
+        // #TEST#: EM9 Extract Method on next line, void goink()
         _x = 3;
         _y = 4;
     }
@@ -131,7 +131,7 @@ public:
         int (*result)();
         if (x < 0)
         {
-            // #TEST#: EM8 Extract Method on next line, void goink(int (*&result)())
+            // #TEST#: EM10 Extract Method on next line, void goink(int (*&result)())
             result = Function1;
         }
         else
@@ -152,7 +152,7 @@ public:
     {
         if (x < 0)
         {
-            // #TEST#: EM9 Extract Method on next line, void goink()
+            // #TEST#: EM11 Extract Method on next line, void goink()
             member = &Foo::Operation1;
         }
         else
@@ -167,7 +167,7 @@ public:
     {
         if (x < 0)
         {
-            // #TEST#: EM10 Extract Method on next line, void goink()
+            // #TEST#: EM12 Extract Method on next line, void goink()
             member = &Foo::Operation1;
         }
         else
@@ -182,7 +182,7 @@ public:
     {
         if (x < 0)
         {
-            // #TEST#: EM11 Extract Method on next line, void goink()
+            // #TEST#: EM13 Extract Method on next line, void goink()
             cmember = &Foo::Const1;
         }
         else
@@ -198,7 +198,7 @@ public:
         ConstMethodPtr member;
         if (x < 0)
         {
-            // #TEST#: EM12 Extract Method on next line, void goink(ConstMethodPtr &member)
+            // #TEST#: EM14 Extract Method on next line, void goink(ConstMethodPtr &member)
             member = &Foo::Const1;
         }
         else
@@ -229,7 +229,7 @@ union Frob
 
     void Method1()
     {
-        // #TEST#: EM13 Extract Method on next line, void goink()
+        // #TEST#: EM15 Extract Method on next line, void goink()
         i = 3;
     }
 
@@ -238,7 +238,7 @@ union Frob
     {
         if (x < 0)
         {
-            // #TEST#: EM14 Extract Method on next line, void goink()
+            // #TEST#: EM16 Extract Method on next line, void goink()
             fn = Function1;
         }
         else
@@ -258,7 +258,7 @@ union Frob
     {
         if (x < 0)
         {
-            // #TEST#: EM15 Extract Method on next line, void goink()
+            // #TEST#: EM17 Extract Method on next line, void goink()
             member = &Frob::Operation1;
         }
         else
@@ -274,7 +274,7 @@ union Frob
     {
         if (x < 0)
         {
-            // #TEST#: EM16 Extract Method on next line, void goink()
+            // #TEST#: EM18 Extract Method on next line, void goink()
             member_ptr = &Frob::Operation1;
         }
         else
@@ -289,7 +289,7 @@ union Frob
     {
         if (x < 0)
         {
-            // #TEST#: EM17 Extract Method on next line, void goink()
+            // #TEST#: EM19 Extract Method on next line, void goink()
             cmember = &Frob::Const1;
         }
         else
@@ -305,7 +305,7 @@ union Frob
     {
         if (x < 0)
         {
-            // #TEST#: EM18 Extract Method on next line, void goink()
+            // #TEST#: EM20 Extract Method on next line, void goink()
             cmember_ptr = &Frob::Const1;
         }
         else

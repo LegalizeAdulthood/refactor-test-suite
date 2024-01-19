@@ -1,24 +1,24 @@
 diff --git a/RefactorTest/ExtractMethod.cpp b/RefactorTest/ExtractMethod.cpp
-index 3a0c9f4..6212abf 100644
+index 3a0c9f4..3eec786 100644
 --- a/RefactorTest/ExtractMethod.cpp
 +++ b/RefactorTest/ExtractMethod.cpp
-@@ -50,13 +50,18 @@ struct Bar
-     void Const1(int x) const {}
-     void Const2(int x) const {}
+@@ -30,13 +30,18 @@ struct Bar
+         require_equal((_x + 2) * 2, y);
+     }
  
-+    void goink(void (Bar::*&member)(int))
++    void goink(int (*&result)())
 +    {
-+        member = &Bar::Operation1;
++        result = Function1;
 +    }
 +
-     void (Bar::*Method3(int x))(int)
+     int (*Method2(int x))()
      {
-         void (Bar::*member)(int);
+         int (*result)();
          if (x < 0)
          {
-             // #TEST#: EM3 Extract Method on next line, void goink(void (Bar::*&member)())
--            member = &Bar::Operation1;
-+            goink(member);
+             // #TEST#: EM3 Extract Method on next line, void goink(int (*&result)())
+-            result = Function1;
++            goink(result);
          }
          else
          {

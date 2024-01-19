@@ -176,16 +176,16 @@ EC13   |
 Case | Result
 ---- | ------
 EM1   | Pass
-EM2   |
+EM2  |
 EM3   |
 EM4   |
 EM5   |
-EM6   |
+EM6 |
 EM7   |
 EM8   |
 EM9   |
-EM10  |
-EM11  |
+EM10   |
+EM11   |
 EM12  |
 EM13  |
 EM14  |
@@ -194,7 +194,7 @@ EM16  |
 EM17  |
 EM18  |
 EM19  |
-EM20 |
+EM20  |
 EM21 |
 
 ## Extract Function
