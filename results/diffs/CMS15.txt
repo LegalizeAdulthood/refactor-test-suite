@@ -1,23 +1,21 @@
 diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
-index 40c87d9..acea242 100644
+index 40c87d9..ef0ede2 100644
 --- a/RefactorTest/CreateMethodStub.cpp
 +++ b/RefactorTest/CreateMethodStub.cpp
-@@ -53,6 +53,9 @@ private:
-     void bar(const std::string &arg)
-     {
-     }
-+    void blab() const
-+    {
-+    }
-     void gronk() const;
-     int _i;
- };
-@@ -76,7 +79,7 @@ Foo2::Foo2() : _i(0)
- void Foo2::gronk() const
- {
-     // #TEST#: CMS15 Create method stub for blab; method should be const
--    //(*this).blab();
-+    (*this).blab();
- }
+@@ -147,10 +147,15 @@ void TestFoo45()
  
- class Foo3
+ } // namespace CreateMethodStubNamespace
+ 
++int CreateMethodStubReturnsInteger()
++{
++    return 0;
++}
++
+ void TestCreateMethodStub()
+ {
+     // #TEST#: CMS15 Create function stub for CreateMethodStubReturnsInteger()
+-    //int xint = CreateMethodStubReturnsInteger();
++    int xint = CreateMethodStubReturnsInteger();
+ 
+     // #TEST#: CMS16 Create function stub for CreateMethodStubNoReturnValue()
+     //CreateMethodStubNoReturnValue();

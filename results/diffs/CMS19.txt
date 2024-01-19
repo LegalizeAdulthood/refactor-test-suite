@@ -1,23 +1,26 @@
 diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
-index 40c87d9..c799f9f 100644
+index 40c87d9..84411d2 100644
 --- a/RefactorTest/CreateMethodStub.cpp
 +++ b/RefactorTest/CreateMethodStub.cpp
-@@ -114,6 +114,9 @@ struct Foo5
-         // #TEST#: CMS17 Create stub for method Operation2
-         //Operation2();
-     }
-+    void Operation2()
+@@ -82,6 +82,12 @@ void Foo2::gronk() const
+ class Foo3
+ {
+ public:
++    Foo3()
 +    {
 +    }
- };
++    Foo3(int Goink)
++    {
++    }
+     int Operation() const
+     {
+         Foo2 *f = new Foo2();
+@@ -164,7 +170,7 @@ void TestCreateMethodStub()
  
- void TestFoo45()
-@@ -134,7 +137,7 @@ void TestFoo45()
-     {
-         Foo5 *foo5 = new Foo5();
-         // #TEST#: CMS19 Create stub for method void Foo5::Operation2()
--        //foo5->Operation2();
-+        foo5->Operation2();
-         delete foo5;
-     }
-     {
+     using CreateMethodStubNamespace::Foo3;
+     // #TEST#: CMS19 Create method stub for Foo3 c'tor
+-    //Foo3 f3 = Foo3(3);
++    Foo3 f3 = Foo3(3);
+ 
+     Foo3 *pf3 = 0;
+     // #TEST#: CMS20 Create method stub for Foo3 c'tor

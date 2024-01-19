@@ -310,26 +310,26 @@ CS45 | Pass
 Case | Result
 ---- | ------
 CMS1  | Pass
-CMS2  | Pass
-CMS3  | Pass
-CMS4  | Failure (doesn't create default c'tor) [1601](https://youtrack.jetbrains.com/issue/CPP-1601)
-CMS5  | Failure (doesn't create default c'tor) [1601](https://youtrack.jetbrains.com/issue/CPP-1601)
-CMS6  | Pass
-CMS7  | Pass
-CMS8  | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
-CMS9  | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
-CMS10 | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS2 | Pass
+CMS3  | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS4  | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS5 | Failure (not available) [1908](https://youtrack.jetbrains.com/issue/CPP-1908)
+CMS6 | Pass
+CMS7 | Pass
+CMS8 | Pass
+CMS9 | Pass
+CMS10 | Pass
 CMS11 | Pass
 CMS12 | Pass
 CMS13 | Pass
 CMS14 | Pass
-CMS15 | Pass
-CMS16 | Pass
+CMS15  | Pass
+CMS16  | Pass
 CMS17 | Pass
-CMS18 | Pass
-CMS19 | Pass
-CMS20 | Pass
-CMS21 | Pass
+CMS18  | Pass
+CMS19  | Failure (doesn't create default c'tor) [1601](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS20  | Failure (doesn't create default c'tor) [1601](https://youtrack.jetbrains.com/issue/CPP-1601)
+CMS21  | Pass
 CMS22 | Pass
 
 ## Create Setter Method

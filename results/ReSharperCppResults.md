@@ -331,26 +331,26 @@ CS45 | Pass
 Case | Result
 ---- | ------
 CMS1  | Pass
-CMS2  | Pass
+CMS2 | Pass
 CMS3  | Pass
-CMS4  | Failure (does not build) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
-CMS5  | Failure (does not build) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
-CMS6  | Pass
-CMS7  | Pass
-CMS8  | Pass
-CMS9  | Pass
+CMS4  | Pass
+CMS5 | Pass
+CMS6 | Pass
+CMS7 | Pass
+CMS8 | Failure (does not build) [RSCPP-35263](https://youtrack.jetbrains.com/issue/RSCPP-35263/Create-member-function-generates-code-with-incorrect-visibility)
+CMS9 | Pass
 CMS10 | Pass
 CMS11 | Pass
 CMS12 | Pass
 CMS13 | Pass
-CMS14 | Failure (does not build) [RSCPP-35263](https://youtrack.jetbrains.com/issue/RSCPP-35263/Create-member-function-generates-code-with-incorrect-visibility)
-CMS15 | Pass
-CMS16 | Pass
+CMS14 | Pass
+CMS15  | Pass
+CMS16  | Pass
 CMS17 | Pass
-CMS18 | Pass
-CMS19 | Pass
-CMS20 | Pass
-CMS21 | Pass
+CMS18  | Pass
+CMS19  | Failure (does not build) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
+CMS20  | Failure (does not build) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
+CMS21  | Pass
 CMS22 | Pass
 
 ## Create Multi-Variable Declaration

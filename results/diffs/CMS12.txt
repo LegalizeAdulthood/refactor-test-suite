@@ -1,25 +1,23 @@
 diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
-index 40c87d9..4a3c853 100644
+index 40c87d9..2942ef9 100644
 --- a/RefactorTest/CreateMethodStub.cpp
 +++ b/RefactorTest/CreateMethodStub.cpp
-@@ -147,6 +147,11 @@ void TestFoo45()
+@@ -102,6 +102,9 @@ union Foo4
+         // #TEST#: CMS9 Create stub for method Operation2
+         //Operation2();
+     }
++    void Operation2()
++    {
++    }
+ };
  
- } // namespace CreateMethodStubNamespace
+ struct Foo5
+@@ -128,7 +131,7 @@ void TestFoo45()
+         Foo4 foo4;
+         foo4.Operation();
+         // #TEST#: CMS12 Create stub for method void Foo4::Operation2()
+-        //foo4.Operation2();
++        foo4.Operation2();
+     }
  
-+std::string CreateMethodStubReturnsString()
-+{
-+    return std::string{};
-+}
-+
- void TestCreateMethodStub()
- {
-     // #TEST#: CMS1 Create function stub for CreateMethodStubReturnsInteger()
-@@ -156,7 +161,7 @@ void TestCreateMethodStub()
-     //CreateMethodStubNoReturnValue();
- 
-     // #TEST#: CMS12 Create function stub for CreateMethodStubReturnsString()
--    //std::string text = CreateMethodStubReturnsString();
-+    std::string text = CreateMethodStubReturnsString();
- 
-     // #TEST#: CMS3 Create method stub for c'tor; shouldn't work
-     using CreateMethodStubNamespace::Foo;
+     {

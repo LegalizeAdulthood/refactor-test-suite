@@ -1,26 +1,23 @@
 diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
-index 40c87d9..84411d2 100644
+index 40c87d9..e0d9247 100644
 --- a/RefactorTest/CreateMethodStub.cpp
 +++ b/RefactorTest/CreateMethodStub.cpp
-@@ -82,6 +82,12 @@ void Foo2::gronk() const
- class Foo3
- {
- public:
-+    Foo3()
-+    {
-+    }
-+    Foo3(int Goink)
-+    {
-+    }
-     int Operation() const
+@@ -53,6 +53,9 @@ private:
+     void bar(const std::string &arg)
      {
-         Foo2 *f = new Foo2();
-@@ -164,7 +170,7 @@ void TestCreateMethodStub()
- 
-     using CreateMethodStubNamespace::Foo3;
-     // #TEST#: CMS4 Create method stub for Foo3 c'tor
--    //Foo3 f3 = Foo3(3);
-+    Foo3 f3 = Foo3(3);
- 
-     Foo3 *pf3 = 0;
-     // #TEST#: CMS5 Create method stub for Foo3 c'tor
+     }
++    void bar(double Goink)
++    {
++    }
+     void gronk() const;
+     int _i;
+ };
+@@ -64,7 +67,7 @@ Foo2::Foo2() : _i(0)
+     // #TEST#: CMS3 Create stub for method bar
+     //bar(f);
+     // #TEST#: CMS4 Create stub for method bar
+-    //this->bar(1.0);
++    this->bar(1.0);
+     // #TEST#: CMS5 Create stub for method bar
+     //(*this).bar(1.0);
+     std::string foo = "Yeeha!";

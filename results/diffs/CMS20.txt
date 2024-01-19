@@ -1,23 +1,26 @@
 diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
-index 40c87d9..2942ef9 100644
+index 40c87d9..8b9f5fd 100644
 --- a/RefactorTest/CreateMethodStub.cpp
 +++ b/RefactorTest/CreateMethodStub.cpp
-@@ -102,6 +102,9 @@ union Foo4
-         // #TEST#: CMS16 Create stub for method Operation2
-         //Operation2();
-     }
-+    void Operation2()
+@@ -82,6 +82,12 @@ void Foo2::gronk() const
+ class Foo3
+ {
+ public:
++    Foo3()
 +    {
 +    }
- };
- 
- struct Foo5
-@@ -128,7 +131,7 @@ void TestFoo45()
-         Foo4 foo4;
-         foo4.Operation();
-         // #TEST#: CMS20 Create stub for method void Foo4::Operation2()
--        //foo4.Operation2();
-+        foo4.Operation2();
-     }
- 
++    Foo3(int Goink)
++    {
++    }
+     int Operation() const
      {
+         Foo2 *f = new Foo2();
+@@ -168,7 +174,7 @@ void TestCreateMethodStub()
+ 
+     Foo3 *pf3 = 0;
+     // #TEST#: CMS20 Create method stub for Foo3 c'tor
+-    //pf3 = new Foo3(3);
++    pf3 = new Foo3(3);
+     delete pf3;
+ 
+     Foo3 x;

@@ -1,23 +1,23 @@
 diff --git a/RefactorTest/CreateMethodStub.cpp b/RefactorTest/CreateMethodStub.cpp
-index 40c87d9..1121e25 100644
+index 40c87d9..44e53d0 100644
 --- a/RefactorTest/CreateMethodStub.cpp
 +++ b/RefactorTest/CreateMethodStub.cpp
-@@ -53,6 +53,9 @@ private:
-     void bar(const std::string &arg)
-     {
+@@ -102,6 +102,9 @@ union Foo4
+         // #TEST#: CMS9 Create stub for method Operation2
+         //Operation2();
      }
-+    void bar(const std::string &Goink, const std::string &Goink2)
++    void Operation2()
 +    {
 +    }
-     void gronk() const;
-     int _i;
  };
-@@ -70,7 +73,7 @@ Foo2::Foo2() : _i(0)
-     std::string foo = "Yeeha!";
-     std::string nelly = "Whoa, Nelly";
-     // #TEST#: CMS11 Create overloaded stub for method bar
--    //(*this).bar(foo, nelly);
-+    (*this).bar(foo, nelly);
- }
  
- void Foo2::gronk() const
+ struct Foo5
+@@ -121,7 +124,7 @@ void TestFoo45()
+     {
+         Foo4 *foo4 = new Foo4();
+         // #TEST#: CMS11 Create stub for method void Foo4::Operation2()
+-        //foo4->Operation2();
++        foo4->Operation2();
+         delete foo4;
+     }
+     {
