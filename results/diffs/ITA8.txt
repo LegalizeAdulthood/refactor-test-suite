@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/InlineTypeAlias.cpp b/RefactorTest/InlineTypeAlias.cpp
-index 2bc2e1d..ab6ecaf 100644
+index 2bc2e1d..5951f34 100644
 --- a/RefactorTest/InlineTypeAlias.cpp
 +++ b/RefactorTest/InlineTypeAlias.cpp
-@@ -56,7 +56,7 @@ void f2()
+@@ -52,7 +52,7 @@ void f2()
+ {
+     typedef int IntT;
+     // #TEST#: ITA8 Inline typedef IntT
+-    IntT x{10};
++    int x{10};
      REQUIRE_EQUAL(10, x);
  
-     // #TEST#: ITA8 Inline typedef InlineTypeAlias::StringVecT
--    InlineTypeAlias::StringVecT v;
-+    std::vector<InlineTypeAlias::StringT> v;
-     // #TEST#: ITA9 Inline typedef InlineTypeAlias::StringVecT (not available)
-     using InlineTypeAlias::StringVecT;
-     // #TEST#: ITA10 Inline typedef StringVec
+     // #TEST#: ITA9 Inline typedef InlineTypeAlias::StringVecT

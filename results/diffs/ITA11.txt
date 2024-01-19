@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/InlineTypeAlias.cpp b/RefactorTest/InlineTypeAlias.cpp
-index 2bc2e1d..3dca816 100644
+index 2bc2e1d..fbf72fa 100644
 --- a/RefactorTest/InlineTypeAlias.cpp
 +++ b/RefactorTest/InlineTypeAlias.cpp
-@@ -62,7 +62,7 @@ void f2()
-     // #TEST#: ITA10 Inline typedef StringVec
-     const StringVecT::const_iterator begin = v.cbegin();
+@@ -60,7 +60,7 @@ void f2()
+     // #TEST#: ITA10 Inline typedef InlineTypeAlias::StringVecT (not available)
+     using InlineTypeAlias::StringVecT;
      // #TEST#: ITA11 Inline typedef StringVec
--    typedef StringVecT::const_iterator ConstIteratorT;
-+    typedef std::vector<InlineTypeAlias::StringT>::const_iterator ConstIteratorT;
-     // #TEST#: ITA12 Inline typedef ConstIterator
-     const ConstIteratorT end = v.cend();
-     REQUIRE_EQUAL(end, begin);
+-    const StringVecT::const_iterator begin = v.cbegin();
++    const std::vector<InlineTypeAlias::StringT>::const_iterator begin = v.cbegin();
+     // #TEST#: ITA12 Inline typedef StringVec
+     typedef StringVecT::const_iterator ConstIteratorT;
+     // #TEST#: ITA13 Inline typedef ConstIterator

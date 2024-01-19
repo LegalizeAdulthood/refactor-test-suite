@@ -1,0 +1,13 @@
+diff --git a/RefactorTest/InlineTypeAlias.cpp b/RefactorTest/InlineTypeAlias.cpp
+index 597951b..7a1f6c7 100644
+--- a/RefactorTest/InlineTypeAlias.cpp
++++ b/RefactorTest/InlineTypeAlias.cpp
+@@ -32,7 +32,7 @@ void f1()
+     REQUIRE_EQUAL(10, x);
+ 
+     // #TEST#: ITA3 Inline type alias InlineTypeAlias::StringVec
+-    InlineTypeAlias::StringVec v;
++    std::vector<std::string> v;
+     // #TEST#: ITA4 Inline type alias InlineTypeAlias::StringVec (not available)
+     using InlineTypeAlias::StringVec;
+     // #TEST#: ITA5 Inline type alias StringVec
