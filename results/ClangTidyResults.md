@@ -61,70 +61,70 @@ Case | Result
 RIRF1 | Pass
 RIRF2 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
 RIRF3 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF4 | Pass
-RIRF5 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF6 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF7 | Pass
-RIRF8 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF4 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF5 | Pass
+RIRF6 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF7 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF8 | Pass
 RIRF9 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF10 | Pass
-RIRF11 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF12 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF13 | Pass
-RIRF14 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF15 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF16 | Pass
-RIRF17 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF18 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF19 | Pass
-RIRF20 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF10 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF11 | Pass
+RIRF12 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF13 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF14 | Pass
+RIRF15 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF16 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF17 | Pass
+RIRF18 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF19 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF20 | Pass
 RIRF21 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF22 | Pass
-RIRF23 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF24 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF25 | Pass
-RIRF26 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF27 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF28 | Pass
-RIRF29 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF30 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF31 | Pass
-RIRF32 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF33 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF34 | Pass
-RIRF35 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF36 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF37 | Pass
-RIRF38 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF39 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF40 | Pass
-RIRF41 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF22 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF23 | Pass
+RIRF24 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF25 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF26 | Pass
+RIRF27 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF28 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF29 | Pass
+RIRF30 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF31 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF32 | Pass
+RIRF33 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF34 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF35 | Pass
+RIRF36 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF37 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF38 | Pass
+RIRF39 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF40 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF41 | Pass
 RIRF42 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF43 | Pass
-RIRF44 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF45 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF46 | Pass
-RIRF47 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF48 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF49 | Failure (substitutes internal typedefs) [36688](https://llvm.org/show_bug.cgi?id=36688)
-RIRF50 | Failure (doesn't recognize caching end compare) [22570](https://github.com/llvm/llvm-project/issues/22570)
-RIRF51 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF52 | Failure (doesn't recognize caching end compare) [22570](https://github.com/llvm/llvm-project/issues/22570)
-RIRF53 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF54 | Pass
-RIRF55 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF56 | Pass
+RIRF43 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF44 | Pass
+RIRF45 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF46 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF47 | Pass
+RIRF48 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
+RIRF49 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF50 | Failure (substitutes internal typedefs) [36688](https://llvm.org/show_bug.cgi?id=36688)
+RIRF51 | Failure (doesn't recognize caching end compare) [22570](https://github.com/llvm/llvm-project/issues/22570)
+RIRF52 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF53 | Failure (doesn't recognize caching end compare) [22570](https://github.com/llvm/llvm-project/issues/22570)
+RIRF54 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF55 | Pass
+RIRF56 | Failure (doesn't recognize caching end compare, reverse loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF57 | Pass
-RIRF58 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF59 | Pass
+RIRF58 | Pass
+RIRF59 | Failure (doesn't recognize 0..N-1 loop) [22568](https://github.com/llvm/llvm-project/issues/22568)
 RIRF60 | Pass
-RIRF61 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
-RIRF62 | Pass
+RIRF61 | Pass
+RIRF62 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 RIRF63 | Pass
-RIRF64 | Failure (doesn't recognize caching end compare, 0..N-1 loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22568](https://github.com/llvm/llvm-project/issues/22568)
-RIRF65 | Pass
+RIRF64 | Pass
+RIRF65 | Failure (doesn't recognize caching end compare, 0..N-1 loop) [22570](https://github.com/llvm/llvm-project/issues/22570), [22568](https://github.com/llvm/llvm-project/issues/22568)
 RIRF66 | Pass
-RIRF67 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
+RIRF67 | Pass
 RIRF68 | Failure (doesn't recognize reverse loop) [22569](https://github.com/llvm/llvm-project/issues/22569)
 
 ## Replace NULL/0 With nullptr

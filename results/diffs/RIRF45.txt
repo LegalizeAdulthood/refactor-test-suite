@@ -1,12 +1,12 @@
 diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-index 765ba5c..0ac2014 100644
+index 765ba5c..a356227 100644
 --- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
 +++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-@@ -473,9 +473,9 @@ static void TestConstantStackArrayExplicitSize()
+@@ -465,9 +465,9 @@ static void TestConstantStackArrayExplicitSize()
  
      sum = 0;
      // #TEST#: RIRF45 Replace iterative for with range for
--    for (int i = 3; i >= 0; --i)
+-    for (int i = 0; i <= 3; ++i)
 +    for (int i : constantStackdataExlicitSize)
      {
 -        sum += constantStackdataExlicitSize[i];

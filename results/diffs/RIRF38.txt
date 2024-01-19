@@ -1,16 +1,16 @@
 diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-index 765ba5c..c0e524b 100644
+index 765ba5c..708dc9b 100644
 --- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
 +++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-@@ -402,9 +402,9 @@ static void TestStackArrayExplicitSize()
-     require_equal(1, stackDataExplicitSize[3]);
- 
+@@ -392,9 +392,9 @@ static void TestStackArrayExplicitSize()
+ {
+     int stackDataExplicitSize[4] = { 'q', 'u', 'x' };
      // #TEST#: RIRF38 Replace iterative for with range for
--    for (int i = 0; i <= 3; ++i)
+-    for (int i = 0; i < 4; ++i)
 +    for (int &i : stackDataExplicitSize)
      {
--        --stackDataExplicitSize[i];
-+        --i;
+-        ++stackDataExplicitSize[i];
++        ++i;
      }
-     require_equal(int('q'), stackDataExplicitSize[0]);
-     require_equal(int('u'), stackDataExplicitSize[1]);
+     require_equal(int('r'), stackDataExplicitSize[0]);
+     require_equal(int('v'), stackDataExplicitSize[1]);

@@ -1,12 +1,12 @@
 diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-index 765ba5c..73470be 100644
+index 765ba5c..eb82bed 100644
 --- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
 +++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-@@ -608,9 +608,9 @@ static void TestContainersWithSubscriptUsingSizeType()
+@@ -600,9 +600,9 @@ static void TestContainersWithSubscriptUsingSizeType()
  
-     sum = 0;
+     int sum = 0;
      // #TEST#: RIRF57 Replace iterative for with range for
--    for (std::vector<int>::size_type i = 0, size = c.size(); i < size; ++i)
+-    for (std::vector<int>::size_type i = 0; i < c.size(); ++i)
 +    for (int i : c)
      {
 -        sum += c[i];

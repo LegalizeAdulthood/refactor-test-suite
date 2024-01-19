@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-index 765ba5c..3aa679a 100644
+index 765ba5c..1804efd 100644
 --- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
 +++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-@@ -536,10 +536,9 @@ static void TestContainersWithIterators()
+@@ -527,10 +527,9 @@ static void TestContainersWithIterators()
  
-     sum = 0;
+     int sum = 0;
      // #TEST#: RIRF50 Replace iterative for with range for
 -    for (std::vector<int>::const_iterator it = c.cbegin(), end = c.cend();
--        end != it; ++it)
+-        it != end; ++it)
 +    for (int it : c)
      {
 -        sum += *it;

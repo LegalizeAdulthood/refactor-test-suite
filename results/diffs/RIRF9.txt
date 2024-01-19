@@ -1,8 +1,8 @@
 diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-index 765ba5c..5f83f03 100644
+index 765ba5c..dde0bde 100644
 --- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
 +++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-@@ -85,9 +85,9 @@ void TestConstantFileArrayImplicitSize()
+@@ -77,9 +77,9 @@ void TestConstantFileArrayImplicitSize()
  
      sum = 0;
      // #TEST#: RIRF9 Replace iterative for with range for

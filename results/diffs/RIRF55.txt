@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-index 765ba5c..668455f 100644
+index 765ba5c..4ad35ed 100644
 --- a/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
 +++ b/RefactorTest/ReplaceIterativeForWithRangeFor.cpp
-@@ -581,10 +581,9 @@ static void TestContainersWithIterators()
-     require_equal(int('p'), c[2]);
+@@ -571,10 +571,9 @@ static void TestContainersWithIterators()
+     require_equal(int('f') + int('o') + int('o'), sum);
  
      // #TEST#: RIRF55 Replace iterative for with range for
--    for (std::vector<int>::reverse_iterator it = c.rbegin(), end = c.rend();
+-    for (std::vector<int>::iterator it = c.begin(), end = c.end();
 -        it != end; ++it)
 +    for (int &it : c)
      {
--        --*it;
-+        --it;
+-        ++*it;
++        ++it;
      }
-     require_equal(int('f'), c[0]);
-     require_equal(int('o'), c[1]);
+     require_equal(int('g'), c[0]);
+     require_equal(int('p'), c[1]);
