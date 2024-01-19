@@ -584,30 +584,94 @@ void f1()
     }
 }
 
-// constraints
-// [ ] class templates
+template <typename T>
+    requires Squareable<T>
+class Sqr
+{
+public:
+    T operator()(T value) const
+    {
+        return value * value;
+    }
+};
+
+template <typename T>
+    requires Squareable<T>
+struct SqrStruct
+{
+    T operator()(T value) const
+    {
+        return value * value;
+    }
+};
+
+template <typename T>
+    requires Squareable<T>
+union SqrUnion
+{
+    T operator()(T value) const
+    {
+        return value * value;
+    }
+};
+
+// Simple constraint expressions via require clauses
+// [ ] class/struct/union templates
 //     [ ] single template parameter
-//         [ ] single constraint
-//         [ ] compound constraint
+//         [X] single constraint on template parameters
+//         [ ] single constraint on class
+//         [ ] compound constraint on template parameters
 //             [ ] conjunction
 //             [ ] disjunction
+//             [ ] combination
+//         [ ] compound constraint on class
+//             [ ] conjunction
+//             [ ] disjunction
+//             [ ] combination
 //     [ ] multiple template parameters
-//         [ ] single constraint
-//         [ ] compound constraint
+//         [ ] single constraint on template parameters
+//         [ ] single constraint on class
+//         [ ] compound constraint on template parameters
 //             [ ] conjunction
 //             [ ] disjunction
-// [ ] class template member functions
-//     [ ] single template parameter
-//         [ ] single constraint
-//         [ ] compound constraint
+//             [ ] combination
+//         [ ] compound constraint on class
 //             [ ] conjunction
 //             [ ] disjunction
-//     [ ] multiple template parameters
-//         [ ] single constraint
-//         [ ] compound constraint
-//             [ ] conjunction
-//             [ ] disjunction
-//
+//             [ ] combination
+void f2()
+{
+    {
+        Sqr<int> s1;
+        REQUIRE_EQUAL(4, s1(2));
+        Sqr<double> s2;
+        const double d = s2(2.0);
+        REQUIRE_EQUAL(4.0, d);
+        Sqr<Rope> s3;
+        const Rope r = s3(Rope{"square"});
+        REQUIRE_EQUAL(Rope{"square square"}, r);
+    }
+    {
+        SqrStruct<int> s1;
+        REQUIRE_EQUAL(4, s1(2));
+        SqrStruct<double> s2;
+        const double d = s2(2.0);
+        REQUIRE_EQUAL(4.0, d);
+        SqrStruct<Rope> s3;
+        const Rope r = s3(Rope{"square"});
+        REQUIRE_EQUAL(Rope{"square square"}, r);
+    }
+    {
+        SqrUnion<int> s1;
+        REQUIRE_EQUAL(4, s1(2));
+        SqrUnion<double> s2;
+        const double d = s2(2.0);
+        REQUIRE_EQUAL(4.0, d);
+        SqrUnion<Rope> s3;
+        const Rope r = s3(Rope{"square"});
+        REQUIRE_EQUAL(Rope{"square square"}, r);
+    }
+}
 
 }    // namespace
 
@@ -617,7 +681,7 @@ namespace RenameCpp20
 void TestRenameConstraints()
 {
     f1();
+    f2();
 }
 
 }
-
