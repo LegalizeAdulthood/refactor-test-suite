@@ -113,5 +113,5 @@ set_target_properties(refactor-test-suite PROPERTIES
 )
 target_link_libraries(refactor-test-suite PUBLIC refactor-test-cases)
 add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND refactor-test-suite)
-add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND test-names ${CMAKE_CURRENT_SOURCE_DIR} > ${CMAKE_BINARY_DIR}/Tool.md)
+add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND test-names -o "${CMAKE_BINARY_DIR}/Tool.md" ${CMAKE_CURRENT_SOURCE_DIR})
 add_custom_command(TARGET refactor-test-suite POST_BUILD COMMAND test-diffs ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/results/diffs)

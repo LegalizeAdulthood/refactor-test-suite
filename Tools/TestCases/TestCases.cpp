@@ -112,8 +112,7 @@ void Test::scanTestCaseLine(std::string_view line)
 
     const size_t begin = line.find_first_not_of(" \t", line.find(label) + label.length() - 1);
     const size_t end = line.find_first_of(' ', begin);
-    const std::string_view desc =
-        end != std::string_view::npos ? line.substr(line.find_first_not_of(' ', end)) : "";
+    const std::string_view desc = end != std::string_view::npos ? line.substr(line.find_first_not_of(' ', end)) : "";
     checkLabel(label, desc);
 }
 
@@ -131,18 +130,55 @@ void Test::scanTestCaseFile(std::filesystem::path path)
     }
 }
 
+    // a < b
+//  if a's filename < b's filename
+//  or
+//  they have the same filename and a is a header file and b is a source file
+bool compareSourcePath(const std::filesystem::path &lhs, const std::filesystem::path &rhs)
+{
+    return lhs.stem() < rhs.stem()
+        || (lhs.stem() == rhs.stem() && lhs.extension().string() == ".h"
+            && (rhs.extension().string() == ".cpp" || rhs.extension().string() == ".c"));
+};
+
+class TestCaseFileLister
+{
+public:
+    TestCaseFileLister(std::filesystem::path dir)
+    {
+        scanDirectory(dir);
+        std::sort(m_paths.begin(), m_paths.end(), compareSourcePath);
+    }
+    const std::vector<std::filesystem::path> &getPaths() const
+    {
+        return m_paths;
+    }
+
+private:
+    void scanDirectory(std::filesystem::path dir)
+    {
+        for (auto &entry : std::filesystem::directory_iterator(dir))
+        {
+            if (is_directory(entry))
+            {
+                scanDirectory(entry);
+            }
+            else
+            {
+                m_paths.push_back(entry);
+            }
+        }
+    }
+
+    std::vector<std::filesystem::path> m_paths;
+};
+
 void Test::scanTestCaseDirectory(std::filesystem::path dir)
 {
-    for (auto &entry : std::filesystem::directory_iterator(dir))
+    const TestCaseFileLister lister(dir);
+    for (const std::filesystem::path &path : lister.getPaths())
     {
-        if (is_directory(entry))
-        {
-            scanTestCaseDirectory(entry);
-        }
-        else
-        {
-            scanTestCaseFile(entry);
-        }
+        scanTestCaseFile(path);
     }
 }
 
@@ -152,6 +188,16 @@ void Test::sortTestCases()
     { return std::stoi(label.substr(label.find_first_of("0123456789"))); };
     for (Test &test : g_tests)
     {
+        int caseNum{};
+        for (const std::string &label : test.m_cases)
+        {
+            ++caseNum;
+            if (extractCaseNum(label) != caseNum)
+            {
+                test.m_casesConsecutive = false;
+                break;
+            }
+        }
         std::sort(test.m_cases.begin(),
                   test.m_cases.end(),
                   [&](const std::string &lhs, const std::string &rhs)
@@ -161,21 +207,11 @@ void Test::sortTestCases()
 
 void Test::sortTestPaths()
 {
-    // a < b
-    //  if a's filename < b's filename
-    //  or
-    //  they have the same filename and a is a header file and b is a source file
-    const auto compare = [](const std::filesystem::path &lhs, const std::filesystem::path &rhs)
-    {
-        return lhs.stem() < rhs.stem()
-            || (lhs.stem() == rhs.stem() && lhs.extension().string() == ".h"
-                && (rhs.extension().string() == ".cpp" || rhs.extension().string() == ".c"));
-    };
     for (Test &test : g_tests)
     {
         if (test.m_paths.size() > 1)
         {
-            std::sort(test.m_paths.begin(), test.m_paths.end(), compare);
+            std::sort(test.m_paths.begin(), test.m_paths.end(), compareSourcePath);
         }
     }
 }

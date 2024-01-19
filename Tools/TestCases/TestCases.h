@@ -56,6 +56,10 @@ public:
         return m_cases.size();
     }
     bool isDeprecatedCase(const std::string &label) const;
+    bool isConsecutive() const
+    {
+        return m_casesConsecutive;
+    }
 
 private:
     static void scanTestCaseDirectory(std::filesystem::path dir);
@@ -68,6 +72,7 @@ private:
     std::string m_name;
     std::string m_prefix;
     bool m_diffsRequired;
+    bool m_casesConsecutive{true};
     std::vector<std::string> m_cases;
     std::vector<std::string> m_deprecatedCases;
     std::vector<std::filesystem::path> m_paths;

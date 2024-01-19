@@ -1,5 +1,6 @@
 #include <TestCases.h>
 
+#include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -9,15 +10,37 @@
 namespace
 {
 
-std::vector<std::string> g_errors;
-std::vector<std::string> g_warnings;
-bool g_renderTableBorder{};
+class TestNames
+{
+public:
+    TestNames(std::string_view testCaseDir, bool renderBorder, std::string &outputFile) :
+        m_renderBorder(renderBorder),
+        m_outputFile(outputFile),
+        m_errors(testCases::Test::scanTestDirectory(testCaseDir)),
+        m_allTests(testCases::getTests())
+    {
+        checkMissingTestCases();
+    }
 
-void checkMissingTestCases()
+    void checkErrors();
+    void writeOutputFile();
+
+private:
+    void checkMissingTestCases();
+    void printMarkDown(std::ostream &out);
+
+    bool m_renderBorder;
+    std::string m_outputFile;
+    std::vector<std::string> m_warnings;
+    std::vector<std::string> m_errors;
+    const std::vector<testCases::Test> &m_allTests ;
+};
+
+void TestNames::checkMissingTestCases()
 {
     const auto extractCaseNum = [](const std::string &label)
     { return std::stoi(label.substr(label.find_first_of("0123456789"))); };
-    for (const testCases::Test &test : testCases::getTests())
+    for (const testCases::Test &test : m_allTests)
     {
         int num{1};
         for (const std::string &testCase : test.getCases())
@@ -27,35 +50,54 @@ void checkMissingTestCases()
             {
                 if (num != caseNum)
                 {
-                    g_warnings.emplace_back(std::string{"Missing test case "} + test.getPrefix() + std::to_string(num));
+                    m_warnings.emplace_back(std::string{"Missing test case "} + test.getPrefix() + std::to_string(num));
                 }
             } while (num++ != caseNum);
         }
     }
 }
 
-void printMarkDown(std::ostream &out)
+void TestNames::checkErrors()
 {
-    if (!g_warnings.empty())
+    if (!m_warnings.empty())
     {
-        for (const std::string &warning : g_warnings)
+        for (const std::string &warning : m_warnings)
         {
             std::cerr << "warning: " << warning << '\n';
         }
     }
-    if (!g_errors.empty())
+    if (!m_errors.empty())
     {
-        for (const std::string &error : g_errors)
+        for (const std::string &error : m_errors)
         {
             std::cerr << "error: " << error << '\n';
         }
         throw std::runtime_error("Test case errors detected");
     }
+    {
+        bool nonConsecutiveCases{false};
+        for (const testCases::Test &test : m_allTests)
+        {
+            if (!test.isConsecutive())
+            {
+                std::cerr << "error: Non-consecutive test cases for " << std::setw(4) << std::left << test.getPrefix()
+                          << " " << test.getName() << '\n';
+                nonConsecutiveCases = true;
+            }
+        }
+        if (nonConsecutiveCases)
+        {
+            throw std::runtime_error("Test case errors detected");
+        }
+    }
+}
 
+void TestNames::printMarkDown(std::ostream &out)
+{
     out << "# Tool\n\n";
-    const char *const borderStart = g_renderTableBorder ? "| " : "";
-    const char *const borderEnd = g_renderTableBorder ? " |\n" : "\n";
-    for (const testCases::Test &test : testCases::getTests())
+    const char *const borderStart = m_renderBorder ? "| " : "";
+    const char *const borderEnd = m_renderBorder ? " |\n" : "\n";
+    for (const testCases::Test &test : m_allTests)
     {
         out << "\n## " << test.getName() << '\n'               //
             << borderStart << "Case | Result" << borderEnd     //
@@ -68,9 +110,31 @@ void printMarkDown(std::ostream &out)
     }
 }
 
+void TestNames::writeOutputFile()
+{
+    if (m_outputFile.empty())
+    {
+        return;
+    }
+
+    if (m_outputFile == "-")
+    {
+        printMarkDown(std::cout);
+    }
+    else
+    {
+        std::ofstream str(m_outputFile);
+        if (!str)
+        {
+            throw std::runtime_error("Couldn't open output file " + m_outputFile);
+        }
+        printMarkDown(str);
+    }
+}
+
 int usage(std::string_view program)
 {
-    std::cout << "Usage: " << program << "[--border] <RefactorTest>\n";
+    std::cout << "Usage: " << program << "[--border] [-o <Tool.md>] <RefactorTest>\n";
     return 1;
 }
 
@@ -78,19 +142,39 @@ int main(std::vector<std::string_view> args)
 {
     try
     {
-        if (args.size() == 3 && args[1] == "--border")
-        {
-            g_renderTableBorder = true;
-            args.erase(args.begin() + 1);
-        }
+        bool renderBorder{};
+        std::string outputFile;
+
         if (args.size() < 2)
         {
             return usage(args[0]);
         }
+        if (args[1] == "--border")
+        {
+            if (args.size() < 3)
+            {
+                return usage(args[0]);
+            }
+            renderBorder = true;
+            args.erase(args.begin() + 1);
+        }
+        if (args[1] == "-o")
+        {
+            if (args.size() < 3)
+            {
+                return usage(args[0]);
+            }
+            outputFile = args[2];
+            args.erase(args.begin() + 1, args.begin() + 3);
+        }
+        if (args.size() != 2)
+        {
+            return usage(args[0]);
+        }
 
-        g_errors = testCases::Test::scanTestDirectory(args[1]);
-        checkMissingTestCases();
-        printMarkDown(std::cout);
+        TestNames names(args[1], renderBorder, outputFile);
+        names.checkErrors();
+        names.writeOutputFile();
         return 0;
     }
     catch (const std::exception &bang)
