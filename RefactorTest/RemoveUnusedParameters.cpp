@@ -22,7 +22,7 @@ int TestFunction(int (*fn)(int), int i)
 class Foo
 {
 public:
-    // #TEST#: RUP4 Remove Unused Parameter x
+    // #TEST#: RUP2 Remove Unused Parameter x
     int Method1(int x)
     {
         return 2;
@@ -35,7 +35,7 @@ public:
 
 typedef int (Foo::*FooMemberPtr)(int);
 
-// #TEST#: RUP2 Remove Unused Parameter (should not be available)
+// #TEST#: RUP3 Remove Unused Parameter (should not be available)
 int TestMemberPointer2(Foo &f, FooMemberPtr member, int i)
 {
     int j;
@@ -57,7 +57,7 @@ using namespace RemoveUnusedParametersNamespace;
 
 extern int goop(int a, int b);
 
-// #TEST#: RUP3 Remove Unused Parameter b
+// #TEST#: RUP4 Remove Unused Parameter b
 extern int goop(int a, int b)
 {
     return a;

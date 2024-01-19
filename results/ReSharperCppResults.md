@@ -534,9 +534,9 @@ RUI1 | Pass
 Case | Result
 ---- | ------
 RUP1 | Pass
-RUP2 | Pass
-RUP3 | Failure (claims errors in the source) [RSCPP-21207](https://youtrack.jetbrains.com/issue/RSCPP-21207)
-RUP4 | Failure (creates invalid syntax in macro arguments) [RSCPP-21208](https://youtrack.jetbrains.com/issue/RSCPP-21208)
+RUP2 | Failure (creates invalid syntax in macro arguments) [RSCPP-21208](https://youtrack.jetbrains.com/issue/RSCPP-21208)
+RUP3 | Pass
+RUP4 | Failure (claims errors in the source) [RSCPP-21207](https://youtrack.jetbrains.com/issue/RSCPP-21207)
 
 ## Rename
 Case | Result
