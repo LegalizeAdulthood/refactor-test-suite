@@ -519,40 +519,40 @@ Case | Result
 ---- | ------
 MM1   | Pass
 MM2   | Pass
-MM3   | Pass
-MM4   | Pass
+MM3  | Pass
+MM4  | Pass
 MM5   | Pass
-MM6   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM7   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM8   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM9   | Pass
-MM10  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM11  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM12  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM6   | Pass
+MM7  | Pass
+MM8  | Failure [16587](https://youtrack.jetbrains.com/issue/CPP-16587)
+MM9  | Failure [16587](https://youtrack.jetbrains.com/issue/CPP-16587)
+MM10   | Pass
+MM11   | Pass
+MM12  | Pass
 MM13  | Pass
-MM14  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM14  | Pass
 MM15  | Pass
 MM16  | Pass
 MM17  | Pass
 MM18  | Pass
 MM19  | Pass
 MM20  | Pass
-MM21  | Pass
-MM22  | Pass
+MM21   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM22   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM23  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM24  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM24   | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM25  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM26  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM27  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM28  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM29  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
 MM30  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
-MM31  | Pass
-MM32  | Pass
-MM33  | Failure [16587](https://youtrack.jetbrains.com/issue/CPP-16587)
-MM34  | Failure [16587](https://youtrack.jetbrains.com/issue/CPP-16587)
-MM35  | Failure [1936](https://youtrack.jetbrains.com/issue/CPP-1936)
-MM36  | Pass
+MM31  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM32  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM33  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM34  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM35  | Failure [1933](https://youtrack.jetbrains.com/issue/CPP-1933)
+MM36  | Failure [1936](https://youtrack.jetbrains.com/issue/CPP-1936)
 
 ## Remove Block Delimiter
 Case | Result

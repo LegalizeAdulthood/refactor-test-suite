@@ -19,14 +19,14 @@ public:
         _text = text;
     }
 
-    // #TEST#: MM13 Move method to cpp
+    // #TEST#: MM3 Move method to cpp
     void MethodConstInline(const std::string &text) const
     {
     }
 
     void MethodConst(const std::string &text) const;
 
-    // #TEST#: MM31 Move method to cpp
+    // #TEST#: MM4 Move method to cpp
     void MethodDefaultInline(const char *text, int arg1 = 0)
     {
     }
@@ -40,7 +40,7 @@ private:
 class MoveMethod2
 {
 public:
-    // #TEST#: MM3 Move method to cpp
+    // #TEST#: MM5 Move method to cpp
     MoveMethod2()
         : _int(0)
     {
@@ -49,27 +49,27 @@ public:
     // destructor
     ~MoveMethod2();
 
-    // #TEST#: MM9 Move method to cpp
+    // #TEST#: MM6 Move method to cpp
     void MethodDefault(char const *text, int arg1 = 0)
     {
         SetProtectedString(text);
         SetProtectedInt(arg1);
     }
 
-    // #TEST#: MM32 Move method to cpp
+    // #TEST#: MM7 Move method to cpp
     void MethodDefault2(char *(*text)(), int arg1 = 0)
     {
         SetProtectedString((*text)());
         SetProtectedInt(arg1);
     }
 
-    // #TEST#: MM33 Move method to cpp
+    // #TEST#: MM8 Move method to cpp
     void MethodDefault3(int (MoveMethod2::*member)(), int arg1 = 0)
     {
         int sum = arg1 + (this->*member)();
     }
 
-    // #TEST#: MM34 Move method to cpp
+    // #TEST#: MM9 Move method to cpp
     void MethodDefault4(void (MoveMethod2::*member)(int) const, int arg1 = 0)
     {
         (this->*member)(arg1);
@@ -84,7 +84,7 @@ public:
 
 protected:
     void SetProtectedInt(int arg);
-    // #TEST#: MM4 Move method to source
+    // #TEST#: MM10 Move method to source
     void SetProtectedString(const std::string &text)
     {
         SetString(text);
@@ -92,7 +92,7 @@ protected:
 
 private:
     void SetInt(int arg);
-    // #TEST#: MM5 Move method to source
+    // #TEST#: MM11 Move method to source
     void SetString(const std::string &text)
     {
         _text = text;
@@ -107,27 +107,27 @@ namespace MoveMethodNamespace
 class MoveMethodAbstractInline
 {
 public:
-    // #TEST#: MM15 Move method to source file
+    // #TEST#: MM12 Move method to source file
     MoveMethodAbstractInline()
     {
     }
 
-    // #TEST#: MM16 Move method to source file
+    // #TEST#: MM13 Move method to source file
     virtual ~MoveMethodAbstractInline()
     {
     }
 
-    // #TEST#: MM17 Move method to source file
+    // #TEST#: MM14 Move method to source file
     void Operation()
     {
     }
 
-    // #TEST#: MM18 Move method to source file
+    // #TEST#: MM15 Move method to source file
     void OperationConst() const
     {
     }
 
-    // #TEST#: MM19 Move method to source file
+    // #TEST#: MM16 Move method to source file
     virtual void OperationVirtual()
     {
     }
@@ -138,17 +138,17 @@ public:
 class MoveMethodConcreteInline : public MoveMethodAbstractInline
 {
 public:
-    // #TEST#: MM20 Move method to source file
+    // #TEST#: MM17 Move method to source file
     MoveMethodConcreteInline()
     {
     }
 
-    // #TEST#: MM21 Move method to source file
+    // #TEST#: MM18 Move method to source file
     virtual ~MoveMethodConcreteInline()
     {
     }
 
-    // #TEST#: MM22 Move method to source file
+    // #TEST#: MM19 Move method to source file
     virtual void OperationAbstract()
     {
     }
@@ -182,7 +182,7 @@ public:
 class MoveMethodExplicit2
 {
 public:
-    // #TEST#: MM36 Move method to source file
+    // #TEST#: MM20 Move method to source file
     explicit MoveMethodExplicit2()
     {
     }

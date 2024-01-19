@@ -4,7 +4,7 @@
 // or inversely moves a method's implementation to a source file leaving
 // the declaration in the header file.
 
-// #TEST#: MM6 Move method to header
+// #TEST#: MM21 Move method to header
 MoveMethod::MoveMethod()
     : _int(0),
     _text(),
@@ -12,36 +12,36 @@ MoveMethod::MoveMethod()
 {
 }
 
-// #TEST#: MM7 Move method to header
+// #TEST#: MM22 Move method to header
 void MoveMethod::MethodDefault(char const *text, int arg1)
 {
     _bar = text;
     _int = arg1;
 }
 
-// #TEST#: MM14 Move method to header
+// #TEST#: MM23 Move method to header
 void MoveMethod::MethodConst(const std::string &text) const
 {
 }
 
-// #TEST#: MM8 Move method to header
+// #TEST#: MM24 Move method to header
 MoveMethod2::~MoveMethod2()
 {
 }
 
-// #TEST#: MM10 Move method to header
+// #TEST#: MM25 Move method to header
 void MoveMethod2::Method(const std::string &text)
 {
     _text = text;
 }
 
-// #TEST#: MM11 Move method to header
+// #TEST#: MM26 Move method to header
 void MoveMethod2::SetProtectedInt(int arg)
 {
     SetInt(arg);
 }
 
-// #TEST#: MM12 Move method to header
+// #TEST#: MM27 Move method to header
 void MoveMethod2::SetInt(int arg)
 {
     _int = arg;
@@ -49,47 +49,47 @@ void MoveMethod2::SetInt(int arg)
 
 namespace MoveMethodNamespace
 {
-// #TEST#: MM23 Move method to header
+// #TEST#: MM28 Move method to header
 MoveMethodAbstract::MoveMethodAbstract()
 {
 }
 
-// #TEST#: MM24 Move method to header
+// #TEST#: MM29 Move method to header
 MoveMethodAbstract::~MoveMethodAbstract()
 {
 }
 
-// #TEST#: MM25 Move method to header
+// #TEST#: MM30 Move method to header
 void MoveMethodAbstract::Operation()
 {
 }
 
-// #TEST#: MM26 Move method to header
+// #TEST#: MM31 Move method to header
 void MoveMethodAbstract::OperationConst() const
 {
 }
 
-// #TEST#: MM27 Move method to header
+// #TEST#: MM32 Move method to header
 void MoveMethodAbstract::OperationVirtual()
 {
 }
 
-// #TEST#: MM28 Move method to header
+// #TEST#: MM33 Move method to header
 MoveMethodConcrete::MoveMethodConcrete()
 {
 }
 
-// #TEST#: MM29 Move method to header
+// #TEST#: MM34 Move method to header
 MoveMethodConcrete::~MoveMethodConcrete()
 {
 }
 
-// #TEST#: MM30 Move method to header
+// #TEST#: MM35 Move method to header
 void MoveMethodConcrete::OperationAbstract()
 {
 }
 
-// #TEST#: MM35 Move method to header
+// #TEST#: MM36 Move method to header
 MoveMethodExplicit::MoveMethodExplicit()
 {
 }
