@@ -350,4 +350,4 @@ Example: `cat results/diffs/ABD1.txt | drop-comments`
 
 The executable drop-comments filters out any lines on standard input
 that contain only a C++ single-line comment.  This is used to simplify
-diffs when checking the result of a refactorign.
+diffs when checking the result of a refactoring.
