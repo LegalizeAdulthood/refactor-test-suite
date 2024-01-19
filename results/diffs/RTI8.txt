@@ -14,4 +14,4 @@ index 6d10201..b7d2679 100644
 +        fn3 = &fn2;
      REQUIRE_EQUAL(fn3, &fn1);
  
-     // #TEST#: RTI11 Replace Ternary Expression With If (should not be available)
+     // #TEST#: RTI9 Replace Ternary Expression With If (should not be available)
