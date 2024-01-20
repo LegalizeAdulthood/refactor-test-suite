@@ -1,0 +1,18 @@
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 024d6a2..2400686 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -66,11 +66,11 @@ template <typename T, typename U>
+ // #TEST#: R997 Rename parameter lhs
+ // #TEST#: R998 Rename use of U
+ // #TEST#: R999 Rename parameter rhs
+-concept Multiplicable = requires(T lhs, U rhs)
++concept Multiplicable = requires(T goink, U rhs)
+ {
+     // #TEST#: R1000 Rename use of lhs
+     // #TEST#: R1001 Rename use of rhs
+-    lhs * rhs;
++    goink * rhs;
+ };
+ // clang-format on
+ 

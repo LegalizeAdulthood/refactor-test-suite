@@ -1,0 +1,23 @@
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 024d6a2..b76efb7 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -93,15 +93,15 @@ T square1(T value)
+ 
+ // single template parameter function with simple constraint on function
+ // #TEST#: R1011 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R1012 Rename first use of T
+ // #TEST#: R1013 Rename function square2
+ // #TEST#: R1014 Rename second use of T
+ // #TEST#: R1015 Rename parameter value
+-T square2(T value)
++Goink square2(Goink value)
+     // #TEST#: R1016 Rename concept Squareable
+     // #TEST#: R1017 Rename use of T
+-    requires Squareable<T>
++    requires Squareable<Goink>
+ {
+     // #TEST#: R1018 Rename first use of value
+     // #TEST#: R1019 Rename second use of value

@@ -1,0 +1,29 @@
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 024d6a2..566e349 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -292,7 +292,7 @@ auto product3(T lhs, U rhs) -> decltype(lhs * rhs)
+ // #TEST#: R1128 Rename template parameter T
+ // #TEST#: R1129 Rename template parameter U
+ // #TEST#: R1130 Rename use of T
+-template <typename T, typename U = T>
++template <typename T, typename Goink = T>
+ // #TEST#: R1131 Rename function product4
+ // #TEST#: R1132 Rename use of T
+ // #TEST#: R1133 Rename parameter lhs
+@@ -300,12 +300,12 @@ template <typename T, typename U = T>
+ // #TEST#: R1135 Rename parameter rhs
+ // #TEST#: R1136 Rename use of lhs
+ // #TEST#: R1137 Rename use of rhs
+-auto product4(T lhs, U rhs) -> decltype(lhs * rhs)
++auto product4(T lhs, Goink rhs) -> decltype(lhs * rhs)
+     // #TEST#: R1138 Rename first use of T
+     // #TEST#: R1139 Rename concept Multiplicable
+     // #TEST#: R1140 Rename second use of T
+     // #TEST#: R1141 Rename use of U
+-    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> || Multiplicable<T, Goink>
+ {
+     // #TEST#: R1142 Rename use of lhs
+     // #TEST#: R1143 Rename use of rhs
+

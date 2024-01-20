@@ -1,0 +1,23 @@
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 024d6a2..8443b6f 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -300,7 +300,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1135 Rename parameter rhs
+ // #TEST#: R1136 Rename use of lhs
+ // #TEST#: R1137 Rename use of rhs
+-auto product4(T lhs, U rhs) -> decltype(lhs * rhs)
++auto product4(T lhs, U goink) -> decltype(lhs * goink)
+     // #TEST#: R1138 Rename first use of T
+     // #TEST#: R1139 Rename concept Multiplicable
+     // #TEST#: R1140 Rename second use of T
+@@ -309,7 +309,7 @@ auto product4(T lhs, U rhs) -> decltype(lhs * rhs)
+ {
+     // #TEST#: R1142 Rename use of lhs
+     // #TEST#: R1143 Rename use of rhs
+-    return lhs * rhs;
++    return lhs * goink;
+ }
+ 
+ // multiple template parameter function with conjunctive constraint on template parameters
+
