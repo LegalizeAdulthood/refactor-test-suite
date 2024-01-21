@@ -46,7 +46,7 @@ struct TestSummary
 class ToolResults
 {
 public:
-    ToolResults(std::filesystem::path path) :
+    ToolResults(const std::filesystem::path &path) :
         m_path(path),
         m_name(toolNameFromResultsFile(path))
     {

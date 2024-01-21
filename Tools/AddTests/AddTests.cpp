@@ -41,8 +41,8 @@ public:
 
     bool readSourceFile(std::string_view sourceFile);
     void writeSourceFile();
-    void updateResultsFile(std::filesystem::path file);
-    void updateResultsDir(std::filesystem::path dir);
+    void updateResultsFile(const std::filesystem::path &file);
+    void updateResultsDir(const std::filesystem::path &dir);
     void writePlaceholderDiffs(const std::filesystem::path &diffDir);
 
     const testCases::Test &m_test;
@@ -79,7 +79,7 @@ void AddTests::writeSourceFile()
     m_sourceContents.transform(replaceMarkers);
 }
 
-void AddTests::updateResultsFile(std::filesystem::path file)
+void AddTests::updateResultsFile(const std::filesystem::path &file)
 {
     testCases::ToolResults results(file);
     if (results.addTests(m_test.getPrefix(), m_newLabels))
@@ -88,7 +88,7 @@ void AddTests::updateResultsFile(std::filesystem::path file)
     }
 }
 
-void AddTests::updateResultsDir(std::filesystem::path dir)
+void AddTests::updateResultsDir(const std::filesystem::path &dir)
 {
     for (auto entry : std::filesystem::directory_iterator(dir))
     {
