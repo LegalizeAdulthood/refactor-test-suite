@@ -1,3 +1,4 @@
+#include <Main.h>
 #include <TestCases.h>
 #include <ToolResults.h>
 
@@ -144,7 +145,9 @@ int usage(std::string_view program)
     return 1;
 }
 
-int toolMain(const std::vector<std::string_view> &args)
+}    // namespace
+
+int toolMain(std::vector<std::string_view> args)
 {
     if (args.size() < 3)
     {
@@ -155,30 +158,4 @@ int toolMain(const std::vector<std::string_view> &args)
     const std::filesystem::path resultDir{args[2]};
     ToolSummarizer(testCaseDir, resultDir).reportSummary();
     return 0;
-}
-
-}    // namespace
-
-int main(int argc, char *argv[])
-{
-    std::vector<std::string_view> args;
-    for (int i = 0; i < argc; ++i)
-    {
-        args.emplace_back(argv[i]);
-    }
-
-    try
-    {
-        return toolMain(args);
-    }
-    catch (const std::exception &bang)
-    {
-        std::cerr << "Unexpected exception: " << bang.what() << '\n';
-        return 2;
-    }
-    catch (...)
-    {
-        std::cerr << "Unknown exception\n";
-        return 3;
-    }
 }

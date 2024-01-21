@@ -1,4 +1,5 @@
 #include <FileContents.h>
+#include <Main.h>
 #include <TestCases.h>
 #include <ToolResults.h>
 
@@ -118,61 +119,37 @@ int usage(std::string_view program)
     return 1;
 }
 
-int main(std::vector<std::string_view> args)
-{
-    try
-    {
-        if (args.size() < 5)
-        {
-            return usage(args[0]);
-        }
-        const std::filesystem::path testCaseDir{args[1]};
-        if (!is_directory(testCaseDir))
-        {
-            std::cerr << "Test case directory " << testCaseDir << " does not exist.";
-            return 1;
-        }
-        const std::string_view testPrefix{args[2]};
-        const std::filesystem::path sourceFile{args[3]};
-        if (!exists(sourceFile))
-        {
-            std::cerr << "File " << sourceFile << " does not exist.";
-            return 1;
-        }
-        const std::filesystem::path resultsDir{args[4]};
-        if (!is_directory(resultsDir))
-        {
-            std::cerr << "Results case directory " << resultsDir << " does not exist.";
-            return 1;
-        }
-
-        AddTests tool(testCaseDir, testPrefix, sourceFile, resultsDir);
-        tool.writeSourceFile();
-        tool.updateResultsDir(resultsDir);
-        tool.writePlaceholderDiffs(resultsDir / "diffs");
-        return 0;
-    }
-    catch (const std::exception &bang)
-    {
-        std::cerr << "Unexpected exception: " << bang.what() << '\n';
-        return 1;
-    }
-    catch (...)
-    {
-        std::cerr << "Unknown exception\n";
-        return 2;
-    }
-}
-
 }    // namespace
 
-int main(int argc, char *argv[])
+int toolMain(std::vector<std::string_view> args)
 {
-    std::vector<std::string_view> args;
-    for (int i = 0; i < argc; ++i)
+    if (args.size() < 5)
     {
-        args.emplace_back(argv[i]);
+        return usage(args[0]);
+    }
+    const std::filesystem::path testCaseDir{args[1]};
+    if (!is_directory(testCaseDir))
+    {
+        std::cerr << "Test case directory " << testCaseDir << " does not exist.";
+        return 1;
+    }
+    const std::string_view testPrefix{args[2]};
+    const std::filesystem::path sourceFile{args[3]};
+    if (!exists(sourceFile))
+    {
+        std::cerr << "File " << sourceFile << " does not exist.";
+        return 1;
+    }
+    const std::filesystem::path resultsDir{args[4]};
+    if (!is_directory(resultsDir))
+    {
+        std::cerr << "Results case directory " << resultsDir << " does not exist.";
+        return 1;
     }
 
-    return main(args);
+    AddTests tool(testCaseDir, testPrefix, sourceFile, resultsDir);
+    tool.writeSourceFile();
+    tool.updateResultsDir(resultsDir);
+    tool.writePlaceholderDiffs(resultsDir / "diffs");
+    return 0;
 }

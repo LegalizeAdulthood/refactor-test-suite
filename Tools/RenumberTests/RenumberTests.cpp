@@ -1,4 +1,5 @@
 #include <FileContents.h>
+#include <Main.h>
 #include <TestCases.h>
 #include <ToolResults.h>
 
@@ -249,49 +250,25 @@ int usage(std::string_view program)
     return 1;
 }
 
-int main(std::vector<std::string_view> args)
-{
-    try
-    {
-        if (args.size() < 4)
-        {
-            return usage(args[0]);
-        }
-        const std::filesystem::path testCaseDir(args[1]);
-        if (!readTestCases(testCaseDir))
-        {
-            return 1;
-        }
-        const std::string_view prefix{args[2]};
-        Processor processor(prefix);
-        const std::filesystem::path resultsDir{args[3]};
-        processor.scanResultsDir(resultsDir);
-        processor.readDiffs(resultsDir);
-        processor.renumber();
-        processor.writeResults();
-        return 0;
-    }
-    catch (const std::exception &bang)
-    {
-        std::cerr << "Unexpected exception: " << bang.what() << '\n';
-        return 1;
-    }
-    catch (...)
-    {
-        std::cerr << "Unknown exception\n";
-        return 2;
-    }
-}
-
 }    // namespace
 
-int main(int argc, char *argv[])
+int toolMain(std::vector<std::string_view> args)
 {
-    std::vector<std::string_view> args;
-    for (int i = 0; i < argc; ++i)
+    if (args.size() < 4)
     {
-        args.emplace_back(argv[i]);
+        return usage(args[0]);
     }
-
-    return main(args);
+    const std::filesystem::path testCaseDir(args[1]);
+    if (!readTestCases(testCaseDir))
+    {
+        return 1;
+    }
+    const std::string_view prefix{args[2]};
+    Processor processor(prefix);
+    const std::filesystem::path resultsDir{args[3]};
+    processor.scanResultsDir(resultsDir);
+    processor.readDiffs(resultsDir);
+    processor.renumber();
+    processor.writeResults();
+    return 0;
 }

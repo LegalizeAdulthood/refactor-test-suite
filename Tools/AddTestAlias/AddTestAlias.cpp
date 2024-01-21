@@ -1,4 +1,5 @@
 #include <FileContents.h>
+#include <Main.h>
 #include <TestCases.h>
 #include <ToolResults.h>
 
@@ -173,48 +174,25 @@ int usage(std::string_view program)
     return 1;
 }
 
-int main(std::vector<std::string_view> args)
-{
-    try
-    {
-        if (args.size() < 6)
-        {
-            return usage(args[0]);
-        }
-        const std::string_view testCaseDir{args[1]};
-        const std::string_view resultsDir{args[2]};
-        const std::string_view prefix{args[3]};
-        const int master = std::stoi(std::string{args[4]});
-        const std::vector<int> aliases(parseIntList(args[5]));
-        if (std::find(aliases.begin(), aliases.end(), master) != aliases.end())
-        {
-            throw std::runtime_error("Master test can't be included in the alias list.");
-        }
-        AddTestAlias tool(testCaseDir, resultsDir, prefix, master, aliases);
-        tool.updateSourceFiles();
-        tool.updateResults();
-        return 0;
-    }
-    catch (const std::exception &bang)
-    {
-        std::cerr << "Unexpected exception: " << bang.what() << '\n';
-        return 1;
-    }
-    catch (...)
-    {
-        std::cerr << "Unknown exception\n";
-        return 2;
-    }
-}
-
 }    // namespace
 
-int main(int argc, char *argv[])
+int toolMain(std::vector<std::string_view> args)
 {
-    std::vector<std::string_view> args;
-    for (int i = 0; i < argc; ++i)
+    if (args.size() < 6)
     {
-        args.emplace_back(argv[i]);
+        return usage(args[0]);
     }
-    return main(args);
+    const std::string_view testCaseDir{args[1]};
+    const std::string_view resultsDir{args[2]};
+    const std::string_view prefix{args[3]};
+    const int master = std::stoi(std::string{args[4]});
+    const std::vector<int> aliases(parseIntList(args[5]));
+    if (std::find(aliases.begin(), aliases.end(), master) != aliases.end())
+    {
+        throw std::runtime_error("Master test can't be included in the alias list.");
+    }
+    AddTestAlias tool(testCaseDir, resultsDir, prefix, master, aliases);
+    tool.updateSourceFiles();
+    tool.updateResults();
+    return 0;
 }

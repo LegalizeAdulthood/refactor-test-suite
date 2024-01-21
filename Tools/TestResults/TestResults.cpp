@@ -1,3 +1,4 @@
+#include <Main.h>
 #include <TestCases.h>
 #include <ToolResults.h>
 
@@ -35,41 +36,17 @@ int usage(std::string_view program)
     return 1;
 }
 
-int main(const std::vector<std::string_view> &args)
-{
-    try
-    {
-        if (args.size() < 3)
-        {
-            return usage(args[0]);
-        }
-
-        testCases::Test::scanTestDirectory(args[1]);
-        testCases::ToolResults results(args[2]);
-        results.checkResults();
-        return reportResults(results, std::cout) ? 1 : 0;
-    }
-    catch (const std::exception &bang)
-    {
-        std::cerr << "Unexpected exception: " << bang.what() << '\n';
-        return 2;
-    }
-    catch (...)
-    {
-        std::cerr << "Unknown exception\n";
-        return 3;
-    }
-}
-
 }    // namespace
 
-int main(int argc, char *argv[])
+int toolMain(std::vector<std::string_view> args)
 {
-    std::vector<std::string_view> args;
-    for (int i = 0; i < argc; ++i)
+    if (args.size() < 3)
     {
-        args.emplace_back(argv[i]);
+        return usage(args[0]);
     }
 
-    return main(args);
+    testCases::Test::scanTestDirectory(args[1]);
+    testCases::ToolResults results(args[2]);
+    results.checkResults();
+    return reportResults(results, std::cout) ? 1 : 0;
 }

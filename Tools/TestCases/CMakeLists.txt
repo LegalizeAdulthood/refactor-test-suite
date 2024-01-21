@@ -6,6 +6,8 @@ endif()
 add_library(test-cases STATIC
     FileContents.h
     FileContents.cpp
+    Main.h
+    Main.cpp
     TestCases.h
     TestCases.cpp
     ToolResults.h
