@@ -1,12 +1,43 @@
-set(TEST_DIR "${TEST_DIR}/${TEST_NAME}")
+set(DEBUG OFF)
+if(DEBUG)
+    function(dump_var var)
+        message(STATUS "${var}=${${var}}")
+    endfunction()
+    foreach(var 
+        CMAKE_COMMAND
+        TEST_NAME
+        TEST_DIR
+        INPUT_DIR
+        EXPECTED_DIR
+        TOOL_NAME
+        TOOL_COMMAND
+        )
+        dump_var(${var})
+    endforeach()
+endif()
+
+function(copy_input_subdir subdir)
+    if(DEBUG)
+        message(STATUS "copy_input_subdir ${subdir} COPY ${INPUT_DIR}/${subdir} DESTINATION ${TEST_DIR})")
+    endif()
+    if(EXISTS ${INPUT_DIR}/${subdir})
+        file(COPY ${INPUT_DIR}/${subdir} DESTINATION ${TEST_DIR})
+    endif()
+endfunction()
+
+# Delete any existing files in TEST_DIR
+file(REMOVE_RECURSE ${TEST_DIR})
 
 # copy INPUT_DIR contents to TEST_DIR
-file(COPY ${INPUT_DIR}/Sources DESTINATION ${TEST_DIR})
-file(COPY ${INPUT_DIR}/Results DESTINATION ${TEST_DIR})
+copy_input_subdir(Sources)
+copy_input_subdir(Results)
 
 # run tool
+if(DEBUG)
+    message(STATUS "execute_process COMMAND ${TOOL_COMMAND} ${TEST_DIR}/Sources R ${TEST_DIR}/Sources/TestRename.cpp ${TEST_DIR}/Results")
+endif()
 execute_process(
-    COMMAND ${TOOL} ${TEST_DIR}/Sources R ${TEST_DIR}/Sources/TestRename.cpp ${TEST_DIR}/Results
+    COMMAND ${TOOL_COMMAND} ${TEST_DIR}/Sources R ${TEST_DIR}/Sources/TestRename.cpp ${TEST_DIR}/Results
 )
 
 # compare TEST_DIR contents to EXPECTED_DIR

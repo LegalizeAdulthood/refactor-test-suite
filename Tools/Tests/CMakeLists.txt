@@ -1,13 +1,20 @@
-set(INPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Inputs)
-set(EXPECTED_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Expected)
-add_test(NAME test-add-tests-tool
-    COMMAND ${CMAKE_COMMAND}
-        -DCMAKE_COMMAND:STRING=${CMAKE_COMMAND}
-        -DTEST_NAME:STRING=add-tests
-        -DTEST_DIR:STRING=${CMAKE_BINARY_DIR}/ToolTests
-        -DINPUT_DIR:STRING=${INPUT_DIR}
-        -DEXPECTED_DIR:STRING=${EXPECTED_DIR}
-        -DTOOL=$<TARGET_FILE:add-tests>
-        -P ${CMAKE_CURRENT_SOURCE_DIR}/TestAddTests.cmake
-)
-set_tests_properties(test-add-tests-tool PROPERTIES LABELS add-tests)
+function(add_tool_test tool)
+    set(INPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${tool}/Inputs)
+    set(EXPECTED_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${tool}/Expected)
+
+    add_test(NAME test-${tool}-tool
+        COMMAND ${CMAKE_COMMAND}
+            -DCMAKE_COMMAND:STRING=${CMAKE_COMMAND}
+            -DTEST_NAME:STRING=${tool}
+            -DTEST_DIR:PATH=${CMAKE_BINARY_DIR}/ToolTests/${tool}
+            -DINPUT_DIR:PATH=${INPUT_DIR}
+            -DEXPECTED_DIR:PATH=${EXPECTED_DIR}
+            -DTOOL_NAME:STRING=${tool}
+            -DTOOL_COMMAND:PATH=$<TARGET_FILE:${tool}>
+            -P ${CMAKE_CURRENT_SOURCE_DIR}/TestTool.cmake
+    )
+    set_property(TEST test-${tool}-tool PROPERTY LABELS ${tool} tool)
+endfunction()
+
+add_tool_test(add-tests)
+#add_tool_test(renumber-tests)
