@@ -135,7 +135,7 @@ void TestNames::writeOutputFile()
 
 int usage(std::string_view program)
 {
-    std::cout << "Usage: " << program << "[--border] [-o <Tool.md>] <RefactorTest>\n";
+    std::cout << "Usage: " << program << " [--border] [-o <Tool.md>] <RefactorTest>\n";
     return 1;
 }
 
