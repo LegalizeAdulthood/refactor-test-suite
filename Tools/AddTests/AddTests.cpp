@@ -70,7 +70,7 @@ void AddTests::writeSourceFile()
         if (goink != std::string::npos)
         {
             ++testNum;
-            auto markerEnd = result.find_first_of(' ', goink + marker.length());
+            const auto markerEnd = result.find_first_of(' ', goink + marker.length());
             m_newLabels.emplace_back(m_test.getPrefix() + std::to_string(testNum));
             result = result.substr(0, goink) + "#TEST#: " + m_newLabels.back() + result.substr(markerEnd);
         }
