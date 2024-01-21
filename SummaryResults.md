@@ -1,6 +1,6 @@
 # Summary Results
 
-Refactoring | [clang-tidy](results/ClangTidyResults.md) | [CLion](results/CLionResults.md) | [ReSharper for C++](results/ReSharperCppResults.md) | [Visual AssistX](results/VisualAssistXResults.md) | [Visual Studio](results/VisualStudioResults.md)
+Refactoring | [clang-tidy](results/annotated/ClangTidyResults.md) | [CLion](results/annotated/CLionResults.md) | [ReSharper for C++](results/annotated/ReSharperCppResults.md) | [Visual AssistX](results/annotated/VisualAssistXResults.md) | [Visual Studio](results/annotated/VisualStudioResults.md)
 ----------- | ---------- | ----- | ----------------- | -------------- | -------------
 Add Block Delimiter | 100% (7/7) | 100% (7/7) | 100% (7/7) | (n/a) | 100% (7/7)
 Add Override | 100% (16/16) | (n/a) | 100% (16/16) | (n/a) | (n/a)
