@@ -79,6 +79,23 @@ void Test::checkLabel(std::string_view label, std::string_view desc)
         return;
     }
     test->m_cases.emplace_back(label);
+    if (!desc.empty() && desc[0] == '=')
+    {
+        const auto aliasEnd = desc.find_first_of(' ');
+        const std::string_view aliasLabel = desc.substr(1, aliasEnd - 1);
+        auto it = std::find_if(test->m_aliases.begin(),
+                               test->m_aliases.end(),
+                               [&](const TestCaseAlias &alias) { return alias.master == label; });
+        if (it == test->m_aliases.end())
+        {
+            test->m_aliases.emplace_back(TestCaseAlias{std::string{label}, {std::string{aliasLabel}}});
+        }
+        else
+        {
+            it->aliases.emplace_back(aliasLabel);
+        }
+        desc = desc.substr(desc.find_first_not_of(' ', aliasEnd));
+    }
     g_allTestCases.emplace_back(label);
     if (desc == "(deprecated)")
     {
@@ -98,6 +115,23 @@ std::string_view getTestCaseLabel(std::string_view line)
         const size_t end = line.find_first_of(' ', begin);
         const std::string_view label = line.substr(begin, end - begin);
         return label;
+    }
+    return {};
+}
+
+std::string_view getTestCaseAlias(std::string_view line)
+{
+    if (const std::string_view label = getTestCaseLabel(line); !label.empty())
+    {
+        if (const size_t pos = line.find_first_not_of(' ', line.find(label) + label.length());
+            pos != std::string_view::npos)
+        {
+            if (line[pos] == '=')
+            {
+                const size_t end = line.find_first_of(' ', pos);
+                return line.substr(pos + 1, end - pos - 1);
+            }
+        }
     }
     return {};
 }

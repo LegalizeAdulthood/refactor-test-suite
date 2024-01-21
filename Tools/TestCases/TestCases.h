@@ -9,6 +9,13 @@ namespace testCases
 {
 
 std::string_view getTestCaseLabel(std::string_view line);
+std::string_view getTestCaseAlias(std::string_view line);
+
+struct TestCaseAlias
+{
+    std::string master;
+    std::vector<std::string> aliases;
+};
 
 class Test
 {
@@ -43,6 +50,10 @@ public:
     {
         return m_cases;
     }
+    const std::vector<TestCaseAlias> &getCaseAliases() const
+    {
+        return m_aliases;
+    }
     const std::vector<std::string> &getDeprecatedCases() const
     {
         return m_deprecatedCases;
@@ -74,6 +85,7 @@ private:
     bool m_diffsRequired;
     bool m_casesConsecutive{true};
     std::vector<std::string> m_cases;
+    std::vector<TestCaseAlias> m_aliases;
     std::vector<std::string> m_deprecatedCases;
     std::vector<std::filesystem::path> m_paths;
 };
