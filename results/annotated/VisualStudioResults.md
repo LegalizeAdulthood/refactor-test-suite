@@ -529,7 +529,7 @@ R142 | Pass | [`Rename.cpp`, line 496](https://github.com/LegalizeAdulthood/refa
 R143 | Pass | [`Rename.cpp`, line 497](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L497) | [R143.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R143.txt)
 R144 | Pass | [`Rename.cpp`, line 503](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L503) | [R144.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R144.txt)
 R145 | Pass | [`Rename.cpp`, line 504](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L504) | [R145.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R145.txt)
-R146 | (deprecated) | [`Rename.cpp`, line 506](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L506) | [R146.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R146.txt)
+R146 | (deprecated) | |
 R147 | Pass | [`Rename.cpp`, line 507](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L507) | [R147.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R147.txt)
 R148 | Pass | [`Rename.cpp`, line 508](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L508) | [R148.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R148.txt)
 R149 | Failure (use in decltype not selected) | [`Rename.cpp`, line 509](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L509) | [R149.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R149.txt)
@@ -620,8 +620,8 @@ R233  | Pass | [`Rename.cpp`, line 734](https://github.com/LegalizeAdulthood/ref
 R234  | Pass | [`Rename.cpp`, line 736](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L736) | [R234.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R234.txt)
 R235  | Pass | [`Rename.cpp`, line 738](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L738) | [R235.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R235.txt)
 R236  | Pass | [`Rename.cpp`, line 740](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L740) | [R236.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R236.txt)
-R237  | (deprecated) | [`Rename.cpp`, line 742](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L742) | [R237.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R237.txt)
-R238  | (deprecated) | [`Rename.cpp`, line 743](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L743) | [R238.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R238.txt)
+R237  | (deprecated) | |
+R238  | (deprecated) | |
 R239  | Pass | [`Rename.cpp`, line 744](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L744) | [R239.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R239.txt)
 R240  | Pass | [`Rename.cpp`, line 746](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L746) | [R240.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R240.txt)
 R241  | Pass | [`Rename.cpp`, line 748](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L748) | [R241.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R241.txt)
@@ -1908,15 +1908,15 @@ R1520 | | [`RenameCpp20Constraints.cpp`, line 1256](https://github.com/LegalizeA
 ## Reorder Parameters
 Case | Result | Location | Expected Diff
 ---- | ------ | -------- | -------------
-RP1  | (deprecated) | [`ReorderParameters.cpp`, line 12](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L12) | [RP1.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP1.txt)
+RP1  | (deprecated) | |
 RP2  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 18](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L18) | [RP2.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP2.txt)
-RP3  | (deprecated) | [`ReorderParameters.cpp`, line 53](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L53) | [RP3.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP3.txt)
-RP4  | (deprecated) | [`ReorderParameters.cpp`, line 57](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L57) | [RP4.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP4.txt)
+RP3  | (deprecated) | |
+RP4  | (deprecated) | |
 RP5  | Failure (error occured while applying changes; textIndex out of range) | [`ReorderParameters.cpp`, line 63](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L63) | [RP5.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP5.txt)
 RP6  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 78](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L78) | [RP6.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP6.txt)
 RP7  | Failure (error occured while applying changes; textIndex out of range) | [`ReorderParameters.cpp`, line 95](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L95) | [RP7.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP7.txt)
 RP8  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 112](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L112) | [RP8.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP8.txt)
-RP9  | (deprecated) | [`ReorderParameters.cpp`, line 129](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L129) | [RP9.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP9.txt)
+RP9  | (deprecated) | |
 
 ## Replace String Literal With Raw String Literal
 Case | Result | Location | Expected Diff

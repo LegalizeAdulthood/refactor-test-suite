@@ -144,7 +144,7 @@ CSM20 | | [`CreateSetterMethod.h`, line 126](https://github.com/LegalizeAdulthoo
 CSM21 | | [`CreateSetterMethod.h`, line 129](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/CreateSetterMethod.h#L129)
 CSM22 | | [`CreateSetterMethod.h`, line 132](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/CreateSetterMethod.h#L132)
 CSM23 | | [`CreateSetterMethod.h`, line 135](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/CreateSetterMethod.h#L135)
-CSM24 | (deprecated) | [`CreateSetterMethod.h`, line 138](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/CreateSetterMethod.h#L138)
+CSM24 | (deprecated) | |
 CSM25 | | [`CreateSetterMethod.h`, line 143](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/CreateSetterMethod.h#L143)
 CSM26 | | [`CreateSetterMethod.h`, line 146](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/CreateSetterMethod.h#L146)
 CSM27 | | [`CreateSetterMethod.h`, line 152](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/CreateSetterMethod.h#L152)
@@ -457,7 +457,7 @@ R142 |  | [`Rename.cpp`, line 496](https://github.com/LegalizeAdulthood/refactor
 R143 |  | [`Rename.cpp`, line 497](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L497) | [R143.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R143.txt)
 R144 |  | [`Rename.cpp`, line 503](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L503) | [R144.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R144.txt)
 R145 |  | [`Rename.cpp`, line 504](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L504) | [R145.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R145.txt)
-R146 | (deprecated) | [`Rename.cpp`, line 506](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L506) | [R146.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R146.txt)
+R146 | (deprecated) | |
 R147 |  | [`Rename.cpp`, line 507](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L507) | [R147.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R147.txt)
 R148 |  | [`Rename.cpp`, line 508](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L508) | [R148.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R148.txt)
 R149 |  | [`Rename.cpp`, line 509](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L509) | [R149.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R149.txt)
@@ -548,8 +548,8 @@ R233   | | [`Rename.cpp`, line 734](https://github.com/LegalizeAdulthood/refacto
 R234   | | [`Rename.cpp`, line 736](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L736) | [R234.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R234.txt)
 R235   | | [`Rename.cpp`, line 738](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L738) | [R235.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R235.txt)
 R236   | | [`Rename.cpp`, line 740](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L740) | [R236.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R236.txt)
-R237   | (deprecated) | [`Rename.cpp`, line 742](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L742) | [R237.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R237.txt)
-R238   | (deprecated) | [`Rename.cpp`, line 743](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L743) | [R238.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R238.txt)
+R237   | (deprecated) | |
+R238   | (deprecated) | |
 R239   | | [`Rename.cpp`, line 744](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L744) | [R239.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R239.txt)
 R240   | | [`Rename.cpp`, line 746](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L746) | [R240.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R240.txt)
 R241   | | [`Rename.cpp`, line 748](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/Rename.cpp#L748) | [R241.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/R241.txt)

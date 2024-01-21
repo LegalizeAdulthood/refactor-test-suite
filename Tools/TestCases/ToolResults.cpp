@@ -444,14 +444,22 @@ void ToolResults::writeAnnotatedResults(const std::filesystem::path &outputFile)
             }
             const std::string file{it->sourceFile.filename().string()};
             const int line{it->line};
-            str << testResult.line << " | [`" << file << "`, line " << line
-                << "](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/" << file
-                << "#L" << line << ")";
-            if (test.hasDiffs())
+            str << testResult.line;
+            if (testResult.deprecated)
             {
-                str << " | [" << it->label
-                    << ".txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/"
-                    << it->label << ".txt)";
+                str << " | |";
+            }
+            else
+            {
+                str << " | [`" << file << "`, line " << line
+                    << "](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/" << file
+                    << "#L" << line << ")";
+                if (test.hasDiffs())
+                {
+                    str << " | [" << it->label
+                        << ".txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/"
+                        << it->label << ".txt)";
+                }
             }
             str << '\n';
             ++it;
