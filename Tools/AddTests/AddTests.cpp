@@ -1,3 +1,4 @@
+#include <FileContents.h>
 #include <TestCases.h>
 #include <ToolResults.h>
 
@@ -14,13 +15,24 @@
 namespace
 {
 
-std::string g_testPrefix;
-int g_numTestCases{};
-std::string g_sourceFile;
-std::vector<std::string> g_sourceLines;
-std::vector<std::string> g_newLabels;
+class AddTests
+{
+public:
+    bool readTestCases(std::string_view testCaseDirectory);
+    bool setTestCasePrefix(std::string_view prefix);
+    bool readSourceFile(std::string_view sourceFile);
+    void writeSourceFile();
+    void updateResultsFile(std::filesystem::path file);
+    void updateResultsDir(std::filesystem::path dir);
 
-bool readTestCases(std::string_view testCaseDirectory)
+    std::string m_testPrefix;
+    int m_numTestCases{};
+    std::string m_sourceFile;
+    testCases::FileContents m_sourceContents;
+    std::vector<std::string> m_newLabels;
+};
+
+bool AddTests::readTestCases(std::string_view testCaseDirectory)
 {
     const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDirectory);
     if (!errors.empty())
@@ -35,68 +47,57 @@ bool readTestCases(std::string_view testCaseDirectory)
     return true;
 }
 
-bool setTestCasePrefix(std::string_view prefix)
+bool AddTests::setTestCasePrefix(std::string_view prefix)
 {
     const testCases::Test &test = testCases::getTestForPrefix(prefix);
-    g_testPrefix = test.getPrefix();
-    g_numTestCases = static_cast<int>(test.getNumTestCases());
+    m_testPrefix = test.getPrefix();
+    m_numTestCases = static_cast<int>(test.getNumTestCases());
     return true;
 }
 
-bool readSourceFile(std::string_view sourceFile)
+bool AddTests::readSourceFile(std::string_view sourceFile)
 {
     if (!std::filesystem::exists(sourceFile))
     {
         std::cerr << "File " << sourceFile << " does not exist.";
         return false;
     }
-    {
-        std::ifstream str(sourceFile.data());
-        while (str)
-        {
-            std::string line;
-            std::getline(str, line);
-            g_sourceLines.emplace_back(std::move(line));
-        }
-    }
+    m_sourceContents = testCases::FileContents(sourceFile);
     copy_file(sourceFile, std::string{sourceFile} + ".bak", std::filesystem::copy_options::overwrite_existing);
-    g_sourceFile = sourceFile;
+    m_sourceFile = sourceFile;
     return true;
 }
 
-void writeSourceFile()
+void AddTests::writeSourceFile()
 {
     std::string marker{"#GOINK#: "};
-    int testNum{g_numTestCases};
-    std::ofstream str(g_sourceFile);
-    for (std::string line : g_sourceLines)
+    int testNum{m_numTestCases};
+    std::ofstream str(m_sourceFile);
+    for (std::string line : m_sourceContents.getLines())
     {
         const auto goink = line.find(marker);
         if (goink != std::string::npos)
         {
             ++testNum;
             auto markerEnd = line.find_first_of(' ', goink + marker.length());
-            g_newLabels.emplace_back(g_testPrefix + std::to_string(testNum));
-            line = line.substr(0, goink) + "#TEST#: " + g_newLabels.back() + line.substr(markerEnd);
+            m_newLabels.emplace_back(m_testPrefix + std::to_string(testNum));
+            line = line.substr(0, goink) + "#TEST#: " + m_newLabels.back() + line.substr(markerEnd);
         }
         str << line << '\n';
     }
 }
 
-void updateResultsFile(std::filesystem::path file)
+void AddTests::updateResultsFile(std::filesystem::path file)
 {
     testCases::ToolResults results(file);
-    if (results.addTests(g_testPrefix, g_newLabels))
+    if (results.addTests(m_testPrefix, m_newLabels))
     {
         results.writeResults();
     }
 }
 
-void updateResultsDir(std::filesystem::path dir)
+void AddTests::updateResultsDir(std::filesystem::path dir)
 {
-    const auto endsWith = [](const std::string &text, const std::string &suffix)
-    { return text.length() > suffix.length() && text.substr(text.length() - suffix.length()) == suffix; };
-
     for (auto entry : std::filesystem::directory_iterator(dir))
     {
         const std::filesystem::path path = entry.path();
@@ -125,12 +126,13 @@ int main(std::vector<std::string_view> args)
         {
             return usage(args[0]);
         }
-        if (!readTestCases(args[1]) || !setTestCasePrefix(args[2]) || !readSourceFile(args[3]))
+        AddTests tool;
+        if (!tool.readTestCases(args[1]) || !tool.setTestCasePrefix(args[2]) || !tool.readSourceFile(args[3]))
         {
             return 1;
         }
-        writeSourceFile();
-        updateResultsDir(args[4]);
+        tool.writeSourceFile();
+        tool.updateResultsDir(args[4]);
         return 0;
     }
     catch (const std::exception &bang)
