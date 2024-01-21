@@ -7,3 +7,7 @@ add_subdirectory(TestDiffs)
 add_subdirectory(TestNames)
 add_subdirectory(TestResults)
 add_subdirectory(ToolSummary)
+
+if(BUILD_TESTING)
+    add_subdirectory(Tests)
+endif()

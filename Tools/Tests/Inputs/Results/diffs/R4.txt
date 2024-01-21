@@ -1,0 +1,22 @@
+diff --git a/Sources/TestRename.cpp b/Sources/TestRename.cpp
+index d1c1283..8628cb4 100644
+--- a/Sources/TestRename.cpp
++++ b/Sources/TestRename.cpp
+@@ -15,7 +15,7 @@
+ // #TEST#: R2 Rename the macro argument x_ from declaration
+ // #TEST#: R3 =R2 Rename the macro argument x_ from usage
+ // #TEST#: R4 Rename this macro
+-#define MACRO_ONE_ARG(x_) (2.0f * x_)
++#define GOINK(x_) (2.0f * x_)
+ 
+ class Operations
+ {
+@@ -646,7 +646,7 @@ void TestRename()
+     int y = test2.Operation() + X::x + X::y + Y::x;
+ 
+     float x = MACRO_NO_ARGS;
+-    x = MACRO_ONE_ARG(2.0f);
++    x = GOINK(2.0f);
+ 
+     {
+         // #TEST#: R206 Rename the namespace X
