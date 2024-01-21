@@ -96,8 +96,6 @@ void updateResultsDir(std::filesystem::path dir)
 {
     const auto endsWith = [](const std::string &text, const std::string &suffix)
     { return text.length() > suffix.length() && text.substr(text.length() - suffix.length()) == suffix; };
-    const auto isResultsFile = [&](const std::filesystem::path &path)
-    { return endsWith(path.filename().string(), "Results.md"); };
 
     for (auto entry : std::filesystem::directory_iterator(dir))
     {
@@ -106,7 +104,7 @@ void updateResultsDir(std::filesystem::path dir)
         {
             updateResultsDir(path);
         }
-        else if (isResultsFile(path))
+        else if (testCases::isResultsFile(path))
         {
             updateResultsFile(path);
         }
