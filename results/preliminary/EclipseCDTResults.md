@@ -219,7 +219,6 @@ EXF16 |
 EXF17 |
 EXF18 |
 EXF19 |
-EXF20 |
 
 ## Extract Variable
 Case | Result
