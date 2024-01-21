@@ -15,7 +15,6 @@
 namespace
 {
 
-std::vector<testCases::ToolResults> g_toolResults;
 std::map<std::string, std::string> g_toolTitles = {{"AppleXcode", "Xcode"},
                                                    {"ClangTidy", "clang-tidy"},
                                                    {"CLion", "CLion"},
@@ -25,7 +24,33 @@ std::map<std::string, std::string> g_toolTitles = {{"AppleXcode", "Xcode"},
                                                    {"VisualAssistX", "Visual AssistX"},
                                                    {"VisualStudio", "Visual Studio"}};
 
-void scanResultsDirectory(std::filesystem::path dir)
+class ToolSummarizer
+{
+public:
+    ToolSummarizer(const std::filesystem::path &testCaseDir, const std::filesystem::path &resultDir);
+
+    void reportSummary();
+
+private:
+    void scanResultsDirectory(std::filesystem::path dir);
+
+    std::vector<testCases::ToolResults> m_toolResults;
+};
+
+ToolSummarizer::ToolSummarizer(const std::filesystem::path &testCaseDir, const std::filesystem::path &resultDir)
+{
+    if (const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDir); !errors.empty())
+    {
+        for (const std::string &message : errors)
+        {
+            std::cerr << "error: " << message << '\n';
+        }
+        throw std::runtime_error("Test cases contain errors:");
+    }
+    scanResultsDirectory(resultDir);
+}
+
+void ToolSummarizer::scanResultsDirectory(std::filesystem::path dir)
 {
     for (auto &entry : std::filesystem::directory_iterator(dir))
     {
@@ -37,7 +62,7 @@ void scanResultsDirectory(std::filesystem::path dir)
         {
             continue;
         }
-        g_toolResults.emplace_back(entry);
+        m_toolResults.emplace_back(entry);
     }
 }
 
@@ -55,10 +80,10 @@ std::string percent(int numerator, int denominator)
     return str.str();
 }
 
-void reportSummary()
+void ToolSummarizer::reportSummary()
 {
     std::vector<ToolSummary> summary;
-    for (testCases::ToolResults &toolResult : g_toolResults)
+    for (testCases::ToolResults &toolResult : m_toolResults)
     {
         toolResult.checkResults();
         summary.push_back({toolResult.getToolName(), toolResult.getSummary()});
@@ -119,30 +144,17 @@ int usage(std::string_view program)
     return 1;
 }
 
-int main(const std::vector<std::string_view> &args)
+int toolMain(const std::vector<std::string_view> &args)
 {
-    try
+    if (args.size() < 3)
     {
-        if (args.size() < 3)
-        {
-            return usage(args[0]);
-        }
+        return usage(args[0]);
+    }
 
-        testCases::Test::scanTestDirectory(args[1]);
-        scanResultsDirectory(args[2]);
-        reportSummary();
-        return 0;
-    }
-    catch (const std::exception &bang)
-    {
-        std::cerr << "Unexpected exception: " << bang.what() << '\n';
-        return 2;
-    }
-    catch (...)
-    {
-        std::cerr << "Unknown exception\n";
-        return 3;
-    }
+    const std::filesystem::path testCaseDir{args[1]};
+    const std::filesystem::path resultDir{args[2]};
+    ToolSummarizer(testCaseDir, resultDir).reportSummary();
+    return 0;
 }
 
 }    // namespace
@@ -155,5 +167,18 @@ int main(int argc, char *argv[])
         args.emplace_back(argv[i]);
     }
 
-    return main(args);
+    try
+    {
+        return toolMain(args);
+    }
+    catch (const std::exception &bang)
+    {
+        std::cerr << "Unexpected exception: " << bang.what() << '\n';
+        return 2;
+    }
+    catch (...)
+    {
+        std::cerr << "Unknown exception\n";
+        return 3;
+    }
 }
