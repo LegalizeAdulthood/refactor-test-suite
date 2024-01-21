@@ -61,6 +61,7 @@ std::vector<Test> g_tests{
 std::vector<std::string> g_allTestCases;
 std::filesystem::path g_currentFile;
 int g_currentLine{};
+std::filesystem::path g_scannedTestCaseDir;
 std::vector<std::string> g_errors;
 
 void Test::checkLabel(std::string_view label, std::string_view desc)
@@ -107,6 +108,7 @@ void Test::checkLabel(std::string_view label, std::string_view desc)
     {
         test->m_paths.push_back(g_currentFile);
     }
+    test->m_locations.push_back(TestCaseLocation{std::string{label}, g_currentFile, g_currentLine});
 }
 
 std::string_view getTestCaseLabel(std::string_view line)
@@ -152,7 +154,7 @@ void Test::scanTestCaseLine(std::string_view line)
     checkLabel(label, desc);
 }
 
-void Test::scanTestCaseFile(std::filesystem::path path)
+void Test::scanTestCaseFile(const std::filesystem::path &path)
 {
     std::ifstream file(path.string());
     g_currentFile = path;
@@ -166,7 +168,7 @@ void Test::scanTestCaseFile(std::filesystem::path path)
     }
 }
 
-    // a < b
+// a < b
 //  if a's filename < b's filename
 //  or
 //  they have the same filename and a is a header file and b is a source file
@@ -180,7 +182,7 @@ bool compareSourcePath(const std::filesystem::path &lhs, const std::filesystem::
 class TestCaseFileLister
 {
 public:
-    TestCaseFileLister(std::filesystem::path dir)
+    TestCaseFileLister(const std::filesystem::path &dir)
     {
         scanDirectory(dir);
         std::sort(m_paths.begin(), m_paths.end(), compareSourcePath);
@@ -191,7 +193,7 @@ public:
     }
 
 private:
-    void scanDirectory(std::filesystem::path dir)
+    void scanDirectory(const std::filesystem::path &dir)
     {
         for (auto &entry : std::filesystem::directory_iterator(dir))
         {
@@ -209,7 +211,7 @@ private:
     std::vector<std::filesystem::path> m_paths;
 };
 
-void Test::scanTestCaseDirectory(std::filesystem::path dir)
+void Test::scanTestCaseDirectory(const std::filesystem::path &dir)
 {
     const TestCaseFileLister lister(dir);
     for (const std::filesystem::path &path : lister.getPaths())
@@ -238,6 +240,10 @@ void Test::sortTestCases()
                   test.m_cases.end(),
                   [&](const std::string &lhs, const std::string &rhs)
                   { return extractCaseNum(lhs) < extractCaseNum(rhs); });
+        std::sort(test.m_locations.begin(),
+                  test.m_locations.end(),
+                  [&](const TestCaseLocation &lhs, const TestCaseLocation &rhs)
+                  { return extractCaseNum(lhs.label) < extractCaseNum(rhs.label); });
     }
 }
 
@@ -273,11 +279,15 @@ const Test &getTestForPrefix(std::string_view prefix)
     return *pos;
 }
 
-std::vector<std::string> Test::scanTestDirectory(std::filesystem::path dir)
+std::vector<std::string> Test::scanTestDirectory(const std::filesystem::path &dir)
 {
-    scanTestCaseDirectory(dir);
-    sortTestPaths();
-    sortTestCases();
+    if (g_scannedTestCaseDir.empty())
+    {
+        scanTestCaseDirectory(dir);
+        sortTestPaths();
+        sortTestCases();
+        g_scannedTestCaseDir = dir;
+    }
     return g_errors;
 }
 

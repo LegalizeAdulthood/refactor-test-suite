@@ -28,17 +28,25 @@ std::map<std::string, std::string> g_toolTitles = {{"AppleXcode", "Xcode"},
 class ToolSummarizer
 {
 public:
-    ToolSummarizer(const std::filesystem::path &testCaseDir, const std::filesystem::path &resultDir);
+    ToolSummarizer(const std::filesystem::path &testCaseDir, const std::filesystem::path &resultDir, bool annotate);
 
-    void reportSummary();
+    void generateSummary();
+    void generateAnnotatedToolResults();
+    void generateReport();
 
 private:
     void scanResultsDirectory(std::filesystem::path dir);
 
     std::vector<testCases::ToolResults> m_toolResults;
+    std::filesystem::path m_resultDir;
+    bool m_annotate;
 };
 
-ToolSummarizer::ToolSummarizer(const std::filesystem::path &testCaseDir, const std::filesystem::path &resultDir)
+ToolSummarizer::ToolSummarizer(const std::filesystem::path &testCaseDir,
+                               const std::filesystem::path &resultDir,
+                               bool annotate) :
+    m_resultDir(resultDir),
+    m_annotate(annotate)
 {
     if (const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDir); !errors.empty())
     {
@@ -81,7 +89,7 @@ std::string percent(int numerator, int denominator)
     return str.str();
 }
 
-void ToolSummarizer::reportSummary()
+void ToolSummarizer::generateSummary()
 {
     std::vector<ToolSummary> summary;
     for (testCases::ToolResults &toolResult : m_toolResults)
@@ -102,9 +110,10 @@ void ToolSummarizer::reportSummary()
         {
             throw std::runtime_error("Unknown tool " + tool.name);
         }
-        const std::string toolName = it->second;
-        std::cout << " | [" << toolName << "](results/" << tool.name << "Results.md)";
-        separator += " | " + std::string(toolName.length(), '-');
+        const std::string &toolTitle = it->second;
+        std::cout << " | [" << toolTitle << "](results/" << (m_annotate ? "annotated/" : "") << tool.name
+                  << "Results.md)";
+        separator += " | " + std::string(toolTitle.length(), '-');
     }
     std::cout << '\n' << separator << '\n';
 
@@ -139,9 +148,26 @@ void ToolSummarizer::reportSummary()
     }
 }
 
+void ToolSummarizer::generateAnnotatedToolResults()
+{
+    for (testCases::ToolResults &toolResult : m_toolResults)
+    {
+        toolResult.writeAnnotatedResults(m_resultDir / "annotated" / toolResult.getPath().filename());
+    }
+}
+
+void ToolSummarizer::generateReport()
+{
+    if (m_annotate)
+    {
+        generateAnnotatedToolResults();
+    }
+    generateSummary();
+}
+
 int usage(std::string_view program)
 {
-    std::cout << "Usage: " << program << " <RefactorTest> <results>\n";
+    std::cout << "Usage: " << program << " [--annotate] <RefactorTest> <results>\n";
     return 1;
 }
 
@@ -149,13 +175,26 @@ int usage(std::string_view program)
 
 int toolMain(std::vector<std::string_view> args)
 {
-    if (args.size() < 3)
+    bool annotate{};
+    if (args.size() == 4)
+    {
+        if (args[1] == "--annotate")
+        {
+            annotate = true;
+            args.erase(args.begin() + 1);
+        }
+        else
+        {
+            return usage(args[0]);
+        }
+    }
+    if (args.size() != 3)
     {
         return usage(args[0]);
     }
 
     const std::filesystem::path testCaseDir{args[1]};
     const std::filesystem::path resultDir{args[2]};
-    ToolSummarizer(testCaseDir, resultDir).reportSummary();
+    ToolSummarizer(testCaseDir, resultDir, annotate).generateReport();
     return 0;
 }

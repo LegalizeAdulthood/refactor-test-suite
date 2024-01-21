@@ -77,6 +77,7 @@ public:
     void renameTestCases(std::string_view prefix,
                          const std::vector<std::string_view> &before,
                          const std::vector<std::string_view> &after);
+    void writeAnnotatedResults(const std::filesystem::path &outputFile);
 
 private:
     struct TestResultCollection

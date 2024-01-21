@@ -391,4 +391,73 @@ void ToolResults::renameTestCases(std::string_view prefix,
     std::swap(results.results, newResults);
 }
 
+void ToolResults::writeAnnotatedResults(const std::filesystem::path &outputFile)
+{
+    std::ofstream str(outputFile);
+    auto copyStrings = [&](const std::vector<std::string> &strings)
+    { std::copy(strings.begin(), strings.end(), std::ostream_iterator<std::string>(str, "\n")); };
+    copyStrings(m_preamble);
+    bool first{true};
+    for (const TestResultCollection &results : m_testResults)
+    {
+        const Test &test = getTestForPrefix(results.prefix);
+        if (!first)
+        {
+            str << '\n';
+        }
+        str << "## " << results.title << '\n';
+        if (!results.preamble.empty())
+        {
+            copyStrings(results.preamble);
+        }
+        for (const std::string &line : results.tableHeader)
+        {
+            str << line;
+            if (line.find('|') != std::string::npos)
+            {
+                if (line.find("Case") != std::string::npos)
+                {
+                    str << " | Location";
+                    if (test.hasDiffs())
+                    {
+                        str << " | Expected Diff";
+                    }
+                }
+                else if (line.find('-') != std::string::npos)
+                {
+                    str << " | --------";
+                    if (test.hasDiffs())
+                    {
+                        str << " | -------------";
+                    }
+                }
+            }
+            str << '\n';
+        }
+        const std::vector<TestCaseLocation> &locations = test.getCaseLocations();
+        auto it = locations.begin();
+        for (const TestResult &testResult : results.results)
+        {
+            if (it->label != getLabel(testResult))
+            {
+                throw std::runtime_error("Mismatched test case label " + it->label + " != " + getLabel(testResult));
+            }
+            const std::string file{it->sourceFile.filename().string()};
+            const int line{it->line};
+            str << testResult.line << " | [`" << file << "`, line " << line
+                << "](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/" << file
+                << "#L" << line << ")";
+            if (test.hasDiffs())
+            {
+                str << " | [" << it->label
+                    << ".txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/"
+                    << it->label << ".txt)";
+            }
+            str << '\n';
+            ++it;
+        }
+        first = false;
+    }
+}
+
 }    // namespace testCases

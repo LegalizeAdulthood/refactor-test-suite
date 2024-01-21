@@ -81,7 +81,7 @@ void Processor::scanResultsDir(std::filesystem::path resultsDir)
 
 void Processor::readDiffs(std::filesystem::path resultsDir)
 {
-    if (!m_test.getDiffsRequired())
+    if (!m_test.hasDiffs())
     {
         return;
     }
@@ -175,7 +175,7 @@ const testCases::FileContents &Processor::getCaseDiffForLabel(const std::string 
 
 void Processor::writeDiffs()
 {
-    if (!m_test.getDiffsRequired())
+    if (!m_test.hasDiffs())
     {
         return;
     }

@@ -84,7 +84,7 @@ void TestDiffs::checkDiffs()
 {
     for (const testCases::Test &test : testCases::getTests())
     {
-        if (!test.getDiffsRequired())
+        if (!test.hasDiffs())
         {
             continue;
         }

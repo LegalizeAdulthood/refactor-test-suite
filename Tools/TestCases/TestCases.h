@@ -17,10 +17,17 @@ struct TestCaseAlias
     std::vector<std::string> aliases;
 };
 
+struct TestCaseLocation
+{
+    std::string label;
+    std::filesystem::path sourceFile;
+    int line;
+};
+
 class Test
 {
 public:
-    static std::vector<std::string> scanTestDirectory(std::filesystem::path dir);
+    static std::vector<std::string> scanTestDirectory(const std::filesystem::path &dir);
     static const std::string &getPrefixForTestName(const std::string &name);
 
     Test(const char *name, const char *prefix) :
@@ -42,7 +49,7 @@ public:
     {
         return m_prefix;
     }
-    bool getDiffsRequired() const
+    bool hasDiffs() const
     {
         return m_diffsRequired;
     }
@@ -66,6 +73,10 @@ public:
     {
         return m_cases.size();
     }
+    const std::vector<TestCaseLocation> &getCaseLocations() const
+    {
+        return m_locations;
+    }
     bool isDeprecatedCase(const std::string &label) const;
     bool isConsecutive() const
     {
@@ -73,8 +84,8 @@ public:
     }
 
 private:
-    static void scanTestCaseDirectory(std::filesystem::path dir);
-    static void scanTestCaseFile(std::filesystem::path path);
+    static void scanTestCaseDirectory(const std::filesystem::path &dir);
+    static void scanTestCaseFile(const std::filesystem::path &path);
     static void scanTestCaseLine(std::string_view line);
     static void checkLabel(std::string_view label, std::string_view desc);
     static void sortTestCases();
@@ -88,6 +99,7 @@ private:
     std::vector<TestCaseAlias> m_aliases;
     std::vector<std::string> m_deprecatedCases;
     std::vector<std::filesystem::path> m_paths;
+    std::vector<TestCaseLocation> m_locations;
 };
 
 const std::vector<Test> &getTests();

@@ -54,7 +54,7 @@ tests are being executed for the first time.
 1. Update the version information for the tool at the top of the results file.
 1. Run `ctest --preset default` to validate your changes to the results file.
 1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the
-   appropriate summary results markdown for the tool.
+   appropriate annotated summary results markdown for the tool.
 1. Issue a pull request with your changes.
 
 ## Update Test Cases
@@ -79,7 +79,7 @@ First, we'll want to check the failures:
    were tested for the updated version.
 1. Run `ctest --preset default` to validate your changes to the results file.
 1. Use the support tool [tool-summary](#executable-tool-summary) to regenerate the
-   appropriate summary results markdown for the tool.
+   appropriate annotated summary results markdown for the tool.
 1. Issue a pull request with your changes.
 
 Re-checking the passing tests to look for regressions is similar,
@@ -119,8 +119,8 @@ which tests were executed against the updated version.
 1. Use the support tool [test-results](#executable-test-results) to validate your changes
    to the results file for the tool you're testing.
 1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
-1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the summary
-   reports.
+1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the annotated
+   summary reports.
 1. Issue a pull request with your changes, which should include:
    1. Modified test case files.
    1. Added result diffs for new test cases.
@@ -176,8 +176,8 @@ which tests were executed against the updated version.
 1. Use the support tool [test-results](#executable-test-results) to validate your changes
    to the results file for the tool you're testing.
 1. Run `ctest --preset default` to validate your changes to the results file for all the tools.
-1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the summary
-   reports.
+1. Use the [tool-summary](#executable-tool-summary) support tool to regenerate the annotated
+   summary reports.
 1. Issue a pull request with your changes.
 
 # Repository Organization
@@ -302,12 +302,12 @@ with the command `ctest --preset default` in the repository directory.
 
 ## Executable tool-summary
 
-Example: `tool-summary results > SummaryResults.md`
+Example: `tool-summary --annotate RefactorTest results > SummaryResults.md`
 
 The executable tool-summary collects the results for a group of tools and
 generates a summary markdown file for the group to standard output.
-This is used to regenerate the [summary results](SummaryResults.md) and
-[preliminary results](PreliminaryResults.md) reports when test results for a
+This is used to regenerate the annotated [summary results](SummaryResults.md)
+and [preliminary results](PreliminaryResults.md) reports when test results for a
 tool are updated.
 
 ## Executable add-tests
