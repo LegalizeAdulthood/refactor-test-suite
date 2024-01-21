@@ -4,7 +4,7 @@ index d1c1283..3838e74 100644
 +++ b/RefactorTest/Rename.cpp
 @@ -46,7 +46,7 @@ public:
  
-     // #TEST#: R8 Rename this class via typedef
+     // #TEST#: R8 =R5 Rename this class via typedef
      // #TEST#: R9 Rename typedef MyClass
 -    typedef Rename1 MyClass;
 +    typedef Rename1 Goink;
@@ -14,7 +14,7 @@ index d1c1283..3838e74 100644
 @@ -616,7 +616,7 @@ void TestRename()
  
      // #TEST#: R191 Rename MyClass
-     // #TEST#: R192 Rename Rename1 from scope qualifier
+     // #TEST#: R192 =R5 Rename Rename1 from scope qualifier
 -    Rename1::MyClass myClass;
 +    Rename1::Goink myClass;
      myClass.Operation();

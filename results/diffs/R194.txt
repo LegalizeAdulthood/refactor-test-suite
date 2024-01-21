@@ -13,7 +13,7 @@ index d1c1283..af30d00 100644
  
 @@ -617,12 +617,12 @@ void TestRename()
      // #TEST#: R191 Rename MyClass
-     // #TEST#: R192 Rename Rename1 from scope qualifier
+     // #TEST#: R192 =R5 Rename Rename1 from scope qualifier
      Rename1::MyClass myClass;
 -    myClass.Operation();
 +    myClass.goink();

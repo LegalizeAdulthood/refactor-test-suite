@@ -34,17 +34,17 @@ public:
 class Rename1
 {
 public:
-    // #TEST#: R6 Rename this class via its c'tor
+    // #TEST#: R6 =R5 Rename this class via its c'tor
     Rename1() : x()
     {
     }
 
-    // #TEST#: R7 Rename this class via its d'tor
+    // #TEST#: R7 =R5 Rename this class via its d'tor
     ~Rename1()
     {
     }
 
-    // #TEST#: R8 Rename this class via typedef
+    // #TEST#: R8 =R5 Rename this class via typedef
     // #TEST#: R9 Rename typedef MyClass
     typedef Rename1 MyClass;
 
@@ -615,7 +615,7 @@ void TestRename()
     uf = su.member();
 
     // #TEST#: R191 Rename MyClass
-    // #TEST#: R192 Rename Rename1 from scope qualifier
+    // #TEST#: R192 =R5 Rename Rename1 from scope qualifier
     Rename1::MyClass myClass;
     myClass.Operation();
 
