@@ -129,7 +129,7 @@ void AddTestAlias::updateFile(const testCases::FileContents &file)
         }
         return result;
     };
-    file.transform(file.getPath(), updateLabel);
+    file.transform(updateLabel);
 }
 
 void AddTestAlias::updateSourceFiles()
@@ -181,7 +181,7 @@ int main(std::vector<std::string_view> args)
         {
             return usage(args[0]);
         }
-        const std::string_view testCaseDir {args[1]};
+        const std::string_view testCaseDir{args[1]};
         const std::string_view resultsDir{args[2]};
         const std::string_view prefix{args[3]};
         const int master = std::stoi(std::string{args[4]});
@@ -218,4 +218,3 @@ int main(int argc, char *argv[])
     }
     return main(args);
 }
-

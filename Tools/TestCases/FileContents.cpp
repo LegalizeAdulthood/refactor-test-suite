@@ -4,7 +4,7 @@ namespace testCases
 {
 
 FileContents::FileContents(std::filesystem::path sourceFile) :
-    path(sourceFile)
+    m_path(sourceFile)
 {
     std::ifstream str(sourceFile.string());
     while (str)
@@ -13,17 +13,17 @@ FileContents::FileContents(std::filesystem::path sourceFile) :
         std::getline(str, line);
         if (str)
         {
-            lines.emplace_back(std::move(line));
+            m_lines.emplace_back(std::move(line));
         }
     }
 }
 
-void FileContents::transform(std::filesystem::path destPath, std::function<std::string(std::string)> transform) const
+void FileContents::transform(const std::function<std::string(std::string)> &operation) const
 {
-    std::ofstream str(destPath);
-    for (std::string line : lines)
+    std::ofstream str(m_path);
+    for (std::string line : m_lines)
     {
-        str << transform(line) << '\n';
+        str << operation(line) << '\n';
     }
 }
 
@@ -49,4 +49,4 @@ std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDi
     return caseDiffs;
 }
 
-}    // namespace testTool
+}    // namespace testCases

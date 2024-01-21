@@ -73,18 +73,20 @@ void AddTests::writeSourceFile()
     std::string marker{"#GOINK#: "};
     int testNum{m_numTestCases};
     std::ofstream str(m_sourceFile);
-    for (std::string line : m_sourceContents.getLines())
+    auto replaceMarkers = [&](const std::string &line)
     {
-        const auto goink = line.find(marker);
+        std::string result{line};
+        const auto goink = result.find(marker);
         if (goink != std::string::npos)
         {
             ++testNum;
-            auto markerEnd = line.find_first_of(' ', goink + marker.length());
+            auto markerEnd = result.find_first_of(' ', goink + marker.length());
             m_newLabels.emplace_back(m_testPrefix + std::to_string(testNum));
-            line = line.substr(0, goink) + "#TEST#: " + m_newLabels.back() + line.substr(markerEnd);
+            result = result.substr(0, goink) + "#TEST#: " + m_newLabels.back() + result.substr(markerEnd);
         }
-        str << line << '\n';
-    }
+        return result;
+    };
+    m_sourceContents.transform(replaceMarkers);
 }
 
 void AddTests::updateResultsFile(std::filesystem::path file)

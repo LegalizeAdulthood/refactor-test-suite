@@ -16,21 +16,20 @@ struct FileContents
 
     const std::filesystem::path &getPath() const
     {
-        return path;
+        return m_path;
     }
     const std::vector<std::string> &getLines() const
     {
-        return lines;
+        return m_lines;
     }
 
-    void transform(std::filesystem::path destPath, std::function<std::string(std::string)> transform) const;
+    void transform(const std::function<std::string(std::string)> &operation) const;
 
 private:
-    std::filesystem::path path;
-    std::vector<std::string> lines;
+    std::filesystem::path m_path;
+    std::vector<std::string> m_lines;
 };
 
 std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDir, const std::string &prefix);
 
-
-}    // namespace testTool
+}    // namespace testCases

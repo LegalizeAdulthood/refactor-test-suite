@@ -133,7 +133,8 @@ std::string Processor::findMapping(std::string_view label) const
     return it->after;
 }
 
-void Processor::writeTransformedFileContents(const testCases::FileContents &contents, const std::filesystem::path destPath)
+void Processor::writeTransformedFileContents(const testCases::FileContents &contents,
+                                             const std::filesystem::path destPath)
 {
     auto renumberLabel = [this](const std::string &line)
     {
@@ -146,13 +147,13 @@ void Processor::writeTransformedFileContents(const testCases::FileContents &cont
         }
         return result;
     };
-    contents.transform(destPath, renumberLabel);
+    contents.transform(renumberLabel);
 }
 
 void Processor::writeSourceFiles()
 {
     std::cout << "Updating " << m_sourceFiles.size() << " test case source files..." << std::flush;
-    for (const testCases::FileContents &sourceFile: m_sourceFiles)
+    for (const testCases::FileContents &sourceFile : m_sourceFiles)
     {
         writeTransformedFileContents(sourceFile, sourceFile.getPath());
     }
@@ -178,11 +179,10 @@ void Processor::writeDiffs()
         return;
     }
 
-
     // update contents of all diffs to new labels
     // write updated contents of before case diff to after case diff
     std::cout << "Updating " << m_test.getNumTestCases() << " diffs..." << std::flush;
-    for (const std::string&label : m_test.getCases())
+    for (const std::string &label : m_test.getCases())
     {
         const testCases::FileContents &caseDiff = getCaseDiffForLabel(label);
         const std::string before = caseDiff.getPath().stem().string();
