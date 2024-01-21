@@ -4,6 +4,8 @@ if(NOT ("cxx_std_17" IN_LIST CMAKE_CXX_COMPILE_FEATURES))
 endif()
 
 add_library(test-cases STATIC
+    FileContents.h
+    FileContents.cpp
     TestCases.h
     TestCases.cpp
     ToolResults.h
