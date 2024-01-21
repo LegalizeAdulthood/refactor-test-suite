@@ -10,7 +10,7 @@ index d1c1283..dd356e8 100644
 +#define GOINK 3.14159f
  
  // #TEST#: R2 Rename the macro argument x_ from declaration
- // #TEST#: R3 Rename the macro argument x_ from usage
+ // #TEST#: R3 =R2 Rename the macro argument x_ from usage
 @@ -645,7 +645,7 @@ void TestRename()
      // #TEST#: R205 rename the variable Y::x
      int y = test2.Operation() + X::x + X::y + Y::x;

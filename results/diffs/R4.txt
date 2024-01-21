@@ -4,7 +4,7 @@ index d1c1283..8628cb4 100644
 +++ b/RefactorTest/Rename.cpp
 @@ -15,7 +15,7 @@
  // #TEST#: R2 Rename the macro argument x_ from declaration
- // #TEST#: R3 Rename the macro argument x_ from usage
+ // #TEST#: R3 =R2 Rename the macro argument x_ from usage
  // #TEST#: R4 Rename this macro
 -#define MACRO_ONE_ARG(x_) (2.0f * x_)
 +#define GOINK(x_) (2.0f * x_)
