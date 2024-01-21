@@ -130,20 +130,20 @@ int toolMain(std::vector<std::string_view> args)
     const std::filesystem::path testCaseDir{args[1]};
     if (!is_directory(testCaseDir))
     {
-        std::cerr << "Test case directory " << testCaseDir << " does not exist.";
+        std::cerr << "Test case directory " << testCaseDir << " does not exist.\n";
         return 1;
     }
     const std::string_view testPrefix{args[2]};
     const std::filesystem::path sourceFile{args[3]};
     if (!exists(sourceFile))
     {
-        std::cerr << "File " << sourceFile << " does not exist.";
+        std::cerr << "File " << sourceFile << " does not exist.\n";
         return 1;
     }
     const std::filesystem::path resultsDir{args[4]};
     if (!is_directory(resultsDir))
     {
-        std::cerr << "Results case directory " << resultsDir << " does not exist.";
+        std::cerr << "Results case directory " << resultsDir << " does not exist.\n";
         return 1;
     }
 
