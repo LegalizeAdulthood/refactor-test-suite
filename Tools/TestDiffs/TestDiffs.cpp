@@ -94,6 +94,16 @@ void TestDiffs::checkDiffs()
             {
                 std::cout << "warning: Test case " << testCase << " has no diff.\n";
             }
+            else
+            {
+                std::ifstream str(m_diffDir / (testCase + ".txt"));
+                std::string line;
+                std::getline(str, line);
+                if (line == testCases::g_diffPlaceholder)
+                {
+                    std::cout << "warning: Test case " << testCase << " has a placeholder diff.\n";
+                }
+            }
         }
 
         for (const testCases::TestCaseAlias &alias : test.getCaseAliases())

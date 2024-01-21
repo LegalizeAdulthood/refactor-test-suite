@@ -108,7 +108,7 @@ void AddTests::writePlaceholderDiffs(const std::filesystem::path &diffDir)
     for (const std::string &label : m_newLabels)
     {
         std::ofstream str(diffDir / (label + ".txt"));
-        str << "AWAITING TEST RESULTS\n";
+        str << testCases::g_diffPlaceholder << '\n';
     }
 }
 

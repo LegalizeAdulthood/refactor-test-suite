@@ -93,4 +93,6 @@ private:
 const std::vector<Test> &getTests();
 const Test &getTestForPrefix(std::string_view prefix);
 
+extern const char *const g_diffPlaceholder;
+
 }    // namespace testCases

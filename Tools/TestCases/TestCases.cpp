@@ -13,6 +13,8 @@
 namespace testCases
 {
 
+char const *const g_diffPlaceholder = "AWAITING TEST RESULTS";
+
 // Refactorings not requiring diffs are those that are not widely supported across tools and
 // therefore specific to only one or two tools.
 std::vector<Test> g_tests{
