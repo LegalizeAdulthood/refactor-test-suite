@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-namespace testTool
+namespace testCases
 {
 
 struct FileContents
@@ -29,5 +29,8 @@ private:
     std::filesystem::path path;
     std::vector<std::string> lines;
 };
+
+std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDir, const std::string &prefix);
+
 
 }    // namespace testTool

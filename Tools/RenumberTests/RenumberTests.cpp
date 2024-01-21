@@ -35,18 +35,18 @@ private:
     void readCaseDiffs(std::filesystem::path caseDiffsDir);
     void readFileDiff(std::filesystem::path fileDiffDir);
     std::string findMapping(std::string_view label) const;
-    void writeTransformedFileContents(const testTool::FileContents &contents, std::filesystem::path destPath);
+    void writeTransformedFileContents(const testCases::FileContents &contents, std::filesystem::path destPath);
     void writeSourceFiles();
-    const testTool::FileContents &getCaseDiffForLabel(const std::string &label);
+    const testCases::FileContents &getCaseDiffForLabel(const std::string &label);
     void writeDiffs();
     void writeToolResults();
 
     const testCases::Test &m_test;
     std::vector<testCases::ToolResults> m_toolResults;
     std::vector<CaseMapping> m_mapping;
-    std::vector<testTool::FileContents> m_sourceFiles;
-    std::vector<testTool::FileContents> m_caseDiffs;
-    testTool::FileContents m_fileDiff;
+    std::vector<testCases::FileContents> m_sourceFiles;
+    std::vector<testCases::FileContents> m_caseDiffs;
+    testCases::FileContents m_fileDiff;
 };
 
 Processor::Processor(std::string_view prefix) :
@@ -91,22 +91,7 @@ void Processor::readDiffs(std::filesystem::path resultsDir)
 
 void Processor::readCaseDiffs(std::filesystem::path caseDiffsDir)
 {
-    const auto startsWith = [](const std::string &text, const std::string &prefix)
-    { return text.substr(0, prefix.length()) == prefix; };
-    const auto isTestCaseDiff = [this, startsWith](const std::filesystem::path path)
-    { return path.extension().string() == ".txt" && startsWith(path.stem().string(), m_test.getPrefix()); };
-    for (const auto &entry : std::filesystem::directory_iterator(caseDiffsDir))
-    {
-        if (entry.is_directory())
-        {
-            continue;
-        }
-        if (!isTestCaseDiff(entry))
-        {
-            continue;
-        }
-        m_caseDiffs.emplace_back(entry);
-    }
+    m_caseDiffs = testCases::readCaseDiffs(caseDiffsDir, m_test.getPrefix());
 }
 
 void Processor::readFileDiff(std::filesystem::path fileDiffDir)
@@ -114,14 +99,14 @@ void Processor::readFileDiff(std::filesystem::path fileDiffDir)
     const std::filesystem::path fileDiff(fileDiffDir / (m_test.getPrefix() + ".txt"));
     if (exists(fileDiff))
     {
-        m_fileDiff = testTool::FileContents(fileDiff);
+        m_fileDiff = testCases::FileContents(fileDiff);
     }
 }
 
 void Processor::renumber()
 {
     int testCaseNum{};
-    for (const testTool::FileContents &sourceFile : m_sourceFiles)
+    for (const testCases::FileContents &sourceFile : m_sourceFiles)
     {
         for (const std::string &line : sourceFile.getLines())
         {
@@ -148,7 +133,7 @@ std::string Processor::findMapping(std::string_view label) const
     return it->after;
 }
 
-void Processor::writeTransformedFileContents(const testTool::FileContents &contents, const std::filesystem::path destPath)
+void Processor::writeTransformedFileContents(const testCases::FileContents &contents, const std::filesystem::path destPath)
 {
     auto renumberLabel = [this](const std::string &line)
     {
@@ -167,18 +152,18 @@ void Processor::writeTransformedFileContents(const testTool::FileContents &conte
 void Processor::writeSourceFiles()
 {
     std::cout << "Updating " << m_sourceFiles.size() << " test case source files..." << std::flush;
-    for (const testTool::FileContents &sourceFile: m_sourceFiles)
+    for (const testCases::FileContents &sourceFile: m_sourceFiles)
     {
         writeTransformedFileContents(sourceFile, sourceFile.getPath());
     }
     std::cout << '\n';
 }
 
-const testTool::FileContents &Processor::getCaseDiffForLabel(const std::string &label)
+const testCases::FileContents &Processor::getCaseDiffForLabel(const std::string &label)
 {
     auto it = std::find_if(m_caseDiffs.begin(),
                            m_caseDiffs.end(),
-                           [&](const testTool::FileContents &caseDiff) { return caseDiff.getPath().stem() == label; });
+                           [&](const testCases::FileContents &caseDiff) { return caseDiff.getPath().stem() == label; });
     if (it == m_caseDiffs.end())
     {
         throw std::runtime_error("Unknown label " + label);
@@ -199,7 +184,7 @@ void Processor::writeDiffs()
     std::cout << "Updating " << m_test.getNumTestCases() << " diffs..." << std::flush;
     for (const std::string&label : m_test.getCases())
     {
-        const testTool::FileContents &caseDiff = getCaseDiffForLabel(label);
+        const testCases::FileContents &caseDiff = getCaseDiffForLabel(label);
         const std::string before = caseDiff.getPath().stem().string();
         const std::string after = findMapping(before);
         const std::filesystem::path afterPath = caseDiff.getPath().parent_path() / (after + ".txt");
