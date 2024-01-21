@@ -32,7 +32,7 @@ std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDi
     std::vector<FileContents> caseDiffs;
     const auto startsWith = [](const std::string &text, const std::string &prefix)
     { return text.substr(0, prefix.length()) == prefix; };
-    const auto isTestCaseDiff = [startsWith, prefix](const std::filesystem::path path)
+    const auto isTestCaseDiff = [startsWith, prefix](const std::filesystem::path &path)
     { return path.extension().string() == ".txt" && startsWith(path.stem().string(), prefix); };
     for (const auto &entry : std::filesystem::directory_iterator(caseDiffsDir))
     {
