@@ -16,16 +16,12 @@ index d1c1283..a756ebe 100644
      {
      }
  
-     // #TEST#: R7 =R5 Rename this class via its d'tor
 -    ~Rename1()
 +    ~Goink()
      {
      }
  
-     // #TEST#: R8 =R5 Rename this class via typedef
-     // #TEST#: R9 Rename typedef MyClass
 -    typedef Rename1 MyClass;
 +    typedef Goink MyClass;
  
-     // #TEST#: R10 Rename this method
      void Operation()

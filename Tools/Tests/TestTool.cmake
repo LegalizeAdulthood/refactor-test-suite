@@ -1,4 +1,4 @@
-set(DEBUG OFF)
+set(DEBUG ON)
 if(DEBUG)
     function(dump_var var)
         message(STATUS "${var}=${${var}}")
@@ -11,6 +11,7 @@ if(DEBUG)
         EXPECTED_DIR
         TOOL_NAME
         TOOL_COMMAND
+        TOOL_ARGS
         )
         dump_var(${var})
     endforeach()
@@ -34,10 +35,10 @@ copy_input_subdir(Results)
 
 # run tool
 if(DEBUG)
-    message(STATUS "execute_process COMMAND ${TOOL_COMMAND} ${TEST_DIR}/Sources R ${TEST_DIR}/Sources/TestRename.cpp ${TEST_DIR}/Results")
+    message(STATUS "execute_process COMMAND ${TOOL_COMMAND} ${TOOL_ARGS}")
 endif()
-execute_process(
-    COMMAND ${TOOL_COMMAND} ${TEST_DIR}/Sources R ${TEST_DIR}/Sources/TestRename.cpp ${TEST_DIR}/Results
+execute_process(COMMAND ${TOOL_COMMAND} ${TOOL_ARGS}
+    WORKING_DIRECTORY ${TEST_DIR}
 )
 
 # compare TEST_DIR contents to EXPECTED_DIR
