@@ -3,17 +3,17 @@ index 024d6a2..480a218 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -98,14 +98,14 @@ template <typename T>
- // #TEST#: R1013 Rename function square2
- // #TEST#: R1014 Rename second use of T
- // #TEST#: R1015 Rename parameter value
+ // #TEST#: R1017 Rename function square2
+ // #TEST#: R1018 Rename second use of T
+ // #TEST#: R1019 Rename parameter value
 -T square2(T value)
 +T square2(T goink)
-     // #TEST#: R1016 Rename concept Squareable
-     // #TEST#: R1017 Rename use of T
+     // #TEST#: R1020 Rename concept Squareable
+     // #TEST#: R1021 Rename use of T
      requires Squareable<T>
  {
-     // #TEST#: R1018 Rename first use of value
-     // #TEST#: R1019 Rename second use of value
+     // #TEST#: R1022 Rename first use of value
+     // #TEST#: R1023 Rename second use of value
 -    return value * value;
 +    return goink * goink;
  }

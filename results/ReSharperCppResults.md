@@ -1527,10 +1527,10 @@ R983 | Pass
 R984 | Pass
 R985 | Pass
 R986 | Pass
-R987 | Pass
-R988 | Pass
-R989 | Pass
-R990 | Pass
+R987 |
+R988 |
+R989 |
+R990 |
 R991 | Pass
 R992 | Pass
 R993 | Pass
@@ -2116,6 +2116,10 @@ R1572 | Pass
 R1573 | Pass
 R1574 | Pass
 R1575 | Pass
+R1576 | Pass
+R1577 | Pass
+R1578 | Pass
+R1579 | Pass
 
 ## Reorder Parameters
 Case | Result

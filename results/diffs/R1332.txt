@@ -5,18 +5,18 @@ index 024d6a2..7e767d2 100644
 @@ -787,16 +787,16 @@ struct SqrStruct4
  };
  
- // #TEST#: R1328 Rename template parameter T
+ // #TEST#: R1332 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1331 Rename concept Squareable
- // #TEST#: R1332 Rename use of T
+ // #TEST#: R1335 Rename concept Squareable
+ // #TEST#: R1336 Rename use of T
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
 +    requires(std::is_integral_v<Goink> || std::is_floating_point_v<Goink>) && Squareable<Goink>
- // #TEST#: R1333 Rename class SqrUnion4
+ // #TEST#: R1337 Rename class SqrUnion4
  union SqrUnion4
  {
-     // #TEST#: R1334 Rename first use of T
-     // #TEST#: R1335 Rename second of T
+     // #TEST#: R1338 Rename first use of T
+     // #TEST#: R1339 Rename second of T
 -    T operator()(T value) const
 +    Goink operator()(Goink value) const
      {

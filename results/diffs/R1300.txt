@@ -1,194 +1,26 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..5328eef 100644
+index 024d6a2..de84216 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -50,7 +50,7 @@ template <typename T>
- // #TEST#: R988 Rename concept Squareable
- // #TEST#: R989 Rename use of T
- // #TEST#: R990 Rename parameter lhs
--concept Squareable = requires(T lhs)
-+concept Goink = requires(T lhs)
- {
-     // #TEST#: R991 Rename first use of lhs
-     // #TEST#: R992 Rename second use of lhs
-@@ -79,7 +79,7 @@ concept Multiplicable = requires(T lhs, U rhs)
- template <typename T>
- // #TEST#: R1003 Rename concept Squareable
- // #TEST#: R1004 Rename use of T
--    requires Squareable<T>
-+    requires Goink<T>
- // #TEST#: R1005 Rename first use of T
- // #TEST#: R1006 Rename function square1
- // #TEST#: R1007 Rename second use of T
-@@ -101,7 +101,7 @@ template <typename T>
- T square2(T value)
-     // #TEST#: R1016 Rename concept Squareable
-     // #TEST#: R1017 Rename use of T
--    requires Squareable<T>
-+    requires Goink<T>
- {
-     // #TEST#: R1018 Rename first use of value
-     // #TEST#: R1019 Rename second use of value
-@@ -114,7 +114,7 @@ template <typename T>
- // #TEST#: R1021 Rename first use of T
- // #TEST#: R1022 Rename concept Squareable
- // #TEST#: R1023 Rename second use of T
--    requires std::is_arithmetic_v<T> || Squareable<T>
-+    requires std::is_arithmetic_v<T> || Goink<T>
- // #TEST#: R1024 Rename first use of T
- // #TEST#: R1025 Rename function square3
- // #TEST#: R1026 Rename second use of T
-@@ -132,7 +132,7 @@ template <typename T>
- // #TEST#: R1031 Rename first use of T
- // #TEST#: R1032 Rename concept Squareable
- // #TEST#: R1033 Rename second use of T
+@@ -704,17 +704,17 @@ union SqrUnion2
+ 
+ // compound constraint on single template parameter, conjunction
+ // #TEST#: R1295 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R1297 Rename concept Squareable
+ // #TEST#: R1298 Rename use of T
 -    requires std::is_arithmetic_v<T> && Squareable<T>
-+    requires std::is_arithmetic_v<T> && Goink<T>
- // #TEST#: R1034 Rename first use of T
- // #TEST#: R1035 Rename function square4
- // #TEST#: R1036 Rename second use of T
-@@ -155,7 +155,7 @@ T square5(T value)
-     // #TEST#: R1045 Rename first use of T
-     // #TEST#: R1046 Rename concept Squareable
-     // #TEST#: R1047 Rename second use of T
--    requires std::is_arithmetic_v<T> || Squareable<T>
-+    requires std::is_arithmetic_v<T> || Goink<T>
- {
-     // #TEST#: R1048 Rename first use of value
-     // #TEST#: R1049 Rename second use of value
-@@ -173,7 +173,7 @@ T square6(T value)
-     // #TEST#: R1055 Rename first use of T
-     // #TEST#: R1056 Rename concept Squareable
-     // #TEST#: R1057 Rename second use of T
--    requires std::is_arithmetic_v<T> && Squareable<T>
-+    requires std::is_arithmetic_v<T> && Goink<T>
- {
-     // #TEST#: R1058 Rename first use of value
-     // #TEST#: R1059 Rename second use of value
-@@ -187,7 +187,7 @@ template <typename T>
- // #TEST#: R1062 Rename second use of T
- // #TEST#: R1063 Rename concept Squareable
- // #TEST#: R1064 Rename third use of T
--    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-+    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T>
- // #TEST#: R1065 Rename first use of T
- // #TEST#: R1066 Rename function square7
- // #TEST#: R1067 Rename second use of T
-@@ -211,7 +211,7 @@ T square8(T value)
-     // #TEST#: R1077 Rename second use of T
-     // #TEST#: R1078 Rename concept Squareable
-     // #TEST#: R1079 Rename third use of T
--    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-+    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T>
- {
-     // #TEST#: R1080 Rename first use of value
-     // #TEST#: R1081 Rename second use of value
-@@ -607,7 +607,7 @@ void f1()
- template <typename T>
- // #TEST#: R1253 Rename concept Squareable
- // #TEST#: R1254 Rename use of T
--    requires Squareable<T>
-+    requires Goink<T>
- // #TEST#: R1255 Rename class Sqr1
- class Sqr1
- {
-@@ -624,7 +624,7 @@ public:
- template <typename T>
- // #TEST#: R1259 Rename concept Squareable
- // #TEST#: R1260 Rename use of T
--    requires Squareable<T>
-+    requires Goink<T>
- // #TEST#: R1261 Rename class SqrStruct1
- struct SqrStruct1
- {
-@@ -640,7 +640,7 @@ struct SqrStruct1
- template <typename T>
- // #TEST#: R1265 Rename concept Squareable
- // #TEST#: R1266 Rename use of T
--    requires Squareable<T>
-+    requires Goink<T>
- // #TEST#: R1267 Rename class SqrUnion1
- union SqrUnion1
- {
-@@ -657,7 +657,7 @@ union SqrUnion1
- template <typename T>
- // #TEST#: R1272 Rename concept Squareable
- // #TEST#: R1273 Rename use of T
--    requires std::is_arithmetic_v<T> || Squareable<T>
-+    requires std::is_arithmetic_v<T> || Goink<T>
- // #TEST#: R1274 Rename class Sqr2
- class Sqr2
- {
-@@ -674,7 +674,7 @@ public:
- template <typename T>
- // #TEST#: R1279 Rename concept Squareable
- // #TEST#: R1280 Rename use of T
--    requires std::is_arithmetic_v<T> || Squareable<T>
-+    requires std::is_arithmetic_v<T> || Goink<T>
- // #TEST#: R1281 Rename class SqrStruct2
- struct SqrStruct2
- {
-@@ -690,7 +690,7 @@ struct SqrStruct2
- template <typename T>
- // #TEST#: R1286 Rename concept Squareable
- // #TEST#: R1287 Rename use of T
--    requires std::is_arithmetic_v<T> || Squareable<T>
-+    requires std::is_arithmetic_v<T> || Goink<T>
- // #TEST#: R1288 Rename class SqrUnion2
- union SqrUnion2
- {
-@@ -707,7 +707,7 @@ union SqrUnion2
- template <typename T>
- // #TEST#: R1293 Rename concept Squareable
- // #TEST#: R1294 Rename use of T
--    requires std::is_arithmetic_v<T> && Squareable<T>
-+    requires std::is_arithmetic_v<T> && Goink<T>
- // #TEST#: R1295 Rename class Sqr3
++    requires std::is_arithmetic_v<Goink> && Squareable<Goink>
+ // #TEST#: R1299 Rename class Sqr3
  class Sqr3
  {
-@@ -724,7 +724,7 @@ public:
- template <typename T>
- // #TEST#: R1300 Rename concept Squareable
- // #TEST#: R1301 Rename use of T
--    requires std::is_arithmetic_v<T> && Squareable<T>
-+    requires std::is_arithmetic_v<T> && Goink<T>
- // #TEST#: R1302 Rename class SqrStruct3
- struct SqrStruct3
- {
-@@ -740,7 +740,7 @@ struct SqrStruct3
- template <typename T>
- // #TEST#: R1307 Rename concept Squareable
- // #TEST#: R1308 Rename use of T
--    requires std::is_arithmetic_v<T> && Squareable<T>
-+    requires std::is_arithmetic_v<T> && Goink<T>
- // #TEST#: R1309 Rename class SqrUnion3
- union SqrUnion3
- {
-@@ -757,7 +757,7 @@ union SqrUnion3
- template <typename T>
- // #TEST#: R1315 Rename concept Squareable
- // #TEST#: R1316 Rename use of T
--    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-+    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T>
- // #TEST#: R1317 Rename class Sqr4
- class Sqr4
- {
-@@ -774,7 +774,7 @@ public:
- template <typename T>
- // #TEST#: R1323 Rename concept Squareable
- // #TEST#: R1324 Rename use of T
--    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-+    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T>
- // #TEST#: R1325 Rename class SqrStruct4
- struct SqrStruct4
- {
-@@ -790,7 +790,7 @@ struct SqrStruct4
- template <typename T>
- // #TEST#: R1331 Rename concept Squareable
- // #TEST#: R1332 Rename use of T
--    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-+    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T>
- // #TEST#: R1333 Rename class SqrUnion4
- union SqrUnion4
- {
+ public:
+     // #TEST#: R1300 Rename first use of T
+     // #TEST#: R1301 Rename second of T
+-    T operator()(T value) const
++    Goink operator()(Goink value) const
+     {
+         return value * value;
+     }
 

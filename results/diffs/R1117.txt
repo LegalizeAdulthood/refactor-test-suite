@@ -1,29 +1,29 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..0b5267e 100644
+index 024d6a2..69e6a8a 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -268,12 +268,12 @@ auto product2(T lhs, U rhs) -> decltype(lhs * rhs)
- // #TEST#: R1112 Rename template parameter T
- // #TEST#: R1113 Rename template parameter U
- // #TEST#: R1114 Rename use of T
+ // #TEST#: R1116 Rename template parameter T
+ // #TEST#: R1117 Rename template parameter U
+ // #TEST#: R1118 Rename use of T
 -template <typename T, typename U = T>
-+template <typename Goink, typename U = Goink>
- // #TEST#: R1115 Rename first use of T
- // #TEST#: R1116 Rename concept Multiplicable
- // #TEST#: R1117 Rename second use of T
- // #TEST#: R1118 Rename use of U
++template <typename T, typename Goink = T>
+ // #TEST#: R1119 Rename first use of T
+ // #TEST#: R1120 Rename concept Multiplicable
+ // #TEST#: R1121 Rename second use of T
+ // #TEST#: R1122 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
-+    requires std::is_arithmetic_v<Goink> || Multiplicable<Goink, U>
- // #TEST#: R1119 Rename function product3
- // #TEST#: R1120 Rename use of T
- // #TEST#: R1121 Rename parameter lhs
++    requires std::is_arithmetic_v<T> || Multiplicable<T, Goink>
+ // #TEST#: R1123 Rename function product3
+ // #TEST#: R1124 Rename use of T
+ // #TEST#: R1125 Rename parameter lhs
 @@ -281,7 +281,7 @@ template <typename T, typename U = T>
- // #TEST#: R1123 Rename parameter rhs
- // #TEST#: R1124 Rename use of lhs
- // #TEST#: R1125 Rename use of rhs
+ // #TEST#: R1127 Rename parameter rhs
+ // #TEST#: R1128 Rename use of lhs
+ // #TEST#: R1129 Rename use of rhs
 -auto product3(T lhs, U rhs) -> decltype(lhs * rhs)
-+auto product3(Goink lhs, U rhs) -> decltype(lhs * rhs)
++auto product3(T lhs, Goink rhs) -> decltype(lhs * rhs)
  {
-     // #TEST#: R1126 Rename use of lhs
-     // #TEST#: R1127 Rename use of rhs
+     // #TEST#: R1130 Rename use of lhs
+     // #TEST#: R1131 Rename use of rhs
 

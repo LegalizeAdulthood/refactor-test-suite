@@ -5,20 +5,20 @@ index 024d6a2..33b5fb8 100644
 @@ -146,16 +146,16 @@ T square4(T value)
  
  // single template parameter function with disjunctive constraint on function
- // #TEST#: R1040 Rename template parameter T
+ // #TEST#: R1044 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1041 Rename first use of T
- // #TEST#: R1042 Rename function square5
- // #TEST#: R1043 Rename second use of T
- // #TEST#: R1044 Rename parameter value
+ // #TEST#: R1045 Rename first use of T
+ // #TEST#: R1046 Rename function square5
+ // #TEST#: R1047 Rename second use of T
+ // #TEST#: R1048 Rename parameter value
 -T square5(T value)
 +Goink square5(Goink value)
-     // #TEST#: R1045 Rename first use of T
-     // #TEST#: R1046 Rename concept Squareable
-     // #TEST#: R1047 Rename second use of T
+     // #TEST#: R1049 Rename first use of T
+     // #TEST#: R1050 Rename concept Squareable
+     // #TEST#: R1051 Rename second use of T
 -    requires std::is_arithmetic_v<T> || Squareable<T>
 +    requires std::is_arithmetic_v<Goink> || Squareable<Goink>
  {
-     // #TEST#: R1048 Rename first use of value
-     // #TEST#: R1049 Rename second use of value
+     // #TEST#: R1052 Rename first use of value
+     // #TEST#: R1053 Rename second use of value

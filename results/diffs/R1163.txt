@@ -1,26 +1,19 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..8497913 100644
+index 024d6a2..d190592 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -348,7 +348,7 @@ template <typename T, typename U = T>
- // #TEST#: R1167 Rename parameter rhs
- // #TEST#: R1168 Rename use of lhs
- // #TEST#: R1169 Rename use of rhs
--auto product6(T lhs, U rhs) -> decltype(lhs * rhs)
-+auto goink(T lhs, U rhs) -> decltype(lhs * rhs)
-     // #TEST#: R1170 Rename first use of T
-     // #TEST#: R1171 Rename concept Multiplicable
-     // #TEST#: R1172 Rename second use of T
-@@ -572,9 +572,9 @@ void f1()
-     // multiple template parameter function with conjunctive constraint on function
-     {
-         // #TEST#: R1244 Rename function product6
--        REQUIRE_EQUAL(6.0, product6(2, 3.0));
-+        REQUIRE_EQUAL(6.0, goink(2, 3.0));
-         // #TEST#: R1245 Rename function product6
--        const double d = product6(2.0, 3.0);
-+        const double d = goink(2.0, 3.0);
-         REQUIRE_EQUAL(6.0, d);
-         // Rope is not std::is_arithmetic
-     }
+@@ -329,11 +329,11 @@ template <typename T, typename U = T>
+ // #TEST#: R1159 Rename parameter rhs
+ // #TEST#: R1160 Rename use of lhs
+ // #TEST#: R1161 Rename use of rhs
+-auto product5(T lhs, U rhs) -> decltype(lhs * rhs)
++auto product5(T lhs, U goink) -> decltype(lhs * goink)
+ {
+     // #TEST#: R1162 Rename use of lhs
+     // #TEST#: R1163 Rename use of rhs
+-    return lhs * rhs;
++    return lhs * goink;
+ }
+ 
+ // multiple template parameter function with conjunctive constraint on function
 

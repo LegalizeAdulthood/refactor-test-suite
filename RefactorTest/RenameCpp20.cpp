@@ -456,6 +456,58 @@ void f10()
     }
 }
 
+// #TEST#: R987 Rename E
+enum class E
+{
+    // #TEST#: R988 Rename One
+    One,
+    // #TEST#: R989 Rename Two
+    Two,
+    Three
+};
+
+std::ostream &operator<<(std::ostream &str, E value)
+{
+    switch (value)
+    {
+    case E::One:
+        return str << "One";
+    case E::Two:
+        return str << "Two";
+    case E::Three:
+        return str << "Three";
+    }
+    return str << "? (" << static_cast<int>(value) << ')';
+}
+
+// using for scoped enums
+void f11()
+{
+    struct F11
+    {
+        using enum E;
+    };
+
+    const auto &get_enumerator = [&]() -> auto
+    {
+        using enum E;
+        // #TEST#: R990 Rename Three
+        return Three;
+    };
+
+    const auto &assert_enumerator = [&](const auto &enumerator) -> void
+    {
+        using enum E;
+        REQUIRE_EQUAL(Three, enumerator);
+    };
+
+    F11 f11Ins{};
+    REQUIRE_EQUAL(E::One, F11::One);
+    REQUIRE_EQUAL(f11Ins.Two, E::Two);
+    REQUIRE_EQUAL(F11::Three, get_enumerator());
+    assert_enumerator(get_enumerator());
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -470,6 +522,7 @@ void TestRenameCpp20()
     f8();
     f9();
     f10();
+    f11();
     RenameCpp20::TestRenameConcepts();
     RenameCpp20::TestRenameConstraints();
 }

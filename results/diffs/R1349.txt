@@ -3,14 +3,14 @@ index 21c29d3..32de857 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -819,11 +819,11 @@ public:
-     // #TEST#: R1345 Rename parameter rhs
-     // #TEST#: R1346 Rename first use of lhs
-     // #TEST#: R1347 Rename first use of rhs
+     // #TEST#: R1349 Rename parameter rhs
+     // #TEST#: R1350 Rename first use of lhs
+     // #TEST#: R1351 Rename first use of rhs
 -    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
 +    auto operator()(T lhs, U goink) const -> decltype(lhs * goink)
      {
-         // #TEST#: R1348 Rename lhs
-         // #TEST#: R1349 Rename rhs
+         // #TEST#: R1352 Rename lhs
+         // #TEST#: R1353 Rename rhs
 -        return lhs * rhs;
 +        return lhs * goink;
      }

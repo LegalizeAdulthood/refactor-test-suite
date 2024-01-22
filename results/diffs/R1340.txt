@@ -4,25 +4,25 @@ index 21c29d3..4898c22 100644
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -805,11 +805,11 @@ union SqrUnion4
  // single constraint on multiple template parameters
- // #TEST#: R1336 Rename template parameter T
- // #TEST#: R1337 Rename template parameter U
+ // #TEST#: R1340 Rename template parameter T
+ // #TEST#: R1341 Rename template parameter U
 -template <typename T, typename U = T>
 +template <typename Goink, typename U = Goink>
- // #TEST#: R1339 Rename concept Multiplicable
- // #TEST#: R1340 Rename use of T
- // #TEST#: R1341 Rename use of U
+ // #TEST#: R1343 Rename concept Multiplicable
+ // #TEST#: R1344 Rename use of T
+ // #TEST#: R1345 Rename use of U
 -    requires Multiplicable<T, U>
 +    requires Multiplicable<Goink, U>
  class Product1
  {
  public:
 @@ -819,7 +819,7 @@ public:
-     // #TEST#: R1345 Rename parameter rhs
-     // #TEST#: R1346 Rename first use of lhs
-     // #TEST#: R1347 Rename first use of rhs
+     // #TEST#: R1349 Rename parameter rhs
+     // #TEST#: R1350 Rename first use of lhs
+     // #TEST#: R1351 Rename first use of rhs
 -    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
 +    auto operator()(Goink lhs, U rhs) const -> decltype(lhs * rhs)
      {
-         // #TEST#: R1348 Rename lhs
-         // #TEST#: R1349 Rename rhs
+         // #TEST#: R1352 Rename lhs
+         // #TEST#: R1353 Rename rhs
 

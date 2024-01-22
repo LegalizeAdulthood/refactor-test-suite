@@ -1,27 +1,193 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..e3f6c02 100644
+index 024d6a2..f44d43b 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -222,11 +222,11 @@ T square8(T value)
- // #TEST#: R1082 Rename template parameter T
- // #TEST#: R1083 Rename template parameter U
- // #TEST#: R1084 Rename use of T
--template <typename T, typename U = T>
-+template <typename Goink, typename U = Goink>
- // #TEST#: R1085 Rename concept Multiplicable
- // #TEST#: R1086 Rename use of T
- // #TEST#: R1087 Rename use of U
--    requires Multiplicable<T, U>
-+    requires Multiplicable<Goink, U>
- // #TEST#: R1088 Rename function product1
- // #TEST#: R1089 Rename use of T
- // #TEST#: R1090 Rename parameter lhs
-@@ -234,7 +234,7 @@ template <typename T, typename U = T>
- // #TEST#: R1092 Rename parameter rhs
- // #TEST#: R1093 Rename use of lhs
- // #TEST#: R1094 Rename use of rhs
--auto product1(T lhs, U rhs) -> decltype(lhs * rhs)
-+auto product1(Goink lhs, U rhs) -> decltype(lhs * rhs)
+@@ -66,7 +66,7 @@ template <typename T, typename U>
+ // #TEST#: R1001 Rename parameter lhs
+ // #TEST#: R1002 Rename use of U
+ // #TEST#: R1003 Rename parameter rhs
+-concept Multiplicable = requires(T lhs, U rhs)
++concept Goink = requires(T lhs, U rhs)
  {
-     // #TEST#: R1095 Rename use of lhs
-     // #TEST#: R1096 Rename use of rhs
+     // #TEST#: R1004 Rename use of lhs
+     // #TEST#: R1005 Rename use of rhs
+@@ -226,7 +226,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1089 Rename concept Multiplicable
+ // #TEST#: R1090 Rename use of T
+ // #TEST#: R1091 Rename use of U
+-    requires Multiplicable<T, U>
++    requires Goink<T, U>
+ // #TEST#: R1092 Rename function product1
+ // #TEST#: R1093 Rename use of T
+ // #TEST#: R1094 Rename parameter lhs
+@@ -257,7 +257,7 @@ auto product2(T lhs, U rhs) -> decltype(lhs * rhs)
+     // #TEST#: R1111 Rename concept Multiplicable
+     // #TEST#: R1112 Rename use of T
+     // #TEST#: R1113 Rename use of U
+-    requires Multiplicable<T, U>
++    requires Goink<T, U>
+ {
+     // #TEST#: R1114 Rename use of lhs
+     // #TEST#: R1115 Rename use of rhs
+@@ -273,7 +273,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1120 Rename concept Multiplicable
+ // #TEST#: R1121 Rename second use of T
+ // #TEST#: R1122 Rename use of U
+-    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> || Goink<T, U>
+ // #TEST#: R1123 Rename function product3
+ // #TEST#: R1124 Rename use of T
+ // #TEST#: R1125 Rename parameter lhs
+@@ -305,7 +305,7 @@ auto product4(T lhs, U rhs) -> decltype(lhs * rhs)
+     // #TEST#: R1143 Rename concept Multiplicable
+     // #TEST#: R1144 Rename second use of T
+     // #TEST#: R1145 Rename use of U
+-    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> || Goink<T, U>
+ {
+     // #TEST#: R1146 Rename use of lhs
+     // #TEST#: R1147 Rename use of rhs
+@@ -321,7 +321,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1152 Rename concept Multiplicable
+ // #TEST#: R1153 Rename second use of T
+ // #TEST#: R1154 Rename use of U
+-    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> && Goink<T, U>
+ // #TEST#: R1155 Rename function product5
+ // #TEST#: R1156 Rename use of T
+ // #TEST#: R1157 Rename parameter lhs
+@@ -353,7 +353,7 @@ auto product6(T lhs, U rhs) -> decltype(lhs * rhs)
+     // #TEST#: R1175 Rename concept Multiplicable
+     // #TEST#: R1176 Rename second use of T
+     // #TEST#: R1177 Rename use of U
+-    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> && Goink<T, U>
+ {
+     // #TEST#: R1178 Rename use of lhs
+     // #TEST#: R1179 Rename use of rhs
+@@ -370,7 +370,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1185 Rename concept Multiplicable
+ // #TEST#: R1186 Rename second use of T
+ // #TEST#: R1187 Rename second use of U
+-    requires(std::is_arithmetic_v<T> && std::is_arithmetic_v<U>) || Multiplicable<T, U>
++    requires(std::is_arithmetic_v<T> && std::is_arithmetic_v<U>) || Goink<T, U>
+ // #TEST#: R1188 Rename function product7
+ // #TEST#: R1189 Rename use of T
+ // #TEST#: R1190 Rename parameter lhs
+@@ -403,7 +403,7 @@ auto product8(T lhs, U rhs) -> decltype(lhs * rhs)
+     // #TEST#: R1209 Rename concept Multiplicable
+     // #TEST#: R1210 Rename second use of T
+     // #TEST#: R1211 Rename second use of U
+-    requires(std::is_arithmetic_v<T> && std::is_arithmetic_v<U>) || Multiplicable<T, U>
++    requires(std::is_arithmetic_v<T> && std::is_arithmetic_v<U>) || Goink<T, U>
+ {
+     // #TEST#: R1212 Rename use of lhs
+     // #TEST#: R1213 Rename use of rhs
+@@ -809,7 +809,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1343 Rename concept Multiplicable
+ // #TEST#: R1344 Rename use of T
+ // #TEST#: R1345 Rename use of U
+-    requires Multiplicable<T, U>
++    requires Goink<T, U>
+ class Product1
+ {
+ public:
+@@ -833,7 +833,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1357 Rename concept Multiplicable
+ // #TEST#: R1358 Rename use of T
+ // #TEST#: R1359 Rename use of U
+-    requires Multiplicable<T, U>
++    requires Goink<T, U>
+ struct ProductStruct1
+ {
+     // #TEST#: R1360 Rename use of T
+@@ -856,7 +856,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1371 Rename concept Multiplicable
+ // #TEST#: R1372 Rename use of T
+ // #TEST#: R1373 Rename use of U
+-    requires Multiplicable<T, U>
++    requires Goink<T, U>
+ union ProductUnion1
+ {
+     // #TEST#: R1374 Rename use of T
+@@ -881,7 +881,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1385 Rename first use of T
+ // #TEST#: R1387 Rename second use of T
+ // #TEST#: R1388 Rename use of U
+-    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> || Goink<T, U>
+ class Product2
+ {
+ public:
+@@ -906,7 +906,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1400 Rename first use of T
+ // #TEST#: R1402 Rename second use of T
+ // #TEST#: R1403 Rename use of U
+-    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> || Goink<T, U>
+ struct ProductStruct2
+ {
+     // #TEST#: R1404 Rename use of T
+@@ -930,7 +930,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1415 Rename first use of T
+ // #TEST#: R1417 Rename second use of T
+ // #TEST#: R1418 Rename use of U
+-    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> || Goink<T, U>
+ union ProductUnion2
+ {
+     // #TEST#: R1419 Rename use of T
+@@ -955,7 +955,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1430 Rename first use of T
+ // #TEST#: R1432 Rename second use of T
+ // #TEST#: R1433 Rename use of U
+-    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> && Goink<T, U>
+ class Product3
+ {
+ public:
+@@ -980,7 +980,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1445 Rename first use of T
+ // #TEST#: R1447 Rename second use of T
+ // #TEST#: R1448 Rename use of U
+-    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> && Goink<T, U>
+ struct ProductStruct3
+ {
+     // #TEST#: R1449 Rename use of T
+@@ -1004,7 +1004,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1460 Rename first use of T
+ // #TEST#: R1462 Rename second use of T
+ // #TEST#: R1463 Rename use of U
+-    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
++    requires std::is_arithmetic_v<T> && Goink<T, U>
+ union ProductUnion3
+ {
+     // #TEST#: R1464 Rename use of T
+@@ -1030,7 +1030,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1476 Rename second use of T
+ // #TEST#: R1478 Rename third use of T
+ // #TEST#: R1479 Rename use of U
+-    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
++    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T, U>
+ class Product4
+ {
+ public:
+@@ -1056,7 +1056,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1492 Rename second use of T
+ // #TEST#: R1494 Rename third use of T
+ // #TEST#: R1495 Rename use of U
+-    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
++    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T, U>
+ struct ProductStruct4
+ {
+     // #TEST#: R1496 Rename use of T
+@@ -1081,7 +1081,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1508 Rename second use of T
+ // #TEST#: R1510 Rename third use of T
+ // #TEST#: R1511 Rename use of U
+-    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
++    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T, U>
+ union ProductUnion4
+ {
+     // #TEST#: R1512 Rename use of T

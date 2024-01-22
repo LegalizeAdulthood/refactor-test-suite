@@ -1,30 +1,30 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 21c29d3..ae38ea1 100644
+index 21c29d3..4d480f2 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -1024,13 +1024,13 @@ union ProductUnion3
  // compound constraint on multiple template parameters, combination
- // #TEST#: R1468 Rename template parameter T
- // #TEST#: R1469 Rename template parameter U
+ // #TEST#: R1472 Rename template parameter T
+ // #TEST#: R1473 Rename template parameter U
 -template <typename T, typename U = T>
-+template <typename T, typename Goink = T>
- // #TEST#: R1473 Rename concept Multiplicable
- // #TEST#: R1471 Rename first use of T
- // #TEST#: R1472 Rename second use of T
- // #TEST#: R1474 Rename third use of T
- // #TEST#: R1475 Rename use of U
++template <typename Goink, typename U = Goink>
+ // #TEST#: R1477 Rename concept Multiplicable
+ // #TEST#: R1475 Rename first use of T
+ // #TEST#: R1476 Rename second use of T
+ // #TEST#: R1478 Rename third use of T
+ // #TEST#: R1479 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
-+    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, Goink>
++    requires(std::is_integral_v<Goink> || std::is_floating_point_v<Goink>) && Multiplicable<Goink, U>
  class Product4
  {
  public:
 @@ -1040,7 +1040,7 @@ public:
-     // #TEST#: R1479 Rename parameter rhs
-     // #TEST#: R1480 Rename first use of lhs
-     // #TEST#: R1481 Rename first use of rhs
+     // #TEST#: R1483 Rename parameter rhs
+     // #TEST#: R1484 Rename first use of lhs
+     // #TEST#: R1485 Rename first use of rhs
 -    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
-+    auto operator()(T lhs, Goink rhs) const -> decltype(lhs * rhs)
++    auto operator()(Goink lhs, U rhs) const -> decltype(lhs * rhs)
      {
-         // #TEST#: R1482 Rename lhs
-         // #TEST#: R1483 Rename rhs
+         // #TEST#: R1486 Rename lhs
+         // #TEST#: R1487 Rename rhs
 

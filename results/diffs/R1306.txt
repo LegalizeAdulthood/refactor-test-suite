@@ -1,26 +1,27 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 977575b..69d9b06 100644
+index 977575b..fc0473d 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -743,17 +743,17 @@ struct SqrStruct3
- };
- 
- // #TEST#: R1305 Rename template parameter T
--template <typename T>
-+template <typename Goink>
- // #TEST#: R1306 Rename first use of T
- // #TEST#: R1307 Rename concept Squareable
- // #TEST#: R1308 Rename second use of T
--    requires std::is_arithmetic_v<T> && Squareable<T>
-+    requires std::is_arithmetic_v<Goink> && Squareable<Goink>
- // #TEST#: R1309 Rename class SqrUnion3
- union SqrUnion3
+@@ -732,7 +732,7 @@ template <typename T>
+ // #TEST#: R1305 Rename second use of T
+     requires std::is_arithmetic_v<T> && Squareable<T>
+ // #TEST#: R1306 Rename class SqrStruct3
+-struct SqrStruct3
++struct Goink
  {
-     // #TEST#: R1310 Rename first use of T
-     // #TEST#: R1311 Rename second of T
--    T operator()(T value) const
-+    Goink operator()(Goink value) const
-     {
-         return value * value;
+     // #TEST#: R1307 Rename first use of T
+     // #TEST#: R1308 Rename second of T
+@@ -1234,10 +1234,10 @@ void f2()
      }
+     {
+         // #TEST#: R1540 Rename SqrStruct3
+-        SqrStruct3<int> s1;
++        Goink<int> s1;
+         REQUIRE_EQUAL(4, s1(2));
+         // #TEST#: R1541 Rename SqrStruct3
+-        SqrStruct3<double> s2;
++        Goink<double> s2;
+         const double d = s2(2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // Rope is not std::is_arithmetic
 

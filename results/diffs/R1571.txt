@@ -1,25 +1,25 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 977575b..01b3c14 100644
+index 977575b..65d1b29 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -1054,7 +1054,7 @@ template <typename T, typename U = T>
- // #TEST#: R1474 Rename third use of T
- // #TEST#: R1475 Rename use of U
-     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
--class Product4
-+class Goink
+@@ -1002,7 +1002,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1447 Rename second use of T
+ // #TEST#: R1448 Rename use of U
+     requires std::is_arithmetic_v<T> && Multiplicable<T, U>
+-struct ProductStruct3
++struct Goink
  {
- public:
-     // #TEST#: R1476 Rename use of T
-@@ -1402,10 +1402,10 @@ void f2()
-     // compound constraint on multiple template parameters, combination
+     // #TEST#: R1449 Rename use of T
+     // #TEST#: R1450 Rename parameter lhs
+@@ -1380,10 +1380,10 @@ void f2()
+     }
      {
-         // #TEST#: R1570 Rename Product4
--        Product4<int, double> p1;
+         // #TEST#: R1570 Rename ProductStruct3
+-        ProductStruct3<int, double> p1;
 +        Goink<int, double> p1;
          REQUIRE_EQUAL(6.0, p1(2, 3.0));
-         // #TEST#: R1571 Rename Product4
--        Product4<double> p2;
+         // #TEST#: R1571 Rename ProductStruct3
+-        ProductStruct3<double> p2;
 +        Goink<double> p2;
          const double d = p2(2.0, 2.0);
          REQUIRE_EQUAL(4.0, d);

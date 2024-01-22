@@ -1,18 +1,24 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..34b2e57 100644
+index 024d6a2..c851221 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -119,11 +119,11 @@ template <typename T>
- // #TEST#: R1025 Rename function square3
- // #TEST#: R1026 Rename second use of T
- // #TEST#: R1027 Rename parameter value
--T square3(T value)
-+T square3(T goink)
- {
-     // #TEST#: R1028 Rename first use of value
-     // #TEST#: R1029 Rename second use of value
--    return value * value;
-+    return goink * goink;
- }
+@@ -110,16 +110,16 @@ T square2(T value)
  
- // single template parameter function with conjunctive constraint on template parameter
+ // single template parameter function with disjunctive constraint on template parameter
+ // #TEST#: R1024 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R1025 Rename first use of T
+ // #TEST#: R1026 Rename concept Squareable
+ // #TEST#: R1027 Rename second use of T
+-    requires std::is_arithmetic_v<T> || Squareable<T>
++    requires std::is_arithmetic_v<Goink> || Squareable<Goink>
+ // #TEST#: R1028 Rename first use of T
+ // #TEST#: R1029 Rename function square3
+ // #TEST#: R1030 Rename second use of T
+ // #TEST#: R1031 Rename parameter value
+-T square3(T value)
++Goink square3(Goink value)
+ {
+     // #TEST#: R1032 Rename first use of value
+     // #TEST#: R1033 Rename second use of value

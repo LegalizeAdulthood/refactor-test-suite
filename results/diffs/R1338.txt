@@ -1,28 +1,25 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 977575b..17958c3 100644
+index 024d6a2..7e767d2 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -819,11 +819,11 @@ union SqrUnion4
- // #TEST#: R1336 Rename template parameter T
- // #TEST#: R1337 Rename template parameter U
- // #TEST#: R1338 Rename use of T
--template <typename T, typename U = T>
-+template <typename Goink, typename U = Goink>
- // #TEST#: R1339 Rename concept Multiplicable
- // #TEST#: R1340 Rename use of T
- // #TEST#: R1341 Rename use of U
--    requires Multiplicable<T, U>
-+    requires Multiplicable<Goink, U>
- class Product1
+@@ -787,16 +787,16 @@ struct SqrStruct4
+ };
+ 
+ // #TEST#: R1332 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R1335 Rename concept Squareable
+ // #TEST#: R1336 Rename use of T
+-    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
++    requires(std::is_integral_v<Goink> || std::is_floating_point_v<Goink>) && Squareable<Goink>
+ // #TEST#: R1337 Rename class SqrUnion4
+ union SqrUnion4
  {
- public:
-@@ -833,7 +833,7 @@ public:
-     // #TEST#: R1345 Rename parameter rhs
-     // #TEST#: R1346 Rename first use of lhs
-     // #TEST#: R1347 Rename first use of rhs
--    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
-+    auto operator()(Goink lhs, U rhs) const -> decltype(lhs * rhs)
+     // #TEST#: R1338 Rename first use of T
+     // #TEST#: R1339 Rename second of T
+-    T operator()(T value) const
++    Goink operator()(Goink value) const
      {
-         // #TEST#: R1348 Rename lhs
-         // #TEST#: R1349 Rename rhs
+         return value * value;
+     }
 

@@ -5,21 +5,21 @@ index 024d6a2..388f5f8 100644
 @@ -201,17 +201,17 @@ T square7(T value)
  
  // single template parameter function with combined constraint on function
- // #TEST#: R1071 Rename template parameter T
+ // #TEST#: R1075 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1072 Rename first use of T
- // #TEST#: R1073 Rename function square8
- // #TEST#: R1074 Rename second use of T
- // #TEST#: R1075 Rename parameter value
+ // #TEST#: R1076 Rename first use of T
+ // #TEST#: R1077 Rename function square8
+ // #TEST#: R1078 Rename second use of T
+ // #TEST#: R1079 Rename parameter value
 -T square8(T value)
 +Goink square8(Goink value)
-     // #TEST#: R1076 Rename first use of T
-     // #TEST#: R1077 Rename second use of T
-     // #TEST#: R1078 Rename concept Squareable
-     // #TEST#: R1079 Rename third use of T
+     // #TEST#: R1080 Rename first use of T
+     // #TEST#: R1081 Rename second use of T
+     // #TEST#: R1082 Rename concept Squareable
+     // #TEST#: R1083 Rename third use of T
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
 +    requires(std::is_integral_v<Goink> || std::is_floating_point_v<Goink>) && Squareable<Goink>
  {
-     // #TEST#: R1080 Rename first use of value
-     // #TEST#: R1081 Rename second use of value
+     // #TEST#: R1084 Rename first use of value
+     // #TEST#: R1085 Rename second use of value

@@ -1,30 +1,30 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..b8de295 100644
+index 024d6a2..d6783e9 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -98,7 +98,7 @@ template <typename T>
- // #TEST#: R1013 Rename function square2
- // #TEST#: R1014 Rename second use of T
- // #TEST#: R1015 Rename parameter value
--T square2(T value)
+@@ -84,7 +84,7 @@ template <typename T>
+ // #TEST#: R1010 Rename function square1
+ // #TEST#: R1011 Rename second use of T
+ // #TEST#: R1012 Rename parameter value
+-T square1(T value)
 +T goink(T value)
-     // #TEST#: R1016 Rename concept Squareable
-     // #TEST#: R1017 Rename use of T
-     requires Squareable<T>
-@@ -450,12 +450,12 @@ void f1()
-     // single template parameter function with simple constraint on function
+ {
+     // #TEST#: R1013 Rename first use of value
+     // #TEST#: R1014 Rename second use of value
+@@ -439,12 +439,12 @@ void f1()
+     // single template parameter function with simple constraint on template parameter
      {
-         // #TEST#: R1213 Rename function square2
--        REQUIRE_EQUAL(4, square2(2));
+         // #TEST#: R1214 Rename function square1
+-        REQUIRE_EQUAL(4, square1(2));
 +        REQUIRE_EQUAL(4, goink(2));
-         // #TEST#: R1214 Rename function square2
--        const double d = square2(2.0);
+         // #TEST#: R1215 Rename function square1
+-        const double d = square1(2.0);
 +        const double d = goink(2.0);
          REQUIRE_EQUAL(4.0, d);
-         // #TEST#: R1215 Rename function square2
--        const Rope r = square2(Rope{"square"});
+         // #TEST#: R1216 Rename function square1
+-        const Rope r = square1(Rope{"square"});
 +        const Rope r = goink(Rope{"square"});
          REQUIRE_EQUAL(Rope{"square square"}, r);
      }
-     // single template parameter function with disjunctive constraint on template parameter
+     // single template parameter function with simple constraint on function
 

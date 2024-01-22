@@ -3,18 +3,18 @@ index 024d6a2..7b3f0d1 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -169,7 +169,7 @@ template <typename T>
- // #TEST#: R1052 Rename function square6
- // #TEST#: R1053 Rename second use of T
- // #TEST#: R1054 Rename parameter value
+ // #TEST#: R1056 Rename function square6
+ // #TEST#: R1057 Rename second use of T
+ // #TEST#: R1058 Rename parameter value
 -T square6(T value)
 +T square6(T goink)
-     // #TEST#: R1055 Rename first use of T
-     // #TEST#: R1056 Rename concept Squareable
-     // #TEST#: R1057 Rename second use of T
+     // #TEST#: R1059 Rename first use of T
+     // #TEST#: R1060 Rename concept Squareable
+     // #TEST#: R1061 Rename second use of T
 @@ -177,7 +177,7 @@ T square6(T value)
  {
-     // #TEST#: R1058 Rename first use of value
-     // #TEST#: R1059 Rename second use of value
+     // #TEST#: R1062 Rename first use of value
+     // #TEST#: R1063 Rename second use of value
 -    return value * value;
 +    return goink * goink;
  }

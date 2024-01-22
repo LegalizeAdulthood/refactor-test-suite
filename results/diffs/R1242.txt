@@ -1,26 +1,30 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..100c088 100644
+index 024d6a2..96f77bd 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -329,7 +329,7 @@ template <typename T, typename U = T>
- // #TEST#: R1155 Rename parameter rhs
- // #TEST#: R1156 Rename use of lhs
- // #TEST#: R1157 Rename use of rhs
--auto product5(T lhs, U rhs) -> decltype(lhs * rhs)
+@@ -281,7 +281,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1127 Rename parameter rhs
+ // #TEST#: R1128 Rename use of lhs
+ // #TEST#: R1129 Rename use of rhs
+-auto product3(T lhs, U rhs) -> decltype(lhs * rhs)
 +auto goink(T lhs, U rhs) -> decltype(lhs * rhs)
  {
-     // #TEST#: R1158 Rename use of lhs
-     // #TEST#: R1159 Rename use of rhs
-@@ -563,9 +563,9 @@ void f1()
-     // multiple template parameter function with conjunctive constraint on template parameters
+     // #TEST#: R1130 Rename use of lhs
+     // #TEST#: R1131 Rename use of rhs
+@@ -542,12 +542,12 @@ void f1()
+     // multiple template parameter function with disjunctive constraint on template parameters
      {
-         // #TEST#: R1242 Rename function product5
--        REQUIRE_EQUAL(6.0, product5(2, 3.0));
+         // #TEST#: R1240 Rename function product3
+-        REQUIRE_EQUAL(6.0, product3(2, 3.0));
 +        REQUIRE_EQUAL(6.0, goink(2, 3.0));
-         // #TEST#: R1243 Rename function product5
--        const double d = product5(2.0, 3.0);
+         // #TEST#: R1241 Rename function product3
+-        const double d = product3(2.0, 3.0);
 +        const double d = goink(2.0, 3.0);
          REQUIRE_EQUAL(6.0, d);
-         // Rope is not std::is_arithmetic
+         // #TEST#: R1242 Rename function product3
+-        const Rope r = product3(Rope{"two"}, Rope{"three"});
++        const Rope r = goink(Rope{"two"}, Rope{"three"});
+         REQUIRE_EQUAL(Rope{"two three"}, r);
      }
+     // multiple template parameter function with disjunctive constraint on function
 
