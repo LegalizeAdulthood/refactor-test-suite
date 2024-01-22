@@ -1,1 +1,28 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 977575b..1c092f3 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -761,19 +761,19 @@ union SqrUnion3
+ 
+ // compound constraint on single template parameter, combination
+ // #TEST#: R1312 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R1313 Rename first use of T
+ // #TEST#: R1314 Rename second use of T
+ // #TEST#: R1315 Rename concept Squareable
+ // #TEST#: R1316 Rename third use of T
+-    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
++    requires(std::is_integral_v<Goink> || std::is_floating_point_v<Goink>) && Squareable<Goink>
+ // #TEST#: R1317 Rename class Sqr4
+ class Sqr4
+ {
+ public:
+     // #TEST#: R1318 Rename first use of T
+     // #TEST#: R1319 Rename second of T
+-    T operator()(T value) const
++    Goink operator()(Goink value) const
+     {
+         return value * value;
+     }
+

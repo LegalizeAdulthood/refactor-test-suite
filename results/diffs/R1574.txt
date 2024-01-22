@@ -1,1 +1,27 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 977575b..a81a957 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -1107,7 +1107,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1506 Rename third use of T
+ // #TEST#: R1507 Rename use of U
+     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
+-union ProductUnion4
++union Goink
+ {
+     // #TEST#: R1508 Rename use of T
+     // #TEST#: R1509 Rename parameter lhs
+@@ -1422,10 +1422,10 @@ void f2()
+     }
+     {
+         // #TEST#: R1574 Rename ProductUnion4
+-        ProductUnion4<int, double> p1;
++        Goink<int, double> p1;
+         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+         // #TEST#: R1575 Rename ProductUnion4
+-        ProductUnion4<double> p2;
++        Goink<double> p2;
+         const double d = p2(2.0, 2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // Rope is not std::is_arithmetic
+

@@ -1,1 +1,32 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 977575b..cc7971c 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -824,7 +824,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1340 Rename use of T
+ // #TEST#: R1341 Rename use of U
+     requires Multiplicable<T, U>
+-class Product1
++class Goink
+ {
+ public:
+     // #TEST#: R1342 Rename use of T
+@@ -1288,14 +1288,14 @@ void f2()
+     // single constraint on multiple template parameters
+     {
+         // #TEST#: R1546 Rename Product1
+-        Product1<int, double> p1;
++        Goink<int, double> p1;
+         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+         // #TEST#: R1547 Rename Product1
+-        Product1<double> p2;
++        Goink<double> p2;
+         const double d = p2(2.0, 2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // #TEST#: R1548 Rename Product1
+-        Product1<Rope> s3;
++        Goink<Rope> s3;
+         const Rope r = s3(Rope{"two"}, Rope{"three"});
+         REQUIRE_EQUAL(Rope{"two three"}, r);
+     }
+

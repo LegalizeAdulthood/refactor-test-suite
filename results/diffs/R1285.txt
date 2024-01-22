@@ -1,1 +1,26 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 977575b..a29a4f3 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -690,17 +690,17 @@ struct SqrStruct2
+ };
+ 
+ // #TEST#: R1284 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R1285 Rename first use of T
+ // #TEST#: R1286 Rename concept Squareable
+ // #TEST#: R1287 Rename second use of T
+-    requires std::is_arithmetic_v<T> || Squareable<T>
++    requires std::is_arithmetic_v<Goink> || Squareable<Goink>
+ // #TEST#: R1288 Rename class SqrUnion2
+ union SqrUnion2
+ {
+     // #TEST#: R1289 Rename first use of T
+     // #TEST#: R1290 Rename second of T
+-    T operator()(T value) const
++    Goink operator()(Goink value) const
+     {
+         return value * value;
+     }
+

@@ -1,1 +1,29 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 977575b..5908de4 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -996,12 +996,12 @@ public:
+ // #TEST#: R1438 Rename template parameter T
+ // #TEST#: R1439 Rename template parameter U
+ // #TEST#: R1440 Rename use of T
+-template <typename T, typename U = T>
++template <typename Goink, typename U = Goink>
+ // #TEST#: R1441 Rename first use of T
+ // #TEST#: R1442 Rename concept Multiplicable
+ // #TEST#: R1443 Rename second use of T
+ // #TEST#: R1444 Rename use of U
+-    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
++    requires std::is_arithmetic_v<Goink> && Multiplicable<Goink, U>
+ struct ProductStruct3
+ {
+     // #TEST#: R1445 Rename use of T
+@@ -1010,7 +1010,7 @@ struct ProductStruct3
+     // #TEST#: R1448 Rename parameter rhs
+     // #TEST#: R1449 Rename first use of lhs
+     // #TEST#: R1450 Rename first use of rhs
+-    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
++    auto operator()(Goink lhs, U rhs) const -> decltype(lhs * rhs)
+     {
+         // #TEST#: R1451 Rename lhs
+         // #TEST#: R1452 Rename rhs
+

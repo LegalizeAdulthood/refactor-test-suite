@@ -1,1 +1,28 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 977575b..3cbc865 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -868,11 +868,11 @@ struct ProductStruct1
+ // #TEST#: R1364 Rename template parameter T
+ // #TEST#: R1365 Rename template parameter U
+ // #TEST#: R1366 Rename use of T
+-template <typename T, typename U = T>
++template <typename Goink, typename U = Goink>
+ // #TEST#: R1367 Rename concept Multiplicable
+ // #TEST#: R1368 Rename use of T
+ // #TEST#: R1369 Rename use of U
+-    requires Multiplicable<T, U>
++    requires Multiplicable<Goink, U>
+ union ProductUnion1
+ {
+     // #TEST#: R1370 Rename use of T
+@@ -881,7 +881,7 @@ union ProductUnion1
+     // #TEST#: R1373 Rename parameter rhs
+     // #TEST#: R1374 Rename first use of lhs
+     // #TEST#: R1375 Rename first use of rhs
+-    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
++    auto operator()(Goink lhs, U rhs) const -> decltype(lhs * rhs)
+     {
+         // #TEST#: R1376 Rename lhs
+         // #TEST#: R1377 Rename rhs
+

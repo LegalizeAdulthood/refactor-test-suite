@@ -1,1 +1,30 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 977575b..9bc4ac6 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -1100,13 +1100,13 @@ struct ProductStruct4
+ // #TEST#: R1500 Rename template parameter T
+ // #TEST#: R1501 Rename template parameter U
+ // #TEST#: R1502 Rename use of T
+-template <typename T, typename U = T>
++template <typename Goink, typename U = Goink>
+ // #TEST#: R1503 Rename first use of T
+ // #TEST#: R1504 Rename second use of T
+ // #TEST#: R1505 Rename concept Multiplicable
+ // #TEST#: R1506 Rename third use of T
+ // #TEST#: R1507 Rename use of U
+-    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
++    requires(std::is_integral_v<Goink> || std::is_floating_point_v<Goink>) && Multiplicable<Goink, U>
+ union ProductUnion4
+ {
+     // #TEST#: R1508 Rename use of T
+@@ -1115,7 +1115,7 @@ union ProductUnion4
+     // #TEST#: R1511 Rename parameter rhs
+     // #TEST#: R1512 Rename first use of lhs
+     // #TEST#: R1513 Rename first use of rhs
+-    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
++    auto operator()(Goink lhs, U rhs) const -> decltype(lhs * rhs)
+     {
+         // #TEST#: R1514 Rename lhs
+         // #TEST#: R1515 Rename rhs
+
