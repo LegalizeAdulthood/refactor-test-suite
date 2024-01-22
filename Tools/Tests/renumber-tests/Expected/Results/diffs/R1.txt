@@ -9,14 +9,5 @@ index d1c1283..dd356e8 100644
 -#define MACRO_NO_ARGS 3.14159f
 +#define GOINK 3.14159f
  
- // #TEST#: R2 Rename the macro argument x_ from declaration
- // #TEST#: R3 =R2 Rename the macro argument x_ from usage
-@@ -645,7 +645,7 @@ void TestRename()
-     // #TEST#: R205 rename the variable Y::x
-     int y = test2.Operation() + X::x + X::y + Y::x;
- 
--    float x = MACRO_NO_ARGS;
-+    float x = GOINK;
-     x = MACRO_ONE_ARG(2.0f);
- 
-     {
+class Operations
+{

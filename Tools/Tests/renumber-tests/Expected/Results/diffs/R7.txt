@@ -5,41 +5,23 @@ index d1c1283..a756ebe 100644
 @@ -31,22 +31,22 @@ public:
  };
  
- // #TEST#: R5 Rename this class, but class in Rename2.cpp shouldn't be renamed
+ // #TEST#: R7 Rename this class, but class in Rename2.cpp shouldn't be renamed
 -class Rename1
 +class Goink
  {
  public:
-     // #TEST#: R6 =R5 Rename this class via its c'tor
+     // #TEST#: R8 =R7 Rename this class via its c'tor
 -    Rename1() : x()
 +    Goink() : x()
      {
      }
  
-     // #TEST#: R7 =R5 Rename this class via its d'tor
 -    ~Rename1()
 +    ~Goink()
      {
      }
  
-     // #TEST#: R8 =R5 Rename this class via typedef
-     // #TEST#: R9 Rename typedef MyClass
 -    typedef Rename1 MyClass;
 +    typedef Goink MyClass;
  
-     // #TEST#: R10 Rename this method
      void Operation()
-@@ -616,11 +616,11 @@ void TestRename()
- 
-     // #TEST#: R191 Rename MyClass
-     // #TEST#: R192 =R5 Rename Rename1 from scope qualifier
--    Rename1::MyClass myClass;
-+    Goink::MyClass myClass;
-     myClass.Operation();
- 
-     // #TEST#: R193 Rename this variable
--    Rename1 test;
-+    Goink test;
-     // #TEST#: R194 Rename this method
-     test.Operation();
-     // #TEST#: R195 Rename this function

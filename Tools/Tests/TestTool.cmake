@@ -1,4 +1,4 @@
-set(DEBUG ON)
+set(DEBUG OFF)
 if(DEBUG)
     function(dump_var var)
         message(STATUS "${var}=${${var}}")
@@ -12,6 +12,7 @@ if(DEBUG)
         TOOL_NAME
         TOOL_COMMAND
         TOOL_ARGS
+        COMPARE_FILES
         )
         dump_var(${var})
     endforeach()
@@ -61,9 +62,6 @@ function(compare_file relativePath)
     endif()
 endfunction()
 
-compare_file(Sources/TestRename.cpp)
-compare_file(Results/CLionResults.md)
-compare_file(Results/ReSharperCppResults.md)
-foreach(case RANGE 1 8)
-    compare_file(Results/diffs/R${case}.txt)
+foreach(file ${COMPARE_FILES})
+    compare_file(${file})
 endforeach()
