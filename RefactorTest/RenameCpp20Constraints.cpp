@@ -557,6 +557,7 @@ void f1()
         // #TEST#: R1240 Rename function product4
         const double d = product4(2.0, 3.0);
         REQUIRE_EQUAL(6.0, d);
+        // #GOINK#: Rxx Rename function product4
         const Rope r = product4(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
@@ -655,6 +656,7 @@ union SqrUnion1
 // compound constraint on single template parameter, disjunction
 // #TEST#: R1269 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
 // #TEST#: R1270 Rename concept Squareable
 // #TEST#: R1271 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
@@ -672,6 +674,7 @@ public:
 
 // #TEST#: R1275 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
 // #TEST#: R1276 Rename concept Squareable
 // #TEST#: R1277 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
@@ -688,6 +691,7 @@ struct SqrStruct2
 
 // #TEST#: R1281 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
 // #TEST#: R1282 Rename concept Squareable
 // #TEST#: R1283 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
@@ -705,6 +709,7 @@ union SqrUnion2
 // compound constraint on single template parameter, conjunction
 // #TEST#: R1287 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
 // #TEST#: R1288 Rename concept Squareable
 // #TEST#: R1289 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
@@ -722,6 +727,7 @@ public:
 
 // #TEST#: R1293 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
 // #TEST#: R1294 Rename concept Squareable
 // #TEST#: R1295 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
@@ -738,6 +744,7 @@ struct SqrStruct3
 
 // #TEST#: R1299 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
 // #TEST#: R1300 Rename concept Squareable
 // #TEST#: R1301 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
@@ -755,6 +762,8 @@ union SqrUnion3
 // compound constraint on single template parameter, combination
 // #TEST#: R1305 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
+// #GOINK#: Rxxx Rename second use of T
 // #TEST#: R1306 Rename concept Squareable
 // #TEST#: R1307 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
@@ -772,6 +781,8 @@ public:
 
 // #TEST#: R1311 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
+// #GOINK#: Rxxx Rename second use of T
 // #TEST#: R1312 Rename concept Squareable
 // #TEST#: R1313 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
@@ -788,6 +799,8 @@ struct SqrStruct4
 
 // #TEST#: R1317 Rename template parameter T
 template <typename T>
+// #GOINK#: Rxxx Rename first use of T
+// #GOINK#: Rxxx Rename second use of T
 // #TEST#: R1318 Rename concept Squareable
 // #TEST#: R1319 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
@@ -805,6 +818,7 @@ union SqrUnion4
 // single constraint on multiple template parameters
 // #TEST#: R1323 Rename template parameter T
 // #TEST#: R1324 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1325 Rename concept Multiplicable
 // #TEST#: R1326 Rename use of T
@@ -829,6 +843,7 @@ public:
 
 // #TEST#: R1336 Rename template parameter T
 // #TEST#: R1337 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1338 Rename concept Multiplicable
 // #TEST#: R1339 Rename use of T
@@ -852,6 +867,7 @@ struct ProductStruct1
 
 // #TEST#: R1349 Rename template parameter T
 // #TEST#: R1350 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1351 Rename concept Multiplicable
 // #TEST#: R1352 Rename use of T
@@ -876,6 +892,7 @@ union ProductUnion1
 // compound constraint on multiple template parameters, disjunction
 // #TEST#: R1362 Rename template parameter T
 // #TEST#: R1363 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1364 Rename first use of T
 // #TEST#: R1365 Rename concept Multiplicable
@@ -901,6 +918,7 @@ public:
 
 // #TEST#: R1376 Rename template parameter T
 // #TEST#: R1377 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1378 Rename first use of T
 // #TEST#: R1379 Rename concept Multiplicable
@@ -925,6 +943,7 @@ struct ProductStruct2
 
 // #TEST#: R1390 Rename template parameter T
 // #TEST#: R1391 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1392 Rename first use of T
 // #TEST#: R1393 Rename concept Multiplicable
@@ -950,6 +969,7 @@ union ProductUnion2
 // compound constraint on multiple template parameters, conjunction
 // #TEST#: R1404 Rename template parameter T
 // #TEST#: R1405 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1406 Rename first use of T
 // #TEST#: R1407 Rename concept Multiplicable
@@ -975,6 +995,7 @@ public:
 
 // #TEST#: R1418 Rename template parameter T
 // #TEST#: R1419 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1420 Rename first use of T
 // #TEST#: R1421 Rename concept Multiplicable
@@ -999,6 +1020,7 @@ struct ProductStruct3
 
 // #TEST#: R1432 Rename template parameter T
 // #TEST#: R1433 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1434 Rename first use of T
 // #TEST#: R1435 Rename concept Multiplicable
@@ -1024,6 +1046,7 @@ union ProductUnion3
 // compound constraint on multiple template parameters, combination
 // #TEST#: R1446 Rename template parameter T
 // #TEST#: R1447 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1448 Rename first use of T
 // #TEST#: R1449 Rename second use of T
@@ -1050,6 +1073,7 @@ public:
 
 // #TEST#: R1461 Rename template parameter T
 // #TEST#: R1462 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1463 Rename first use of T
 // #TEST#: R1464 Rename second use of T
@@ -1075,6 +1099,7 @@ struct ProductStruct4
 
 // #TEST#: R1476 Rename template parameter T
 // #TEST#: R1477 Rename template parameter U
+// #GOINK#: Rxxx Rename use of T
 template <typename T, typename U = T>
 // #TEST#: R1478 Rename first use of T
 // #TEST#: R1479 Rename second use of T
@@ -1262,31 +1287,40 @@ void f2()
 
     // single constraint on multiple template parameters
     {
+        // #GOINK#: Rxxx Rename Product1
         Product1<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename Product1
         Product1<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
+        // #GOINK#: Rxxx Rename Product1
         Product1<Rope> s3;
         const Rope r = s3(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
     {
+        // #GOINK#: Rxxx Rename ProductStruct1
         ProductStruct1<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductStruct1
         ProductStruct1<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
+        // #GOINK#: Rxxx Rename ProductStruct1
         ProductStruct1<Rope> s3;
         const Rope r = s3(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
     {
+        // #GOINK#: Rxxx Rename ProductUnion1
         ProductUnion1<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductUnion1
         ProductUnion1<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
+        // #GOINK#: Rxxx Rename ProductUnion1
         ProductUnion1<Rope> s3;
         const Rope r = s3(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
@@ -1294,31 +1328,40 @@ void f2()
 
     // compound constraint on multiple template parameters, disjunction
     {
+        // #GOINK#: Rxxx Rename Product2
         Product2<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename Product2
         Product2<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
+        // #GOINK#: Rxxx Rename Product2
         Product2<Rope> s3;
         const Rope r = s3(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
     {
+        // #GOINK#: Rxxx Rename ProductStruct2
         ProductStruct2<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductStruct2
         ProductStruct2<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
+        // #GOINK#: Rxxx Rename ProductStruct2
         ProductStruct2<Rope> s3;
         const Rope r = s3(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
     {
+        // #GOINK#: Rxxx Rename ProductUnion2
         ProductUnion2<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductUnion2
         ProductUnion2<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
+        // #GOINK#: Rxxx Rename ProductUnion2
         ProductStruct2<Rope> s3;
         const Rope r = s3(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
@@ -1326,24 +1369,30 @@ void f2()
 
     // compound constraint on multiple template parameters, conjunction
     {
+        // #GOINK#: Rxxx Rename Product3
         Product3<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename Product3
         Product3<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
+        // #GOINK#: Rxxx Rename ProductStruct3
         ProductStruct3<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductStruct3
         ProductStruct3<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
+        // #GOINK#: Rxxx Rename ProductUnion3
         ProductUnion3<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductUnion3
         ProductUnion3<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
@@ -1352,24 +1401,30 @@ void f2()
 
     // compound constraint on multiple template parameters, combination
     {
+        // #GOINK#: Rxxx Rename Product4
         Product4<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename Product4
         Product4<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
+        // #GOINK#: Rxxx Rename ProductStruct4
         ProductStruct4<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductStruct4
         ProductStruct4<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
+        // #GOINK#: Rxxx Rename ProductUnion4
         ProductUnion4<int, double> p1;
         REQUIRE_EQUAL(6.0, p1(2, 3.0));
+        // #GOINK#: Rxxx Rename ProductUnion4
         ProductUnion4<double> p2;
         const double d = p2(2.0, 2.0);
         REQUIRE_EQUAL(4.0, d);
@@ -1389,4 +1444,3 @@ void TestRenameConstraints()
 }
 
 }    // namespace RenameCpp20
-
