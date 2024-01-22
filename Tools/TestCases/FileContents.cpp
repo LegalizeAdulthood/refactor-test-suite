@@ -18,9 +18,10 @@ FileContents::FileContents(std::filesystem::path sourceFile) :
     }
 }
 
-void FileContents::transform(const std::function<std::string(std::string)> &operation) const
+void FileContents::transform(const std::function<std::string(std::string)> &operation,
+    const std::filesystem::path &dest) const
 {
-    std::ofstream str(m_path);
+    std::ofstream str(dest);
     for (std::string line : m_lines)
     {
         str << operation(line) << '\n';

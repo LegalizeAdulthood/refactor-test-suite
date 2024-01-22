@@ -25,18 +25,22 @@ struct CaseMapping
 class Processor
 {
 public:
-    Processor(std::string_view prefix);
+    Processor(std::string_view prefix, const std::filesystem::path &resultsDir);
 
-    void scanResultsDir(std::filesystem::path resultsDir);
-    void readDiffs(std::filesystem::path resultsDir);
     void renumber();
     void writeResults();
 
 private:
-    void readCaseDiffs(std::filesystem::path caseDiffsDir);
-    void readFileDiff(std::filesystem::path fileDiffDir);
+    void scanResultsDir(const std::filesystem::path &dir);
+    void readDiffs();
+    void readCaseDiffs();
+    void readFileDiff();
     std::string findMapping(std::string_view label) const;
-    void writeTransformedFileContents(const testCases::FileContents &contents, std::filesystem::path destPath);
+    void writeTransformedFileContents(const testCases::FileContents &contents, const std::filesystem::path &dest);
+    void writeTransformedFileContentsInPlace(const testCases::FileContents &contents)
+    {
+        writeTransformedFileContents(contents, contents.getPath());
+    }
     void writeSourceFiles();
     const testCases::FileContents &getCaseDiffForLabel(const std::string &label);
     void writeDiffs();
@@ -48,57 +52,64 @@ private:
     std::vector<testCases::FileContents> m_sourceFiles;
     std::vector<testCases::FileContents> m_caseDiffs;
     testCases::FileContents m_fileDiff;
+    std::filesystem::path m_resultsDir;
+    std::vector<std::string> m_missingDiffs;
 };
 
-Processor::Processor(std::string_view prefix) :
-    m_test(testCases::getTestForPrefix(prefix))
+Processor::Processor(std::string_view prefix, const std::filesystem::path &resultsDir) :
+    m_test(testCases::getTestForPrefix(prefix)),
+    m_resultsDir(resultsDir)
 {
     m_sourceFiles.reserve(m_test.getPaths().size());
     for (const std::filesystem::path &path : m_test.getPaths())
     {
         m_sourceFiles.emplace_back(path);
     }
+    scanResultsDir(m_resultsDir);
+    readDiffs();
 }
 
-void Processor::scanResultsDir(std::filesystem::path resultsDir)
+void Processor::scanResultsDir(const std::filesystem::path &dir)
 {
-    for (const auto &entry : std::filesystem::directory_iterator(resultsDir))
+    for (const auto &entry : std::filesystem::directory_iterator(dir))
     {
-        if (entry.is_directory())
+        if (is_directory(entry))
         {
             scanResultsDir(entry);
         }
-        else if (testCases::isResultsFile(entry))
+        if (!testCases::isResultsFile(entry))
         {
-            testCases::ToolResults toolResults(entry);
-            if (toolResults.hasResultsForPrefix(m_test.getPrefix()))
-            {
-                m_toolResults.emplace_back(std::move(toolResults));
-            }
+            continue;
+        }
+
+        testCases::ToolResults toolResults(entry);
+        if (toolResults.hasResultsForPrefix(m_test.getPrefix()))
+        {
+            m_toolResults.emplace_back(std::move(toolResults));
         }
     }
 }
 
-void Processor::readDiffs(std::filesystem::path resultsDir)
+void Processor::readDiffs()
 {
     if (!m_test.hasDiffs())
     {
         return;
     }
 
-    readCaseDiffs(resultsDir / "diffs");
-    readFileDiff(resultsDir / "file-diffs");
+    readCaseDiffs();
+    readFileDiff();
 }
 
-void Processor::readCaseDiffs(std::filesystem::path caseDiffsDir)
+void Processor::readCaseDiffs()
 {
-    m_caseDiffs = testCases::readCaseDiffs(caseDiffsDir, m_test.getPrefix());
+    m_caseDiffs = testCases::readCaseDiffs(m_resultsDir / "diffs", m_test.getPrefix());
 }
 
-void Processor::readFileDiff(std::filesystem::path fileDiffDir)
+void Processor::readFileDiff()
 {
-    const std::filesystem::path fileDiff(fileDiffDir / (m_test.getPrefix() + ".txt"));
-    if (exists(fileDiff))
+    if (const std::filesystem::path fileDiff(m_resultsDir / "file-diffs" / (m_test.getPrefix() + ".txt"));
+        exists(fileDiff))
     {
         m_fileDiff = testCases::FileContents(fileDiff);
     }
@@ -121,6 +132,18 @@ void Processor::renumber()
             m_mapping.push_back({label, m_test.getPrefix() + std::to_string(testCaseNum)});
         }
     }
+
+    for (const CaseMapping &map : m_mapping)
+    {
+        auto it = std::find_if(m_caseDiffs.begin(),
+                               m_caseDiffs.end(),
+                               [&](const testCases::FileContents &contents)
+                               { return contents.getPath().stem().string() == map.before; });
+        if (it == m_caseDiffs.end())
+        {
+            m_missingDiffs.push_back(map.before);
+        }
+    }
 }
 
 std::string Processor::findMapping(std::string_view label) const
@@ -134,21 +157,25 @@ std::string Processor::findMapping(std::string_view label) const
     return it->after;
 }
 
-void Processor::writeTransformedFileContents(const testCases::FileContents &contents,
-                                             const std::filesystem::path destPath)
+void Processor::writeTransformedFileContents(const testCases::FileContents &contents, const std::filesystem::path &dest)
 {
     auto renumberLabel = [this](const std::string &line)
     {
         std::string result{line};
         if (line.find("#TEST#") != std::string::npos)
         {
-            const std::string label{testCases::getTestCaseLabel(line)};
-            const std::string replacement = findMapping(label);
-            result.replace(line.find(label), label.length(), replacement);
+            const std::string before{testCases::getTestCaseLabel(line)};
+            const std::string after = findMapping(before);
+            result.replace(line.find(before), before.length(), after);
+            if (const std::string alias{testCases::getTestCaseAlias(line)}; !alias.empty())
+            {
+                const std::string afterAlias = findMapping(alias);
+                result.replace(line.find(alias), alias.length(), afterAlias);
+            }
         }
         return result;
     };
-    contents.transform(renumberLabel);
+    contents.transform(renumberLabel, dest);
 }
 
 void Processor::writeSourceFiles()
@@ -156,7 +183,7 @@ void Processor::writeSourceFiles()
     std::cout << "Updating " << m_sourceFiles.size() << " test case source files..." << std::flush;
     for (const testCases::FileContents &sourceFile : m_sourceFiles)
     {
-        writeTransformedFileContents(sourceFile, sourceFile.getPath());
+        writeTransformedFileContentsInPlace(sourceFile);
     }
     std::cout << '\n';
 }
@@ -180,13 +207,22 @@ void Processor::writeDiffs()
         return;
     }
 
-    // update contents of all diffs to new labels
+    // update contents of all existing diffs to new labels; skip diffs that don't exist
     // write updated contents of before case diff to after case diff
     std::cout << "Updating " << m_test.getNumTestCases() << " diffs..." << std::flush;
-    for (const std::string &label : m_test.getCases())
+    for (const std::string &before : m_test.getCases())
     {
-        const testCases::FileContents &caseDiff = getCaseDiffForLabel(label);
-        const std::string before = caseDiff.getPath().stem().string();
+        if (std::find(m_missingDiffs.begin(), m_missingDiffs.end(), before) != m_missingDiffs.end())
+        {
+            if (const std::filesystem::path path = m_resultsDir / "diffs" / (findMapping(before) + ".txt");
+                exists(path))
+            {
+                remove(path);
+            }
+            continue;
+        }
+
+        const testCases::FileContents &caseDiff = getCaseDiffForLabel(before);
         const std::string after = findMapping(before);
         const std::filesystem::path afterPath = caseDiff.getPath().parent_path() / (after + ".txt");
         writeTransformedFileContents(caseDiff, afterPath);
@@ -198,7 +234,7 @@ void Processor::writeDiffs()
         return;
     }
 
-    writeTransformedFileContents(m_fileDiff, m_fileDiff.getPath());
+    writeTransformedFileContentsInPlace(m_fileDiff);
 }
 
 void Processor::writeToolResults()
@@ -264,10 +300,8 @@ int toolMain(std::vector<std::string_view> args)
         return 1;
     }
     const std::string_view prefix{args[2]};
-    Processor processor(prefix);
     const std::filesystem::path resultsDir{args[3]};
-    processor.scanResultsDir(resultsDir);
-    processor.readDiffs(resultsDir);
+    Processor processor(prefix, resultsDir);
     processor.renumber();
     processor.writeResults();
     return 0;

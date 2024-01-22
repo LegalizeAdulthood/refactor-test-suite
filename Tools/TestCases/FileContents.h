@@ -23,7 +23,11 @@ struct FileContents
         return m_lines;
     }
 
-    void transform(const std::function<std::string(std::string)> &operation) const;
+    void transform(const std::function<std::string(std::string)> &operation, const std::filesystem::path &dest) const;
+    void transform(const std::function<std::string(std::string)> &operation) const
+    {
+        transform(operation, m_path);
+    }
 
 private:
     std::filesystem::path m_path;
