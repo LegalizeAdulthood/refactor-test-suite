@@ -278,7 +278,7 @@ void f8()
     {
         // #TEST#: R937 Rename local variable vals
         // #TEST#: R938 Rename use of one
-        const int vals[3](one, 2, 3);
+        const int vals[3]{one, 2, 3};
         // #TEST#: R939 Rename use of vals
         REQUIRE_EQUAL(1, vals[0]);
         REQUIRE_EQUAL(2, vals[1]);
@@ -295,7 +295,7 @@ void f8()
         // #TEST#: R941 Rename use of Point
         // #TEST#: R942 Rename use of one
         // #TEST#: R943 Rename use of two
-        const Point p(one, two);
+        const Point p{one, two};
         // #TEST#: R944 Rename use of p
         REQUIRE_EQUAL(1, p.x);
         REQUIRE_EQUAL(2, p.y);
@@ -312,7 +312,7 @@ void f8()
         // #TEST#: R946 Rename use of Multiple
         // #TEST#: R947 Rename local variable vals
         // #TEST#: R948 Rename use of one
-        const Multiple vals(one);
+        const Multiple vals{one};
         // #TEST#: R949 Rename use of vals
         REQUIRE_EQUAL(1, vals.x);
     }
@@ -456,6 +456,39 @@ void f10()
     }
 }
 
+// using for scoped enums
+void f11()
+{
+    //#TEST#: R1521 Rename E
+    enum class E : uint8_t {
+        //#TEST#: R1522 Rename One
+        One,
+        //#TEST#: R1523 Rename Two
+        Two,
+        Three
+    };
+
+    struct F11 {
+        using enum E;
+    }f11Ins;
+
+    const auto& get_enumerator = [&]() -> auto {
+        using enum E;
+        //#TEST#: R1524 Rename Three
+        return Three;
+    };
+
+    const auto& assert_enumerator = [&](const auto& enumerator) -> void {
+        using enum E;
+        REQUIRE_EQUAL(Three, enumerator);
+    };
+
+    REQUIRE_EQUAL(E::One, F11::One);
+    REQUIRE_EQUAL(f11Ins.Two, E::Two);
+    REQUIRE_EQUAL(F11::Three, get_enumerator());
+    assert_enumerator(get_enumerator());
+}
+
 }    // namespace
 
 void TestRenameCpp20()
@@ -470,6 +503,8 @@ void TestRenameCpp20()
     f8();
     f9();
     f10();
+    f11();
     RenameCpp20::TestRenameConcepts();
     RenameCpp20::TestRenameConstraints();
 }
+
