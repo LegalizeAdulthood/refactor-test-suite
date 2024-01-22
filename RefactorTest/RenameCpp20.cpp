@@ -459,30 +459,35 @@ void f10()
 // using for scoped enums
 void f11()
 {
-    //#TEST#: R1521 Rename E
-    enum class E : uint8_t {
-        //#TEST#: R1522 Rename One
+    //#GOINK#: ID Rename E
+    enum class E : uint8_t
+    {
+        //#GOINK#: ID Rename One
         One,
-        //#TEST#: R1523 Rename Two
+        //#GOINK#: ID Rename Two
         Two,
         Three
     };
 
-    struct F11 {
+    struct F11
+    {
         using enum E;
-    }f11Ins;
+    };
 
-    const auto& get_enumerator = [&]() -> auto {
+    const auto &get_enumerator = [&]() -> auto
+    {
         using enum E;
-        //#TEST#: R1524 Rename Three
+        //#GOINK#: ID Rename Three
         return Three;
     };
 
-    const auto& assert_enumerator = [&](const auto& enumerator) -> void {
+    const auto &assert_enumerator = [&](const auto &enumerator) -> void
+    {
         using enum E;
         REQUIRE_EQUAL(Three, enumerator);
     };
 
+    F11 f11Ins{};
     REQUIRE_EQUAL(E::One, F11::One);
     REQUIRE_EQUAL(f11Ins.Two, E::Two);
     REQUIRE_EQUAL(F11::Three, get_enumerator());
