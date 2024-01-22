@@ -17,9 +17,11 @@ echo Perform test %prefix%%i%
 set /p "cont=Continue? "
 if not "X%cont%"=="X" exit /b 0
 call update %prefix%%i%
+@echo off
 set /p "next=Next? "
 if not "X%next%"=="X" exit /b 0
 call restore
+@echo off
 set /a i=i+1
 goto next
 goto next
