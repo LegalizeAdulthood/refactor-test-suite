@@ -656,7 +656,7 @@ union SqrUnion1
 // #TEST#: R1269 Rename template parameter T
 template <typename T>
 // #TEST#: R1270 Rename concept Squareable
-// #TEST#: R1271 Rename use of T
+// #TEST#: R1271 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
 // #TEST#: R1272 Rename class Sqr2
 class Sqr2
@@ -673,7 +673,7 @@ public:
 // #TEST#: R1275 Rename template parameter T
 template <typename T>
 // #TEST#: R1276 Rename concept Squareable
-// #TEST#: R1277 Rename use of T
+// #TEST#: R1277 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
 // #TEST#: R1278 Rename class SqrStruct2
 struct SqrStruct2
@@ -689,7 +689,7 @@ struct SqrStruct2
 // #TEST#: R1281 Rename template parameter T
 template <typename T>
 // #TEST#: R1282 Rename concept Squareable
-// #TEST#: R1283 Rename use of T
+// #TEST#: R1283 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
 // #TEST#: R1284 Rename class SqrUnion2
 union SqrUnion2
@@ -706,7 +706,7 @@ union SqrUnion2
 // #TEST#: R1287 Rename template parameter T
 template <typename T>
 // #TEST#: R1288 Rename concept Squareable
-// #TEST#: R1289 Rename use of T
+// #TEST#: R1289 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
 // #TEST#: R1290 Rename class Sqr3
 class Sqr3
@@ -723,7 +723,7 @@ public:
 // #TEST#: R1293 Rename template parameter T
 template <typename T>
 // #TEST#: R1294 Rename concept Squareable
-// #TEST#: R1295 Rename use of T
+// #TEST#: R1295 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
 // #TEST#: R1296 Rename class SqrStruct3
 struct SqrStruct3
@@ -739,7 +739,7 @@ struct SqrStruct3
 // #TEST#: R1299 Rename template parameter T
 template <typename T>
 // #TEST#: R1300 Rename concept Squareable
-// #TEST#: R1301 Rename use of T
+// #TEST#: R1301 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
 // #TEST#: R1302 Rename class SqrUnion3
 union SqrUnion3
@@ -756,7 +756,7 @@ union SqrUnion3
 // #TEST#: R1305 Rename template parameter T
 template <typename T>
 // #TEST#: R1306 Rename concept Squareable
-// #TEST#: R1307 Rename use of T
+// #TEST#: R1307 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
 // #TEST#: R1308 Rename class Sqr4
 class Sqr4
@@ -773,7 +773,7 @@ public:
 // #TEST#: R1311 Rename template parameter T
 template <typename T>
 // #TEST#: R1312 Rename concept Squareable
-// #TEST#: R1313 Rename use of T
+// #TEST#: R1313 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
 // #TEST#: R1314 Rename class SqrStruct4
 struct SqrStruct4
@@ -789,7 +789,7 @@ struct SqrStruct4
 // #TEST#: R1317 Rename template parameter T
 template <typename T>
 // #TEST#: R1318 Rename concept Squareable
-// #TEST#: R1319 Rename use of T
+// #TEST#: R1319 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
 // #TEST#: R1320 Rename class SqrUnion4
 union SqrUnion4
@@ -877,8 +877,8 @@ union ProductUnion1
 // #TEST#: R1362 Rename template parameter T
 // #TEST#: R1363 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1364 Rename concept Multiplicable
-// #TEST#: R1365 Rename first use of T
+// #TEST#: R1364 Rename first use of T
+// #TEST#: R1365 Rename concept Multiplicable
 // #TEST#: R1366 Rename second use of T
 // #TEST#: R1367 Rename use of U
     requires std::is_arithmetic_v<T> || Multiplicable<T, U>
@@ -902,8 +902,8 @@ public:
 // #TEST#: R1376 Rename template parameter T
 // #TEST#: R1377 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1378 Rename concept Multiplicable
-// #TEST#: R1379 Rename first use of T
+// #TEST#: R1378 Rename first use of T
+// #TEST#: R1379 Rename concept Multiplicable
 // #TEST#: R1380 Rename second use of T
 // #TEST#: R1381 Rename use of U
     requires std::is_arithmetic_v<T> || Multiplicable<T, U>
@@ -926,8 +926,8 @@ struct ProductStruct2
 // #TEST#: R1390 Rename template parameter T
 // #TEST#: R1391 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1392 Rename concept Multiplicable
-// #TEST#: R1393 Rename first use of T
+// #TEST#: R1392 Rename first use of T
+// #TEST#: R1393 Rename concept Multiplicable
 // #TEST#: R1394 Rename second use of T
 // #TEST#: R1395 Rename use of U
     requires std::is_arithmetic_v<T> || Multiplicable<T, U>
@@ -951,8 +951,8 @@ union ProductUnion2
 // #TEST#: R1404 Rename template parameter T
 // #TEST#: R1405 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1406 Rename concept Multiplicable
-// #TEST#: R1407 Rename first use of T
+// #TEST#: R1406 Rename first use of T
+// #TEST#: R1407 Rename concept Multiplicable
 // #TEST#: R1408 Rename second use of T
 // #TEST#: R1409 Rename use of U
     requires std::is_arithmetic_v<T> && Multiplicable<T, U>
@@ -976,8 +976,8 @@ public:
 // #TEST#: R1418 Rename template parameter T
 // #TEST#: R1419 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1420 Rename concept Multiplicable
-// #TEST#: R1421 Rename first use of T
+// #TEST#: R1420 Rename first use of T
+// #TEST#: R1421 Rename concept Multiplicable
 // #TEST#: R1422 Rename second use of T
 // #TEST#: R1423 Rename use of U
     requires std::is_arithmetic_v<T> && Multiplicable<T, U>
@@ -1000,8 +1000,8 @@ struct ProductStruct3
 // #TEST#: R1432 Rename template parameter T
 // #TEST#: R1433 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1434 Rename concept Multiplicable
-// #TEST#: R1435 Rename first use of T
+// #TEST#: R1434 Rename first use of T
+// #TEST#: R1435 Rename concept Multiplicable
 // #TEST#: R1436 Rename second use of T
 // #TEST#: R1437 Rename use of U
     requires std::is_arithmetic_v<T> && Multiplicable<T, U>
@@ -1025,9 +1025,9 @@ union ProductUnion3
 // #TEST#: R1446 Rename template parameter T
 // #TEST#: R1447 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1448 Rename concept Multiplicable
-// #TEST#: R1449 Rename first use of T
-// #TEST#: R1450 Rename second use of T
+// #TEST#: R1448 Rename first use of T
+// #TEST#: R1449 Rename second use of T
+// #TEST#: R1450 Rename concept Multiplicable
 // #TEST#: R1451 Rename third use of T
 // #TEST#: R1452 Rename use of U
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
@@ -1051,9 +1051,9 @@ public:
 // #TEST#: R1461 Rename template parameter T
 // #TEST#: R1462 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1463 Rename concept Multiplicable
-// #TEST#: R1464 Rename first use of T
-// #TEST#: R1465 Rename second use of T
+// #TEST#: R1463 Rename first use of T
+// #TEST#: R1464 Rename second use of T
+// #TEST#: R1465 Rename concept Multiplicable
 // #TEST#: R1466 Rename third use of T
 // #TEST#: R1467 Rename use of U
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
@@ -1076,9 +1076,9 @@ struct ProductStruct4
 // #TEST#: R1476 Rename template parameter T
 // #TEST#: R1477 Rename template parameter U
 template <typename T, typename U = T>
-// #TEST#: R1478 Rename concept Multiplicable
-// #TEST#: R1479 Rename first use of T
-// #TEST#: R1480 Rename second use of T
+// #TEST#: R1478 Rename first use of T
+// #TEST#: R1479 Rename second use of T
+// #TEST#: R1480 Rename concept Multiplicable
 // #TEST#: R1481 Rename third use of T
 // #TEST#: R1482 Rename use of U
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>

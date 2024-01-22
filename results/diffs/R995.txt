@@ -111,7 +111,7 @@ index 024d6a2..f44d43b 100644
  {
      // #TEST#: R1354 Rename use of T
 @@ -881,7 +881,7 @@ template <typename T, typename U = T>
- // #TEST#: R1365 Rename first use of T
+ // #TEST#: R1364 Rename first use of T
  // #TEST#: R1366 Rename second use of T
  // #TEST#: R1367 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
@@ -120,7 +120,7 @@ index 024d6a2..f44d43b 100644
  {
  public:
 @@ -906,7 +906,7 @@ template <typename T, typename U = T>
- // #TEST#: R1379 Rename first use of T
+ // #TEST#: R1378 Rename first use of T
  // #TEST#: R1380 Rename second use of T
  // #TEST#: R1381 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
@@ -129,7 +129,7 @@ index 024d6a2..f44d43b 100644
  {
      // #TEST#: R1382 Rename use of T
 @@ -930,7 +930,7 @@ template <typename T, typename U = T>
- // #TEST#: R1393 Rename first use of T
+ // #TEST#: R1392 Rename first use of T
  // #TEST#: R1394 Rename second use of T
  // #TEST#: R1395 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
@@ -138,7 +138,7 @@ index 024d6a2..f44d43b 100644
  {
      // #TEST#: R1396 Rename use of T
 @@ -955,7 +955,7 @@ template <typename T, typename U = T>
- // #TEST#: R1407 Rename first use of T
+ // #TEST#: R1406 Rename first use of T
  // #TEST#: R1408 Rename second use of T
  // #TEST#: R1409 Rename use of U
 -    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
@@ -147,7 +147,7 @@ index 024d6a2..f44d43b 100644
  {
  public:
 @@ -980,7 +980,7 @@ template <typename T, typename U = T>
- // #TEST#: R1421 Rename first use of T
+ // #TEST#: R1420 Rename first use of T
  // #TEST#: R1422 Rename second use of T
  // #TEST#: R1423 Rename use of U
 -    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
@@ -156,7 +156,7 @@ index 024d6a2..f44d43b 100644
  {
      // #TEST#: R1424 Rename use of T
 @@ -1004,7 +1004,7 @@ template <typename T, typename U = T>
- // #TEST#: R1435 Rename first use of T
+ // #TEST#: R1434 Rename first use of T
  // #TEST#: R1436 Rename second use of T
  // #TEST#: R1437 Rename use of U
 -    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
@@ -165,7 +165,7 @@ index 024d6a2..f44d43b 100644
  {
      // #TEST#: R1438 Rename use of T
 @@ -1030,7 +1030,7 @@ template <typename T, typename U = T>
- // #TEST#: R1450 Rename second use of T
+ // #TEST#: R1449 Rename second use of T
  // #TEST#: R1451 Rename third use of T
  // #TEST#: R1452 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
@@ -174,7 +174,7 @@ index 024d6a2..f44d43b 100644
  {
  public:
 @@ -1056,7 +1056,7 @@ template <typename T, typename U = T>
- // #TEST#: R1465 Rename second use of T
+ // #TEST#: R1464 Rename second use of T
  // #TEST#: R1466 Rename third use of T
  // #TEST#: R1467 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
@@ -183,7 +183,7 @@ index 024d6a2..f44d43b 100644
  {
      // #TEST#: R1468 Rename use of T
 @@ -1081,7 +1081,7 @@ template <typename T, typename U = T>
- // #TEST#: R1480 Rename second use of T
+ // #TEST#: R1479 Rename second use of T
  // #TEST#: R1481 Rename third use of T
  // #TEST#: R1482 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>

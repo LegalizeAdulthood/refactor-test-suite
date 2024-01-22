@@ -8,8 +8,8 @@ index 21c29d3..e98b762 100644
  // #TEST#: R1391 Rename template parameter U
 -template <typename T, typename U = T>
 +template <typename Goink, typename U = Goink>
- // #TEST#: R1392 Rename concept Multiplicable
- // #TEST#: R1393 Rename first use of T
+ // #TEST#: R1393 Rename concept Multiplicable
+ // #TEST#: R1392 Rename first use of T
  // #TEST#: R1394 Rename second use of T
  // #TEST#: R1395 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>

@@ -8,9 +8,9 @@ index 21c29d3..3ab9a60 100644
  // #TEST#: R1477 Rename template parameter U
 -template <typename T, typename U = T>
 +template <typename T, typename Goink = T>
- // #TEST#: R1478 Rename concept Multiplicable
- // #TEST#: R1479 Rename first use of T
- // #TEST#: R1480 Rename second use of T
+ // #TEST#: R1480 Rename concept Multiplicable
+ // #TEST#: R1478 Rename first use of T
+ // #TEST#: R1479 Rename second use of T
  // #TEST#: R1481 Rename third use of T
  // #TEST#: R1482 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
