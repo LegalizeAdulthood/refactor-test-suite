@@ -14,14 +14,14 @@ index 024d6a2..db99631 100644
 @@ -581,12 +581,12 @@ void f1()
      // multiple template parameter function with combined constraint on template parameters
      {
-         // #TEST#: R1245 Rename function product7
+         // #TEST#: R1246 Rename function product7
 -        REQUIRE_EQUAL(6.0, product7(2, 3.0));
 +        REQUIRE_EQUAL(6.0, goink(2, 3.0));
-         // #TEST#: R1246 Rename function product7
+         // #TEST#: R1247 Rename function product7
 -        const double d = product7(2.0, 3.0);
 +        const double d = goink(2.0, 3.0);
          REQUIRE_EQUAL(6.0, d);
-         // #TEST#: R1247 Rename function product7
+         // #TEST#: R1248 Rename function product7
 -        const Rope r = product7(Rope{"two"}, Rope{"three"});
 +        const Rope r = goink(Rope{"two"}, Rope{"three"});
          REQUIRE_EQUAL(Rope{"two three"}, r);

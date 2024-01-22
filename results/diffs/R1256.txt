@@ -5,19 +5,19 @@ index 024d6a2..ea47379 100644
 @@ -604,17 +604,17 @@ void f1()
  
  // single constraint on single template parameter
- // #TEST#: R1251 Rename template parameter T
+ // #TEST#: R1252 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1252 Rename concept Squareable
- // #TEST#: R1253 Rename use of T
+ // #TEST#: R1253 Rename concept Squareable
+ // #TEST#: R1254 Rename use of T
 -    requires Squareable<T>
 +    requires Squareable<Goink>
- // #TEST#: R1254 Rename class Sqr1
+ // #TEST#: R1255 Rename class Sqr1
  class Sqr1
  {
  public:
-     // #TEST#: R1255 Rename first use of T
-     // #TEST#: R1256 Rename second of T
+     // #TEST#: R1256 Rename first use of T
+     // #TEST#: R1257 Rename second of T
 -    T operator()(T value) const
 +    Goink operator()(Goink value) const
      {

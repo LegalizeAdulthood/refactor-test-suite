@@ -1,1 +1,32 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 21c29d3..d0ea606 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -676,7 +676,7 @@ template <typename T>
+ // #TEST#: R1280 Rename use of T
+     requires std::is_arithmetic_v<T> || Squareable<T>
+ // #TEST#: R1281 Rename class SqrStruct2
+-struct SqrStruct2
++struct Goink
+ {
+     // #TEST#: R1282 Rename first use of T
+     // #TEST#: R1283 Rename second of T
+@@ -1171,14 +1171,14 @@ void f2()
+     }
+     {
+         // #TEST#: R1528 Rename SqrStruct2
+-        SqrStruct2<int> s1;
++        Goink<int> s1;
+         REQUIRE_EQUAL(4, s1(2));
+         // #TEST#: R1529 Rename SqrStruct2
+-        SqrStruct2<double> s2;
++        Goink<double> s2;
+         const double d = s2(2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // #TEST#: R1530 Rename SqrStruct2
+-        SqrStruct2<Rope> s3;
++        Goink<Rope> s3;
+         const Rope r = s3(Rope{"square"});
+         REQUIRE_EQUAL(Rope{"square square"}, r);
+     }
+

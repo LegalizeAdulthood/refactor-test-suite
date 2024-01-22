@@ -1,1 +1,27 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 21c29d3..831dd05 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -709,7 +709,7 @@ template <typename T>
+ // #TEST#: R1294 Rename use of T
+     requires std::is_arithmetic_v<T> && Squareable<T>
+ // #TEST#: R1295 Rename class Sqr3
+-class Sqr3
++class Goink
+ {
+ public:
+     // #TEST#: R1296 Rename first use of T
+@@ -1199,10 +1199,10 @@ void f2()
+     // compound constraint on single template parameter, conjunction
+     {
+         // #TEST#: R1534 Rename Sqr3
+-        Sqr3<int> s1;
++        Goink<int> s1;
+         REQUIRE_EQUAL(4, s1(2));
+         // #TEST#: R1535 Rename Sqr3
+-        Sqr3<double> s2;
++        Goink<double> s2;
+         const double d = s2(2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // Rope is not std::is_arithmetic
+

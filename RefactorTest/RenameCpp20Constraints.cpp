@@ -557,96 +557,96 @@ void f1()
         // #TEST#: R1240 Rename function product4
         const double d = product4(2.0, 3.0);
         REQUIRE_EQUAL(6.0, d);
-        // #TEST#: R1521 Rename function product4
+        // #TEST#: R1241 Rename function product4
         const Rope r = product4(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
     // multiple template parameter function with conjunctive constraint on template parameters
     {
-        // #TEST#: R1241 Rename function product5
-        REQUIRE_EQUAL(6.0, product5(2, 3.0));
         // #TEST#: R1242 Rename function product5
+        REQUIRE_EQUAL(6.0, product5(2, 3.0));
+        // #TEST#: R1243 Rename function product5
         const double d = product5(2.0, 3.0);
         REQUIRE_EQUAL(6.0, d);
         // Rope is not std::is_arithmetic
     }
     // multiple template parameter function with conjunctive constraint on function
     {
-        // #TEST#: R1243 Rename function product6
-        REQUIRE_EQUAL(6.0, product6(2, 3.0));
         // #TEST#: R1244 Rename function product6
+        REQUIRE_EQUAL(6.0, product6(2, 3.0));
+        // #TEST#: R1245 Rename function product6
         const double d = product6(2.0, 3.0);
         REQUIRE_EQUAL(6.0, d);
         // Rope is not std::is_arithmetic
     }
     // multiple template parameter function with combined constraint on template parameters
     {
-        // #TEST#: R1245 Rename function product7
-        REQUIRE_EQUAL(6.0, product7(2, 3.0));
         // #TEST#: R1246 Rename function product7
+        REQUIRE_EQUAL(6.0, product7(2, 3.0));
+        // #TEST#: R1247 Rename function product7
         const double d = product7(2.0, 3.0);
         REQUIRE_EQUAL(6.0, d);
-        // #TEST#: R1247 Rename function product7
+        // #TEST#: R1248 Rename function product7
         const Rope r = product7(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
     // multiple template parameter function with combined constraint on function
     {
-        // #TEST#: R1248 Rename function product8
-        REQUIRE_EQUAL(6.0, product8(2, 3.0));
         // #TEST#: R1249 Rename function product8
+        REQUIRE_EQUAL(6.0, product8(2, 3.0));
+        // #TEST#: R1250 Rename function product8
         const double d = product8(2.0, 3.0);
         REQUIRE_EQUAL(6.0, d);
-        // #TEST#: R1250 Rename function product8
+        // #TEST#: R1251 Rename function product8
         const Rope r = product8(Rope{"two"}, Rope{"three"});
         REQUIRE_EQUAL(Rope{"two three"}, r);
     }
 }
 
 // single constraint on single template parameter
-// #TEST#: R1251 Rename template parameter T
+// #TEST#: R1252 Rename template parameter T
 template <typename T>
-// #TEST#: R1252 Rename concept Squareable
-// #TEST#: R1253 Rename use of T
+// #TEST#: R1253 Rename concept Squareable
+// #TEST#: R1254 Rename use of T
     requires Squareable<T>
-// #TEST#: R1254 Rename class Sqr1
+// #TEST#: R1255 Rename class Sqr1
 class Sqr1
 {
 public:
-    // #TEST#: R1255 Rename first use of T
-    // #TEST#: R1256 Rename second of T
+    // #TEST#: R1256 Rename first use of T
+    // #TEST#: R1257 Rename second of T
     T operator()(T value) const
     {
         return value * value;
     }
 };
 
-// #TEST#: R1257 Rename template parameter T
+// #TEST#: R1258 Rename template parameter T
 template <typename T>
-// #TEST#: R1258 Rename concept Squareable
-// #TEST#: R1259 Rename use of T
+// #TEST#: R1259 Rename concept Squareable
+// #TEST#: R1260 Rename use of T
     requires Squareable<T>
-// #TEST#: R1260 Rename class SqrStruct1
+// #TEST#: R1261 Rename class SqrStruct1
 struct SqrStruct1
 {
-    // #TEST#: R1261 Rename first use of T
-    // #TEST#: R1262 Rename second of T
+    // #TEST#: R1262 Rename first use of T
+    // #TEST#: R1263 Rename second of T
     T operator()(T value) const
     {
         return value * value;
     }
 };
 
-// #TEST#: R1263 Rename template parameter T
+// #TEST#: R1264 Rename template parameter T
 template <typename T>
-// #TEST#: R1264 Rename concept Squareable
-// #TEST#: R1265 Rename use of T
+// #TEST#: R1265 Rename concept Squareable
+// #TEST#: R1266 Rename use of T
     requires Squareable<T>
-// #TEST#: R1266 Rename class SqrUnion1
+// #TEST#: R1267 Rename class SqrUnion1
 union SqrUnion1
 {
-    // #TEST#: R1267 Rename first use of T
-    // #TEST#: R1268 Rename second of T
+    // #TEST#: R1268 Rename first use of T
+    // #TEST#: R1269 Rename second of T
     T operator()(T value) const
     {
         return value * value;
@@ -654,52 +654,52 @@ union SqrUnion1
 };
 
 // compound constraint on single template parameter, disjunction
-// #TEST#: R1269 Rename template parameter T
+// #TEST#: R1270 Rename template parameter T
 template <typename T>
-// #TEST#: R1522 Rename first use of T
-// #TEST#: R1270 Rename concept Squareable
-// #TEST#: R1271 Rename second use of T
+// #TEST#: R1271 Rename first use of T
+// #TEST#: R1272 Rename concept Squareable
+// #TEST#: R1273 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
-// #TEST#: R1272 Rename class Sqr2
+// #TEST#: R1274 Rename class Sqr2
 class Sqr2
 {
 public:
-    // #TEST#: R1273 Rename first use of T
-    // #TEST#: R1274 Rename second of T
+    // #TEST#: R1275 Rename first use of T
+    // #TEST#: R1276 Rename second of T
     T operator()(T value) const
     {
         return value * value;
     }
 };
 
-// #TEST#: R1275 Rename template parameter T
+// #TEST#: R1277 Rename template parameter T
 template <typename T>
-// #TEST#: R1523 Rename first use of T
-// #TEST#: R1276 Rename concept Squareable
-// #TEST#: R1277 Rename second use of T
+// #TEST#: R1278 Rename first use of T
+// #TEST#: R1279 Rename concept Squareable
+// #TEST#: R1280 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
-// #TEST#: R1278 Rename class SqrStruct2
+// #TEST#: R1281 Rename class SqrStruct2
 struct SqrStruct2
 {
-    // #TEST#: R1279 Rename first use of T
-    // #TEST#: R1280 Rename second of T
+    // #TEST#: R1282 Rename first use of T
+    // #TEST#: R1283 Rename second of T
     T operator()(T value) const
     {
         return value * value;
     }
 };
 
-// #TEST#: R1281 Rename template parameter T
+// #TEST#: R1284 Rename template parameter T
 template <typename T>
-// #TEST#: R1524 Rename first use of T
-// #TEST#: R1282 Rename concept Squareable
-// #TEST#: R1283 Rename second use of T
+// #TEST#: R1285 Rename first use of T
+// #TEST#: R1286 Rename concept Squareable
+// #TEST#: R1287 Rename second use of T
     requires std::is_arithmetic_v<T> || Squareable<T>
-// #TEST#: R1284 Rename class SqrUnion2
+// #TEST#: R1288 Rename class SqrUnion2
 union SqrUnion2
 {
-    // #TEST#: R1285 Rename first use of T
-    // #TEST#: R1286 Rename second of T
+    // #TEST#: R1289 Rename first use of T
+    // #TEST#: R1290 Rename second of T
     T operator()(T value) const
     {
         return value * value;
@@ -707,49 +707,32 @@ union SqrUnion2
 };
 
 // compound constraint on single template parameter, conjunction
-// #TEST#: R1287 Rename template parameter T
+// #TEST#: R1291 Rename template parameter T
 template <typename T>
-// #TEST#: R1525 Rename first use of T
-// #TEST#: R1288 Rename concept Squareable
-// #TEST#: R1289 Rename second use of T
+// #TEST#: R1292 Rename first use of T
+// #TEST#: R1293 Rename concept Squareable
+// #TEST#: R1294 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
-// #TEST#: R1290 Rename class Sqr3
+// #TEST#: R1295 Rename class Sqr3
 class Sqr3
 {
 public:
-    // #TEST#: R1291 Rename first use of T
-    // #TEST#: R1292 Rename second of T
+    // #TEST#: R1296 Rename first use of T
+    // #TEST#: R1297 Rename second of T
     T operator()(T value) const
     {
         return value * value;
     }
 };
 
-// #TEST#: R1293 Rename template parameter T
+// #TEST#: R1298 Rename template parameter T
 template <typename T>
-// #TEST#: R1526 Rename first use of T
-// #TEST#: R1294 Rename concept Squareable
-// #TEST#: R1295 Rename second use of T
-    requires std::is_arithmetic_v<T> && Squareable<T>
-// #TEST#: R1296 Rename class SqrStruct3
-struct SqrStruct3
-{
-    // #TEST#: R1297 Rename first use of T
-    // #TEST#: R1298 Rename second of T
-    T operator()(T value) const
-    {
-        return value * value;
-    }
-};
-
-// #TEST#: R1299 Rename template parameter T
-template <typename T>
-// #TEST#: R1527 Rename first use of T
+// #TEST#: R1299 Rename first use of T
 // #TEST#: R1300 Rename concept Squareable
 // #TEST#: R1301 Rename second use of T
     requires std::is_arithmetic_v<T> && Squareable<T>
-// #TEST#: R1302 Rename class SqrUnion3
-union SqrUnion3
+// #TEST#: R1302 Rename class SqrStruct3
+struct SqrStruct3
 {
     // #TEST#: R1303 Rename first use of T
     // #TEST#: R1304 Rename second of T
@@ -759,56 +742,73 @@ union SqrUnion3
     }
 };
 
-// compound constraint on single template parameter, combination
 // #TEST#: R1305 Rename template parameter T
 template <typename T>
-// #TEST#: R1528 Rename first use of T
-// #TEST#: R1529 Rename second use of T
-// #TEST#: R1306 Rename concept Squareable
-// #TEST#: R1307 Rename third use of T
+// #TEST#: R1306 Rename first use of T
+// #TEST#: R1307 Rename concept Squareable
+// #TEST#: R1308 Rename second use of T
+    requires std::is_arithmetic_v<T> && Squareable<T>
+// #TEST#: R1309 Rename class SqrUnion3
+union SqrUnion3
+{
+    // #TEST#: R1310 Rename first use of T
+    // #TEST#: R1311 Rename second of T
+    T operator()(T value) const
+    {
+        return value * value;
+    }
+};
+
+// compound constraint on single template parameter, combination
+// #TEST#: R1312 Rename template parameter T
+template <typename T>
+// #TEST#: R1313 Rename first use of T
+// #TEST#: R1314 Rename second use of T
+// #TEST#: R1315 Rename concept Squareable
+// #TEST#: R1316 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-// #TEST#: R1308 Rename class Sqr4
+// #TEST#: R1317 Rename class Sqr4
 class Sqr4
 {
 public:
-    // #TEST#: R1309 Rename first use of T
-    // #TEST#: R1310 Rename second of T
+    // #TEST#: R1318 Rename first use of T
+    // #TEST#: R1319 Rename second of T
     T operator()(T value) const
     {
         return value * value;
     }
 };
 
-// #TEST#: R1311 Rename template parameter T
+// #TEST#: R1320 Rename template parameter T
 template <typename T>
-// #TEST#: R1530 Rename first use of T
-// #TEST#: R1531 Rename second use of T
-// #TEST#: R1312 Rename concept Squareable
-// #TEST#: R1313 Rename third use of T
+// #TEST#: R1321 Rename first use of T
+// #TEST#: R1322 Rename second use of T
+// #TEST#: R1323 Rename concept Squareable
+// #TEST#: R1324 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-// #TEST#: R1314 Rename class SqrStruct4
+// #TEST#: R1325 Rename class SqrStruct4
 struct SqrStruct4
 {
-    // #TEST#: R1315 Rename first use of T
-    // #TEST#: R1316 Rename second of T
+    // #TEST#: R1326 Rename first use of T
+    // #TEST#: R1327 Rename second of T
     T operator()(T value) const
     {
         return value * value;
     }
 };
 
-// #TEST#: R1317 Rename template parameter T
+// #TEST#: R1328 Rename template parameter T
 template <typename T>
-// #TEST#: R1532 Rename first use of T
-// #TEST#: R1533 Rename second use of T
-// #TEST#: R1318 Rename concept Squareable
-// #TEST#: R1319 Rename third use of T
+// #TEST#: R1329 Rename first use of T
+// #TEST#: R1330 Rename second use of T
+// #TEST#: R1331 Rename concept Squareable
+// #TEST#: R1332 Rename third use of T
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-// #TEST#: R1320 Rename class SqrUnion4
+// #TEST#: R1333 Rename class SqrUnion4
 union SqrUnion4
 {
-    // #TEST#: R1321 Rename first use of T
-    // #TEST#: R1322 Rename second of T
+    // #TEST#: R1334 Rename first use of T
+    // #TEST#: R1335 Rename second of T
     T operator()(T value) const
     {
         return value * value;
@@ -816,309 +816,309 @@ union SqrUnion4
 };
 
 // single constraint on multiple template parameters
-// #TEST#: R1323 Rename template parameter T
-// #TEST#: R1324 Rename template parameter U
-// #TEST#: R1534 Rename use of T
+// #TEST#: R1336 Rename template parameter T
+// #TEST#: R1337 Rename template parameter U
+// #TEST#: R1338 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1325 Rename concept Multiplicable
-// #TEST#: R1326 Rename use of T
-// #TEST#: R1327 Rename use of U
+// #TEST#: R1339 Rename concept Multiplicable
+// #TEST#: R1340 Rename use of T
+// #TEST#: R1341 Rename use of U
     requires Multiplicable<T, U>
 class Product1
 {
 public:
-    // #TEST#: R1328 Rename use of T
-    // #TEST#: R1329 Rename parameter lhs
-    // #TEST#: R1330 Rename use of U
-    // #TEST#: R1331 Rename parameter rhs
-    // #TEST#: R1332 Rename first use of lhs
-    // #TEST#: R1333 Rename first use of rhs
+    // #TEST#: R1342 Rename use of T
+    // #TEST#: R1343 Rename parameter lhs
+    // #TEST#: R1344 Rename use of U
+    // #TEST#: R1345 Rename parameter rhs
+    // #TEST#: R1346 Rename first use of lhs
+    // #TEST#: R1347 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1334 Rename lhs
-        // #TEST#: R1335 Rename rhs
+        // #TEST#: R1348 Rename lhs
+        // #TEST#: R1349 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1336 Rename template parameter T
-// #TEST#: R1337 Rename template parameter U
-// #TEST#: R1535 Rename use of T
+// #TEST#: R1350 Rename template parameter T
+// #TEST#: R1351 Rename template parameter U
+// #TEST#: R1352 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1338 Rename concept Multiplicable
-// #TEST#: R1339 Rename use of T
-// #TEST#: R1340 Rename use of U
+// #TEST#: R1353 Rename concept Multiplicable
+// #TEST#: R1354 Rename use of T
+// #TEST#: R1355 Rename use of U
     requires Multiplicable<T, U>
 struct ProductStruct1
 {
-    // #TEST#: R1341 Rename use of T
-    // #TEST#: R1342 Rename parameter lhs
-    // #TEST#: R1343 Rename use of U
-    // #TEST#: R1344 Rename parameter rhs
-    // #TEST#: R1345 Rename first use of lhs
-    // #TEST#: R1346 Rename first use of rhs
+    // #TEST#: R1356 Rename use of T
+    // #TEST#: R1357 Rename parameter lhs
+    // #TEST#: R1358 Rename use of U
+    // #TEST#: R1359 Rename parameter rhs
+    // #TEST#: R1360 Rename first use of lhs
+    // #TEST#: R1361 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1347 Rename lhs
-        // #TEST#: R1348 Rename rhs
+        // #TEST#: R1362 Rename lhs
+        // #TEST#: R1363 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1349 Rename template parameter T
-// #TEST#: R1350 Rename template parameter U
-// #TEST#: R1536 Rename use of T
+// #TEST#: R1364 Rename template parameter T
+// #TEST#: R1365 Rename template parameter U
+// #TEST#: R1366 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1351 Rename concept Multiplicable
-// #TEST#: R1352 Rename use of T
-// #TEST#: R1353 Rename use of U
+// #TEST#: R1367 Rename concept Multiplicable
+// #TEST#: R1368 Rename use of T
+// #TEST#: R1369 Rename use of U
     requires Multiplicable<T, U>
 union ProductUnion1
 {
-    // #TEST#: R1354 Rename use of T
-    // #TEST#: R1355 Rename parameter lhs
-    // #TEST#: R1356 Rename use of U
-    // #TEST#: R1357 Rename parameter rhs
-    // #TEST#: R1358 Rename first use of lhs
-    // #TEST#: R1359 Rename first use of rhs
+    // #TEST#: R1370 Rename use of T
+    // #TEST#: R1371 Rename parameter lhs
+    // #TEST#: R1372 Rename use of U
+    // #TEST#: R1373 Rename parameter rhs
+    // #TEST#: R1374 Rename first use of lhs
+    // #TEST#: R1375 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1360 Rename lhs
-        // #TEST#: R1361 Rename rhs
+        // #TEST#: R1376 Rename lhs
+        // #TEST#: R1377 Rename rhs
         return lhs * rhs;
     }
 };
 
 // compound constraint on multiple template parameters, disjunction
-// #TEST#: R1362 Rename template parameter T
-// #TEST#: R1363 Rename template parameter U
-// #TEST#: R1537 Rename use of T
+// #TEST#: R1378 Rename template parameter T
+// #TEST#: R1379 Rename template parameter U
+// #TEST#: R1380 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1364 Rename first use of T
-// #TEST#: R1365 Rename concept Multiplicable
-// #TEST#: R1366 Rename second use of T
-// #TEST#: R1367 Rename use of U
+// #TEST#: R1381 Rename first use of T
+// #TEST#: R1382 Rename concept Multiplicable
+// #TEST#: R1383 Rename second use of T
+// #TEST#: R1384 Rename use of U
     requires std::is_arithmetic_v<T> || Multiplicable<T, U>
 class Product2
 {
 public:
-    // #TEST#: R1368 Rename use of T
-    // #TEST#: R1369 Rename parameter lhs
-    // #TEST#: R1370 Rename use of U
-    // #TEST#: R1371 Rename parameter rhs
-    // #TEST#: R1372 Rename first use of lhs
-    // #TEST#: R1373 Rename first use of rhs
+    // #TEST#: R1385 Rename use of T
+    // #TEST#: R1386 Rename parameter lhs
+    // #TEST#: R1387 Rename use of U
+    // #TEST#: R1388 Rename parameter rhs
+    // #TEST#: R1389 Rename first use of lhs
+    // #TEST#: R1390 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1374 Rename lhs
-        // #TEST#: R1375 Rename rhs
+        // #TEST#: R1391 Rename lhs
+        // #TEST#: R1392 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1376 Rename template parameter T
-// #TEST#: R1377 Rename template parameter U
-// #TEST#: R1538 Rename use of T
+// #TEST#: R1393 Rename template parameter T
+// #TEST#: R1394 Rename template parameter U
+// #TEST#: R1395 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1378 Rename first use of T
-// #TEST#: R1379 Rename concept Multiplicable
-// #TEST#: R1380 Rename second use of T
-// #TEST#: R1381 Rename use of U
+// #TEST#: R1396 Rename first use of T
+// #TEST#: R1397 Rename concept Multiplicable
+// #TEST#: R1398 Rename second use of T
+// #TEST#: R1399 Rename use of U
     requires std::is_arithmetic_v<T> || Multiplicable<T, U>
 struct ProductStruct2
 {
-    // #TEST#: R1382 Rename use of T
-    // #TEST#: R1383 Rename parameter lhs
-    // #TEST#: R1384 Rename use of U
-    // #TEST#: R1385 Rename parameter rhs
-    // #TEST#: R1386 Rename first use of lhs
-    // #TEST#: R1387 Rename first use of rhs
+    // #TEST#: R1400 Rename use of T
+    // #TEST#: R1401 Rename parameter lhs
+    // #TEST#: R1402 Rename use of U
+    // #TEST#: R1403 Rename parameter rhs
+    // #TEST#: R1404 Rename first use of lhs
+    // #TEST#: R1405 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1388 Rename lhs
-        // #TEST#: R1389 Rename rhs
+        // #TEST#: R1406 Rename lhs
+        // #TEST#: R1407 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1390 Rename template parameter T
-// #TEST#: R1391 Rename template parameter U
-// #TEST#: R1539 Rename use of T
+// #TEST#: R1408 Rename template parameter T
+// #TEST#: R1409 Rename template parameter U
+// #TEST#: R1410 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1392 Rename first use of T
-// #TEST#: R1393 Rename concept Multiplicable
-// #TEST#: R1394 Rename second use of T
-// #TEST#: R1395 Rename use of U
+// #TEST#: R1411 Rename first use of T
+// #TEST#: R1412 Rename concept Multiplicable
+// #TEST#: R1413 Rename second use of T
+// #TEST#: R1414 Rename use of U
     requires std::is_arithmetic_v<T> || Multiplicable<T, U>
 union ProductUnion2
 {
-    // #TEST#: R1396 Rename use of T
-    // #TEST#: R1397 Rename parameter lhs
-    // #TEST#: R1398 Rename use of U
-    // #TEST#: R1399 Rename parameter rhs
-    // #TEST#: R1400 Rename first use of lhs
-    // #TEST#: R1401 Rename first use of rhs
+    // #TEST#: R1415 Rename use of T
+    // #TEST#: R1416 Rename parameter lhs
+    // #TEST#: R1417 Rename use of U
+    // #TEST#: R1418 Rename parameter rhs
+    // #TEST#: R1419 Rename first use of lhs
+    // #TEST#: R1420 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1402 Rename lhs
-        // #TEST#: R1403 Rename rhs
+        // #TEST#: R1421 Rename lhs
+        // #TEST#: R1422 Rename rhs
         return lhs * rhs;
     }
 };
 
 // compound constraint on multiple template parameters, conjunction
-// #TEST#: R1404 Rename template parameter T
-// #TEST#: R1405 Rename template parameter U
-// #TEST#: R1540 Rename use of T
+// #TEST#: R1423 Rename template parameter T
+// #TEST#: R1424 Rename template parameter U
+// #TEST#: R1425 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1406 Rename first use of T
-// #TEST#: R1407 Rename concept Multiplicable
-// #TEST#: R1408 Rename second use of T
-// #TEST#: R1409 Rename use of U
+// #TEST#: R1426 Rename first use of T
+// #TEST#: R1427 Rename concept Multiplicable
+// #TEST#: R1428 Rename second use of T
+// #TEST#: R1429 Rename use of U
     requires std::is_arithmetic_v<T> && Multiplicable<T, U>
 class Product3
 {
 public:
-    // #TEST#: R1410 Rename use of T
-    // #TEST#: R1411 Rename parameter lhs
-    // #TEST#: R1412 Rename use of U
-    // #TEST#: R1413 Rename parameter rhs
-    // #TEST#: R1414 Rename first use of lhs
-    // #TEST#: R1415 Rename first use of rhs
+    // #TEST#: R1430 Rename use of T
+    // #TEST#: R1431 Rename parameter lhs
+    // #TEST#: R1432 Rename use of U
+    // #TEST#: R1433 Rename parameter rhs
+    // #TEST#: R1434 Rename first use of lhs
+    // #TEST#: R1435 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1416 Rename lhs
-        // #TEST#: R1417 Rename rhs
+        // #TEST#: R1436 Rename lhs
+        // #TEST#: R1437 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1418 Rename template parameter T
-// #TEST#: R1419 Rename template parameter U
-// #TEST#: R1541 Rename use of T
+// #TEST#: R1438 Rename template parameter T
+// #TEST#: R1439 Rename template parameter U
+// #TEST#: R1440 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1420 Rename first use of T
-// #TEST#: R1421 Rename concept Multiplicable
-// #TEST#: R1422 Rename second use of T
-// #TEST#: R1423 Rename use of U
+// #TEST#: R1441 Rename first use of T
+// #TEST#: R1442 Rename concept Multiplicable
+// #TEST#: R1443 Rename second use of T
+// #TEST#: R1444 Rename use of U
     requires std::is_arithmetic_v<T> && Multiplicable<T, U>
 struct ProductStruct3
 {
-    // #TEST#: R1424 Rename use of T
-    // #TEST#: R1425 Rename parameter lhs
-    // #TEST#: R1426 Rename use of U
-    // #TEST#: R1427 Rename parameter rhs
-    // #TEST#: R1428 Rename first use of lhs
-    // #TEST#: R1429 Rename first use of rhs
+    // #TEST#: R1445 Rename use of T
+    // #TEST#: R1446 Rename parameter lhs
+    // #TEST#: R1447 Rename use of U
+    // #TEST#: R1448 Rename parameter rhs
+    // #TEST#: R1449 Rename first use of lhs
+    // #TEST#: R1450 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1430 Rename lhs
-        // #TEST#: R1431 Rename rhs
+        // #TEST#: R1451 Rename lhs
+        // #TEST#: R1452 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1432 Rename template parameter T
-// #TEST#: R1433 Rename template parameter U
-// #TEST#: R1542 Rename use of T
+// #TEST#: R1453 Rename template parameter T
+// #TEST#: R1454 Rename template parameter U
+// #TEST#: R1455 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1434 Rename first use of T
-// #TEST#: R1435 Rename concept Multiplicable
-// #TEST#: R1436 Rename second use of T
-// #TEST#: R1437 Rename use of U
+// #TEST#: R1456 Rename first use of T
+// #TEST#: R1457 Rename concept Multiplicable
+// #TEST#: R1458 Rename second use of T
+// #TEST#: R1459 Rename use of U
     requires std::is_arithmetic_v<T> && Multiplicable<T, U>
 union ProductUnion3
 {
-    // #TEST#: R1438 Rename use of T
-    // #TEST#: R1439 Rename parameter lhs
-    // #TEST#: R1440 Rename use of U
-    // #TEST#: R1441 Rename parameter rhs
-    // #TEST#: R1442 Rename first use of lhs
-    // #TEST#: R1443 Rename first use of rhs
+    // #TEST#: R1460 Rename use of T
+    // #TEST#: R1461 Rename parameter lhs
+    // #TEST#: R1462 Rename use of U
+    // #TEST#: R1463 Rename parameter rhs
+    // #TEST#: R1464 Rename first use of lhs
+    // #TEST#: R1465 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1444 Rename lhs
-        // #TEST#: R1445 Rename rhs
+        // #TEST#: R1466 Rename lhs
+        // #TEST#: R1467 Rename rhs
         return lhs * rhs;
     }
 };
 
 // compound constraint on multiple template parameters, combination
-// #TEST#: R1446 Rename template parameter T
-// #TEST#: R1447 Rename template parameter U
-// #TEST#: R1543 Rename use of T
+// #TEST#: R1468 Rename template parameter T
+// #TEST#: R1469 Rename template parameter U
+// #TEST#: R1470 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1448 Rename first use of T
-// #TEST#: R1449 Rename second use of T
-// #TEST#: R1450 Rename concept Multiplicable
-// #TEST#: R1451 Rename third use of T
-// #TEST#: R1452 Rename use of U
+// #TEST#: R1471 Rename first use of T
+// #TEST#: R1472 Rename second use of T
+// #TEST#: R1473 Rename concept Multiplicable
+// #TEST#: R1474 Rename third use of T
+// #TEST#: R1475 Rename use of U
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
 class Product4
 {
 public:
-    // #TEST#: R1453 Rename use of T
-    // #TEST#: R1454 Rename parameter lhs
-    // #TEST#: R1455 Rename use of U
-    // #TEST#: R1456 Rename parameter rhs
-    // #TEST#: R1457 Rename first use of lhs
-    // #TEST#: R1458 Rename first use of rhs
+    // #TEST#: R1476 Rename use of T
+    // #TEST#: R1477 Rename parameter lhs
+    // #TEST#: R1478 Rename use of U
+    // #TEST#: R1479 Rename parameter rhs
+    // #TEST#: R1480 Rename first use of lhs
+    // #TEST#: R1481 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1459 Rename lhs
-        // #TEST#: R1460 Rename rhs
+        // #TEST#: R1482 Rename lhs
+        // #TEST#: R1483 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1461 Rename template parameter T
-// #TEST#: R1462 Rename template parameter U
-// #TEST#: R1544 Rename use of T
+// #TEST#: R1484 Rename template parameter T
+// #TEST#: R1485 Rename template parameter U
+// #TEST#: R1486 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1463 Rename first use of T
-// #TEST#: R1464 Rename second use of T
-// #TEST#: R1465 Rename concept Multiplicable
-// #TEST#: R1466 Rename third use of T
-// #TEST#: R1467 Rename use of U
+// #TEST#: R1487 Rename first use of T
+// #TEST#: R1488 Rename second use of T
+// #TEST#: R1489 Rename concept Multiplicable
+// #TEST#: R1490 Rename third use of T
+// #TEST#: R1491 Rename use of U
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
 struct ProductStruct4
 {
-    // #TEST#: R1468 Rename use of T
-    // #TEST#: R1469 Rename parameter lhs
-    // #TEST#: R1470 Rename use of U
-    // #TEST#: R1471 Rename parameter rhs
-    // #TEST#: R1472 Rename first use of lhs
-    // #TEST#: R1473 Rename first use of rhs
+    // #TEST#: R1492 Rename use of T
+    // #TEST#: R1493 Rename parameter lhs
+    // #TEST#: R1494 Rename use of U
+    // #TEST#: R1495 Rename parameter rhs
+    // #TEST#: R1496 Rename first use of lhs
+    // #TEST#: R1497 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1474 Rename lhs
-        // #TEST#: R1475 Rename rhs
+        // #TEST#: R1498 Rename lhs
+        // #TEST#: R1499 Rename rhs
         return lhs * rhs;
     }
 };
 
-// #TEST#: R1476 Rename template parameter T
-// #TEST#: R1477 Rename template parameter U
-// #TEST#: R1545 Rename use of T
+// #TEST#: R1500 Rename template parameter T
+// #TEST#: R1501 Rename template parameter U
+// #TEST#: R1502 Rename use of T
 template <typename T, typename U = T>
-// #TEST#: R1478 Rename first use of T
-// #TEST#: R1479 Rename second use of T
-// #TEST#: R1480 Rename concept Multiplicable
-// #TEST#: R1481 Rename third use of T
-// #TEST#: R1482 Rename use of U
+// #TEST#: R1503 Rename first use of T
+// #TEST#: R1504 Rename second use of T
+// #TEST#: R1505 Rename concept Multiplicable
+// #TEST#: R1506 Rename third use of T
+// #TEST#: R1507 Rename use of U
     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
 union ProductUnion4
 {
-    // #TEST#: R1483 Rename use of T
-    // #TEST#: R1484 Rename parameter lhs
-    // #TEST#: R1485 Rename use of U
-    // #TEST#: R1486 Rename parameter rhs
-    // #TEST#: R1487 Rename first use of lhs
-    // #TEST#: R1488 Rename first use of rhs
+    // #TEST#: R1508 Rename use of T
+    // #TEST#: R1509 Rename parameter lhs
+    // #TEST#: R1510 Rename use of U
+    // #TEST#: R1511 Rename parameter rhs
+    // #TEST#: R1512 Rename first use of lhs
+    // #TEST#: R1513 Rename first use of rhs
     auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
     {
-        // #TEST#: R1489 Rename lhs
-        // #TEST#: R1490 Rename rhs
+        // #TEST#: R1514 Rename lhs
+        // #TEST#: R1515 Rename rhs
         return lhs * rhs;
     }
 };
@@ -1141,40 +1141,40 @@ void f2()
 {
     // single constraint on single template parameter
     {
-        // #TEST#: R1491 Rename Sqr1
+        // #TEST#: R1516 Rename Sqr1
         Sqr1<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1492 Rename Sqr1
+        // #TEST#: R1517 Rename Sqr1
         Sqr1<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
-        // #TEST#: R1493 Rename Sqr1
+        // #TEST#: R1518 Rename Sqr1
         Sqr1<Rope> s3;
         const Rope r = s3(Rope{"square"});
         REQUIRE_EQUAL(Rope{"square square"}, r);
     }
     {
-        // #TEST#: R1494 Rename SqrStruct1
+        // #TEST#: R1519 Rename SqrStruct1
         SqrStruct1<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1495 Rename SqrStruct1
+        // #TEST#: R1520 Rename SqrStruct1
         SqrStruct1<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
-        // #TEST#: R1496 Rename SqrStruct1
+        // #TEST#: R1521 Rename SqrStruct1
         SqrStruct1<Rope> s3;
         const Rope r = s3(Rope{"square"});
         REQUIRE_EQUAL(Rope{"square square"}, r);
     }
     {
-        // #TEST#: R1497 Rename SqrUnion1
+        // #TEST#: R1522 Rename SqrUnion1
         SqrUnion1<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1498 Rename SqrUnion1
+        // #TEST#: R1523 Rename SqrUnion1
         SqrUnion1<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
-        // #TEST#: R1499 Rename SqrUnion1
+        // #TEST#: R1524 Rename SqrUnion1
         SqrUnion1<Rope> s3;
         const Rope r = s3(Rope{"square"});
         REQUIRE_EQUAL(Rope{"square square"}, r);
@@ -1182,40 +1182,40 @@ void f2()
 
     // compound constraint on single template parameter, disjunction
     {
-        // #TEST#: R1500 Rename Sqr2
+        // #TEST#: R1525 Rename Sqr2
         Sqr2<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1501 Rename Sqr2
+        // #TEST#: R1526 Rename Sqr2
         Sqr2<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
-        // #TEST#: R1502 Rename Sqr2
+        // #TEST#: R1527 Rename Sqr2
         Sqr2<Rope> s3;
         const Rope r = s3(Rope{"square"});
         REQUIRE_EQUAL(Rope{"square square"}, r);
     }
     {
-        // #TEST#: R1503 Rename SqrStruct2
+        // #TEST#: R1528 Rename SqrStruct2
         SqrStruct2<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1504 Rename SqrStruct2
+        // #TEST#: R1529 Rename SqrStruct2
         SqrStruct2<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
-        // #TEST#: R1505 Rename SqrStruct2
+        // #TEST#: R1530 Rename SqrStruct2
         SqrStruct2<Rope> s3;
         const Rope r = s3(Rope{"square"});
         REQUIRE_EQUAL(Rope{"square square"}, r);
     }
     {
-        // #TEST#: R1506 Rename SqrUnion2
+        // #TEST#: R1531 Rename SqrUnion2
         SqrUnion2<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1507 Rename SqrUnion2
+        // #TEST#: R1532 Rename SqrUnion2
         SqrUnion2<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
-        // #TEST#: R1508 Rename SqrUnion2
+        // #TEST#: R1533 Rename SqrUnion2
         SqrUnion2<Rope> s3;
         const Rope r = s3(Rope{"square"});
         REQUIRE_EQUAL(Rope{"square square"}, r);
@@ -1223,30 +1223,30 @@ void f2()
 
     // compound constraint on single template parameter, conjunction
     {
-        // #TEST#: R1509 Rename Sqr3
+        // #TEST#: R1534 Rename Sqr3
         Sqr3<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1510 Rename Sqr3
+        // #TEST#: R1535 Rename Sqr3
         Sqr3<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
-        // #TEST#: R1511 Rename SqrStruct3
+        // #TEST#: R1536 Rename SqrStruct3
         SqrStruct3<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1512 Rename SqrStruct3
+        // #TEST#: R1537 Rename SqrStruct3
         SqrStruct3<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
-        // #TEST#: R1513 Rename SqrUnion3
+        // #TEST#: R1538 Rename SqrUnion3
         SqrUnion3<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1514 Rename SqrUnion3
+        // #TEST#: R1539 Rename SqrUnion3
         SqrUnion3<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
@@ -1255,30 +1255,30 @@ void f2()
 
     // compound constraint on single template parameter, combination
     {
-        // #TEST#: R1515 Rename Sqr4
+        // #TEST#: R1540 Rename Sqr4
         Sqr4<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1516 Rename Sqr4
+        // #TEST#: R1541 Rename Sqr4
         Sqr4<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
-        // #TEST#: R1517 Rename SqrStruct4
+        // #TEST#: R1542 Rename SqrStruct4
         SqrStruct4<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1518 Rename SqrStruct4
+        // #TEST#: R1543 Rename SqrStruct4
         SqrStruct4<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);
         // Rope is not std::is_arithmetic
     }
     {
-        // #TEST#: R1519 Rename SqrUnion4
+        // #TEST#: R1544 Rename SqrUnion4
         SqrUnion4<int> s1;
         REQUIRE_EQUAL(4, s1(2));
-        // #TEST#: R1520 Rename SqrUnion4
+        // #TEST#: R1545 Rename SqrUnion4
         SqrUnion4<double> s2;
         const double d = s2(2.0);
         REQUIRE_EQUAL(4.0, d);

@@ -5,19 +5,19 @@ index 024d6a2..05059db 100644
 @@ -654,17 +654,17 @@ union SqrUnion1
  
  // compound constraint on single template parameter, disjunction
- // #TEST#: R1269 Rename template parameter T
+ // #TEST#: R1270 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1270 Rename concept Squareable
- // #TEST#: R1271 Rename use of T
+ // #TEST#: R1272 Rename concept Squareable
+ // #TEST#: R1273 Rename use of T
 -    requires std::is_arithmetic_v<T> || Squareable<T>
 +    requires std::is_arithmetic_v<Goink> || Squareable<Goink>
- // #TEST#: R1272 Rename class Sqr2
+ // #TEST#: R1274 Rename class Sqr2
  class Sqr2
  {
  public:
-     // #TEST#: R1273 Rename first use of T
-     // #TEST#: R1274 Rename second of T
+     // #TEST#: R1275 Rename first use of T
+     // #TEST#: R1276 Rename second of T
 -    T operator()(T value) const
 +    Goink operator()(Goink value) const
      {

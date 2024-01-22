@@ -5,18 +5,18 @@ index 024d6a2..446c4cf 100644
 @@ -671,16 +671,16 @@ public:
  };
  
- // #TEST#: R1275 Rename template parameter T
+ // #TEST#: R1277 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1276 Rename concept Squareable
- // #TEST#: R1277 Rename use of T
+ // #TEST#: R1279 Rename concept Squareable
+ // #TEST#: R1280 Rename use of T
 -    requires std::is_arithmetic_v<T> || Squareable<T>
 +    requires std::is_arithmetic_v<Goink> || Squareable<Goink>
- // #TEST#: R1278 Rename class SqrStruct2
+ // #TEST#: R1281 Rename class SqrStruct2
  struct SqrStruct2
  {
-     // #TEST#: R1279 Rename first use of T
-     // #TEST#: R1280 Rename second of T
+     // #TEST#: R1282 Rename first use of T
+     // #TEST#: R1283 Rename second of T
 -    T operator()(T value) const
 +    Goink operator()(Goink value) const
      {

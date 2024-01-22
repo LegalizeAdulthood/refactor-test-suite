@@ -1,1 +1,32 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 21c29d3..d5effc6 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -642,7 +642,7 @@ template <typename T>
+ // #TEST#: R1266 Rename use of T
+     requires Squareable<T>
+ // #TEST#: R1267 Rename class SqrUnion1
+-union SqrUnion1
++union Goink
+ {
+     // #TEST#: R1268 Rename first use of T
+     // #TEST#: R1269 Rename second of T
+@@ -1143,14 +1143,14 @@ void f2()
+     }
+     {
+         // #TEST#: R1522 Rename SqrUnion1
+-        SqrUnion1<int> s1;
++        Goink<int> s1;
+         REQUIRE_EQUAL(4, s1(2));
+         // #TEST#: R1523 Rename SqrUnion1
+-        SqrUnion1<double> s2;
++        Goink<double> s2;
+         const double d = s2(2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // #TEST#: R1524 Rename SqrUnion1
+-        SqrUnion1<Rope> s3;
++        Goink<Rope> s3;
+         const Rope r = s3(Rope{"square"});
+         REQUIRE_EQUAL(Rope{"square square"}, r);
+     }
+

@@ -1,1 +1,27 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 21c29d3..c2bd647 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -742,7 +742,7 @@ template <typename T>
+ // #TEST#: R1308 Rename use of T
+     requires std::is_arithmetic_v<T> && Squareable<T>
+ // #TEST#: R1309 Rename class SqrUnion3
+-union SqrUnion3
++union Goink
+ {
+     // #TEST#: R1310 Rename first use of T
+     // #TEST#: R1311 Rename second of T
+@@ -1219,10 +1219,10 @@ void f2()
+     }
+     {
+         // #TEST#: R1538 Rename SqrUnion3
+-        SqrUnion3<int> s1;
++        Goink<int> s1;
+         REQUIRE_EQUAL(4, s1(2));
+         // #TEST#: R1539 Rename SqrUnion3
+-        SqrUnion3<double> s2;
++        Goink<double> s2;
+         const double d = s2(2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // Rope is not std::is_arithmetic
+

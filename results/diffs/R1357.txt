@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 21c29d3..e00e602 100644
+index 21c29d3..118afe3 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -865,11 +865,11 @@ union ProductUnion1
-     // #TEST#: R1357 Rename parameter rhs
-     // #TEST#: R1358 Rename first use of lhs
-     // #TEST#: R1359 Rename first use of rhs
+@@ -842,11 +842,11 @@ struct ProductStruct1
+     // #TEST#: R1359 Rename parameter rhs
+     // #TEST#: R1360 Rename first use of lhs
+     // #TEST#: R1361 Rename first use of rhs
 -    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
-+    auto operator()(T lhs, U goink) const -> decltype(lhs * goink)
++    auto operator()(T goink, U rhs) const -> decltype(goink * rhs)
      {
-         // #TEST#: R1360 Rename lhs
-         // #TEST#: R1361 Rename rhs
+         // #TEST#: R1362 Rename lhs
+         // #TEST#: R1363 Rename rhs
 -        return lhs * rhs;
-+        return lhs * goink;
++        return goink * rhs;
      }
  };
  

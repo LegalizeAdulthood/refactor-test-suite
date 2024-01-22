@@ -84,111 +84,111 @@ index 024d6a2..f44d43b 100644
      // #TEST#: R1208 Rename use of lhs
      // #TEST#: R1209 Rename use of rhs
 @@ -809,7 +809,7 @@ template <typename T, typename U = T>
- // #TEST#: R1325 Rename concept Multiplicable
- // #TEST#: R1326 Rename use of T
- // #TEST#: R1327 Rename use of U
+ // #TEST#: R1339 Rename concept Multiplicable
+ // #TEST#: R1340 Rename use of T
+ // #TEST#: R1341 Rename use of U
 -    requires Multiplicable<T, U>
 +    requires Goink<T, U>
  class Product1
  {
  public:
 @@ -833,7 +833,7 @@ template <typename T, typename U = T>
- // #TEST#: R1338 Rename concept Multiplicable
- // #TEST#: R1339 Rename use of T
- // #TEST#: R1340 Rename use of U
+ // #TEST#: R1353 Rename concept Multiplicable
+ // #TEST#: R1354 Rename use of T
+ // #TEST#: R1355 Rename use of U
 -    requires Multiplicable<T, U>
 +    requires Goink<T, U>
  struct ProductStruct1
  {
-     // #TEST#: R1341 Rename use of T
+     // #TEST#: R1356 Rename use of T
 @@ -856,7 +856,7 @@ template <typename T, typename U = T>
- // #TEST#: R1351 Rename concept Multiplicable
- // #TEST#: R1352 Rename use of T
- // #TEST#: R1353 Rename use of U
+ // #TEST#: R1367 Rename concept Multiplicable
+ // #TEST#: R1368 Rename use of T
+ // #TEST#: R1369 Rename use of U
 -    requires Multiplicable<T, U>
 +    requires Goink<T, U>
  union ProductUnion1
  {
-     // #TEST#: R1354 Rename use of T
+     // #TEST#: R1370 Rename use of T
 @@ -881,7 +881,7 @@ template <typename T, typename U = T>
- // #TEST#: R1364 Rename first use of T
- // #TEST#: R1366 Rename second use of T
- // #TEST#: R1367 Rename use of U
+ // #TEST#: R1381 Rename first use of T
+ // #TEST#: R1383 Rename second use of T
+ // #TEST#: R1384 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
 +    requires std::is_arithmetic_v<T> || Goink<T, U>
  class Product2
  {
  public:
 @@ -906,7 +906,7 @@ template <typename T, typename U = T>
- // #TEST#: R1378 Rename first use of T
- // #TEST#: R1380 Rename second use of T
- // #TEST#: R1381 Rename use of U
+ // #TEST#: R1396 Rename first use of T
+ // #TEST#: R1398 Rename second use of T
+ // #TEST#: R1399 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
 +    requires std::is_arithmetic_v<T> || Goink<T, U>
  struct ProductStruct2
  {
-     // #TEST#: R1382 Rename use of T
+     // #TEST#: R1400 Rename use of T
 @@ -930,7 +930,7 @@ template <typename T, typename U = T>
- // #TEST#: R1392 Rename first use of T
- // #TEST#: R1394 Rename second use of T
- // #TEST#: R1395 Rename use of U
+ // #TEST#: R1411 Rename first use of T
+ // #TEST#: R1413 Rename second use of T
+ // #TEST#: R1414 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
 +    requires std::is_arithmetic_v<T> || Goink<T, U>
  union ProductUnion2
  {
-     // #TEST#: R1396 Rename use of T
+     // #TEST#: R1415 Rename use of T
 @@ -955,7 +955,7 @@ template <typename T, typename U = T>
- // #TEST#: R1406 Rename first use of T
- // #TEST#: R1408 Rename second use of T
- // #TEST#: R1409 Rename use of U
+ // #TEST#: R1426 Rename first use of T
+ // #TEST#: R1428 Rename second use of T
+ // #TEST#: R1429 Rename use of U
 -    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
 +    requires std::is_arithmetic_v<T> && Goink<T, U>
  class Product3
  {
  public:
 @@ -980,7 +980,7 @@ template <typename T, typename U = T>
- // #TEST#: R1420 Rename first use of T
- // #TEST#: R1422 Rename second use of T
- // #TEST#: R1423 Rename use of U
+ // #TEST#: R1441 Rename first use of T
+ // #TEST#: R1443 Rename second use of T
+ // #TEST#: R1444 Rename use of U
 -    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
 +    requires std::is_arithmetic_v<T> && Goink<T, U>
  struct ProductStruct3
  {
-     // #TEST#: R1424 Rename use of T
+     // #TEST#: R1445 Rename use of T
 @@ -1004,7 +1004,7 @@ template <typename T, typename U = T>
- // #TEST#: R1434 Rename first use of T
- // #TEST#: R1436 Rename second use of T
- // #TEST#: R1437 Rename use of U
+ // #TEST#: R1456 Rename first use of T
+ // #TEST#: R1458 Rename second use of T
+ // #TEST#: R1459 Rename use of U
 -    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
 +    requires std::is_arithmetic_v<T> && Goink<T, U>
  union ProductUnion3
  {
-     // #TEST#: R1438 Rename use of T
+     // #TEST#: R1460 Rename use of T
 @@ -1030,7 +1030,7 @@ template <typename T, typename U = T>
- // #TEST#: R1449 Rename second use of T
- // #TEST#: R1451 Rename third use of T
- // #TEST#: R1452 Rename use of U
+ // #TEST#: R1472 Rename second use of T
+ // #TEST#: R1474 Rename third use of T
+ // #TEST#: R1475 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
 +    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T, U>
  class Product4
  {
  public:
 @@ -1056,7 +1056,7 @@ template <typename T, typename U = T>
- // #TEST#: R1464 Rename second use of T
- // #TEST#: R1466 Rename third use of T
- // #TEST#: R1467 Rename use of U
+ // #TEST#: R1488 Rename second use of T
+ // #TEST#: R1490 Rename third use of T
+ // #TEST#: R1491 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
 +    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T, U>
  struct ProductStruct4
  {
-     // #TEST#: R1468 Rename use of T
+     // #TEST#: R1492 Rename use of T
 @@ -1081,7 +1081,7 @@ template <typename T, typename U = T>
- // #TEST#: R1479 Rename second use of T
- // #TEST#: R1481 Rename third use of T
- // #TEST#: R1482 Rename use of U
+ // #TEST#: R1504 Rename second use of T
+ // #TEST#: R1506 Rename third use of T
+ // #TEST#: R1507 Rename use of U
 -    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Multiplicable<T, U>
 +    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Goink<T, U>
  union ProductUnion4
  {
-     // #TEST#: R1483 Rename use of T
+     // #TEST#: R1508 Rename use of T
 
