@@ -1,0 +1,13 @@
+diff --git a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+index 282449d..7486711 100644
+--- a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
++++ b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+@@ -30,7 +30,7 @@ public:
+ 
+ // #TEST#: R5 Rename the macro argument x_ from usage
+ // #TEST#: R6 Rename this macro
+-#define MACRO_ONE_ARG(x_) (2.0f * x_)
++#define MACRO_ONE_ARG(goink_) (2.0f * goink_)
+ 
+ // #TEST#: R7 Rename this class, but class in Rename2.cpp shouldn't be renamed
+ class Rename1

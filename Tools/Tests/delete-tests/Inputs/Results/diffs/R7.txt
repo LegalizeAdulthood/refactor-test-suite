@@ -1,0 +1,28 @@
+diff --git a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+index 282449d..cc91d40 100644
+--- a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
++++ b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+@@ -33,19 +33,19 @@ public:
+ #define MACRO_ONE_ARG(x_) (2.0f * x_)
+ 
+ // #TEST#: R7 Rename this class, but class in Rename2.cpp shouldn't be renamed
+-class Rename1
++class Goink
+ {
+ public:
+     // #TEST#: R8 =R7 Rename this class via its c'tor
+-    Rename1() : x()
++    Goink() : x()
+     {
+     }
+ 
+-    ~Rename1()
++    ~Goink()
+     {
+     }
+ 
+-    typedef Rename1 MyClass;
++    typedef Goink MyClass;
+ 
+     void Operation()
+     {

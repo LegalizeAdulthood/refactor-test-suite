@@ -13,6 +13,7 @@ if(DEBUG)
         TOOL_COMMAND
         TOOL_ARGS
         COMPARE_FILES
+        DELETED_FILES
         )
         dump_var(${var})
     endforeach()
@@ -50,7 +51,9 @@ function(compare_file relativePath)
         RESULT_VARIABLE difference
     )
     if(difference EQUAL 0)
-        message(STATUS "${TEST_DIR}/${relativePath} ${EXPECTED_DIR}/${relativePath} are equal")
+        if(DEBUG)
+            message(STATUS "${TEST_DIR}/${relativePath} ${EXPECTED_DIR}/${relativePath} compare equal")
+        endif()
     elseif(difference EQUAL 1)
         message(STATUS "${TEST_DIR}/${relativePath}:")
         execute_process(COMMAND ${CMAKE_COMMAND} -E cat "${TEST_DIR}/${relativePath}")
@@ -64,4 +67,11 @@ endfunction()
 
 foreach(file ${COMPARE_FILES})
     compare_file(${file})
+endforeach()
+
+# Check that DELETED_FILES don't exist
+foreach(file ${DELETED_FILES})
+    if(EXISTS ${TEST_DIR}/${file})
+        message(FATAL_ERROR "${file} should have been removed.")
+    endif()
 endforeach()

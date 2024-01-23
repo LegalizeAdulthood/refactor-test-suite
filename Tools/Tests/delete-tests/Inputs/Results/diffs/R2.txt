@@ -1,0 +1,31 @@
+diff --git a/Tools/Tests/delete-tests/Inputs/Results/diffs/R2.txt b/Tools/Tests/delete-tests/Inputs/Results/diffs/R2.txt
+index 540a7ba..e69de29 100644
+--- a/Tools/Tests/delete-tests/Inputs/Results/diffs/R2.txt
++++ b/Tools/Tests/delete-tests/Inputs/Results/diffs/R2.txt
+@@ -1,13 +0,0 @@
+-diff --git a/Sources/TestRename.cpp b/Sources/TestRename.cpp
+-index d1c1283..3e43246 100644
+---- a/Sources/TestRename.cpp
+-+++ b/Sources/TestRename.cpp
+-@@ -15,7 +15,7 @@
+- // #TEST#: R2 Rename the macro argument x_ from declaration
+- // #TEST#: R3 =R2 Rename the macro argument x_ from usage
+- // #TEST#: R4 Rename this macro
+--#define MACRO_ONE_ARG(x_) (2.0f * x_)
+-+#define MACRO_ONE_ARG(goink_) (2.0f * goink_)
+- 
+- class Operations
+- {
+diff --git a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+index 282449d..53aa835 100644
+--- a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
++++ b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+@@ -16,7 +16,7 @@ class Operations
+ {
+ public:
+     // #TEST#: R2 Rename method
+-    int Operation1()
++    int goink()
+     {
+         return 1;
+     }

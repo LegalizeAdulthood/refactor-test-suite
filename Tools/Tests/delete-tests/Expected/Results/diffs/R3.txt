@@ -1,0 +1,13 @@
+diff --git a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+index 282449d..82054a8 100644
+--- a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
++++ b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+@@ -21,7 +21,7 @@ public:
+         return 1;
+     }
+     // #TEST#: R3 Rename method
+-    int Operation2()
++    int goink()
+     {
+         return 2;
+     }

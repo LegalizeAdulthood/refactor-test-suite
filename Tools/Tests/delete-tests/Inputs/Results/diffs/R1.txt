@@ -1,0 +1,13 @@
+diff --git a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+index 282449d..b0ecd32 100644
+--- a/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
++++ b/Tools/Tests/delete-tests/Inputs/Sources/TestRename.cpp
+@@ -10,7 +10,7 @@
+ // updates all references to the modified element.
+ 
+ // #TEST#: R1 Rename this macro
+-#define MACRO_NO_ARGS 3.14159f
++#define GOINK 3.14159f
+ 
+ class Operations
+ {
