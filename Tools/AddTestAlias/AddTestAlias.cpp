@@ -1,4 +1,5 @@
 #include <FileContents.h>
+#include <IntList.h>
 #include <Main.h>
 #include <StringScanner.h>
 #include <TestCases.h>
@@ -108,21 +109,6 @@ void AddTestAlias::updateResults()
     }
 }
 
-std::vector<int> parseIntList(std::string_view text)
-{
-    std::vector<int> aliases;
-    for (std::size_t pos = 0; pos != std::string_view::npos;)
-    {
-        aliases.push_back(std::stoi(std::string{text.substr(pos)}));
-        pos = text.find_first_not_of("0123456789", pos);
-        if (pos != std::string_view::npos)
-        {
-            ++pos;
-        }
-    }
-    return aliases;
-}
-
 int usage(std::string_view program)
 {
     std::cout << "Usage: " << program << " <RefactorTest> <results> <TestPrefix> <master> <aliases>\n";
@@ -141,7 +127,7 @@ int toolMain(std::vector<std::string_view> args)
     const std::string_view resultsDir{args[2]};
     const std::string_view prefix{args[3]};
     const int master = std::stoi(std::string{args[4]});
-    const std::vector<int> aliases(parseIntList(args[5]));
+    const std::vector<int> aliases(testCases::parseIntList(args[5]));
     if (std::find(aliases.begin(), aliases.end(), master) != aliases.end())
     {
         throw std::runtime_error("Master test can't be included in the alias list.");
