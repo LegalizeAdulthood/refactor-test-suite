@@ -8,6 +8,7 @@ add_library(test-cases STATIC
     FileContents.cpp
     Main.h
     Main.cpp
+    StringScanner.h
     TestCases.h
     TestCases.cpp
     ToolResults.h

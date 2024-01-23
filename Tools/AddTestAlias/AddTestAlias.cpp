@@ -1,5 +1,6 @@
 #include <FileContents.h>
 #include <Main.h>
+#include <StringScanner.h>
 #include <TestCases.h>
 #include <ToolResults.h>
 
@@ -16,52 +17,6 @@
 
 namespace
 {
-
-template <typename String>
-class StringScanner
-{
-public:
-    using Position = typename String::size_type;
-
-    StringScanner(const String &text) :
-        m_text(text)
-    {
-    }
-
-    StringScanner &find(const std::string_view &text)
-    {
-        if (m_pos != String::npos)
-        {
-            m_pos = m_text.find(text, m_pos);
-        }
-        return *this;
-    }
-    StringScanner &find_first_of(char ch)
-    {
-        if (m_pos != String::npos)
-        {
-            m_pos = m_text.find_first_of(ch, m_pos);
-        }
-        return *this;
-    }
-    StringScanner &find_first_not_of(char ch)
-    {
-        if (m_pos != String::npos)
-        {
-            m_pos = m_text.find_first_not_of(ch, m_pos);
-        }
-        return *this;
-    }
-
-    Position getPos() const
-    {
-        return m_pos;
-    }
-
-private:
-    const String &m_text;
-    Position m_pos{};
-};
 
 class AddTestAlias
 {
@@ -122,7 +77,7 @@ void AddTestAlias::updateFile(const testCases::FileContents &file)
             return line;
 
         std::string result{line};
-        StringScanner scanner(result);
+        testCases::StringScanner scanner(result);
         auto pos = scanner.find(label).find_first_of(' ').find_first_not_of(' ').getPos();
         if (pos != std::string::npos)
         {
