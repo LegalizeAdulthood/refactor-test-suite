@@ -64,6 +64,14 @@ public:
         }
         return *this;
     }
+    StringScanner &find_first_of(const char *text)
+    {
+        if (m_pos != String::npos)
+        {
+            m_pos = m_text.find_first_of(text, m_pos);
+        }
+        return *this;
+    }
 
     StringScanner &find_first_not_of(char ch)
     {
