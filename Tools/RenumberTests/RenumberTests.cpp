@@ -77,15 +77,13 @@ void Processor::scanResultsDir(const std::filesystem::path &dir)
         {
             scanResultsDir(entry);
         }
-        if (!testCases::isResultsFile(entry))
+        else if (testCases::isResultsFile(entry))
         {
-            continue;
-        }
-
-        testCases::ToolResults toolResults(entry);
-        if (toolResults.hasResultsForPrefix(m_test.getPrefix()))
-        {
-            m_toolResults.emplace_back(std::move(toolResults));
+            testCases::ToolResults toolResults(entry);
+            if (toolResults.hasResultsForPrefix(m_test.getPrefix()))
+            {
+                m_toolResults.emplace_back(std::move(toolResults));
+            }
         }
     }
 }

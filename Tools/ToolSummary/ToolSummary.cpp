@@ -61,13 +61,9 @@ ToolSummarizer::ToolSummarizer(const std::filesystem::path &testCaseDir,
 
 void ToolSummarizer::scanResultsDirectory(std::filesystem::path dir)
 {
-    for (auto &entry : std::filesystem::directory_iterator(dir))
+    for (const auto &entry : std::filesystem::directory_iterator(dir))
     {
-        if (is_directory(entry))
-        {
-            continue;
-        }
-        if (!testCases::isResultsFile(entry))
+        if (is_directory(entry) || !testCases::isResultsFile(entry))
         {
             continue;
         }

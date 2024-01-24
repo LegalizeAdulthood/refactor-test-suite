@@ -53,7 +53,7 @@ void TestDiffs::scanDiffDirectory()
         std::size_t pos = text.find_first_of("0123456789");
         return pos != std::string::npos;
     };
-    for (auto &entry : std::filesystem::directory_iterator(m_diffDir))
+    for (const auto &entry : std::filesystem::directory_iterator(m_diffDir))
     {
         if (!isTestCaseDiff(entry))
         {

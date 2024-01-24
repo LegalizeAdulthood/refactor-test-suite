@@ -90,7 +90,7 @@ void AddTests::updateResultsFile(const std::filesystem::path &file)
 
 void AddTests::updateResultsDir(const std::filesystem::path &dir)
 {
-    for (auto entry : std::filesystem::directory_iterator(dir))
+    for (const auto &entry : std::filesystem::directory_iterator(dir))
     {
         const std::filesystem::path path = entry.path();
         if (is_directory(path))

@@ -61,11 +61,7 @@ std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDi
     { return path.extension().string() == ".txt" && startsWith(path.stem().string(), prefix); };
     for (const auto &entry : std::filesystem::directory_iterator(caseDiffsDir))
     {
-        if (entry.is_directory())
-        {
-            continue;
-        }
-        if (!isTestCaseDiff(entry))
+        if (entry.is_directory() || !isTestCaseDiff(entry))
         {
             continue;
         }

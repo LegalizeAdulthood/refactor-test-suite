@@ -195,7 +195,7 @@ public:
 private:
     void scanDirectory(const std::filesystem::path &dir)
     {
-        for (auto &entry : std::filesystem::directory_iterator(dir))
+        for (const auto &entry : std::filesystem::directory_iterator(dir))
         {
             if (is_directory(entry))
             {
