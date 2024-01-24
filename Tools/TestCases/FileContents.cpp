@@ -1,5 +1,7 @@
 #include <FileContents.h>
 
+#include <algorithm>
+
 namespace testCases
 {
 
@@ -25,6 +27,28 @@ void FileContents::transform(const std::function<std::string(std::string)> &oper
     for (std::string line : m_lines)
     {
         str << operation(line) << '\n';
+    }
+}
+
+void FileContents::deleteIf(const std::function<bool(const std::string &line)> &predicate)
+{
+    while (true)
+    {
+        auto pos = std::find_if(m_lines.begin(), m_lines.end(), predicate);
+        if (pos == m_lines.end())
+        {
+            return;
+        }
+        m_lines.erase(pos);
+    }
+}
+
+void FileContents::write()
+{
+    std::ofstream str(m_path);
+    for (std::string line : m_lines)
+    {
+        str << line << '\n';
     }
 }
 

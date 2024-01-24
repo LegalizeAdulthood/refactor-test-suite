@@ -28,6 +28,8 @@ struct FileContents
     {
         transform(operation, m_path);
     }
+    void deleteIf(const std::function<bool(const std::string &line)> &predicate);
+    void write();
 
 private:
     std::filesystem::path m_path;
