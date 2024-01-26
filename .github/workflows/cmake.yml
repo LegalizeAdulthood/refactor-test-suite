@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4.1.1
 
     - name: CMake workflow
       run: cmake --workflow --preset default
@@ -20,7 +20,7 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4.1.1
 
     - name: CMake workflow
       run: cmake --workflow --preset default
