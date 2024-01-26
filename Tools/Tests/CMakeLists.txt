@@ -64,4 +64,7 @@ add_tool_test(renumber-tests
         Results/diffs/R6.txt
         Results/diffs/R7.txt
         Results/diffs/R8.txt
+    DELETED_FILES
+        Results/diffs/R2.txt
+        Results/diffs/R3.txt
 )
