@@ -21,6 +21,17 @@ function(add_tool_test tool)
     set_property(TEST test-${tool}-tool PROPERTY LABELS ${tool} tool)
 endfunction()
 
+add_tool_test(add-test-alias
+    COMMAND Sources Results R 2 3
+    COMPARE_FILES
+        Sources/TestRename.cpp
+        Results/diffs/R1.txt
+        Results/diffs/R2.txt
+        Results/diffs/R3.txt
+        Results/diffs/R4.txt
+        Results/diffs/R5.txt
+        Results/diffs/R6.txt
+)
 add_tool_test(add-tests
     COMMAND Sources Results R Sources/TestRename.cpp
     COMPARE_FILES

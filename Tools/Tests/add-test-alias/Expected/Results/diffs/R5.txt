@@ -1,0 +1,27 @@
+diff --git a/Sources/TestRename.cpp b/Sources/TestRename.cpp
+index d1c1283..a756ebe 100644
+--- a/Sources/TestRename.cpp
++++ b/Sources/TestRename.cpp
+@@ -31,22 +31,22 @@ public:
+ };
+ 
+ // #TEST#: R5 Rename this class, but class in Rename2.cpp shouldn't be renamed
+-class Rename1
++class Goink
+ {
+ public:
+     // #TEST#: R6 Rename this class via its c'tor
+-    Rename1() : x()
++    Goink() : x()
+     {
+     }
+ 
+-    ~Rename1()
++    ~Goink()
+     {
+     }
+ 
+-    typedef Rename1 MyClass;
++    typedef Goink MyClass;
+ 
+     void Operation()

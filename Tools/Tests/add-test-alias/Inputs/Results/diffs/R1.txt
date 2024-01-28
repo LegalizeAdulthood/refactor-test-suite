@@ -1,0 +1,13 @@
+diff --git a/Sources/TestRename.cpp b/Sources/TestRename.cpp
+index d1c1283..dd356e8 100644
+--- a/Sources/TestRename.cpp
++++ b/Sources/TestRename.cpp
+@@ -10,7 +10,7 @@
+ // updates all references to the modified element.
+ 
+ // #TEST#: R1 Rename this macro
+-#define MACRO_NO_ARGS 3.14159f
++#define GOINK 3.14159f
+ 
+ // #TEST#: R2 Rename the macro argument x_ from declaration
+ // #TEST#: R3 Rename the macro argument x_ from usage
