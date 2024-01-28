@@ -312,7 +312,7 @@ tool are updated.
 
 ## Executable add-tests
 
-Example: `add-tests RefactorTest R RefactorTest/NewRename.cpp results`
+Example: `add-tests RefactorTest results R RefactorTest/NewRename.cpp`
 
 The executable add-tests scans the test case directory for existing test cases
 and replaces temporary test markers in a source file with consecutive markers
@@ -332,9 +332,35 @@ been run and consecutive test ids have been added, tool markdown files can be
 updated from the generated `Tool.md` and result diffs can be added as the cases
 are tested.
 
+## Executable add-test-alias
+
+The executable add-test-alias can be used to annotate tests that should have
+the same results as another test and therefore identical diffs.  Currently,
+only rename test cases have aliases.  An aliase is annotated as follows:
+
+```C++
+// #TEST#: R100 =R80 Rename parameter
+```
+
+This indicates that test R100 has an identical diff to test R80.  A single test
+case, usually the one with the lowest test case id, is picked as the 'master'
+diff and the other test cases with the identical diff are marked as the aliases.
+
+## Executable delete-tests
+
+Example: `delete-tests RefactorTest results R 292-293,400`
+
+The executable delete-tests scans the test case directory for test cases
+identified by the prefix and case number arguments and removes their test
+case labels from the source files, deletes associated diffs, and removes
+mention of those test cases from the results file.  Unless the deleted cases
+are at the end of sequence of test cases for the given refactoring prefix,
+this will create non-consecutive test case ids.  The renumber-tests tool
+can be used to reorder the remaining tests into consecutive ids.
+
 ## Executable renumber-tests
 
-Example: `renumber-tests RefactorTest R results`
+Example: `renumber-tests RefactorTest results R`
 
 The executable renumber-tests is used to renumber the test cases sequentially
 within the source files.  This makes the test cases easier to execute since
