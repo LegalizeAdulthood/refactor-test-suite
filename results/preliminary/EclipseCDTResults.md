@@ -144,14 +144,13 @@ CSM20 |
 CSM21 |
 CSM22 |
 CSM23 |
-CSM24 | (deprecated)
+CSM24 |
 CSM25 |
 CSM26 |
 CSM27 |
 CSM28 |
 CSM29 |
 CSM30 |
-CSM31 |
 
 ## Extract Constant
 Case | Result

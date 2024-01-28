@@ -358,14 +358,13 @@ CSM20 | Pass
 CSM21 | Pass
 CSM22 | Pass
 CSM23 | Pass
-CSM24 | (deprecated)
+CSM24 | Pass
 CSM25 | Pass
 CSM26 | Pass
 CSM27 | Pass
 CSM28 | Pass
 CSM29 | Pass
 CSM30 | Pass
-CSM31 | Pass
 
 ## Extract Constant
 Case | Result

@@ -134,35 +134,33 @@ struct CreateSetterMethodTemplateStruct
 
     // #TEST#: CSM23 Create setter method
     static T *_stp;
-
-    // #TEST#: CSM24 (deprecated)
 };
 
 union CreateSetterMethodUnion
 {
-    // #TEST#: CSM25 Create setter method
+    // #TEST#: CSM24 Create setter method
     int _i;
 
-    // #TEST#: CSM26 Create setter method
+    // #TEST#: CSM25 Create setter method
     const char *_s;
 };
 
 struct CreateSetterMethodStructAnonymous
 {
-    // #TEST#: CSM27 Create setter method
+    // #TEST#: CSM26 Create setter method
     int _type;
     union
     {
-        // #TEST#: CSM28 Create setter method
+        // #TEST#: CSM27 Create setter method
         int _i;
 
-        // #TEST#: CSM29 Create setter method
+        // #TEST#: CSM28 Create setter method
         float _f;
 
-        // #TEST#: CSM30 Create setter method
+        // #TEST#: CSM29 Create setter method
         double _d;
 
-        // #TEST#: CSM31 Create setter method
+        // #TEST#: CSM30 Create setter method
         const char *_s;
     };
 };
