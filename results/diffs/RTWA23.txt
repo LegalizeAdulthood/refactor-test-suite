@@ -1,13 +1,13 @@
 diff --git a/RefactorTest/ReplaceTypeWithAuto.cpp b/RefactorTest/ReplaceTypeWithAuto.cpp
-index 46137e4..7fd8024 100644
+index 46137e4..8483fd9 100644
 --- a/RefactorTest/ReplaceTypeWithAuto.cpp
 +++ b/RefactorTest/ReplaceTypeWithAuto.cpp
-@@ -243,7 +243,7 @@ static void TestReplaceTypeWithAutoUnorderedMap()
- 
-     sum = 0;
+@@ -259,7 +259,7 @@ static void TestReplaceTypeWithAutoUnorderedSet()
+     c.insert(2);
+     int sum = 0;
      // #TEST#: RTWA23 Replace type with auto
--    for (std::unordered_map<int, int>::iterator it = c.begin(), end = c.end();
+-    for (std::unordered_set<int>::iterator it = c.begin(), end = c.end();
 +    for (auto it = c.begin(), end = c.end();
          it != end; ++it)
      {
-         ++it->second;
+         sum += *it;

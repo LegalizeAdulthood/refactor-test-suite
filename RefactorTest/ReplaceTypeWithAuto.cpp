@@ -219,18 +219,14 @@ static void TestReplaceTypeWithAutoUnorderedMap()
     }
     REQUIRE_EQUAL(2 + 1, sum);
 
-    // #TEST#: RTWA22 (deprecated)
-
     sum = 0;
-    // #TEST#: RTWA23 Replace type with auto
+    // #TEST#: RTWA22 Replace type with auto
     for (std::unordered_map<int, int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
     {
         ++it->second;
         sum += it->second;
     }
     REQUIRE_EQUAL(3 + 2, sum);
-
-    // #TEST#: RTWA24 (deprecated)
 }
 
 static void TestReplaceTypeWithAutoUnorderedSet()
@@ -239,24 +235,20 @@ static void TestReplaceTypeWithAutoUnorderedSet()
     c.insert(1);
     c.insert(2);
     int sum = 0;
-    // #TEST#: RTWA25 Replace type with auto
+    // #TEST#: RTWA23 Replace type with auto
     for (std::unordered_set<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
     {
         sum += *it;
     }
     REQUIRE_EQUAL(2 + 1, sum);
-
-    // #TEST#: RTWA26 (deprecated)
 
     sum = 0;
-    // #TEST#: RTWA27 Replace type with auto
+    // #TEST#: RTWA24 Replace type with auto
     for (std::unordered_set<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
     {
         sum += *it;
     }
     REQUIRE_EQUAL(2 + 1, sum);
-
-    // #TEST#: RTWA28 (deprecated)
 }
 
 static void TestReplaceTypeWithAutoVector()
@@ -265,7 +257,7 @@ static void TestReplaceTypeWithAutoVector()
     c.push_back(1);
     c.push_back(2);
     int sum = 0;
-    // #TEST#: RTWA29 Replace type with auto
+    // #TEST#: RTWA25 Replace type with auto
     for (std::vector<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
     {
         sum += *it;
@@ -273,7 +265,7 @@ static void TestReplaceTypeWithAutoVector()
     REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
-    // #TEST#: RTWA30 Replace type with auto
+    // #TEST#: RTWA26 Replace type with auto
     for (std::vector<int>::const_reverse_iterator it = c.crbegin(), end = c.crend(); it != end; ++it)
     {
         sum += *it;
@@ -281,7 +273,7 @@ static void TestReplaceTypeWithAutoVector()
     REQUIRE_EQUAL(2 + 1, sum);
 
     sum = 0;
-    // #TEST#: RTWA31 Replace type with auto
+    // #TEST#: RTWA27 Replace type with auto
     for (std::vector<int>::iterator it = c.begin(), end = c.end(); it != end; ++it)
     {
         ++*it;
@@ -290,7 +282,7 @@ static void TestReplaceTypeWithAutoVector()
     REQUIRE_EQUAL(3 + 2, sum);
 
     sum = 0;
-    // #TEST#: RTWA32 Replace type with auto
+    // #TEST#: RTWA28 Replace type with auto
     for (std::vector<int>::reverse_iterator it = c.rbegin(), end = c.rend(); it != end; ++it)
     {
         --*it;

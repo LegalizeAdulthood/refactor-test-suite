@@ -200,17 +200,13 @@ RTWA18 | Pass | [`ReplaceTypeWithAuto.cpp`, line 185](https://github.com/Legaliz
 RTWA19 | Pass | [`ReplaceTypeWithAuto.cpp`, line 193](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L193) | [RTWA19.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA19.txt)
 RTWA20 | Pass | [`ReplaceTypeWithAuto.cpp`, line 201](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L201) | [RTWA20.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA20.txt)
 RTWA21 | Pass | [`ReplaceTypeWithAuto.cpp`, line 215](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L215) | [RTWA21.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA21.txt)
-RTWA22 | (deprecated) | |
-RTWA23 | Pass | [`ReplaceTypeWithAuto.cpp`, line 225](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L225) | [RTWA23.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA23.txt)
-RTWA24 | (deprecated) | |
-RTWA25 | Pass | [`ReplaceTypeWithAuto.cpp`, line 242](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L242) | [RTWA25.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA25.txt)
-RTWA26 | (deprecated) | |
-RTWA27 | Pass | [`ReplaceTypeWithAuto.cpp`, line 252](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L252) | [RTWA27.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA27.txt)
-RTWA28 | (deprecated) | |
-RTWA29 | Pass | [`ReplaceTypeWithAuto.cpp`, line 268](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L268) | [RTWA29.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA29.txt)
-RTWA30 | Pass | [`ReplaceTypeWithAuto.cpp`, line 276](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L276) | [RTWA30.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA30.txt)
-RTWA31 | Pass | [`ReplaceTypeWithAuto.cpp`, line 284](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L284) | [RTWA31.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA31.txt)
-RTWA32 | Pass | [`ReplaceTypeWithAuto.cpp`, line 293](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L293) | [RTWA32.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA32.txt)
+RTWA22 | Pass | [`ReplaceTypeWithAuto.cpp`, line 225](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L225) | [RTWA23.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA23.txt)
+RTWA23 | Pass | [`ReplaceTypeWithAuto.cpp`, line 242](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L242) | [RTWA25.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA25.txt)
+RTWA24 | Pass | [`ReplaceTypeWithAuto.cpp`, line 252](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L252) | [RTWA27.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA27.txt)
+RTWA25 | Pass | [`ReplaceTypeWithAuto.cpp`, line 268](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L268) | [RTWA29.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA29.txt)
+RTWA26 | Pass | [`ReplaceTypeWithAuto.cpp`, line 276](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L276) | [RTWA30.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA30.txt)
+RTWA27 | Pass | [`ReplaceTypeWithAuto.cpp`, line 284](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L284) | [RTWA31.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA31.txt)
+RTWA28 | Pass | [`ReplaceTypeWithAuto.cpp`, line 293](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReplaceTypeWithAuto.cpp#L293) | [RTWA32.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RTWA32.txt)
 
 ## Simplify Boolean Expression
 Case | Result | Location | Expected Diff

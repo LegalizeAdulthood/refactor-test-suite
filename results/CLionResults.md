@@ -2226,17 +2226,13 @@ RTWA18 | Pass
 RTWA19 | Pass
 RTWA20 | Pass
 RTWA21 | Pass
-RTWA22 | (deprecated)
+RTWA22 | Pass
 RTWA23 | Pass
-RTWA24 | (deprecated)
+RTWA24 | Pass
 RTWA25 | Pass
-RTWA26 | (deprecated)
+RTWA26 | Pass
 RTWA27 | Pass
-RTWA28 | (deprecated)
-RTWA29 | Pass
-RTWA30 | Pass
-RTWA31 | Pass
-RTWA32 | Pass
+RTWA28 | Pass
 
 ## Reverse Conditional
 Case | Result
