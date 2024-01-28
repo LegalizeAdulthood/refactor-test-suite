@@ -3,6 +3,7 @@
 #include <Main.h>
 #include <StringScanner.h>
 #include <TestCases.h>
+#include <Tool.h>
 #include <ToolResults.h>
 
 #include <algorithm>
@@ -19,7 +20,7 @@
 namespace
 {
 
-class AddTestAlias
+class AddTestAlias : public testCases::Tool
 {
 public:
     AddTestAlias(std::string_view testCaseDir,
@@ -27,9 +28,9 @@ public:
                  std::string_view prefix,
                  int master,
                  std::vector<int> aliases) :
-        m_resultsDir(resultsDir),
+        Tool(testCaseDir, resultsDir),
         m_prefix(prefix),
-        m_test(readTestCases(testCaseDir)),
+        m_test(testCases::getTestForPrefix(prefix)),
         m_master(m_prefix + std::to_string(master))
     {
         m_aliases.reserve(aliases.size());
@@ -43,29 +44,13 @@ public:
     void updateResults();
 
 private:
-    const testCases::Test &readTestCases(std::string_view testCaseDir);
     void updateFile(const testCases::FileContents &file);
 
-    std::filesystem::path m_resultsDir;
     std::string m_prefix;
     const testCases::Test &m_test;
     std::string m_master;
     std::vector<std::string> m_aliases;
 };
-
-const testCases::Test &AddTestAlias::readTestCases(std::string_view testCaseDir)
-{
-    const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDir);
-    if (!errors.empty())
-    {
-        for (const std::string &error : errors)
-        {
-            std::cerr << "error: " << error << '\n';
-        }
-        throw std::runtime_error("Test cases contain errors");
-    }
-    return testCases::getTestForPrefix(m_prefix);
-}
 
 void AddTestAlias::updateFile(const testCases::FileContents &file)
 {
@@ -99,11 +84,11 @@ void AddTestAlias::updateSourceFiles()
 
 void AddTestAlias::updateResults()
 {
-    for (const testCases::FileContents &diff : testCases::readCaseDiffs(m_resultsDir / "diffs", m_prefix))
+    for (const testCases::FileContents &diff : getCaseDiffsForPrefix(m_prefix))
     {
         updateFile(diff);
     }
-    if (std::filesystem::path fileDiff(m_resultsDir / "file-diffs" / (m_prefix + ".txt")); exists(fileDiff))
+    if (std::filesystem::path fileDiff(getFileDiffForPrefix(m_prefix)); exists(fileDiff))
     {
         updateFile(testCases::FileContents(fileDiff));
     }

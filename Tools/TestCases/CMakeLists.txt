@@ -13,6 +13,8 @@ add_library(test-cases STATIC
     StringScanner.h
     TestCases.h
     TestCases.cpp
+    Tool.h
+    Tool.cpp
     ToolResults.h
     ToolResults.cpp
 )

@@ -1,9 +1,9 @@
 #pragma once
 
 #include <filesystem>
-#include <fstream>
 #include <functional>
 #include <string>
+#include <string_view>
 #include <vector>
 
 namespace testCases
@@ -36,6 +36,6 @@ private:
     std::vector<std::string> m_lines;
 };
 
-std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDir, const std::string &prefix);
+std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDir, std::string_view prefix);
 
 }    // namespace testCases

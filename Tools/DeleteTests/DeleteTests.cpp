@@ -3,6 +3,7 @@
 #include <Main.h>
 #include <StringScanner.h>
 #include <TestCases.h>
+#include <Tool.h>
 #include <ToolResults.h>
 
 #include <algorithm>
@@ -19,55 +20,42 @@
 namespace
 {
 
-class DeleteTests
+class DeleteTests : public testCases::Tool
 {
 public:
     DeleteTests(std::string_view testCaseDir,
-                 std::string_view resultsDir,
-                 std::string_view prefix,
-                 std::vector<int> deletions) :
-        m_resultsDir(resultsDir),
-        m_prefix(prefix),
-        m_test(readTestCases(testCaseDir))
-    {
-        m_deletions.reserve(deletions.size());
-        std::transform(deletions.begin(),
-                       deletions.end(),
-                       std::back_inserter(m_deletions),
-                       [this](int alias) { return m_prefix + std::to_string(alias); });
-    }
+                std::string_view resultsDir,
+                std::string_view prefix,
+                std::vector<int> deletions);
 
     void updateSourceFiles();
     void updateResults();
 
 private:
-    const testCases::Test &readTestCases(std::string_view testCaseDir);
-    std::string removeLabel(const std::string &line);
     void updateFile(const testCases::FileContents &file);
     void updateToolResults(const std::filesystem::path &dir);
     void updateDiffs();
 
-    std::filesystem::path m_resultsDir;
     std::string m_prefix;
     const testCases::Test &m_test;
     std::vector<std::string> m_deletions;
     bool m_updatingDIffs{};
 };
 
-const testCases::Test &DeleteTests::readTestCases(std::string_view testCaseDir)
+DeleteTests::DeleteTests(std::string_view testCaseDir,
+                         std::string_view resultsDir,
+                         std::string_view prefix,
+                         std::vector<int> deletions) :
+    Tool(testCaseDir, resultsDir),
+    m_prefix(prefix),
+    m_test(testCases::getTestForPrefix(m_prefix))
 {
-    const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDir);
-    if (!errors.empty())
-    {
-        for (const std::string &error : errors)
-        {
-            std::cerr << "error: " << error << '\n';
-        }
-        throw std::runtime_error("Test cases contain errors");
-    }
-    return testCases::getTestForPrefix(m_prefix);
+    m_deletions.reserve(deletions.size());
+    std::transform(deletions.begin(),
+                   deletions.end(),
+                   std::back_inserter(m_deletions),
+                   [this](int alias) { return m_prefix + std::to_string(alias); });
 }
-
 
 void DeleteTests::updateFile(const testCases::FileContents &file)
 {
@@ -120,17 +108,17 @@ void DeleteTests::updateSourceFiles()
 
 void DeleteTests::updateDiffs()
 {
-    for (const testCases::FileContents &diff : testCases::readCaseDiffs(m_resultsDir / "diffs", m_prefix))
+    for (const testCases::FileContents &diff : getCaseDiffsForPrefix(m_prefix))
     {
         updateFile(diff);
     }
 
-    if (std::filesystem::path fileDiff(m_resultsDir / "file-diffs" / (m_prefix + ".txt")); exists(fileDiff))
+    if (std::filesystem::path fileDiff(getFileDiffForPrefix(m_prefix)); exists(fileDiff))
     {
         updateFile(testCases::FileContents(fileDiff));
     }
 
-    for (const auto &entry : std::filesystem::directory_iterator(m_resultsDir / "diffs"))
+    for (const auto &entry : std::filesystem::directory_iterator(getDiffsDir()))
     {
         if (is_directory(entry))
         {
@@ -178,7 +166,7 @@ void DeleteTests::updateToolResults(const std::filesystem::path &dir)
 void DeleteTests::updateResults()
 {
     m_updatingDIffs = false;
-    updateToolResults(m_resultsDir);
+    updateToolResults(getResultsDir());
     m_updatingDIffs = true;
     updateDiffs();
 }

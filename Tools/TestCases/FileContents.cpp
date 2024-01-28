@@ -1,6 +1,7 @@
 #include <FileContents.h>
 
 #include <algorithm>
+#include <fstream>
 
 namespace testCases
 {
@@ -52,10 +53,10 @@ void FileContents::write()
     }
 }
 
-std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDir, const std::string &prefix)
+std::vector<FileContents> readCaseDiffs(const std::filesystem::path &caseDiffsDir, std::string_view prefix)
 {
     std::vector<FileContents> caseDiffs;
-    const auto startsWith = [](const std::string &text, const std::string &prefix)
+    const auto startsWith = [](std::string_view text, std::string_view prefix)
     { return text.substr(0, prefix.length()) == prefix; };
     const auto isTestCaseDiff = [startsWith, prefix](const std::filesystem::path &path)
     { return path.extension().string() == ".txt" && startsWith(path.stem().string(), prefix); };

@@ -1,6 +1,7 @@
 #include <FileContents.h>
 #include <Main.h>
 #include <TestCases.h>
+#include <Tool.h>
 #include <ToolResults.h>
 
 #include <algorithm>
@@ -16,45 +17,32 @@
 namespace
 {
 
-const testCases::Test &getTestCase(const std::filesystem::path &testCaseDir, std::string_view prefix)
-{
-    const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDir);
-    if (!errors.empty())
-    {
-        for (const std::string &error : errors)
-        {
-            std::cerr << "error: " << error << '\n';
-        }
-        throw std::runtime_error("Test cases contain errors:");
-    }
-
-    return testCases::getTestForPrefix(prefix);
-}
-
-class AddTests
+class AddTests : public testCases::Tool
 {
 public:
-    AddTests(const std::filesystem::path &testCaseDir,
+    AddTests(std::string_view testCaseDir, std::string_view resultsDir,
              std::string_view prefix,
-             const std::filesystem::path &sourceFile,
-             const std::filesystem::path &resultsDir);
+             const std::filesystem::path &sourceFile);
 
-    bool readSourceFile(std::string_view sourceFile);
     void writeSourceFile();
-    void updateResultsFile(const std::filesystem::path &file);
+    void updateResults();
+    void writePlaceholderDiffs();
+
+private:
     void updateResultsDir(const std::filesystem::path &dir);
-    void writePlaceholderDiffs(const std::filesystem::path &diffDir);
+    void updateResultsFile(const std::filesystem::path &file);
 
     const testCases::Test &m_test;
     testCases::FileContents m_sourceContents;
     std::vector<std::string> m_newLabels;
 };
 
-AddTests::AddTests(const std::filesystem::path &testCaseDir,
+AddTests::AddTests(std::string_view testCaseDir,
+                   std::string_view resultsDir,
                    std::string_view prefix,
-                   const std::filesystem::path &sourceFile,
-                   const std::filesystem::path &resultsDir) :
-    m_test(getTestCase(testCaseDir, prefix)),
+                   const std::filesystem::path &sourceFile) :
+    Tool(testCaseDir, resultsDir),
+    m_test(testCases::getTestForPrefix(prefix)),
     m_sourceContents(sourceFile)
 {
 }
@@ -77,6 +65,11 @@ void AddTests::writeSourceFile()
         return result;
     };
     m_sourceContents.transform(replaceMarkers);
+}
+
+void AddTests::updateResults()
+{
+    updateResultsDir(getResultsDir());
 }
 
 void AddTests::updateResultsFile(const std::filesystem::path &file)
@@ -104,8 +97,9 @@ void AddTests::updateResultsDir(const std::filesystem::path &dir)
     }
 }
 
-void AddTests::writePlaceholderDiffs(const std::filesystem::path &diffDir)
+void AddTests::writePlaceholderDiffs()
 {
+    const std::filesystem::path diffDir(getDiffsDir());
     for (const std::string &label : m_newLabels)
     {
         std::ofstream str(diffDir / (label + ".txt"));
@@ -127,14 +121,14 @@ int toolMain(std::vector<std::string_view> args)
     {
         return usage(args[0]);
     }
-    const std::filesystem::path testCaseDir{args[1]};
-    if (!is_directory(testCaseDir))
+    const std::string_view testCaseDir{args[1]};
+    if (!is_directory(std::filesystem::path(testCaseDir)))
     {
         std::cerr << "Test case directory " << testCaseDir << " does not exist.\n";
         return 1;
     }
-    const std::filesystem::path resultsDir{args[2]};
-    if (!is_directory(resultsDir))
+    const std::string_view resultsDir{args[2]};
+    if (!is_directory(std::filesystem::path(resultsDir)))
     {
         std::cerr << "Results case directory " << resultsDir << " does not exist.\n";
         return 1;
@@ -147,9 +141,9 @@ int toolMain(std::vector<std::string_view> args)
         return 1;
     }
 
-    AddTests tool(testCaseDir, testPrefix, sourceFile, resultsDir);
+    AddTests tool(testCaseDir, resultsDir, testPrefix, sourceFile);
     tool.writeSourceFile();
-    tool.updateResultsDir(resultsDir);
-    tool.writePlaceholderDiffs(resultsDir / "diffs");
+    tool.updateResults();
+    tool.writePlaceholderDiffs();
     return 0;
 }

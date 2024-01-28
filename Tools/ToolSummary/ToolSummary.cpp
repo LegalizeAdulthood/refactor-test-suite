@@ -1,5 +1,6 @@
 #include <Main.h>
 #include <TestCases.h>
+#include <Tool.h>
 #include <ToolResults.h>
 
 #include <algorithm>
@@ -25,10 +26,10 @@ std::map<std::string, std::string> g_toolTitles = {{"AppleXcode", "Xcode"},
                                                    {"VisualAssistX", "Visual AssistX"},
                                                    {"VisualStudio", "Visual Studio"}};
 
-class ToolSummarizer
+class ToolSummarizer : public testCases::Tool
 {
 public:
-    ToolSummarizer(const std::filesystem::path &testCaseDir, const std::filesystem::path &resultDir, bool annotate);
+    ToolSummarizer(std::string_view testCaseDir, std::string_view resultDir, bool annotate);
 
     void generateSummary();
     void generateAnnotatedToolResults();
@@ -38,24 +39,13 @@ private:
     void scanResultsDirectory(std::filesystem::path dir);
 
     std::vector<testCases::ToolResults> m_toolResults;
-    std::filesystem::path m_resultDir;
     bool m_annotate;
 };
 
-ToolSummarizer::ToolSummarizer(const std::filesystem::path &testCaseDir,
-                               const std::filesystem::path &resultDir,
-                               bool annotate) :
-    m_resultDir(resultDir),
+ToolSummarizer::ToolSummarizer(std::string_view testCaseDir, std::string_view resultDir, bool annotate) :
+    Tool(testCaseDir, resultDir),
     m_annotate(annotate)
 {
-    if (const std::vector<std::string> errors = testCases::Test::scanTestDirectory(testCaseDir); !errors.empty())
-    {
-        for (const std::string &message : errors)
-        {
-            std::cerr << "error: " << message << '\n';
-        }
-        throw std::runtime_error("Test cases contain errors:");
-    }
     scanResultsDirectory(resultDir);
 }
 
@@ -148,7 +138,7 @@ void ToolSummarizer::generateAnnotatedToolResults()
 {
     for (testCases::ToolResults &toolResult : m_toolResults)
     {
-        toolResult.writeAnnotatedResults(m_resultDir / "annotated" / toolResult.getPath().filename());
+        toolResult.writeAnnotatedResults(getResultsDir() / "annotated" / toolResult.getPath().filename());
     }
 }
 
@@ -189,8 +179,8 @@ int toolMain(std::vector<std::string_view> args)
         return usage(args[0]);
     }
 
-    const std::filesystem::path testCaseDir{args[1]};
-    const std::filesystem::path resultDir{args[2]};
+    const std::string_view testCaseDir{args[1]};
+    const std::string_view resultDir{args[2]};
     ToolSummarizer(testCaseDir, resultDir, annotate).generateReport();
     return 0;
 }
