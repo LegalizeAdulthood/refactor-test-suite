@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..12dc39f 100644
+index e73e1db..17208b8 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1003,7 +1003,7 @@ void f34()
- struct X35
+@@ -1028,7 +1028,7 @@ inline namespace Inline36
+ // #TEST#: R541 Rename x36
+ int x36 = 10;
+ // #TEST#: R542 Rename d36
+-double d36 = 20.5;
++double goink = 20.5;
+ // #TEST#: R543 Rename s36
+ std::string s36()
  {
-     // #TEST#: R540 Rename size
--    constexpr std::size_t size() const
-+    constexpr std::size_t goink() const
-     {
-         return sizeof(X35);
-     }
-@@ -1016,7 +1016,7 @@ void f35()
- {
-     X35 x;
-     // #TEST#: R542 Rename size member function
--    constexpr std::size_t size = x.size();
-+    constexpr std::size_t size = x.goink();
-     require_equal(std::size_t{1}, size);
-     // #TEST#: R543 Rename sz static member
-     constexpr int s = X35::sz;
+@@ -1042,7 +1042,7 @@ void f36()
+     // #TEST#: R544 Rename x36
+     require_equal(10, x36);
+     // #TEST#: R545 Rename d36
+-    require_equal(20.5, d36);
++    require_equal(20.5, goink);
+     // #TEST#: R546 Rename s36
+     require_equal(std::string{"hello world!"}, s36());
+ }

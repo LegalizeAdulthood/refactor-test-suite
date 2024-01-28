@@ -5,24 +5,24 @@ index e73e1db..08ad5ee 100644
 @@ -571,21 +571,21 @@ void f18()
  }
  
- // #TEST#: R402 Rename Args
+ // #TEST#: R399 Rename Args
 -template <typename... Args>
 +template <typename... Goink>
  struct f19_aux
  {
-     // #TEST#: R403 Rename Args
+     // #TEST#: R400 Rename Args
 -    template <Args...>
 +    template <Goink...>
      struct apply
      {
-         // #TEST#: R404 Rename Args
-         // #TEST#: R405 Rename args
+         // #TEST#: R401 Rename Args
+         // #TEST#: R402 Rename args
 -        apply(Args... args) : t(args...)
 +        apply(Goink... args) : t(args...)
          {
          }
  
-         // #TEST#: R406 Rename Args
+         // #TEST#: R403 Rename Args
 -        std::tuple<Args...> t;
 +        std::tuple<Goink...> t;
      };

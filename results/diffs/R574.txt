@@ -1,24 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..0197c86 100644
+index e73e1db..90ef24a 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1120,16 +1120,16 @@ void f40()
- }
+@@ -1132,7 +1132,7 @@ void f41()
+ #undef F41_AUX
  
- // #TEST#: R573 Rename F41_AUX
--#define F41_AUX 15
-+#define GOINK 15
- 
- void f41()
+ // #TEST#: R573 Rename f42_aux
+-void f42_aux(std::ostream &stream, int x)
++void goink(std::ostream &stream, int x)
  {
-     // #TEST#: R574 Rename F41_AUX
--    require_equal(15, [] { return F41_AUX; }());
-+    require_equal(15, [] { return GOINK; }());
+     f10_aux(stream, x);
+ }
+@@ -1141,7 +1141,7 @@ void f42()
+ {
+     std::ostringstream result;
+     // #TEST#: R574 Rename f42_aux
+-    [](std::ostream &s, int x) { f42_aux(s, x); }(result, 10);
++    [](std::ostream &s, int x) { goink(s, x); }(result, 10);
+     require_equal(std::string{"10\n"}, result.str());
  }
  
- // #TEST#: R575 Rename F41_AUX
--#undef F41_AUX
-+#undef GOINK
- 
- // #TEST#: R576 Rename f42_aux
- void f42_aux(std::ostream &stream, int x)

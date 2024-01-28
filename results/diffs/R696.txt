@@ -3,16 +3,16 @@ index 0c2172a..b73b97c 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -165,11 +165,11 @@ void f5()
-         // #TEST#: R695 Rename binding vx
-         // #TEST#: R696 Rename binding vy
-         // #TEST#: R697 Rename use of vals
+         // #TEST#: R692 Rename binding vx
+         // #TEST#: R693 Rename binding vy
+         // #TEST#: R694 Rename use of vals
 -        auto &[vx, vy] = vals;
 +        auto &[vx, goink] = vals;
-         // #TEST#: R698 Rename use of vx
+         // #TEST#: R695 Rename use of vx
          vx = 4;
-         // #TEST#: R699 Rename use of vy
+         // #TEST#: R696 Rename use of vy
 -        vy = 5;
 +        goink = 5;
          REQUIRE_EQUAL(4, vals[0]);
          REQUIRE_EQUAL(5, vals[1]);
-         // #TEST#: R700 Rename binding crx
+         // #TEST#: R697 Rename binding crx

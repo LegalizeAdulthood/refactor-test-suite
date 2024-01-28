@@ -3,18 +3,18 @@ index d55964a..701a4a6 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -73,7 +73,7 @@ private:
- // #TEST#: R667 Rename template parameter N
+ // #TEST#: R664 Rename template parameter N
  template <typename T, size_t N>
- // #TEST#: R668 Rename function f
+ // #TEST#: R665 Rename function f
 -int f()
 +int goink()
  {
-     // #TEST#: R669 Rename use of T
-     // #TEST#: R670 Rename use of N
+     // #TEST#: R666 Rename use of T
+     // #TEST#: R667 Rename use of N
 @@ -97,7 +97,7 @@ void f1()
  void f2()
  {
-     // #TEST#: R671 Rename use of f
+     // #TEST#: R668 Rename use of f
 -    REQUIRE_EQUAL(10, (f<std::uint32_t, 4>()));
 +    REQUIRE_EQUAL(10, (goink<std::uint32_t, 4>()));
  }

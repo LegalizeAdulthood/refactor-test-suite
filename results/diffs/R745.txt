@@ -3,16 +3,16 @@ index 3d0f364..de09d79 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -273,12 +273,12 @@ void f6()
-     // #TEST#: R745 Rename local variable i
-     // #TEST#: R746 Rename use of i
-     // #TEST#: R747 Rename use of val
+     // #TEST#: R742 Rename local variable i
+     // #TEST#: R743 Rename use of i
+     // #TEST#: R744 Rename use of val
 -    if (int i = val % 2; i == 0)
 +    if (int goink = val % 2; goink == 0)
      {
-         // #TEST#: R748 Rename use of i
+         // #TEST#: R745 Rename use of i
 -        ++i;
 +        ++goink;
-         // #TEST#: R749 Rename use of i
+         // #TEST#: R746 Rename use of i
 -        val = i;
 +        val = goink;
      }

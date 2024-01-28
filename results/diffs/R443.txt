@@ -5,37 +5,37 @@ index e73e1db..996d2d5 100644
 @@ -747,11 +747,11 @@ void f25()
  void f26()
  {
-     // #TEST#: R443 Rename x
+     // #TEST#: R440 Rename x
 -    int x = 10;
 +    int goink = 10;
-     // #TEST#: R444 Rename x in lambda parameter list
-     // #TEST#: R445 Rename x in lambda body
-     // #TEST#: R446 Rename x in lambda argument list
+     // #TEST#: R441 Rename x in lambda parameter list
+     // #TEST#: R442 Rename x in lambda body
+     // #TEST#: R443 Rename x in lambda argument list
 -    require_equal(100, [](int x) { return x * 10; }(x));
 +    require_equal(100, [](int x) { return x * 10; }(goink));
  
-     // #TEST#: R447 Rename f
+     // #TEST#: R444 Rename f
      double f = 20.5;
 @@ -760,18 +760,18 @@ void f26()
-     // #TEST#: R450 Rename x in lambda body
-     // #TEST#: R451 Rename f in lambda body
-     // #TEST#: R452 Rename x in lambda argument list
+     // #TEST#: R447 Rename x in lambda body
+     // #TEST#: R448 Rename f in lambda body
+     // #TEST#: R449 Rename x in lambda argument list
 -    require_equal(205.0, [f](int x) { return x * f; }(x));
 +    require_equal(205.0, [f](int x) { return x * f; }(goink));
  
-     // #TEST#: R453 Rename x in lambda parameter list
-     // #TEST#: R454 Rename x in lambda body
-     // #TEST#: R455 Rename f in lambda body
-     // #TEST#: R456 Rename x in lambda argument list
+     // #TEST#: R450 Rename x in lambda parameter list
+     // #TEST#: R451 Rename x in lambda body
+     // #TEST#: R452 Rename f in lambda body
+     // #TEST#: R453 Rename x in lambda argument list
 -    require_equal(205.0, [=](int x) { return x * f; }(x));
 +    require_equal(205.0, [=](int x) { return x * f; }(goink));
  
-     // #TEST#: R457 Rename x in lambda capture list
-     // #TEST#: R458 Rename x in lambda body
+     // #TEST#: R454 Rename x in lambda capture list
+     // #TEST#: R455 Rename x in lambda body
 -    require_equal(1, [&x] { return x /= 10; }());
 -    require_equal(1, x);
 +    require_equal(1, [&goink] { return goink /= 10; }());
 +    require_equal(1, goink);
  
-     // #TEST#: R459 Rename f in lambda body
+     // #TEST#: R456 Rename f in lambda body
      require_equal(205.0, [&] { return f *= 10.0; }());

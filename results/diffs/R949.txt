@@ -1,16 +1,40 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index fd51b87..2f9d3aa 100644
+index fd51b87..99e3bc1 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -308,9 +308,9 @@ void f8()
-         // #TEST#: R946 Rename use of Multiple
-         // #TEST#: R947 Rename local variable vals
-         // #TEST#: R948 Rename use of one
--        const Multiple vals(one);
-+        const Multiple goink(one);
-         // #TEST#: R949 Rename use of vals
--        REQUIRE_EQUAL(1, vals.x);
-+        REQUIRE_EQUAL(1, goink.x);
+@@ -321,16 +321,16 @@ RenameCpp20::Generator<int> fibonacci(int n)
+     if (n == 0)
+         co_return;
+ 
+-    int b{};
++    int goink{};
+     // #TEST#: R949 Rename use of b
+-    co_yield b;
++    co_yield goink;
+ 
+     if (n == 1)
+         co_return;
+ 
+-    b = 1;
++    goink = 1;
+     // #TEST#: R950 Rename use of b
+-    co_yield b;
++    co_yield goink;
+ 
+     if (n == 2)
+         co_return;
+@@ -340,10 +340,10 @@ RenameCpp20::Generator<int> fibonacci(int n)
+     {
+         // #TEST#: R951 Rename use of a
+         // #TEST#: R952 Rename use of b
+-        co_yield a + b;
+-        const int s = a + b;
+-        a = b;
+-        b = s;
++        co_yield a + goink;
++        const int s = a + goink;
++        a = goink;
++        goink = s;
      }
  }
  

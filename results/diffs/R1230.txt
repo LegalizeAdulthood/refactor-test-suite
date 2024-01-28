@@ -1,24 +1,24 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..e02246d 100644
+index 024d6a2..26b846d 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -192,7 +192,7 @@ template <typename T>
- // #TEST#: R1070 Rename function square7
- // #TEST#: R1071 Rename second use of T
- // #TEST#: R1072 Rename parameter value
--T square7(T value)
+@@ -206,7 +206,7 @@ template <typename T>
+ // #TEST#: R1074 Rename function square8
+ // #TEST#: R1075 Rename second use of T
+ // #TEST#: R1076 Rename parameter value
+-T square8(T value)
 +T goink(T value)
- {
-     // #TEST#: R1073 Rename first use of value
-     // #TEST#: R1074 Rename second use of value
-@@ -501,9 +501,9 @@ void f1()
-     // single template parameter function with combined constraint on template parameter
+     // #TEST#: R1077 Rename first use of T
+     // #TEST#: R1078 Rename second use of T
+     // #TEST#: R1079 Rename concept Squareable
+@@ -510,9 +510,9 @@ void f1()
+     // single template parameter function with combined constraint on function
      {
-         // #TEST#: R1230 Rename function square7
--        REQUIRE_EQUAL(4, square7(2));
+         // #TEST#: R1229 Rename function square8
+-        REQUIRE_EQUAL(4, square8(2));
 +        REQUIRE_EQUAL(4, goink(2));
-         // #TEST#: R1231 Rename function square7
--        const double d = square7(2.0);
+         // #TEST#: R1230 Rename function square8
+-        const double d = square8(2.0);
 +        const double d = goink(2.0);
          REQUIRE_EQUAL(4.0, d);
          // Rope is not std::is_arithmetic

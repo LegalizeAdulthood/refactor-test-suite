@@ -5,16 +5,16 @@ index e73e1db..2bebe4c 100644
 @@ -919,7 +919,7 @@ void f29()
  void f30()
  {
-     // #TEST#: R515 Rename x
+     // #TEST#: R512 Rename x
 -    int x = 10;
 +    int goink = 10;
-     // #TEST#: R516 Rename y
+     // #TEST#: R513 Rename y
      int y = 20;
-     // #TEST#: R517 REname z
+     // #TEST#: R514 REname z
 @@ -928,7 +928,7 @@ void f30()
-     // #TEST#: R518 Rename x
-     // #TEST#: R519 Rename y
-     // #TEST#: R520 Rename z
+     // #TEST#: R515 Rename x
+     // #TEST#: R516 Rename y
+     // #TEST#: R517 Rename z
 -    for (int i : {1, x, y, z, 4})
 +    for (int i : {1, goink, y, z, 4})
      {

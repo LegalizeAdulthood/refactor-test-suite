@@ -1,22 +1,17 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 3d0f364..ef5da55 100644
+index 3d0f364..ccc5978 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -321,7 +321,7 @@ template <typename... Args>
- // #TEST#: R762 Rename function allUnaryLeft
- // #TEST#: R763 Rename use of Args
- // #TEST#: R764 Rename parameter args
+@@ -321,10 +321,10 @@ template <typename... Args>
+ // #TEST#: R759 Rename function allUnaryLeft
+ // #TEST#: R760 Rename use of Args
+ // #TEST#: R761 Rename parameter args
 -bool allUnaryLeft(Args... args)
-+bool goink(Args... args)
++bool allUnaryLeft(Args... goink)
  {
-     // #TEST#: R765 Rename use of args
-     return (... && args);
-@@ -355,7 +355,7 @@ bool allBinaryLeft(bool init, Args... args)
+     // #TEST#: R762 Rename use of args
+-    return (... && args);
++    return (... && goink);
+ }
  
- void f7()
- {
--    const bool all1 = allUnaryLeft(true, true, true, true);
-+    const bool all1 = goink(true, true, true, true);
-     REQUIRE_EQUAL(true, all1);
-     const bool all2 = allUnaryRight(true, true, true, true);
-     REQUIRE_EQUAL(true, all2);
+ // #TEST#: R763 Rename template parameter Args

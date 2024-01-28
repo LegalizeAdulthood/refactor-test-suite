@@ -4,17 +4,17 @@ index e73e1db..5995c6a 100644
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -474,14 +474,14 @@ void f13()
  template <typename Char>
- // #TEST#: R374 Rename String
- // #TEST#: R375 Rename Char
+ // #TEST#: R371 Rename String
+ // #TEST#: R372 Rename Char
 -using String = std::basic_string<Char>;
 +using Goink = std::basic_string<Char>;
  
  void f14()
  {
-     // #TEST#: R376 Rename String
+     // #TEST#: R373 Rename String
 -    String<char> s{"foo"};
 +    Goink<char> s{"foo"};
-     // #TEST#: R377 Rename String
+     // #TEST#: R374 Rename String
 -    require_equal(String<char>{"foo"}, s);
 +    require_equal(Goink<char>{"foo"}, s);
  }

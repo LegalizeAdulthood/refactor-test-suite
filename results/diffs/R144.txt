@@ -8,15 +8,15 @@ index d1c1283..745b918 100644
      // #TEST#: R145 Rename U
 -    template <typename T, typename U>
 +    template <typename Goink, typename U>
-     // #TEST#: R146 (deprecated)
-     // #TEST#: R147 Rename f
-     // #TEST#: R148 Rename T parameter x type
+ 
+     // #TEST#: R146 Rename f
+     // #TEST#: R147 Rename T parameter x type
 @@ -511,7 +511,7 @@ struct F6
-     // #TEST#: R151 Rename y parameter
-     // #TEST#: R152 Rename x in decltype expression
-     // #TEST#: R153 Rename y in decltype expression
+     // #TEST#: R150 Rename y parameter
+     // #TEST#: R151 Rename x in decltype expression
+     // #TEST#: R152 Rename y in decltype expression
 -    auto f(T x, U y) -> decltype(x + y)
 +    auto f(Goink x, U y) -> decltype(x + y)
      {
-         // #TEST#: R154 Rename count
+         // #TEST#: R153 Rename count
          ++count;

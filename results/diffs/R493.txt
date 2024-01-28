@@ -5,25 +5,25 @@ index e73e1db..42adb26 100644
 @@ -876,19 +876,19 @@ void f27()
  void f28()
  {
-     // #TEST#: R493 Rename x
+     // #TEST#: R490 Rename x
 -    auto x = 3;
 +    auto goink = 3;
-     // #TEST#: R494 Rename x
+     // #TEST#: R491 Rename x
 -    require_equal(3, x);
 +    require_equal(3, goink);
-     // #TEST#: R495 Rename y
-     // #TEST#: R496 Rename x
+     // #TEST#: R492 Rename y
+     // #TEST#: R493 Rename x
 -    auto y = 3 * x;
 +    auto y = 3 * goink;
-     // #TEST#: R497 Rename y
+     // #TEST#: R494 Rename y
      require_equal(9, y);
-     // #TEST#: R498 Rename x
+     // #TEST#: R495 Rename x
 -    x *= 3;
 +    goink *= 3;
-     // #TEST#: R499 Rename z
-     // #TEST#: R500 Rename x
+     // #TEST#: R496 Rename z
+     // #TEST#: R497 Rename x
 -    const auto z = x;
 +    const auto z = goink;
-     // #TEST#: R501 Rename z
+     // #TEST#: R498 Rename z
      require_equal(9, z);
  }

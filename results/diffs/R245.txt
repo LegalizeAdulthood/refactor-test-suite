@@ -5,14 +5,14 @@ index e73e1db..7f8eeff 100644
 @@ -938,12 +938,12 @@ void f30()
  void f31()
  {
-     // #TEST#: R521 Rename Extern
+     // #TEST#: R518 Rename Extern
 -    using RenameCpp11::Extern;
 +    using RenameCpp11::Goink;
-     // #TEST#: R522 Rename Extern
+     // #TEST#: R519 Rename Extern
 -    Extern<int> x(10);
 +    Goink<int> x(10);
      require_equal(10, x.t);
-     // #TEST#: R523 Rename Extern
+     // #TEST#: R520 Rename Extern
 -    Extern<std::string> y("hello world!");
 +    Goink<std::string> y("hello world!");
      require_equal(std::string{"hello world!"}, y.t);
@@ -21,10 +21,10 @@ index e73e1db..7f8eeff 100644
 @@ -1288,9 +1288,9 @@ void f45()
  namespace RenameCpp11
  {
- // #TEST#: R604 Rename Extern
+ // #TEST#: R601 Rename Extern
 -template struct Extern<int>;
 +template struct Goink<int>;
- // #TEST#: R605 Rename Extern
+ // #TEST#: R602 Rename Extern
 -template struct Extern<std::string>;
 +template struct Goink<std::string>;
  
@@ -35,18 +35,18 @@ index 54c1f21..a83f3c0 100644
 --- a/RefactorTest/RenameCpp11.h
 +++ b/RefactorTest/RenameCpp11.h
 @@ -7,23 +7,23 @@ namespace RenameCpp11
- // #TEST#: R244 Rename T
+ // #TEST#: R241 Rename T
  template <typename T>
- // #TEST#: R245 Rename Extern
+ // #TEST#: R242 Rename Extern
 -struct Extern
 +struct Goink
  {
-     // #TEST#: R246 Rename Extern
+     // #TEST#: R243 Rename Extern
 -    Extern()
 +    Goink()
      {
      }
-     // #TEST#: R247 Rename Extern
+     // #TEST#: R244 Rename Extern
 -    Extern(T t) : t(t)
 +    Goink(T t) : t(t)
      {
@@ -54,10 +54,10 @@ index 54c1f21..a83f3c0 100644
      T t = T();
  };
  
- // #TEST#: R248 Rename Extern
+ // #TEST#: R245 Rename Extern
 -extern template struct Extern<int>;
 +extern template struct Goink<int>;
- // #TEST#: R249 Rename Extern
+ // #TEST#: R246 Rename Extern
 -extern template struct Extern<std::string>;
 +extern template struct Goink<std::string>;
  

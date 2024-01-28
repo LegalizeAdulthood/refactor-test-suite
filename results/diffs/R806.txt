@@ -5,14 +5,14 @@ index d7d8359..cdf5c0a 100644
 @@ -436,13 +436,13 @@ void f8()
  }
  
- // #TEST#: R806 Rename template parameter T
+ // #TEST#: R803 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R807 Rename struct Container
+ // #TEST#: R804 Rename struct Container
  struct Container
  {
-     // #TEST#: R808 Rename use of Container
-     // #TEST#: R809 Rename use of T
+     // #TEST#: R805 Rename use of Container
+     // #TEST#: R806 Rename use of T
 -    Container(T t) : m_how(1)
 +    Container(Goink t) : m_how(1)
      {

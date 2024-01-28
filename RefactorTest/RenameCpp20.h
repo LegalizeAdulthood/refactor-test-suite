@@ -7,14 +7,14 @@
 namespace RenameCpp20
 {
 
-// #TEST#: R857 Rename struct Point
+// #TEST#: R854 Rename struct Point
 struct Point
 {
-    // #TEST#: R858 Rename member x
+    // #TEST#: R855 Rename member x
     int x;
-    // #TEST#: R859 Rename member y
+    // #TEST#: R856 Rename member y
     int y;
-    // #TEST#: R860 Rename member z
+    // #TEST#: R857 Rename member z
     int z;
 };
 

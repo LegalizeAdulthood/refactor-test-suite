@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..a5433f6 100644
+index 96b65ff..1f82ecd 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -18,7 +18,7 @@ constexpr bool flag2 = false;
- // #TEST#: R252 Rename flag used in noexcept specification
- constexpr bool flag3 = true;
- // #TEST#: R253 Rename flag used in noexcept specification
--constexpr bool flag4 = false;
-+constexpr bool goink = false;
+@@ -16,7 +16,7 @@ constexpr bool flag = true;
+ // #TEST#: R248 Rename flag used in static_assert
+ constexpr bool flag2 = false;
+ // #TEST#: R249 Rename flag used in noexcept specification
+-constexpr bool flag3 = true;
++constexpr bool goink = true;
+ // #TEST#: R250 Rename flag used in noexcept specification
+ constexpr bool flag4 = false;
  
- // #TEST#: R254 Rename flag in static_assert
- static_assert(flag, "Flag is false");
-@@ -31,7 +31,7 @@ void f1() noexcept(flag3)
- }
+@@ -26,7 +26,7 @@ static_assert(flag, "Flag is false");
+ static_assert(!flag2, "Flag2 is true");
  
- // #TEST#: R257 Rename flag4 in noexcept specifier
--void f2() noexcept(!flag4)
-+void f2() noexcept(!goink)
+ // #TEST#: R253 Rename flag3 in noexcept specifier
+-void f1() noexcept(flag3)
++void f1() noexcept(goink)
  {
  }
  

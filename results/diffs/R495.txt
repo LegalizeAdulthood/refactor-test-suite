@@ -1,16 +1,29 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..61a2b72 100644
+index e73e1db..42adb26 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -881,9 +881,9 @@ void f28()
-     require_equal(3, x);
-     // #TEST#: R495 Rename y
-     // #TEST#: R496 Rename x
+@@ -876,19 +876,19 @@ void f27()
+ void f28()
+ {
+     // #TEST#: R490 Rename x
+-    auto x = 3;
++    auto goink = 3;
+     // #TEST#: R491 Rename x
+-    require_equal(3, x);
++    require_equal(3, goink);
+     // #TEST#: R492 Rename y
+     // #TEST#: R493 Rename x
 -    auto y = 3 * x;
-+    auto goink = 3 * x;
-     // #TEST#: R497 Rename y
--    require_equal(9, y);
-+    require_equal(9, goink);
-     // #TEST#: R498 Rename x
-     x *= 3;
-     // #TEST#: R499 Rename z
++    auto y = 3 * goink;
+     // #TEST#: R494 Rename y
+     require_equal(9, y);
+     // #TEST#: R495 Rename x
+-    x *= 3;
++    goink *= 3;
+     // #TEST#: R496 Rename z
+     // #TEST#: R497 Rename x
+-    const auto z = x;
++    const auto z = goink;
+     // #TEST#: R498 Rename z
+     require_equal(9, z);
+ }

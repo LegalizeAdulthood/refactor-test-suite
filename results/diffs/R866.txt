@@ -1,24 +1,27 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index cdd8233..e9dc3f9 100644
+index cdd8233..13d6287 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -63,16 +63,16 @@ void f1()
-         // #TEST#: R861 Rename x
-         int x{1};
-         // #TEST#: R862 Rename y
--        int y{2};
-+        int goink{2};
-         // #TEST#: R863 Rename first use of x
-         // #TEST#: R864 Rename second use of x
-         REQUIRE_EQUAL(std::strong_ordering::equal, x <=> x);
-         // #TEST#: R865 Rename use of x
-         // #TEST#: R866 Rename use of y
--        REQUIRE_EQUAL(std::strong_ordering::less, x <=> y);
-+        REQUIRE_EQUAL(std::strong_ordering::less, x <=> goink);
-         // #TEST#: R867 Rename use of y
-         // #TEST#: R868 Rename use of x
--        REQUIRE_EQUAL(std::strong_ordering::greater, y <=> x);
-+        REQUIRE_EQUAL(std::strong_ordering::greater, goink <=> x);
-     }
+@@ -77,18 +77,18 @@ void f1()
      // floating-point type comparison
      {
+         // #TEST#: R866 Rename x
+-        float x{1.0f};
++        float goink{1.0f};
+         // #TEST#: R867 Rename y
+         float y{2.0f};
+         // #TEST#: R868 Rename first use of x
+         // #TEST#: R869 Rename second use of x
+-        REQUIRE_EQUAL(std::partial_ordering::equivalent, x <=> x);
++        REQUIRE_EQUAL(std::partial_ordering::equivalent, goink <=> goink);
+         // #TEST#: R870 Rename use of x
+         // #TEST#: R871 Rename use of y
+-        REQUIRE_EQUAL(std::partial_ordering::less, x <=> y);
++        REQUIRE_EQUAL(std::partial_ordering::less, goink <=> y);
+         // #TEST#: R872 Rename use of y
+         // #TEST#: R873 Rename use of x
+-        REQUIRE_EQUAL(std::partial_ordering::greater, y <=> x);
++        REQUIRE_EQUAL(std::partial_ordering::greater, y <=> goink);
+     }
+ }
+ 

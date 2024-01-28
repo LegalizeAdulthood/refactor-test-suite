@@ -1,30 +1,30 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..d8f51f3 100644
+index 024d6a2..d6c9747 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -119,7 +119,7 @@ template <typename T>
- // #TEST#: R1029 Rename function square3
- // #TEST#: R1030 Rename second use of T
- // #TEST#: R1031 Rename parameter value
--T square3(T value)
+@@ -151,7 +151,7 @@ template <typename T>
+ // #TEST#: R1043 Rename function square5
+ // #TEST#: R1044 Rename second use of T
+ // #TEST#: R1045 Rename parameter value
+-T square5(T value)
 +T goink(T value)
- {
-     // #TEST#: R1032 Rename first use of value
-     // #TEST#: R1033 Rename second use of value
-@@ -461,12 +461,12 @@ void f1()
-     // single template parameter function with disjunctive constraint on template parameter
+     // #TEST#: R1046 Rename first use of T
+     // #TEST#: R1047 Rename concept Squareable
+     // #TEST#: R1048 Rename second use of T
+@@ -481,12 +481,12 @@ void f1()
+     // single template parameter function with disjunctive constraint on function
      {
-         // #TEST#: R1220 Rename function square3
--        REQUIRE_EQUAL(4, square3(2));
+         // #TEST#: R1222 Rename function square5
+-        REQUIRE_EQUAL(4, square5(2));
 +        REQUIRE_EQUAL(4, goink(2));
-         // #TEST#: R1221 Rename function square3
--        const double d = square3(2.0);
+         // #TEST#: R1223 Rename function square5
+-        const double d = square5(2.0);
 +        const double d = goink(2.0);
          REQUIRE_EQUAL(4.0, d);
-         // #TEST#: R1222 Rename function square3
--        const Rope r = square3(Rope{"square"});
+         // #TEST#: R1224 Rename function square5
+-        const Rope r = square5(Rope{"square"});
 +        const Rope r = goink(Rope{"square"});
          REQUIRE_EQUAL(Rope{"square square"}, r);
      }
-     // single template parameter function with conjunctive constraint on template parameter
+     // single template parameter function with conjunctive constraint on function
 

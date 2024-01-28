@@ -1,26 +1,29 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..340e0d1 100644
+index e73e1db..d0bd675 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1105,18 +1105,18 @@ void f39()
- struct X40
- {
-     // #TEST#: R568 Rename x
--    static int x;
-+    static int goink;
- };
+@@ -1102,7 +1102,7 @@ void f39()
+ #undef F39_AUX
  
- // #TEST#: R569 Rename X40
- // #TEST#: R570 Rename x
+ // #TEST#: R564 Rename X40
+-struct X40
++struct Goink
+ {
+     // #TEST#: R565 Rename x
+     static int x;
+@@ -1110,13 +1110,13 @@ struct X40
+ 
+ // #TEST#: R566 Rename X40
+ // #TEST#: R567 Rename x
 -int X40::x = 0;
-+int X40::goink = 0;
++int Goink::x = 0;
  
  void f40()
  {
-     // #TEST#: R571 Rename X40
-     // #TEST#: R572 Rename x
+     // #TEST#: R568 Rename X40
+     // #TEST#: R569 Rename x
 -    require_equal(1, [] { return X40::x + 1; }());
-+    require_equal(1, [] { return X40::goink + 1; }());
++    require_equal(1, [] { return Goink::x + 1; }());
  }
  
- // #TEST#: R573 Rename F41_AUX
+ // #TEST#: R570 Rename F41_AUX

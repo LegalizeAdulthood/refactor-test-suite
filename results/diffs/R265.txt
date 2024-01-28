@@ -1,20 +1,30 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..fe43945 100644
+index 96b65ff..bd3a03d 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -61,13 +61,13 @@ void f4()
- void f5()
+@@ -73,21 +73,21 @@ void f5()
+ void f6()
  {
-     // #TEST#: R265 Rename X used in alignof operator expression
--    struct alignas(4) X
-+    struct alignas(4) Goink
+     // #TEST#: R264 Rename X used in alignas specifier
+-    struct alignas(int) X
++    struct alignas(int) Goink
      {
-         int x;
+         float y;
          char b;
      };
-     // #TEST#: R266 Rename X
--    require_equal(std::size_t{4}, alignof(X));
-+    require_equal(std::size_t{4}, alignof(Goink));
+     // #TEST#: R265 Rename X in alignas specifier
+-    struct alignas(X) Y
++    struct alignas(Goink) Y
+     {
+         float y;
+         char b;
+     };
+     // #TEST#: R266 Rename X used in alignas specifier
+-    require_equal(alignof(int), alignof(X));
++    require_equal(alignof(int), alignof(Goink));
+     // #TEST#: R267 Rename X used in alignas specifier
+-    require_equal(alignof(X), alignof(Y));
++    require_equal(alignof(Goink), alignof(Y));
  }
  
- void f6()
+ void f7()

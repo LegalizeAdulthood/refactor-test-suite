@@ -1,23 +1,30 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..62c85ec 100644
+index 024d6a2..b891749 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -397,7 +397,7 @@ template <typename T, typename U = T>
- // #TEST#: R1204 Rename parameter rhs
- // #TEST#: R1205 Rename use of lhs
- // #TEST#: R1206 Rename use of rhs
+@@ -389,7 +389,7 @@ auto product7(T lhs, U rhs) -> decltype(lhs * rhs)
+ // #TEST#: R1194 Rename template parameter T
+ // #TEST#: R1195 Rename template parameter U
+ // #TEST#: R1196 Rename use of T
+-template <typename T, typename U = T>
++template <typename Goink, typename U = Goink>
+ // #TEST#: R1197 Rename function product8
+ // #TEST#: R1198 Rename use of T
+ // #TEST#: R1199 Rename parameter lhs
+@@ -397,13 +397,13 @@ template <typename T, typename U = T>
+ // #TEST#: R1201 Rename parameter rhs
+ // #TEST#: R1202 Rename use of lhs
+ // #TEST#: R1203 Rename use of rhs
 -auto product8(T lhs, U rhs) -> decltype(lhs * rhs)
-+auto product8(T lhs, U goink) -> decltype(lhs * goink)
-     // #TEST#: R1207 Rename first use of T
-     // #TEST#: R1208 Rename first use of U
-     // #TEST#: R1209 Rename concept Multiplicable
-@@ -407,7 +407,7 @@ auto product8(T lhs, U rhs) -> decltype(lhs * rhs)
++auto product8(Goink lhs, U rhs) -> decltype(lhs * rhs)
+     // #TEST#: R1204 Rename first use of T
+     // #TEST#: R1205 Rename first use of U
+     // #TEST#: R1206 Rename concept Multiplicable
+     // #TEST#: R1207 Rename second use of T
+     // #TEST#: R1208 Rename second use of U
+-    requires(std::is_arithmetic_v<T> && std::is_arithmetic_v<U>) || Multiplicable<T, U>
++    requires(std::is_arithmetic_v<Goink> && std::is_arithmetic_v<U>) || Multiplicable<Goink, U>
  {
-     // #TEST#: R1212 Rename use of lhs
-     // #TEST#: R1213 Rename use of rhs
--    return lhs * rhs;
-+    return lhs * goink;
- }
- 
- // Simple constraint expressions via require clauses
+     // #TEST#: R1209 Rename use of lhs
+     // #TEST#: R1210 Rename use of rhs
 

@@ -5,17 +5,17 @@ index e73e1db..a5aa1d9 100644
 @@ -598,15 +598,15 @@ void f19()
  }
  
- // #TEST#: R407 Rename Bases
+ // #TEST#: R404 Rename Bases
 -template <typename... Bases>
 +template <typename... Goink>
- // #TEST#: R408 Rename Bases
+ // #TEST#: R405 Rename Bases
 -struct Mixin : Bases...
 +struct Mixin : Goink...
  {
-     // #TEST#: R409 Rename Bases in constructor argument list
-     // #TEST#: R410 Rename bases in constructor argument list
-     // #TEST#: R411 Rename Bases in initializer list pack expansion
-     // #TEST#: R412 Rename bases in initializer list pack expansion
+     // #TEST#: R406 Rename Bases in constructor argument list
+     // #TEST#: R407 Rename bases in constructor argument list
+     // #TEST#: R408 Rename Bases in initializer list pack expansion
+     // #TEST#: R409 Rename bases in initializer list pack expansion
 -    Mixin(const Bases &...bases) : Bases(bases)...
 +    Mixin(const Goink &...bases) : Goink(bases)...
      {

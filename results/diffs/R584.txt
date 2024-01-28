@@ -1,22 +1,16 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..98744bb 100644
+index e73e1db..b627695 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1181,7 +1181,7 @@ void f44()
-             return m_s;
-         }
-         // #TEST#: R584 Rename method s
--        std::string s() const &&
-+        std::string goink() const &&
+@@ -1194,9 +1194,9 @@ void f44()
+         // #TEST#: R583 Rename method set
+         // #TEST#: R584 Rename parameter s
+         // #TEST#: R585 Rename parameter s in method body
+-        void set(std::string &&s)
++        void set(std::string &&goink)
          {
-             return m_s + " rvalue";
+-            m_s = s + " rvalue";
++            m_s = goink + " rvalue";
          }
-@@ -1220,7 +1220,7 @@ void f44()
-     require_equal(std::string{"meh lvalue"}, x.s());
  
-     // #TEST#: R592 Rename method s
--    require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.s());
-+    require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.goink());
- 
-     // #TEST#: R593 Rename variable x2
-     std::string &&x2 = std::string{"hello"} + ' ' + std::string{"world!"};
+     private:

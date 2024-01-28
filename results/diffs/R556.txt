@@ -1,16 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..bac7bf9 100644
+index e73e1db..ed7c787 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1065,9 +1065,9 @@ void f37()
-     require_equal(std::string{"foo"}, narrow(std::basic_string<char32_t>{s3}));
+@@ -1074,7 +1074,7 @@ void f37()
+ // #TEST#: R556 Rename stream_ in macro argument list
+ // #TEST#: R557 Rename stream_ in macro expansion text
+ // #TEST#: R558 Rename not available for __VA_ARGS__ in macro expansion text
+-#define F38_AUX(stream_, ...) f10_aux(stream_, __VA_ARGS__)
++#define F38_AUX(goink_, ...) f10_aux(goink_, __VA_ARGS__)
  
-     // #TEST#: R556 Rename s4
--    const char *s4{R"(I say, "Hello, World!")"};
-+    const char *goink{R"(I say, "Hello, World!")"};
-     // #TEST#: R557 Rename s4
--    require_equal(std::string{R"(I say, "Hello, World!")"}, std::string{s4});
-+    require_equal(std::string{R"(I say, "Hello, World!")"}, std::string{goink});
- }
- 
- // #TEST#: R558 Rename F38_AUX
+ void f38()
+ {

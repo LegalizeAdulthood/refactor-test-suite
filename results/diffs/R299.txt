@@ -3,15 +3,15 @@ index 96b65ff..924e961 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -189,10 +189,10 @@ template <typename T, typename... Args>
- // #TEST#: R299 Rename head
- // #TEST#: R300 Rename Args
- // #TEST#: R301 Rename tail
+ // #TEST#: R296 Rename head
+ // #TEST#: R297 Rename Args
+ // #TEST#: R298 Rename tail
 -void f10_aux(std::ostream &stream, T head, Args... tail)
 +void f10_aux(std::ostream &stream, T goink, Args... tail)
  {
-     // #TEST#: R302 Rename head
+     // #TEST#: R299 Rename head
 -    stream << head << '\n';
 +    stream << goink << '\n';
-     // #TEST#: R303 Rename tail
-     // #TEST#: R304 Rename Args
+     // #TEST#: R300 Rename tail
+     // #TEST#: R301 Rename Args
      if (sizeof...(tail) > 0 || sizeof...(Args) > 0)

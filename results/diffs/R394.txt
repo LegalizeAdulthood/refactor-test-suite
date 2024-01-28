@@ -1,13 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..d42bc48 100644
+index e73e1db..c4fa2ef 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -537,7 +537,7 @@ struct Initializer
-     // #TEST#: R393 Rename Args
-     // #TEST#: R394 Rename args constructor argument
-     // #TEST#: R395 Rename args initializer
--    Initializer(Args... args) : t(args...)
-+    Initializer(Args... goink) : t(goink...)
-     {
-     }
-     // #TEST#: R396 Rename Args
+@@ -553,14 +553,14 @@ void f17()
+ }
+ 
+ // #TEST#: R394 Rename Args
+-template <typename... Args>
++template <typename... Goink>
+ // #TEST#: R395 Rename Args
+ // #TEST#: R396 Rename args
+-void f18_aux(std::ostream &stream, Args... args)
++void f18_aux(std::ostream &stream, Goink... args)
+ {
+     // #TEST#: R397 Rename Args
+     // #TEST#: R398 Rename args
+-    int ignored[sizeof...(Args)] = {(stream << args << ' ', 0)...};
++    int ignored[sizeof...(Goink)] = {(stream << args << ' ', 0)...};
+ }
+ 
+ void f18()

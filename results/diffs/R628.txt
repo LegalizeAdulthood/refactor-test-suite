@@ -1,40 +1,13 @@
 diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
-index 2f9380a..6fb76ae 100644
+index 2f9380a..f903a2d 100644
 --- a/RefactorTest/RenameCpp14.cpp
 +++ b/RefactorTest/RenameCpp14.cpp
-@@ -58,11 +58,11 @@ void f2()
-     {
-         using namespace RenameCpp14;
-         // #TEST#: R627 Rename use of pi2
--        REQUIRE_EQUAL(pi2<float>, circularArea2(1.0f));
-+        REQUIRE_EQUAL(goink<float>, circularArea2(1.0f));
-     }
- 
-     // #TEST#: R628 Rename use of pi2
--    REQUIRE_EQUAL(RenameCpp14::pi2<float>, RenameCpp14::circularArea2(1.0f));
-+    REQUIRE_EQUAL(RenameCpp14::goink<float>, RenameCpp14::circularArea2(1.0f));
+@@ -71,7 +71,7 @@ void f3()
+     // #TEST#: R627 Rename parameter val in declaration
+     // #TEST#: R628 Rename parameter val in first use
+     // #TEST#: R629 Rename parameter val in second use
+-    auto fn = [](auto val) { return val * decltype(val)(2); };
++    auto fn = [](auto goink) { return goink * decltype(goink)(2); };
+     REQUIRE_EQUAL(4.0f, fn(2.0f));
+     REQUIRE_EQUAL(4, fn(2));
  }
- 
- void f3()
-diff --git a/RefactorTest/RenameCpp14.h b/RefactorTest/RenameCpp14.h
-index a4197f1..22a0612 100644
---- a/RefactorTest/RenameCpp14.h
-+++ b/RefactorTest/RenameCpp14.h
-@@ -9,7 +9,7 @@ template <class T>
- // #TEST#: R608 Rename variable template pi2
- // #TEST#: R609 Rename first use of T
- // #TEST#: R610 Rename second use of T
--constexpr T pi2 = T(2.0L) * T(3.1415926535897932385L);
-+constexpr T goink = T(2.0L) * T(3.1415926535897932385L);
- 
- // #TEST#: R611 Rename template parameter T
- template <class T>
-@@ -19,7 +19,7 @@ T circularArea2(T r)
- {
-     // #TEST#: R614 Rename use of pi2
-     // #TEST#: R615 Rename use of T
--    return pi2<T> * r * r;
-+    return goink<T> * r * r;
- }
- 
- }    // namespace RenameCpp14

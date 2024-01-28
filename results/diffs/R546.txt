@@ -3,18 +3,18 @@ index e73e1db..6a33ee5 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -1030,7 +1030,7 @@ int x36 = 10;
- // #TEST#: R545 Rename d36
+ // #TEST#: R542 Rename d36
  double d36 = 20.5;
- // #TEST#: R546 Rename s36
+ // #TEST#: R543 Rename s36
 -std::string s36()
 +std::string goink()
  {
      return "hello world!";
  }
 @@ -1044,7 +1044,7 @@ void f36()
-     // #TEST#: R548 Rename d36
+     // #TEST#: R545 Rename d36
      require_equal(20.5, d36);
-     // #TEST#: R549 Rename s36
+     // #TEST#: R546 Rename s36
 -    require_equal(std::string{"hello world!"}, s36());
 +    require_equal(std::string{"hello world!"}, goink());
  }

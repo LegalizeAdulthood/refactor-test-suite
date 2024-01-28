@@ -1,16 +1,27 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..d9768c6 100644
+index e73e1db..dccd414 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -662,9 +662,9 @@ void f21()
+@@ -674,18 +674,18 @@ void f22()
  }
  
- // #TEST#: R422 Rename Exceptions
--template <typename... Exceptions>
+ // #TEST#: R421 Rename Types
+-template <typename... Types>
 +template <typename... Goink>
- // #TEST#: R423 Rename Exceptions
--void f22_aux() throw(Exceptions...)
-+void f22_aux() throw(Goink...)
+ // #TEST#: R422 Rename Types
+-struct alignas(Types...) Aligned
++struct alignas(Goink...) Aligned
  {
- }
+     // #TEST#: R423 Rename Types
+     // #TEST#: R424 Rename args in constructor parameter list
+     // #TEST#: R425 Rename args in initializer list
+-    Aligned(Types... args) : t(args...)
++    Aligned(Goink... args) : t(args...)
+     {
+     }
+     // #TEST#: R426 Rename Types
+-    std::tuple<Types...> t;
++    std::tuple<Goink...> t;
+ };
  
+ void f23()

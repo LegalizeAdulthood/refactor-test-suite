@@ -3,16 +3,16 @@ index 3d0f364..af7eda4 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -233,11 +233,11 @@ void f5()
-         // #TEST#: R725 Rename binding val1
-         // #TEST#: R726 Rename binding name1
-         // #TEST#: R727 Rename use of f
+         // #TEST#: R722 Rename binding val1
+         // #TEST#: R723 Rename binding name1
+         // #TEST#: R724 Rename use of f
 -        const auto [val1, name1] = f;
 +        const auto [val1, goink] = f;
-         // #TEST#: R728 Rename use of val1
+         // #TEST#: R725 Rename use of val1
          REQUIRE_EQUAL(1, val1);
-         // #TEST#: R729 Rename use of name1
+         // #TEST#: R726 Rename use of name1
 -        REQUIRE_EQUAL(std::string{"one"}, name1);
 +        REQUIRE_EQUAL(std::string{"one"}, goink);
-         // #TEST#: R730 Rename binding val2
-         // #TEST#: R731 Rename binding name2
-         // #TEST#: R732 Rename use of f
+         // #TEST#: R727 Rename binding val2
+         // #TEST#: R728 Rename binding name2
+         // #TEST#: R729 Rename use of f

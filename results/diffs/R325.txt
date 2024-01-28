@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..a045a4e 100644
+index e73e1db..0a9f0c8 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -353,7 +353,7 @@ int operator""_xull3(unsigned long long int value)
+@@ -361,7 +361,7 @@ double operator""_xd2(long double value)
  
- // #TEST#: R325 Rename xd2
+ // #TEST#: R325 Rename xc
  // #TEST#: R326 Rename value
--double operator""_xd2(long double value)
-+double operator""_goink(long double value)
+-char operator""_xc(char value)
++char operator""_goink(char value)
  {
      // #TEST#: R327 Rename value
-     return static_cast<double>(value);
-@@ -451,7 +451,7 @@ void f13()
-     // #TEST#: R363 Rename xull3
-     require_equal(-555, -555_xull3);
-     // #TEST#: R364 Rename xd2
--    require_equal(2.0, 2.0_xd2);
-+    require_equal(2.0, 2.0_goink);
-     // #TEST#: R365 Rename xc
-     require_equal('c', 'c'_xc);
-     // #TEST#: R366 Rename xc2
+     return value;
+@@ -453,7 +453,7 @@ void f13()
+     // #TEST#: R361 Rename xd2
+     require_equal(2.0, 2.0_xd2);
+     // #TEST#: R362 Rename xc
+-    require_equal('c', 'c'_xc);
++    require_equal('c', 'c'_goink);
+     // #TEST#: R363 Rename xc2
+     require_equal(L'c', L'c'_xc2);
+     // #TEST#: R364 Rename xc3

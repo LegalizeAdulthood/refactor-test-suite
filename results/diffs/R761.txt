@@ -1,18 +1,17 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 3d0f364..31f2c0d 100644
+index 3d0f364..ccc5978 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -317,11 +317,11 @@ bool allUnaryRight(Args... args)
+@@ -321,10 +321,10 @@ template <typename... Args>
+ // #TEST#: R759 Rename function allUnaryLeft
+ // #TEST#: R760 Rename use of Args
+ // #TEST#: R761 Rename parameter args
+-bool allUnaryLeft(Args... args)
++bool allUnaryLeft(Args... goink)
+ {
+     // #TEST#: R762 Rename use of args
+-    return (... && args);
++    return (... && goink);
  }
  
- // #TEST#: R761 Rename template parameter Args
--template <typename... Args>
-+template <typename... Goink>
- // #TEST#: R762 Rename function allUnaryLeft
- // #TEST#: R763 Rename use of Args
- // #TEST#: R764 Rename parameter args
--bool allUnaryLeft(Args... args)
-+bool allUnaryLeft(Goink... args)
- {
-     // #TEST#: R765 Rename use of args
-     return (... && args);
+ // #TEST#: R763 Rename template parameter Args

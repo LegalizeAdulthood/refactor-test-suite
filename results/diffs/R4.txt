@@ -19,4 +19,4 @@ index d1c1283..8628cb4 100644
 +    x = GOINK(2.0f);
  
      {
-         // #TEST#: R206 Rename the namespace X
+         // #TEST#: R205 Rename the namespace X

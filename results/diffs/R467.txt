@@ -1,15 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..6d04538 100644
+index e73e1db..55f4d28 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -794,8 +794,8 @@ void f26()
-     require_equal(std::string{"hello world!\n"},
-                   [](const std::string &s)
-                   {
--                      std::string nl{"\n"};
--                      return s + nl;
-+                      std::string goink{"\n"};
-+                      return s + goink;
-                   }(s));
+@@ -803,7 +803,7 @@ void f26()
+     {
+         one,
+         // #TEST#: R467 Rename two
+-        two,
++        goink,
+         three
+     };
+     // #TEST#: R468 Rename E in declaration
+@@ -813,7 +813,7 @@ void f26()
+     // #TEST#: R471 Rename E in lambda return type
+     // #TEST#: R472 Rename E in lambda body
+     // #TEST#: R473 Rename two in lambda body
+-    require_equal(static_cast<int>(E::two), static_cast<int>([]() -> E { return E::two; }()));
++    require_equal(static_cast<int>(E::goink), static_cast<int>([]() -> E { return E::goink; }()));
+ }
  
-     // #TEST#: R469 Rename E
+ void f27()

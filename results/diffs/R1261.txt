@@ -1,23 +1,22 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..ea47379 100644
+index 024d6a2..0d14eed 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -604,17 +604,17 @@ void f1()
+@@ -621,16 +621,16 @@ public:
+ };
  
- // single constraint on single template parameter
- // #TEST#: R1256 Rename template parameter T
+ // #TEST#: R1259 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1257 Rename concept Squareable
- // #TEST#: R1258 Rename use of T
+ // #TEST#: R1260 Rename concept Squareable
+ // #TEST#: R1261 Rename use of T
 -    requires Squareable<T>
 +    requires Squareable<Goink>
- // #TEST#: R1259 Rename class Sqr1
- class Sqr1
+ // #TEST#: R1262 Rename class SqrStruct1
+ struct SqrStruct1
  {
- public:
-     // #TEST#: R1260 Rename first use of T
-     // #TEST#: R1261 Rename second of T
+     // #TEST#: R1263 Rename first use of T
+     // #TEST#: R1264 Rename second of T
 -    T operator()(T value) const
 +    Goink operator()(Goink value) const
      {

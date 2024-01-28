@@ -1,18 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..c71c5a0 100644
+index e73e1db..f112c1f 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -433,11 +433,11 @@ std::basic_string<char16_t> operator""_xs3(const char16_t *text, std::size_t len
- // #TEST#: R355 Rename xs4
- // #TEST#: R356 Rename text
- // #TEST#: R357 Rename len
--std::basic_string<char32_t> operator""_xs4(const char32_t *text, std::size_t len)
-+std::basic_string<char32_t> operator""_xs4(const char32_t *text, std::size_t goink)
- {
-     // #TEST#: R358 Rename text
-     // #TEST#: R359 Rename len
--    return {text, len};
-+    return {text, goink};
- }
+@@ -293,7 +293,7 @@ unsigned long long operator""_xull2(const char *text)
  
- void f13()
+ // #TEST#: R317 Rename xd
+ // #TEST#: R318 Rename text
+-double operator""_xd(const char *text)
++double operator""_goink(const char *text)
+ {
+     const auto is_e = [](char c) { return c == 'e' || c == 'E'; };
+     double value = 0.0;
+@@ -447,7 +447,7 @@ void f13()
+     // #TEST#: R358 Rename xull2
+     require_equal(666ULL, 666_xull2);
+     // #TEST#: R359 Rename xd
+-    require_equal(2.0, 2.0_xd);
++    require_equal(2.0, 2.0_goink);
+     // #TEST#: R360 Rename xull3
+     require_equal(-555, -555_xull3);
+     // #TEST#: R361 Rename xd2

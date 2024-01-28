@@ -5,15 +5,15 @@ index f7afd67..830f289 100644
 @@ -328,12 +328,12 @@ bool allUnaryLeft(Args... args)
  }
  
- // #TEST#: R766 Rename template parameter Args
+ // #TEST#: R763 Rename template parameter Args
 -template <typename... Args>
 +template <typename... Goink>
- // #TEST#: R767 Rename function allBinaryRight
- // #TEST#: R768 Rename parameter init
- // #TEST#: R769 Rename use of Args
- // #TEST#: R770 Rename parameter args
+ // #TEST#: R764 Rename function allBinaryRight
+ // #TEST#: R765 Rename parameter init
+ // #TEST#: R766 Rename use of Args
+ // #TEST#: R767 Rename parameter args
 -bool allBinaryRight(bool init, Args... args)
 +bool allBinaryRight(bool init, Goink... args)
  {
-     // #TEST#: R771 Rename use of args
-     // #TEST#: R772 Rename use of init
+     // #TEST#: R768 Rename use of args
+     // #TEST#: R769 Rename use of init

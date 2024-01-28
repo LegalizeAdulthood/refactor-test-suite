@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..d71d63d 100644
+index e73e1db..07369b9 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -394,11 +394,11 @@ char32_t operator""_xc4(char32_t value)
- // #TEST#: R340 Rename xs
- // #TEST#: R341 Rename text
- // #TEST#: R342 Rename len
+ // #TEST#: R337 Rename xs
+ // #TEST#: R338 Rename text
+ // #TEST#: R339 Rename len
 -std::string operator""_xs(const char *text, std::size_t len)
-+std::string operator""_xs(const char *goink, std::size_t len)
++std::string operator""_xs(const char *text, std::size_t goink)
  {
-     // #TEST#: R343 Rename text
-     // #TEST#: R344 Rename len
+     // #TEST#: R340 Rename text
+     // #TEST#: R341 Rename len
 -    return std::string(text, len);
-+    return std::string(goink, len);
++    return std::string(text, goink);
  }
  
  template <typename T>

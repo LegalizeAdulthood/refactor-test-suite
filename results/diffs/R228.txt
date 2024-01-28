@@ -5,13 +5,13 @@ index d1c1283..b30b5c1 100644
 @@ -715,12 +715,12 @@ void TestRename()
      int loop = 0;
  
-     // #TEST#: R228 Rename label
+     // #TEST#: R227 Rename label
 -restart:
 +goink:
      loop++;
      if (loop < 5)
      {
-         // #TEST#: R229 Rename label
+         // #TEST#: R228 Rename label
 -        goto restart;
 +        goto goink;
      }

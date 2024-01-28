@@ -1,17 +1,13 @@
 diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
-index 2f9380a..ee3f70e 100644
+index 2f9380a..f903a2d 100644
 --- a/RefactorTest/RenameCpp14.cpp
 +++ b/RefactorTest/RenameCpp14.cpp
-@@ -71,9 +71,9 @@ void f3()
-     // #TEST#: R630 Rename parameter val in declaration
-     // #TEST#: R631 Rename parameter val in first use
-     // #TEST#: R632 Rename parameter val in second use
+@@ -71,7 +71,7 @@ void f3()
+     // #TEST#: R627 Rename parameter val in declaration
+     // #TEST#: R628 Rename parameter val in first use
+     // #TEST#: R629 Rename parameter val in second use
 -    auto fn = [](auto val) { return val * decltype(val)(2); };
--    REQUIRE_EQUAL(4.0f, fn(2.0f));
--    REQUIRE_EQUAL(4, fn(2));
-+    auto goink = [](auto val) { return val * decltype(val)(2); };
-+    REQUIRE_EQUAL(4.0f, goink(2.0f));
-+    REQUIRE_EQUAL(4, goink(2));
++    auto fn = [](auto goink) { return goink * decltype(goink)(2); };
+     REQUIRE_EQUAL(4.0f, fn(2.0f));
+     REQUIRE_EQUAL(4, fn(2));
  }
- 
- void f4()

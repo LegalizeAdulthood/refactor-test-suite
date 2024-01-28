@@ -1,18 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..36d1fd3 100644
+index e73e1db..80e5191 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -730,11 +730,11 @@ template <typename T, typename U>
- // #TEST#: R438 Rename arg in parameter list
- // #TEST#: R439 Rename T
- // #TEST#: R440 Rename arg in decltype expression
--auto f25_aux(U arg) -> decltype(T(arg))
-+auto f25_aux(U goink) -> decltype(T(goink))
- {
-     // #TEST#: R441 Rename T
-     // #TEST#: R442 Rename arg
--    return T(arg);
-+    return T(goink);
- }
+@@ -751,7 +751,7 @@ void f26()
+     // #TEST#: R441 Rename x in lambda parameter list
+     // #TEST#: R442 Rename x in lambda body
+     // #TEST#: R443 Rename x in lambda argument list
+-    require_equal(100, [](int x) { return x * 10; }(x));
++    require_equal(100, [](int goink) { return goink * 10; }(x));
  
- void f25()
+     // #TEST#: R444 Rename f
+     double f = 20.5;

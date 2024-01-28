@@ -1,31 +1,13 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index b319d77..c35aedb 100644
+index 2aa7a68..e7edb3d 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -152,14 +152,14 @@ void sink(int sum)
- // init statements and initializers in range for
- void f3()
- {
--    std::vector<int> v;
--    v.push_back(10);
-+    std::vector<int> goink;
-+    goink.push_back(10);
-     {
-         int sum{};
-         // #TEST#: R899 Rename function gen
-         // #TEST#: R900 Rename local variable i
-         // #TEST#: R901 Rename use of v
--        for (v = gen(); const int i : v)
-+        for (goink = gen(); const int i : goink)
-         {
-             // #TEST#: R902 Rename use of i
-             sum += i;
-@@ -171,7 +171,7 @@ void f3()
-         // #TEST#: R903 Rename function sink
-         // #TEST#: R904 Rename local variable i
-         // #TEST#: R905 Rename use of v
--        for (sink(sum); const int i : v)
-+        for (sink(sum); const int i : goink)
-         {
-             // #TEST#: R906 Rename use of i
-             sum += i;
+@@ -188,7 +188,7 @@ void f4()
+     // #TEST#: R906 Rename template parameter T
+     // #TEST#: R907 Rename use of T
+     // #TEST#: R908 Rename use of N
+-    auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
++    auto fn = []<size_t Goink, typename T> { return std::array<T, Goink>{}; };
+     // #TEST#: R909 Rename type alias T
+     using T = int;
+     // #TEST#: R910 Rename local constant N

@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..5995c6a 100644
+index e73e1db..8594144 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -474,14 +474,14 @@ void f13()
- template <typename Char>
- // #TEST#: R374 Rename String
- // #TEST#: R375 Rename Char
--using String = std::basic_string<Char>;
-+using Goink = std::basic_string<Char>;
- 
- void f14()
- {
-     // #TEST#: R376 Rename String
--    String<char> s{"foo"};
-+    Goink<char> s{"foo"};
-     // #TEST#: R377 Rename String
--    require_equal(String<char>{"foo"}, s);
-+    require_equal(Goink<char>{"foo"}, s);
- }
- 
- void f15()
+@@ -490,7 +490,7 @@ void f15()
+     enum class X : char
+     {
+         // #TEST#: R376 Rename One
+-        One,
++        Goink,
+         Two,
+         Three
+     };
+@@ -505,7 +505,7 @@ void f15()
+     // #TEST#: R379 Rename x
+     // #TEST#: R380 Rename X on rhs
+     // #TEST#: R381 Rename One
+-    X x = X::One;
++    X x = X::Goink;
+     // #TEST#: R382 Rename One
+     Y y = Y::One;
+     require_equal(static_cast<int>(x), static_cast<int>(y));

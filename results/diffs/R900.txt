@@ -1,17 +1,22 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index b319d77..9c05d62 100644
+index b319d77..811fb55 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -159,10 +159,10 @@ void f3()
-         // #TEST#: R899 Rename function gen
-         // #TEST#: R900 Rename local variable i
-         // #TEST#: R901 Rename use of v
--        for (v = gen(); const int i : v)
-+        for (v = gen(); const int goink : v)
+@@ -143,7 +143,7 @@ std::vector<int> gen()
+ }
+ 
+ // #TEST#: R895 Rename function sink
+-void sink(int sum)
++void goink(int sum)
+ {
+     std::ostringstream str;
+     str << sum << '\n';
+@@ -171,7 +171,7 @@ void f3()
+         // #TEST#: R900 Rename function sink
+         // #TEST#: R901 Rename local variable i
+         // #TEST#: R902 Rename use of v
+-        for (sink(sum); const int i : v)
++        for (goink(sum); const int i : v)
          {
-             // #TEST#: R902 Rename use of i
--            sum += i;
-+            sum += goink;
-         }
-         REQUIRE_EQUAL(1 + 2 + 3 + 4 + 5, sum);
-     }
+             // #TEST#: R903 Rename use of i
+             sum += i;

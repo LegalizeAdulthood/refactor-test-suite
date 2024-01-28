@@ -12,9 +12,9 @@ index d1c1283..2688c58 100644
  static int y = 1;
  
 @@ -643,7 +643,7 @@ void TestRename()
-     // #TEST#: R203 rename the variable X::x
-     // #TEST#: R204 rename the variable X::y
-     // #TEST#: R205 rename the variable Y::x
+     // #TEST#: R202 rename the variable X::x
+     // #TEST#: R203 rename the variable X::y
+     // #TEST#: R204 rename the variable Y::x
 -    int y = test2.Operation() + X::x + X::y + Y::x;
 +    int y = test2.Operation() + X::goink + X::y + Y::x;
  

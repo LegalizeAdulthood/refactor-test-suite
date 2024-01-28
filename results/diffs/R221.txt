@@ -5,16 +5,16 @@ index d1c1283..bc3dd66 100644
 @@ -695,12 +695,12 @@ void TestRename()
      (ops.*member)();
  
-     // #TEST#: R221 Rename variable ops2
+     // #TEST#: R220 Rename variable ops2
 -    Operations *ops2 = new Operations();
 +    Operations *goink = new Operations();
-     // #TEST#: R222 Rename variable ops2
-     // #TEST#: R223 Rename variable member
+     // #TEST#: R221 Rename variable ops2
+     // #TEST#: R222 Rename variable member
 -    (ops2->*member)();
 +    (goink->*member)();
-     // #TEST#: R224 Rename variable ops2
+     // #TEST#: R223 Rename variable ops2
 -    delete ops2;
 +    delete goink;
  
-     // #TEST#: R225 Rename variable ops3
+     // #TEST#: R224 Rename variable ops3
      Operations &ops3 = ops;

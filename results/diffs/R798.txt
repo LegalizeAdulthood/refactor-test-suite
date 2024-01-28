@@ -1,48 +1,24 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index c346b5d..68e72f3 100644
+index c346b5d..26cc3cd 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -377,14 +377,14 @@ struct ValueName
- 
- void f8()
- {
--    float f1{1.0f};
-+    float goink{1.0f};
-     int i1{10};
-     // declarations
-     {
-         // #TEST#: R780 Rename local variable p
-         // #TEST#: R781 Rename use of f1
-         // #TEST#: R782 Rename use of i1
--        std::pair p{f1, i1};
-+        std::pair p{goink, i1};
-         // #TEST#: R783 Rename use of p
-         REQUIRE_EQUAL(1.0f, p.first);
-         // #TEST#: R784 Rename use of p
-@@ -392,7 +392,7 @@ void f8()
-         // #TEST#: R785 Rename local variable t
-         // #TEST#: R786 Rename use of f1
-         // #TEST#: R787 Rename use of i1
--        std::tuple t{f1, i1};
-+        std::tuple t{goink, i1};
-         // #TEST#: R788 Rename use of t
-         REQUIRE_EQUAL(1.0f, std::get<0>(t));
-         // #TEST#: R789 Rename use of t
-@@ -403,7 +403,7 @@ void f8()
-         // #TEST#: R790 Rename local variable p1
-         // #TEST#: R791 Rename use of f1
-         // #TEST#: R792 Rename use of i1
--        const auto *p1 = new std::pair{f1, i1};
-+        const auto *p1 = new std::pair{goink, i1};
-         // #TEST#: R793 Rename use of p1
-         REQUIRE_EQUAL(1.0f, p1->first);
-         // #TEST#: R794 Rename use of p1
-@@ -415,7 +415,7 @@ void f8()
-         // #TEST#: R797 Rename local variable p2
-         // #TEST#: R798 Rename use of f1
-         // #TEST#: R799 Rename use of name
+@@ -411,16 +411,16 @@ void f8()
+         // #TEST#: R792 Rename use of p1
+         delete p1;
+         // #TEST#: R793 Rename local variable name
+-        const char *name{"one"};
++        const char *goink{"one"};
+         // #TEST#: R794 Rename local variable p2
+         // #TEST#: R795 Rename use of f1
+         // #TEST#: R796 Rename use of name
 -        const auto *p2 = new ValueName{f1, std::string_view{name}};
-+        const auto *p2 = new ValueName{goink, std::string_view{name}};
-         // #TEST#: R800 Rename use of p2
++        const auto *p2 = new ValueName{f1, std::string_view{goink}};
+         // #TEST#: R797 Rename use of p2
          REQUIRE_EQUAL(1.0f, p2->value);
-         // #TEST#: R801 Rename use of name
+         // #TEST#: R798 Rename use of name
+         // #TEST#: R799 Rename use of p2
+-        REQUIRE_EQUAL(std::string_view{name}, p2->name);
++        REQUIRE_EQUAL(std::string_view{goink}, p2->name);
+         // #TEST#: R800 Rename use of p2
+         delete p2;
+     }

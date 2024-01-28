@@ -5,21 +5,21 @@ index cdd8233..83478ac 100644
 @@ -61,18 +61,18 @@ void f1()
      // integral type comparison
      {
-         // #TEST#: R861 Rename x
+         // #TEST#: R858 Rename x
 -        int x{1};
 +        int goink{1};
-         // #TEST#: R862 Rename y
+         // #TEST#: R859 Rename y
          int y{2};
-         // #TEST#: R863 Rename first use of x
-         // #TEST#: R864 Rename second use of x
+         // #TEST#: R860 Rename first use of x
+         // #TEST#: R861 Rename second use of x
 -        REQUIRE_EQUAL(std::strong_ordering::equal, x <=> x);
 +        REQUIRE_EQUAL(std::strong_ordering::equal, goink <=> goink);
-         // #TEST#: R865 Rename use of x
-         // #TEST#: R866 Rename use of y
+         // #TEST#: R862 Rename use of x
+         // #TEST#: R863 Rename use of y
 -        REQUIRE_EQUAL(std::strong_ordering::less, x <=> y);
 +        REQUIRE_EQUAL(std::strong_ordering::less, goink <=> y);
-         // #TEST#: R867 Rename use of y
-         // #TEST#: R868 Rename use of x
+         // #TEST#: R864 Rename use of y
+         // #TEST#: R865 Rename use of x
 -        REQUIRE_EQUAL(std::strong_ordering::greater, y <=> x);
 +        REQUIRE_EQUAL(std::strong_ordering::greater, y <=> goink);
      }

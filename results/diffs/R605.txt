@@ -1,65 +1,40 @@
-diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..7f8eeff 100644
---- a/RefactorTest/RenameCpp11.cpp
-+++ b/RefactorTest/RenameCpp11.cpp
-@@ -938,12 +938,12 @@ void f30()
- void f31()
- {
-     // #TEST#: R521 Rename Extern
--    using RenameCpp11::Extern;
-+    using RenameCpp11::Goink;
-     // #TEST#: R522 Rename Extern
--    Extern<int> x(10);
-+    Goink<int> x(10);
-     require_equal(10, x.t);
-     // #TEST#: R523 Rename Extern
--    Extern<std::string> y("hello world!");
-+    Goink<std::string> y("hello world!");
-     require_equal(std::string{"hello world!"}, y.t);
+diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
+index 2f9380a..6fb76ae 100644
+--- a/RefactorTest/RenameCpp14.cpp
++++ b/RefactorTest/RenameCpp14.cpp
+@@ -58,11 +58,11 @@ void f2()
+     {
+         using namespace RenameCpp14;
+         // #TEST#: R624 Rename use of pi2
+-        REQUIRE_EQUAL(pi2<float>, circularArea2(1.0f));
++        REQUIRE_EQUAL(goink<float>, circularArea2(1.0f));
+     }
+ 
+     // #TEST#: R625 Rename use of pi2
+-    REQUIRE_EQUAL(RenameCpp14::pi2<float>, RenameCpp14::circularArea2(1.0f));
++    REQUIRE_EQUAL(RenameCpp14::goink<float>, RenameCpp14::circularArea2(1.0f));
  }
  
-@@ -1288,9 +1288,9 @@ void f45()
- namespace RenameCpp11
+ void f3()
+diff --git a/RefactorTest/RenameCpp14.h b/RefactorTest/RenameCpp14.h
+index a4197f1..22a0612 100644
+--- a/RefactorTest/RenameCpp14.h
++++ b/RefactorTest/RenameCpp14.h
+@@ -9,7 +9,7 @@ template <class T>
+ // #TEST#: R605 Rename variable template pi2
+ // #TEST#: R606 Rename first use of T
+ // #TEST#: R607 Rename second use of T
+-constexpr T pi2 = T(2.0L) * T(3.1415926535897932385L);
++constexpr T goink = T(2.0L) * T(3.1415926535897932385L);
+ 
+ // #TEST#: R608 Rename template parameter T
+ template <class T>
+@@ -19,7 +19,7 @@ T circularArea2(T r)
  {
- // #TEST#: R604 Rename Extern
--template struct Extern<int>;
-+template struct Goink<int>;
- // #TEST#: R605 Rename Extern
--template struct Extern<std::string>;
-+template struct Goink<std::string>;
+     // #TEST#: R611 Rename use of pi2
+     // #TEST#: R612 Rename use of T
+-    return pi2<T> * r * r;
++    return goink<T> * r * r;
+ }
  
- }    // namespace RenameCpp11
- 
-diff --git a/RefactorTest/RenameCpp11.h b/RefactorTest/RenameCpp11.h
-index 54c1f21..a83f3c0 100644
---- a/RefactorTest/RenameCpp11.h
-+++ b/RefactorTest/RenameCpp11.h
-@@ -7,23 +7,23 @@ namespace RenameCpp11
- // #TEST#: R244 Rename T
- template <typename T>
- // #TEST#: R245 Rename Extern
--struct Extern
-+struct Goink
- {
-     // #TEST#: R246 Rename Extern
--    Extern()
-+    Goink()
-     {
-     }
-     // #TEST#: R247 Rename Extern
--    Extern(T t) : t(t)
-+    Goink(T t) : t(t)
-     {
-     }
-     T t = T();
- };
- 
- // #TEST#: R248 Rename Extern
--extern template struct Extern<int>;
-+extern template struct Goink<int>;
- // #TEST#: R249 Rename Extern
--extern template struct Extern<std::string>;
-+extern template struct Goink<std::string>;
- 
- }    // namespace RenameCpp11
- 
+ }    // namespace RenameCpp14

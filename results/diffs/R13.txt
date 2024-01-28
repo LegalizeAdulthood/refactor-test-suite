@@ -12,9 +12,9 @@ index d1c1283..4ec791f 100644
  // #TEST#: R14 rename this class
  class Rename1
 @@ -643,7 +643,7 @@ void TestRename()
-     // #TEST#: R203 rename the variable X::x
-     // #TEST#: R204 rename the variable X::y
-     // #TEST#: R205 rename the variable Y::x
+     // #TEST#: R202 rename the variable X::x
+     // #TEST#: R203 rename the variable X::y
+     // #TEST#: R204 rename the variable Y::x
 -    int y = test2.Operation() + X::x + X::y + Y::x;
 +    int y = test2.Operation() + X::x + X::goink + Y::x;
  
@@ -22,11 +22,11 @@ index d1c1283..4ec791f 100644
      x = MACRO_ONE_ARG(2.0f);
 @@ -651,9 +651,9 @@ void TestRename()
      {
-         // #TEST#: R206 Rename the namespace X
-         // #TEST#: R207 Rename the variable X::y
+         // #TEST#: R205 Rename the namespace X
+         // #TEST#: R206 Rename the variable X::y
 -        using X::y;
 +        using X::goink;
-         // #TEST#: R208 Rename y, which is really X::y
+         // #TEST#: R207 Rename y, which is really X::y
 -        y = -1;
 +        goink = -1;
      }

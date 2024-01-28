@@ -3,15 +3,15 @@ index e73e1db..6516649 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -923,12 +923,12 @@ void f30()
-     // #TEST#: R516 Rename y
+     // #TEST#: R513 Rename y
      int y = 20;
-     // #TEST#: R517 REname z
+     // #TEST#: R514 REname z
 -    int z = 30;
 +    int goink = 30;
      std::ostringstream result;
-     // #TEST#: R518 Rename x
-     // #TEST#: R519 Rename y
-     // #TEST#: R520 Rename z
+     // #TEST#: R515 Rename x
+     // #TEST#: R516 Rename y
+     // #TEST#: R517 Rename z
 -    for (int i : {1, x, y, z, 4})
 +    for (int i : {1, x, y, goink, 4})
      {

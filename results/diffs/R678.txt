@@ -1,16 +1,32 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 0c2172a..c3c5160 100644
+index 0c2172a..9f0017d 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -111,9 +111,9 @@ void f3()
-     // #TEST#: R676 Rename parameter val
-     // #TEST#: R677 Rename use of initial
-     // #TEST#: R678 Rename use of val
+@@ -111,15 +111,15 @@ void f3()
+     // #TEST#: R673 Rename parameter val
+     // #TEST#: R674 Rename use of initial
+     // #TEST#: R675 Rename use of val
 -    constexpr auto fn = [initial](int val) constexpr
-+    constexpr auto fn = [initial](int goink) constexpr
++    constexpr auto goink = [initial](int val) constexpr
      {
--        return initial + val;
-+        return initial + goink;
+         return initial + val;
      };
-     // #TEST#: R679 Rename use of fn
-     static_assert(10 == fn(0));
+     // #TEST#: R676 Rename use of fn
+-    static_assert(10 == fn(0));
++    static_assert(10 == goink(0));
+     int value;
+     // #TEST#: R677 Rename use of fn
+-    if constexpr (15 == fn(5))
++    if constexpr (15 == goink(5))
+     {
+         value = 10;
+     }
+@@ -128,7 +128,7 @@ void f3()
+         value = 15;
+     }
+     // #TEST#: R678 Rename use of fn
+-    REQUIRE_EQUAL(15, fn(5));
++    REQUIRE_EQUAL(15, goink(5));
+     REQUIRE_EQUAL(10, value);
+ }
+ 

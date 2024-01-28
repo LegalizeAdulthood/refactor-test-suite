@@ -3,11 +3,11 @@ index 2f9380a..1071fe1 100644
 --- a/RefactorTest/RenameCpp14.cpp
 +++ b/RefactorTest/RenameCpp14.cpp
 @@ -95,7 +95,7 @@ void f4()
-     // #TEST#: R644 Rename use of i in capture expression
-     // #TEST#: R645 Rename use of val
-     // #TEST#: R646 Rename use of j
+     // #TEST#: R641 Rename use of i in capture expression
+     // #TEST#: R642 Rename use of val
+     // #TEST#: R643 Rename use of j
 -    auto fn2 = [val = 1, j = i](int k) { return val + j + k; };
 +    auto fn2 = [val = 1, goink = i](int k) { return val + goink + k; };
-     // #TEST#: R647 Rename use of fn2
+     // #TEST#: R644 Rename use of fn2
      REQUIRE_EQUAL(4, fn2(1));
  }

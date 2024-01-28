@@ -1,50 +1,44 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index b319d77..3dcef6c 100644
+index 6c616d8..b2070f6 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -101,9 +101,9 @@ void f2()
-         // #TEST#: R878 Rename use of Point
-         // #TEST#: R879 Rename local variable p
-         // #TEST#: R880 Rename use of x
--        Point p{.x = 10};
-+        Point p{.goink = 10};
-         // #TEST#: R881 Rename use of x
--        REQUIRE_EQUAL(10, p.x);
-+        REQUIRE_EQUAL(10, p.goink);
-         // #TEST#: R882 Rename use of y
+@@ -107,7 +107,7 @@ void f2()
+         // #TEST#: R879 Rename use of y
          REQUIRE_EQUAL(0, p.y);
-         // #TEST#: R883 Rename use of z
-@@ -115,7 +115,7 @@ void f2()
-         // #TEST#: R886 Rename use of y
-         Point p{.y = 10};
-         // #TEST#: R887 Rename use of x
--        REQUIRE_EQUAL(0, p.x);
+         // #TEST#: R880 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
 +        REQUIRE_EQUAL(0, p.goink);
-         // #TEST#: R888 Rename use of y
+     }
+     {
+         // #TEST#: R881 Rename use of Point
+@@ -119,7 +119,7 @@ void f2()
+         // #TEST#: R885 Rename use of y
          REQUIRE_EQUAL(10, p.y);
-         // #TEST#: R889 Rename use of z
-@@ -126,9 +126,9 @@ void f2()
-         // #TEST#: R891 Rename local variable p
-         // #TEST#: R892 Rename use of x
-         // #TEST#: R893 Rename use of y
--        Point p{.x = 20, .y = 10};
-+        Point p{.goink = 20, .y = 10};
-         // #TEST#: R894 Rename use of x
--        REQUIRE_EQUAL(20, p.x);
-+        REQUIRE_EQUAL(20, p.goink);
-         // #TEST#: R895 Rename use of y
+         // #TEST#: R886 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+     {
+         // #TEST#: R887 Rename use of Point
+@@ -131,7 +131,7 @@ void f2()
+         // #TEST#: R892 Rename use of y
          REQUIRE_EQUAL(10, p.y);
-         // #TEST#: R896 Rename use of z
+         // #TEST#: R893 Rename use of z
+-        REQUIRE_EQUAL(0, p.z);
++        REQUIRE_EQUAL(0, p.goink);
+     }
+ }
+ 
 diff --git a/RefactorTest/RenameCpp20.h b/RefactorTest/RenameCpp20.h
-index 7a5d5d9..2b27f29 100644
+index 7a5d5d9..0e8f864 100644
 --- a/RefactorTest/RenameCpp20.h
 +++ b/RefactorTest/RenameCpp20.h
-@@ -11,7 +11,7 @@ namespace RenameCpp20
- struct Point
- {
-     // #TEST#: R858 Rename member x
--    int x;
-+    int goink;
-     // #TEST#: R859 Rename member y
+@@ -15,7 +15,7 @@ struct Point
+     // #TEST#: R856 Rename member y
      int y;
-     // #TEST#: R860 Rename member z
+     // #TEST#: R857 Rename member z
+-    int z;
++    int goink;
+ };
+ 
+ // Cribbed from https://en.cppreference.com/w/cpp/language/coroutines

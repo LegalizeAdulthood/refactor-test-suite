@@ -1,44 +1,22 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index b319d77..b5e0618 100644
+index b319d77..db88c05 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -107,7 +107,7 @@ void f2()
-         // #TEST#: R882 Rename use of y
-         REQUIRE_EQUAL(0, p.y);
-         // #TEST#: R883 Rename use of z
--        REQUIRE_EQUAL(0, p.z);
-+        REQUIRE_EQUAL(0, p.goink);
-     }
-     {
-         // #TEST#: R884 Rename use of Point
-@@ -119,7 +119,7 @@ void f2()
-         // #TEST#: R888 Rename use of y
-         REQUIRE_EQUAL(10, p.y);
-         // #TEST#: R889 Rename use of z
--        REQUIRE_EQUAL(0, p.z);
-+        REQUIRE_EQUAL(0, p.goink);
-     }
-     {
-         // #TEST#: R890 Rename use of Point
-@@ -132,7 +132,7 @@ void f2()
-         // #TEST#: R895 Rename use of y
-         REQUIRE_EQUAL(10, p.y);
-         // #TEST#: R896 Rename use of z
--        REQUIRE_EQUAL(0, p.z);
-+        REQUIRE_EQUAL(0, p.goink);
-     }
+@@ -137,7 +137,7 @@ void f2()
  }
  
-diff --git a/RefactorTest/RenameCpp20.h b/RefactorTest/RenameCpp20.h
-index 7a5d5d9..0e8f864 100644
---- a/RefactorTest/RenameCpp20.h
-+++ b/RefactorTest/RenameCpp20.h
-@@ -15,7 +15,7 @@ struct Point
-     // #TEST#: R859 Rename member y
-     int y;
-     // #TEST#: R860 Rename member z
--    int z;
-+    int goink;
- };
- 
- // Cribbed from https://en.cppreference.com/w/cpp/language/coroutines
+ // #TEST#: R894 Rename function gen
+-std::vector<int> gen()
++std::vector<int> goink()
+ {
+     return {1, 2, 3, 4, 5};
+ }
+@@ -159,7 +159,7 @@ void f3()
+         // #TEST#: R896 Rename function gen
+         // #TEST#: R897 Rename local variable i
+         // #TEST#: R898 Rename use of v
+-        for (v = gen(); const int i : v)
++        for (v = goink(); const int i : v)
+         {
+             // #TEST#: R899 Rename use of i
+             sum += i;

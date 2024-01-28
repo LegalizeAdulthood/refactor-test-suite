@@ -1,49 +1,20 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 3d0f364..0d34971 100644
+index 3d0f364..de09d79 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -229,11 +229,11 @@ void f5()
-             int val;
-             std::string name;
-         };
--        Foo f{1, "one"};
-+        Foo goink{1, "one"};
-         // #TEST#: R725 Rename binding val1
-         // #TEST#: R726 Rename binding name1
-         // #TEST#: R727 Rename use of f
--        const auto [val1, name1] = f;
-+        const auto [val1, name1] = goink;
-         // #TEST#: R728 Rename use of val1
-         REQUIRE_EQUAL(1, val1);
-         // #TEST#: R729 Rename use of name1
-@@ -241,7 +241,7 @@ void f5()
-         // #TEST#: R730 Rename binding val2
-         // #TEST#: R731 Rename binding name2
-         // #TEST#: R732 Rename use of f
--        const auto &[val2, name2] = f;
-+        const auto &[val2, name2] = goink;
-         // #TEST#: R733 Rename use of val2
-         REQUIRE_EQUAL(1, val2);
-         // #TEST#: R734 Rename use of name2
-@@ -249,17 +249,17 @@ void f5()
-         // #TEST#: R735 Rename binding val3
-         // #TEST#: R736 Rename binding name3
-         // #TEST#: R737 Rename use of f
--        auto &[val3, name3] = f;
-+        auto &[val3, name3] = goink;
-         // #TEST#: R738 Rename use of val3
-         val3 = 11;
-         // #TEST#: R739 Rename use of name3
-         name3 = "eleven";
--        REQUIRE_EQUAL(11, f.val);
--        REQUIRE_EQUAL(std::string{"eleven"}, f.name);
-+        REQUIRE_EQUAL(11, goink.val);
-+        REQUIRE_EQUAL(std::string{"eleven"}, goink.name);
-         // #TEST#: R740 Rename binding val4
-         // #TEST#: R741 Rename binding name4
-         // #TEST#: R742 Rename use of f
--        auto [val4, name4] = f;
-+        auto [val4, name4] = goink;
-         // #TEST#: R743 Rename use of val4
-         REQUIRE_EQUAL(11, val4);
-         // #TEST#: R744 Rename use of name4
+@@ -273,12 +273,12 @@ void f6()
+     // #TEST#: R742 Rename local variable i
+     // #TEST#: R743 Rename use of i
+     // #TEST#: R744 Rename use of val
+-    if (int i = val % 2; i == 0)
++    if (int goink = val % 2; goink == 0)
+     {
+         // #TEST#: R745 Rename use of i
+-        ++i;
++        ++goink;
+         // #TEST#: R746 Rename use of i
+-        val = i;
++        val = goink;
+     }
+     REQUIRE_EQUAL(1, val);
+ 

@@ -5,17 +5,17 @@ index e73e1db..b6ad22d 100644
 @@ -518,14 +518,14 @@ void f16()
      struct X
      {
-         // #TEST#: R387 Rename x
+         // #TEST#: R384 Rename x
 -        int x = 3;
 +        int goink = 3;
-         // #TEST#: R388 Rename y
-         // #TEST#: R389 Rename j
+         // #TEST#: R385 Rename y
+         // #TEST#: R386 Rename j
          int y = j;
      };
      X v;
-     // #TEST#: R390 Rename x
+     // #TEST#: R387 Rename x
 -    require_equal(3, v.x);
 +    require_equal(3, v.goink);
-     // #TEST#: R391 Rename y
+     // #TEST#: R388 Rename y
      require_equal(j, v.y);
  }

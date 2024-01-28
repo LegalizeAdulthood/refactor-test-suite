@@ -529,17 +529,17 @@ R142 | Pass
 R143 | Pass
 R144 | Pass
 R145 | Pass
-R146 | (deprecated)
+R146 | Pass
 R147 | Pass
-R148 | Pass
-R149 | Failure (use in decltype not selected)
-R150 | Pass
-R151 | Failure (use in decltype not selected)
+R148 | Failure (use in decltype not selected)
+R149 | Pass
+R150 | Failure (use in decltype not selected)
+R151 | Failure (selects unrelated instances)
 R152 | Failure (selects unrelated instances)
-R153 | Failure (selects unrelated instances)
-R154 | Pass
+R153 | Pass
+R154 | Failure (use in decltype not selected)
 R155 | Failure (use in decltype not selected)
-R156 | Failure (use in decltype not selected)
+R156 | Pass
 R157 | Pass
 R158 | Pass
 R159 | Pass
@@ -572,7 +572,7 @@ R185 | Pass
 R186 | Pass
 R187 | Pass
 R188 | Pass
-R189 | Pass
+R189  | Pass
 R190  | Pass
 R191  | Pass
 R192  | Pass
@@ -620,13 +620,13 @@ R233  | Pass
 R234  | Pass
 R235  | Pass
 R236  | Pass
-R237  | (deprecated)
-R238  | (deprecated)
+R237  | Pass
+R238  | Pass
 R239  | Pass
 R240  | Pass
-R241  | Pass
-R242  | Pass
-R243  | Pass
+R241 | Pass
+R242 | Pass
+R243 | Pass
 R244 | Pass
 R245 | Pass
 R246 | Pass
@@ -696,14 +696,14 @@ R309 | Pass
 R310 | Pass
 R311 | Pass
 R312 | Pass
-R313 | Pass
+R313 | Failure (action not enabled in dialog)
 R314 | Pass
-R315 | Pass
-R316 | Failure (action not enabled in dialog)
-R317 | Pass
-R318 | Failure (action not enabled in dialog)
-R319 | Pass
-R320 | Failure (action not enabled in dialog)
+R315 | Failure (action not enabled in dialog)
+R316 | Pass
+R317 | Failure (action not enabled in dialog)
+R318 | Pass
+R319 | Failure (action not enabled in dialog)
+R320 | Pass
 R321 | Pass
 R322 | Failure (action not enabled in dialog)
 R323 | Pass
@@ -723,26 +723,26 @@ R336 | Pass
 R337 | Failure (action not enabled in dialog)
 R338 | Pass
 R339 | Pass
-R340 | Failure (action not enabled in dialog)
+R340 | Pass
 R341 | Pass
-R342 | Pass
+R342 | Failure (action not enabled in dialog)
 R343 | Pass
 R344 | Pass
-R345 | Failure (action not enabled in dialog)
+R345 | Pass
 R346 | Pass
-R347 | Pass
+R347 | Failure (action not enabled in dialog)
 R348 | Pass
 R349 | Pass
-R350 | Failure (action not enabled in dialog)
+R350 | Pass
 R351 | Pass
-R352 | Pass
+R352 | Failure (action not enabled in dialog)
 R353 | Pass
 R354 | Pass
-R355 | Failure (action not enabled in dialog)
+R355 | Pass
 R356 | Pass
-R357 | Pass
-R358 | Pass
-R359 | Pass
+R357 | Failure (action not enabled in dialog)
+R358 | Failure (action not enabled in dialog)
+R359 | Failure (action not enabled in dialog)
 R360 | Failure (action not enabled in dialog)
 R361 | Failure (action not enabled in dialog)
 R362 | Failure (action not enabled in dialog)
@@ -753,14 +753,14 @@ R366 | Failure (action not enabled in dialog)
 R367 | Failure (action not enabled in dialog)
 R368 | Failure (action not enabled in dialog)
 R369 | Failure (action not enabled in dialog)
-R370 | Failure (action not enabled in dialog)
-R371 | Failure (action not enabled in dialog)
-R372 | Failure (action not enabled in dialog)
-R373 | Pass
-R374 | Failure (not all instances selected)
+R370 | Pass
+R371 | Failure (not all instances selected)
+R372 | Pass
+R373 | Failure (not all instances selected)
+R374 | Failure (selects incorrect instances)
 R375 | Pass
-R376 | Failure (not all instances selected)
-R377 | Failure (selects incorrect instances)
+R376 | Pass
+R377 | Pass
 R378 | Pass
 R379 | Pass
 R380 | Pass
@@ -818,14 +818,14 @@ R431 | Pass
 R432 | Pass
 R433 | Pass
 R434 | Pass
-R435 | Pass
+R435 | Failure (not all instances selected)
 R436 | Pass
-R437 | Pass
-R438 | Failure (not all instances selected)
-R439 | Pass
-R440 | Failure (does nothing)
+R437 | Failure (does nothing)
+R438 | Pass
+R439 | Failure (not all instances selected)
+R440 | Pass
 R441 | Pass
-R442 | Failure (not all instances selected)
+R442 | Pass
 R443 | Pass
 R444 | Pass
 R445 | Pass
@@ -938,43 +938,43 @@ R551 | Pass
 R552 | Pass
 R553 | Pass
 R554 | Pass
-R555 | Pass
-R556 | Pass
-R557 | Pass
-R558 | Failure (not all instances selected)
-R559 | Failure (not available)
-R560 | Failure (not available)
-R561 | Pass
+R555 | Failure (not all instances selected)
+R556 | Failure (not available)
+R557 | Failure (not available)
+R558 | Pass
+R559 | Failure (not all instances selected)
+R560 | Failure (not all instances selected)
+R561 | Failure (not all instances selected)
 R562 | Failure (not all instances selected)
-R563 | Failure (not all instances selected)
-R564 | Failure (not all instances selected)
-R565 | Failure (not all instances selected)
-R566 | Failure (not available)
+R563 | Failure (not available)
+R564 | Pass
+R565 | Pass
+R566 | Pass
 R567 | Pass
 R568 | Pass
 R569 | Pass
-R570 | Pass
-R571 | Pass
-R572 | Pass
-R573 | Failure (not all instances selected)
-R574 | Failure (not all instances selected)
-R575 | Failure (not available)
+R570 | Failure (not all instances selected)
+R571 | Failure (not all instances selected)
+R572 | Failure (not available)
+R573 | Pass
+R574 | Pass
+R575 | Pass
 R576 | Pass
 R577 | Pass
 R578 | Pass
 R579 | Pass
-R580 | Pass
+R580 | Failure (selects wrong instances)
 R581 | Pass
-R582 | Pass
-R583 | Failure (selects wrong instances)
+R582 | Failure (selects wrong instances)
+R583 | Pass
 R584 | Pass
-R585 | Failure (selects wrong instances)
-R586 | Pass
+R585 | Pass
+R586 | Failure (selects wrong instances)
 R587 | Pass
-R588 | Pass
-R589 | Failure (selects wrong instances)
+R588 | Failure (selects wrong instances)
+R589 | Pass
 R590 | Pass
-R591 | Failure (selects wrong instances)
+R591 | Pass
 R592 | Pass
 R593 | Pass
 R594 | Pass
@@ -988,30 +988,30 @@ R601 | Pass
 R602 | Pass
 R603 | Pass
 R604 | Pass
-R605 | Pass
+R605 | Failure (usages not selected)
 R606 | Pass
 R607 | Pass
-R608 | Failure (usages not selected)
+R608 | Pass
 R609 | Pass
 R610 | Pass
-R611 | Pass
+R611 | Failure (usages not selected)
 R612 | Pass
 R613 | Pass
-R614 | Failure (usages not selected)
-R615 | Pass
+R614 | Pass
+R615 | Failure (usages not selected)
 R616 | Pass
 R617 | Pass
-R618 | Failure (usages not selected)
+R618 | Pass
 R619 | Pass
-R620 | Pass
+R620 | Failure (usages not selected)
 R621 | Pass
-R622 | Pass
+R622 | Failure (usages not selected)
 R623 | Failure (usages not selected)
-R624 | Pass
+R624 | Failure (usages not selected)
 R625 | Failure (usages not selected)
-R626 | Failure (usages not selected)
-R627 | Failure (usages not selected)
-R628 | Failure (usages not selected)
+R626 | Pass
+R627 | Pass
+R628 | Pass
 R629 | Pass
 R630 | Pass
 R631 | Pass
@@ -1187,26 +1187,26 @@ R800 | Pass
 R801 | Pass
 R802 | Pass
 R803 | Pass
-R804 | Pass
-R805 | Pass
+R804 | Failure (doesn't select all usages)
+R805 | Failure (doesn't select all usages)
 R806 | Pass
-R807 | Failure (doesn't select all usages)
+R807 | Pass
 R808 | Failure (doesn't select all usages)
 R809 | Pass
 R810 | Pass
-R811 | Failure (doesn't select all usages)
-R812 | Pass
+R811 | Pass
+R812 | Failure (doesn't select all usages)
 R813 | Pass
 R814 | Pass
 R815 | Failure (doesn't select all usages)
 R816 | Pass
-R817 | Pass
-R818 | Failure (doesn't select all usages)
+R817 | Failure (doesn't select all usages)
+R818 | Pass
 R819 | Pass
 R820 | Failure (doesn't select all usages)
 R821 | Pass
 R822 | Pass
-R823 | Failure (doesn't select all usages)
+R823 | Pass
 R824 | Pass
 R825 | Pass
 R826 | Pass
@@ -1331,10 +1331,10 @@ R944 | Pass
 R945 | Pass
 R946 | Pass
 R947 | Pass
-R948 | Pass
+R948 | Failure (doesn't select all usages)
 R949 | Pass
 R950 | Pass
-R951 | Failure (doesn't select all usages)
+R951 | Pass
 R952 | Pass
 R953 | Pass
 R954 | Pass
@@ -1367,28 +1367,28 @@ R980 | Pass
 R981 | Pass
 R982 | Pass
 R983 | Pass
-R984 | Pass
-R985 | Pass
-R986 | Pass
+R984 |
+R985 |
+R986 |
 R987 |
-R988 |
-R989 |
-R990 |
-R991 | Pass
-R992 | Pass
-R993 | Pass
-R994 | Failure (doesn't select all instances)
-R995 | Failure (not available)
-R996 | Failure (not available)
+R988 | Pass
+R989 | Pass
+R990 | Pass
+R991 | Failure (doesn't select all instances)
+R992 | Failure (not available)
+R993 | Failure (not available)
+R994 | Pass
+R995 | Pass
+R996 | Pass
 R997 | Pass
-R998 | Pass
+R998 | Failure (doesn't select all instances)
 R999 | Pass
-R1000 | Pass
-R1001 | Failure (doesn't select all instances)
-R1002 | Pass
-R1003 | Failure (doesn't select all instances)
-R1004 | Failure (not available)
-R1005 | Failure (not available)
+R1000 | Failure (doesn't select all instances)
+R1001 | Failure (not available)
+R1002 | Failure (not available)
+R1003 | Pass
+R1004 | Pass
+R1005 | Pass
 R1006 | Pass
 R1007 | Pass
 R1008 | Pass
@@ -1474,95 +1474,95 @@ R1087 | Pass
 R1088 | Pass
 R1089 | Pass
 R1090 | Pass
-R1091 | Pass
+R1091 | Failure (doesn't select all instances)
 R1092 | Pass
-R1093 | Pass
-R1094 | Failure (doesn't select all instances)
-R1095 | Pass
+R1093 | Failure (doesn't select all instances)
+R1094 | Failure (not available)
+R1095 | Failure (not available)
 R1096 | Failure (doesn't select all instances)
-R1097 | Failure (not available)
-R1098 | Failure (not available)
-R1099 | Failure (doesn't select all instances)
-R1100 | Failure (doesn't select all instances)
-R1101 | Pass 
+R1097 | Failure (doesn't select all instances)
+R1098 | Pass 
+R1099 | Pass
+R1100 | Pass
+R1101 | Pass
 R1102 | Pass
-R1103 | Pass
+R1103 | Failure (doesn't select all instances)
 R1104 | Pass
-R1105 | Pass
-R1106 | Failure (doesn't select all instances)
-R1107 | Pass
-R1108 | Failure (doesn't select all instances)
-R1109 | Failure (not available)
-R1110 | Failure (not available)
-R1111 | Pass
-R1112 | Pass
+R1105 | Failure (doesn't select all instances)
+R1106 | Failure (not available)
+R1107 | Failure (not available)
+R1108 | Pass
+R1109 | Pass
+R1110 | Pass
+R1111 | Failure (doesn't select all instances)
+R1112 | Failure (doesn't select all instances)
 R1113 | Pass
-R1114 | Failure (doesn't select all instances)
-R1115 | Failure (doesn't select all instances)
+R1114 | Pass
+R1115 | Pass
 R1116 | Pass
 R1117 | Pass
 R1118 | Pass
 R1119 | Pass
 R1120 | Pass
 R1121 | Pass
-R1122 | Pass
+R1122 | Failure (doesn't select all instances)
 R1123 | Pass
-R1124 | Pass
-R1125 | Failure (doesn't select all instances)
-R1126 | Pass
+R1124 | Failure (doesn't select all instances)
+R1125 | Failure (not available)
+R1126 | Failure (not available)
 R1127 | Failure (doesn't select all instances)
-R1128 | Failure (not available)
-R1129 | Failure (not available)
-R1130 | Failure (doesn't select all instances)
-R1131 | Failure (doesn't select all instances)
+R1128 | Failure (doesn't select all instances)
+R1129 | Pass
+R1130 | Pass
+R1131 | Pass
 R1132 | Pass
 R1133 | Pass
-R1134 | Pass
+R1134 | Failure (doesn't select all instances)
 R1135 | Pass
-R1136 | Pass
-R1137 | Failure (doesn't select all instances)
-R1138 | Pass
-R1139 | Failure (doesn't select all instances)
-R1140 | Failure (not available)
-R1141 | Failure (not available)
+R1136 | Failure (doesn't select all instances)
+R1137 | Failure (not available)
+R1138 | Failure (not available)
+R1139 | Pass
+R1140 | Pass
+R1141 | Pass
 R1142 | Pass
-R1143 | Pass
-R1144 | Pass
+R1143 | Failure (doesn't select all instances)
+R1144 | Failure (doesn't select all instances)
 R1145 | Pass
-R1146 | Failure (doesn't select all instances)
-R1147 | Failure (doesn't select all instances)
+R1146 | Pass
+R1147 | Pass
 R1148 | Pass
 R1149 | Pass
 R1150 | Pass
 R1151 | Pass
 R1152 | Pass
 R1153 | Pass
-R1154 | Pass
+R1154 | Failure (doesn't select all instances)
 R1155 | Pass
-R1156 | Pass
-R1157 | Failure (doesn't select all instances)
-R1158 | Pass
+R1156 | Failure (doesn't select all instances)
+R1157 | Failure (not available)
+R1158 | Failure (not available)
 R1159 | Failure (doesn't select all instances)
-R1160 | Failure (not available)
-R1161 | Failure (not available)
-R1162 | Failure (doesn't select all instances)
-R1163 | Failure (doesn't select all instances)
+R1160 | Failure (doesn't select all instances)
+R1161 | Pass
+R1162 | Pass
+R1163 | Pass
 R1164 | Pass
 R1165 | Pass
-R1166 | Pass
+R1166 | Failure (doesn't select all instances)
 R1167 | Pass
-R1168 | Pass
-R1169 | Failure (doesn't select all instances)
-R1170 | Pass
-R1171 | Failure (doesn't select all instances)
-R1172 | Failure (not available)
-R1173 | Failure (not available)
+R1168 | Failure (doesn't select all instances)
+R1169 | Failure (not available)
+R1170 | Failure (not available)
+R1171 | Pass
+R1172 | Pass
+R1173 | Pass
 R1174 | Pass
-R1175 | Pass
-R1176 | Pass
+R1175 | Failure (doesn't select all instances)
+R1176 | Failure (doesn't select all instances)
 R1177 | Pass
-R1178 | Failure (doesn't select all instances)
-R1179 | Failure (doesn't select all instances)
+R1178 | Pass
+R1179 | Pass
 R1180 | Pass
 R1181 | Pass
 R1182 | Pass
@@ -1570,33 +1570,33 @@ R1183 | Pass
 R1184 | Pass
 R1185 | Pass
 R1186 | Pass
-R1187 | Pass
+R1187 | Failure (doesn't select all instances)
 R1188 | Pass
-R1189 | Pass
-R1190 | Failure (doesn't select all instances)
-R1191 | Pass
+R1189 | Failure (doesn't select all instances)
+R1190 | Failure (not available)
+R1191 | Failure (not available)
 R1192 | Failure (doesn't select all instances)
-R1193 | Failure (not available)
-R1194 | Failure (not available)
-R1195 | Failure (doesn't select all instances)
-R1196 | Failure (doesn't select all instances)
+R1193 | Failure (doesn't select all instances)
+R1194 | Pass
+R1195 | Pass
+R1196 | Pass
 R1197 | Pass
 R1198 | Pass
-R1199 | Pass
+R1199 | Failure (doesn't select all instances)
 R1200 | Pass
-R1201 | Pass
-R1202 | Failure (doesn't select all instances)
-R1203 | Pass
-R1204 | Failure (doesn't select all instances)
-R1205 | Failure (not available)
-R1206 | Failure (not available)
+R1201 | Failure (doesn't select all instances)
+R1202 | Failure (not available)
+R1203 | Failure (not available)
+R1204 | Pass
+R1205 | Pass
+R1206 | Pass
 R1207 | Pass
 R1208 | Pass
-R1209 | Pass
-R1210 | Pass
+R1209 | Failure (doesn't select all instances)
+R1210 | Failure (doesn't select all instances)
 R1211 | Pass
-R1212 | Failure (doesn't select all instances)
-R1213 | Failure (doesn't select all instances)
+R1212 | Pass
+R1213 | Pass
 R1214 | Pass
 R1215 | Pass
 R1216 | Pass
@@ -1727,89 +1727,89 @@ R1340 | Pass
 R1341 | Pass
 R1342 | Pass
 R1343 | Pass
-R1344 | Pass
+R1344 | Failure (doesn't select all instances)
 R1345 | Pass
-R1346 | Pass
-R1347 | Failure (doesn't select all instances)
-R1348 | Pass
+R1346 | Failure (doesn't select all instances)
+R1347 | Failure (not available)
+R1348 | Failure (not available)
 R1349 | Failure (doesn't select all instances)
-R1350 | Failure (not available)
-R1351 | Failure (not available)
-R1352 | Failure (doesn't select all instances)
-R1353 | Failure (doesn't select all instances)
+R1350 | Failure (doesn't select all instances)
+R1351 | Pass
+R1352 | Pass
+R1353 | Pass
 R1354 | Pass
 R1355 | Pass
 R1356 | Pass
 R1357 | Pass
-R1358 | Pass
+R1358 | Failure (doesn't select all instances)
 R1359 | Pass
-R1360 | Pass
-R1361 | Failure (doesn't select all instances)
-R1362 | Pass
+R1360 | Failure (doesn't select all instances)
+R1361 | Failure (not available)
+R1362 | Failure (not available)
 R1363 | Failure (doesn't select all instances)
-R1364 | Failure (not available)
-R1365 | Failure (not available)
-R1366 | Failure (doesn't select all instances)
-R1367 | Failure (doesn't select all instances)
+R1364 | Failure (doesn't select all instances)
+R1365 | Pass
+R1366 | Pass
+R1367 | Pass
 R1368 | Pass
 R1369 | Pass
 R1370 | Pass
 R1371 | Pass
-R1372 | Pass
+R1372 | Failure (doesn't select all instances)
 R1373 | Pass
-R1374 | Pass
-R1375 | Failure (doesn't select all instances)
-R1376 | Pass
+R1374 | Failure (doesn't select all instances)
+R1375 | Failure (not available)
+R1376 | Failure (not available)
 R1377 | Failure (doesn't select all instances)
-R1378 | Failure (not available)
-R1379 | Failure (not available)
-R1380 | Failure (doesn't select all instances)
-R1381 | Failure (doesn't select all instances)
+R1378 | Failure (doesn't select all instances)
+R1379 | Pass
+R1380 | Pass
+R1381 | Pass
 R1382 | Pass
 R1383 | Pass
 R1384 | Pass
 R1385 | Pass
 R1386 | Pass
-R1387 | Pass
+R1387 | Failure (doesn't select all instances)
 R1388 | Pass
-R1389 | Pass
-R1390 | Failure (doesn't select all instances)
-R1391 | Pass
+R1389 | Failure (doesn't select all instances)
+R1390 | Failure (not available)
+R1391 | Failure (not available)
 R1392 | Failure (doesn't select all instances)
-R1393 | Failure (not available)
-R1394 | Failure (not available)
-R1395 | Failure (doesn't select all instances)
-R1396 | Failure (doesn't select all instances)
+R1393 | Failure (doesn't select all instances)
+R1394 | Pass
+R1395 | Pass
+R1396 | Pass
 R1397 | Pass
 R1398 | Pass
 R1399 | Pass
 R1400 | Pass
 R1401 | Pass
-R1402 | Pass
+R1402 | Failure (doesn't select all instances)
 R1403 | Pass
-R1404 | Pass
-R1405 | Failure (doesn't select all instances)
-R1406 | Pass
+R1404 | Failure (doesn't select all instances)
+R1405 | Failure (not available)
+R1406 | Failure (not available)
 R1407 | Failure (doesn't select all instances)
-R1408 | Failure (not available)
-R1409 | Failure (not available)
-R1410 | Failure (doesn't select all instances)
-R1411 | Failure (doesn't select all instances)
+R1408 | Failure (doesn't select all instances)
+R1409 | Pass
+R1410 | Pass
+R1411 | Pass
 R1412 | Pass
 R1413 | Pass
 R1414 | Pass
 R1415 | Pass
 R1416 | Pass
-R1417 | Pass
-R1418 | Pass
-R1419 | Pass
-R1420 | Failure (doesn't select all instances)
-R1421 |
+R1417 | Failure (doesn't select all instances)
+R1418 |
+R1419 | Failure (doesn't select all instances)
+R1420 | Failure (not available)
+R1421 | Failure (not available)
 R1422 | Failure (doesn't select all instances)
-R1423 | Failure (not available)
-R1424 | Failure (not available)
-R1425 | Failure (doesn't select all instances)
-R1426 | Failure (doesn't select all instances)
+R1423 | Failure (doesn't select all instances)
+R1424 |
+R1425 |
+R1426 |
 R1427 |
 R1428 |
 R1429 |
@@ -1960,9 +1960,6 @@ R1573 |
 R1574 |
 R1575 |
 R1576 |
-R1577 |
-R1578 |
-R1579 |
 
 ## Reorder Parameters
 Case | Result

@@ -5,43 +5,43 @@ index e73e1db..7609fcd 100644
 @@ -754,19 +754,19 @@ void f26()
      require_equal(100, [](int x) { return x * 10; }(x));
  
-     // #TEST#: R447 Rename f
+     // #TEST#: R444 Rename f
 -    double f = 20.5;
 +    double goink = 20.5;
-     // #TEST#: R448 Rename f in lambda capture list
-     // #TEST#: R449 Rename x in lambda parameter list
-     // #TEST#: R450 Rename x in lambda body
-     // #TEST#: R451 Rename f in lambda body
-     // #TEST#: R452 Rename x in lambda argument list
+     // #TEST#: R445 Rename f in lambda capture list
+     // #TEST#: R446 Rename x in lambda parameter list
+     // #TEST#: R447 Rename x in lambda body
+     // #TEST#: R448 Rename f in lambda body
+     // #TEST#: R449 Rename x in lambda argument list
 -    require_equal(205.0, [f](int x) { return x * f; }(x));
 +    require_equal(205.0, [goink](int x) { return x * goink; }(x));
  
-     // #TEST#: R453 Rename x in lambda parameter list
-     // #TEST#: R454 Rename x in lambda body
-     // #TEST#: R455 Rename f in lambda body
-     // #TEST#: R456 Rename x in lambda argument list
+     // #TEST#: R450 Rename x in lambda parameter list
+     // #TEST#: R451 Rename x in lambda body
+     // #TEST#: R452 Rename f in lambda body
+     // #TEST#: R453 Rename x in lambda argument list
 -    require_equal(205.0, [=](int x) { return x * f; }(x));
 +    require_equal(205.0, [=](int x) { return x * goink; }(x));
  
-     // #TEST#: R457 Rename x in lambda capture list
-     // #TEST#: R458 Rename x in lambda body
+     // #TEST#: R454 Rename x in lambda capture list
+     // #TEST#: R455 Rename x in lambda body
 @@ -774,15 +774,15 @@ void f26()
      require_equal(1, x);
  
-     // #TEST#: R459 Rename f in lambda body
+     // #TEST#: R456 Rename f in lambda body
 -    require_equal(205.0, [&] { return f *= 10.0; }());
 -    require_equal(205.0, f);
 +    require_equal(205.0, [&] { return goink *= 10.0; }());
 +    require_equal(205.0, goink);
  
-     // #TEST#: R460 Rename l
-     // #TEST#: R461 Rename f in lambda body
+     // #TEST#: R457 Rename l
+     // #TEST#: R458 Rename f in lambda body
 -    const auto l = [&] { return f /= 10.0; };
 +    const auto l = [&] { return goink /= 10.0; };
-     // #TEST#: R462 Rename l
+     // #TEST#: R459 Rename l
      require_equal(20.5, l());
 -    require_equal(20.5, f);
 +    require_equal(20.5, goink);
  
-     // #TEST#: R463 Rename s
+     // #TEST#: R460 Rename s
      const std::string s{"hello world!"};

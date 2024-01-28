@@ -35,37 +35,37 @@ index d1c1283..d6b391c 100644
      // #TEST#: R30 Rename variable result
      return result;
 @@ -681,21 +681,21 @@ void TestRename()
-     // #TEST#: R211 Rename class Operations
-     // #TEST#: R212 Rename variable member
-     // #TEST#: R213 Rename function GetOperation
+     // #TEST#: R210 Rename class Operations
+     // #TEST#: R211 Rename variable member
+     // #TEST#: R212 Rename function GetOperation
 -    int (Operations::*member)() = GetOperation(true);
 +    int (Goink::*member)() = GetOperation(true);
-     // #TEST#: R214 Rename variable member
-     // #TEST#: R215 Rename class Operations
-     // #TEST#: R216 Rename method Operation2
+     // #TEST#: R213 Rename variable member
+     // #TEST#: R214 Rename class Operations
+     // #TEST#: R215 Rename method Operation2
 -    member = &Operations::Operation2;
 +    member = &Goink::Operation2;
  
-     // #TEST#: R217 Rename class Operations
-     // #TEST#: R218 Rename variable ops
+     // #TEST#: R216 Rename class Operations
+     // #TEST#: R217 Rename variable ops
 -    Operations ops;
 +    Goink ops;
-     // #TEST#: R219 Rename variable ops
-     // #TEST#: R220 Rename variable member
+     // #TEST#: R218 Rename variable ops
+     // #TEST#: R219 Rename variable member
      (ops.*member)();
  
-     // #TEST#: R221 Rename variable ops2
+     // #TEST#: R220 Rename variable ops2
 -    Operations *ops2 = new Operations();
 +    Goink *ops2 = new Goink();
-     // #TEST#: R222 Rename variable ops2
-     // #TEST#: R223 Rename variable member
+     // #TEST#: R221 Rename variable ops2
+     // #TEST#: R222 Rename variable member
      (ops2->*member)();
 @@ -703,7 +703,7 @@ void TestRename()
      delete ops2;
  
-     // #TEST#: R225 Rename variable ops3
+     // #TEST#: R224 Rename variable ops3
 -    Operations &ops3 = ops;
 +    Goink &ops3 = ops;
-     // #TEST#: R226 Rename variable ops3
-     // #TEST#: R227 Rename variable member
+     // #TEST#: R225 Rename variable ops3
+     // #TEST#: R226 Rename variable member
      ((&ops3)->*member)();

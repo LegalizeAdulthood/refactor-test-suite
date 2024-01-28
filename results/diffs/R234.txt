@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..74c065d 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -736,9 +736,9 @@ restart:
+         // #TEST#: R233 Rename variable gcnew
+         int gcnew = event + 1;
+         // #TEST#: R234 Rename variable interface
+-        int interface = gcnew + 1;
++        int goink = gcnew + 1;
+         // #TEST#: R235 Rename variable internal
+-        int internal = interface + 1;
++        int internal = goink + 1;
+ 
+ 
+         // #TEST#: R236 Rename variable override

@@ -1,1 +1,18 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
+index 024d6a2..800c318 100644
+--- a/RefactorTest/RenameCpp20Constraints.cpp
++++ b/RefactorTest/RenameCpp20Constraints.cpp
+@@ -46,11 +46,11 @@ inline std::ostream &operator<<(std::ostream &str, const Rope &value)
+ // clang-format off
+ // Simple concept with single template parameter
+ // #TEST#: R988 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R989 Rename concept Squareable
+ // #TEST#: R990 Rename use of T
+ // #TEST#: R991 Rename parameter lhs
+-concept Squareable = requires(T lhs)
++concept Squareable = requires(Goink lhs)
+ {
+     // #TEST#: R992 Rename first use of lhs
+     // #TEST#: R993 Rename second use of lhs

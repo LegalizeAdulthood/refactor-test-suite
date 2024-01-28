@@ -31,15 +31,15 @@ index d1c1283..a756ebe 100644
      void Operation()
 @@ -616,11 +616,11 @@ void TestRename()
  
-     // #TEST#: R191 Rename MyClass
-     // #TEST#: R192 =R5 Rename Rename1 from scope qualifier
+     // #TEST#: R190 Rename MyClass
+     // #TEST#: R191 =R5 Rename Rename1 from scope qualifier
 -    Rename1::MyClass myClass;
 +    Goink::MyClass myClass;
      myClass.Operation();
  
-     // #TEST#: R193 Rename this variable
+     // #TEST#: R192 Rename this variable
 -    Rename1 test;
 +    Goink test;
-     // #TEST#: R194 Rename this method
+     // #TEST#: R193 Rename this method
      test.Operation();
-     // #TEST#: R195 Rename this function
+     // #TEST#: R194 Rename this function

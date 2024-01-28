@@ -3,12 +3,12 @@ index d7d8359..71191c3 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -479,9 +479,9 @@ void f9()
-     // #TEST#: R824 Rename local variable c2
-     // #TEST#: R825 Rename first use of vals
-     // #TEST#: R826 Rename second use of vals
+     // #TEST#: R821 Rename local variable c2
+     // #TEST#: R822 Rename first use of vals
+     // #TEST#: R823 Rename second use of vals
 -    const Container c2{vals.begin(), vals.end()};
 +    const Container goink{vals.begin(), vals.end()};
-     // #TEST#: R827 Rename use of c2
+     // #TEST#: R824 Rename use of c2
 -    REQUIRE_EQUAL(2, c2.m_how);
 +    REQUIRE_EQUAL(2, goink.m_how);
  }

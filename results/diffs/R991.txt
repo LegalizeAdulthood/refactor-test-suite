@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..800c318 100644
+index 024d6a2..ba70fe1 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -46,11 +46,11 @@ inline std::ostream &operator<<(std::ostream &str, const Rope &value)
- // clang-format off
- // Simple concept with single template parameter
- // #TEST#: R991 Rename template parameter T
--template <typename T>
-+template <typename Goink>
- // #TEST#: R992 Rename concept Squareable
- // #TEST#: R993 Rename use of T
- // #TEST#: R994 Rename parameter lhs
+@@ -50,11 +50,11 @@ template <typename T>
+ // #TEST#: R989 Rename concept Squareable
+ // #TEST#: R990 Rename use of T
+ // #TEST#: R991 Rename parameter lhs
 -concept Squareable = requires(T lhs)
-+concept Squareable = requires(Goink lhs)
++concept Squareable = requires(T goink)
  {
-     // #TEST#: R995 Rename first use of lhs
-     // #TEST#: R996 Rename second use of lhs
+     // #TEST#: R992 Rename first use of lhs
+     // #TEST#: R993 Rename second use of lhs
+-    lhs * lhs;
++    goink * goink;
+ };
+ 
+ // Simple concept with multiple template parameters

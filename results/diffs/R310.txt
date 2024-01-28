@@ -1,18 +1,16 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..554cd84 100644
+index 96b65ff..4e8bd43 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -221,11 +221,11 @@ public:
-     // #TEST#: R308 Rename X
-     // #TEST#: R309 Rename Args
-     // #TEST#: R310 Rename args
--    X(Args... args)
-+    X(Args... goink)
-     {
-         std::ostringstream result;
-         // #TEST#: R311 Rename args
--        f10_aux(result, args...);
-+        f10_aux(result, goink...);
-         m_str = result.str();
-     }
+@@ -249,9 +249,9 @@ void f11()
+ }
  
+ // #TEST#: R310 Rename Types
+-template <typename... Types>
++template <typename... Goink>
+ // #TEST#: R311 Rename Types
+-using Tuple = std::tuple<Types...>;
++using Tuple = std::tuple<Goink...>;
+ 
+ void f12()
+ {

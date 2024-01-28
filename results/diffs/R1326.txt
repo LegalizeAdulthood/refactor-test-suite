@@ -1,27 +1,27 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 977575b..69c0c5f 100644
+index 024d6a2..9c41078 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -780,18 +780,18 @@ public:
- };
- 
- // #TEST#: R1324 Rename template parameter T
--template <typename T>
-+template <typename Goink>
- // #TEST#: R1325 Rename first use of T
- // #TEST#: R1326 Rename second use of T
- // #TEST#: R1327 Rename concept Squareable
- // #TEST#: R1328 Rename third use of T
--    requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
-+    requires(std::is_integral_v<Goink> || std::is_floating_point_v<Goink>) && Squareable<Goink>
- // #TEST#: R1329 Rename class SqrStruct4
- struct SqrStruct4
+@@ -776,7 +776,7 @@ template <typename T>
+ // #TEST#: R1325 Rename use of T
+     requires(std::is_integral_v<T> || std::is_floating_point_v<T>) && Squareable<T>
+ // #TEST#: R1326 Rename class SqrStruct4
+-struct SqrStruct4
++struct Goink
  {
-     // #TEST#: R1330 Rename first use of T
-     // #TEST#: R1331 Rename second of T
--    T operator()(T value) const
-+    Goink operator()(Goink value) const
-     {
-         return value * value;
+     // #TEST#: R1327 Rename first use of T
+     // #TEST#: R1328 Rename second of T
+@@ -1241,10 +1241,10 @@ void f2()
      }
+     {
+         // #TEST#: R1543 Rename SqrStruct4
+-        SqrStruct4<int> s1;
++        Goink<int> s1;
+         REQUIRE_EQUAL(4, s1(2));
+         // #TEST#: R1544 Rename SqrStruct4
+-        SqrStruct4<double> s2;
++        Goink<double> s2;
+         const double d = s2(2.0);
+         REQUIRE_EQUAL(4.0, d);
+         // Rope is not std::is_arithmetic
 

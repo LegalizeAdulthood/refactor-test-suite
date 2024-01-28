@@ -4,23 +4,23 @@ index d1c1283..7bf18e1 100644
 +++ b/RefactorTest/Rename.cpp
 @@ -689,10 +689,10 @@ void TestRename()
  
-     // #TEST#: R217 Rename class Operations
-     // #TEST#: R218 Rename variable ops
+     // #TEST#: R216 Rename class Operations
+     // #TEST#: R217 Rename variable ops
 -    Operations ops;
 +    Operations goink;
-     // #TEST#: R219 Rename variable ops
-     // #TEST#: R220 Rename variable member
+     // #TEST#: R218 Rename variable ops
+     // #TEST#: R219 Rename variable member
 -    (ops.*member)();
 +    (goink.*member)();
  
-     // #TEST#: R221 Rename variable ops2
+     // #TEST#: R220 Rename variable ops2
      Operations *ops2 = new Operations();
 @@ -703,7 +703,7 @@ void TestRename()
      delete ops2;
  
-     // #TEST#: R225 Rename variable ops3
+     // #TEST#: R224 Rename variable ops3
 -    Operations &ops3 = ops;
 +    Operations &ops3 = goink;
-     // #TEST#: R226 Rename variable ops3
-     // #TEST#: R227 Rename variable member
+     // #TEST#: R225 Rename variable ops3
+     // #TEST#: R226 Rename variable member
      ((&ops3)->*member)();

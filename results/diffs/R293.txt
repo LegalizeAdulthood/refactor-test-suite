@@ -1,44 +1,19 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 96b65ff..1dec1e7 100644
+index 96b65ff..0c1d3d4 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -141,31 +141,31 @@ void f7()
- void f8()
+@@ -184,12 +184,12 @@ void f10_aux(std::ostream &stream, T head)
+ 
+ // #TEST#: R293 Rename T
+ // #TEST#: R294 Rename Args
+-template <typename T, typename... Args>
++template <typename Goink, typename... Args>
+ // #TEST#: R295 Rename T
+ // #TEST#: R296 Rename head
+ // #TEST#: R297 Rename Args
+ // #TEST#: R298 Rename tail
+-void f10_aux(std::ostream &stream, T head, Args... tail)
++void f10_aux(std::ostream &stream, Goink head, Args... tail)
  {
-     // #TEST#: R282 Rename X
--    struct X
-+    struct Goink
-     {
-         // #TEST#: R283 Rename X via deleted c'tor
--        X() = delete;
-+        Goink() = delete;
-         // #TEST#: R284 Rename X via deleted copy c'tor
-         // #TEST#: R285 Rename X via deleted copy c'tor argument
--        X(const X &rhs) = delete;
-+        Goink(const Goink &rhs) = delete;
-         // #TEST#: R286 Rename X via deleted move c'tor
-         // #TEST#: R287 Rename X via deleted move c'tor argument
--        X(X &&rhs) = delete;
-+        Goink(Goink &&rhs) = delete;
-         // #TEST#: R288 Rename X via deleted d'tor
--        ~X() = delete;
-+        ~Goink() = delete;
-         // #TEST#: R289 Rename X via deleted copy assignment return type
-         // #TEST#: R290 Rename X via deleted copy assignment argument
--        X &operator=(const X &rhs) = delete;
-+        Goink &operator=(const Goink &rhs) = delete;
-         // #TEST#: R291 Rename X via deleted move assignment return type
-         // #TEST#: R292 Rename X via deleted move assignment argument
--        X &operator=(X &&rhs) = delete;
-+        Goink &operator=(Goink &&rhs) = delete;
- 
-         int x = 1;
-         int y = 2;
-         std::string s = "foo";
-     };
-     // #TEST#: R293 Rename X
--    X *x = nullptr;
-+    Goink *x = nullptr;
- }
- 
- void f9()
+     // #TEST#: R299 Rename head
+     stream << head << '\n';

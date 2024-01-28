@@ -1,13 +1,19 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d55964a..044d0a2 100644
+index d55964a..fdd1fe0 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -49,7 +49,7 @@ public:
-         // #TEST#: R658 Rename parameter val
-         // #TEST#: R659 Rename use of val
-         // #TEST#: R660 Rename use of m_i
+@@ -49,12 +49,12 @@ public:
+         // #TEST#: R655 Rename parameter val
+         // #TEST#: R656 Rename use of val
+         // #TEST#: R657 Rename use of m_i
 -        auto fn = [*this](int &val) { val = 3 + m_i; };
-+        auto fn = [*this](int &goink) { goink = 3 + m_i; };
-         // #TEST#: R661 Rename use of m_i
++        auto goink = [*this](int &val) { val = 3 + m_i; };
+         // #TEST#: R658 Rename use of m_i
          m_i = 1;
-         // #TEST#: R662 Rename use of fn
+         // #TEST#: R659 Rename use of fn
+         // #TEST#: R660 Rename use of m_i
+-        fn(m_i);
++        goink(m_i);
+         // #TEST#: R661 Rename use of m_i
+         return m_i;
+     }

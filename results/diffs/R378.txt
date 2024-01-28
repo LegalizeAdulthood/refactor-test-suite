@@ -5,18 +5,18 @@ index e73e1db..ad7fba2 100644
 @@ -487,7 +487,7 @@ void f14()
  void f15()
  {
-     // #TEST#: R378 Rename X
+     // #TEST#: R375 Rename X
 -    enum class X : char
 +    enum class Goink : char
      {
-         // #TEST#: R379 Rename One
+         // #TEST#: R376 Rename One
          One,
 @@ -505,7 +505,7 @@ void f15()
-     // #TEST#: R382 Rename x
-     // #TEST#: R383 Rename X on rhs
-     // #TEST#: R384 Rename One
+     // #TEST#: R379 Rename x
+     // #TEST#: R380 Rename X on rhs
+     // #TEST#: R381 Rename One
 -    X x = X::One;
 +    Goink x = Goink::One;
-     // #TEST#: R385 Rename One
+     // #TEST#: R382 Rename One
      Y y = Y::One;
      require_equal(static_cast<int>(x), static_cast<int>(y));

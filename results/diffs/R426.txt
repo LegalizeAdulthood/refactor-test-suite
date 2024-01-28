@@ -5,21 +5,21 @@ index e73e1db..dccd414 100644
 @@ -674,18 +674,18 @@ void f22()
  }
  
- // #TEST#: R424 Rename Types
+ // #TEST#: R421 Rename Types
 -template <typename... Types>
 +template <typename... Goink>
- // #TEST#: R425 Rename Types
+ // #TEST#: R422 Rename Types
 -struct alignas(Types...) Aligned
 +struct alignas(Goink...) Aligned
  {
-     // #TEST#: R426 Rename Types
-     // #TEST#: R427 Rename args in constructor parameter list
-     // #TEST#: R428 Rename args in initializer list
+     // #TEST#: R423 Rename Types
+     // #TEST#: R424 Rename args in constructor parameter list
+     // #TEST#: R425 Rename args in initializer list
 -    Aligned(Types... args) : t(args...)
 +    Aligned(Goink... args) : t(args...)
      {
      }
-     // #TEST#: R429 Rename Types
+     // #TEST#: R426 Rename Types
 -    std::tuple<Types...> t;
 +    std::tuple<Goink...> t;
  };

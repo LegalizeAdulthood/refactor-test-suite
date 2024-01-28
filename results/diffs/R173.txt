@@ -3,23 +3,23 @@ index d1c1283..8d22eba 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
 @@ -530,7 +530,7 @@ struct F6
-     // #TEST#: R163 Rename x parameter
-     // #TEST#: R164 Rename U parameter y type
-     // #TEST#: R165 Rename y parameter
+     // #TEST#: R162 Rename x parameter
+     // #TEST#: R163 Rename U parameter y type
+     // #TEST#: R164 Rename y parameter
 -    decltype(T() + U()) g(T x, U y)
 +    decltype(T() + U()) goink(T x, U y)
      {
-         // #TEST#: R166 Rename count
+         // #TEST#: R165 Rename count
          ++count;
 @@ -554,9 +554,9 @@ void f6()
      require_equal(2, x.count);
  
-     // #TEST#: R173 Rename method g
+     // #TEST#: R172 Rename method g
 -    require_equal(3.0, x.g(1.0, 2));
 +    require_equal(3.0, x.goink(1.0, 2));
-     // #TEST#: R174 Rename method g
+     // #TEST#: R173 Rename method g
 -    require_equal(std::string{"foobar"}, x.g("foo", std::string{"bar"}));
 +    require_equal(std::string{"foobar"}, x.goink("foo", std::string{"bar"}));
-     // #TEST#: R175 Rename count
+     // #TEST#: R174 Rename count
      require_equal(4, x.count);
  }

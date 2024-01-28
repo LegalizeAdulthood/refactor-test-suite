@@ -3,18 +3,18 @@ index 024d6a2..ac23fa1 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -253,7 +253,7 @@ template <typename T, typename U = T>
- // #TEST#: R1108 Rename parameter rhs
- // #TEST#: R1109 Rename use of lhs
- // #TEST#: R1110 Rename use of rhs
+ // #TEST#: R1105 Rename parameter rhs
+ // #TEST#: R1106 Rename use of lhs
+ // #TEST#: R1107 Rename use of rhs
 -auto product2(T lhs, U rhs) -> decltype(lhs * rhs)
 +auto product2(T goink, U rhs) -> decltype(goink * rhs)
-     // #TEST#: R1111 Rename concept Multiplicable
-     // #TEST#: R1112 Rename use of T
-     // #TEST#: R1113 Rename use of U
+     // #TEST#: R1108 Rename concept Multiplicable
+     // #TEST#: R1109 Rename use of T
+     // #TEST#: R1110 Rename use of U
 @@ -261,7 +261,7 @@ auto product2(T lhs, U rhs) -> decltype(lhs * rhs)
  {
-     // #TEST#: R1114 Rename use of lhs
-     // #TEST#: R1115 Rename use of rhs
+     // #TEST#: R1111 Rename use of lhs
+     // #TEST#: R1112 Rename use of rhs
 -    return lhs * rhs;
 +    return goink * rhs;
  }

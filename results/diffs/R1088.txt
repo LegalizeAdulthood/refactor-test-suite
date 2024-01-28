@@ -1,27 +1,27 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..e3f6c02 100644
+index 024d6a2..9f934ee 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -222,11 +222,11 @@ T square8(T value)
- // #TEST#: R1086 Rename template parameter T
- // #TEST#: R1087 Rename template parameter U
- // #TEST#: R1088 Rename use of T
+ // #TEST#: R1083 Rename template parameter T
+ // #TEST#: R1084 Rename template parameter U
+ // #TEST#: R1085 Rename use of T
 -template <typename T, typename U = T>
-+template <typename Goink, typename U = Goink>
- // #TEST#: R1089 Rename concept Multiplicable
- // #TEST#: R1090 Rename use of T
- // #TEST#: R1091 Rename use of U
++template <typename T, typename Goink = T>
+ // #TEST#: R1086 Rename concept Multiplicable
+ // #TEST#: R1087 Rename use of T
+ // #TEST#: R1088 Rename use of U
 -    requires Multiplicable<T, U>
-+    requires Multiplicable<Goink, U>
- // #TEST#: R1092 Rename function product1
- // #TEST#: R1093 Rename use of T
- // #TEST#: R1094 Rename parameter lhs
++    requires Multiplicable<T, Goink>
+ // #TEST#: R1089 Rename function product1
+ // #TEST#: R1090 Rename use of T
+ // #TEST#: R1091 Rename parameter lhs
 @@ -234,7 +234,7 @@ template <typename T, typename U = T>
- // #TEST#: R1096 Rename parameter rhs
- // #TEST#: R1097 Rename use of lhs
- // #TEST#: R1098 Rename use of rhs
+ // #TEST#: R1093 Rename parameter rhs
+ // #TEST#: R1094 Rename use of lhs
+ // #TEST#: R1095 Rename use of rhs
 -auto product1(T lhs, U rhs) -> decltype(lhs * rhs)
-+auto product1(Goink lhs, U rhs) -> decltype(lhs * rhs)
++auto product1(T lhs, Goink rhs) -> decltype(lhs * rhs)
  {
-     // #TEST#: R1099 Rename use of lhs
-     // #TEST#: R1100 Rename use of rhs
+     // #TEST#: R1096 Rename use of lhs
+     // #TEST#: R1097 Rename use of rhs

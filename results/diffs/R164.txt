@@ -1,22 +1,20 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..23de926 100644
+index d1c1283..6eeaf34 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -522,7 +522,7 @@ struct F6
- 
-     // #TEST#: R157 Rename T
-     // #TEST#: R158 Rename U
--    template <typename T, typename U>
-+    template <typename T, typename Goink>
-     // #TEST#: R159 Rename g
-     // #TEST#: R160 Rename T in decltype expression
-     // #TEST#: R161 Rename U in decltype expression
-@@ -530,7 +530,7 @@ struct F6
-     // #TEST#: R163 Rename x parameter
-     // #TEST#: R164 Rename U parameter y type
-     // #TEST#: R165 Rename y parameter
+@@ -530,13 +530,13 @@ struct F6
+     // #TEST#: R162 Rename x parameter
+     // #TEST#: R163 Rename U parameter y type
+     // #TEST#: R164 Rename y parameter
 -    decltype(T() + U()) g(T x, U y)
-+    decltype(T() + Goink()) g(T x, Goink y)
++    decltype(T() + U()) g(T x, U goink)
      {
-         // #TEST#: R166 Rename count
+         // #TEST#: R165 Rename count
          ++count;
+         // #TEST#: R166 Rename x
+         // #TEST#: R167 Rename y
+-        return x + y;
++        return x + goink;
+     }
+ 
+     // #TEST#: R168 Rename count

@@ -5,11 +5,11 @@ index d1c1283..b15bbc6 100644
 @@ -703,10 +703,10 @@ void TestRename()
      delete ops2;
  
-     // #TEST#: R225 Rename variable ops3
+     // #TEST#: R224 Rename variable ops3
 -    Operations &ops3 = ops;
 +    Operations &goink = ops;
-     // #TEST#: R226 Rename variable ops3
-     // #TEST#: R227 Rename variable member
+     // #TEST#: R225 Rename variable ops3
+     // #TEST#: R226 Rename variable member
 -    ((&ops3)->*member)();
 +    ((&goink)->*member)();
  

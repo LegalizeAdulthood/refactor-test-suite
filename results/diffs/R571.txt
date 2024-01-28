@@ -1,29 +1,24 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..d0bd675 100644
+index e73e1db..0197c86 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1102,7 +1102,7 @@ void f39()
- #undef F39_AUX
- 
- // #TEST#: R567 Rename X40
--struct X40
-+struct Goink
- {
-     // #TEST#: R568 Rename x
-     static int x;
-@@ -1110,13 +1110,13 @@ struct X40
- 
- // #TEST#: R569 Rename X40
- // #TEST#: R570 Rename x
--int X40::x = 0;
-+int Goink::x = 0;
- 
- void f40()
- {
-     // #TEST#: R571 Rename X40
-     // #TEST#: R572 Rename x
--    require_equal(1, [] { return X40::x + 1; }());
-+    require_equal(1, [] { return Goink::x + 1; }());
+@@ -1120,16 +1120,16 @@ void f40()
  }
  
- // #TEST#: R573 Rename F41_AUX
+ // #TEST#: R570 Rename F41_AUX
+-#define F41_AUX 15
++#define GOINK 15
+ 
+ void f41()
+ {
+     // #TEST#: R571 Rename F41_AUX
+-    require_equal(15, [] { return F41_AUX; }());
++    require_equal(15, [] { return GOINK; }());
+ }
+ 
+ // #TEST#: R572 Rename F41_AUX
+-#undef F41_AUX
++#undef GOINK
+ 
+ // #TEST#: R573 Rename f42_aux
+ void f42_aux(std::ostream &stream, int x)

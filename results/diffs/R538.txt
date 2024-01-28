@@ -1,31 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..f9af8f4 100644
+index e73e1db..f48fe5e 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -980,22 +980,22 @@ void f33()
+@@ -1009,7 +1009,7 @@ struct X35
+     }
  
- // #TEST#: R535 Rename f34_aux
- // #TEST#: R536 Rename j
--constexpr int f34_aux(int j)
-+constexpr int goink(int j)
- {
-     return ii + j;
+     // #TEST#: R538 Rename sz
+-    static constexpr int sz = 4;
++    static constexpr int goink = 4;
+ };
+ 
+ void f35()
+@@ -1019,7 +1019,7 @@ void f35()
+     constexpr std::size_t size = x.size();
+     require_equal(std::size_t{1}, size);
+     // #TEST#: R540 Rename sz static member
+-    constexpr int s = X35::sz;
++    constexpr int s = X35::goink;
+     require_equal(4, s);
  }
  
- // #TEST#: R537 Rename f34_aux
--static_assert(f34_aux(3) == 18, "f34_aux(3) == 18");
-+static_assert(goink(3) == 18, "f34_aux(3) == 18");
- 
- void f34()
- {
-     // #TEST#: R538 Rename f34_aux
--    constexpr int x = f34_aux(3);
-+    constexpr int x = goink(3);
-     require_equal(18, x);
-     int j = 15;
-     // #TEST#: R539 Rename f34_aux
--    require_equal(30, f34_aux(j));
-+    require_equal(30, goink(j));
-     j += 15;
-     require_equal(30, j);
- }

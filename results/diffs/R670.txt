@@ -1,20 +1,26 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d55964a..de29f10 100644
+index 0c2172a..b1c68bd 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -71,13 +71,13 @@ private:
- 
- // #TEST#: R666 Rename template parameter T
- // #TEST#: R667 Rename template parameter N
--template <typename T, size_t N>
-+template <typename T, size_t Goink>
- // #TEST#: R668 Rename function f
- int f()
+@@ -103,17 +103,17 @@ void f2()
+ void f3()
  {
-     // #TEST#: R669 Rename use of T
-     // #TEST#: R670 Rename use of N
--    if constexpr (sizeof(T) == N)
-+    if constexpr (sizeof(T) == Goink)
+     // #TEST#: R669 Rename local variable initial
+-    constexpr int initial{10};
++    constexpr int goink{10};
+     // #TEST#: R670 Rename use of initial
+-    static_assert(10 == initial);
++    static_assert(10 == goink);
+     // #TEST#: R671 Rename local variable fn
+     // #TEST#: R672 Rename initial in capture list
+     // #TEST#: R673 Rename parameter val
+     // #TEST#: R674 Rename use of initial
+     // #TEST#: R675 Rename use of val
+-    constexpr auto fn = [initial](int val) constexpr
++    constexpr auto fn = [goink](int val) constexpr
      {
-         return 10;
-     }
+-        return initial + val;
++        return goink + val;
+     };
+     // #TEST#: R676 Rename use of fn
+     static_assert(10 == fn(0));

@@ -17,21 +17,21 @@ namespace RenameCpp14
 namespace
 {
 
-// #TEST#: R616 Rename template parameter T
+// #TEST#: R613 Rename template parameter T
 template <class T>
-// #TEST#: R617 Rename template parameter T
-// #TEST#: R618 Rename variable template pi
-// #TEST#: R619 Rename use of template parameter T
+// #TEST#: R614 Rename template parameter T
+// #TEST#: R615 Rename variable template pi
+// #TEST#: R616 Rename use of template parameter T
 constexpr T pi = T(3.1415926535897932385L);
 
-// #TEST#: R620 Rename template parameter T
+// #TEST#: R617 Rename template parameter T
 template <class T>
-// #TEST#: R621 Rename first use of T
-// #TEST#: R622 Rename second use of T
+// #TEST#: R618 Rename first use of T
+// #TEST#: R619 Rename second use of T
 T circularArea(T r)
 {
-    // #TEST#: R623 Rename use of pi
-    // #TEST#: R624 Rename use of T
+    // #TEST#: R620 Rename use of pi
+    // #TEST#: R621 Rename use of T
     return pi<T> * r * r;
 }
 
@@ -45,11 +45,11 @@ void f1()
 {
     {
         using namespace RenameCpp14;
-        // #TEST#: R625 Rename use of pi
+        // #TEST#: R622 Rename use of pi
         REQUIRE_EQUAL(pi<float>, circularArea(1.0f));
     }
 
-    // #TEST#: R626 Rename use of pi
+    // #TEST#: R623 Rename use of pi
     REQUIRE_EQUAL(RenameCpp14::pi<float>, RenameCpp14::circularArea(1.0f));
 }
 
@@ -57,20 +57,20 @@ void f2()
 {
     {
         using namespace RenameCpp14;
-        // #TEST#: R627 Rename use of pi2
+        // #TEST#: R624 Rename use of pi2
         REQUIRE_EQUAL(pi2<float>, circularArea2(1.0f));
     }
 
-    // #TEST#: R628 Rename use of pi2
+    // #TEST#: R625 Rename use of pi2
     REQUIRE_EQUAL(RenameCpp14::pi2<float>, RenameCpp14::circularArea2(1.0f));
 }
 
 void f3()
 {
-    // #TEST#: R629 Rename variable fn
-    // #TEST#: R630 Rename parameter val in declaration
-    // #TEST#: R631 Rename parameter val in first use
-    // #TEST#: R632 Rename parameter val in second use
+    // #TEST#: R626 Rename variable fn
+    // #TEST#: R627 Rename parameter val in declaration
+    // #TEST#: R628 Rename parameter val in first use
+    // #TEST#: R629 Rename parameter val in second use
     auto fn = [](auto val) { return val * decltype(val)(2); };
     REQUIRE_EQUAL(4.0f, fn(2.0f));
     REQUIRE_EQUAL(4, fn(2));
@@ -78,25 +78,25 @@ void f3()
 
 void f4()
 {
-    // #TEST#: R633 Rename local variable i
+    // #TEST#: R630 Rename local variable i
     int i{2};
-    // #TEST#: R634 Rename local variable fn
-    // #TEST#: R635 Rename local capture variable val
-    // #TEST#: R636 Rename local capture variable j
-    // #TEST#: R637 Rename use of i in capture expression
-    // #TEST#: R638 Rename use of val
-    // #TEST#: R639 Rename use of j
+    // #TEST#: R631 Rename local variable fn
+    // #TEST#: R632 Rename local capture variable val
+    // #TEST#: R633 Rename local capture variable j
+    // #TEST#: R634 Rename use of i in capture expression
+    // #TEST#: R635 Rename use of val
+    // #TEST#: R636 Rename use of j
     auto fn = [val = 1, j = i] { return val + j; };
-    // #TEST#: R640 Rename use of fn
+    // #TEST#: R637 Rename use of fn
     REQUIRE_EQUAL(3, fn());
-    // #TEST#: R641 Rename local variable fn2
-    // #TEST#: R642 Rename local capture variable val
-    // #TEST#: R643 Rename local capture variable j
-    // #TEST#: R644 Rename use of i in capture expression
-    // #TEST#: R645 Rename use of val
-    // #TEST#: R646 Rename use of j
+    // #TEST#: R638 Rename local variable fn2
+    // #TEST#: R639 Rename local capture variable val
+    // #TEST#: R640 Rename local capture variable j
+    // #TEST#: R641 Rename use of i in capture expression
+    // #TEST#: R642 Rename use of val
+    // #TEST#: R643 Rename use of j
     auto fn2 = [val = 1, j = i](int k) { return val + j + k; };
-    // #TEST#: R647 Rename use of fn2
+    // #TEST#: R644 Rename use of fn2
     REQUIRE_EQUAL(4, fn2(1));
 }
 

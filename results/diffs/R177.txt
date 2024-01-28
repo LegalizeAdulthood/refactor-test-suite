@@ -1,33 +1,36 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..355d0b2 100644
+index d1c1283..f5b3b3f 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -565,12 +565,12 @@ void f6()
- struct F7Base
+@@ -562,7 +562,7 @@ void f6()
+ }
+ 
+ // #TEST#: R175 Rename F7Base
+-struct F7Base
++struct Goink
  {
-     // #TEST#: R177 Rename x
--    static int x;
-+    static int goink;
+     // #TEST#: R176 Rename x
+     static int x;
+@@ -570,11 +570,11 @@ struct F7Base
+ 
+ // #TEST#: R177 Rename F7Base
+ // #TEST#: R178 Rename x
+-int F7Base::x = 7;
++int Goink::x = 7;
+ 
+ // #TEST#: R179 Rename F7Derived
+ // #TEST#: R180 Rename F7Base
+-struct F7Derived : F7Base
++struct F7Derived : Goink
+ {
  };
  
- // #TEST#: R178 Rename F7Base
- // #TEST#: R179 Rename x
--int F7Base::x = 7;
-+int F7Base::goink = 7;
- 
- // #TEST#: R180 Rename F7Derived
- // #TEST#: R181 Rename F7Base
-@@ -583,11 +583,11 @@ void f7()
-     // #TEST#: R182 Rename p
-     // #TEST#: R183 Rename F7Base
-     // #TEST#: R184 Rename x
+@@ -583,7 +583,7 @@ void f7()
+     // #TEST#: R181 Rename p
+     // #TEST#: R182 Rename F7Base
+     // #TEST#: R183 Rename x
 -    int &p = F7Base::x;
-+    int &p = F7Base::goink;
-     // #TEST#: R185 Rename q
-     // #TEST#: R186 Rename F7Derived
-     // #TEST#: R187 Rename x
--    int &q = F7Derived::x;
-+    int &q = F7Derived::goink;
-     // #TEST#: R188 Rename p
-     require_equal(7, p);
-     // #TEST#: R189 Rename q
++    int &p = Goink::x;
+     // #TEST#: R184 Rename q
+     // #TEST#: R185 Rename F7Derived
+     // #TEST#: R186 Rename x

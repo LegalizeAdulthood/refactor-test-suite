@@ -5,16 +5,16 @@ index e73e1db..c4fa2ef 100644
 @@ -553,14 +553,14 @@ void f17()
  }
  
- // #TEST#: R397 Rename Args
+ // #TEST#: R394 Rename Args
 -template <typename... Args>
 +template <typename... Goink>
- // #TEST#: R398 Rename Args
- // #TEST#: R399 Rename args
+ // #TEST#: R395 Rename Args
+ // #TEST#: R396 Rename args
 -void f18_aux(std::ostream &stream, Args... args)
 +void f18_aux(std::ostream &stream, Goink... args)
  {
-     // #TEST#: R400 Rename Args
-     // #TEST#: R401 Rename args
+     // #TEST#: R397 Rename Args
+     // #TEST#: R398 Rename args
 -    int ignored[sizeof...(Args)] = {(stream << args << ' ', 0)...};
 +    int ignored[sizeof...(Goink)] = {(stream << args << ' ', 0)...};
  }

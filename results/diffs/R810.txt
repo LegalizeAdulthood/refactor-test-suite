@@ -5,12 +5,12 @@ index d7d8359..624e072 100644
 @@ -447,11 +447,11 @@ struct Container
      }
  
-     // #TEST#: R810 Rename template parameter Iter
+     // #TEST#: R807 Rename template parameter Iter
 -    template <typename Iter>
 +    template <typename Goink>
-     // #TEST#: R811 Rename use of Container
-     // #TEST#: R812 Rename first use of Iter
-     // #TEST#: R813 Rename second use of Iter
+     // #TEST#: R808 Rename use of Container
+     // #TEST#: R809 Rename first use of Iter
+     // #TEST#: R810 Rename second use of Iter
 -    Container(Iter begin, Iter end) : m_how(2)
 +    Container(Goink begin, Goink end) : m_how(2)
      {

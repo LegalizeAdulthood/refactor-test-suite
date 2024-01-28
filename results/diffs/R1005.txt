@@ -1,18 +1,23 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..35ef80b 100644
+index 024d6a2..47e8909 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -66,11 +66,11 @@ template <typename T, typename U>
- // #TEST#: R1001 Rename parameter lhs
- // #TEST#: R1002 Rename use of U
- // #TEST#: R1003 Rename parameter rhs
--concept Multiplicable = requires(T lhs, U rhs)
-+concept Multiplicable = requires(T lhs, U goink)
- {
-     // #TEST#: R1004 Rename use of lhs
-     // #TEST#: R1005 Rename use of rhs
--    lhs * rhs;
-+    lhs * goink;
- };
- // clang-format on
+@@ -76,15 +76,15 @@ concept Multiplicable = requires(T lhs, U rhs)
  
+ // single template parameter function with simple constraint on template parameter
+ // #TEST#: R1003 Rename template parameter T
+-template <typename T>
++template <typename Goink>
+ // #TEST#: R1004 Rename concept Squareable
+ // #TEST#: R1005 Rename use of T
+-    requires Squareable<T>
++    requires Squareable<Goink>
+ // #TEST#: R1006 Rename first use of T
+ // #TEST#: R1007 Rename function square1
+ // #TEST#: R1008 Rename second use of T
+ // #TEST#: R1009 Rename parameter value
+-T square1(T value)
++Goink square1(Goink value)
+ {
+     // #TEST#: R1010 Rename first use of value
+     // #TEST#: R1011 Rename second use of value

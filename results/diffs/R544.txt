@@ -5,18 +5,18 @@ index e73e1db..e8c1c97 100644
 @@ -1026,7 +1026,7 @@ void f35()
  inline namespace Inline36
  {
- // #TEST#: R544 Rename x36
+ // #TEST#: R541 Rename x36
 -int x36 = 10;
 +int goink = 10;
- // #TEST#: R545 Rename d36
+ // #TEST#: R542 Rename d36
  double d36 = 20.5;
- // #TEST#: R546 Rename s36
+ // #TEST#: R543 Rename s36
 @@ -1040,7 +1040,7 @@ std::string s36()
  void f36()
  {
-     // #TEST#: R547 Rename x36
+     // #TEST#: R544 Rename x36
 -    require_equal(10, x36);
 +    require_equal(10, goink);
-     // #TEST#: R548 Rename d36
+     // #TEST#: R545 Rename d36
      require_equal(20.5, d36);
-     // #TEST#: R549 Rename s36
+     // #TEST#: R546 Rename s36

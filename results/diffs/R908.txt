@@ -3,11 +3,11 @@ index 2aa7a68..e7edb3d 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
 @@ -188,7 +188,7 @@ void f4()
-     // #TEST#: R909 Rename template parameter T
-     // #TEST#: R910 Rename use of T
-     // #TEST#: R911 Rename use of N
+     // #TEST#: R906 Rename template parameter T
+     // #TEST#: R907 Rename use of T
+     // #TEST#: R908 Rename use of N
 -    auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
 +    auto fn = []<size_t Goink, typename T> { return std::array<T, Goink>{}; };
-     // #TEST#: R912 Rename type alias T
+     // #TEST#: R909 Rename type alias T
      using T = int;
-     // #TEST#: R913 Rename local constant N
+     // #TEST#: R910 Rename local constant N

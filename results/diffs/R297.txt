@@ -4,23 +4,23 @@ index 96b65ff..4fc25ac 100644
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -184,18 +184,18 @@ void f10_aux(std::ostream &stream, T head)
  
- // #TEST#: R296 Rename T
- // #TEST#: R297 Rename Args
+ // #TEST#: R293 Rename T
+ // #TEST#: R294 Rename Args
 -template <typename T, typename... Args>
 +template <typename T, typename... Goink>
- // #TEST#: R298 Rename T
- // #TEST#: R299 Rename head
- // #TEST#: R300 Rename Args
- // #TEST#: R301 Rename tail
+ // #TEST#: R295 Rename T
+ // #TEST#: R296 Rename head
+ // #TEST#: R297 Rename Args
+ // #TEST#: R298 Rename tail
 -void f10_aux(std::ostream &stream, T head, Args... tail)
 +void f10_aux(std::ostream &stream, T head, Goink... tail)
  {
-     // #TEST#: R302 Rename head
+     // #TEST#: R299 Rename head
      stream << head << '\n';
-     // #TEST#: R303 Rename tail
-     // #TEST#: R304 Rename Args
+     // #TEST#: R300 Rename tail
+     // #TEST#: R301 Rename Args
 -    if (sizeof...(tail) > 0 || sizeof...(Args) > 0)
 +    if (sizeof...(tail) > 0 || sizeof...(Goink) > 0)
      {
-         // #TEST#: R305 Rename tail
+         // #TEST#: R302 Rename tail
          f10_aux(stream, tail...);

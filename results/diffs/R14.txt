@@ -16,16 +16,16 @@ index d1c1283..1a055cb 100644
      }
  
 @@ -635,7 +635,7 @@ void TestRename()
-     // #TEST#: R196 Rename the namespace X
-     // #TEST#: R197 Rename the class Rename1
-     // #TEST#: R198 Rename the variable test2
+     // #TEST#: R195 Rename the namespace X
+     // #TEST#: R196 Rename the class Rename1
+     // #TEST#: R197 Rename the variable test2
 -    X::Rename1 test2;
 +    X::Goink test2;
-     // #TEST#: R199 rename the variable y
-     // #TEST#: R200 rename the variable test2
-     // #TEST#: R201 rename the method Operation
+     // #TEST#: R198 rename the variable y
+     // #TEST#: R199 rename the variable test2
+     // #TEST#: R200 rename the method Operation
 @@ -674,8 +674,8 @@ void TestRename()
-     // #TEST#: R210 Rename the variable y
+     // #TEST#: R209 Rename the variable y
      y++;
  
 -    using X::Rename1;
@@ -34,4 +34,4 @@ index d1c1283..1a055cb 100644
 +    Goink fromX;
      fromX.Operation();
  
-     // #TEST#: R211 Rename class Operations
+     // #TEST#: R210 Rename class Operations

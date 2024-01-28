@@ -1,16 +1,69 @@
-diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
-index 2f9380a..dea3ae6 100644
---- a/RefactorTest/RenameCpp14.cpp
-+++ b/RefactorTest/RenameCpp14.cpp
-@@ -95,9 +95,9 @@ void f4()
-     // #TEST#: R644 Rename use of i in capture expression
-     // #TEST#: R645 Rename use of val
-     // #TEST#: R646 Rename use of j
--    auto fn2 = [val = 1, j = i](int k) { return val + j + k; };
-+    auto goink = [val = 1, j = i](int k) { return val + j + k; };
-     // #TEST#: R647 Rename use of fn2
--    REQUIRE_EQUAL(4, fn2(1));
-+    REQUIRE_EQUAL(4, goink(1));
- }
+diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
+index 4b92e61..6ba2843 100644
+--- a/RefactorTest/RenameCpp17.cpp
++++ b/RefactorTest/RenameCpp17.cpp
+@@ -26,7 +26,7 @@
+ // #TEST#: R650 Rename A
+ // #TEST#: R651 Rename B
+ // #TEST#: R652 Rename C
+-namespace RenameCpp17::A::B::C
++namespace RenameCpp17::A::B::Goink
+ {
  
- }    // namespace
+ // #TEST#: R653 Rename x
+@@ -476,13 +476,13 @@ void f10()
+     // #TEST#: R826 Rename B
+     // #TEST#: R827 Rename C
+     // #TEST#: R828 Rename x
+-    REQUIRE_EQUAL(10, RenameCpp17::A::B::C::x);
++    REQUIRE_EQUAL(10, RenameCpp17::A::B::Goink::x);
+ 
+     {
+         // #TEST#: R829 Rename A
+         // #TEST#: R830 Rename B
+         // #TEST#: R831 Rename C
+-        using namespace RenameCpp17::A::B::C;
++        using namespace RenameCpp17::A::B::Goink;
+         // #TEST#: R832 Rename x
+         REQUIRE_EQUAL(10, x);
+     }
+@@ -496,7 +496,7 @@ void f11()
+         // #TEST#: R835 Rename C
+         // #TEST#: R836 Rename y
+         // #TEST#: R837 Rename z
+-        using RenameCpp17::A::B::C::y, RenameCpp17::A::B::C::z;
++        using RenameCpp17::A::B::Goink::y, RenameCpp17::A::B::Goink::z;
+         // #TEST#: R838 Rename use of y
+         // #TEST#: R839 Rename use of z
+         REQUIRE_EQUAL(50, y + z);
+@@ -508,7 +508,7 @@ void f11()
+         // #TEST#: R842 Rename C
+         // #TEST#: R843 Rename y
+         // #TEST#: R844 Rename z
+-        using A::B::C::y, A::B::C::z;
++        using A::B::Goink::y, A::B::Goink::z;
+         // #TEST#: R845 Rename use of y
+         // #TEST#: R846 Rename use of z
+         REQUIRE_EQUAL(50, y + z);
+@@ -520,7 +520,7 @@ void f11()
+         // #TEST#: R849 Rename C
+         // #TEST#: R850 Rename y
+         // #TEST#: R851 Rename z
+-        using B::C::y, B::C::z;
++        using B::Goink::y, B::Goink::z;
+         // #TEST#: R852 Rename use of y
+         // #TEST#: R853 Rename use of z
+         REQUIRE_EQUAL(50, y + z);
+diff --git a/RefactorTest/RenameCpp17.h b/RefactorTest/RenameCpp17.h
+index 37491e7..6da343e 100644
+--- a/RefactorTest/RenameCpp17.h
++++ b/RefactorTest/RenameCpp17.h
+@@ -6,7 +6,7 @@ namespace RenameCpp17
+ // #TEST#: R645 Rename A
+ // #TEST#: R646 Rename B
+ // #TEST#: R647 Rename C
+-namespace A::B::C
++namespace A::B::Goink
+ {
+ // #TEST#: R648 Rename x
+ extern int x;

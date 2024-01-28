@@ -4,17 +4,17 @@ index e73e1db..17923d0 100644
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -521,13 +521,13 @@ void f16()
          int x = 3;
-         // #TEST#: R388 Rename y
-         // #TEST#: R389 Rename j
+         // #TEST#: R385 Rename y
+         // #TEST#: R386 Rename j
 -        int y = j;
 +        int goink = j;
      };
      X v;
-     // #TEST#: R390 Rename x
+     // #TEST#: R387 Rename x
      require_equal(3, v.x);
-     // #TEST#: R391 Rename y
+     // #TEST#: R388 Rename y
 -    require_equal(j, v.y);
 +    require_equal(j, v.goink);
  }
  
- // #TEST#: R392 Rename Args
+ // #TEST#: R389 Rename Args

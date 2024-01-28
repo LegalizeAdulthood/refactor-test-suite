@@ -5,14 +5,14 @@ index d7d8359..c9fcc53 100644
 @@ -459,13 +459,13 @@ struct Container
  };
  
- // #TEST#: R814 Rename template parameter Iter
+ // #TEST#: R811 Rename template parameter Iter
 -template <typename Iter>
 +template <typename Goink>
- // #TEST#: R815 Rename first use of Container
- // #TEST#: R816 Rename first use of Iter
- // #TEST#: R817 Rename second use of Iter
- // #TEST#: R818 Rename second use of Container
- // #TEST#: R819 Rename third use of Iter
+ // #TEST#: R812 Rename first use of Container
+ // #TEST#: R813 Rename first use of Iter
+ // #TEST#: R814 Rename second use of Iter
+ // #TEST#: R815 Rename second use of Container
+ // #TEST#: R816 Rename third use of Iter
 -Container(Iter begin, Iter end)->Container<typename std::iterator_traits<Iter>::value_type>;
 +Container(Goink begin, Goink end)->Container<typename std::iterator_traits<Goink>::value_type>;
  

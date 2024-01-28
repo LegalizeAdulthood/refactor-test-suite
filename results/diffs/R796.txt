@@ -3,22 +3,22 @@ index c346b5d..26cc3cd 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -411,16 +411,16 @@ void f8()
-         // #TEST#: R795 Rename use of p1
+         // #TEST#: R792 Rename use of p1
          delete p1;
-         // #TEST#: R796 Rename local variable name
+         // #TEST#: R793 Rename local variable name
 -        const char *name{"one"};
 +        const char *goink{"one"};
-         // #TEST#: R797 Rename local variable p2
-         // #TEST#: R798 Rename use of f1
-         // #TEST#: R799 Rename use of name
+         // #TEST#: R794 Rename local variable p2
+         // #TEST#: R795 Rename use of f1
+         // #TEST#: R796 Rename use of name
 -        const auto *p2 = new ValueName{f1, std::string_view{name}};
 +        const auto *p2 = new ValueName{f1, std::string_view{goink}};
-         // #TEST#: R800 Rename use of p2
+         // #TEST#: R797 Rename use of p2
          REQUIRE_EQUAL(1.0f, p2->value);
-         // #TEST#: R801 Rename use of name
-         // #TEST#: R802 Rename use of p2
+         // #TEST#: R798 Rename use of name
+         // #TEST#: R799 Rename use of p2
 -        REQUIRE_EQUAL(std::string_view{name}, p2->name);
 +        REQUIRE_EQUAL(std::string_view{goink}, p2->name);
-         // #TEST#: R803 Rename use of p2
+         // #TEST#: R800 Rename use of p2
          delete p2;
      }

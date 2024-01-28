@@ -5,19 +5,19 @@ index 024d6a2..b76efb7 100644
 @@ -93,15 +93,15 @@ T square1(T value)
  
  // single template parameter function with simple constraint on function
- // #TEST#: R1015 Rename template parameter T
+ // #TEST#: R1012 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1016 Rename first use of T
- // #TEST#: R1017 Rename function square2
- // #TEST#: R1018 Rename second use of T
- // #TEST#: R1019 Rename parameter value
+ // #TEST#: R1013 Rename first use of T
+ // #TEST#: R1014 Rename function square2
+ // #TEST#: R1015 Rename second use of T
+ // #TEST#: R1016 Rename parameter value
 -T square2(T value)
 +Goink square2(Goink value)
-     // #TEST#: R1020 Rename concept Squareable
-     // #TEST#: R1021 Rename use of T
+     // #TEST#: R1017 Rename concept Squareable
+     // #TEST#: R1018 Rename use of T
 -    requires Squareable<T>
 +    requires Squareable<Goink>
  {
-     // #TEST#: R1022 Rename first use of value
-     // #TEST#: R1023 Rename second use of value
+     // #TEST#: R1019 Rename first use of value
+     // #TEST#: R1020 Rename second use of value

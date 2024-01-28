@@ -1,16 +1,21 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index 2aa7a68..e5c819d 100644
+index 2aa7a68..0fa83fc 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -218,9 +218,9 @@ T f5Fn(T first, Args... args)
-     // #TEST#: R925 Rename first use of args
-     // #TEST#: R926 Rename second use of first
-     // #TEST#: R927 Rename second use of args
+@@ -211,14 +211,14 @@ template <typename T, typename... Args>
+ // #TEST#: R917 Rename second use of T
+ // #TEST#: R918 Rename use of Args
+ // #TEST#: R919 Rename parameter args
+-T f5Fn(T first, Args... args)
++T f5Fn(T goink, Args... args)
+ {
+     // #TEST#: R920 Rename local variable fn
+     // #TEST#: R921 Rename first use of first
+     // #TEST#: R922 Rename first use of args
+     // #TEST#: R923 Rename second use of first
+     // #TEST#: R924 Rename second use of args
 -    auto fn = [first, args...] { return (first + ... + args); };
-+    auto goink = [first, args...] { return (first + ... + args); };
-     // #TEST#: R928 Rename use of fn
--    return fn();
-+    return goink();
++    auto fn = [goink, args...] { return (goink + ... + args); };
+     // #TEST#: R925 Rename use of fn
+     return fn();
  }
- 
- // pack expansions in lambda init captures

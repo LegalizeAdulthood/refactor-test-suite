@@ -1,31 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..f9af8f4 100644
+index e73e1db..12dc39f 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -980,22 +980,22 @@ void f33()
- 
- // #TEST#: R535 Rename f34_aux
- // #TEST#: R536 Rename j
--constexpr int f34_aux(int j)
-+constexpr int goink(int j)
+@@ -1003,7 +1003,7 @@ void f34()
+ struct X35
  {
-     return ii + j;
- }
- 
- // #TEST#: R537 Rename f34_aux
--static_assert(f34_aux(3) == 18, "f34_aux(3) == 18");
-+static_assert(goink(3) == 18, "f34_aux(3) == 18");
- 
- void f34()
+     // #TEST#: R537 Rename size
+-    constexpr std::size_t size() const
++    constexpr std::size_t goink() const
+     {
+         return sizeof(X35);
+     }
+@@ -1016,7 +1016,7 @@ void f35()
  {
-     // #TEST#: R538 Rename f34_aux
--    constexpr int x = f34_aux(3);
-+    constexpr int x = goink(3);
-     require_equal(18, x);
-     int j = 15;
-     // #TEST#: R539 Rename f34_aux
--    require_equal(30, f34_aux(j));
-+    require_equal(30, goink(j));
-     j += 15;
-     require_equal(30, j);
- }
+     X35 x;
+     // #TEST#: R539 Rename size member function
+-    constexpr std::size_t size = x.size();
++    constexpr std::size_t size = x.goink();
+     require_equal(std::size_t{1}, size);
+     // #TEST#: R540 Rename sz static member
+     constexpr int s = X35::sz;

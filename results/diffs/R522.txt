@@ -1,65 +1,21 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..7f8eeff 100644
+index e73e1db..6078994 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -938,12 +938,12 @@ void f30()
- void f31()
+@@ -950,13 +950,13 @@ void f31()
+ void f32()
  {
-     // #TEST#: R521 Rename Extern
--    using RenameCpp11::Extern;
-+    using RenameCpp11::Goink;
-     // #TEST#: R522 Rename Extern
--    Extern<int> x(10);
-+    Goink<int> x(10);
-     require_equal(10, x.t);
-     // #TEST#: R523 Rename Extern
--    Extern<std::string> y("hello world!");
-+    Goink<std::string> y("hello world!");
-     require_equal(std::string{"hello world!"}, y.t);
- }
- 
-@@ -1288,9 +1288,9 @@ void f45()
- namespace RenameCpp11
- {
- // #TEST#: R604 Rename Extern
--template struct Extern<int>;
-+template struct Goink<int>;
- // #TEST#: R605 Rename Extern
--template struct Extern<std::string>;
-+template struct Goink<std::string>;
- 
- }    // namespace RenameCpp11
- 
-diff --git a/RefactorTest/RenameCpp11.h b/RefactorTest/RenameCpp11.h
-index 54c1f21..a83f3c0 100644
---- a/RefactorTest/RenameCpp11.h
-+++ b/RefactorTest/RenameCpp11.h
-@@ -7,23 +7,23 @@ namespace RenameCpp11
- // #TEST#: R244 Rename T
- template <typename T>
- // #TEST#: R245 Rename Extern
--struct Extern
-+struct Goink
- {
-     // #TEST#: R246 Rename Extern
--    Extern()
-+    Goink()
-     {
-     }
-     // #TEST#: R247 Rename Extern
--    Extern(T t) : t(t)
-+    Goink(T t) : t(t)
-     {
-     }
-     T t = T();
- };
- 
- // #TEST#: R248 Rename Extern
--extern template struct Extern<int>;
-+extern template struct Goink<int>;
- // #TEST#: R249 Rename Extern
--extern template struct Extern<std::string>;
-+extern template struct Goink<std::string>;
- 
- }    // namespace RenameCpp11
- 
+     // #TEST#: R521 Rename Integer
+-    using Integer = int;
++    using Goink = int;
+     // #TEST#: R522 Rename Integer
+-    Integer x = 10;
++    Goink x = 10;
+     require_equal(10, x);
+     // #TEST#: R523 Rename Integral
+     // #TEST#: R524 Rename Integer
+-    using Integral = Integer;
++    using Integral = Goink;
+     // #TEST#: R525 Rename Integral
+     Integral y = 10;
+     require_equal(10, y);

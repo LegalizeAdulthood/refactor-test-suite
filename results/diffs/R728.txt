@@ -1,16 +1,18 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index 3d0f364..41647fb 100644
+index 3d0f364..f95426d 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -233,9 +233,9 @@ void f5()
-         // #TEST#: R725 Rename binding val1
-         // #TEST#: R726 Rename binding name1
-         // #TEST#: R727 Rename use of f
--        const auto [val1, name1] = f;
-+        const auto [goink, name1] = f;
-         // #TEST#: R728 Rename use of val1
--        REQUIRE_EQUAL(1, val1);
-+        REQUIRE_EQUAL(1, goink);
-         // #TEST#: R729 Rename use of name1
-         REQUIRE_EQUAL(std::string{"one"}, name1);
-         // #TEST#: R730 Rename binding val2
+@@ -241,11 +241,11 @@ void f5()
+         // #TEST#: R727 Rename binding val2
+         // #TEST#: R728 Rename binding name2
+         // #TEST#: R729 Rename use of f
+-        const auto &[val2, name2] = f;
++        const auto &[val2, goink] = f;
+         // #TEST#: R730 Rename use of val2
+         REQUIRE_EQUAL(1, val2);
+         // #TEST#: R731 Rename use of name2
+-        REQUIRE_EQUAL(std::string{"one"}, name2);
++        REQUIRE_EQUAL(std::string{"one"}, goink);
+         // #TEST#: R732 Rename binding val3
+         // #TEST#: R733 Rename binding name3
+         // #TEST#: R734 Rename use of f

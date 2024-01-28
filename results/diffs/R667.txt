@@ -4,15 +4,15 @@ index d55964a..de29f10 100644
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -71,13 +71,13 @@ private:
  
- // #TEST#: R666 Rename template parameter T
- // #TEST#: R667 Rename template parameter N
+ // #TEST#: R663 Rename template parameter T
+ // #TEST#: R664 Rename template parameter N
 -template <typename T, size_t N>
 +template <typename T, size_t Goink>
- // #TEST#: R668 Rename function f
+ // #TEST#: R665 Rename function f
  int f()
  {
-     // #TEST#: R669 Rename use of T
-     // #TEST#: R670 Rename use of N
+     // #TEST#: R666 Rename use of T
+     // #TEST#: R667 Rename use of N
 -    if constexpr (sizeof(T) == N)
 +    if constexpr (sizeof(T) == Goink)
      {

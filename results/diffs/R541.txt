@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..f48fe5e 100644
+index e73e1db..e8c1c97 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1009,7 +1009,7 @@ struct X35
-     }
- 
-     // #TEST#: R541 Rename sz
--    static constexpr int sz = 4;
-+    static constexpr int goink = 4;
- };
- 
- void f35()
-@@ -1019,7 +1019,7 @@ void f35()
-     constexpr std::size_t size = x.size();
-     require_equal(std::size_t{1}, size);
-     // #TEST#: R543 Rename sz static member
--    constexpr int s = X35::sz;
-+    constexpr int s = X35::goink;
-     require_equal(4, s);
- }
- 
+@@ -1026,7 +1026,7 @@ void f35()
+ inline namespace Inline36
+ {
+ // #TEST#: R541 Rename x36
+-int x36 = 10;
++int goink = 10;
+ // #TEST#: R542 Rename d36
+ double d36 = 20.5;
+ // #TEST#: R543 Rename s36
+@@ -1040,7 +1040,7 @@ std::string s36()
+ void f36()
+ {
+     // #TEST#: R544 Rename x36
+-    require_equal(10, x36);
++    require_equal(10, goink);
+     // #TEST#: R545 Rename d36
+     require_equal(20.5, d36);
+     // #TEST#: R546 Rename s36

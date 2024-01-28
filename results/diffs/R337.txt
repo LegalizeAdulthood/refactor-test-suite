@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..28027d6 100644
+index e73e1db..0279d01 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -385,7 +385,7 @@ char16_t operator""_xc3(char16_t value)
- 
- // #TEST#: R337 Rename xc4
- // #TEST#: R338 Rename value
--char32_t operator""_xc4(char32_t value)
-+char32_t operator""_goink(char32_t value)
+@@ -394,7 +394,7 @@ char32_t operator""_xc4(char32_t value)
+ // #TEST#: R337 Rename xs
+ // #TEST#: R338 Rename text
+ // #TEST#: R339 Rename len
+-std::string operator""_xs(const char *text, std::size_t len)
++std::string operator""_goink(const char *text, std::size_t len)
  {
-     // #TEST#: R339 Rename value
-     return value;
-@@ -459,7 +459,7 @@ void f13()
-     // #TEST#: R367 Rename xc3
-     require_equal(u'c', u'c'_xc3);
-     // #TEST#: R368 Rename xc4
--    require_equal(U'c', U'c'_xc4);
-+    require_equal(U'c', U'c'_goink);
-     // #TEST#: R369 Rename xs
-     require_equal(std::string{"foo"}, "foo"_xs);
-     // #TEST#: R370 Rename xs2
+     // #TEST#: R340 Rename text
+     // #TEST#: R341 Rename len
+@@ -461,7 +461,7 @@ void f13()
+     // #TEST#: R365 Rename xc4
+     require_equal(U'c', U'c'_xc4);
+     // #TEST#: R366 Rename xs
+-    require_equal(std::string{"foo"}, "foo"_xs);
++    require_equal(std::string{"foo"}, "foo"_goink);
+     // #TEST#: R367 Rename xs2
+     require_equal(std::string{"foo"}, narrow(L"foo"_xs2));
+     // #TEST#: R368 Rename xs3

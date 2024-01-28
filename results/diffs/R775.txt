@@ -3,14 +3,14 @@ index c346b5d..0ba9570 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -346,11 +346,11 @@ template <typename... Args>
- // #TEST#: R775 Rename parameter init
- // #TEST#: R776 Rename use of Args
- // #TEST#: R777 Rename parameter args
+ // #TEST#: R772 Rename parameter init
+ // #TEST#: R773 Rename use of Args
+ // #TEST#: R774 Rename parameter args
 -bool allBinaryLeft(bool init, Args... args)
 +bool allBinaryLeft(bool goink, Args... args)
  {
-     // #TEST#: R778 Rename use of init
-     // #TEST#: R779 Rename use of args
+     // #TEST#: R775 Rename use of init
+     // #TEST#: R776 Rename use of args
 -    return (init && ... && args);
 +    return (goink && ... && args);
  }

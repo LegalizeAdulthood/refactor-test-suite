@@ -12,7 +12,7 @@ index d1c1283..6bd6226 100644
  class Base
  {
 @@ -708,7 +708,7 @@ void TestRename()
-     // #TEST#: R227 Rename variable member
+     // #TEST#: R226 Rename variable member
      ((&ops3)->*member)();
  
 -    int x1 = Renamed;

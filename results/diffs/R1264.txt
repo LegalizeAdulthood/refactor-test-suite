@@ -5,18 +5,18 @@ index 024d6a2..0d14eed 100644
 @@ -621,16 +621,16 @@ public:
  };
  
- // #TEST#: R1262 Rename template parameter T
+ // #TEST#: R1259 Rename template parameter T
 -template <typename T>
 +template <typename Goink>
- // #TEST#: R1263 Rename concept Squareable
- // #TEST#: R1264 Rename use of T
+ // #TEST#: R1260 Rename concept Squareable
+ // #TEST#: R1261 Rename use of T
 -    requires Squareable<T>
 +    requires Squareable<Goink>
- // #TEST#: R1265 Rename class SqrStruct1
+ // #TEST#: R1262 Rename class SqrStruct1
  struct SqrStruct1
  {
-     // #TEST#: R1266 Rename first use of T
-     // #TEST#: R1267 Rename second of T
+     // #TEST#: R1263 Rename first use of T
+     // #TEST#: R1264 Rename second of T
 -    T operator()(T value) const
 +    Goink operator()(Goink value) const
      {

@@ -1,0 +1,16 @@
+diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
+index d1c1283..8c378fb 100644
+--- a/RefactorTest/Rename.cpp
++++ b/RefactorTest/Rename.cpp
+@@ -746,9 +746,9 @@ restart:
+         // #TEST#: R237 Rename variable pin_ptr
+         int pin_ptr = override + 1;
+         // #TEST#: R238 Rename variable property
+-        int property = pin_ptr + 1;
++        int goink = pin_ptr + 1;
+         // #TEST#: R239 Rename variable safe_cast
+-        int safe_cast = property + 1;
++        int safe_cast = goink + 1;
+         // #TEST#: R240 Rename variable sealed
+         int sealed = safe_cast + 1;
+         int x = sealed + 1;

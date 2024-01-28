@@ -503,94 +503,93 @@ struct F6
     // #TEST#: R144 Rename T
     // #TEST#: R145 Rename U
     template <typename T, typename U>
-    // #TEST#: R146 (deprecated)
-    // #TEST#: R147 Rename f
-    // #TEST#: R148 Rename T parameter x type
-    // #TEST#: R149 Rename x parameter
-    // #TEST#: R150 Rename U parameter y type
-    // #TEST#: R151 Rename y parameter
-    // #TEST#: R152 Rename x in decltype expression
-    // #TEST#: R153 Rename y in decltype expression
+    // #TEST#: R146 Rename f
+    // #TEST#: R147 Rename T parameter x type
+    // #TEST#: R148 Rename x parameter
+    // #TEST#: R149 Rename U parameter y type
+    // #TEST#: R150 Rename y parameter
+    // #TEST#: R151 Rename x in decltype expression
+    // #TEST#: R152 Rename y in decltype expression
     auto f(T x, U y) -> decltype(x + y)
     {
-        // #TEST#: R154 Rename count
+        // #TEST#: R153 Rename count
         ++count;
-        // #TEST#: R155 Rename x
-        // #TEST#: R156 Rename y
+        // #TEST#: R154 Rename x
+        // #TEST#: R155 Rename y
         return x + y;
     }
 
-    // #TEST#: R157 Rename T
-    // #TEST#: R158 Rename U
+    // #TEST#: R156 Rename T
+    // #TEST#: R157 Rename U
     template <typename T, typename U>
-    // #TEST#: R159 Rename g
-    // #TEST#: R160 Rename T in decltype expression
-    // #TEST#: R161 Rename U in decltype expression
-    // #TEST#: R162 Rename T parameter x type
-    // #TEST#: R163 Rename x parameter
-    // #TEST#: R164 Rename U parameter y type
-    // #TEST#: R165 Rename y parameter
+    // #TEST#: R158 Rename g
+    // #TEST#: R159 Rename T in decltype expression
+    // #TEST#: R160 Rename U in decltype expression
+    // #TEST#: R161 Rename T parameter x type
+    // #TEST#: R162 Rename x parameter
+    // #TEST#: R163 Rename U parameter y type
+    // #TEST#: R164 Rename y parameter
     decltype(T() + U()) g(T x, U y)
     {
-        // #TEST#: R166 Rename count
+        // #TEST#: R165 Rename count
         ++count;
-        // #TEST#: R167 Rename x
-        // #TEST#: R168 Rename y
+        // #TEST#: R166 Rename x
+        // #TEST#: R167 Rename y
         return x + y;
     }
 
-    // #TEST#: R169 Rename count
+    // #TEST#: R168 Rename count
     int count = 0;
 };
 
 void f6()
 {
     F6 x;
-    // #TEST#: R170 Rename method f
+    // #TEST#: R169 Rename method f
     require_equal(3.0, x.f(1, 2.0));
-    // #TEST#: R171 Rename method f
+    // #TEST#: R170 Rename method f
     require_equal(std::string{"foobar"}, x.f(std::string{"foo"}, "bar"));
-    // #TEST#: R172 Rename count
+    // #TEST#: R171 Rename count
     require_equal(2, x.count);
 
-    // #TEST#: R173 Rename method g
+    // #TEST#: R172 Rename method g
     require_equal(3.0, x.g(1.0, 2));
-    // #TEST#: R174 Rename method g
+    // #TEST#: R173 Rename method g
     require_equal(std::string{"foobar"}, x.g("foo", std::string{"bar"}));
-    // #TEST#: R175 Rename count
+    // #TEST#: R174 Rename count
     require_equal(4, x.count);
 }
 
-// #TEST#: R176 Rename F7Base
+// #TEST#: R175 Rename F7Base
 struct F7Base
 {
-    // #TEST#: R177 Rename x
+    // #TEST#: R176 Rename x
     static int x;
 };
 
-// #TEST#: R178 Rename F7Base
-// #TEST#: R179 Rename x
+// #TEST#: R177 Rename F7Base
+// #TEST#: R178 Rename x
 int F7Base::x = 7;
 
-// #TEST#: R180 Rename F7Derived
-// #TEST#: R181 Rename F7Base
+// #TEST#: R179 Rename F7Derived
+// #TEST#: R180 Rename F7Base
 struct F7Derived : F7Base
 {
 };
 
 void f7()
 {
-    // #TEST#: R182 Rename p
-    // #TEST#: R183 Rename F7Base
-    // #TEST#: R184 Rename x
+    // #TEST#: R181 Rename p
+    // #TEST#: R182 Rename F7Base
+    // #TEST#: R183 Rename x
     int &p = F7Base::x;
-    // #TEST#: R185 Rename q
-    // #TEST#: R186 Rename F7Derived
-    // #TEST#: R187 Rename x
+    // #TEST#: R184 Rename q
+    // #TEST#: R185 Rename F7Derived
+    // #TEST#: R186 Rename x
     int &q = F7Derived::x;
-    // #TEST#: R188 Rename p
+    // #TEST#: R187 Rename p
     require_equal(7, p);
-    // #TEST#: R189 Rename q
+    // #TEST#: R188 Rename q
     require_equal(7, q);
 }
 
@@ -606,7 +605,7 @@ void TestRename()
     u.member(2);
     float uf = u.member();
     SU su;
-    // #TEST#: R190 Rename anonymous union member
+    // #TEST#: R189 Rename anonymous union member
     su.x = 1;
     su.f = 1.0f;
     su.d = 1.0;
@@ -614,16 +613,16 @@ void TestRename()
     su.member(2);
     uf = su.member();
 
-    // #TEST#: R191 Rename MyClass
-    // #TEST#: R192 =R5 Rename Rename1 from scope qualifier
+    // #TEST#: R190 Rename MyClass
+    // #TEST#: R191 =R5 Rename Rename1 from scope qualifier
     Rename1::MyClass myClass;
     myClass.Operation();
 
-    // #TEST#: R193 Rename this variable
+    // #TEST#: R192 Rename this variable
     Rename1 test;
-    // #TEST#: R194 Rename this method
+    // #TEST#: R193 Rename this method
     test.Operation();
-    // #TEST#: R195 Rename this function
+    // #TEST#: R194 Rename this function
     TestRename1();
 
     {
@@ -632,34 +631,34 @@ void TestRename()
         xFoo.Operation();
     }
 
-    // #TEST#: R196 Rename the namespace X
-    // #TEST#: R197 Rename the class Rename1
-    // #TEST#: R198 Rename the variable test2
+    // #TEST#: R195 Rename the namespace X
+    // #TEST#: R196 Rename the class Rename1
+    // #TEST#: R197 Rename the variable test2
     X::Rename1 test2;
-    // #TEST#: R199 rename the variable y
-    // #TEST#: R200 rename the variable test2
-    // #TEST#: R201 rename the method Operation
-    // #TEST#: R202 rename the namespace X
-    // #TEST#: R203 rename the variable X::x
-    // #TEST#: R204 rename the variable X::y
-    // #TEST#: R205 rename the variable Y::x
+    // #TEST#: R198 rename the variable y
+    // #TEST#: R199 rename the variable test2
+    // #TEST#: R200 rename the method Operation
+    // #TEST#: R201 rename the namespace X
+    // #TEST#: R202 rename the variable X::x
+    // #TEST#: R203 rename the variable X::y
+    // #TEST#: R204 rename the variable Y::x
     int y = test2.Operation() + X::x + X::y + Y::x;
 
     float x = MACRO_NO_ARGS;
     x = MACRO_ONE_ARG(2.0f);
 
     {
-        // #TEST#: R206 Rename the namespace X
-        // #TEST#: R207 Rename the variable X::y
+        // #TEST#: R205 Rename the namespace X
+        // #TEST#: R206 Rename the variable X::y
         using X::y;
-        // #TEST#: R208 Rename y, which is really X::y
+        // #TEST#: R207 Rename y, which is really X::y
         y = -1;
     }
 
     y = 3;
     {
         int y = 3;
-        // #TEST#: R209 Rename y, which shadows outer scope y
+        // #TEST#: R208 Rename y, which shadows outer scope y
         y = 4;
         if (y != 4)
         {
@@ -671,41 +670,41 @@ void TestRename()
         throw std::runtime_error("R30 may have failed");
     }
 
-    // #TEST#: R210 Rename the variable y
+    // #TEST#: R209 Rename the variable y
     y++;
 
     using X::Rename1;
     Rename1 fromX;
     fromX.Operation();
 
-    // #TEST#: R211 Rename class Operations
-    // #TEST#: R212 Rename variable member
-    // #TEST#: R213 Rename function GetOperation
+    // #TEST#: R210 Rename class Operations
+    // #TEST#: R211 Rename variable member
+    // #TEST#: R212 Rename function GetOperation
     int (Operations::*member)() = GetOperation(true);
-    // #TEST#: R214 Rename variable member
-    // #TEST#: R215 Rename class Operations
-    // #TEST#: R216 Rename method Operation2
+    // #TEST#: R213 Rename variable member
+    // #TEST#: R214 Rename class Operations
+    // #TEST#: R215 Rename method Operation2
     member = &Operations::Operation2;
 
-    // #TEST#: R217 Rename class Operations
-    // #TEST#: R218 Rename variable ops
+    // #TEST#: R216 Rename class Operations
+    // #TEST#: R217 Rename variable ops
     Operations ops;
-    // #TEST#: R219 Rename variable ops
-    // #TEST#: R220 Rename variable member
+    // #TEST#: R218 Rename variable ops
+    // #TEST#: R219 Rename variable member
     (ops.*member)();
 
-    // #TEST#: R221 Rename variable ops2
+    // #TEST#: R220 Rename variable ops2
     Operations *ops2 = new Operations();
-    // #TEST#: R222 Rename variable ops2
-    // #TEST#: R223 Rename variable member
+    // #TEST#: R221 Rename variable ops2
+    // #TEST#: R222 Rename variable member
     (ops2->*member)();
-    // #TEST#: R224 Rename variable ops2
+    // #TEST#: R223 Rename variable ops2
     delete ops2;
 
-    // #TEST#: R225 Rename variable ops3
+    // #TEST#: R224 Rename variable ops3
     Operations &ops3 = ops;
-    // #TEST#: R226 Rename variable ops3
-    // #TEST#: R227 Rename variable member
+    // #TEST#: R225 Rename variable ops3
+    // #TEST#: R226 Rename variable member
     ((&ops3)->*member)();
 
     int x1 = Renamed;
@@ -714,42 +713,40 @@ void TestRename()
 
     int loop = 0;
 
-    // #TEST#: R228 Rename label
+    // #TEST#: R227 Rename label
 restart:
     loop++;
     if (loop < 5)
     {
-        // #TEST#: R229 Rename label
+        // #TEST#: R228 Rename label
         goto restart;
     }
     REQUIRE_EQUAL(5, loop);
 
     {
-        // #TEST#: R230 Rename variable abstract
+        // #TEST#: R229 Rename variable abstract
         int abstract = 1;
-        // #TEST#: R231 Rename variable array
+        // #TEST#: R230 Rename variable array
         int array = abstract + 1;
-        // #TEST#: R232 Rename variable delegate
+        // #TEST#: R231 Rename variable delegate
         int delegate = array + 1;
-        // #TEST#: R233 Rename variable event
+        // #TEST#: R232 Rename variable event
         int event = delegate + 1;
-        // #TEST#: R234 Rename variable gcnew
+        // #TEST#: R233 Rename variable gcnew
         int gcnew = event + 1;
-        // #TEST#: R235 Rename variable interface
+        // #TEST#: R234 Rename variable interface
         int interface = gcnew + 1;
-        // #TEST#: R236 Rename variable internal
+        // #TEST#: R235 Rename variable internal
         int internal = interface + 1;
-        // #TEST#: R237 (deprecated)
-        // #TEST#: R238 (deprecated)
-        // #TEST#: R239 Rename variable override
+        // #TEST#: R236 Rename variable override
         int override = internal + 1;
-        // #TEST#: R240 Rename variable pin_ptr
+        // #TEST#: R237 Rename variable pin_ptr
         int pin_ptr = override + 1;
-        // #TEST#: R241 Rename variable property
+        // #TEST#: R238 Rename variable property
         int property = pin_ptr + 1;
-        // #TEST#: R242 Rename variable safe_cast
+        // #TEST#: R239 Rename variable safe_cast
         int safe_cast = property + 1;
-        // #TEST#: R243 Rename variable sealed
+        // #TEST#: R240 Rename variable sealed
         int sealed = safe_cast + 1;
         int x = sealed + 1;
         std::string dashes;

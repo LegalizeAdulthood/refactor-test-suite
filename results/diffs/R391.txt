@@ -1,20 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..17923d0 100644
+index e73e1db..d42bc48 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -521,13 +521,13 @@ void f16()
-         int x = 3;
-         // #TEST#: R388 Rename y
-         // #TEST#: R389 Rename j
--        int y = j;
-+        int goink = j;
-     };
-     X v;
-     // #TEST#: R390 Rename x
-     require_equal(3, v.x);
-     // #TEST#: R391 Rename y
--    require_equal(j, v.y);
-+    require_equal(j, v.goink);
- }
- 
- // #TEST#: R392 Rename Args
+@@ -537,7 +537,7 @@ struct Initializer
+     // #TEST#: R390 Rename Args
+     // #TEST#: R391 Rename args constructor argument
+     // #TEST#: R392 Rename args initializer
+-    Initializer(Args... args) : t(args...)
++    Initializer(Args... goink) : t(goink...)
+     {
+     }
+     // #TEST#: R393 Rename Args

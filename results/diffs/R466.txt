@@ -1,17 +1,28 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..77fe9fe 100644
+index e73e1db..a5d31d7 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -792,10 +792,10 @@ void f26()
-     // #TEST#: R467 Rename nl in expression in lambda body
-     // #TEST#: R468 Rename s in lambda argument list
-     require_equal(std::string{"hello world!\n"},
--                  [](const std::string &s)
-+                  [](const std::string &goink)
-                   {
-                       std::string nl{"\n"};
--                      return s + nl;
-+                      return goink + nl;
+@@ -799,7 +799,7 @@ void f26()
                    }(s));
  
-     // #TEST#: R469 Rename E
+     // #TEST#: R466 Rename E
+-    enum class E
++    enum class Goink
+     {
+         one,
+         // #TEST#: R467 Rename two
+@@ -808,12 +808,12 @@ void f26()
+     };
+     // #TEST#: R468 Rename E in declaration
+     // #TEST#: R469 Rename E in initialization expression
+-    E e = E::one;
++    Goink e = Goink::one;
+     // #TEST#: R470 Rename E in first argument to require_equal
+     // #TEST#: R471 Rename E in lambda return type
+     // #TEST#: R472 Rename E in lambda body
+     // #TEST#: R473 Rename two in lambda body
+-    require_equal(static_cast<int>(E::two), static_cast<int>([]() -> E { return E::two; }()));
++    require_equal(static_cast<int>(Goink::two), static_cast<int>([]() -> Goink { return Goink::two; }()));
+ }
+ 
+ void f27()

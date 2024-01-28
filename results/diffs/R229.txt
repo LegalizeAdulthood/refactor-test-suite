@@ -1,19 +1,16 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..b30b5c1 100644
+index d1c1283..bd0bb3b 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -715,12 +715,12 @@ void TestRename()
-     int loop = 0;
+@@ -726,9 +726,9 @@ restart:
  
-     // #TEST#: R228 Rename label
--restart:
-+goink:
-     loop++;
-     if (loop < 5)
      {
-         // #TEST#: R229 Rename label
--        goto restart;
-+        goto goink;
-     }
-     REQUIRE_EQUAL(5, loop);
- 
+         // #TEST#: R229 Rename variable abstract
+-        int abstract = 1;
++        int goink = 1;
+         // #TEST#: R230 Rename variable array
+-        int array = abstract + 1;
++        int array = goink + 1;
+         // #TEST#: R231 Rename variable delegate
+         int delegate = array + 1;
+         // #TEST#: R232 Rename variable event

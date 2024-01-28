@@ -5,30 +5,30 @@ index 96b65ff..caf0cfb 100644
 @@ -93,48 +93,48 @@ void f6()
  void f7()
  {
-     // #TEST#: R271 Rename X
+     // #TEST#: R268 Rename X
 -    struct X
 +    struct Goink
      {
-         // #TEST#: R272 Rename X via default c'tor
+         // #TEST#: R269 Rename X via default c'tor
 -        X() = default;
 +        Goink() = default;
-         // #TEST#: R273 Rename X via default copy c'tor
-         // #TEST#: R274 Rename X via default copy c'tor argument
+         // #TEST#: R270 Rename X via default copy c'tor
+         // #TEST#: R271 Rename X via default copy c'tor argument
 -        X(const X &rhs) = default;
 +        Goink(const Goink &rhs) = default;
-         // #TEST#: R275 Rename X via default move c'tor
-         // #TEST#: R276 Rename X via default move c'tor argument
+         // #TEST#: R272 Rename X via default move c'tor
+         // #TEST#: R273 Rename X via default move c'tor argument
 -        X(X &&rhs) = default;
 +        Goink(Goink &&rhs) = default;
-         // #TEST#: R277 Rename X via default d'tor
+         // #TEST#: R274 Rename X via default d'tor
 -        ~X() = default;
 +        ~Goink() = default;
-         // #TEST#: R278 Rename X via default copy assignment return type
-         // #TEST#: R279 Rename X via default copy assignment argument
+         // #TEST#: R275 Rename X via default copy assignment return type
+         // #TEST#: R276 Rename X via default copy assignment argument
 -        X &operator=(const X &rhs) = default;
 +        Goink &operator=(const Goink &rhs) = default;
-         // #TEST#: R280 Rename X via default move assignment return type
-         // #TEST#: R281 Rename X via default move assignment argument
+         // #TEST#: R277 Rename X via default move assignment return type
+         // #TEST#: R278 Rename X via default move assignment argument
 -        X &operator=(X &&rhs) = default;
 +        Goink &operator=(Goink &&rhs) = default;
  

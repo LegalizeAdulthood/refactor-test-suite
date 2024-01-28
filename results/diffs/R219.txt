@@ -1,26 +1,42 @@
 diff --git a/RefactorTest/Rename.cpp b/RefactorTest/Rename.cpp
-index d1c1283..7bf18e1 100644
+index d1c1283..9db5d91 100644
 --- a/RefactorTest/Rename.cpp
 +++ b/RefactorTest/Rename.cpp
-@@ -689,10 +689,10 @@ void TestRename()
+@@ -681,24 +681,24 @@ void TestRename()
+     // #TEST#: R210 Rename class Operations
+     // #TEST#: R211 Rename variable member
+     // #TEST#: R212 Rename function GetOperation
+-    int (Operations::*member)() = GetOperation(true);
++    int (Operations::*goink)() = GetOperation(true);
+     // #TEST#: R213 Rename variable member
+     // #TEST#: R214 Rename class Operations
+     // #TEST#: R215 Rename method Operation2
+-    member = &Operations::Operation2;
++    goink = &Operations::Operation2;
  
-     // #TEST#: R217 Rename class Operations
+     // #TEST#: R216 Rename class Operations
+     // #TEST#: R217 Rename variable ops
+     Operations ops;
      // #TEST#: R218 Rename variable ops
--    Operations ops;
-+    Operations goink;
-     // #TEST#: R219 Rename variable ops
-     // #TEST#: R220 Rename variable member
+     // #TEST#: R219 Rename variable member
 -    (ops.*member)();
-+    (goink.*member)();
++    (ops.*goink)();
  
-     // #TEST#: R221 Rename variable ops2
+     // #TEST#: R220 Rename variable ops2
      Operations *ops2 = new Operations();
-@@ -703,7 +703,7 @@ void TestRename()
+     // #TEST#: R221 Rename variable ops2
+     // #TEST#: R222 Rename variable member
+-    (ops2->*member)();
++    (ops2->*goink)();
+     // #TEST#: R223 Rename variable ops2
      delete ops2;
  
+@@ -706,7 +706,7 @@ void TestRename()
+     Operations &ops3 = ops;
      // #TEST#: R225 Rename variable ops3
--    Operations &ops3 = ops;
-+    Operations &ops3 = goink;
-     // #TEST#: R226 Rename variable ops3
-     // #TEST#: R227 Rename variable member
-     ((&ops3)->*member)();
+     // #TEST#: R226 Rename variable member
+-    ((&ops3)->*member)();
++    ((&ops3)->*goink)();
+ 
+     int x1 = Renamed;
+ 

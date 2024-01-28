@@ -1,36 +1,22 @@
 diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
-index 2f9380a..f3920b7 100644
+index 2f9380a..ae49007 100644
 --- a/RefactorTest/RenameCpp14.cpp
 +++ b/RefactorTest/RenameCpp14.cpp
-@@ -22,7 +22,7 @@ template <class T>
- // #TEST#: R617 Rename template parameter T
- // #TEST#: R618 Rename variable template pi
- // #TEST#: R619 Rename use of template parameter T
--constexpr T pi = T(3.1415926535897932385L);
-+constexpr T goink = T(3.1415926535897932385L);
+@@ -25,14 +25,14 @@ template <class T>
+ constexpr T pi = T(3.1415926535897932385L);
  
- // #TEST#: R620 Rename template parameter T
- template <class T>
-@@ -32,7 +32,7 @@ T circularArea(T r)
+ // #TEST#: R617 Rename template parameter T
+-template <class T>
++template <class Goink>
+ // #TEST#: R618 Rename first use of T
+ // #TEST#: R619 Rename second use of T
+-T circularArea(T r)
++Goink circularArea(Goink r)
  {
-     // #TEST#: R623 Rename use of pi
-     // #TEST#: R624 Rename use of T
+     // #TEST#: R620 Rename use of pi
+     // #TEST#: R621 Rename use of T
 -    return pi<T> * r * r;
-+    return goink<T> * r * r;
++    return pi<Goink> * r * r;
  }
  
  }    // namespace
-@@ -46,11 +46,11 @@ void f1()
-     {
-         using namespace RenameCpp14;
-         // #TEST#: R625 Rename use of pi
--        REQUIRE_EQUAL(pi<float>, circularArea(1.0f));
-+        REQUIRE_EQUAL(goink<float>, circularArea(1.0f));
-     }
- 
-     // #TEST#: R626 Rename use of pi
--    REQUIRE_EQUAL(RenameCpp14::pi<float>, RenameCpp14::circularArea(1.0f));
-+    REQUIRE_EQUAL(RenameCpp14::goink<float>, RenameCpp14::circularArea(1.0f));
- }
- 
- void f2()

@@ -1,22 +1,38 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..cc087ce 100644
+index e73e1db..f8b6d90 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1194,7 +1194,7 @@ void f44()
-         // #TEST#: R586 Rename method set
-         // #TEST#: R587 Rename parameter s
-         // #TEST#: R588 Rename parameter s in method body
--        void set(std::string &&s)
-+        void goink(std::string &&s)
-         {
-             m_s = s + " rvalue";
+@@ -1176,7 +1176,7 @@ void f44()
          }
-@@ -1211,7 +1211,7 @@ void f44()
-     require_equal(std::string{"meh lvalue"}, xx.s());
  
-     // #TEST#: R590 Rename method set
--    x.set(std::string{"bar"});
-+    x.goink(std::string{"bar"});
-     require_equal(std::string{"bar rvalue"}, x.s());
+         // #TEST#: R580 Rename method s
+-        const std::string &s() const &
++        const std::string &goink() const &
+         {
+             return m_s;
+         }
+@@ -1204,20 +1204,20 @@ void f44()
+     };
+     X x(std::string{"foo"});
+     // #TEST#: R586 Rename method s
+-    require_equal(std::string{"foo rvalue"}, x.s());
++    require_equal(std::string{"foo rvalue"}, x.goink());
+ 
+     const std::string ss{"meh"};
+     X xx(ss);
+-    require_equal(std::string{"meh lvalue"}, xx.s());
++    require_equal(std::string{"meh lvalue"}, xx.goink());
+ 
+     // #TEST#: R587 Rename method set
+     x.set(std::string{"bar"});
+-    require_equal(std::string{"bar rvalue"}, x.s());
++    require_equal(std::string{"bar rvalue"}, x.goink());
  
      std::string s2{"meh"};
+     // #TEST#: R588 Rename method set
+     x.set(s2);
+-    require_equal(std::string{"meh lvalue"}, x.s());
++    require_equal(std::string{"meh lvalue"}, x.goink());
+ 
+     // #TEST#: R589 Rename method s
+     require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.s());

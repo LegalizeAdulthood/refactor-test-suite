@@ -1,22 +1,16 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..e8c1c97 100644
+index e73e1db..bd35a11 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1026,7 +1026,7 @@ void f35()
- inline namespace Inline36
+@@ -1050,9 +1050,9 @@ void f36()
+ void f37()
  {
- // #TEST#: R544 Rename x36
--int x36 = 10;
-+int goink = 10;
- // #TEST#: R545 Rename d36
- double d36 = 20.5;
- // #TEST#: R546 Rename s36
-@@ -1040,7 +1040,7 @@ std::string s36()
- void f36()
- {
-     // #TEST#: R547 Rename x36
--    require_equal(10, x36);
-+    require_equal(10, goink);
-     // #TEST#: R548 Rename d36
-     require_equal(20.5, d36);
-     // #TEST#: R549 Rename s36
+     // #TEST#: R547 Rename s1
+-    const char *s1{u8"foo"};
++    const char *goink{u8"foo"};
+     // #TEST#: R548 Rename s1
+-    require_equal(std::string{"foo"}, std::string{s1});
++    require_equal(std::string{"foo"}, std::string{goink});
+ 
+     // #TEST#: R549 Rename s2
+     const char16_t *s2{u"foo"};

@@ -1,19 +1,35 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d55964a..fdd1fe0 100644
+index d55964a..e6f7f5a 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -49,12 +49,12 @@ public:
-         // #TEST#: R658 Rename parameter val
-         // #TEST#: R659 Rename use of val
-         // #TEST#: R660 Rename use of m_i
+@@ -49,24 +49,24 @@ public:
+         // #TEST#: R655 Rename parameter val
+         // #TEST#: R656 Rename use of val
+         // #TEST#: R657 Rename use of m_i
 -        auto fn = [*this](int &val) { val = 3 + m_i; };
-+        auto goink = [*this](int &val) { val = 3 + m_i; };
-         // #TEST#: R661 Rename use of m_i
-         m_i = 1;
-         // #TEST#: R662 Rename use of fn
-         // #TEST#: R663 Rename use of m_i
++        auto fn = [*this](int &val) { val = 3 + m_goink; };
+         // #TEST#: R658 Rename use of m_i
+-        m_i = 1;
++        m_goink = 1;
+         // #TEST#: R659 Rename use of fn
+         // #TEST#: R660 Rename use of m_i
 -        fn(m_i);
-+        goink(m_i);
-         // #TEST#: R664 Rename use of m_i
-         return m_i;
++        fn(m_goink);
+         // #TEST#: R661 Rename use of m_i
+-        return m_i;
++        return m_goink;
      }
+ 
+     int i() const
+     {
+-        return m_i;
++        return m_goink;
+     }
+ 
+ private:
+     // #TEST#: R662 Rename member m_i
+-    int m_i{10};
++    int m_goink{10};
+ };
+ 
+ // #TEST#: R663 Rename template parameter T

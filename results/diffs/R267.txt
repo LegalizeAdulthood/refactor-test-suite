@@ -5,24 +5,24 @@ index 96b65ff..bd3a03d 100644
 @@ -73,21 +73,21 @@ void f5()
  void f6()
  {
-     // #TEST#: R267 Rename X used in alignas specifier
+     // #TEST#: R264 Rename X used in alignas specifier
 -    struct alignas(int) X
 +    struct alignas(int) Goink
      {
          float y;
          char b;
      };
-     // #TEST#: R268 Rename X in alignas specifier
+     // #TEST#: R265 Rename X in alignas specifier
 -    struct alignas(X) Y
 +    struct alignas(Goink) Y
      {
          float y;
          char b;
      };
-     // #TEST#: R269 Rename X used in alignas specifier
+     // #TEST#: R266 Rename X used in alignas specifier
 -    require_equal(alignof(int), alignof(X));
 +    require_equal(alignof(int), alignof(Goink));
-     // #TEST#: R270 Rename X used in alignas specifier
+     // #TEST#: R267 Rename X used in alignas specifier
 -    require_equal(alignof(X), alignof(Y));
 +    require_equal(alignof(Goink), alignof(Y));
  }

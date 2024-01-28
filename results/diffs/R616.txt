@@ -5,14 +5,14 @@ index 2f9380a..4bfdca8 100644
 @@ -18,11 +18,11 @@ namespace
  {
  
- // #TEST#: R616 Rename template parameter T
+ // #TEST#: R613 Rename template parameter T
 -template <class T>
 +template <class Goink>
- // #TEST#: R617 Rename template parameter T
- // #TEST#: R618 Rename variable template pi
- // #TEST#: R619 Rename use of template parameter T
+ // #TEST#: R614 Rename template parameter T
+ // #TEST#: R615 Rename variable template pi
+ // #TEST#: R616 Rename use of template parameter T
 -constexpr T pi = T(3.1415926535897932385L);
 +constexpr Goink pi = Goink(3.1415926535897932385L);
  
- // #TEST#: R620 Rename template parameter T
+ // #TEST#: R617 Rename template parameter T
  template <class T>

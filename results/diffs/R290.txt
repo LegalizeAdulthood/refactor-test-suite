@@ -5,30 +5,30 @@ index 96b65ff..1dec1e7 100644
 @@ -141,31 +141,31 @@ void f7()
  void f8()
  {
-     // #TEST#: R282 Rename X
+     // #TEST#: R279 Rename X
 -    struct X
 +    struct Goink
      {
-         // #TEST#: R283 Rename X via deleted c'tor
+         // #TEST#: R280 Rename X via deleted c'tor
 -        X() = delete;
 +        Goink() = delete;
-         // #TEST#: R284 Rename X via deleted copy c'tor
-         // #TEST#: R285 Rename X via deleted copy c'tor argument
+         // #TEST#: R281 Rename X via deleted copy c'tor
+         // #TEST#: R282 Rename X via deleted copy c'tor argument
 -        X(const X &rhs) = delete;
 +        Goink(const Goink &rhs) = delete;
-         // #TEST#: R286 Rename X via deleted move c'tor
-         // #TEST#: R287 Rename X via deleted move c'tor argument
+         // #TEST#: R283 Rename X via deleted move c'tor
+         // #TEST#: R284 Rename X via deleted move c'tor argument
 -        X(X &&rhs) = delete;
 +        Goink(Goink &&rhs) = delete;
-         // #TEST#: R288 Rename X via deleted d'tor
+         // #TEST#: R285 Rename X via deleted d'tor
 -        ~X() = delete;
 +        ~Goink() = delete;
-         // #TEST#: R289 Rename X via deleted copy assignment return type
-         // #TEST#: R290 Rename X via deleted copy assignment argument
+         // #TEST#: R286 Rename X via deleted copy assignment return type
+         // #TEST#: R287 Rename X via deleted copy assignment argument
 -        X &operator=(const X &rhs) = delete;
 +        Goink &operator=(const Goink &rhs) = delete;
-         // #TEST#: R291 Rename X via deleted move assignment return type
-         // #TEST#: R292 Rename X via deleted move assignment argument
+         // #TEST#: R288 Rename X via deleted move assignment return type
+         // #TEST#: R289 Rename X via deleted move assignment argument
 -        X &operator=(X &&rhs) = delete;
 +        Goink &operator=(Goink &&rhs) = delete;
  
@@ -36,7 +36,7 @@ index 96b65ff..1dec1e7 100644
          int y = 2;
          std::string s = "foo";
      };
-     // #TEST#: R293 Rename X
+     // #TEST#: R290 Rename X
 -    X *x = nullptr;
 +    Goink *x = nullptr;
  }

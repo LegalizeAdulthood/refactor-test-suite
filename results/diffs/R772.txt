@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index f7afd67..a14e440 100644
+index c346b5d..0ba9570 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -333,11 +333,11 @@ template <typename... Args>
- // #TEST#: R768 Rename parameter init
- // #TEST#: R769 Rename use of Args
- // #TEST#: R770 Rename parameter args
--bool allBinaryRight(bool init, Args... args)
-+bool allBinaryRight(bool goink, Args... args)
+@@ -346,11 +346,11 @@ template <typename... Args>
+ // #TEST#: R772 Rename parameter init
+ // #TEST#: R773 Rename use of Args
+ // #TEST#: R774 Rename parameter args
+-bool allBinaryLeft(bool init, Args... args)
++bool allBinaryLeft(bool goink, Args... args)
  {
-     // #TEST#: R771 Rename use of args
-     // #TEST#: R772 Rename use of init
--    return (args && ... && init);
-+    return (args && ... && goink);
+     // #TEST#: R775 Rename use of init
+     // #TEST#: R776 Rename use of args
+-    return (init && ... && args);
++    return (goink && ... && args);
  }
  
- // #TEST#: R773 Rename template parameter Args
+ void f7()

@@ -1,22 +1,22 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index 78188c1..fd80f38 100644
+index e73e1db..72994a8 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -1176,13 +1176,13 @@ void f44()
-     require_equal(std::string{"meh rvalue rvalue"}, X{std::string{"meh"}}.s());
- 
-     // #TEST#: R593 Rename variable x2
--    std::string &&x2 = std::string{"hello"} + ' ' + std::string{"world!"};
-+    std::string &&Goink = std::string{"hello"} + ' ' + std::string{"world!"};
-     // #TEST#: R594 Rename variable x2
--    require_equal(std::string{"hello world!"}, x2);
-+    require_equal(std::string{"hello world!"}, Goink);
-     // #TEST#: R595 Rename variable x2
--    x2 += "  goodbye!";
-+    Goink += "  goodbye!";
-     // #TEST#: R596 Rename variable x2
--    require_equal(std::string{"hello world!  goodbye!"}, x2);
-+    require_equal(std::string{"hello world!  goodbye!"}, Goink);
+@@ -1235,7 +1235,7 @@ void f44()
+ template <typename T>
+ // #TEST#: R594 Rename function g45_aux
+ // #TEST#: R595 Rename parameter x
+-T g45_aux(T &&x)
++T goink(T &&x)
+ {
+     // #TEST#: R596 Rename parameter x
+     T y(x);
+@@ -1249,7 +1249,7 @@ T f45_aux(T &&x)
+ {
+     // #TEST#: R599 Rename function g45_aux
+     // #TEST#: R600 Rename parameter x
+-    return g45_aux(std::forward<T>(x));
++    return goink(std::forward<T>(x));
  }
  
- }
+ void f45()

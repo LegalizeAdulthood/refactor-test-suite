@@ -1,38 +1,23 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..4c7ecfe 100644
+index e73e1db..b53798c 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -699,20 +699,20 @@ void f23()
- void f24()
- {
-     // #TEST#: R430 Rename X
--    struct X
-+    struct Goink
-     {
-         // #TEST#: R431 Rename constructor X
-         // #TEST#: R432 Rename delegated constructor X
--        X() : X(10)
-+        Goink() : Goink(10)
-         {
-         }
-         // #TEST#: R433 Rename constructor X
-         // #TEST#: R434 Rename delegated constructor X
--        X(int x) : X(x, "hello world!")
-+        Goink(int x) : Goink(x, "hello world!")
-         {
-         }
-         // #TEST#: R435 Rename constructor X
--        X(int num, const char *text) : x(num), s(text)
-+        Goink(int num, const char *text) : x(num), s(text)
-         {
-         }
- 
-@@ -720,7 +720,7 @@ void f24()
-         std::string s;
-     };
-     // #TEST#: R436 Rename X
--    X x;
-+    Goink x;
-     require_equal(10, x.x);
-     require_equal(std::string{"hello world!"}, x.s);
+@@ -726,15 +726,15 @@ void f24()
  }
+ 
+ // #TEST#: R434 Rename T
+-template <typename T, typename U>
++template <typename Goink, typename U>
+ // #TEST#: R435 Rename arg in parameter list
+ // #TEST#: R436 Rename T
+ // #TEST#: R437 Rename arg in decltype expression
+-auto f25_aux(U arg) -> decltype(T(arg))
++auto f25_aux(U arg) -> decltype(Goink(arg))
+ {
+     // #TEST#: R438 Rename T
+     // #TEST#: R439 Rename arg
+-    return T(arg);
++    return Goink(arg);
+ }
+ 
+ void f25()

@@ -1,30 +1,13 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..08ad5ee 100644
+index e73e1db..230d13a 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -571,21 +571,21 @@ void f18()
- }
- 
- // #TEST#: R402 Rename Args
--template <typename... Args>
-+template <typename... Goink>
- struct f19_aux
- {
-     // #TEST#: R403 Rename Args
--    template <Args...>
-+    template <Goink...>
-     struct apply
+@@ -580,7 +580,7 @@ struct f19_aux
      {
-         // #TEST#: R404 Rename Args
-         // #TEST#: R405 Rename args
+         // #TEST#: R401 Rename Args
+         // #TEST#: R402 Rename args
 -        apply(Args... args) : t(args...)
-+        apply(Goink... args) : t(args...)
++        apply(Args... goink) : t(goink...)
          {
          }
- 
-         // #TEST#: R406 Rename Args
--        std::tuple<Args...> t;
-+        std::tuple<Goink...> t;
-     };
- };
  

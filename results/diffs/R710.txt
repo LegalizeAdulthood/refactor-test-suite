@@ -3,14 +3,14 @@ index 3d0f364..bec4a5c 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -197,9 +197,9 @@ void f5()
-         // #TEST#: R710 Rename binding val2
-         // #TEST#: R711 Rename binding name2
-         // #TEST#: R712 Rename use of p
+         // #TEST#: R707 Rename binding val2
+         // #TEST#: R708 Rename binding name2
+         // #TEST#: R709 Rename use of p
 -        auto [val2, name2] = p;
 +        auto [goink, name2] = p;
-         // #TEST#: R713 Rename use of val2
+         // #TEST#: R710 Rename use of val2
 -        REQUIRE_EQUAL(1, val2);
 +        REQUIRE_EQUAL(1, goink);
-         // #TEST#: R714 Rename use of name2
+         // #TEST#: R711 Rename use of name2
          REQUIRE_EQUAL(std::string{"one"}, name2);
-         // #TEST#: R715 Rename binding val3
+         // #TEST#: R712 Rename binding val3

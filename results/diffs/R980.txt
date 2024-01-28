@@ -1,19 +1,17 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index d84e297..bab6de9 100644
+index d84e297..7940ff3 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -428,11 +428,11 @@ void f10()
-         REQUIRE_EQUAL(4.0f, t);
+@@ -443,10 +443,10 @@ void f10()
      }
      {
--        int t{2};
-+        int goink{2};
-         // #TEST#: R979 Rename use of autoSqrPtr
-         // #TEST#: R980 Rename use of t
--        autoSqrPtr(&t);
--        REQUIRE_EQUAL(4, t);
-+        autoSqrPtr(&goink);
-+        REQUIRE_EQUAL(4, goink);
+         // #TEST#: R980 Rename local variable t1
+-        int t1{1};
++        int goink{1};
+         // #TEST#: R981 Rename use of product
+         // #TEST#: R982 Rename use of t1
+-        REQUIRE_EQUAL(6, product(t1, 2, 3));
++        REQUIRE_EQUAL(6, product(goink, 2, 3));
+         // #TEST#: R983 Rename use of product
+         REQUIRE_EQUAL(6.0f, product(1.0f, 2.0f, 3.0f));
      }
-     {
-         float t{2.0f};

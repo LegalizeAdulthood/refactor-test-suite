@@ -5,18 +5,18 @@ index 96b65ff..054d501 100644
 @@ -213,7 +213,7 @@ void f10()
  }
  
- // #TEST#: R306 Rename Args
+ // #TEST#: R303 Rename Args
 -template <typename... Args>
 +template <typename... Goink>
- // #TEST#: R307 Rename X
+ // #TEST#: R304 Rename X
  class X
  {
 @@ -221,7 +221,7 @@ public:
-     // #TEST#: R308 Rename X
-     // #TEST#: R309 Rename Args
-     // #TEST#: R310 Rename args
+     // #TEST#: R305 Rename X
+     // #TEST#: R306 Rename Args
+     // #TEST#: R307 Rename args
 -    X(Args... args)
 +    X(Goink... args)
      {
          std::ostringstream result;
-         // #TEST#: R311 Rename args
+         // #TEST#: R308 Rename args

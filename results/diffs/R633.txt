@@ -1,30 +1,13 @@
 diff --git a/RefactorTest/RenameCpp14.cpp b/RefactorTest/RenameCpp14.cpp
-index 2f9380a..579666a 100644
+index 2f9380a..b1d3bf4 100644
 --- a/RefactorTest/RenameCpp14.cpp
 +++ b/RefactorTest/RenameCpp14.cpp
-@@ -79,14 +79,14 @@ void f3()
- void f4()
- {
-     // #TEST#: R633 Rename local variable i
--    int i{2};
-+    int goink{2};
-     // #TEST#: R634 Rename local variable fn
-     // #TEST#: R635 Rename local capture variable val
-     // #TEST#: R636 Rename local capture variable j
-     // #TEST#: R637 Rename use of i in capture expression
-     // #TEST#: R638 Rename use of val
-     // #TEST#: R639 Rename use of j
+@@ -86,7 +86,7 @@ void f4()
+     // #TEST#: R634 Rename use of i in capture expression
+     // #TEST#: R635 Rename use of val
+     // #TEST#: R636 Rename use of j
 -    auto fn = [val = 1, j = i] { return val + j; };
-+    auto fn = [val = 1, j = goink] { return val + j; };
-     // #TEST#: R640 Rename use of fn
++    auto fn = [val = 1, goink = i] { return val + goink; };
+     // #TEST#: R637 Rename use of fn
      REQUIRE_EQUAL(3, fn());
-     // #TEST#: R641 Rename local variable fn2
-@@ -95,7 +95,7 @@ void f4()
-     // #TEST#: R644 Rename use of i in capture expression
-     // #TEST#: R645 Rename use of val
-     // #TEST#: R646 Rename use of j
--    auto fn2 = [val = 1, j = i](int k) { return val + j + k; };
-+    auto fn2 = [val = 1, j = goink](int k) { return val + j + k; };
-     // #TEST#: R647 Rename use of fn2
-     REQUIRE_EQUAL(4, fn2(1));
- }
+     // #TEST#: R638 Rename local variable fn2

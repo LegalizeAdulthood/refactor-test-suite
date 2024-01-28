@@ -1,17 +1,13 @@
 diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
-index b319d77..fc67156 100644
+index 2aa7a68..847fbb2 100644
 --- a/RefactorTest/RenameCpp20.cpp
 +++ b/RefactorTest/RenameCpp20.cpp
-@@ -171,10 +171,10 @@ void f3()
-         // #TEST#: R903 Rename function sink
-         // #TEST#: R904 Rename local variable i
-         // #TEST#: R905 Rename use of v
--        for (sink(sum); const int i : v)
-+        for (sink(sum); const int goink : v)
-         {
-             // #TEST#: R906 Rename use of i
--            sum += i;
-+            sum += goink;
-         }
-         REQUIRE_EQUAL(1 + 2 + 3 + 4 + 5, sum);
-     }
+@@ -188,7 +188,7 @@ void f4()
+     // #TEST#: R906 Rename template parameter T
+     // #TEST#: R907 Rename use of T
+     // #TEST#: R908 Rename use of N
+-    auto fn = []<size_t N, typename T> { return std::array<T, N>{}; };
++    auto fn = []<size_t N, typename Goink> { return std::array<Goink, N>{}; };
+     // #TEST#: R909 Rename type alias T
+     using T = int;
+     // #TEST#: R910 Rename local constant N

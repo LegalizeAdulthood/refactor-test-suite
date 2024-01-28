@@ -5,21 +5,21 @@ index cdd8233..13d6287 100644
 @@ -77,18 +77,18 @@ void f1()
      // floating-point type comparison
      {
-         // #TEST#: R869 Rename x
+         // #TEST#: R866 Rename x
 -        float x{1.0f};
 +        float goink{1.0f};
-         // #TEST#: R870 Rename y
+         // #TEST#: R867 Rename y
          float y{2.0f};
-         // #TEST#: R871 Rename first use of x
-         // #TEST#: R872 Rename second use of x
+         // #TEST#: R868 Rename first use of x
+         // #TEST#: R869 Rename second use of x
 -        REQUIRE_EQUAL(std::partial_ordering::equivalent, x <=> x);
 +        REQUIRE_EQUAL(std::partial_ordering::equivalent, goink <=> goink);
-         // #TEST#: R873 Rename use of x
-         // #TEST#: R874 Rename use of y
+         // #TEST#: R870 Rename use of x
+         // #TEST#: R871 Rename use of y
 -        REQUIRE_EQUAL(std::partial_ordering::less, x <=> y);
 +        REQUIRE_EQUAL(std::partial_ordering::less, goink <=> y);
-         // #TEST#: R875 Rename use of y
-         // #TEST#: R876 Rename use of x
+         // #TEST#: R872 Rename use of y
+         // #TEST#: R873 Rename use of x
 -        REQUIRE_EQUAL(std::partial_ordering::greater, y <=> x);
 +        REQUIRE_EQUAL(std::partial_ordering::greater, y <=> goink);
      }

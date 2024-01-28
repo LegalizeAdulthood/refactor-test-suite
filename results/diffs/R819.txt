@@ -1,20 +1,16 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d7d8359..c9fcc53 100644
+index d7d8359..0555fb2 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -459,13 +459,13 @@ struct Container
- };
- 
- // #TEST#: R814 Rename template parameter Iter
--template <typename Iter>
-+template <typename Goink>
- // #TEST#: R815 Rename first use of Container
- // #TEST#: R816 Rename first use of Iter
- // #TEST#: R817 Rename second use of Iter
- // #TEST#: R818 Rename second use of Container
- // #TEST#: R819 Rename third use of Iter
--Container(Iter begin, Iter end)->Container<typename std::iterator_traits<Iter>::value_type>;
-+Container(Goink begin, Goink end)->Container<typename std::iterator_traits<Goink>::value_type>;
- 
- void f9()
+@@ -471,9 +471,9 @@ void f9()
  {
+     // #TEST#: R817 Rename use of Container
+     // #TEST#: R818 Rename local variable c1
+-    const Container c1{7};
++    const Container goink{7};
+     // #TEST#: R819 Rename use of c1
+-    REQUIRE_EQUAL(1, c1.m_how);
++    REQUIRE_EQUAL(1, goink.m_how);
+     std::vector vals{1.0f, 2.0f, 3.0f};
+     // #TEST#: R820 Rename use of Container
+     // #TEST#: R821 Rename local variable c2

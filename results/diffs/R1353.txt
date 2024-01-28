@@ -1,19 +1,28 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 21c29d3..32de857 100644
+index 977575b..4385d42 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -819,11 +819,11 @@ public:
-     // #TEST#: R1349 Rename parameter rhs
-     // #TEST#: R1350 Rename first use of lhs
-     // #TEST#: R1351 Rename first use of rhs
+@@ -844,11 +844,11 @@ public:
+ // #TEST#: R1351 Rename template parameter T
+ // #TEST#: R1352 Rename template parameter U
+ // #TEST#: R1353 Rename use of T
+-template <typename T, typename U = T>
++template <typename Goink, typename U = Goink>
+ // #TEST#: R1354 Rename concept Multiplicable
+ // #TEST#: R1355 Rename use of T
+ // #TEST#: R1356 Rename use of U
+-    requires Multiplicable<T, U>
++    requires Multiplicable<Goink, U>
+ struct ProductStruct1
+ {
+     // #TEST#: R1357 Rename use of T
+@@ -857,7 +857,7 @@ struct ProductStruct1
+     // #TEST#: R1360 Rename parameter rhs
+     // #TEST#: R1361 Rename first use of lhs
+     // #TEST#: R1362 Rename first use of rhs
 -    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
-+    auto operator()(T lhs, U goink) const -> decltype(lhs * goink)
++    auto operator()(Goink lhs, U rhs) const -> decltype(lhs * rhs)
      {
-         // #TEST#: R1352 Rename lhs
-         // #TEST#: R1353 Rename rhs
--        return lhs * rhs;
-+        return lhs * goink;
-     }
- };
- 
+         // #TEST#: R1363 Rename lhs
+         // #TEST#: R1364 Rename rhs
 

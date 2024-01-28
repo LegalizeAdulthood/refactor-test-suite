@@ -1,22 +1,18 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..0279d01 100644
+index e73e1db..d71d63d 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -394,7 +394,7 @@ char32_t operator""_xc4(char32_t value)
- // #TEST#: R340 Rename xs
- // #TEST#: R341 Rename text
- // #TEST#: R342 Rename len
+@@ -394,11 +394,11 @@ char32_t operator""_xc4(char32_t value)
+ // #TEST#: R337 Rename xs
+ // #TEST#: R338 Rename text
+ // #TEST#: R339 Rename len
 -std::string operator""_xs(const char *text, std::size_t len)
-+std::string operator""_goink(const char *text, std::size_t len)
++std::string operator""_xs(const char *goink, std::size_t len)
  {
-     // #TEST#: R343 Rename text
-     // #TEST#: R344 Rename len
-@@ -461,7 +461,7 @@ void f13()
-     // #TEST#: R368 Rename xc4
-     require_equal(U'c', U'c'_xc4);
-     // #TEST#: R369 Rename xs
--    require_equal(std::string{"foo"}, "foo"_xs);
-+    require_equal(std::string{"foo"}, "foo"_goink);
-     // #TEST#: R370 Rename xs2
-     require_equal(std::string{"foo"}, narrow(L"foo"_xs2));
-     // #TEST#: R371 Rename xs3
+     // #TEST#: R340 Rename text
+     // #TEST#: R341 Rename len
+-    return std::string(text, len);
++    return std::string(goink, len);
+ }
+ 
+ template <typename T>

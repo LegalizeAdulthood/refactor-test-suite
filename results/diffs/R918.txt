@@ -4,16 +4,16 @@ index 2aa7a68..b7ec7c1 100644
 +++ b/RefactorTest/RenameCpp20.cpp
 @@ -206,12 +206,12 @@ void f4()
  
- // #TEST#: R917 Template parameter T
- // #TEST#: R918 Template parameter Args
+ // #TEST#: R914 Template parameter T
+ // #TEST#: R915 Template parameter Args
 -template <typename T, typename... Args>
 +template <typename T, typename... Goink>
- // #TEST#: R919 Rename first use of T
- // #TEST#: R920 Rename second use of T
- // #TEST#: R921 Rename use of Args
- // #TEST#: R922 Rename parameter args
+ // #TEST#: R916 Rename first use of T
+ // #TEST#: R917 Rename second use of T
+ // #TEST#: R918 Rename use of Args
+ // #TEST#: R919 Rename parameter args
 -T f5Fn(T first, Args... args)
 +T f5Fn(T first, Goink... args)
  {
-     // #TEST#: R923 Rename local variable fn
-     // #TEST#: R924 Rename first use of first
+     // #TEST#: R920 Rename local variable fn
+     // #TEST#: R921 Rename first use of first

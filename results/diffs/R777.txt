@@ -1,18 +1,19 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index c346b5d..44cccaa 100644
+index c346b5d..c2d7a11 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -346,11 +346,11 @@ template <typename... Args>
- // #TEST#: R775 Rename parameter init
- // #TEST#: R776 Rename use of Args
- // #TEST#: R777 Rename parameter args
--bool allBinaryLeft(bool init, Args... args)
-+bool allBinaryLeft(bool init, Args... goink)
- {
-     // #TEST#: R778 Rename use of init
-     // #TEST#: R779 Rename use of args
--    return (init && ... && args);
-+    return (init && ... && goink);
- }
- 
- void f7()
+@@ -384,11 +384,11 @@ void f8()
+         // #TEST#: R777 Rename local variable p
+         // #TEST#: R778 Rename use of f1
+         // #TEST#: R779 Rename use of i1
+-        std::pair p{f1, i1};
++        std::pair goink{f1, i1};
+         // #TEST#: R780 Rename use of p
+-        REQUIRE_EQUAL(1.0f, p.first);
++        REQUIRE_EQUAL(1.0f, goink.first);
+         // #TEST#: R781 Rename use of p
+-        REQUIRE_EQUAL(10, p.second);
++        REQUIRE_EQUAL(10, goink.second);
+         // #TEST#: R782 Rename local variable t
+         // #TEST#: R783 Rename use of f1
+         // #TEST#: R784 Rename use of i1

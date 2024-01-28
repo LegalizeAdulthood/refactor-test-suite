@@ -8,7 +8,7 @@ index fd51b87..99e3bc1 100644
  
 -    int b{};
 +    int goink{};
-     // #TEST#: R952 Rename use of b
+     // #TEST#: R949 Rename use of b
 -    co_yield b;
 +    co_yield goink;
  
@@ -17,7 +17,7 @@ index fd51b87..99e3bc1 100644
  
 -    b = 1;
 +    goink = 1;
-     // #TEST#: R953 Rename use of b
+     // #TEST#: R950 Rename use of b
 -    co_yield b;
 +    co_yield goink;
  
@@ -25,8 +25,8 @@ index fd51b87..99e3bc1 100644
          co_return;
 @@ -340,10 +340,10 @@ RenameCpp20::Generator<int> fibonacci(int n)
      {
-         // #TEST#: R954 Rename use of a
-         // #TEST#: R955 Rename use of b
+         // #TEST#: R951 Rename use of a
+         // #TEST#: R952 Rename use of b
 -        co_yield a + b;
 -        const int s = a + b;
 -        a = b;

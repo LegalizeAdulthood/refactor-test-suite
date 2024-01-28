@@ -1,29 +1,29 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..566e349 100644
+index 024d6a2..e943a8a 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
-@@ -292,7 +292,7 @@ auto product3(T lhs, U rhs) -> decltype(lhs * rhs)
- // #TEST#: R1132 Rename template parameter T
- // #TEST#: R1133 Rename template parameter U
- // #TEST#: R1134 Rename use of T
+@@ -316,12 +316,12 @@ auto product4(T lhs, U rhs) -> decltype(lhs * rhs)
+ // #TEST#: R1145 Rename template parameter T
+ // #TEST#: R1146 Rename template parameter U
+ // #TEST#: R1147 Rename use of T
 -template <typename T, typename U = T>
-+template <typename T, typename Goink = T>
- // #TEST#: R1135 Rename function product4
- // #TEST#: R1136 Rename use of T
- // #TEST#: R1137 Rename parameter lhs
-@@ -300,12 +300,12 @@ template <typename T, typename U = T>
- // #TEST#: R1139 Rename parameter rhs
- // #TEST#: R1140 Rename use of lhs
- // #TEST#: R1141 Rename use of rhs
--auto product4(T lhs, U rhs) -> decltype(lhs * rhs)
-+auto product4(T lhs, Goink rhs) -> decltype(lhs * rhs)
-     // #TEST#: R1142 Rename first use of T
-     // #TEST#: R1143 Rename concept Multiplicable
-     // #TEST#: R1144 Rename second use of T
-     // #TEST#: R1145 Rename use of U
--    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
-+    requires std::is_arithmetic_v<T> || Multiplicable<T, Goink>
++template <typename Goink, typename U = Goink>
+ // #TEST#: R1148 Rename first use of T
+ // #TEST#: R1149 Rename concept Multiplicable
+ // #TEST#: R1150 Rename second use of T
+ // #TEST#: R1151 Rename use of U
+-    requires std::is_arithmetic_v<T> && Multiplicable<T, U>
++    requires std::is_arithmetic_v<Goink> && Multiplicable<Goink, U>
+ // #TEST#: R1152 Rename function product5
+ // #TEST#: R1153 Rename use of T
+ // #TEST#: R1154 Rename parameter lhs
+@@ -329,7 +329,7 @@ template <typename T, typename U = T>
+ // #TEST#: R1156 Rename parameter rhs
+ // #TEST#: R1157 Rename use of lhs
+ // #TEST#: R1158 Rename use of rhs
+-auto product5(T lhs, U rhs) -> decltype(lhs * rhs)
++auto product5(Goink lhs, U rhs) -> decltype(lhs * rhs)
  {
-     // #TEST#: R1146 Rename use of lhs
-     // #TEST#: R1147 Rename use of rhs
+     // #TEST#: R1159 Rename use of lhs
+     // #TEST#: R1160 Rename use of rhs
 

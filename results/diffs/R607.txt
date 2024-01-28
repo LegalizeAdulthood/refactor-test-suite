@@ -5,15 +5,15 @@ index a4197f1..8935556 100644
 @@ -4,12 +4,12 @@ namespace RenameCpp14
  {
  
- // #TEST#: R606 Rename template parameter T
+ // #TEST#: R603 Rename template parameter T
 -template <class T>
 +template <class Goink>
- // #TEST#: R607 Rename template parameter T
- // #TEST#: R608 Rename variable template pi2
- // #TEST#: R609 Rename first use of T
- // #TEST#: R610 Rename second use of T
+ // #TEST#: R604 Rename template parameter T
+ // #TEST#: R605 Rename variable template pi2
+ // #TEST#: R606 Rename first use of T
+ // #TEST#: R607 Rename second use of T
 -constexpr T pi2 = T(2.0L) * T(3.1415926535897932385L);
 +constexpr Goink pi2 = Goink(2.0L) * Goink(3.1415926535897932385L);
  
- // #TEST#: R611 Rename template parameter T
+ // #TEST#: R608 Rename template parameter T
  template <class T>

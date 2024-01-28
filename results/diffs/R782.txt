@@ -1,38 +1,19 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index c346b5d..2fd3e33 100644
+index c346b5d..ed26ae9 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -378,13 +378,13 @@ struct ValueName
- void f8()
- {
-     float f1{1.0f};
--    int i1{10};
-+    int goink{10};
-     // declarations
-     {
-         // #TEST#: R780 Rename local variable p
-         // #TEST#: R781 Rename use of f1
-         // #TEST#: R782 Rename use of i1
--        std::pair p{f1, i1};
-+        std::pair p{f1, goink};
-         // #TEST#: R783 Rename use of p
-         REQUIRE_EQUAL(1.0f, p.first);
-         // #TEST#: R784 Rename use of p
-@@ -392,7 +392,7 @@ void f8()
-         // #TEST#: R785 Rename local variable t
-         // #TEST#: R786 Rename use of f1
-         // #TEST#: R787 Rename use of i1
+@@ -392,11 +392,11 @@ void f8()
+         // #TEST#: R782 Rename local variable t
+         // #TEST#: R783 Rename use of f1
+         // #TEST#: R784 Rename use of i1
 -        std::tuple t{f1, i1};
-+        std::tuple t{f1, goink};
-         // #TEST#: R788 Rename use of t
-         REQUIRE_EQUAL(1.0f, std::get<0>(t));
-         // #TEST#: R789 Rename use of t
-@@ -403,7 +403,7 @@ void f8()
-         // #TEST#: R790 Rename local variable p1
-         // #TEST#: R791 Rename use of f1
-         // #TEST#: R792 Rename use of i1
--        const auto *p1 = new std::pair{f1, i1};
-+        const auto *p1 = new std::pair{f1, goink};
-         // #TEST#: R793 Rename use of p1
-         REQUIRE_EQUAL(1.0f, p1->first);
-         // #TEST#: R794 Rename use of p1
++        std::tuple goink{f1, i1};
+         // #TEST#: R785 Rename use of t
+-        REQUIRE_EQUAL(1.0f, std::get<0>(t));
++        REQUIRE_EQUAL(1.0f, std::get<0>(goink));
+         // #TEST#: R786 Rename use of t
+-        REQUIRE_EQUAL(10, std::get<1>(t));
++        REQUIRE_EQUAL(10, std::get<1>(goink));
+     }
+     // new expressions
+     {

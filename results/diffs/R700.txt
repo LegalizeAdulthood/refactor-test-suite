@@ -3,14 +3,14 @@ index 0c2172a..f9736c9 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
 @@ -175,9 +175,9 @@ void f5()
-         // #TEST#: R700 Rename binding crx
-         // #TEST#: R701 Rename binding cry
-         // #TEST#: R702 Rename use of vals
+         // #TEST#: R697 Rename binding crx
+         // #TEST#: R698 Rename binding cry
+         // #TEST#: R699 Rename use of vals
 -        const auto &[crx, cry] = vals;
 +        const auto &[goink, cry] = vals;
-         // #TEST#: R703 Rename use of crx
+         // #TEST#: R700 Rename use of crx
 -        REQUIRE_EQUAL(4, crx);
 +        REQUIRE_EQUAL(4, goink);
-         // #TEST#: R704 Rename use of cry
+         // #TEST#: R701 Rename use of cry
          REQUIRE_EQUAL(5, cry);
      }

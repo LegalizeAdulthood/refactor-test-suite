@@ -1,18 +1,18 @@
 diff --git a/RefactorTest/RenameCpp20Constraints.cpp b/RefactorTest/RenameCpp20Constraints.cpp
-index 024d6a2..fe1dd3c 100644
+index 024d6a2..5194e39 100644
 --- a/RefactorTest/RenameCpp20Constraints.cpp
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -378,11 +378,11 @@ template <typename T, typename U = T>
- // #TEST#: R1192 Rename parameter rhs
- // #TEST#: R1193 Rename use of lhs
- // #TEST#: R1194 Rename use of rhs
+ // #TEST#: R1189 Rename parameter rhs
+ // #TEST#: R1190 Rename use of lhs
+ // #TEST#: R1191 Rename use of rhs
 -auto product7(T lhs, U rhs) -> decltype(lhs * rhs)
-+auto product7(T goink, U rhs) -> decltype(goink * rhs)
++auto product7(T lhs, U goink) -> decltype(lhs * goink)
  {
-     // #TEST#: R1195 Rename use of lhs
-     // #TEST#: R1196 Rename use of rhs
+     // #TEST#: R1192 Rename use of lhs
+     // #TEST#: R1193 Rename use of rhs
 -    return lhs * rhs;
-+    return goink * rhs;
++    return lhs * goink;
  }
  
  // multiple template parameter function with combined constraint on function

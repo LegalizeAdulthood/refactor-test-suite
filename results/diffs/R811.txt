@@ -1,52 +1,20 @@
 diff --git a/RefactorTest/RenameCpp17.cpp b/RefactorTest/RenameCpp17.cpp
-index d7d8359..ffce5cb 100644
+index d7d8359..c9fcc53 100644
 --- a/RefactorTest/RenameCpp17.cpp
 +++ b/RefactorTest/RenameCpp17.cpp
-@@ -438,11 +438,11 @@ void f8()
- // #TEST#: R806 Rename template parameter T
- template <typename T>
- // #TEST#: R807 Rename struct Container
--struct Container
-+struct Goink
- {
-     // #TEST#: R808 Rename use of Container
-     // #TEST#: R809 Rename use of T
--    Container(T t) : m_how(1)
-+    Goink(T t) : m_how(1)
-     {
-     }
+@@ -459,13 +459,13 @@ struct Container
+ };
  
-@@ -451,7 +451,7 @@ struct Container
-     // #TEST#: R811 Rename use of Container
-     // #TEST#: R812 Rename first use of Iter
-     // #TEST#: R813 Rename second use of Iter
--    Container(Iter begin, Iter end) : m_how(2)
-+    Goink(Iter begin, Iter end) : m_how(2)
-     {
-     }
- 
-@@ -465,13 +465,13 @@ template <typename Iter>
- // #TEST#: R817 Rename second use of Iter
- // #TEST#: R818 Rename second use of Container
- // #TEST#: R819 Rename third use of Iter
+ // #TEST#: R811 Rename template parameter Iter
+-template <typename Iter>
++template <typename Goink>
+ // #TEST#: R812 Rename first use of Container
+ // #TEST#: R813 Rename first use of Iter
+ // #TEST#: R814 Rename second use of Iter
+ // #TEST#: R815 Rename second use of Container
+ // #TEST#: R816 Rename third use of Iter
 -Container(Iter begin, Iter end)->Container<typename std::iterator_traits<Iter>::value_type>;
-+Goink(Iter begin, Iter end)->Goink<typename std::iterator_traits<Iter>::value_type>;
++Container(Goink begin, Goink end)->Container<typename std::iterator_traits<Goink>::value_type>;
  
  void f9()
  {
-     // #TEST#: R820 Rename use of Container
-     // #TEST#: R821 Rename local variable c1
--    const Container c1{7};
-+    const Goink c1{7};
-     // #TEST#: R822 Rename use of c1
-     REQUIRE_EQUAL(1, c1.m_how);
-     std::vector vals{1.0f, 2.0f, 3.0f};
-@@ -479,7 +479,7 @@ void f9()
-     // #TEST#: R824 Rename local variable c2
-     // #TEST#: R825 Rename first use of vals
-     // #TEST#: R826 Rename second use of vals
--    const Container c2{vals.begin(), vals.end()};
-+    const Goink c2{vals.begin(), vals.end()};
-     // #TEST#: R827 Rename use of c2
-     REQUIRE_EQUAL(2, c2.m_how);
- }

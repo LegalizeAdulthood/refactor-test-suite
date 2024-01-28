@@ -3,25 +3,25 @@ index e73e1db..8f0409c 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
 @@ -900,18 +900,18 @@ void f29()
-     // #TEST#: R503 Rename x in decltype argument
-     // #TEST#: R504 Rename y
-     // #TEST#: R505 Rename x in initializing expression
+     // #TEST#: R500 Rename x in decltype argument
+     // #TEST#: R501 Rename y
+     // #TEST#: R502 Rename x in initializing expression
 -    decltype(x) y = x;
 +    decltype(x) goink = x;
-     // #TEST#: R506 Rename y
+     // #TEST#: R503 Rename y
 -    require_equal(3, y);
 +    require_equal(3, goink);
-     // #TEST#: R507 Rename y
-     // #TEST#: R508 Rename x
+     // #TEST#: R504 Rename y
+     // #TEST#: R505 Rename x
 -    require_equal(true, std::is_same<decltype(y), decltype(x)>::value);
 +    require_equal(true, std::is_same<decltype(goink), decltype(x)>::value);
-     // #TEST#: R509 Rename first x in expression
-     // #TEST#: R510 Rename first y in expression
-     // #TEST#: R511 Rename second x in expression
-     // #TEST#: R512 Rename second y in expression
-     // #TEST#: R513 Rename z
+     // #TEST#: R506 Rename first x in expression
+     // #TEST#: R507 Rename first y in expression
+     // #TEST#: R508 Rename second x in expression
+     // #TEST#: R509 Rename second y in expression
+     // #TEST#: R510 Rename z
 -    decltype(x + y - x - y) z = 10;
 +    decltype(x + goink - x - goink) z = 10;
-     // #TEST#: R514 Rename z
+     // #TEST#: R511 Rename z
      require_equal(10, z);
  }

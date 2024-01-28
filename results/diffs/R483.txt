@@ -1,17 +1,17 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..3133fa8 100644
+index e73e1db..3eba6b0 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -832,10 +832,10 @@ void f27()
- 
+@@ -844,10 +844,10 @@ void f27()
+     result.str("");
      // #TEST#: R481 Rename i
      // #TEST#: R482 Rename v
--    for (int &i : v)
-+    for (int &goink : v)
+-    for (auto i : v)
++    for (auto goink : v)
      {
          // #TEST#: R483 Rename i
--        i *= 10;
-+        goink *= 10;
+-        result << i << '\n';
++        result << goink << '\n';
      }
-     result.str("");
-     std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });
+     require_equal(std::string{"10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n"}, result.str());
+ 

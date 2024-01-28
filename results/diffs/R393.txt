@@ -5,19 +5,19 @@ index e73e1db..728f8b1 100644
 @@ -531,17 +531,17 @@ void f16()
  }
  
- // #TEST#: R392 Rename Args
+ // #TEST#: R389 Rename Args
 -template <typename... Args>
 +template <typename... Goink>
  struct Initializer
  {
-     // #TEST#: R393 Rename Args
-     // #TEST#: R394 Rename args constructor argument
-     // #TEST#: R395 Rename args initializer
+     // #TEST#: R390 Rename Args
+     // #TEST#: R391 Rename args constructor argument
+     // #TEST#: R392 Rename args initializer
 -    Initializer(Args... args) : t(args...)
 +    Initializer(Goink... args) : t(args...)
      {
      }
-     // #TEST#: R396 Rename Args
+     // #TEST#: R393 Rename Args
 -    std::tuple<Args...> t;
 +    std::tuple<Goink...> t;
  };

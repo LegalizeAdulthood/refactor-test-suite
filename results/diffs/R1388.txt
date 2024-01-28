@@ -4,26 +4,26 @@ index 21c29d3..37c2998 100644
 +++ b/RefactorTest/RenameCpp20Constraints.cpp
 @@ -876,12 +876,12 @@ union ProductUnion1
  // compound constraint on multiple template parameters, disjunction
- // #TEST#: R1382 Rename template parameter T
- // #TEST#: R1383 Rename template parameter U
+ // #TEST#: R1379 Rename template parameter T
+ // #TEST#: R1380 Rename template parameter U
 -template <typename T, typename U = T>
 +template <typename T, typename Goink = T>
- // #TEST#: R1386 Rename concept Multiplicable
- // #TEST#: R1385 Rename first use of T
- // #TEST#: R1387 Rename second use of T
- // #TEST#: R1388 Rename use of U
+ // #TEST#: R1383 Rename concept Multiplicable
+ // #TEST#: R1382 Rename first use of T
+ // #TEST#: R1384 Rename second use of T
+ // #TEST#: R1385 Rename use of U
 -    requires std::is_arithmetic_v<T> || Multiplicable<T, U>
 +    requires std::is_arithmetic_v<T> || Multiplicable<T, Goink>
  class Product2
  {
  public:
 @@ -891,7 +891,7 @@ public:
-     // #TEST#: R1392 Rename parameter rhs
-     // #TEST#: R1393 Rename first use of lhs
-     // #TEST#: R1394 Rename first use of rhs
+     // #TEST#: R1389 Rename parameter rhs
+     // #TEST#: R1390 Rename first use of lhs
+     // #TEST#: R1391 Rename first use of rhs
 -    auto operator()(T lhs, U rhs) const -> decltype(lhs * rhs)
 +    auto operator()(T lhs, Goink rhs) const -> decltype(lhs * rhs)
      {
-         // #TEST#: R1395 Rename lhs
-         // #TEST#: R1396 Rename rhs
+         // #TEST#: R1392 Rename lhs
+         // #TEST#: R1393 Rename rhs
 

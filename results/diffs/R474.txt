@@ -1,28 +1,64 @@
 diff --git a/RefactorTest/RenameCpp11.cpp b/RefactorTest/RenameCpp11.cpp
-index e73e1db..a5d31d7 100644
+index e73e1db..4dd7718 100644
 --- a/RefactorTest/RenameCpp11.cpp
 +++ b/RefactorTest/RenameCpp11.cpp
-@@ -799,7 +799,7 @@ void f26()
-                   }(s));
- 
-     // #TEST#: R469 Rename E
--    enum class E
-+    enum class Goink
-     {
-         one,
-         // #TEST#: R470 Rename two
-@@ -808,12 +808,12 @@ void f26()
-     };
-     // #TEST#: R471 Rename E in declaration
-     // #TEST#: R472 Rename E in initialization expression
--    E e = E::one;
-+    Goink e = Goink::one;
-     // #TEST#: R473 Rename E in first argument to require_equal
-     // #TEST#: R474 Rename E in lambda return type
-     // #TEST#: R475 Rename E in lambda body
-     // #TEST#: R476 Rename two in lambda body
--    require_equal(static_cast<int>(E::two), static_cast<int>([]() -> E { return E::two; }()));
-+    require_equal(static_cast<int>(Goink::two), static_cast<int>([]() -> Goink { return Goink::two; }()));
- }
- 
+@@ -819,11 +819,11 @@ void f26()
  void f27()
+ {
+     // #TEST#: R474 Rename v
+-    std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
++    std::vector<int> goink{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+     std::ostringstream result;
+     // #TEST#: R475 Rename i
+     // #TEST#: R476 Rename v
+-    for (int i : v)
++    for (int i : goink)
+     {
+         // #TEST#: R477 Rename i
+         result << i << '\n';
+@@ -832,19 +832,19 @@ void f27()
+ 
+     // #TEST#: R478 Rename i
+     // #TEST#: R479 Rename v
+-    for (int &i : v)
++    for (int &i : goink)
+     {
+         // #TEST#: R480 Rename i
+         i *= 10;
+     }
+     result.str("");
+-    std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });
++    std::for_each(goink.begin(), goink.end(), [&result](int i) { result << i << '\n'; });
+     require_equal(std::string{"10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n"}, result.str());
+ 
+     result.str("");
+     // #TEST#: R481 Rename i
+     // #TEST#: R482 Rename v
+-    for (auto i : v)
++    for (auto i : goink)
+     {
+         // #TEST#: R483 Rename i
+         result << i << '\n';
+@@ -853,19 +853,19 @@ void f27()
+ 
+     // #TEST#: R484 Rename i
+     // #TEST#: R485 Rename v
+-    for (auto &i : v)
++    for (auto &i : goink)
+     {
+         // #TEST#: R486 Rename i
+         i /= 10;
+     }
+     result.str("");
+-    std::for_each(v.begin(), v.end(), [&result](int i) { result << i << '\n'; });
++    std::for_each(goink.begin(), goink.end(), [&result](int i) { result << i << '\n'; });
+     require_equal(std::string{"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"}, result.str());
+ 
+     result.str("");
+     // #TEST#: R487 Rename i
+     // #TEST#: R488 Rename v
+-    for (const auto i : v)
++    for (const auto i : goink)
+     {
+         // #TEST#: R489 Rename i
+         result << i << '\n';

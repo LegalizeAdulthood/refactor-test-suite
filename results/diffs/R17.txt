@@ -21,9 +21,9 @@ index d1c1283..a489fcd 100644
          xFoo.Operation();
      }
 @@ -643,7 +643,7 @@ void TestRename()
-     // #TEST#: R203 rename the variable X::x
-     // #TEST#: R204 rename the variable X::y
-     // #TEST#: R205 rename the variable Y::x
+     // #TEST#: R202 rename the variable X::x
+     // #TEST#: R203 rename the variable X::y
+     // #TEST#: R204 rename the variable Y::x
 -    int y = test2.Operation() + X::x + X::y + Y::x;
 +    int y = test2.Operation() + X::x + X::y + Goink::x;
  
