@@ -115,7 +115,7 @@ void AddTests::writePlaceholderDiffs(const std::filesystem::path &diffDir)
 
 int usage(std::string_view program)
 {
-    std::cout << "Usage: " << program << " <RefactorTest> <TestPrefix> <SourceFile.cpp> <ResultsDir>\n";
+    std::cout << "Usage: " << program << " <RefactorTest> <results> <TestPrefix> <SourceFile.cpp>\n";
     return 1;
 }
 
@@ -133,17 +133,17 @@ int toolMain(std::vector<std::string_view> args)
         std::cerr << "Test case directory " << testCaseDir << " does not exist.\n";
         return 1;
     }
-    const std::string_view testPrefix{args[2]};
-    const std::filesystem::path sourceFile{args[3]};
-    if (!exists(sourceFile))
-    {
-        std::cerr << "File " << sourceFile << " does not exist.\n";
-        return 1;
-    }
-    const std::filesystem::path resultsDir{args[4]};
+    const std::filesystem::path resultsDir{args[2]};
     if (!is_directory(resultsDir))
     {
         std::cerr << "Results case directory " << resultsDir << " does not exist.\n";
+        return 1;
+    }
+    const std::string_view testPrefix{args[3]};
+    const std::filesystem::path sourceFile{args[4]};
+    if (!exists(sourceFile))
+    {
+        std::cerr << "File " << sourceFile << " does not exist.\n";
         return 1;
     }
 

@@ -25,7 +25,7 @@ struct CaseMapping
 class Processor
 {
 public:
-    Processor(std::string_view prefix, const std::filesystem::path &resultsDir);
+    Processor(const std::filesystem::path &resultsDir, std::string_view prefix);
 
     void renumber();
     void writeResults();
@@ -56,7 +56,7 @@ private:
     std::vector<std::string> m_missingDiffs;
 };
 
-Processor::Processor(std::string_view prefix, const std::filesystem::path &resultsDir) :
+Processor::Processor(const std::filesystem::path &resultsDir, std::string_view prefix) :
     m_test(testCases::getTestForPrefix(prefix)),
     m_resultsDir(resultsDir)
 {
@@ -280,7 +280,7 @@ bool readTestCases(std::filesystem::path testCaseDirectory)
 
 int usage(std::string_view program)
 {
-    std::cout << "Usage: " << program << " <RefactorTest> <TestPrefix> <results>\n";
+    std::cout << "Usage: " << program << " <RefactorTest> <results> <TestPrefix>\n";
     return 1;
 }
 
@@ -297,9 +297,9 @@ int toolMain(std::vector<std::string_view> args)
     {
         return 1;
     }
-    const std::string_view prefix{args[2]};
-    const std::filesystem::path resultsDir{args[3]};
-    Processor processor(prefix, resultsDir);
+    const std::filesystem::path resultsDir{args[2]};
+    const std::string_view prefix{args[3]};
+    Processor processor(resultsDir, prefix);
     processor.renumber();
     processor.writeResults();
     return 0;

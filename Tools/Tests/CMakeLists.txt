@@ -22,7 +22,7 @@ function(add_tool_test tool)
 endfunction()
 
 add_tool_test(add-tests
-    COMMAND Sources R Sources/TestRename.cpp Results
+    COMMAND Sources Results R Sources/TestRename.cpp
     COMPARE_FILES
         Sources/TestRename.cpp
         Results/CLionResults.md
@@ -53,7 +53,7 @@ add_tool_test(delete-tests
         Results/diffs/R4.txt
 )
 add_tool_test(renumber-tests
-    COMMAND Sources R Results
+    COMMAND Sources Results R
     COMPARE_FILES
         Sources/TestRename.cpp
         Results/CLionResults.md
