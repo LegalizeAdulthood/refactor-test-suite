@@ -2164,15 +2164,11 @@ R1579 |
 ## Reorder Parameters
 Case| Result
 --- | -----
-RP1 | (deprecated)
-RP2 | Pass
-RP3 | (deprecated)
-RP4 | (deprecated)
-RP5 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-RP6 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
-RP7 | Pass
-RP8 | Pass
-RP9 | (deprecated)
+RP1 | Pass
+RP2 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP3 | Failure (changes member ptr to fn ptr) [1915](https://youtrack.jetbrains.com/issue/CPP-1915)
+RP4 | Pass
+RP5 | Pass
 
 ## Replace If With Ternary
 Case | Result

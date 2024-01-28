@@ -1967,15 +1967,11 @@ R1579 |
 ## Reorder Parameters
 Case | Result
 ---- | ------
-RP1  | (deprecated)
-RP2  | Failure (error occured while applying changes; Value does not fall within expected range)
-RP3  | (deprecated)
-RP4  | (deprecated)
-RP5  | Failure (error occured while applying changes; textIndex out of range)
-RP6  | Failure (error occured while applying changes; Value does not fall within expected range)
-RP7  | Failure (error occured while applying changes; textIndex out of range)
-RP8  | Failure (error occured while applying changes; Value does not fall within expected range)
-RP9  | (deprecated)
+RP1  | Failure (error occured while applying changes; Value does not fall within expected range)
+RP2  | Failure (error occured while applying changes; textIndex out of range)
+RP3  | Failure (error occured while applying changes; Value does not fall within expected range)
+RP4  | Failure (error occured while applying changes; textIndex out of range)
+RP5  | Failure (error occured while applying changes; Value does not fall within expected range)
 
 ## Replace String Literal With Raw String Literal
 Case | Result

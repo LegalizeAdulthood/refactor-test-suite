@@ -1,0 +1,24 @@
+diff --git a/RefactorTest/ReorderParameters.cpp b/RefactorTest/ReorderParameters.cpp
+index aadc55b..494c7f8 100644
+--- a/RefactorTest/ReorderParameters.cpp
++++ b/RefactorTest/ReorderParameters.cpp
+@@ -16,7 +16,7 @@ int Function2(int x)
+ }
+ 
+ // #TEST#: RP1 Reorder parameters
+-int TestFunction(int (*fn)(int), int i)
++int TestFunction(int i, int (*fn)(int))
+ {
+     int j;
+     if (i < 0)
+@@ -136,8 +136,8 @@ using namespace ReorderParametersNamespace;
+ 
+ void TestReorderParameters()
+ {
+-    REQUIRE_EQUAL(-4, TestFunction(Function1, -1));
+-    int result = TestFunction(Function1, 1);
++    REQUIRE_EQUAL(-4, TestFunction(-1, Function1));
++    int result = TestFunction(1, Function1);
+     REQUIRE_EQUAL(8, result);
+     Foo f;
+     result = TestMemberPointer(f, &Foo::Operation1, Function2(1));

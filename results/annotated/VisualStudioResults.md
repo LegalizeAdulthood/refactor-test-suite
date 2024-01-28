@@ -1967,15 +1967,11 @@ R1579 | | [`RenameCpp20Constraints.cpp`, line 1427](https://github.com/LegalizeA
 ## Reorder Parameters
 Case | Result | Location | Expected Diff
 ---- | ------ | -------- | -------------
-RP1  | (deprecated) | |
-RP2  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 18](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L18) | [RP2.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP2.txt)
-RP3  | (deprecated) | |
-RP4  | (deprecated) | |
-RP5  | Failure (error occured while applying changes; textIndex out of range) | [`ReorderParameters.cpp`, line 63](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L63) | [RP5.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP5.txt)
-RP6  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 78](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L78) | [RP6.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP6.txt)
-RP7  | Failure (error occured while applying changes; textIndex out of range) | [`ReorderParameters.cpp`, line 95](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L95) | [RP7.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP7.txt)
-RP8  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 112](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L112) | [RP8.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP8.txt)
-RP9  | (deprecated) | |
+RP1  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 17](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L17) | [RP1.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP1.txt)
+RP2  | Failure (error occured while applying changes; textIndex out of range) | [`ReorderParameters.cpp`, line 60](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L60) | [RP2.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP2.txt)
+RP3  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 75](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L75) | [RP3.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP3.txt)
+RP4  | Failure (error occured while applying changes; textIndex out of range) | [`ReorderParameters.cpp`, line 92](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L92) | [RP4.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP4.txt)
+RP5  | Failure (error occured while applying changes; Value does not fall within expected range) | [`ReorderParameters.cpp`, line 109](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/RefactorTest/ReorderParameters.cpp#L109) | [RP5.txt](https://github.com/LegalizeAdulthood/refactor-test-suite/blob/master/results/diffs/RP5.txt)
 
 ## Replace String Literal With Raw String Literal
 Case | Result | Location | Expected Diff

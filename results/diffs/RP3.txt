@@ -1,0 +1,22 @@
+diff --git a/RefactorTest/ReorderParameters.cpp b/RefactorTest/ReorderParameters.cpp
+index aadc55b..cfd61ed 100644
+--- a/RefactorTest/ReorderParameters.cpp
++++ b/RefactorTest/ReorderParameters.cpp
+@@ -76,7 +76,7 @@ int TestMemberPointer(Foo &f, int (Foo::*member)(int), int i)
+ }
+ 
+ // #TEST#: RP3 Reorder parameters move parameter i to first parameter
+-int TestConstMemberPointer(Foo &f, int (Foo::*member)(int) const, int i)
++int TestConstMemberPointer(int i, Foo &f, int (Foo::*member)(int) const)
+ {
+     int j;
+     if (i < 0)
+@@ -142,7 +142,7 @@ void TestReorderParameters()
+     Foo f;
+     result = TestMemberPointer(f, &Foo::Operation1, Function2(1));
+     REQUIRE_EQUAL(8, result);
+-    result = TestConstMemberPointer(f, &Foo::Const1, 6);
++    result = TestConstMemberPointer(6, f, &Foo::Const1);
+     REQUIRE_EQUAL(16, result);
+     result = TestMemberPointer2(f, &Foo::Operation1, Function3(1));
+     REQUIRE_EQUAL(8, result);

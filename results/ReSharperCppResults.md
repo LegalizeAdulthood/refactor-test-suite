@@ -2124,15 +2124,11 @@ R1579 | Pass
 ## Reorder Parameters
 Case | Result
 ---- | ------
-RP1 | (deprecated)
-RP2 | Failure (creates invalid code in macro argument) [RSCPP-21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
-RP3 | (deprecated)
-RP4 | (deprecated)
+RP1 | Failure (creates invalid code in macro argument) [RSCPP-21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
+RP2 | Pass
+RP3 | Pass
+RP4 | Pass
 RP5 | Pass
-RP6 | Pass
-RP7 | Pass
-RP8 | Pass
-RP9 | (deprecated)
 
 ## Replace auto With Type
 Case | Result
