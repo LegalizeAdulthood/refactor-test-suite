@@ -81,8 +81,8 @@ AP3 | Pass
 AP4 | Pass
 AP5 | Pass
 AP6 | Pass
-AP7 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP8  | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP7 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP8  | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP9  | Pass
 AP10  | Pass
 AP11  | Pass
@@ -99,38 +99,38 @@ AP21 | Pass
 AP22 | Pass
 AP23 | Pass
 AP24 | Pass
-AP25 | Failure (unavailable) [RSCPP-35262](https://youtrack.jetbrains.com/issue/RSCPP-35262/Change-Signature-unavailable-on-call-site-in-template-function)
-AP26 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP27 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP25 | Failure (unavailable) [35262](https://youtrack.jetbrains.com/issue/RSCPP-35262/Change-Signature-unavailable-on-call-site-in-template-function)
+AP26 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP27 | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP28 | Pass
 AP29 | Pass
 AP30 | Pass
 AP31 | Pass
-AP32 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP32 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP33 | Pass
 AP34 | Pass
-AP35 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP35 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP36 | Pass
 AP37 | Pass
-AP38 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP38 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP39 | Pass
 AP40 | Pass
-AP41 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP42 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP41 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP42 | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP43 | Pass
 AP44 | Pass
 AP45 | Pass
 AP46 | Pass
 AP47 | Pass
 AP48 | Pass
-AP49 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP49 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP50 | Pass
 AP51 | Pass
-AP52 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP52 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP53 | Pass
 AP54 | Pass
-AP55 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP56 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP55 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP56 | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP57 | Pass
 AP58 | Pass
 AP59 | Pass
@@ -143,9 +143,9 @@ AP65 | Pass
 AP66 | Pass
 AP67 | Pass
 AP68 | Pass
-AP69 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP69 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP70 | Pass
-AP71 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP71 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP72 | Pass
 AP73 | Pass
 AP74 | Pass
@@ -153,8 +153,8 @@ AP75 | Pass
 AP76 | Pass
 AP77 | Pass
 AP78 | Pass
-AP79 | Failure (doesn't update other template arguments) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
-AP80 | Failure (doesn't update other template arguments) [RSCPP-21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
+AP79 | Failure (doesn't update other template arguments) [21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
+AP80 | Failure (doesn't update other template arguments) [21202](https://youtrack.jetbrains.com/issue/RSCPP-21202/Adding-a-parameter-with-Change-Signature-doesnt-follow-template-usages-and-change-all-methods-accordingly)
 AP81 | Pass
 AP82 | Pass
 AP83 | Pass
@@ -162,7 +162,7 @@ AP84 | Pass
 AP85 | Pass
 AP86 | Pass
 AP87 | Pass
-AP88 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP88 | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP89 | Pass
 AP90 | Pass
 AP91 | Pass
@@ -179,38 +179,38 @@ AP101 | Pass
 AP102 | Pass
 AP103 | Pass
 AP104 | Pass
-AP105 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP105 | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP106 | Pass
 AP107 | Pass
 AP108 | Pass
 AP109 | Pass
-AP110 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP110 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP111 | Pass
-AP112 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP112 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP113 | Pass
 AP114 | Pass
-AP115 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP115 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP116 | Pass
-AP117 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP117 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP118 | Pass
 AP119 | Pass
-AP120 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP120 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP121 | Pass
-AP122 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP122 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP123 | Pass
 AP124 | Pass
 AP125 | Pass
 AP126 | Pass
 AP127 | Pass
-AP128 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP128 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP129 | Pass
 AP130 | Pass
 AP131 | Pass
-AP132 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
-AP133 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP132 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP133 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP134 | Pass
 AP135 | Pass
-AP136 | Failure (not available) [RSCPP-12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
+AP136 | Failure (not available) [12542](https://youtrack.jetbrains.com/issue/RSCPP-12542/Change-signature-doesnt-work-for-constructors)
 AP137 | Pass
 AP138 | Pass
 AP139 | Pass
@@ -225,30 +225,30 @@ AP147 | Pass
 AP148 | Pass
 AP149 | Pass
 AP150 | Pass
-AP151 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP151 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
 AP152 | Pass
 AP153 | Pass
-AP154 | Failure (creates invalid code) [RSCPP-35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
-AP155 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP154 | Failure (creates invalid code) [35261](https://youtrack.jetbrains.com/issue/RSCPP-35261/Change-Signature-cant-add-parameters-with-default-values)
+AP155 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP156 | Pass
-AP157 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP157 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP158 | Pass
-AP159 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP159 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP160 | Pass
-AP161 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP161 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP162 | Pass
-AP163 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP163 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP164 | Pass
-AP165 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP165 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP166 | Pass
 AP167 | Pass
-AP168 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP168 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP169 | Pass
-AP170 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP170 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP171 | Pass
-AP172 | Failure (creates invalid code) [RSCPP-35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
+AP172 | Failure (creates invalid code) [35031](https://youtrack.jetbrains.com/issue/RSCPP-35031/Invalid-code-in-macro-call-after-change-signature)
 AP173 | Pass
-AP174 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP174 | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP175 | Pass
 AP176 | Pass
 AP177 | Pass
@@ -259,7 +259,7 @@ AP181 | Pass
 AP182 | Pass
 AP183 | Pass
 AP184 | Pass
-AP185 | Failure (modifies unrelated code) [RSCPP-35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
+AP185 | Failure (modifies unrelated code) [35259](https://youtrack.jetbrains.com/issue/RSCPP-35259/Change-Signature-modifies-unrelated-template-usage)
 AP186 | Pass
 AP187 | Pass
 AP188 | Pass
@@ -337,7 +337,7 @@ CMS4  | Pass
 CMS5 | Pass
 CMS6 | Pass
 CMS7 | Pass
-CMS8 | Failure (does not build) [RSCPP-35263](https://youtrack.jetbrains.com/issue/RSCPP-35263/Create-member-function-generates-code-with-incorrect-visibility)
+CMS8 | Failure (does not build) [35263](https://youtrack.jetbrains.com/issue/RSCPP-35263/Create-member-function-generates-code-with-incorrect-visibility)
 CMS9 | Pass
 CMS10 | Pass
 CMS11 | Pass
@@ -348,8 +348,8 @@ CMS15  | Pass
 CMS16  | Pass
 CMS17 | Pass
 CMS18  | Pass
-CMS19  | Failure (does not build) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
-CMS20  | Failure (does not build) [RSCPP-21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
+CMS19  | Failure (does not build) [21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
+CMS20  | Failure (does not build) [21496](https://youtrack.jetbrains.com/issue/RSCPP-21496)
 CMS21  | Pass
 CMS22 | Pass
 
@@ -361,7 +361,7 @@ CMVD2  | Pass
 CMVD3  | Pass
 CMVD4  | Pass
 CMVD5  | Pass
-CMVD6  | Failure [RSCPP-15791](https://youtrack.jetbrains.com/issue/RSCPP-15791/CMVD-Joining-delcarations-is-confused-by-class-struct-union-keywords)
+CMVD6  | Failure [15791](https://youtrack.jetbrains.com/issue/RSCPP-15791/CMVD-Joining-delcarations-is-confused-by-class-struct-union-keywords)
 CMVD7  | Pass
 CMVD8  | Pass
 CMVD9  | Pass
@@ -435,7 +435,7 @@ FC1 | Failure
 ## Inline Macro
 Case | Result
 ---- | ------
-IM1 | Failure (not available) [RSCPP-15900](https://youtrack.jetbrains.com/issue/RSCPP-15900)
+IM1 | Failure (not available) [15900](https://youtrack.jetbrains.com/issue/RSCPP-15900)
 IM2 | Pass
 IM3 | Pass
 IM4 | Pass
@@ -465,23 +465,23 @@ Case | Result
 ---- | ------
 IV1  | Pass
 IV2  | Pass
-IV3 | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
-IV4 | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV3 | Pass (leaves behind syntactical noise) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV4 | Pass (leaves behind syntactical noise) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
 IV5  | Pass
-IV6  | Pass (leaves behind syntactical noise, doesn't inline all occurrences) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205), [RSCPP-21204](https://youtrack.jetbrains.com/issue/RSCPP-21204)
-IV7  | Pass (leaves behind syntactical noise, doesn't inline all occurrences) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205), [RSCPP-21204](https://youtrack.jetbrains.com/issue/RSCPP-21204)
-IV8  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
-IV9  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
-IV10  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
-IV11  | Pass (leaves behind syntactical noise) [RSCPP-21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV6  | Pass (leaves behind syntactical noise, doesn't inline all occurrences) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205), [21204](https://youtrack.jetbrains.com/issue/RSCPP-21204)
+IV7  | Pass (leaves behind syntactical noise, doesn't inline all occurrences) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205), [21204](https://youtrack.jetbrains.com/issue/RSCPP-21204)
+IV8  | Pass (leaves behind syntactical noise) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV9  | Pass (leaves behind syntactical noise) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV10  | Pass (leaves behind syntactical noise) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
+IV11  | Pass (leaves behind syntactical noise) [21205](https://youtrack.jetbrains.com/issue/RSCPP-21205)
 IV12 | Pass
 
 ## Make Method Static
 Case | Result
 ---- | ------
-MMS1 | Failure (does not update usages) [RSCPP-15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
-MMS2 | Failure (does not update usages) [RSCPP-15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
-MMS3 | Failure (does not update usages) [RSCPP-15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
+MMS1 | Failure (does not update usages) [15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
+MMS2 | Failure (does not update usages) [15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
+MMS3 | Failure (does not update usages) [15794](https://youtrack.jetbrains.com/issue/RSCPP-15794)
 
 ## Move Implementation to Source File
 Case | Result
@@ -534,16 +534,16 @@ RUI1 | Pass
 Case | Result
 ---- | ------
 RUP1 | Pass
-RUP2 | Failure (creates invalid syntax in macro arguments) [RSCPP-21208](https://youtrack.jetbrains.com/issue/RSCPP-21208)
+RUP2 | Failure (creates invalid syntax in macro arguments) [21208](https://youtrack.jetbrains.com/issue/RSCPP-21208)
 RUP3 | Pass
-RUP4 | Failure (claims errors in the source) [RSCPP-21207](https://youtrack.jetbrains.com/issue/RSCPP-21207)
+RUP4 | Failure (claims errors in the source) [21207](https://youtrack.jetbrains.com/issue/RSCPP-21207)
 
 ## Rename
 Case | Result
 ---- | ------
 R1  | Pass
-R2  | Failure (unavailable) [RSCPP-15796](https://youtrack.jetbrains.com/issue/RSCPP-15796)
-R3  | Failure (unavailable) [RSCPP-15796](https://youtrack.jetbrains.com/issue/RSCPP-15796)
+R2  | Failure (unavailable) [15796](https://youtrack.jetbrains.com/issue/RSCPP-15796)
+R3  | Failure (unavailable) [15796](https://youtrack.jetbrains.com/issue/RSCPP-15796)
 R4  | Pass
 R5   | Pass
 R6   | Pass
@@ -639,7 +639,7 @@ R95 | Pass
 R96 | Pass
 R97 | Pass
 R98 | Pass
-R99 | Failure (unavailable) [RSCPP-21422](https://youtrack.jetbrains.com/issue/RSCPP-21422)
+R99 | Failure (unavailable) [21422](https://youtrack.jetbrains.com/issue/RSCPP-21422)
 R100 | Pass
 R101 | Pass
 R102 | Pass
@@ -767,8 +767,8 @@ R223  | Pass
 R224  | Pass
 R225  | Pass
 R226  | Pass
-R227  | Failure (unavailable) [RSCPP-15798](https://youtrack.jetbrains.com/issue/RSCPP-15798)
-R228  | Failure (unavailable) [RSCPP-15798](https://youtrack.jetbrains.com/issue/RSCPP-15798)
+R227  | Failure (unavailable) [15798](https://youtrack.jetbrains.com/issue/RSCPP-15798)
+R228  | Failure (unavailable) [15798](https://youtrack.jetbrains.com/issue/RSCPP-15798)
 R229  | Pass
 R230  | Pass
 R231  | Pass
@@ -809,23 +809,23 @@ R265 | Pass
 R266 | Pass
 R267 | Pass
 R268 | Pass
-R269 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
-R270 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R269 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R270 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R271 | Pass
-R272 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R272 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R273 | Pass
-R274 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R274 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R275 | Pass
 R276 | Pass
 R277 | Pass
 R278 | Pass
 R279 | Pass
-R280 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
-R281 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R280 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R281 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R282 | Pass
-R283 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R283 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R284 | Pass
-R285 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R285 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R286 | Pass
 R287 | Pass
 R288 | Pass
@@ -834,15 +834,15 @@ R290 | Pass
 R291 | Pass
 R292 | Pass
 R293 | Pass
-R294 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R294 | Failure (doesn't select all usages) [13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
 R295 | Pass
 R296 | Pass
-R297 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
-R298 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R297 | Failure (doesn't select all usages) [13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R298 | Failure (doesn't select all usages) [13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
 R299 | Pass
-R300 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
-R301 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
-R302 | Failure (doesn't select all usages) [RSCPP-13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R300 | Failure (doesn't select all usages) [13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R301 | Failure (doesn't select all usages) [13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
+R302 | Failure (doesn't select all usages) [13845](https://youtrack.jetbrains.com/issue/RSCPP-13845)
 R303 | Pass
 R304 | Pass
 R305 | Pass
@@ -968,11 +968,11 @@ R424 | Pass
 R425 | Pass
 R426 | Pass
 R427 | Pass
-R428 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R428 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R429 | Pass
-R430 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R430 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R431 | Pass
-R432 | Pass (moves cursor location) [RSCPP-21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
+R432 | Pass (moves cursor location) [21198](https://youtrack.jetbrains.com/issue/RSCPP-21198)
 R433 | Pass
 R434 | Pass
 R435 | Pass
@@ -1151,7 +1151,7 @@ R607 | Pass
 R608 | Pass
 R609 | Pass
 R610 | Pass
-R611 | Failure (doesn't update macro arguments) [RSCPP-35264](https://youtrack.jetbrains.com/issue/RSCPP-35264/Rename-use-of-variable-template-doesnt-update-macro-arguments)
+R611 | Failure (doesn't update macro arguments) [35264](https://youtrack.jetbrains.com/issue/RSCPP-35264/Rename-use-of-variable-template-doesnt-update-macro-arguments)
 R612 | Pass
 R613 | Pass
 R614 | Pass
@@ -1160,7 +1160,7 @@ R616 | Pass
 R617 | Pass
 R618 | Pass
 R619 | Pass
-R620 | Failure (doesn't update macro arguments) [RSCPP-35264](https://youtrack.jetbrains.com/issue/RSCPP-35264/Rename-use-of-variable-template-doesnt-update-macro-arguments)
+R620 | Failure (doesn't update macro arguments) [35264](https://youtrack.jetbrains.com/issue/RSCPP-35264/Rename-use-of-variable-template-doesnt-update-macro-arguments)
 R621 | Pass
 R622 | Pass
 R623 | Pass
@@ -1445,10 +1445,10 @@ R901 | Pass
 R902 | Pass
 R903 | Pass
 R904 | Pass
-R905 | Failure (does nothing) [RSCPP-35265](https://youtrack.jetbrains.com/issue/RSCPP-35265/Rename-of-lambda-non-type-template-parameter-does-nothing)
+R905 | Failure (does nothing) [35265](https://youtrack.jetbrains.com/issue/RSCPP-35265/Rename-of-lambda-non-type-template-parameter-does-nothing)
 R906 | Pass
 R907 | Pass
-R908 | Failure (does nothing) [RSCPP-35265](https://youtrack.jetbrains.com/issue/RSCPP-35265/Rename-of-lambda-non-type-template-parameter-does-nothing)
+R908 | Failure (does nothing) [35265](https://youtrack.jetbrains.com/issue/RSCPP-35265/Rename-of-lambda-non-type-template-parameter-does-nothing)
 R909 | Pass
 R910 | Pass
 R911 | Pass
@@ -2121,7 +2121,7 @@ R1576 | Pass
 ## Reorder Parameters
 Case | Result
 ---- | ------
-RP1 | Failure (creates invalid code in macro argument) [RSCPP-21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
+RP1 | Failure (creates invalid code in macro argument) [21210](https://youtrack.jetbrains.com/issue/RSCPP-21210)
 RP2 | Pass
 RP3 | Pass
 RP4 | Pass
@@ -2138,22 +2138,22 @@ RAWT5 | Pass
 RAWT6 | Pass
 RAWT7 | Pass
 RAWT8 | Pass
-RAWT9 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT10 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT11 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT12 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT13 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT14 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT15 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT16 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT17 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT18 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT19 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT20 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT21 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT22 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT23 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
-RAWT24 | Failure (exposes internal type) [RSCPP-35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT9 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT10 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT11 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT12 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT13 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT14 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT15 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT16 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT17 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT18 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT19 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT20 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT21 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT22 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT23 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
+RAWT24 | Failure (exposes internal type) [35266](https://youtrack.jetbrains.com/issue/RSCPP-35266/Specify-type-explicitly-for-iterators-returned-by-stdmap-expands-too-many-typedefs)
 RAWT25 | Pass
 RAWT26 | Pass
 RAWT27 | Pass
@@ -2165,9 +2165,9 @@ RAWT30 | Pass
 Case | Result
 ---- | ------
 RIT1 | Pass
-RIT2 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
-RIT3 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
-RIT4 | Failure (not available) [RSCPP-15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
+RIT2 | Failure (not available) [15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
+RIT3 | Failure (not available) [15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
+RIT4 | Failure (not available) [15800](https://youtrack.jetbrains.com/issue/RSCPP-15800)
 RIT5 | Pass
 RIT6 | Pass
 RIT7 | Pass
@@ -2219,7 +2219,7 @@ RAW7 | Pass
 RAW8 | Pass
 RAW9 | Pass
 RAW10 | Pass
-RAW11 | Failure (generates invalid code) [RSCPP-35267](https://youtrack.jetbrains.com/issue/RSCPP-35267/Convert-to-raw-string-literal-creates-invalid-code-when-string-contains-delimiter)
+RAW11 | Failure (generates invalid code) [35267](https://youtrack.jetbrains.com/issue/RSCPP-35267/Convert-to-raw-string-literal-creates-invalid-code-when-string-contains-delimiter)
 RAW12 | Pass
 
 ## Replace Ternary With If
@@ -2315,11 +2315,11 @@ SMVD2 | Pass
 SMVD3 | Pass
 SMVD4 | Pass
 SMVD5 | Pass
-SMVD6 | Failure (not available) [RSCPP-15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
+SMVD6 | Failure (not available) [15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
 SMVD7 | Pass
-SMVD8 | Failure (not available) [RSCPP-15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
+SMVD8 | Failure (not available) [15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
 SMVD9 | Pass
-SMVD10 | Failure (not available) [RSCPP-15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
+SMVD10 | Failure (not available) [15804](https://youtrack.jetbrains.com/issue/RSCPP-15804)
 SMVD11 | Pass
 SMVD12 | Pass
 SMVD13 | Pass
