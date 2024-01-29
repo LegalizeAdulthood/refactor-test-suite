@@ -1,1 +1,32 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index 17be92f..9ed350c 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -462,7 +462,7 @@ enum class E
+     // #TEST#: R985 Rename One
+     One,
+     // #TEST#: R986 Rename Two
+-    Two,
++    Goink,
+     Three
+ };
+ 
+@@ -472,7 +472,7 @@ std::ostream &operator<<(std::ostream &str, E value)
+     {
+     case E::One:
+         return str << "One";
+-    case E::Two:
++    case E::Goink:
+         return str << "Two";
+     case E::Three:
+         return str << "Three";
+@@ -503,7 +503,7 @@ void f11()
+ 
+     F11 f11Ins{};
+     REQUIRE_EQUAL(E::One, F11::One);
+-    REQUIRE_EQUAL(f11Ins.Two, E::Two);
++    REQUIRE_EQUAL(f11Ins.Goink, E::Goink);
+     REQUIRE_EQUAL(F11::Three, get_enumerator());
+     assert_enumerator(get_enumerator());
+ }
+

@@ -1,1 +1,65 @@
-AWAITING TEST RESULTS
+diff --git a/RefactorTest/RenameCpp20.cpp b/RefactorTest/RenameCpp20.cpp
+index 17be92f..41229ec 100644
+--- a/RefactorTest/RenameCpp20.cpp
++++ b/RefactorTest/RenameCpp20.cpp
+@@ -457,7 +457,7 @@ void f10()
+ }
+ 
+ // #TEST#: R984 Rename E
+-enum class E
++enum class Goink
+ {
+     // #TEST#: R985 Rename One
+     One,
+@@ -466,15 +466,15 @@ enum class E
+     Three
+ };
+ 
+-std::ostream &operator<<(std::ostream &str, E value)
++std::ostream &operator<<(std::ostream &str, Goink value)
+ {
+     switch (value)
+     {
+-    case E::One:
++    case Goink::One:
+         return str << "One";
+-    case E::Two:
++    case Goink::Two:
+         return str << "Two";
+-    case E::Three:
++    case Goink::Three:
+         return str << "Three";
+     }
+     return str << "? (" << static_cast<int>(value) << ')';
+@@ -485,25 +485,25 @@ void f11()
+ {
+     struct F11
+     {
+-        using enum E;
++        using enum Goink;
+     };
+ 
+     const auto &get_enumerator = [&]() -> auto
+     {
+-        using enum E;
++        using enum Goink;
+         // #TEST#: R987 Rename Three
+         return Three;
+     };
+ 
+     const auto &assert_enumerator = [&](const auto &enumerator) -> void
+     {
+-        using enum E;
++        using enum Goink;
+         REQUIRE_EQUAL(Three, enumerator);
+     };
+ 
+     F11 f11Ins{};
+-    REQUIRE_EQUAL(E::One, F11::One);
+-    REQUIRE_EQUAL(f11Ins.Two, E::Two);
++    REQUIRE_EQUAL(Goink::One, F11::One);
++    REQUIRE_EQUAL(f11Ins.Two, Goink::Two);
+     REQUIRE_EQUAL(F11::Three, get_enumerator());
+     assert_enumerator(get_enumerator());
+ }
+
