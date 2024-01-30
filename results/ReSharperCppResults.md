@@ -1524,10 +1524,10 @@ R980 | Pass
 R981 | Pass
 R982 | Pass
 R983 | Pass
-R984 |
-R985 |
-R986 |
-R987 |
+R984 | Pass
+R985 | Pass
+R986 | Pass
+R987 | Pass
 R988 | Pass
 R989 | Pass
 R990 | Pass
