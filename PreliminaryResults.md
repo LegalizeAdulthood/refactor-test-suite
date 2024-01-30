@@ -1,6 +1,6 @@
 # Summary Results
 
-Refactoring | [Xcode](results/annotated/AppleXcodeResults.md) | [Eclipse CDT](results/annotated/EclipseCDTResults.md) | [Qt Creator](results/annotated/QtCreatorResults.md)
+Refactoring | [Xcode](results/preliminary/annotated/AppleXcodeResults.md) | [Eclipse CDT](results/preliminary/annotated/EclipseCDTResults.md) | [Qt Creator](results/preliminary/annotated/QtCreatorResults.md)
 ----------- | ----- | ----------- | ----------
 Create Overload | (n/a) | 100% (1/56) | (n/a)
 Create Setter Method | (n/a) | 100% (1/30) | (n/a)

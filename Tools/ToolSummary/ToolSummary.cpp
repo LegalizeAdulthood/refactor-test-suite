@@ -63,6 +63,7 @@ void ToolSummarizer::scanResultsDirectory(std::filesystem::path dir)
 
 struct ToolSummary
 {
+    std::filesystem::path path;
     std::string name;
     std::vector<testCases::TestSummary> summary;
 };
@@ -81,7 +82,7 @@ void ToolSummarizer::generateSummary()
     for (testCases::ToolResults &toolResult : m_toolResults)
     {
         toolResult.checkResults();
-        summary.push_back({toolResult.getToolName(), toolResult.getSummary()});
+        summary.push_back({toolResult.getPath(), toolResult.getToolName(), toolResult.getSummary()});
     }
 
     constexpr std::string_view refactoring{"Refactoring"};
@@ -97,8 +98,9 @@ void ToolSummarizer::generateSummary()
             throw std::runtime_error("Unknown tool " + tool.name);
         }
         const std::string &toolTitle = it->second;
-        std::cout << " | [" << toolTitle << "](results/" << (m_annotate ? "annotated/" : "") << tool.name
-                  << "Results.md)";
+        std::string link{(m_annotate ? tool.path.parent_path() / "annotated" / tool.path.filename() : tool.path).string()};
+        std::replace(link.begin(), link.end(), '\\', '/');
+        std::cout << " | [" << toolTitle << "](" << link << ')';
         separator += " | " + std::string(toolTitle.length(), '-');
     }
     std::cout << '\n' << separator << '\n';
