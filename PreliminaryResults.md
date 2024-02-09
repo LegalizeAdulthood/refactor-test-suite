@@ -2,7 +2,6 @@
 
 Refactoring | [Xcode](results/preliminary/annotated/AppleXcodeResults.md) | [Eclipse CDT](results/preliminary/annotated/EclipseCDTResults.md) | [Qt Creator](results/preliminary/annotated/QtCreatorResults.md)
 ----------- | ----- | ----------- | ----------
-Create Overload | (n/a) | 100% (1/56) | (n/a)
 Create Setter Method | (n/a) | 100% (1/30) | (n/a)
 Extract Constant | (n/a) | 100% (1/13) | (n/a)
 Extract Function | (n/a) | 100% (2/19) | (n/a)

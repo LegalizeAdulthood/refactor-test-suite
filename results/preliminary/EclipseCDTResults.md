@@ -18,69 +18,6 @@ Notes:
 
 <hr/>
 
-## Create Overload
-* CDT: Source > Implement Method...
-* The C++11 "override" keyword is not applied (could be done by separate clang-tidy / clang-modernize)
-
-Case | Result
----- | ------
-CO1   | Pass
-CO2   |
-CO3   |
-CO4   |
-CO5   |
-CO6   |
-CO7   |
-CO8   |
-CO9   |
-CO10  |
-CO11  |
-CO12  |
-CO13  |
-CO14  |
-CO15  |
-CO16  |
-CO17  |
-CO18  |
-CO19  |
-CO20  |
-CO21  |
-CO22  |
-CO23  |
-CO24  |
-CO25  |
-CO26  |
-CO27  |
-CO28  |
-CO29  |
-CO30  |
-CO31  |
-CO32  |
-CO33  |
-CO34  |
-CO35  |
-CO36  |
-CO37  |
-CO38  |
-CO39  |
-CO40  |
-CO41  |
-CO42  |
-CO43  |
-CO44  |
-CO45  |
-CO46  |
-CO47  |
-CO48  |
-CO49  |
-CO50  |
-CO51  |
-CO52  |
-CO53  |
-CO54  |
-CO55  |
-CO56  |
-
 ## Create Setter Method
 * CDT: Source > Generate Getters and Setters...
 * Bug: when choosing "Definition separate from declaration", the enclosing namespace
