@@ -12,6 +12,7 @@ set prefix=%1
 set i=%2
 if "X%prefix%"=="X" goto badargs
 if "X%i%"=="X" goto badargs
+cls
 :next
 if not exist results\diffs\%prefix%%i%.txt goto no-such-diff
 echo.
