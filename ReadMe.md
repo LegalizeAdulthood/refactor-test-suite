@@ -32,19 +32,19 @@ video [Refactoring Tools Roundup](https://www.youtube.com/watch?v=TzQ4-zoDG44) f
 
 Results for tools with significant testing.
 
-- [CLion 2023.3.2](results/CLionResults.md)
-- [clang-tidy 17.0.6](results/ClangTidyResults.md)
-- [ReSharper for C++ 2023.3.2](results/ReSharperCppResults.md)
-- [Visual AssistX 10.9.2508.0](results/VisualAssistXResults.md)
-- [Visual Studio 2022, 17.7.5](results/VisualStudioResults.md)
+- [CLion 2023.3.2](results/annotated/CLionResults.md)
+- [clang-tidy 17.0.6](results/annotated/ClangTidyResults.md)
+- [ReSharper for C++ 2023.3.2](results/annotated/ReSharperCppResults.md)
+- [Visual AssistX 10.9.2508.0](results/annotated/VisualAssistXResults.md)
+- [Visual Studio 2022, 17.7.5](results/annotated/VisualStudioResults.md)
 
 ## [Preliminary Results](PreliminaryResults.md)
 
 Preliminary results for tools with minimal testing.
 
-- [Apple Xcode](results/AppleXcodeResults.md)
-- [Eclipse CDT](results/EclipseCDTResults.md)
-- [Qt Creator](results/QtCreatorResults.md)
+- [Apple Xcode](results/preliminary/annotated/AppleXcodeResults.md)
+- [Eclipse CDT](results/preliminary/annotated/EclipseCDTResults.md)
+- [Qt Creator](results/preliminary/annotated/QtCreatorResults.md)
 
 ## Unknown Results
 
