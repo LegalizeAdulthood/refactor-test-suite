@@ -7,28 +7,56 @@
   },
   "configurePresets": [
     {
+      "name": "sibling-build",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/../build-${presetName}"
+    },
+    {
+      "name": "compile-commands",
+      "hidden": true,
+      "description": "Generate compile_commands.json compilation database",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true
+      }
+    },
+    {
+      "name": "gen-makefiles",
+      "hidden": true,
+      "description": "Unix Makefiles generator",
+      "generator": "Unix Makefiles"
+    },
+    {
+      "name": "gen-ninja-multi",
+      "hidden": true,
+      "description": "Ninja Multi-Config generator",
+      "generator": "Ninja Multi-Config"
+    },
+    {
+      "name": "gen-eclipse-cdt",
+      "hidden": true,
+      "description": "Eclipse CDT4 - Ninja generator",
+      "generator": "Eclipse CDT4 - Ninja"
+    },
+    {
       "name": "default",
-      "displayName": "Default Config",
+      "displayName": "Configure with default settings",
       "description": "Configure",
-      "binaryDir": "${sourceDir}/../build"
+      "inherits": [ "sibling-build" ]
     },
     {
       "name": "ninja",
       "displayName": "Configure with ninja and compile_commands.json",
-      "binaryDir": "${sourceDir}/../build-ninja",
-      "generator": "Ninja Multi-Config",
-      "cacheVariables": {
-        "CMAKE_EXPORT_COMPILE_COMMANDS": true
-      }
+      "inherits": [ "sibling-build", "gen-ninja-multi", "compile-commands" ]
     },
     {
       "name": "cdt",
       "displayName": "Configure with Eclipse CDT w/ninja and compile_commands.json",
-      "binaryDir": "${sourceDir}/../build-cdt",
-      "generator": "Eclipse CDT4 - Ninja",
-      "cacheVariables": {
-        "CMAKE_EXPORT_COMPILE_COMMANDS": true
-      }
+      "inherits": [ "sibling-build", "gen-eclipse-cdt", "compile-commands" ]
+    },
+    {
+      "name": "makefile",
+      "displayName": "Configure with Unix Makefiles and compile_commands.json",
+      "inherits": [ "sibling-build", "gen-makefiles", "compile-commands" ]
     }
   ],
   "buildPresets": [
