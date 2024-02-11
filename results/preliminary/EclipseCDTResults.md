@@ -213,6 +213,11 @@ Case | Result
 RUI1  | Pass
 
 ## Rename
+
+* Renames every occurrence of an identifier, including those not part of any build target.
+  For instance the integration test input files are affected by Rename operations.  This makes
+  Rename effectively unusable.
+
 Case | Result
 ---- | ------
 R1   |
