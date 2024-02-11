@@ -3,4 +3,4 @@
 @rem resets the index on test case source code.
 @rem
 @cls
-git add results && git restore RefactorTest
+git add results && git restore RefactorTest Tools
