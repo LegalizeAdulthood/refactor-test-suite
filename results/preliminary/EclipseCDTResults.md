@@ -216,6 +216,9 @@ RUI1  | Pass
   Rename effectively unusable, even when such files are filtered out using Resource Filters.
 * Rename doesn't pre-select the identifier being renamed, which makes renaming more cumbersome.
 * Rename often reports parse errors or conflicts, even when it performs the change correctly.
+* There are intermittent failures where Rename changes identifiers into some odd combination of
+  what was typed and additional characters from what was typed.  A revert and second attempt is
+  unable to reproduce the issue.
 
 Case | Result
 ---- | ------
@@ -459,291 +462,291 @@ R237 | Pass
 R238 | Pass
 R239 | Pass
 R240 | Pass
-R241 | 
-R242 | 
-R243 | 
-R244 | 
-R245 | 
-R246 | 
-R247 | 
-R248 | 
-R249 | 
-R250 | 
-R251 | 
-R252 | 
-R253 | 
-R254 | 
-R255 | 
-R256 | 
-R257 | 
-R258 | 
-R259 | 
-R260 | 
-R261 | 
-R262 | 
-R263 | 
-R264 | 
-R265 | 
-R266 | 
-R267 | 
-R268 | 
-R269 | 
-R270 | 
-R271 | 
-R272 | 
-R273 | 
-R274 | 
-R275 | 
-R276 | 
-R277 | 
-R278 | 
-R279 | 
-R280 | 
-R281 | 
-R282 | 
-R283 | 
-R284 | 
-R285 | 
-R286 | 
-R287 | 
-R288 | 
-R289 | 
-R290 | 
-R291 | 
-R292 | 
-R293 | 
-R294 | 
-R295 | 
-R296 | 
-R297 | 
-R298 | 
-R299 | 
-R300 | 
-R301 | 
-R302 | 
-R303 | 
-R304 | 
-R305 | 
-R306 | 
-R307 | 
-R308 | 
-R309 | 
-R310 | 
-R311 | 
-R312 | 
-R313 | 
-R314 | 
-R315 | 
-R316 | 
-R317 | 
-R318 | 
-R319 | 
-R320 | 
-R321 | 
-R322 | 
-R323 | 
-R324 | 
-R325 | 
-R326 | 
-R327 | 
-R328 | 
-R329 | 
-R330 | 
-R331 | 
-R332 | 
-R333 | 
-R334 | 
-R335 | 
-R336 | 
-R337 | 
-R338 | 
-R339 | 
-R340 | 
-R341 | 
-R342 | 
-R343 | 
-R344 | 
-R345 | 
-R346 | 
-R347 | 
-R348 | 
-R349 | 
-R350 | 
-R351 | 
-R352 | 
-R353 | 
-R354 | 
-R355 | 
-R356 | 
-R357 | 
-R358 | 
-R359 | 
-R360 | 
-R361 | 
-R362 | 
-R363 | 
-R364 | 
-R365 | 
-R366 | 
-R367 | 
-R368 | 
-R369 | 
-R370 | 
-R371 | 
-R372 | 
-R373 | 
-R374 | 
-R375 | 
-R376 | 
-R377 | 
-R378 | 
-R379 | 
-R380 | 
-R381 | 
-R382 | 
-R383 | 
-R384 | 
-R385 | 
-R386 | 
-R387 | 
-R388 | 
-R389 | 
-R390 | 
-R391 | 
-R392 | 
-R393 | 
-R394 | 
-R395 | 
-R396 | 
-R397 | 
-R398 | 
-R399 | 
-R400 | 
-R401 | 
-R402 | 
-R403 | 
-R404 | 
-R405 | 
-R406 | 
-R407 | 
-R408 | 
-R409 | 
-R410 | 
-R411 | 
-R412 | 
-R413 | 
-R414 | 
-R415 | 
-R416 | 
-R417 | 
-R418 | 
-R419 | 
-R420 | 
-R421 | 
-R422 | 
-R423 | 
-R424 | 
-R425 | 
-R426 | 
-R427 | 
-R428 | 
-R429 | 
-R430 | 
-R431 | 
-R432 | 
-R433 | 
-R434 | 
-R435 | 
-R436 | 
-R437 | 
-R438 | 
-R439 | 
-R440 | 
-R441 | 
-R442 | 
-R443 | 
-R444 | 
-R445 | 
-R446 | 
-R447 | 
-R448 | 
-R449 | 
-R450 | 
-R451 | 
-R452 | 
-R453 | 
-R454 | 
-R455 | 
-R456 | 
-R457 | 
-R458 | 
-R459 | 
-R460 | 
-R461 | 
-R462 | 
-R463 | 
-R464 | 
-R465 | 
-R466 | 
-R467 | 
-R468 | 
-R469 | 
-R470 | 
-R471 | 
-R472 | 
-R473 | 
-R474 | 
-R475 | 
-R476 | 
-R477 | 
-R478 | 
-R479 | 
-R480 | 
-R481 | 
-R482 | 
-R483 | 
-R484 | 
-R485 | 
-R486 | 
-R487 | 
-R488 | 
-R489 | 
-R490 | 
-R491 | 
-R492 | 
-R493 | 
-R494 | 
-R495 | 
-R496 | 
-R497 | 
-R498 | 
-R499 | 
-R500 | 
-R501 | 
-R502 | 
-R503 | 
-R504 | 
-R505 | 
-R506 | 
-R507 | 
-R508 | 
-R509 | 
-R510 | 
-R511 | 
-R512 | 
-R513 | 
-R514 | 
-R515 | 
-R516 | 
-R517 | 
-R518 | 
-R519 | 
-R520 | 
-R521 | 
-R522 | 
-R523 | 
-R524 | 
-R525 | 
+R241 | Failure (not available; the selected name cannot be renamed)
+R242 | Pass
+R243 | Pass
+R244 | Pass
+R245 | Pass
+R246 | Pass
+R247 | Pass
+R248 | Pass
+R249 | Pass
+R250 | Pass
+R251 | Pass
+R252 | Pass
+R253 | Pass
+R254 | Pass
+R255 | Failure (not available; the selected name cannot be renamed)
+R256 | Failure (not available; the selected name cannot be renamed)
+R257 | Failure (not available; the selected name cannot be renamed)
+R258 | Pass
+R259 | Pass
+R260 | Pass
+R261 | Pass
+R262 | Pass
+R263 | Pass
+R264 | Pass
+R265 | Pass
+R266 | Pass
+R267 | Pass
+R268 | Pass
+R269 | Pass
+R270 | Pass
+R271 | Pass
+R272 | Pass
+R273 | Pass
+R274 | Pass
+R275 | Pass
+R276 | Pass
+R277 | Pass
+R278 | Pass
+R279 | Pass
+R280 | Pass
+R281 | Pass
+R282 | Pass
+R283 | Pass
+R284 | Pass
+R285 | Pass
+R286 | Pass
+R287 | Pass
+R288 | Pass
+R289 | Pass
+R290 | Pass
+R291 | Pass
+R292 | Pass
+R293 | Failure (not available; the selected name cannot be renamed)
+R294 | Failure (not available; the selected name cannot be renamed)
+R295 | Failure (not available; the selected name cannot be renamed)
+R296 | Pass
+R297 | Failure (not available; the selected name cannot be renamed)
+R298 | Pass
+R299 | Pass
+R300 | Pass
+R301 | Failure (not available; the selected name cannot be renamed)
+R302 | Pass
+R303 | Failure (not available; the selected name cannot be renamed)
+R304 | Pass
+R305 | Pass
+R306 | Failure (not available; the selected name cannot be renamed)
+R307 | Pass
+R308 | Pass
+R309 | Pass
+R310 | Failure (not available; the selected name cannot be renamed)
+R311 | Failure (not available; the selected name cannot be renamed)
+R312 | Failure (creates invalid code)
+R313 | Failure (does nothing)
+R314 | Failure (creates invalid code)
+R315 | Failure (does nothing)
+R316 | Pass
+R317 | Failure (does nothing)
+R318 | Pass
+R319 | Failure (does nothing)
+R320 | Pass
+R321 | Pass
+R322 | Failure (does nothing)
+R323 | Pass
+R324 | Pass
+R325 | Failure (does nothing)
+R326 | Pass
+R327 | Pass
+R328 | Failure (does nothing)
+R329 | Pass
+R330 | Pass
+R331 | Failure (does nothing)
+R332 | Pass
+R333 | Pass
+R334 | Failure (does nothing)
+R335 | Pass
+R336 | Pass
+R337 | Failure (does nothing)
+R338 | Pass
+R339 | Pass
+R340 | Pass
+R341 | Pass
+R342 | Failure (does nothing)
+R343 | Pass
+R344 | Pass
+R345 | Pass
+R346 | Pass
+R347 | Failure (does nothing)
+R348 | Pass
+R349 | Pass
+R350 | Pass
+R351 | Pass
+R352 | Failure (does nothing)
+R353 | Pass
+R354 | Pass
+R355 | Pass
+R356 | Pass
+R357 | Failure (not available)
+R358 | Failure (not available)
+R359 | Failure (not available)
+R360 | Failure (not available)
+R361 | Failure (not available)
+R362 | Failure (not available)
+R363 | Failure (not available)
+R364 | Failure (not available)
+R365 | Failure (not available)
+R366 | Failure (not available)
+R367 | Failure (not available)
+R368 | Failure (not available)
+R369 | Failure (not available)
+R370 | Failure (not available; the selected name cannot be renamed)
+R371 | Failure (not available; the selected name cannot be renamed)
+R372 | Failure (not available; the selected name cannot be renamed)
+R373 | Failure (not available; the selected name cannot be renamed)
+R374 | Failure (not available; the selected name cannot be renamed)
+R375 | Pass
+R376 | Failure (selects unrelated instances)
+R377 | Failure (selects unrelated instances)
+R378 | Pass
+R379 | Pass
+R380 | Pass
+R381 | Failure (selects unrelated instances)
+R382 | Failure (selects unrelated instances)
+R383 | Pass
+R384 | Pass
+R385 | Pass
+R386 | Pass
+R387 | Pass
+R388 | Pass
+R389 | Failure (not available; the selected name cannot be renamed)
+R390 | Failure (not available; the selected name cannot be renamed)
+R391 | Pass
+R392 | Pass
+R393 | Failure (not available; the selected name cannot be renamed)
+R394 | Failure (not available; the selected name cannot be renamed)
+R395 | Failure (not available; the selected name cannot be renamed)
+R396 | Pass
+R397 | Failure (not available; the selected name cannot be renamed)
+R398 | Pass
+R399 | Failure (not available; the selected name cannot be renamed)
+R400 | Failure (not available; the selected name cannot be renamed)
+R401 | Failure (not available; the selected name cannot be renamed)
+R402 | Pass
+R403 | Failure (not available; the selected name cannot be renamed)
+R404 | Failure (not available; the selected name cannot be renamed)
+R405 | Failure (not available; the selected name cannot be renamed)
+R406 | Failure (not available; the selected name cannot be renamed)
+R407 | Pass
+R408 | Failure (not available; the selected name cannot be renamed)
+R409 | Pass
+R410 | Failure (not available; the selected name cannot be renamed)
+R411 | Pass
+R412 | Failure (not available; the selected name cannot be renamed)
+R413 | Pass
+R414 | Pass
+R415 | Pass
+R416 | Pass
+R417 | Pass
+R418 | Pass
+R419 | Failure (not available; the selected name cannot be renamed)
+R420 | Failure (not available; the selected name cannot be renamed)
+R421 | Failure (not available; the selected name cannot be renamed)
+R422 | Failure (not available; the selected name cannot be renamed)
+R423 | Failure (not available; the selected name cannot be renamed)
+R424 | Pass
+R425 | Pass
+R426 | Failure (not available; the selected name cannot be renamed)
+R427 | Pass
+R428 | Pass
+R429 | Pass
+R430 | Pass
+R431 | Pass
+R432 | Pass
+R433 | Pass
+R434 | Failure (not available; the selected name cannot be renamed)
+R435 | Pass
+R436 | Failure (not available; the selected name cannot be renamed)
+R437 | Pass
+R438 | Failure (not available; the selected name cannot be renamed)
+R439 | Pass
+R440 | Pass
+R441 | Pass
+R442 | Pass
+R443 | Pass
+R444 | Pass
+R445 | Pass
+R446 | Pass
+R447 | Pass
+R448 | Pass
+R449 | Pass
+R450 | Pass
+R451 | Pass
+R452 | Pass
+R453 | Pass
+R454 | Pass
+R455 | Pass
+R456 | Pass
+R457 | Pass
+R458 | Pass
+R459 | Pass
+R460 | Pass
+R461 | Pass
+R462 | Pass
+R463 | Pass
+R464 | Pass
+R465 | Pass
+R466 | Pass
+R467 | Pass
+R468 | Pass
+R469 | Pass
+R470 | Pass
+R471 | Pass
+R472 | Pass
+R473 | Pass
+R474 | Pass
+R475 | Pass
+R476 | Pass
+R477 | Pass
+R478 | Pass
+R479 | Pass
+R480 | Pass
+R481 | Pass
+R482 | Pass
+R483 | Pass
+R484 | Pass
+R485 | Pass
+R486 | Pass
+R487 | Pass
+R488 | Pass
+R489 | Pass
+R490 | Pass
+R491 | Pass
+R492 | Pass
+R493 | Pass
+R494 | Pass
+R495 | Pass
+R496 | Pass
+R497 | Pass
+R498 | Pass
+R499 | Pass
+R500 | Pass
+R501 | Pass
+R502 | Pass
+R503 | Pass
+R504 | Pass
+R505 | Pass
+R506 | Pass
+R507 | Pass
+R508 | Pass
+R509 | Pass
+R510 | Pass
+R511 | Pass
+R512 | Pass
+R513 | Pass
+R514 | Pass
+R515 | Pass
+R516 | Pass
+R517 | Pass
+R518 | Failure (not available; the selected name cannot be renamed)
+R519 | Failure (creates invalid code)
+R520 | Failure (creates invalid code)
+R521 | Pass
+R522 | Pass
+R523 | Pass
+R524 | Pass
+R525 | Pass
 R526 | 
 R527 | 
 R528 | 
